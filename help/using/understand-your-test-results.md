@@ -9,7 +9,7 @@ products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: utilizzo
 discoiquuid: 83299 ed 8-4 b 7 a -4 b 1 c-bd 56-1 bfc 7 e 7318 d 4
 translation-type: tm+mt
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+source-git-commit: f8cea9d52ebb01d7f5291d4dfcd82011da8dacc2
 
 ---
 
@@ -32,7 +32,7 @@ Per ciascuno di questi gate, esiste una struttura a tre gradi per i problemi ide
 
 * **Critical** - These are issues identified by the gate which cause an immediate failure of the pipeline.
 * **Importante** : questi sono problemi identificati dal gate che provocano la messa in pausa della pipeline. Un manager distribuzione, un manager progetto o un proprietario aziendale può ignorare i problemi, nel qual caso la pipeline procede oppure possono accettare i problemi, nel qual caso la pipeline si interrompe con un errore.
-* **Informazioni** : sono problemi identificati dal gate che sono forniti esclusivamente a scopo informativo e non hanno alcun impatto sull&#39;esecuzione della pipeline.
+* **Info** - These are issues identified by the gate which are provided purely for informational purposes and have no impact on the pipeline execution.
 
 ## Test qualità del codice {#code-quality-testing}
 
@@ -54,11 +54,11 @@ Come parte della pipeline, il codice sorgente viene analizzato per assicurare ch
 >Per definizioni [più dettagliate, fate riferimento alle Definizioni](https://docs.sonarqube.org/display/SONAR/Metric+Definitions) delle metriche.
 
 
-Potete scaricare l&#39;elenco delle regole qui [sonarqube-rules.xlsx](assets/sonarqube-rules.xlsx)
+Potete scaricare l&#39;elenco delle regole qui [code-quality-rules.xlsx](assets/code-quality-rules.xlsx)
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle regole sonarqube eseguite da [!UICONTROL Cloud Manager], consultate Regole di qualità codice [personalizzate](custom-code-quality-rules.md).
+>Per ulteriori informazioni sulle regole di qualità del codice personalizzate eseguite da [!UICONTROL Cloud Manager], consulta Regole di qualità codice [personalizzate](custom-code-quality-rules.md).
 
 ### Gestione dei falsi positivi {#dealing-with-false-positives}
 
