@@ -1,27 +1,32 @@
 ---
-title: Note sulla versione 2019.5.0
-seo-title: Note sulla versione di AEM Cloud Manager per 2019.5.0
-description: Segui questa pagina per ottenere informazioni sulla versione 2019.5.0 di Cloud Manager.
-seo-description: Segui questa pagina per ottenere informazioni sulla versione 2019.5.0 di AEM Cloud Manager.
+title: Note sulla versione 2019.6.0
+seo-title: Note sulla versione di AEM Cloud Manager per 2019.6.0
+description: Segui questa pagina per ottenere informazioni sulla versione 2019.6.0 di Cloud Manager.
+seo-description: Segui questa pagina per ottenere informazioni sulla versione 2019.6.0 di AEM Cloud Manager.
 translation-type: tm+mt
-source-git-commit: cab67f6a3358ef2988baaba78e2a41f7edadb323
+source-git-commit: 75563d3f4b2a27d943c052993c97d830338ead9c
 
 ---
 
+# Release Notes for 2019.6.0 {#release-notes-for}
 
-# Note sulla versione 2019.5.0 {#release-notes-for}
+The [!UICONTROL Cloud Manager] 2019.6.0 Release does not contain significant functional changes. Per ulteriori dettagli, seguite le sezioni riportate di seguito.
 
-La [!UICONTROL Cloud Manager] versione 2019.5.0 non contiene modifiche funzionali significative. Per ulteriori dettagli, seguite le sezioni riportate di seguito.
+## Release Date {#release-date}
 
-## Data di rilascio {#release-date}
+The Release Date for [!UICONTROL Cloud Manager] Version 2019.6.0 is .
 
-La Data di rilascio per [!UICONTROL Cloud Manager] la versione 2019.5.0 è 23 maggio 2019.
+## Novità {#whats-new}
 
+* Nuova procedura guidata Aggiornamento prodotto per aiutare i clienti a eseguire correttamente un aggiornamento AEM. (collegamento alla pagina Procedura guidata Aggiornamento prodotto)
+* Regole di qualità del codice che consentono di esaminare le strutture dei contenuti. (collegamento alla pagina Regole di qualità codice personalizzate)
+* La dimensione massima di un push git è stata portata a 1 GB.
 
-## Correzioni di bug {#bug-fixes}
+## Bug Fixes {#bug-fixes}
 
-* Il grafico SLA Report ha visualizzato valori ripetuti nell&#39;asse Y.
-* La schermata Rapporti non era visibile ad alcuni clienti.
-* In rari casi, non era possibile analizzare i risultati della qualità del codice per evitare errori di esecuzione della pipeline.
-* Il calendario nel passaggio della pianificazione della pipeline non era localizzato correttamente.
-* Un assortimento di problemi minori di localizzazione e miglioramenti alla traduzione.
+* In alcuni casi, impossibile avviare pipeline a causa di un errore precedente.
+
+## Problemi noti {#known-issues}
+
+* Il download CSV di qualità del codice non viene sempre ordinato in base alla gravità.
+* Falsi positivi possono essere segnalati dalla regola configandinstallshouldonlycontainosginodes se le configurazioni osgi vengono posizionate in una cartella nidificata all&#39;interno di una cartella di configurazione.
