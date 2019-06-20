@@ -9,12 +9,12 @@ products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: utilizzo
 discoiquuid: d 2338 c 74-3278-49 e 6-a 186-6 ef 62362509 f
 translation-type: tm+mt
-source-git-commit: f8cea9d52ebb01d7f5291d4dfcd82011da8dacc2
+source-git-commit: f76b8e6a036ab920f11fb913d3ad29818f1e153f
 
 ---
 
 
-# Regole di qualità codice personalizzate {#custom-code-quality-rules}
+# Custom Code Quality Rules {#custom-code-quality-rules}
 
 Questa pagina descrive le regole di qualità del codice personalizzate eseguite da Cloud Manager create in base alle best practice di AEM Engineering.
 
@@ -22,11 +22,11 @@ Questa pagina descrive le regole di qualità del codice personalizzate eseguite 
 >
 >Gli esempi di codice forniti qui sono solo a scopo illustrativo.
 
-## Regole sonarqube {#sonarqube-rules}
+## SonarQube Rules {#sonarqube-rules}
 
 La sezione seguente evidenzia le regole sonarqube:
 
-### Non utilizzare funzioni potenzialmente pericolose {#do-not-use-potentially-dangerous-functions}
+### Do not use potentially dangerous functions {#do-not-use-potentially-dangerous-functions}
 
 **Chiave**: Cqrules: CWE -676
 
@@ -36,9 +36,9 @@ La sezione seguente evidenzia le regole sonarqube:
 
 **Poiché**: Versione 2018.4.0
 
-I metodi ***Thread. stop ()*** e ***Thread. stop ()*** possono produrre problemi difficili e, in alcuni casi, vulnerabilità di sicurezza. Il loro utilizzo deve essere rigorosamente monitorato e convalidato. In generale, il passaggio del messaggio è un modo più sicuro per raggiungere obiettivi simili.
+The methods ***Thread.stop()*** and ***Thread.interrupt()*** can produce hard-to-reproduce issues and, in some cases, security vulnerabilities. Il loro utilizzo deve essere rigorosamente monitorato e convalidato. In generale, il passaggio del messaggio è un modo più sicuro per raggiungere obiettivi simili.
 
-#### Codice non conforme {#non-compliant-code}
+#### Non-Compliant Code {#non-compliant-code}
 
 ```java
 public class DontDoThis implements Runnable {
@@ -61,7 +61,7 @@ public class DontDoThis implements Runnable {
 }
 ```
 
-#### Codice conforme {#compliant-code}
+#### Compliant Code {#compliant-code}
 
 ```java
 public class DoThis implements Runnable {
@@ -85,7 +85,7 @@ public class DoThis implements Runnable {
 }
 ```
 
-### Non utilizzare stringhe di formato che possono essere controllate esternamente {#do-not-use-format-strings-which-may-be-externally-controlled}
+### Do not use format strings which may be externally controlled {#do-not-use-format-strings-which-may-be-externally-controlled}
 
 **Chiave**: Cqrules: CWE -134
 
@@ -97,7 +97,7 @@ public class DoThis implements Runnable {
 
 L&#39;utilizzo di una stringa di formato da un&#39;origine esterna (come un parametro di richiesta o un contenuto generato dall&#39;utente) può esporre un&#39;applicazione a attacchi di negazione di servizi. In alcune circostanze una stringa di formato potrebbe essere controllata esternamente, ma è consentita solo dalle fonti affidabili.
 
-#### Codice non conforme {#non-compliant-code-1}
+#### Non-Compliant Code {#non-compliant-code-1}
 
 ```java
 protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) {
@@ -107,7 +107,7 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 }
 ```
 
-### Le richieste HTTP devono disporre sempre di socket e timeout di connessione {#http-requests-should-always-have-socket-and-connect-timeouts}
+### HTTP requests should always have socket and connect timeouts {#http-requests-should-always-have-socket-and-connect-timeouts}
 
 **Chiave**: Cqrules: Connectiontimeoutmechanism
 
@@ -119,7 +119,7 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 
 Quando si eseguono richieste HTTP dall&#39;interno di un&#39;applicazione AEM, è importante assicurarsi che i timeout corretti siano configurati per evitare inutili dispendio di thread. Purtroppo, il comportamento predefinito del client HTTP predefinito di Java (java.net.Ht tpurlconnection) e il client Apache HTTP utilizzato comunemente non devono mai essere timeout, pertanto i timeout devono essere impostati in modo esplicito. Inoltre, come procedura ottimale, questi timeout non devono superare i 60 secondi.
 
-#### Codice non conforme {#non-compliant-code-2}
+#### Non-Compliant Code {#non-compliant-code-2}
 
 ```java
 @Reference
@@ -148,7 +148,7 @@ public void dontDoThisEither() {
 }
 ```
 
-#### Codice conforme {#compliant-code-1}
+#### Compliant Code {#compliant-code-1}
 
 ```java
 @Reference
@@ -185,7 +185,7 @@ public void orDoThis() {
 }
 ```
 
-### Le API prodotto con @ providertype non devono essere implementate o estese dai clienti {#product-apis-annotated-with-providertype-should-not-be-implemented-or-extended-by-customers}
+### Product APIs annotated with @ProviderType should not be implemented or extended by customers {#product-apis-annotated-with-providertype-should-not-be-implemented-or-extended-by-customers}
 
 **Chiave**: CQBP -84, dipendenze CQBP -84
 
@@ -195,13 +195,13 @@ public void orDoThis() {
 
 **Poiché**: Versione 2018.7.0
 
-L&#39;API AEM contiene interfacce Java e classi che possono essere utilizzate, ma non implementate, mediante codice personalizzato. Ad esempio, l&#39;interfaccia *com.day.cq.wc m. api. La pagina* è progettata per essere implementata solo da ***AEM***.
+L&#39;API AEM contiene interfacce Java e classi che possono essere utilizzate, ma non implementate, mediante codice personalizzato. For example, the interface *com.day.cq.wcm.api.Page* is designed to be implemented by ***AEM only***.
 
-Quando vengono aggiunti nuovi metodi a queste interfacce, questi metodi aggiuntivi non influiscono sul codice esistente che utilizza tali interfacce e, di conseguenza, l&#39;aggiunta di nuovi metodi a queste interfacce è considerata compatibile con le versioni precedenti. Tuttavia, se il codice ***personalizzato implementa*** una di queste interfacce, il codice personalizzato ha introdotto un rischio di compatibilità retrocompatibile per il cliente.
+Quando vengono aggiunti nuovi metodi a queste interfacce, questi metodi aggiuntivi non influiscono sul codice esistente che utilizza tali interfacce e, di conseguenza, l&#39;aggiunta di nuovi metodi a queste interfacce è considerata compatibile con le versioni precedenti. However, if custom code ***implements*** one of these interfaces, that custom code has introduced a backwards-compatibility risk for the customer.
 
-Le interfacce (e le classi) destinate unicamente all&#39;implementazione da parte di AEM sono annotate con *org. osgi. annotation. versioning. providertype* (o, in alcuni casi, con annotazione *legacy spete. bnd. annotdertype*). Questa regola identifica i casi in cui tale interfaccia è implementata (o una classe estesa) tramite codice personalizzato.
+Interfaces (and classes) which are only intended to be implemented by AEM are annotated with *org.osgi.annotation.versioning.ProviderType* (or, in some cases, a similar legacy annotation *aQute.bnd.annotation.ProviderType*). Questa regola identifica i casi in cui tale interfaccia è implementata (o una classe estesa) tramite codice personalizzato.
 
-#### Codice non conforme {#non-compliant-code-3}
+#### Non-Compliant Code {#non-compliant-code-3}
 
 ```java
 import com.day.cq.wcm.api.Page;
@@ -211,7 +211,7 @@ public class DontDoThis implements Page {
 }
 ```
 
-### Gli oggetti resourceresolver devono essere sempre chiusi {#resourceresolver-objects-should-always-be-closed}
+### ResourceResolver objects should always be closed {#resourceresolver-objects-should-always-be-closed}
 
 **Chiave**: Cqrules: CQBP -72
 
@@ -225,7 +225,7 @@ Gli oggetti resourceresolver ottenuti da resourceresolverfactory consumano risor
 
 Un errore relativamente comune è che gli oggetti resourceresolver creati utilizzando una sessione JCR esistente non devono essere chiusi in modo esplicito o che in tal modo chiuderanno la sessione JCR sottostante. Questo non è il caso, a prescindere dalla modalità di apertura di un resourceresolver, qualora non venga più utilizzato. Poiché resourceresolver implementa l&#39;interfaccia chiusibile, è anche possibile utilizzare la sintassi try-with-resources invece di richiamare esplicitamente close ().
 
-#### Codice non conforme {#non-compliant-code-4}
+#### Non-Compliant Code {#non-compliant-code-4}
 
 ```java
 public void dontDoThis(Session session) throws Exception {
@@ -234,7 +234,7 @@ public void dontDoThis(Session session) throws Exception {
 }
 ```
 
-#### Codice conforme {#compliant-code-2}
+#### Compliant Code {#compliant-code-2}
 
 ```java
 public void doThis(Session session) throws Exception {
@@ -256,7 +256,7 @@ public void orDoThis(Session session) throws Exception {
 }
 ```
 
-### Non utilizzare i percorsi servlet Sling per registrare servlet {#do-not-use-sling-servlet-paths-to-register-servlets}
+### Do not use Sling servlet paths to register servlets {#do-not-use-sling-servlet-paths-to-register-servlets}
 
 **Chiave**: Cqrules: CQBP -75
 
@@ -266,9 +266,9 @@ public void orDoThis(Session session) throws Exception {
 
 **Poiché**: Versione 2018.4.0
 
-Come descritto nella documentazione [Sling](http://sling.apache.org/documentation/the-sling-engine/servlets.html), i servlet di binding per percorsi vengono scoraggiati. I servlet associati al percorso non possono utilizzare controlli di accesso JCR standard e, di conseguenza, richiedono un ulteriore rigonfiamento della sicurezza. Anziché utilizzare servlet associati al percorso, si consiglia di creare nodi nell&#39;archivio e di registrare i servlet in base al tipo di risorsa.
+As described in the [Sling documentation](http://sling.apache.org/documentation/the-sling-engine/servlets.html), bindings servlets by paths is discouraged. I servlet associati al percorso non possono utilizzare controlli di accesso JCR standard e, di conseguenza, richiedono un ulteriore rigonfiamento della sicurezza. Anziché utilizzare servlet associati al percorso, si consiglia di creare nodi nell&#39;archivio e di registrare i servlet in base al tipo di risorsa.
 
-#### Codice non conforme {#non-compliant-code-5}
+#### Non-Compliant Code {#non-compliant-code-5}
 
 ```java
 @Component(property = {
@@ -291,7 +291,7 @@ public class DontDoThis extends SlingAllMethodsServlet {
 
 In generale, un&#39;eccezione deve essere registrata esattamente una volta. Le eccezioni di registrazione più volte possono causare confusione in quanto non è chiara quante volte si è verificata un&#39;eccezione. Il pattern più comune che porta alla registrazione e genera un&#39;eccezione rilevata.
 
-#### Codice non conforme {#non-compliant-code-6}
+#### Non-Compliant Code {#non-compliant-code-6}
 
 ```java
 public void dontDoThis() throws Exception {
@@ -304,7 +304,7 @@ public void dontDoThis() throws Exception {
 }
 ```
 
-#### Codice conforme {#compliant-code-3}
+#### Compliant Code {#compliant-code-3}
 
 ```java
 public void doThis() {
@@ -324,7 +324,7 @@ public void orDoThis() throws MyCustomException {
 }
 ```
 
-### Evitare di avere un&#39;istruzione di registro seguita da un&#39;istruzione throw {#avoid-having-a-log-statement-immediately-followed-by-a-throw-statement}
+### Avoid having a log statement immediately followed by a throw statement {#avoid-having-a-log-statement-immediately-followed-by-a-throw-statement}
 
 **Chiave**: Cqrules: CQBP -44—Successivelylogandthrow
 
@@ -336,7 +336,7 @@ public void orDoThis() throws MyCustomException {
 
 Un altro pattern comune da evitare consiste nel registrare un messaggio e quindi su un&#39;eccezione. In genere ciò indica che il messaggio di eccezione verrà duplicato nei file di registro.
 
-#### Codice non conforme {#non-compliant-code-7}
+#### Non-Compliant Code {#non-compliant-code-7}
 
 ```java
 public void dontDoThis() throws Exception {
@@ -345,7 +345,7 @@ public void dontDoThis() throws Exception {
 }
 ```
 
-#### Codice conforme {#compliant-code-4}
+#### Compliant Code {#compliant-code-4}
 
 ```java
 public void doThis() throws Exception {
@@ -353,7 +353,7 @@ public void doThis() throws Exception {
 }
 ```
 
-### Evitare di effettuare l&#39;accesso a Informazioni durante la gestione di richieste GET o HEAD {#avoid-logging-at-info-when-handling-get-or-head-requests}
+### Avoid logging at INFO when handling GET or HEAD requests {#avoid-logging-at-info-when-handling-get-or-head-requests}
 
 **Chiave**: Cqrules: CQBP -44—Loginfoingetorheadrequests
 
@@ -367,7 +367,7 @@ In generale, il livello di registro INFO deve essere utilizzato per delimitare a
 >
 >Questo non vale per l&#39;accesso a access. log-type per ogni richiesta.
 
-#### Codice non conforme {#non-compliant-code-8}
+#### Non-Compliant Code {#non-compliant-code-8}
 
 ```java
 public void doGet() throws Exception {
@@ -375,7 +375,7 @@ public void doGet() throws Exception {
 }
 ```
 
-#### Codice conforme {#compliant-code-5}
+#### Compliant Code {#compliant-code-5}
 
 ```java
 public void doGet() throws Exception {
@@ -383,7 +383,7 @@ public void doGet() throws Exception {
 }
 ```
 
-### Non utilizzare Exception. getmessage () come primo parametro di un&#39;istruzione logging {#do-not-use-exception-getmessage-as-the-first-parameter-of-a-logging-statement}
+### Do not use Exception.getMessage() as the first parameter of a logging statement {#do-not-use-exception-getmessage-as-the-first-parameter-of-a-logging-statement}
 
 **Chiave**: Cqrules: CQBP -44—Exceptiongetmessageisfirstlogparam
 
@@ -395,7 +395,7 @@ public void doGet() throws Exception {
 
 Come procedura ottimale, i messaggi del registro devono fornire informazioni contestuali su dove si è verificato un&#39;eccezione nell&#39;applicazione. Anche se il contesto può essere determinato anche utilizzando le tracce dello stack, in generale il messaggio di registro diventerà più semplice da leggere e comprendere. Di conseguenza, quando si registra un&#39;eccezione, è consigliabile utilizzare il messaggio dell&#39;eccezione come messaggio di registro. Il messaggio di eccezione conterrà ciò che è andato a buon fine; il messaggio di registro sarà utilizzato per indicare a un lettore di registro ciò che l&#39;applicazione stava realizzando quando si è verificata l&#39;eccezione. Il messaggio di eccezione continuerà a essere registrato; specificando il vostro messaggio, i registri saranno più facili da comprendere.
 
-#### Codice non conforme {#non-compliant-code-9}
+#### Non-Compliant Code {#non-compliant-code-9}
 
 ```java
 public void dontDoThis() {
@@ -407,7 +407,7 @@ public void dontDoThis() {
 }
 ```
 
-#### Codice conforme {#compliant-code-6}
+#### Compliant Code {#compliant-code-6}
 
 ```java
 public void doThis() {
@@ -419,7 +419,7 @@ public void doThis() {
 }
 ```
 
-### La registrazione dei blocchi catch dovrebbe essere a livello di AVVISO o di ERRORE {#logging-in-catch-blocks-should-be-at-the-warn-or-error-level}
+### Logging in catch blocks should be at the WARN or ERROR level {#logging-in-catch-blocks-should-be-at-the-warn-or-error-level}
 
 **Chiave**: Cqrules: CQBP -44—Wrongloglevelincatchblock
 
@@ -429,9 +429,9 @@ public void doThis() {
 
 **Poiché**: Versione 2018.4.0
 
-Come suggerisce il nome, le eccezioni Java devono essere sempre utilizzate in circostanze *eccezionali* . Di conseguenza, quando viene rilevata un&#39;eccezione, è importante assicurarsi che i messaggi del registro siano collegati al livello appropriato: ALERT o ERROR. In questo modo i messaggi vengono visualizzati correttamente nei registri.
+As the name suggests, Java exceptions should always be used in *exceptional* circumstances. Di conseguenza, quando viene rilevata un&#39;eccezione, è importante assicurarsi che i messaggi del registro siano collegati al livello appropriato: ALERT o ERROR. In questo modo i messaggi vengono visualizzati correttamente nei registri.
 
-#### Codice non conforme {#non-compliant-code-10}
+#### Non-Compliant Code {#non-compliant-code-10}
 
 ```java
 public void dontDoThis() {
@@ -443,7 +443,7 @@ public void dontDoThis() {
 }
 ```
 
-#### Codice conforme {#compliant-code-7}
+#### Compliant Code {#compliant-code-7}
 
 ```java
 public void doThis() {
@@ -455,7 +455,7 @@ public void doThis() {
 }
 ```
 
-### Non stampare le tracce di stack nella console {#do-not-print-stack-traces-to-the-console}
+### Do not print stack traces to the console {#do-not-print-stack-traces-to-the-console}
 
 **Chiave**: Cqrules: CQBP -44—Exceptionprintstacktrace
 
@@ -465,9 +465,9 @@ public void doThis() {
 
 **Poiché**: Versione 2018.4.0
 
-Come indicato, il contesto è fondamentale per comprendere i messaggi di registro. L&#39;utilizzo di Exception. printstacktrace () causa l **&#39;output** della traccia dello stack nel flusso di errore standard, perdendo in tal modo tutto il contesto. Inoltre, in un&#39;applicazione multi-thread come AEM se più eccezioni vengono stampate utilizzando in parallelo questo metodo, le tracce dello stack possono sovrapporsi che generano confusione significativa. Le eccezioni devono essere registrate solo tramite il framework di registrazione.
+Come indicato, il contesto è fondamentale per comprendere i messaggi di registro. Using Exception.printStackTrace() causes **only** the stack trace to be output to the standard error stream thereby losing all context. Inoltre, in un&#39;applicazione multi-thread come AEM se più eccezioni vengono stampate utilizzando in parallelo questo metodo, le tracce dello stack possono sovrapporsi che generano confusione significativa. Le eccezioni devono essere registrate solo tramite il framework di registrazione.
 
-#### Codice non conforme {#non-compliant-code-11}
+#### Non-Compliant Code {#non-compliant-code-11}
 
 ```java
 public void dontDoThis() {
@@ -479,7 +479,7 @@ public void dontDoThis() {
 }
 ```
 
-#### Codice conforme {#compliant-code-8}
+#### Compliant Code {#compliant-code-8}
 
 ```java
 public void doThis() {
@@ -491,7 +491,7 @@ public void doThis() {
 }
 ```
 
-### Non restituire Output a Output standard o Errore standard {#do-not-output-to-standard-output-or-standard-error}
+### Do not output to Standard Output or Standard Error {#do-not-output-to-standard-output-or-standard-error}
 
 **Chiave**: Cqrules: CQBP -44—loglevelconsoleprinters
 
@@ -503,7 +503,7 @@ public void doThis() {
 
 La registrazione in AEM deve essere sempre realizzata tramite il framework di registrazione (SLF 4 J). L&#39;output diretto direttamente ai flussi di errore standard o standard perde le informazioni strutturali e contestuali fornite dal framework di registrazione e può, in alcuni casi, causare problemi di prestazioni.
 
-#### Codice non conforme {#non-compliant-code-12}
+#### Non-Compliant Code {#non-compliant-code-12}
 
 ```java
 public void dontDoThis() {
@@ -515,7 +515,7 @@ public void dontDoThis() {
 }
 ```
 
-#### Codice conforme {#compliant-code-9}
+#### Compliant Code {#compliant-code-9}
 
 ```java
 public void doThis() {
@@ -527,7 +527,7 @@ public void doThis() {
 }
 ```
 
-### Evitare hardcoded /apps e /libs percorsi {#avoid-hardcoded-apps-and-libs-paths}
+### Avoid Hardcoded /apps and /libs Paths {#avoid-hardcoded-apps-and-libs-paths}
 
 **Chiave**: Cqrules: CQBP -71
 
@@ -539,7 +539,7 @@ public void doThis() {
 
 In generale, i percorsi che iniziano con /libs e /apps non devono essere codificati in quanto i percorsi a cui fanno riferimento sono più comunemente memorizzati come percorsi rispetto al percorso di ricerca Sling (che per impostazione predefinita è impostata su /libs,/app). L&#39;utilizzo del percorso assoluto potrebbe introdurre lievi difetti che verrebbero visualizzati solo successivamente nel ciclo di vita del progetto.
 
-#### Codice non conforme {#non-compliant-code-13}
+#### Non-Compliant Code {#non-compliant-code-13}
 
 ```java
 public boolean dontDoThis(Resource resource) {
@@ -547,10 +547,85 @@ public boolean dontDoThis(Resource resource) {
 }
 ```
 
-#### Codice conforme {#compliant-code-10}
+#### Compliant Code {#compliant-code-10}
 
 ```java
 public void doThis(Resource resource) {
   return resource.isResourceType("foundation/components/text");
 }
 ```
+
+
+## OakPAL Content Rules {#oakpal-rules}
+
+Trovi sotto i controlli oakpal eseguiti da Cloud Manager.
+
+>[!NOTE]
+>Oakpal è un framework sviluppato da un partner AEM (e vincitore di 2019 AEM Rockstar North America) che convalida i pacchetti di contenuto utilizzando un archivio Oak indipendente.
+
+### Customer Packages Should Not Create or Modify Nodes Under /libs {#oakpal-customer-package}
+
+**Chiave**: Bannedpaths
+
+**Tipo**: Bug
+
+**Gravità**: Blocker
+
+**Poiché**: Versione 2019.6.0
+
+È una procedura consigliata che la struttura del contenuto /libs nell&#39;archivio dei contenuti AEM sia considerata di sola lettura dai clienti. Modifying nodes and properties under */libs* creates significant risk for major and minor updates. Modifications to */libs* should only be made by Adobe through official channels.
+
+### Packages Should Not Contain Duplicate OSGi Configurations {#oakpal-package-osgi}
+
+**Chiave**: Duplicateosgiconfigurations
+
+**Tipo**: Bug
+
+**Gravità**: Principale
+
+**Poiché**: Versione 2019.6.0
+
+Un problema comune che si verifica su progetti complessi è quello in cui lo stesso componente osgi è configurato più volte. Ciò crea un&#39;ambiguità rispetto alla configurazione da eseguire. Questa regola è &quot;in modalità runmode&quot; in quanto identifica solo i problemi per cui lo stesso componente è configurato più volte nella stessa modalità di esecuzione (o combinazione di runmodes).
+
+#### Non Compliant Code {#non-compliant-code-osgi}
+
+```+ apps
+  + projectA
+    + config
+      + com.day.cq.commons.impl.ExternalizerImpl
+  + projectB
+    + config
+      + com.day.cq.commons.impl.ExternalizerImpl
+```
+
+#### Compliant Code {#compliant-code-osgi}
+
+```+ apps
+  + shared-config
+    + config
+      + com.day.cq.commons.impl.ExternalizerImpl
+```
+
+### Config and Install Folders Should Only Contain OSGi Nodes {#oakpal-config-install}
+
+**Chiave**: Configandinstallshouldonlycontainosginodes
+
+**Tipo**: Bug
+
+**Gravità**: Principale
+
+**Poiché**: Versione 2019.6.0
+
+For security reasons, paths containing */config/ and /install/* are only readable by administrative users in AEM and should be used only for OSGi configuration and OSGi bundles. L&#39;inserimento di altri tipi di contenuto in percorsi che contengono questi segmenti provoca un comportamento dell&#39;applicazione che varia in modo unzionalmente tra gli utenti amministrativi e non amministrativi.
+
+### Packages Should Not Overlap {#oakpal-no-overlap}
+
+**Chiave**: Packageoverlaps
+
+**Tipo**: Bug
+
+**Gravità**: Principale
+
+**Poiché**: Versione 2019.6.0
+
+Similar to the *Packages Should Not Contain Duplicate OSGi Configurations* this is a common problem on complex projects where the same node path is written to by multiple separate content packages. Quando si utilizzano le dipendenze del pacchetto di contenuto per garantire un risultato coerente, è meglio evitare la sovrapposizione completa.
