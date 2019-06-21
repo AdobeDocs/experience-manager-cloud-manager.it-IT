@@ -9,7 +9,7 @@ products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: utilizzo
 discoiquuid: 83299 ed 8-4 b 7 a -4 b 1 c-bd 56-1 bfc 7 e 7318 d 4
 translation-type: tm+mt
-source-git-commit: 4c1c6786db9b8972f9315bd2f12fc1752881492f
+source-git-commit: ea5bf33dc67c9ce174801f6d905abfc4a21886a2
 
 ---
 
@@ -33,6 +33,10 @@ Per ciascuno di questi gate, esiste una struttura a tre gradi per i problemi ide
 * **Critical** - These are issues identified by the gate which cause an immediate failure of the pipeline.
 * **Importante** : questi sono problemi identificati dal gate che provocano la messa in pausa della pipeline. Un manager distribuzione, un manager progetto o un proprietario aziendale può ignorare i problemi, nel qual caso la pipeline procede oppure possono accettare i problemi, nel qual caso la pipeline si interrompe con un errore.
 * **Informazioni** : sono problemi identificati dal gate che sono forniti esclusivamente a scopo informativo e non hanno alcun impatto sull&#39;esecuzione della pipeline.
+
+>[!NOTE]
+>
+>In Pipeline solo codice, gli errori importanti nella gate di test della qualità del codice non possono essere sostituiti perché il passaggio Test qualità codice è il passaggio finale nella pipeline.
 
 ## Code Quality Testing {#code-quality-testing}
 
