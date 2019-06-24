@@ -8,22 +8,22 @@ contentOwner: jsyal
 products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: ebcc 91 a 5-be 9 e -4684-8146-d 88 f 4013 d 4 d 1
 translation-type: tm+mt
-source-git-commit: 2ac4a59f1af46cfb1cae8cda3c24e217620cec70
+source-git-commit: 9a1af88238a232c64d9f0229059c5001f314c736
 
 ---
 
 
-# Introduzione {#introduction}
+# Overview to Product Update Wizard {#overview-product-update-wizard}
 
-La procedura guidata di aggiornamento prodotto è un&#39;esperienza guidata per i clienti di Experience Manager che eseguono l&#39;aggiornamento alla versione più recente di Adobe Experience Manager (AEM) 6.5. Semplifica il processo end-to-end, assicurando il rispetto delle best practice di AEM utilizzando framework CI/CD di Cloud Manager e test automatizzati incorporati.
+La procedura guidata Aggiornamento prodotto è un&#39;esperienza guidata per i clienti di Experience Manager che eseguono l&#39;aggiornamento alla versione più recente di Adobe Experience Manager (AEM) 6.5. Semplifica il processo end-to-end, assicurando il rispetto delle best practice di AEM utilizzando framework CI/CD di Cloud Manager e test automatizzati incorporati.
 
 La procedura guidata include cinque fasi che guidano l&#39;utente durante un aggiornamento di prodotto AEM. Le cinque fasi sono:
 
-* Valutazione
-* Recupero
-* Esecuzione
-* Convalida
-* Completamento
+* **Valutazione**
+* **Recupero**
+* **Esecuzione**
+* **Convalida**
+* **Completamento**
 
 >[!NOTE]
 >The current release of Product Update feature in Cloud Manager supports the **Evaluation** phase only. The other four phases namely **Remediation**, **Execution**, **Validation**, and **Completion** are coming soon.
