@@ -4,7 +4,7 @@ seo-title: Note sulla versione di AEM Cloud Manager per 2019.6.0
 description: Segui questa pagina per ottenere informazioni sulla versione 2019.6.0 di Cloud Manager.
 seo-description: Segui questa pagina per ottenere informazioni sulla versione 2019.6.0 di AEM Cloud Manager.
 translation-type: tm+mt
-source-git-commit: 75563d3f4b2a27d943c052993c97d830338ead9c
+source-git-commit: 9a1af88238a232c64d9f0229059c5001f314c736
 
 ---
 
@@ -14,12 +14,12 @@ The [!UICONTROL Cloud Manager] 2019.6.0 Release does not contain significant fun
 
 ## Release Date {#release-date}
 
-The Release Date for [!UICONTROL Cloud Manager] Version 2019.6.0 is .
+The Release Date for [!UICONTROL Cloud Manager] Version 2019.6.0 is June 20, 2019 .
 
 ## Novità {#whats-new}
 
-* Nuova procedura guidata Aggiornamento prodotto per aiutare i clienti a eseguire correttamente un aggiornamento AEM. (collegamento alla pagina Procedura guidata Aggiornamento prodotto)
-* Regole di qualità del codice che consentono di esaminare le strutture dei contenuti. (collegamento alla pagina Regole di qualità codice personalizzate)
+* Procedura guidata Nuovo aggiornamento del prodotto per aiutare i clienti a eseguire correttamente un aggiornamento AEM. Refer to [Product Update Wizard](overview-productupdate-wizard.md) to learn more.
+* Regole di qualità del codice che consentono di esaminare le strutture dei contenuti. Refer to [Custom Code Quality Rules](custom-code-quality-rules.md)for more information.
 * La dimensione massima di un push git è stata portata a 1 GB.
 
 ## Bug Fixes {#bug-fixes}
@@ -29,4 +29,4 @@ The Release Date for [!UICONTROL Cloud Manager] Version 2019.6.0 is .
 ## Problemi noti {#known-issues}
 
 * Il download CSV di qualità del codice non viene sempre ordinato in base alla gravità.
-* Falsi positivi possono essere segnalati dalla regola configandinstallshouldonlycontainosginodes se le configurazioni osgi vengono posizionate in una cartella nidificata all&#39;interno di una cartella di configurazione.
+* False positives may be reported by the *ConfigAndInstallShouldOnlyContainOsgiNodes* rule if OSGi configurations are placed in a nested folder under a config folder.
