@@ -8,16 +8,16 @@ contentOwner: jsyal
 products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: ebcc 91 a 5-be 9 e -4684-8146-d 88 f 4013 d 4 d 1
 translation-type: tm+mt
-source-git-commit: 47331787d45fe68144cb90c4b907560fe0079b3c
+source-git-commit: 2fda16bb4826171c993ec07c7ff3e38d1675b9f5
 
 ---
 
 
-# Evaulation Phase {#evaluation}
+# Evaluation Phase {#evaluation}
 
-Dopo aver fatto clic su Avvia aggiornamento, la prima fase di Aggiornamento prodotto guidata è la fase Valutazione. In questa fase, potete valutare la complessità dell&#39;aggiornamento con il rilevatore pattern accessibile direttamente dalla procedura guidata. Alla fine di questo passaggio, potrai accedere al rapporto di valutazione.
+Once you click **[!UICONTROL Start Update]**, the first phase in Product Update Wizard is the Evaluation phase. In questa fase, potete valutare la complessità dell&#39;aggiornamento con il rilevatore pattern accessibile direttamente dalla procedura guidata. Alla fine di questo passaggio, potrai accedere al rapporto di valutazione.
 
-Il rapporto generato consente di controllare l&#39;istanza Author per ottenere l&#39;upgradabilità rilevando i pattern in uso:
+Il rapporto generato consente di controllare l&#39;istanza Author per l&#39;upgradabilità rilevando pattern che:
 
 * Violano determinate regole e vengono eseguite nelle aree che saranno interessate o sovrascritte dall&#39;aggiornamento.
 
@@ -33,11 +33,15 @@ Questo serve da valutazione dell&#39;impegno di sviluppo coinvolto nell&#39;aggi
 
 Effettuate le seguenti operazioni per eseguire il valutatore:
 
-1. Select [!UICONTROL Run evaluation] to run the pattern detector. Il rilevatore pattern può essere eseguito in qualsiasi ambiente. Tuttavia, per aumentare il tasso di rilevamento ed evitare eventuali rallentamenti sulle istanze decisive di business, Cloud Manager lo eseguirà nell&#39;ambiente di verifica nell&#39;istanza di authoring.
+1. Select **[!UICONTROL Run Evaluation]** to run the pattern detector. Il rilevatore pattern può essere eseguito in qualsiasi ambiente. Tuttavia, per aumentare il tasso di rilevamento ed evitare eventuali rallentamenti sulle istanze decisive di business, Cloud Manager lo eseguirà nell&#39;ambiente di verifica nell&#39;istanza di authoring.
+
+![](assets/Run-Evaluation.png)
 
 1. La procedura guidata indica lo stato dell&#39;azione. You will notice **In progress** or **completed** as applicable when the evaluation report is being generated.
 
 Once the report is generated, you can select [!UICONTROL Download] to save a copy of the evaluation report.
+
+![](assets/Evaluation-1.png)
 
 >[!NOTE]
 >The other four phases succeeding **Evaluation** namely **Remediation**, **Execution**, **Validation**, and **Completion** are coming soon and are not available in the current release.
