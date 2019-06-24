@@ -8,16 +8,16 @@ contentOwner: jsyal
 products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: ebcc 91 a 5-be 9 e -4684-8146-d 88 f 4013 d 4 d 1
 translation-type: tm+mt
-source-git-commit: 9a1af88238a232c64d9f0229059c5001f314c736
+source-git-commit: 9e33b90818c686f0b7aacaf0955c3f2eba05488f
 
 ---
 
 
-# Overview to Product Update Wizard {#overview-product-update-wizard}
+# Panoramica {#overview-product-update-wizard}
 
 La procedura guidata Aggiornamento prodotto è un&#39;esperienza guidata per i clienti di Experience Manager che eseguono l&#39;aggiornamento alla versione più recente di Adobe Experience Manager (AEM) 6.5. Semplifica il processo end-to-end, assicurando il rispetto delle best practice di AEM utilizzando framework CI/CD di Cloud Manager e test automatizzati incorporati.
 
-La procedura guidata include cinque fasi che guidano l&#39;utente durante un aggiornamento di prodotto AEM. Le cinque fasi sono:
+La procedura guidata include cinque fasi che guidano l&#39;utente durante un aggiornamento di prodotto AEM:
 
 * **Valutazione**
 * **Recupero**
@@ -25,22 +25,16 @@ La procedura guidata include cinque fasi che guidano l&#39;utente durante un agg
 * **Convalida**
 * **Completamento**
 
->[!NOTE]
->The current release of Product Update feature in Cloud Manager supports the **Evaluation** phase only. The other four phases namely **Remediation**, **Execution**, **Validation**, and **Completion** are coming soon.
-
 
 ## Using Product Update Wizard {#using-product-update-wizard}
 
 >[!NOTE]
 >I clienti iscritti a Cloud Manager e idonei per l&#39;aggiornamento ad AEM 6.5 potranno sfruttare la procedura guidata Aggiornamento prodotto. Per maggiori informazioni, contatta il tuo Customer Success Engineer (CSE).
 
-1. Riceverete una notifica di impulsi tramite il Gestore cloud che informa che una nuova versione di AEM 6.5 è disponibile per il programma.
+1. Riceverete una notifica di impulsi tramite Cloud Manager che informa che AEM 6.5 è disponibile per il programma.
 
-1. An **[!UICONTROL AEM 6.5 Update]** card displays on the overview screen of [!UICONTROL Cloud Manager]. Questa scheda ti aiuterà a tenere traccia della fase del processo di aggiornamento attualmente in uso e ti informerà sul passaggio successivo. Select **[!UICONTROL Start Update]** to start the update wizard.
+1. An **[!UICONTROL AEM 6.5 Update]** card displays on the overview screen of [!UICONTROL Cloud Manager]. Questa scheda ti aiuterà a tenere traccia della fase del processo di aggiornamento attualmente in uso e ti informerà sul passaggio successivo. Select **[!UICONTROL Start Update]** to launch the wizard.
 
    ![](assets/Start-Update.png)
 
-### Passaggi successivi {#next-steps}
-
-Once you click the **[!UICONTROL Start Update]** from the **[!UICONTROL AEM 6.5 Update]** card, the **Evaulation** phase starts.
-Navigate to the [Evaluation Phase](evaluation.md) to learn more.
+The wizard now displays the first phase of **[!UICONTROL AEM 6.5 Update]** process, as seen in the [Evaluation Phase](evaluation.md).
