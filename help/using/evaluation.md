@@ -8,7 +8,7 @@ contentOwner: jsyal
 products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: ebcc 91 a 5-be 9 e -4684-8146-d 88 f 4013 d 4 d 1
 translation-type: tm+mt
-source-git-commit: 2fda16bb4826171c993ec07c7ff3e38d1675b9f5
+source-git-commit: 2ac4a59f1af46cfb1cae8cda3c24e217620cec70
 
 ---
 
@@ -33,15 +33,22 @@ Questo serve da valutazione dell&#39;impegno di sviluppo coinvolto nell&#39;aggi
 
 Effettuate le seguenti operazioni per eseguire il valutatore:
 
-1. Select **[!UICONTROL Run Evaluation]** to run the pattern detector. Il rilevatore pattern può essere eseguito in qualsiasi ambiente. Tuttavia, per aumentare il tasso di rilevamento ed evitare eventuali rallentamenti sulle istanze decisive di business, Cloud Manager lo eseguirà nell&#39;ambiente di verifica nell&#39;istanza di authoring.
+1. Select **[!UICONTROL Run Evaluation]** to run the pattern detector.
 
-![](assets/Run-Evaluation.png)
+   >[!NOTE]
+   >Il rilevatore pattern può essere eseguito in qualsiasi ambiente. Tuttavia, per aumentare il tasso di rilevamento ed evitare eventuali rallentamenti sulle istanze decisive di business, Cloud Manager lo eseguirà nell&#39;ambiente di verifica nell&#39;istanza di authoring.
+
+   ![](assets/Run-Evaluation.png)
 
 1. La procedura guidata indica lo stato dell&#39;azione. You will notice **In progress** or **completed** as applicable when the evaluation report is being generated.
 
-Once the report is generated, you can select [!UICONTROL Download] to save a copy of the evaluation report.
+   Once the report is generated, you can click on **[!UICONTROL Download report]** to save a copy of the evaluation report.
 
-![](assets/Evaluation-1.png)
+   ![](assets/Evaluation-1.png)
+
+   Potete visualizzare le notifiche di scorrimento aggiornate, in base agli aggiornamenti dello stato.
+
+   ![](assets/Evaluation-pulse-notification.png)
 
 >[!NOTE]
 >The other four phases succeeding **Evaluation** namely **Remediation**, **Execution**, **Validation**, and **Completion** are coming soon and are not available in the current release.
