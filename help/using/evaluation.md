@@ -8,21 +8,20 @@ contentOwner: jsyal
 products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: ebcc 91 a 5-be 9 e -4684-8146-d 88 f 4013 d 4 d 1
 translation-type: tm+mt
-source-git-commit: 2ac4a59f1af46cfb1cae8cda3c24e217620cec70
+source-git-commit: 9a1af88238a232c64d9f0229059c5001f314c736
 
 ---
 
 
 # Evaluation Phase {#evaluation}
 
-Once you click **[!UICONTROL Start Update]**, the first phase in Product Update Wizard is the Evaluation phase. In questa fase, potete valutare la complessità dell&#39;aggiornamento con il rilevatore pattern accessibile direttamente dalla procedura guidata. Alla fine di questo passaggio, potrai accedere al rapporto di valutazione.
+Once you click **[!UICONTROL Start Update]**, the first phase in Product Update wizard is the **[!UICONTROL Evaluation]** phase. In questa fase, potete valutare la complessità dell&#39;aggiornamento con il rilevatore pattern accessibile direttamente dalla procedura guidata. Alla fine di questo passaggio, potrai accedere al rapporto di valutazione.
 
 Il rapporto generato consente di controllare l&#39;istanza Author per l&#39;upgradabilità rilevando pattern che:
 
 * Violano determinate regole e vengono eseguite nelle aree che saranno interessate o sovrascritte dall&#39;aggiornamento.
 
 * Utilizza una funzione AEM 6. x o un&#39;API non compatibile con il nuovo AEM e può interruzioni potenzialmente dopo l&#39;aggiornamento.
-
 
 Questo serve da valutazione dell&#39;impegno di sviluppo coinvolto nell&#39;aggiornamento ad Adobe Experience Manager (AEM) 6.5.
 
@@ -33,7 +32,7 @@ Questo serve da valutazione dell&#39;impegno di sviluppo coinvolto nell&#39;aggi
 
 Effettuate le seguenti operazioni per eseguire il valutatore:
 
-1. Select **[!UICONTROL Run Evaluation]** to run the pattern detector.
+1. Click on **[!UICONTROL Run Evaluation]** to run the pattern detector.
 
    >[!NOTE]
    >Il rilevatore pattern può essere eseguito in qualsiasi ambiente. Tuttavia, per aumentare il tasso di rilevamento ed evitare eventuali rallentamenti sulle istanze decisive di business, Cloud Manager lo eseguirà nell&#39;ambiente di verifica nell&#39;istanza di authoring.
