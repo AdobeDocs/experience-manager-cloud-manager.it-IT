@@ -1,16 +1,15 @@
 ---
-cloud: experience-cloud
-product: adobe experience manager cloud manager
-archtype: administrator
+product: adobe experience manager
+sub-product: adobe experience manager cloud manager
+archetype: administrator
 user-guide-title: Aiuto di Experience Manager Experience Manager
-index: n
 translation-type: tm+mt
-source-git-commit: 97a2b172d4513161fa729d9f3693569867c6ed3e
+source-git-commit: c5f26158bd4268b866a0726fbd63009a779ddcf1
 
 ---
 
 
-# Experience Manager Help {#using}
+# Aiuto di Experience Manager {#using}
 
 + [Introduzione a Cloud Manager](introduction-to-cloud-manager.md)
 + Panoramica {#overview}
@@ -19,7 +18,7 @@ source-git-commit: 97a2b172d4513161fa729d9f3693569867c6ed3e
    + [Pipeline CI/CD](ci-cd-pipeline.md)
    + [Protezione e privacy](security-and-privacy.md)
    + [Risorse di aiuto](help-resources.md)
-+ What is Required {#requirements}
++ Cosa è necessario {#requirements}
    + [Diritti di accesso concessi](access-rights-granted.md)
    + [Archivio codice sorgente](source-code-repository.md)
    + [Aggiunta di utenti e ruoli](setting-up-users-and-roles.md)
@@ -30,7 +29,7 @@ source-git-commit: 97a2b172d4513161fa729d9f3693569867c6ed3e
    + [Creare un progetto applicazione AEM](create-an-application-project.md)
    + [Configurare i rami della release](configure-your-release-branches.md)
    + [Gestione delle configurazioni del dispatcher](dispatcher-configurations.md)
-+ How to Use {#how-to-use}
++ Come utilizzare {#how-to-use}
    + [Configurare la pipeline CI/CD](configuring-pipeline.md)
    + [Implementare il codice](deploying-code.md)
    + [Comprendere i risultati del test](understand-your-test-results.md)
@@ -39,7 +38,7 @@ source-git-commit: 97a2b172d4513161fa729d9f3693569867c6ed3e
    + [API di Experience Manager](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html)
    + [Notifiche](notifications.md)
    + [Regole di qualità codice personalizzate](custom-code-quality-rules.md)
-+ Product Update Wizard {#product-update-wizard}
++ Procedura guidata Aggiornamento prodotto {#product-update-wizard}
    + [Panoramica](overview-productupdate-wizard.md)
    + [Valutazione](evaluation.md)
 + Note sulla versione {#release-notes}
