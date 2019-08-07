@@ -9,7 +9,7 @@ tutorials-title: Esercitazioni
 tutorials-url: https://helpx.adobe.com/experience-manager/kt/index/aem-6-4-videos.html
 git-repo: https://github.com/AdobeDocs/experience-manager-cloud-manager.en
 translation-type: tm+mt
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+source-git-commit: 9e27b90e12b64a525558364cda70ce1ff01d19fa
 
 ---
 
@@ -20,9 +20,9 @@ Il file metadata. md include metadati reattivi che passano ai file TOC. md della
 
 | metadata | azione |
 |--- |--- |
-| solution-title | Utilizzato nell&#39;intestazione dell&#39;articolo come collegamento |
+| solution-title | Utilizzato nell'intestazione dell'articolo come collegamento |
 | solution-hub-url | Apre la pagina hub helpx |
-| solution-icon | Visualizza l&#39;icona della soluzione accanto al titolo della soluzione. Non ancora implementato |
+| solution-icon | Visualizza l'icona della soluzione accanto al titolo della soluzione. Non ancora implementato |
 | getting-started-url | Collegamento alla pagina introduttiva helpx |
 | tutorials-url | Collegamento alle esercitazioni video—esercitazioni helpx o esercitazioni KT |
 | mini-toc-levels | Determina il numero di livelli di intestazione visualizzati nella barra laterale destra. il valore predefinito è 2 |
