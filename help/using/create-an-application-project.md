@@ -9,7 +9,7 @@ products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 76 c 1 a 8 e 4-d 66 f -4 a 3 b -8 c 0 c-b 80 c 9 e 17700 e
 translation-type: tm+mt
-source-git-commit: 81f4e0b3b31a8be1f0620b70442b0268159e4ec0
+source-git-commit: 365cd6dfe65059c0c529f774bbcda946d47b0db5
 
 ---
 
@@ -270,6 +270,43 @@ Questa stessa tecnica può essere utilizzata per installare pacchetti specifici 
 >[!NOTE]
 >
 >L'installazione di un pacchetto di sistema in questo modo **non** lo installa nell'ambiente runtime utilizzato per l'esecuzione di Adobe Experience Manager. Se hai bisogno di un pacchetto di sistema installato nell'ambiente AEM, contatta il tuo Customer Success Engineers (CSE).
+
+## Eliminazione dei pacchetti di contenuto {#skipping-content-packages}
+
+In Cloud Manager, le build possono produrre un numero qualsiasi di pacchetti di contenuto.
+Per diversi motivi, potrebbe essere utile produrre un pacchetto di contenuto ma non distribuirlo. Questo potrebbe risultare utile, ad esempio, quando crei pacchetti di contenuto utilizzati solo per test o che verranno recompressi da un altro passaggio nel processo di creazione, ovvero come sottopacchetto di un altro pacchetto.
+
+Per soddisfare questi scenari, Cloud Manager cerca una proprietà denominata ***cloudmanagertarget*** nelle proprietà dei pacchetti di contenuto generati. Se questa proprietà è impostata su Nessuno, il pacchetto verrà ignorato e non distribuito. Il meccanismo di impostazione di questa proprietà dipende dal modo in cui la build genera il pacchetto di contenuto. Ad esempio, con il file filevault-maven-plugin, configurate il plug-in come segue:
+
+```xml
+        <plugin>
+            <groupId>org.apache.jackrabbit</groupId>
+            <artifactId>filevault-package-maven-plugin</artifactId>
+            <extensions>true</extensions>
+            <configuration>
+                <properties>
+                    <cloudManagerTarget>none</cloudManagerTarget>
+                </properties>
+        <!-- other configuration -->
+            </configuration>
+        </plugin>
+```
+
+Con content-package-maven-plugin è simile a:
+
+```xml
+        <plugin>
+            <groupId>com.day.jcr.vault</groupId>
+            <artifactId>content-package-maven-plugin</artifactId>
+            <extensions>true</extensions>
+            <configuration>
+                <properties>
+                    <cloudManagerTarget>none</cloudManagerTarget>
+                </properties>
+        <!-- other configuration -->
+            </configuration>
+        </plugin>
+```
 
 ## Sviluppo del codice basato sulle best practice {#develop-your-code-based-on-best-practices}
 
