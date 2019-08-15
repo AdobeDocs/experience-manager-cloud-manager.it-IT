@@ -4,7 +4,7 @@ sub-product: adobe experience manager cloud manager
 archetype: administrator
 user-guide-title: Aiuto di Experience Manager Experience Manager
 translation-type: tm+mt
-source-git-commit: c5f26158bd4268b866a0726fbd63009a779ddcf1
+source-git-commit: 365cd6dfe65059c0c529f774bbcda946d47b0db5
 
 ---
 
@@ -36,13 +36,15 @@ source-git-commit: c5f26158bd4268b866a0726fbd63009a779ddcf1
    + [Gestisci gli ambienti](manage-your-environment.md)
    + [Monitorare gli ambienti](monitor-your-environments.md)
    + [API di Experience Manager](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html)
+   + [CLI di Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/master/README.md)
    + [Notifiche](notifications.md)
    + [Regole di qualità codice personalizzate](custom-code-quality-rules.md)
 + Procedura guidata Aggiornamento prodotto {#product-update-wizard}
    + [Panoramica](overview-productupdate-wizard.md)
    + [Valutazione](evaluation.md)
 + Note sulla versione {#release-notes}
-   + [Note sulla versione correnti (2019.7.0)](release-notes-current.md)
+   + [Note sulla versione correnti (2019.8.0)](release-notes-current.md)
+   + [Note sulla versione correnti (2019.7.0)](release-notes-2019-7-0.md)
    + [Note sulla versione 2019.6.0](release-notes-2019-6-0.md)
    + [Note sulla versione 2019.5.0](release-notes-2019-5-0.md)
    + [Note sulla versione 2019.4.0](release-notes-2019-4-0.md)
