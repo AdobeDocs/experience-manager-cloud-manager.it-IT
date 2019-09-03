@@ -9,7 +9,7 @@ products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 53807 ea 6-9464-429 d -9322-85 c 9 f 405 dff 6
 translation-type: tm+mt
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+source-git-commit: 9c0df236c1e800802d62dea09996bb8e1e7033f7
 
 ---
 
@@ -18,7 +18,7 @@ source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
 
 ## Impostazione del primo ramo in Git {#setting-up-your-first-branch-in-git}
 
-Un singolo, inizialmente vuoto, **l&#39;archivio** Git viene fornito per ogni programma presente in Cloud Manager. Questo archivio può contenere un numero di rami (o pochissimi) all&#39;interno del processo di sviluppo, ma deve essere presente almeno un ramo utilizzato dalla pipeline CI/CD per distribuire il codice dell&#39;applicazione all&#39;area di visualizzazione e alla produzione. La procedura consigliata è quella di utilizzare `master` come nome di questo ramo. Questo è il comportamento predefinito dei client Git durante l&#39;impostazione di nuovi progetti.
+Un singolo, inizialmente vuoto, **l'archivio** Git viene fornito per ogni programma presente in Cloud Manager. Questo archivio può contenere un numero di rami (o pochissimi) all'interno del processo di sviluppo, ma deve essere presente almeno un ramo utilizzato dalla pipeline CI/CD per distribuire il codice dell'applicazione all'area di visualizzazione e alla produzione. La procedura consigliata è quella di utilizzare `master` come nome di questo ramo. Questo è il comportamento predefinito dei client Git durante l'impostazione di nuovi progetti.
 
 Ad esempio, quando configurate un nuovo progetto, viene eseguito un set di comandi come:
 
@@ -52,7 +52,7 @@ $ git commit -m "initial commit"
 
 >[!NOTE]
 >
->Non è necessario utilizzare il client della riga di comando. Esistono diversi client Git grafici disponibili come applicazioni autonome o come parte di un ambiente di sviluppo integrato (IDE) come Eclipse o intellij. Se l&#39;applicazione client supporta Git utilizzando HTTPS, deve essere compatibile [!UICONTROL Cloud Manager]con.
+>Non è necessario utilizzare il client della riga di comando. Esistono diversi client Git grafici disponibili come applicazioni autonome o come parte di un ambiente di sviluppo integrato (IDE) come Eclipse o intellij. Se l'applicazione client supporta Git utilizzando HTTPS, deve essere compatibile [!UICONTROL Cloud Manager]con.
 
 ## Invio del primo ramo {#pushing-your-first-branch}
 
@@ -72,7 +72,7 @@ To <url>
 
 >[!NOTE]
 >
->L&#39;URL specifico, insieme alle tue credenziali, verrà fornito al tuo Customer Success Engineering durante [!UICONTROL Cloud Manager] l&#39;onboarding.
+>L'URL specifico, insieme alle tue credenziali, verrà fornito al tuo Customer Success Engineering durante [!UICONTROL Cloud Manager] l'onboarding.
 
 ## Rami aggiuntivi {#additional-branches}
 
@@ -80,5 +80,4 @@ Un `master` singolo ramo può essere sufficiente per progetti molto semplici, ma
 
 >[!NOTE]
 >
->Per visualizzare i comandi git comuni, consultate [Git Cheat Sheet](https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf).
-
+>Per visualizzare i comandi git comuni, consultate [Git Cheat Sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet).
