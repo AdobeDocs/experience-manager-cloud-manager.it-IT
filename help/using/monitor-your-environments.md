@@ -4,14 +4,14 @@ seo-title: Monitorare gli ambienti
 description: 'null'
 seo-description: Segui questa pagina per informazioni sul monitoraggio del sistema in Cloud Manager, eseguendo il monitoraggio delle singole istanze all'interno di un ambiente e tracciando diverse metriche per ogni istanza.
 translation-type: tm+mt
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+source-git-commit: 548d18f251cf8c4c827d2208fec04cde235ce731
 
 ---
 
 
 # Monitoraggio del sistema {#system-monitoring}
 
-Il monitoraggio del sistema viene [!UICONTROL Cloud Manager] eseguito osservando le singole istanze all&#39;interno di un ambiente e monitorando diverse metriche per ogni istanza. Ciascuna metrica ha due soglie definite: una soglia *di avviso* e una soglia *critica*.
+Il monitoraggio del sistema viene [!UICONTROL Cloud Manager] eseguito osservando le singole istanze all'interno di un ambiente e monitorando diverse metriche per ogni istanza. Ciascuna metrica ha due soglie definite: una soglia *di avviso* e una soglia *critica*.
 
 Se una metrica eccede la soglia critica, viene considerata in uno stato critico; se una metrica si trova sopra la soglia di avviso (ma sotto la soglia critica), viene considerata in stato di avviso. Le soglie sono impostate da Adobe Managed Services [!UICONTROL Cloud Manager](Servizi gestiti Adobe) e possono essere visualizzate. Nella maggior parte dei casi, le soglie sono coerenti tra i clienti, ma esistono casi in cui i servizi gestiti Adobe modificheranno soglie per soddisfare requisiti specifici del cliente. Le domande sulle soglie devono essere indirizzate al tuo Customer Success Engineer (CSE).
 
@@ -29,7 +29,7 @@ La navigazione alla funzione Monitoraggio sistema può essere eseguita in due mo
 
    *Oppure*,
 
-* Passate alla **pagina di destinazione Monitoraggio** del sistema tramite la **voce di menu di navigazione** globale Rapporti all&#39;interno [!UICONTROL Cloud Manager].
+* Passate alla **pagina di destinazione Monitoraggio** del sistema tramite la **voce di menu di navigazione** globale Rapporti all'interno [!UICONTROL Cloud Manager].
 
 
 ## Pagina Panoramica sul monitoraggio del sistema {#system-monitoring-overview-page}
@@ -41,32 +41,32 @@ La pagina Panoramica sul monitoraggio del sistema elenca gli ambienti monitorati
 * **Rete**
 * **Applicazione**
 
-Lo stato in ogni categoria è un riepilogo delle singole metriche; se qualsiasi metrica in una categoria è nello stato critico, l&#39;intera categoria è in uno stato critico per la pagina della panoramica. La stessa sintesi può essere visualizzata a livello di ambiente e a livello di istanza.
+Lo stato in ogni categoria è un riepilogo delle singole metriche; se qualsiasi metrica in una categoria è nello stato critico, l'intera categoria è in uno stato critico per la pagina della panoramica. La stessa sintesi può essere visualizzata a livello di ambiente e a livello di istanza.
 
 ![](assets/Reports.png)
 
 >[!NOTE]
 >
->Per impostazione predefinita, quando si passa a questa pagina, le istanze dell&#39;ambiente di produzione sono visibili, ma anche altri ambienti.
+>Per impostazione predefinita, quando si passa a questa pagina, le istanze dell'ambiente di produzione sono visibili, ma anche altri ambienti.
 
 ## Dettagli sul monitoraggio del sistema {#system-monitoring-detail}
 
-Per visualizzare i dettagli di metriche specifiche, puoi fare clic su una delle categorie nel pannello di navigazione a sinistra o fare clic su uno degli indicatori di categoria per un&#39;istanza specifica. Ogni pagina di dettaglio mostra una serie di grafici per le metriche all&#39;interno della categoria. Potete visualizzare le metriche per tutte le istanze in un ambiente o per un&#39;istanza specifica. Potete passare da un ambiente all&#39;altro utilizzando le caselle a discesa nell&#39;angolo superiore destro.
+Per visualizzare i dettagli di metriche specifiche, puoi fare clic su una delle categorie nel pannello di navigazione a sinistra o fare clic su uno degli indicatori di categoria per un'istanza specifica. Ogni pagina di dettaglio mostra una serie di grafici per le metriche all'interno della categoria. Potete visualizzare le metriche per tutte le istanze in un ambiente o per un'istanza specifica. Potete passare da un ambiente all'altro utilizzando le caselle a discesa nell'angolo superiore destro.
 
 ![](assets/System_Monitoring1.png)
 
-La navigazione a sinistra mostrerà le metriche disponibili nella categoria correntemente selezionata per le quali sono presenti dati per l&#39;ambiente e le istanze attualmente selezionate.
+La navigazione a sinistra mostrerà le metriche disponibili nella categoria correntemente selezionata per le quali sono presenti dati per l'ambiente e le istanze attualmente selezionate.
 
 ![](assets/System_Monitoring2.png)
 
 Un grafico singolo mostrerà lo stato e un grafico dei dati nel tempo insieme alle soglie. Se vengono visualizzate più istanze, i dati di ogni istanza si trovano in una serie separata.
 
-![](assets/System-Monitoring3.png)
+![](assets/Monitoring_Graphs1.png)
 
 La singola serie può essere nascosta su un grafico facendo clic sulla serie nella legenda.
 Ad esempio, se si fa clic sulla serie di soglia di avviso, viene visualizzata solo la soglia critica.
 
-![](assets/System_Monitoring4.png)
+![](assets/Monitoring_Graphs2.png)
 
 ### Definizioni delle metriche {#metric-definitions}
 
@@ -76,7 +76,7 @@ Ad esempio, se si fa clic sulla serie di soglia di avviso, viene visualizzata so
 * Conteggio processi: il numero di processi attualmente aperti.
 * Conteggio utenti: numero di utenti con una sessione shell attiva.
 * Uso della memoria: percentuale della memoria di sistema attualmente allocata.
-* Memoria JVM (heap): le dimensioni (in Megabyte) dell&#39;Heap Java allocato.
+* Memoria JVM (heap): le dimensioni (in Megabyte) dell'Heap Java allocato.
 * Spazio di generazione precedente: percentuale della memoria della vecchia generazione JVM attualmente allocata.
 
 **Rete**
@@ -85,12 +85,12 @@ Ad esempio, se si fa clic sulla serie di soglia di avviso, viene visualizzata so
 
 **Archiviazione**
 
-* Spazio su disco: Lo spazio su disco utilizzato (in Megabyte) per ogni punto di montaggio dell&#39;host. Esistono metriche diverse per ogni punto di montaggio. Come minimo, sono disponibili metriche per «/» e «/mnt», ma possono essere disponibili metriche di punti di montaggio aggiuntive a seconda della configurazione di istanza specifica.
-* Dimensione cartella: Archivio segmenti AEM: Lo spazio su disco utilizzato (in Gigabyte) per l&#39;archivio segmenti AEM.
+* Spazio su disco: Lo spazio su disco utilizzato (in Megabyte) per ogni punto di montaggio dell'host. Esistono metriche diverse per ogni punto di montaggio. Come minimo, sono disponibili metriche per «/» e «/mnt», ma possono essere disponibili metriche di punti di montaggio aggiuntive a seconda della configurazione di istanza specifica.
+* Dimensione cartella: Archivio segmenti AEM: Lo spazio su disco utilizzato (in Gigabyte) per l'archivio segmenti AEM.
 
 **Applicazione**
 
-* Agente replica: L&#39;ora, in secondi, per un evento di replica test. Esistono metriche separate per ciascun agente di replica.
+* Agente replica: L'ora, in secondi, per un evento di replica test. Esistono metriche separate per ciascun agente di replica.
 * Svuotamento del dispatcher: Numero di elementi attualmente presenti nella coda del dispatcher.
 
 ## Rapporto SLA {#sla-reporting}
@@ -104,7 +104,7 @@ Come per i grafici di monitoraggio del sistema, se si passa su un punto dati ven
 
 ![](assets/sla-reporting2.png)
 
-La sezione Analisi evento di questo grafico mostra il set di incidenti verificatisi per il programma durante l&#39;anno selezionato. Ogni incidente ha un intervallo di tempo, una causa e un insieme di commenti.
+La sezione Analisi evento di questo grafico mostra il set di incidenti verificatisi per il programma durante l'anno selezionato. Ogni incidente ha un intervallo di tempo, una causa e un insieme di commenti.
 
 ![](assets/sla-reporting3.png)
 
