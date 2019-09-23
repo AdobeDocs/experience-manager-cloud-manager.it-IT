@@ -1,49 +1,49 @@
 ---
 product: adobe experience manager
-sub-product: Experience Manager Cloud Manager
+sub-product: experience manager cloud manager
 archetype: administrator
-user-guide-title: Aiuto di Experience Manager Experience Manager
+user-guide-title: Aiuto di Experience Manager Cloud Manager
 translation-type: tm+mt
 source-git-commit: 548d18f251cf8c4c827d2208fec04cde235ce731
 
 ---
 
 
-# Aiuto di Experience Manager {#using}
+# Experience Manager Help {#using}
 
-+ [Introduzione a Cloud Manager](introduction-to-cloud-manager.md)
++ [Introduction to Cloud Manager](introduction-to-cloud-manager.md)
 + Panoramica {#overview}
    + [Concetti chiave](key-concepts.md)
    + [Percorso del cliente](customer-journey.md)
    + [Pipeline CI/CD](ci-cd-pipeline.md)
-   + [Protezione e privacy](security-and-privacy.md)
-   + [Risorse di aiuto](help-resources.md)
-+ Cosa è necessario {#requirements}
+   + [Sicurezza e privacy](security-and-privacy.md)
+   + [Risorse](help-resources.md)
++ Elementi richiesti {#requirements}
    + [Diritti di accesso concessi](access-rights-granted.md)
-   + [Archivio codice sorgente](source-code-repository.md)
-   + [Aggiunta di utenti e ruoli](setting-up-users-and-roles.md)
-   + [Ambienti con provisioning](environments-provisioned.md)
+   + [Repository del codice sorgente](source-code-repository.md)
+   + [Aggiungi utenti e ruoli](setting-up-users-and-roles.md)
+   + [Ambienti forniti](environments-provisioned.md)
 + Introduzione {#getting-started}
-   + [Login per la prima volta](first-time-login.md)
+   + [Accesso iniziale](first-time-login.md)
    + [Configurazione del programma](setting-up-program.md)
-   + [Creare un progetto applicazione AEM](create-an-application-project.md)
-   + [Configurare i rami della release](configure-your-release-branches.md)
-   + [Gestione delle configurazioni del dispatcher](dispatcher-configurations.md)
-+ Come utilizzare {#how-to-use}
-   + [Configurare la pipeline CI/CD](configuring-pipeline.md)
-   + [Implementare il codice](deploying-code.md)
-   + [Comprendere i risultati del test](understand-your-test-results.md)
-   + [Gestisci gli ambienti](manage-your-environment.md)
-   + [Monitorare gli ambienti](monitor-your-environments.md)
-   + [API di Experience Manager](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html)
+   + [Creare un progetto di applicazione AEM](create-an-application-project.md)
+   + [Configurare i rami di rilascio](configure-your-release-branches.md)
+   + [Manage your Dispatcher Configurations](dispatcher-configurations.md)
++ How to Use {#how-to-use}
+   + [Configure your CI/CD Pipeline](configuring-pipeline.md)
+   + [Deploy your Code](deploying-code.md)
+   + [Understand your Test Results](understand-your-test-results.md)
+   + [Manage your Environments](manage-your-environment.md)
+   + [Monitor your Environments](monitor-your-environments.md)
+   + [Cloud Manager API](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html)
    + [CLI di Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/master/README.md)
    + [Notifiche](notifications.md)
-   + [Regole di qualità codice personalizzate](custom-code-quality-rules.md)
-+ Procedura guidata Aggiornamento prodotto {#product-update-wizard}
+   + [Regole di qualità del codice personalizzato](custom-code-quality-rules.md)
++ Aggiornamento guidato prodotto {#product-update-wizard}
    + [Panoramica](overview-productupdate-wizard.md)
    + [Valutazione](evaluation.md)
 + Note sulla versione {#release-notes}
-   + [Note sulla versione correnti (2019.9.0)](release-notes-current.md)
+   + [Note sulla versione corrente (2019.9.0)](release-notes-current.md)
    + [Note sulla versione 2019.8.0](release-notes-2019-8-0.md)
    + [Note sulla versione 2019.7.0](release-notes-2019-7-0.md)
    + [Note sulla versione 2019.6.0](release-notes-2019-6-0.md)
