@@ -1,29 +1,29 @@
 ---
 title: Note sulla versione 2019.3.0
-seo-title: Note sulla versione di AEM Cloud Manager per 2019.3.0
+seo-title: Note sulla versione di AEM Cloud Manager per la versione 2019.3.0
 description: Segui questa pagina per ottenere informazioni sulla versione 2019.3.0 di Cloud Manager.
 seo-description: Segui questa pagina per ottenere informazioni sulla versione 2019.3.0 di AEM Cloud Manager.
 translation-type: tm+mt
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+source-git-commit: 28780dc73a6787b7f3e715965e580534344f3602
 
 ---
 
 
 # Note sulla versione 2019.3.0 {#release-notes-for}
 
-La [!UICONTROL Cloud Manager] versione 2019.3.0 aggiunge il rapporto SLA alla funzionalità di monitoraggio del sistema distribuita nell&#39;ultima versione.
+La versione [!UICONTROL Cloud Manager] 2019.3.0 aggiunge i rapporti SLA alla funzionalità di monitoraggio del sistema fornita nell'ultima release.
 
 ## Data di rilascio {#release-date}
 
-La Data di rilascio per [!UICONTROL Cloud Manager] la versione 2019.3.0 è 21 marzo 2019.
+La data di rilascio per la [!UICONTROL Cloud Manager] versione 2019.3.0 è il 21 marzo 2019.
 
 ## Novità {#whats-new}
 
-* I report SLA sono ora visibili all&#39;interno di Cloud Manager. Refer to [Monitor your Environments](monitor-your-environments.md) for more details.
-* La panoramica e le pagine di esecuzione della pipeline sono state ristrutturate per sfruttare meglio lo spazio verticale.
-* La pagina Attività utilizza ora un formato di data esteso.
+* I rapporti SLA ora sono visibili in Cloud Manager. Per ulteriori informazioni, consulta [Monitorare gli ambienti](monitor-your-environments.md) .
+* Le pagine di panoramica e di esecuzione della pipeline sono state ristrutturate per sfruttare al meglio lo spazio verticale.
+* Nella pagina Attività viene ora utilizzato un formato di data esteso.
 
-## Correzioni di bug {#bug-fixes}
+## Correzioni dei bug {#bug-fixes}
 
 * Alcuni grafici di monitoraggio non venivano visualizzati in modo coerente.
-* Se il monitoraggio risultava configurato in modo errato, il messaggio di errore veniva visualizzato più frequentemente di quanto avrebbe dovuto.
+* Se il monitoraggio non è stato configurato correttamente, il messaggio di errore viene visualizzato più spesso di quanto non sarebbe stato necessario.
