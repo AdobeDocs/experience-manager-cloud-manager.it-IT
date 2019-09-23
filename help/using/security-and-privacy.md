@@ -1,82 +1,82 @@
 ---
-title: Protezione e privacy
+title: Sicurezza e privacy
 seo-title: Sicurezza e privacy per AEM Cloud Manager
-description: Segui questa pagina per informazioni sulla sicurezza e sulla privacy delle tue risorse (code/artefatti).
-seo-description: Segui questa pagina per informazioni sulla sicurezza e sulla privacy delle tue risorse (code/artefatti) utilizzando AEM Cloud Manager.
-uuid: 68 bc 2330-a 62 c -4 c 2 c -925 c-daa 6788 b 143 a
+description: Segui questa pagina per saperne di più sulla sicurezza e la privacy delle tue risorse (codice/artifact).
+seo-description: Segui questa pagina per saperne di più sulla sicurezza e la privacy delle tue risorse (codice/artifact) tramite AEM Cloud Manager.
+uuid: 68bc2330-a62c-4c2c-925c-data6788b143a
 contentOwner: jsyal
-products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: introduction
-discoiquuid: 67 a 54 bae -99 a 9-4405-91 e 3-9 a 0 a 8 b 3 ccc 98
+products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
+topic-tags: introduzione
+discoiquuid: 67a54bae-99a9-4405-91e3-9a0a8b3ccc98
 translation-type: tm+mt
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+source-git-commit: 949d3cf0239a02875ba4ad1888e081f104dec2e2
 
 ---
 
 
-# Protezione e privacy {#security-and-privacy}
+# Sicurezza e privacy {#security-and-privacy}
 
-[!UICONTROL Cloud Manager] dispone di ruoli preconfigurati con autorizzazioni appropriate. Ad esempio, uno sviluppatore sviluppa il codice e dispone dell&#39;autorizzazione per inviare il codice all&#39;archivio **Git**. In alternativa, un proprietario aziendale dispone di autorizzazioni diverse che consentono loro di definire gli indicatori prestazioni chiave (KPI) e di approvare le implementazioni.
+[!UICONTROL Cloud Manager] dispone di ruoli preconfigurati con autorizzazioni appropriate. Ad esempio, uno sviluppatore sviluppa il codice e ha l'autorizzazione per inviare il codice al repository **** Git. In alternativa, il proprietario di un'azienda dispone di autorizzazioni diverse che consentono di definire gli indicatori prestazioni chiave (KPI, Key Performance Indicators) e di approvare le distribuzioni.
 
-## Autorizzazioni basate su ruolo {#role-based-permissions}
+## Autorizzazioni basate sul ruolo {#role-based-permissions}
 
 ### Ruoli utente {#user-roles}
 
-La gestione dei ruoli viene [!UICONTROL Cloud Manager] effettuata all&#39;interno di [Adobe Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html). Qualsiasi utente di [!UICONTROL Cloud Manager] deve essere membro dell&#39;organizzazione IMS del cliente e deve disporre del contesto prodotto Servizi gestiti Adobe. Le iscrizioni di ruolo specifiche vengono fornite aggiungendo l&#39;utente a un [!UICONTROL Cloud Manager] profilo di prodotto in Admin Console.
+La gestione del ruolo per [!UICONTROL Cloud Manager] viene eseguita in [Adobe Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html). Qualsiasi utente di [!UICONTROL Cloud Manager] deve essere membro dell'Organizzazione IMS del cliente e avere il contesto di prodotto dei servizi gestiti Adobe. Le appartenenze a ruoli specifici vengono fornite aggiungendo l'utente a un profilo di [!UICONTROL Cloud Manager] prodotto nell'Admin Console.
 
-Per ulteriori informazioni su come configurare i ruoli, consultate [Configurazione di utenti e ruoli](setting-up-users-and-roles.md).
+Per ulteriori informazioni su come impostare i ruoli, consulta [Impostazione di utenti e ruoli](setting-up-users-and-roles.md).
 
-Nell&#39;elenco seguente sono definiti i possibili ruoli che puoi assegnare nell&#39;Admin Console.
+Il seguente elenco di tabella definisce i possibili ruoli che puoi assegnare nell’Admin Console.
 
 | **[!UICONTROL Cloud Manager]Ruolo** | **Descrizione** |
 |---|---|
-| Proprietario aziendale | Utente principale che completa la [!UICONTROL Cloud Manager] configurazione iniziale. Responsabile della definizione dei KPI, approvazione di implementazioni di produzione e sostituzione di importanti errori a 3 gradi. |
-| Program Manager | Utilizza [!UICONTROL Cloud Manager] per eseguire l&#39;impostazione del team, lo stato di revisione e i KPI. Potrebbe approvare importanti errori a 3 gradi. |
-| Gestione distribuzione | Gestisce le operazioni di distribuzione. Utilizza [!UICONTROL Cloud Manager] per eseguire distribuzioni di fase e produzione. Potrebbe approvare importanti errori a 3 gradi. Può accedere all&#39;archivio Git. |
-| Sviluppatore | Sviluppa e verifica il codice dell&#39;applicazione personalizzato. Viene utilizzato [!UICONTROL Cloud Manager] principalmente per visualizzare lo stato. Consente di accedere all&#39;archivio Git. |
-| Customer Success Engineer | In genere supporta il successo dei clienti per i clienti AMS. Interagisce con [!UICONTROL Cloud Manager] allo scopo di eseguire distribuzioni che richiedono la supervisione di Customer Success Engineer (CSE). |
-| Autore contenuto | In genere non interagisce [!UICONTROL Cloud Manager]con. Questo utente può utilizzare il [!UICONTROL Cloud Manager] commutatore programmi (da [!UICONTROL Experience Cloud]) per accedere ad Adobe Experience Manager (AEM). |
+| Proprietario | Utente principale che completa la [!UICONTROL Cloud Manager] configurazione iniziale. Responsabile della definizione dei KPI, dell'approvazione delle implementazioni di produzione e della risoluzione di importanti errori a 3 livelli. |
+| Program Manager | Utilizza [!UICONTROL Cloud Manager] per eseguire la configurazione del team, esaminare lo stato e visualizzare i KPI. Può approvare importanti fallimenti a 3 livelli. |
+| Gestione distribuzione | Gestisce le operazioni di distribuzione. Utilizza [!UICONTROL Cloud Manager] per eseguire distribuzioni di fase e produzione. Può approvare importanti fallimenti a 3 livelli. Ha accesso al repository Git. |
+| Sviluppatore | Sviluppa e verifica il codice applicazione personalizzato. Viene utilizzato principalmente [!UICONTROL Cloud Manager] per visualizzare lo stato. Ha l'accesso del commit al repository Git. |
+| Customer Success Engineer | In genere supporta il successo dei clienti per i clienti AMS. Interagisce con [!UICONTROL Cloud Manager] lo scopo di eseguire distribuzioni che richiedono la supervisione di Customer Success Engineer (CSE). |
+| Content Author | Generalmente non interagisce con [!UICONTROL Cloud Manager]. Questo utente può usare il [!UICONTROL Cloud Manager] programma di commutazione (dopo aver navigato da [!UICONTROL Experience Cloud]) per accedere ad Adobe Experience Manager (AEM). |
 
 ### Autorizzazioni utente {#user-permissions}
 
-Ogni ruolo ha autorizzazioni specifiche, attività preconfigurate o autorizzazioni associate a ciascun ruolo. In questa tabella sono elencate le funzioni disponibili e i ruoli che possono eseguire la funzione.
+A ciascun ruolo sono associate autorizzazioni specifiche, attività preconfigurate o autorizzazioni specifiche. In questa tabella sono elencate le funzioni disponibili e i ruoli che possono eseguire la funzione.
 
-Per ulteriori informazioni su come configurare gli utenti, consultate [Configurazione di utenti e ruoli](setting-up-users-and-roles.md).
+Per ulteriori informazioni su come impostare gli utenti, consulta [Impostazione di utenti e ruoli](setting-up-users-and-roles.md).
 
-| Autorizzazione | Descrizione | Proprietario aziendale | Gestione distribuzione | Program Manager | Sviluppatore | CSE |
+| Autorizzazione | Descrizione | Proprietario | Gestione distribuzione | Program Manager | Sviluppatore | CSE |
 |--- |--- |--- |--- |--- |--- |--- |
-| Leggi applicazione | Consultate i dettagli del programma. | x | x | x | x | x |
-| Scrivi applicazione | Configurare il programma (inclusi i KPI). | x |
-| Ambiente di lettura | Consultate Dettagli sull&#39;ambiente. | x | x | x | x | x |
-| Creazione di un&#39;esecuzione | Avvia pipeline. | x | x | x |
-| Leggi esecuzione | Vedere stato di esecuzione. | x | x | x | x | x |
-| Riprendi esecuzione | Può riprendere l&#39;esecuzione in pausa. | x | x | x | x |
-| Esecuzione dell&#39;implementazione di Approve in produzione | Fornire Golive Approval. | x | x | x |
-| Pianificazione pianificazione distribuzione in produzione | Pianificare distribuzione produzione. | x | x | x | x |
-| Distribuzione in produzione | Distribuite l&#39;applicazione in produzione quando viene messa in pausa per la navigazione CSE. | x |
-| Annullamento esecuzione | Annulla l&#39;esecuzione corrente. | x | x | x |
-| Esecuzione di errori di qualità del gate | Approva errori di qualità importanti. | x | x | x |
-| Creazione pipeline | Setup/Edit Pipeline. | x |
-| Pipeline | Consultate Dettagli della pipeline. | x | x | x | x | x |
-| Scrittura pipeline | Setup/Edit Pipeline. | x |
-| Pipeline modifica approvazione | Consente di modificare l&#39;opzione Proprietario business. | x |
-| Pipeline modifica distribuzione gestita | Consente di modificare l&#39;opzione di supervisione CSE. | x |
+| Lettura applicazione | Vedere i dettagli del programma. | x | x | x | x | x |
+| Scrivi applicazione | Configurare il programma (inclusi KPI). | x |  |  |  |  |
+| Ambiente di lettura | Consultate Dettagli ambiente. | x | x | x | x | x |
+| Crea esecuzione | Avviate la tubazione. | x | x | x |  |  |
+| Lettura esecuzione | Vedere stato di esecuzione. | x | x | x | x | x |
+| Riprendi esecuzione | Può riprendere l'esecuzione in pausa. | x | x | x |  | x |
+| Approvazione esecuzione distribuzione in produzione | Fornisci l'approvazione GoLive. | x | x | x |  |  |
+| Programma di esecuzione Distribuisci in produzione | Pianificazione distribuzione produzione. | x | x | x |  | x |
+| Implementazione in produzione | Implementare l'applicazione in produzione quando viene messa in pausa per CSE Oversight. |  |  |  |  | x |
+| Annullamento esecuzione | Annulla esecuzione corrente. | x | x | x |  |  |
+| Errori Gate Di Sostituzione Dell'Esecuzione | Approvare Importanti Errori Di Controllo Della Qualità. | x | x | x |  |  |
+| Crea tubazione | Impostazione/Modifica tubazione. |  | x |  |  |  |
+| Lettura pipeline | Consultate Dettagli sulla tubazione. | x | x | x | x | x |
+| Scrittura pipeline | Impostazione/Modifica tubazione. |  | x |  |  |  |
+| Approvazione modifica pipeline | Consente di modificare l'opzione Proprietario business. |  | x |  |  |  |
+| Distribuzione gestita tramite modifica pipeline | Consente di modificare l'opzione CSE Oversight. |  | x |  |  |  |
 | Soluzione | Leggere i KPI del programma. | x | x | x | x | x |
-| Scrittura della soluzione | Configurare il programma (incluso KPI)/Edit Pipeline. | x |
-| Leggi passaggio | Vedi i risultati delle metriche di qualità. | x | x | x | x | x |
+| Soluzione Write | Configurare la configurazione del programma (inclusi i KPI) / Modifica della tubazione. | x |  |  |  |  |
+| Lettura passaggio | Vedi i risultati delle metriche sulla qualità dei passaggi. | x | x | x | x | x |
 
 ## Isolamento risorse {#resource-isolation}
 
-I clienti che utilizzano le [!UICONTROL Cloud Manager] credenziali IMS devono autenticare quando tutte le autorizzazioni collegate verranno [!UICONTROL Cloud Manager] configurate e associate alla loro organizzazione IMS. Durante il processo di registrazione, il team di provisioning garantisce che l&#39;isolamento delle risorse sia applicato [!UICONTROL Cloud Manager].
+I clienti che utilizzano [!UICONTROL Cloud Manager] avranno bisogno delle credenziali IMS per l'autenticazione, in quanto tutte le autorizzazioni associate [!UICONTROL Cloud Manager] verranno configurate e associate alla propria organizzazione IMS. Durante il processo di registrazione, il team di provisioning garantisce l'applicazione dell'isolamento delle risorse in [!UICONTROL Cloud Manager].
 
-## Sicurezza dei dati {#data-security}
+## Protezione dei dati {#data-security}
 
-Il codice in è [!UICONTROL Cloud Manager] cifrato in transito. Binarie che vengono anche cifrate in transito e crittografate quando memorizzate.
+Il codice in [!UICONTROL Cloud Manager] è crittografato in transito. I binari generati da Coud Manager vengono inoltre crittografati in transito e cifrati al momento della memorizzazione.
 
-Ogni cliente riceve un proprio **archivio Git** e il suo codice è protetto e non condiviso con **altre organizzazioni**.
+Ogni cliente ottiene il proprio **Git Repository** e il suo codice è sicuro e non condiviso con altre **organizzazioni**.
 
 ## Privacy dei dati {#data-privacy}
 
-[!UICONTROL Cloud Manager] aderisce ai principi sulla privacy definiti da Adobe. Il codice push è sicuro per gli sviluppatori nell&#39;archivio **Git** attraverso HTTPS.
+[!UICONTROL Cloud Manager] aderisce ai principi di privacy definiti da Adobe. Gli sviluppatori inviano il codice in modo sicuro nell'archivio **Git** tramite HTTPS.
 
-The [! L&#39;interfaccia utente DNL (interfaccia utente) per [!UICONTROL Cloud Manager]] è integrata su servizi che rispettano un framework di controllo comune definito da Adobe. [! Interfaccia utente DNL (interfaccia utente) per [!UICONTROL Cloud Manager]] utilizza servizi protetti da diversi provider cloud.
+L'interfaccia utente di [!DNL [!UICONTROL Cloud Manager]] è basata su servizi conformi a un framework di controllo comune definito da Adobe. L'interfaccia utente di [!DNL (UI) per [!UICONTROL Cloud Manager]] utilizza i servizi protetti di diversi fornitori di cloud.
