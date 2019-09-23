@@ -1,164 +1,164 @@
 ---
 title: Configurazione delle configurazioni generali per Cloud Manager
 seo-title: Configurazione delle configurazioni generali per Adobe AEM Cloud Manager
-description: Prerequisiti per configurare Cloud Manager e gestire i contenuti dalla propria interfaccia utente.
-seo-description: Prerequisiti per configurare Adobe AEM Cloud Manager e gestire i contenuti dalla propria interfaccia utente.
-uuid: 65 d 795 f 9-aa 97-4816-b 66 b -03 b 5 ae 961 f 47
+description: I prerequisiti per configurare Cloud Manager e gestire il contenuto dall'interfaccia utente.
+seo-description: I prerequisiti per configurare Adobe AEM Cloud Manager e gestire il contenuto dall’interfaccia utente.
+uuid: 65d795f9-aa97-4816-b66b-03b5ae961f47
 contentOwner: jsyal
-discoiquuid: 03241 b 88-8 d 28-401 b-aa 42-17 ead 6183 cd 8
+discoiquuid: 03241b88-8d28-401b-aa42-17ead6183cd8
 translation-type: tm+mt
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+source-git-commit: 093e25fa1cf2f5cdc3d8ea0bffd5c02ade854a88
 
 ---
 
 
-# Configurazione delle configurazioni generali [!UICONTROL Cloud Manager]{#setting-up-general-configurations-for-cloud-manager}
+# Impostazione delle configurazioni generali per [!UICONTROL Cloud Manager]{#setting-up-general-configurations-for-cloud-manager}
 
-Nella sezione seguente sono illustrati i prerequisiti per configurare [!UICONTROL Cloud Manager] e gestire i contenuti dalla propria interfaccia utente.
+Nella sezione seguente sono evidenziati i prerequisiti per la configurazione [!UICONTROL Cloud Manager] e la gestione del contenuto dall’interfaccia utente.
 
-In questa pagina vengono trattati i seguenti argomenti
+Questa pagina di sezione illustra i seguenti argomenti
 
-* **Configurazione di utenti e ruoli**
-* **Configurazione progetto applicazione AEM**
+* **Impostazione di utenti e ruoli**
+* **Impostazione progetto applicazione AEM**
 * **Configurazioni del dispatcher**
-* **Best practice per lo sviluppo**
+* **Tecniche consigliate per lo sviluppo**
 
-Nel diagramma seguente sono illustrate le diverse funzioni che consentono [!UICONTROL Cloud Manager] di fornire continuamente codice di qualità migliore:
+Il diagramma seguente illustra le diverse funzioni che consentono [!UICONTROL Cloud Manager] di distribuire in modo continuo codice di qualità superiore:
 
 ![](assets/screen_shot_2018-05-01at81926pm.png)
 
-## Configurazione di utenti e ruoli {#setting-up-users-and-roles}
+## Impostazione di utenti e ruoli {#setting-up-users-and-roles}
 
-I ruoli vengono gestiti da [!UICONTROL Cloud Manager] Adobe Admin Console. Le iscrizioni di ruolo specifiche vengono fornite aggiungendo l&#39;utente a un [!UICONTROL Cloud Manager] profilo di prodotto in Admin Console.
+I ruoli vengono gestiti [!UICONTROL Cloud Manager] da Adobe Admin Console. Le appartenenze a ruoli specifici vengono fornite aggiungendo l'utente a un profilo di [!UICONTROL Cloud Manager] prodotto in Admin Console.
 
 >[!CAUTION]
 >
->Per utilizzare [!UICONTROL Cloud Manager], devi avere un Adobe ID e il contesto prodotto Servizi gestiti Adobe.
+>Per utilizzare [!UICONTROL Cloud Manager], è necessario disporre di un Adobe ID e del contesto di prodotto dei servizi gestiti Adobe.
 
-Puoi assegnare specifiche appartenenze di ruolo aggiungendo l&#39;utente a un [!UICONTROL Cloud Manager] profilo di prodotto in Admin Console.
+Puoi assegnare appartenenze a ruoli specifici aggiungendo l’utente a un profilo di [!UICONTROL Cloud Manager] prodotto nell’Admin Console.
 
-Crea i seguenti ruoli tramite Admin Console per [!UICONTROL Cloud Manager]:
+Create i seguenti ruoli utilizzando Admin Console per [!UICONTROL Cloud Manager]:
 
 >[!NOTE]
 >
->Adobe Admin Console fornisce una posizione centrale per la gestione delle adesioni Adobe nell&#39;intera organizzazione.
+>Adobe Admin Console fornisce una posizione centrale per la gestione delle adesioni Adobe in tutta l’organizzazione.
 >
 >Per ulteriori informazioni su Adobe Admin Console, consulta la documentazione di [Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html).
 
 | **[!UICONTROL Cloud Manager]Ruoli** | **Descrizione** |
 |---|---|
-| Proprietario aziendale | Responsabile della definizione dei KPI, approvazione di implementazioni di produzione e sostituzione di importanti errori a 3 gradi. |
-| Program Manager | Utilizza [!UICONTROL Cloud Manager] per eseguire l&#39;impostazione del team, lo stato di revisione e i KPI. Potrebbe approvare importanti errori a 3 gradi. |
-| Gestione distribuzione | Gestisce le operazioni di distribuzione. Utilizza [!UICONTROL Cloud Manager] per eseguire distribuzioni di fase/produzione. Potrebbe approvare importanti errori a 3 gradi. Ha accesso a Git. |
-| Sviluppatore | Sviluppa e verifica il codice dell&#39;applicazione personalizzato. Viene utilizzato [!UICONTROL Cloud Manager] principalmente per visualizzare lo stato. Consente di accedere a Git. |
-| Customer Success Engineer | In genere supporta il successo dei clienti per i clienti AMS. Interagisce con [!UICONTROL Cloud Manager] allo scopo di eseguire distribuzioni che richiedono la supervisione CSE. |
-| Autore contenuto | In genere non interagisce [!UICONTROL Cloud Manager]con. Può utilizzare [!UICONTROL Cloud Manager] il commutatore di programmi (da [!UICONTROL Experience Cloud]) per accedere a AEM. |
+| Proprietario | Responsabile della definizione dei KPI, dell'approvazione delle implementazioni di produzione e della risoluzione di importanti errori a 3 livelli. |
+| Program Manager | Utilizza [!UICONTROL Cloud Manager] per eseguire la configurazione del team, esaminare lo stato e visualizzare i KPI. Può approvare importanti fallimenti a 3 livelli. |
+| Gestione distribuzione | Gestisce le operazioni di distribuzione. Utilizza [!UICONTROL Cloud Manager] per eseguire distribuzioni di fase/produzione. Può approvare importanti fallimenti a 3 livelli. Ha accesso git. |
+| Sviluppatore | Sviluppa e verifica il codice applicazione personalizzato. Viene utilizzato principalmente [!UICONTROL Cloud Manager] per visualizzare lo stato. Ha accesso a git. |
+| Customer Success Engineer | In genere supporta il successo dei clienti per i clienti AMS. Interagisce con [!UICONTROL Cloud Manager] lo scopo di eseguire distribuzioni che richiedono la sorveglianza CSE. |
+| Content Author | Generalmente non interagisce con [!UICONTROL Cloud Manager]. Può usare [!UICONTROL Cloud Manager] il selettore programmi (dopo aver navigato da [!UICONTROL Experience Cloud]) per accedere ad AEM. |
 
 ### Utilizzo di Admin Console per configurare il team {#using-admin-console-to-set-up-team}
 
-Per fornire le autorizzazioni appropriate basate su ruoli agli [!UICONTROL Cloud Manager] utenti, un amministratore nell&#39;organizzazione del cliente deve creare nuovi profili di prodotto in Contesto [!UICONTROL AEM Managed Services] prodotto.
+Per fornire agli [!UICONTROL Cloud Manager] utenti le autorizzazioni appropriate basate sul ruolo, un amministratore nell'organizzazione del cliente deve creare nuovi profili di prodotto nel contesto del [!UICONTROL AEM Managed Services] prodotto.
 
 >[!NOTE]
 >
->Per accedere ad admin console e configurare il team (utenti e ruoli), aprite un browser e visitate [https://adminconsole.adobe.com](https://adminconsole.adobe.com/enterprise).
+>Per accedere alla console di amministrazione e configurare il team (utenti e ruoli), aprite un browser e visitate [https://adminconsole.adobe.com](https://adminconsole.adobe.com/enterprise).
 
-L&#39;aggiunta di utenti (o gruppi) a questi profili di prodotto avviene utilizzando la normale funzionalità Admin Console, come illustrato nella figura seguente:
+L'aggiunta di utenti (o gruppi) a questi profili di prodotto avviene tramite la normale funzionalità di Admin Console, come illustrato nella figura seguente:
 
 1. Accedi ad Admin Console e fai clic su **Nuovo profilo** per aggiungere un nuovo profilo.
 
    ![](assets/admin_console_roles.png)
 
-1. Fill in the fields to set up a new role for [!UICONTROL Cloud Manager].
+1. Compila i campi per impostare un nuovo ruolo per [!UICONTROL Cloud Manager].
 
-   Immettete **Nome profilo**, **Descrizione** per creare un nuovo profilo. Inoltre, potete selezionare un **gruppo di autorizzazioni** per il profilo.
+   Immettete Nome **** profilo e **Descrizione** per creare un nuovo profilo. Inoltre, potete selezionare un gruppo **di** autorizzazioni per il profilo.
 
-   Fai clic su **Fine** per completare il passaggio di creazione del profilo.
+   Fate clic su **Fine** per completare il passaggio di creazione del profilo.
 
    ![](assets/screen_shot_2018-04-23at75014am.png)
 
-## Configurazione progetto applicazione AEM {#aem-application-project-setup}
+## Impostazione progetto applicazione AEM {#aem-application-project-setup}
 
-Prima di impostare il progetto dell&#39;applicazione in [!UICONTROL Cloud Manager], dovrete considerare uno dei due scenari. Potresti essere di nuovo in AEM 6.4 oppure essere già un cliente esistente.
+Prima di configurare il progetto dell'applicazione in [!UICONTROL Cloud Manager], è necessario considerare uno dei due scenari. Potresti essere un cliente nuovo o già esistente in AEM 6.4.
 
 >[!NOTE]
 >
->Per poter accedere a [!UICONTROL Cloud Manager], contatta gli ingegneri Customer Success Engineers (CSE) per ottenere l&#39;URL e le credenziali per iniziare.
+>Per poter accedere a [!UICONTROL Cloud Manager], contatta il Customer Success Engineers (CSE) per ottenere l’URL e le credenziali per iniziare.
 
-Potete configurare un progetto applicazione per [!UICONTROL Cloud Manager], in base ai due scenari seguenti:
+Potete impostare un progetto di applicazione per [!UICONTROL Cloud Manager], in base ai due scenari seguenti:
 
-* **Nuovo progetto AEM**:
+* **Nuovo progetto** AEM:
 
-Un nuovo progetto AEM sfrutterà il progetto esistente e funzionerà [!UICONTROL Cloud Manager].
+Un nuovo progetto AEM sfrutta il progetto esistente e lavora con [!UICONTROL Cloud Manager].
 
-Per ulteriori informazioni, consultate [Guida introduttiva ad AEM 6.4](https://chl-author./content/help/en/experience-manager/6-4/sites/deploying/using/deploy.html). Inoltre, consulta Risorse [AEM](https://www.adobe.com/marketing-cloud/experience-manager/resources.html?promoid=759X6WV8&mv=other) per ulteriori informazioni.
+Per ulteriori informazioni, consultate [Guida introduttiva ad AEM 6.4](https://chl-author./content/help/en/experience-manager/6-4/sites/deploying/using/deploy.html). Per ulteriori informazioni, consulta Risorse [](https://www.adobe.com/marketing-cloud/experience-manager/resources.html?promoid=759X6WV8&mv=other) AEM.
 
-* **Progetto AEM esistente**:
+* **Progetto** AEM esistente:
 
-Un progetto AEM esistente deve confermare la configurazione delle regole. Potete aggiornare l&#39;installazione esistente di AEM per ottenere nuove funzionalità e miglioramenti offerti in AEM 6.4 e iniziare a utilizzare [!UICONTROL Cloud Manager]. Questi criteri dovrebbero funzionare con modifiche minime. Contattate gli ingegneri Customer Success Engineers (CSE) per il supporto.
+Un progetto AEM esistente deve confermare le regole per la configurazione del progetto. Puoi aggiornare l’installazione AEM esistente per ottenere nuove funzionalità e miglioramenti offerti in AEM 6.4 e iniziare a utilizzarla [!UICONTROL Cloud Manager]. Tali criteri dovrebbero funzionare con modifiche minime. Contatta il Customer Success Engineers (CSE) per assistenza.
 
-Per informazioni aggiuntive su come aggiornare l&#39;istanza di AEM a 6.4, consultate [Aggiornamento ad AEM 6.4](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/upgrade.html).
+Per ulteriori informazioni sull’aggiornamento dell’istanza di AEM alla versione 6.4, consulta [Aggiornamento ad AEM 6.4](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/upgrade.html).
 
-### Impostazione dell&#39;archivio {#setting-up-repository}
+### Configurazione dell'archivio {#setting-up-repository}
 
-A single, initially empty, git repository is provisioned for each program onboarded in [!UICONTROL Cloud Manager]. Gli sviluppatori e i manager di distribuzione vengono forniti con l&#39;URL git e le credenziali del loro CSE.
+Viene fornito un unico archivio Git inizialmente vuoto per ogni programma in [!UICONTROL Cloud Manager]. Gli sviluppatori e i gestori della distribuzione ricevono l’URL git e le credenziali dal loro CSE.
 
-Con queste informazioni, uno sviluppatore può aggiungere il proprio codice seguendo le linee guida in** Project Configurup** nella sezione di seguito, per completare i requisiti di configurazione prima di utilizzare [!UICONTROL Cloud Manager].
+Con queste informazioni, uno sviluppatore può aggiungere il proprio codice, seguendo le linee guida in **Project Set Up **nella sezione successiva, per completare i requisiti di configurazione prima di utilizzare [!UICONTROL Cloud Manager].
 
 ## Configurazioni del dispatcher {#dispatcher-configurations}
 
-[!UICONTROL Cloud Manager] è in grado di distribuire i file di configurazione del server Web e del dispatcher, purché siano memorizzati nell&#39;archivio git, oltre ai normali pacchetti di contenuto AEM.
+[!UICONTROL Cloud Manager] è in grado di distribuire i file di configurazione del server Web e del dispatcher, purché siano memorizzati nell’archivio git, oltre ai normali pacchetti di contenuti AEM.
 
-Per sfruttare questa funzionalità, la build Maven genera un file zip contenente due directory: ***conf*** e ***conf. d***.
+Per sfruttare questa funzionalità, la build Maven produce un file zip che contiene due directory: ***conf*** e ***conf.d***.
 
-Dopo la distribuzione a un&#39;istanza di dispatcher, il contenuto di queste directory sovrascrive il contenuto di queste directory nell&#39;istanza di dispatcher. Poiché i file di configurazione del server Web e di dispatcher richiedono frequentemente informazioni specifiche sull&#39;ambiente, per utilizzare correttamente questa funzionalità dovrai prima collaborare con i loro ingegneri Customer Success Engineers (CSE) per estrarre queste variabili d&#39;ambiente in /etc/sysconfig/httpd.
+Dopo la distribuzione in un'istanza del dispatcher, il contenuto di queste directory sovrascriverà il contenuto di tali directory nell'istanza del dispatcher. Poiché i file di configurazione del server Web e del dispatcher spesso richiedono informazioni specifiche per l'ambiente, per poter utilizzare correttamente questa funzionalità, è necessario innanzitutto lavorare con i loro Customer Success Engineers (CSE) per estrarre queste variabili di ambiente in /etc/sysconfig/httpd.
 
-Per completare il processo iniziale nella configurazione del dispatcher, effettuate le seguenti operazioni:
+Per completare il processo iniziale nella configurazione del dispatcher, effettuate le operazioni seguenti:
 
-1. Ottenete i file di configurazione di produzione correnti dal loro CSE.
-1. Rimuovi dati per l&#39;ambiente hardcoded (ad es. per pubblicare IP di rendering) e sostituirli con le variabili.
-1. Definite le variabili richieste in coppie chiave-valore per ciascun dispatcher di destinazione e richiede CSE da aggiungere a ***/etc/sysconfig/httpd*** in ciascuna istanza.
-1. Sottoponete a test le configurazioni aggiornate sullo stage, quindi richiedete CSE alla distribuzione in produzione per assicurare che funzionino correttamente.
-1. Salvate i file su Git.
+1. Ottenete i file di configurazione di produzione correnti dal relativo CSE.
+1. Rimuovete i dati specifici dell'ambiente codificato (ad esempio, IP del renderer di pubblicazione) e li sostituisce con le variabili.
+1. Definite le variabili richieste nelle coppie chiave-valore per ciascun dispatcher di destinazione e richiede l'aggiunta di CSE a ***/etc/sysconfig/httpd*** in ogni istanza.
+1. Sottoponete a test le configurazioni aggiornate sul palco, quindi richiedete a CSE di distribuirle in produzione per verificarne il corretto funzionamento.
+1. Invia i file a git.
 1. Distribuisci tramite [!UICONTROL Cloud Manager].
 
-Il file zip effettivo può essere prodotto utilizzando il plug-in maven-assembly. I progetti generati mediante il modello Multimodule AEM di Lazybones possono disporre della struttura di progetto Maven corretta creata come parte della creazione di progetti.
+Il file zip effettivo può essere prodotto utilizzando il plug-in maven-assembly. I progetti generati utilizzando il modello Multimodulo Lazybones di AEM possono avere la giusta struttura di progetto Maven creata come parte della creazione del progetto.
 
 >[!NOTE]
 >
->La configurazione del dispatcher viene effettuata durante l&#39;accesso, [!UICONTROL Cloud Manager]ma può anche essere eseguita in un secondo momento.
+>La configurazione del dispatcher viene eseguita durante l'accesso [!UICONTROL Cloud Manager], ma può essere eseguita anche in un secondo momento.
 
-### Configurazione del dispatcher per test prestazioni {#configuring-dispatcher-for-performance-testing}
+### Configurazione del dispatcher per il test delle prestazioni {#configuring-dispatcher-for-performance-testing}
 
-Per eseguire [!UICONTROL Cloud Manager] correttamente i test delle prestazioni, il server di dispatcher dell&#39;area di visualizzazione deve rispondere agli stessi nomi host del dispatcher di produzione in modo coerente con il server di produzione.
+Per [!UICONTROL Cloud Manager] eseguire correttamente i test delle prestazioni, il server dispatcher di fasi deve rispondere agli stessi nomi host del dispatcher di produzione in modo coerente con il server di produzione.
 
-*Ad esempio*, se un cliente include [www.myco.com](http://www.myco.com/) e [www.myotherco.com](http://www.myotherco.com,/) come nomi host di produzione e stage-myco. adobecqms. net come nome host dell&#39;area di visualizzazione, una richiesta come questa deve rispondere correttamente:
+*Ad esempio*, se un cliente ha [www.myco.com](http://www.myco.com/) e [www.myotherco.com](http://www.myotherco.com,/) come nomi host di produzione e stage-myco.adobecqms.net come nome host dell’area di visualizzazione, una richiesta come questa deve rispondere correttamente:
 
 ```
 curl -H"Host: www.myco.com" http://stage-myco.adobecqms.net/en/home.html
 ```
 
-Questo richiede non solo che i nomi degli host siano configurati correttamente nella configurazione di dispatcher, ma anche che ***/etc/map***, qualsiasi riscrittura Apache o un&#39;altra regola ***di mappatura/filtro*** del percorso siano implementati in modo coerente tra l&#39;area di visualizzazione e la produzione.
+Ciò richiederà non solo che i nomi host siano configurati correttamente nella configurazione del dispatcher, ma anche che ***/etc/map***, qualsiasi Apache riscrittura o qualsiasi altra regola di ***mappatura/filtro*** del percorso sia implementata in modo coerente tra fase e produzione.
 
-## Best practice per lo sviluppo {#development-best-practices}
+## Tecniche consigliate per lo sviluppo {#development-best-practices}
 
-Prima di utilizzare [!UICONTROL Cloud Manager], è consigliabile comprendere alcune best practice per configurare il progetto e configurare la configurazione di un server Web o di una sfumatura.
+Prima di utilizzare [!UICONTROL Cloud Manager], è consigliabile conoscere alcune best practice per l'impostazione del progetto e la configurazione del server Web o del dispatcher.
 
-### Configurazione progetti {#project-set-up}
+### Configurazione progetto {#project-set-up}
 
-I progetti devono aderire ad alcuni criteri per lavorare [!UICONTROL Cloud Manager]con.
+I progetti devono rispettare alcuni criteri per poter funzionare con [!UICONTROL Cloud Manager].
 
-Seguite le procedure ottimali per configurare i progetti in [!UICONTROL Cloud Manager]:
+Seguite le best practice per configurare il progetto in [!UICONTROL Cloud Manager]:
 
-* L&#39;unico strumento di build fornito e supportato è Apache Maven. Apache Maven 3.3.9 è installato.
+* L'unico strumento di costruzione fornito e supportato è Apache Maven. Apache Maven 3.3.9 è installato.
 * Le build vengono eseguite in un ambiente Linux in un contenitore Docker come utente principale.
-* La versione Java installata è Oracle JDK 8 u 161.
-* Sono installati altri pacchetti di sistema come, ad esempio, bzip 2, unzip, libpng, imagemagick e graphicsmagick. Se avete bisogno di altri pacchetti, dovrete richiederli tramite il CSE.
-* Maven viene sempre eseguito con il comando mvn -b clean.
-* Viene fornito un repository git completo. Nella directory principale di questa directory archivio deve essere presente un file pom.xml. Questo file pom.xml può fare riferimento a tanti sottomoduli (che a loro volta possono avere altri sottomoduli, ecc.) se necessario, ma deve essere presente un solo punto di ingresso.
-* Maven è configurato a livello di sistema con un file settings.xml che include automaticamente l&#39;archivio artefatto pubblico di Adobe (repo.adobe.com).
-* Nei file pom.xml potete aggiungere altri archivi. Tuttavia, l&#39;accesso a archivi artefatti protetti da password o protetti da rete non è supportato.
-* I pacchetti di contenuto implementabili vengono scoperti mediante la scansione dei file ZIP contenuti in una directory denominata destinazione. Anche in questo caso, qualsiasi numero di sottomoduli potrebbe produrre pacchetti di contenuto.
-* Se sono presenti più pacchetti di contenuto, l&#39;ordine delle distribuzioni del pacchetto non è garantito. Qualora sia necessario un ordine specifico, per definire l&#39;ordine sarà possibile utilizzare dipendenze del pacchetto di contenuto.
+* La versione Java installata è Oracle JDK 8u161.
+* Sono installati alcuni pacchetti di sistema aggiuntivi, ad esempio bzip2, unzip, libpng, imagemagick e graphicsmagick. Se avete bisogno di altri pacchetti, dovrete richiederli tramite il vostro CSE.
+* Maven è sempre eseguito con il comando mvn -B pacchetto pulito.
+* Vi verrà fornito esattamente un repository git. Nella directory principale dell'archivio deve essere presente un file pom.xml. Questo file pom.xml può fare riferimento a tutti i sottomoduli (che a loro volta possono avere altri sottomoduli, ecc.) se necessario, ma deve esserci un solo punto di ingresso.
+* Maven è configurato a livello di sistema con un file settings.xml che include automaticamente l’archivio degli artifact pubblico di Adobe (repo.adobe.com).
+* Potete aggiungere altri repository nei file pom.xml. Tuttavia, l'accesso ai repository di artifact protetti da password o protetti da rete non è supportato.
+* I pacchetti di contenuto distribuibile vengono rilevati mediante la scansione di file zip contenuti in una directory denominata target. Anche in questo caso, un numero qualsiasi di sottomoduli potrebbe produrre pacchetti di contenuto.
+* In presenza di più pacchetti di contenuto, l'ordine delle distribuzioni dei pacchetti non è garantito. Se è necessario un ordine specifico, per definire l’ordine è possibile utilizzare le dipendenze del pacchetto di contenuto.
 
 <!-- 
 
@@ -172,6 +172,6 @@ change as per KT
 
 ### Passaggi successivi {#the-next-steps}
 
-Una volta configurate le configurazioni generali, è possibile utilizzarle [!UICONTROL Cloud Manager].
+Una volta configurate le configurazioni generali, potete utilizzarle [!UICONTROL Cloud Manager].
 
-Fate riferimento [a Utilizzo [! UICONTROL Cloud Manager]](https://helpx.adobe.com/experience-manager/cloud-manager/using/using-cloud-manager.html) per iniziare a utilizzare [!UICONTROL Cloud Manager].
+Per iniziare, fare riferimento a [Utilizzo di [!UICONTROL Cloud Manager]](https://helpx.adobe.com/experience-manager/cloud-manager/using/using-cloud-manager.html) [!UICONTROL Cloud Manager].
