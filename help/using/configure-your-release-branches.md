@@ -1,26 +1,26 @@
 ---
-title: Configurare i rami della release
-seo-title: Configurare i rami della release
-description: Configura i rami di rilascio in Git per AEM Cloud Manager
-seo-description: Seguite questa pagina per apprendere come configurare i rami di rilascio in git.
-uuid: d 12 a 8 b 85-b 7 fd -4 b 55-a 05 a-a 0 f 874 ce 598 c
+title: Configurare i rami di rilascio
+seo-title: Configurare i rami di rilascio
+description: Configurare le filiali di rilascio in Git per AEM Cloud Manager
+seo-description: Segui questa pagina per apprendere come configurare i rami della release in git.
+uuid: d12a8b85-b7fd-4b55-a05a-a0f874ce598c
 contentOwner: jsyal
-products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: getting-started
-discoiquuid: 53807 ea 6-9464-429 d -9322-85 c 9 f 405 dff 6
+products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
+topic-tags: guida introduttiva
+discoiquuid: 53807ea6-9464-429d-9322-85c9f405dff6
 translation-type: tm+mt
 source-git-commit: 9c0df236c1e800802d62dea09996bb8e1e7033f7
 
 ---
 
 
-# Configurare i rami della release {#configure-your-release-branches}
+# Configurare i rami di rilascio {#configure-your-release-branches}
 
 ## Impostazione del primo ramo in Git {#setting-up-your-first-branch-in-git}
 
-Un singolo, inizialmente vuoto, **l'archivio** Git viene fornito per ogni programma presente in Cloud Manager. Questo archivio può contenere un numero di rami (o pochissimi) all'interno del processo di sviluppo, ma deve essere presente almeno un ramo utilizzato dalla pipeline CI/CD per distribuire il codice dell'applicazione all'area di visualizzazione e alla produzione. La procedura consigliata è quella di utilizzare `master` come nome di questo ramo. Questo è il comportamento predefinito dei client Git durante l'impostazione di nuovi progetti.
+Viene fornito un unico archivio **Git inizialmente vuoto** per ciascun programma fornito su Cloud Manager. Questo repository può contenere un numero illimitato di filiali (o un numero ridotto) come segue nel processo di sviluppo, ma deve essere presente almeno un ramo utilizzato dalla pipeline CI/CD per distribuire il codice dell'applicazione allo stage e alla produzione. La procedura ottimale consiste nell'utilizzare `master` come nome di questo ramo. Comodamente, questo è il comportamento predefinito dei client Git quando si configurano nuovi progetti.
 
-Ad esempio, quando configurate un nuovo progetto, viene eseguito un set di comandi come:
+Ad esempio, quando si configura un nuovo progetto, verrà eseguito un set di comandi come quello seguente:
 
 ```shell
 $ git init
@@ -52,11 +52,11 @@ $ git commit -m "initial commit"
 
 >[!NOTE]
 >
->Non è necessario utilizzare il client della riga di comando. Esistono diversi client Git grafici disponibili come applicazioni autonome o come parte di un ambiente di sviluppo integrato (IDE) come Eclipse o intellij. Se l'applicazione client supporta Git utilizzando HTTPS, deve essere compatibile [!UICONTROL Cloud Manager]con.
+>Non è necessario utilizzare il client della riga di comando. Sono disponibili diversi client Git grafici sia come applicazioni autonome che come parte di un ambiente di sviluppo integrato (IDE) come Eclipse o IntelliJ. Fintanto che l'applicazione client supporta Git utilizzando HTTPS, dovrebbe essere compatibile con [!UICONTROL Cloud Manager].
 
-## Invio del primo ramo {#pushing-your-first-branch}
+## Invio della prima diramazione {#pushing-your-first-branch}
 
-Dopo aver effettuato almeno una revisione, puoi aggiungere la [!UICONTROL Cloud Manager] directory archivio come **remoto** e quindi inviare i tuoi commenti:
+Una volta completata almeno una revisione, potete aggiungere l' [!UICONTROL Cloud Manager] archivio come **remoto** e quindi inviarvi i commit:
 
 ```shell
 $ git remote add adobe <url>
@@ -72,12 +72,12 @@ To <url>
 
 >[!NOTE]
 >
->L'URL specifico, insieme alle tue credenziali, verrà fornito al tuo Customer Success Engineering durante [!UICONTROL Cloud Manager] l'onboarding.
+>L'URL specifico, insieme alle credenziali, verrà fornito al cliente dal Customer Success Engineering durante la [!UICONTROL Cloud Manager] registrazione.
 
-## Rami aggiuntivi {#additional-branches}
+## Altri rami {#additional-branches}
 
-Un `master` singolo ramo può essere sufficiente per progetti molto semplici, ma nella maggior parte dei casi sarà necessaria una strategia di branching più complessa. Molti clienti seguono un processo in cui le attività quotidiane di sviluppo vengono eseguite su un ramo chiamato `develop` e il ramo di sviluppo viene unito al `master` ramo quando è temporale per una distribuzione.
+Un solo `master` ramo può essere sufficiente per progetti molto semplici, ma nella maggior parte dei casi sarà necessaria una strategia di ramificazione più complessa. Molti clienti seguono un processo in cui le attività di sviluppo quotidiane vengono eseguite su un ramo denominato `develop` e il ramo di sviluppo viene unito nel `master` ramo quando è il momento di una distribuzione.
 
 >[!NOTE]
 >
->Per visualizzare i comandi git comuni, consultate [Git Cheat Sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet).
+>Per visualizzare i comandi git comuni, vedere il [Git Cheat Sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet).
