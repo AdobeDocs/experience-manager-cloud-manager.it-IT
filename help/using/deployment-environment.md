@@ -3,21 +3,21 @@ title: Ambiente di distribuzione
 seo-title: Ambiente di distribuzione
 description: 'null'
 seo-description: 'null'
-page-status-flag: never-activated
-uuid: 73436882-a 3 f 7-4048-bb 8 d -7 f 5819 d 29 c 8 f
+page-status-flag: mai attivato
+uuid: 73436882-a3f7-4048-bb8d-7f5819d29c8f
 contentOwner: jsyal
-discoiquuid: 4 ac 3 e 831-2227-4 ea 8-abcc-c 5734 e 023424
+discoiquuid: 4ac3e831-2227-4ea8-abcc-c5734e023424
 preview: vero
 translation-type: tm+mt
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+source-git-commit: f135526c6a47f1502395e6d53f9e286c0f935da5
 
 ---
 
 
 # Ambiente di distribuzione{#deployment-environment}
 
-Potresti essere nuovo in Adobe Experience Manager (AEM) 6.4 o richiedere un aggiornamento a AEM 6.4.
+Potrebbe essere una novità di Adobe Experience Manager (AEM) 6.4 o è necessario effettuare l’aggiornamento ad AEM 6.4 Release.
 
-Se non sei nuovo di AEM 6.4, hai già accesso a Cloud Manager.
+Se non hai mai utilizzato AEM 6.4, hai già accesso a Cloud Manager.
 
-Se siete già clienti, dovete effettuare l&#39;aggiornamento ad AEM 6.4 per accedere a Cloud Manager. Puoi iniziare a utilizzare Cloud Manager, una volta ricevuti URL e credenziali da Customer Success Engineers (CSE).
+Se sei già cliente, devi effettuare l’aggiornamento ad AEM 6.4 per poter accedere a Cloud Manager. Puoi iniziare a utilizzare Cloud Manager, dopo aver ricevuto l'URL e le credenziali dai Customer Success Engineers (CSE).
