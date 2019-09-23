@@ -1,6 +1,6 @@
 ---
 title: Note sulla versione 2019.5.0
-seo-title: Note sulla versione di AEM Cloud Manager per 2019.5.0
+seo-title: Note sulla versione di AEM Cloud Manager per la versione 2019.4.0
 description: Segui questa pagina per ottenere informazioni sulla versione 2019.5.0 di Cloud Manager.
 seo-description: Segui questa pagina per ottenere informazioni sulla versione 2019.5.0 di AEM Cloud Manager.
 translation-type: tm+mt
@@ -9,19 +9,19 @@ source-git-commit: 75563d3f4b2a27d943c052993c97d830338ead9c
 ---
 
 
-# Release Notes for 2019.5.0 {#release-notes-for}
+# Note sulla versione 2019.5.0 {#release-notes-for}
 
-The [!UICONTROL Cloud Manager] 2019.5.0 Release does not contain significant functional changes. Per ulteriori dettagli, seguite le sezioni riportate di seguito.
+La versione [!UICONTROL Cloud Manager] 2019.5.0 non contiene modifiche funzionali significative. Seguite le sezioni riportate di seguito per ulteriori dettagli.
 
-## Release Date {#release-date}
+## Data di rilascio {#release-date}
 
-The Release Date for [!UICONTROL Cloud Manager] Version 2019.5.0 is May 23, 2019.
+La data di rilascio per la [!UICONTROL Cloud Manager] versione 2019.5.0 è il 23 maggio 2019.
 
 
-## Bug Fixes {#bug-fixes}
+## Correzioni dei bug {#bug-fixes}
 
-* Il grafico SLA Report ha visualizzato valori ripetuti nell&#39;asse Y.
+* Il grafico Rapporti SLA visualizzava valori ripetuti sull’asse Y.
 * La schermata Rapporti non era visibile ad alcuni clienti.
-* In rari casi, non era possibile analizzare i risultati della qualità del codice per evitare errori di esecuzione della pipeline.
-* Il calendario nel passaggio della pianificazione della pipeline non era localizzato correttamente.
-* Un assortimento di problemi minori di localizzazione e miglioramenti alla traduzione.
+* In rari casi, i risultati della qualità del codice non potevano essere analizzati generando errori di esecuzione della pipeline.
+* Il calendario nel passaggio di pianificazione della pipeline non era localizzato correttamente.
+* Una serie di problemi minori di localizzazione e miglioramenti alla traduzione.
