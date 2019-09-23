@@ -1,21 +1,21 @@
 ---
-title: Risorse di aiuto
+title: Risorse
 seo-title: Risorse di aiuto per Adobe AEM Cloud Manager
 description: Risorse di aiuto per Cloud Manager
 seo-description: Risorse di aiuto per Adobe AEM Cloud Manager
-uuid: bab 98819-57 c 1-4408-98 ab -2898 bd 9 b 1 a 1 d
+uuid: bab98819-57c1-4408-98ab-2898bd9b1a1d
 contentOwner: jsyal
-products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: introduction
-discoiquuid: e 35 be 81 f-cfe 5-4 f 14-b 9 c 8-59235 a 7 ef 22 c
+products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
+topic-tags: introduzione
+discoiquuid: e35be81f-cfe5-4f14-b9c8-59235a7ef22c
 translation-type: tm+mt
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+source-git-commit: 15f75ca67c3d52ae511357c5b564daaa3d9def6b
 
 ---
 
 
-# Risorse di aiuto {#help-resources}
+# Risorse {#help-resources}
 
-È prima necessario contattare il tuo [!UICONTROL Adobe Managed Services Customer Success Engineer] (CSE) per il supporto [!UICONTROL Cloud Manager]correlato. CSE ti suggerisce se possono aiutarti con il tuo problema o se dovrai creare un ticket di supporto tramite l&#39;Assistenza clienti.
+È innanzitutto necessario rivolgersi al proprio [!UICONTROL Adobe Managed Services Customer Success Engineer] (CSE) per ottenere assistenza in relazione a [!UICONTROL Cloud Manager]. Il tuo caso ti consiglierà se possono aiutarti con il tuo problema o se devi creare un ticket di assistenza clienti.
 
-Puoi accedere [al supporto Enterprise](https://helpx.adobe.com/contact/enterprise-support.ec.html) per creare biglietti di supporto. Consultate [Accesso al portale di supporto AEM](https://help.adobe.com/experience-manager/kb/accessing-aem-support-portal.html) per ulteriori informazioni sulla creazione di biglietti di supporto nell&#39;Assistenza clienti.
+Potete accedere al supporto [](https://helpx.adobe.com/contact/enterprise-support.ec.html) Enterprise per creare i biglietti di supporto. Consultate [Accesso al portale](https://help.adobe.com/experience-manager/kb/accessing-aem-support-portal.html) di supporto di AEM per ulteriori informazioni sulla creazione di ticket di assistenza clienti.
