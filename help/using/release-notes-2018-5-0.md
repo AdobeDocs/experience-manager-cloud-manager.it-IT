@@ -1,45 +1,45 @@
 ---
 title: Note sulla versione 2018.5.0
-seo-title: Note sulla versione di AEM Cloud Manager per 2018.5.0
+seo-title: Note sulla versione di AEM Cloud Manager per la versione 2018.5.0
 description: Segui questa pagina per ottenere informazioni sulla versione 2018.5.0 di Cloud Manager.
 seo-description: Segui questa pagina per ottenere informazioni sulla versione 2018.5.0 di AEM Cloud Manager.
-uuid: 37 f 8 b 155-6984-454 d -83 a 8-3 f 5 fb 081 be 97
+uuid: 37f8b155-6984-454d-83a8-3f5fb081be97
 contentOwner: jsyal
-products: SG_ EXPERIENCEMANAGER/CLOUDMANAGER
+products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: note sulla versione
-discoiquuid: 6 d 1 e 7098-b 56 e -4172-8373-486 f 186 f 3 d 53
+discoiquuid: 6d1e7098-b56e-4172-8373-486f186f3d53
 translation-type: tm+mt
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+source-git-commit: 15f75ca67c3d52ae511357c5b564daaa3d9def6b
 
 ---
 
 
 # Note sulla versione 2018.5.0 {#release-notes-for}
 
-Nella sezione seguente sono illustrate le note generali sulla versione per [!UICONTROL Cloud Manager] la release 2018.5.0.
+La sezione seguente illustra le note generali sulla versione per la [!UICONTROL Cloud Manager] release 2018.5.0.
 
 ## Data di rilascio {#release-date}
 
-La Data di rilascio per [!UICONTROL Cloud Manager] la versione 2018.5.0 è il 12 luglio 2018.
+La data di rilascio per la [!UICONTROL Cloud Manager] versione 2018.5.0 è il 12 luglio 2018.
 
 ## Novità {#what-s-new}
 
-* **Notifiche su pipeline CI/CD** - Gli utenti ora visualizzeranno [!UICONTROL Experience Cloud] le notifiche per gli eventi della pipeline. Per ulteriori informazioni, consulta [le Notifiche](notifications.md) .
+* **Notifiche** pipeline CI/CD - Gli utenti visualizzeranno ora [!UICONTROL Experience Cloud] le notifiche per gli eventi pipeline. Per ulteriori informazioni, consulta [Notifiche](notifications.md) .
 
-* **Implementazioni di produzione pianificate** - Gli utenti possono pianificare una data o un&#39;ora, per le distribuzioni di produzione. Per ulteriori informazioni, consulta [Distribuzione del codice](deploying-code.md) .
+* **Distribuzioni** produzione programmate: gli utenti ora possono pianificare una data o un'ora per le distribuzioni di produzione. Per ulteriori informazioni, fai riferimento a [Distribuzione del codice](deploying-code.md) .
 
-* **Pagina Status** retitled all **&#39;attività**.
+* **La pagina Stato** ritorna ad **Attività**.
 
-* Informazioni più specifiche visualizzate sulla pagina principale per problemi riscontrati durante l&#39;esecuzione della pipeline.
-* Miglioramento delle prestazioni delle infrastrutture di testing.
+* Informazioni più specifiche visualizzate sulla pagina principale per i problemi riscontrati durante l'esecuzione della pipeline.
+* Miglioramenti all'infrastruttura di test delle prestazioni.
 
-## Correzioni di bug {#bug-fixes}
+## Correzioni dei bug {#bug-fixes}
 
-* In alcune condizioni, è stato utilizzato il profilo sonarqube errato, che causava metriche di qualità codice non corrette.
-* Sonarqube controlla CQBP -75 ignorava alcune annotazioni osgi.
+* In alcune condizioni, è stato utilizzato il profilo SonarQube errato, che ha portato a metriche di qualità del codice errate.
+* SonarQube check CQBP-75 ignorava alcune annotazioni OSGi.
 * Quando la pipeline CI/CD è stata annullata, lo stato non veniva visualizzato in modo coerente.
 
 ## Problemi noti {#known-issues}
 
-* I collegamenti alla **schermata AEM** e **Monitoraggio** dalla schermata Elenco programma sostituiscono la scheda corrente del browser e si aprono in una nuova scheda.
+* I collegamenti ad **AEM** e al **monitoraggio** dalla schermata Elenco programmi sostituiscono la scheda corrente del browser e si aprono a una nuova scheda.
 
