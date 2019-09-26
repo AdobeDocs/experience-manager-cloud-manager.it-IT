@@ -14,32 +14,32 @@ source-git-commit: 73203dca7b20570103af429cf933610941b787be
 ---
 
 
-# Aggiungi utenti e ruoli{#add-users-and-roles}
+# Add Users and Roles{#add-users-and-roles}
 
-Molte funzioni in [!UICONTROL Cloud Manager] richiedono autorizzazioni specifiche per funzionare. Ad esempio, solo alcuni utenti possono impostare i KPI (Key Performance Indicators) per un programma. Tali autorizzazioni sono logicamente raggruppate in ruoli.
+Many features in  require specific permissions to operate. [!UICONTROL Cloud Manager] For example, only certain users are allowed to set the Key Performance Indicators (KPIs) for a program. These permissions are logically grouped into roles.
 
-[!UICONTROL Cloud Manager] definisce attualmente quattro ruoli per gli utenti che determinano la disponibilità di funzionalità specifiche:
+[!UICONTROL Cloud Manager] currently defines four roles for users which govern the availability of specific features:
 
-* Proprietario
+* Business Owner
 * Program Manager
-* Gestione distribuzione
+* Deployment Manager
 * Sviluppatore
 
 >[!CAUTION]
 >
 >Per utilizzare [!UICONTROL Cloud Manager], è necessario disporre di un Adobe ID e del contesto di prodotto dei servizi gestiti Adobe.
 
-## Definizioni dei ruoli {#role-definitions}
+## Role Definitions {#role-definitions}
 
 >[!NOTE]
 >
->La persona Sviluppatore in Admin Console non è correlata al ruolo Sviluppatore in [!UICONTROL Cloud Manager].
+>The Developer persona in Admin Console is unrelated to the Developer role in .[!UICONTROL Cloud Manager]
 
-La tabella seguente riepiloga i ruoli:
+The following table summarizes the roles:
 
 | [!UICONTROL Cloud Manager] Ruoli | Descrizione |
 |--- |--- |
-| Proprietario | Responsabile della definizione dei KPI, dell'approvazione delle implementazioni di produzione e della risoluzione di importanti errori a 3 livelli. |
+| Business Owner | Responsible for defining KPIs, approving production deployments and overriding important 3-tier failures. |
 | Program Manager | Utilizza [!UICONTROL Cloud Manager] per eseguire la configurazione del team, esaminare lo stato e visualizzare i KPI. Può approvare importanti fallimenti a 3 livelli. |
 | Gestione distribuzione | Gestisce le operazioni di distribuzione. Utilizza [!UICONTROL Cloud Manager] per eseguire distribuzioni di fase/produzione. È possibile modificare le tubazioni CI/CD. Può approvare importanti fallimenti a 3 livelli. Può accedere al repository Git. Contattate il rappresentante CSE/AMS per richiederlo. |
 | Sviluppatore | Sviluppa e verifica il codice applicazione personalizzato. Viene utilizzato principalmente [!UICONTROL Cloud Manager] per visualizzare lo stato. Dovrebbe accedere al repository Git per il commit del codice. Per concedere l’accesso al repository Git, contattate il rappresentante CSE/AMS quando aggiungete un utente con questo ruolo. |
@@ -56,36 +56,36 @@ La tabella seguente riepiloga i ruoli:
 
 I ruoli vengono gestiti [!UICONTROL Cloud Manager] da Adobe Admin Console. Le appartenenze a ruoli specifici vengono fornite aggiungendo l'utente a un profilo di [!UICONTROL Cloud Manager] prodotto in Admin Console.
 
-Puoi assegnare iscrizioni di ruolo specifiche aggiungendo l’utente a un profilo [!UICONTROL Cloud Manager] di **** prodotto in Adobe Admin Console, una posizione centrale per la gestione delle adesioni Adobe in tutta l’organizzazione. Per ulteriori informazioni su Adobe Admin Console, consulta la documentazione di [Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html).
+You can assign specific role memberships by adding the user to a  Product Profile in the Adobe Admin Console, a central location for managing your Adobe entitlements across your entire organization. [!UICONTROL Cloud Manager]**** Per ulteriori informazioni su Adobe Admin Console, consulta la documentazione di [Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html).
 
 >[!NOTE]
 >
->Per accedere alla console di amministrazione e configurare il team (utenti e ruoli), aprite un browser e visitate [https://adminconsole.adobe.com](https://adminconsole.adobe.com/enterprise).
+>To acces the admin console and set up your team (users and roles), open a browser and visit https://adminconsole.adobe.com.[](https://adminconsole.adobe.com/enterprise)
 
-Per fornire agli [!UICONTROL Cloud Manager] utenti le autorizzazioni appropriate basate sul ruolo, un amministratore dell' **Organizzazione** del cliente deve creare nuovi profili di prodotto nel contesto del [!UICONTROL AEM Managed Services] prodotto.
+In order to provide the appropriate role-based permissions to  users, an administrator in the customer's Organization, must create new Product Profiles under the  Product Context.[!UICONTROL Cloud Manager]****[!UICONTROL AEM Managed Services]
 
-Per concedere agli [!UICONTROL Cloud Manager] utenti le autorizzazioni appropriate basate sul ruolo, in qualità di amministratore è necessario creare quattro nuovi profili di prodotto nel contesto del [!UICONTROL AEM Managed Services] prodotto corrispondente a ciascuno dei quattro [!UICONTROL Cloud Manager] ruoli:
+To provide the appropriate role-based permissions to  users, as an administrator you must create four new Product Profiles under the  Product Context corresponding to each of the four  roles:[!UICONTROL Cloud Manager][!UICONTROL AEM Managed Services][!UICONTROL Cloud Manager]
 
-* Proprietario
-* Gestione distribuzione
+* Business Owner
+* Deployment Manager
 * Sviluppatore
 * Program Manager
 
-Puoi creare o aggiungere utenti/gruppi a questi profili di prodotto con [Admin Console](https://adminconsole.adobe.com/) per [!UICONTROL Cloud Manager], come illustrato nella figura seguente:
+You can create, or add, users/groups to these Product Profiles with the Admin Console for , as shown in the figure below:[](https://adminconsole.adobe.com/)[!UICONTROL Cloud Manager]
 
-1. Accedi ad Admin Console e fai clic su **Nuovo profilo** per aggiungere un nuovo profilo.
+1. Log in to Admin console and click New Profile to add a new profile.****
 
    ![](assets/admin_console_roles-1.png)
 
-1. Compila i campi per impostare un nuovo ruolo per [!UICONTROL Cloud Manager].
+1. Fill in the fields to set up a new role for .[!UICONTROL Cloud Manager]
 
-   Immettete Nome **** profilo e Nome **** visualizzato per creare un nuovo profilo. Inoltre, potete selezionare un gruppo **di** autorizzazioni per il profilo.
+   Enter Profile Name, Display Name to create a new profile. ******** Additionally, you can select a Permission Group for the profile.****
 
-   Fate clic su **Fine** per completare il passaggio di creazione del profilo.
+   Click Done to complete the profile creation step.****
 
    >[!NOTE]
    >
-   >Quando si creano questi profili di prodotto, il Nome **** visualizzato deve essere il valore tecnico definito da [!UICONTROL Cloud Manager] (vedere la tabella seguente). Il Nome **** profilo può essere qualsiasi cosa, anche se per evitare confusione si consiglia di utilizzare i valori nella colonna Nome *profilo* consigliato di seguito. A questo scopo, durante la creazione del profilo di prodotto, deselezionate **Come nome** profilo e specificate il valore corrispondente come nome **** visualizzato.
+   >Quando si creano questi profili di prodotto, il Nome **** visualizzato deve essere il valore tecnico definito da [!UICONTROL Cloud Manager] (vedere la tabella seguente). The Profile Name can be anything, although to avoid confusion it is recommended to use the values in the Recommended Profile Name column below. ****** To do this, when creating the Product Profile, uncheck the Same as Profile Name and specify the corresponding value as the Display Name.********
 
    | **Ruolo** | **Nome visualizzato (obbligatorio)** | **Nome profilo consigliato** |
    |---|---|---|
