@@ -44,9 +44,9 @@ La data di rilascio per la [!UICONTROL Cloud Manager] versione 2019.2.0 è il 21
 
 ## Problemi noti {#known-issues}
 
-* When monitoring data is refreshed, any hidden series are unhidden.
-* Customers wishing to view their existing SLA reports will need to manually navigate until the next release.
+* Quando si aggiornano i dati di monitoraggio, tutte le serie nascoste non vengono nascoste.
+* I clienti che desiderano visualizzare i rapporti SLA esistenti dovranno spostarsi manualmente fino alla prossima release.
 
-   To formulate this URL, follow the pattern (), for example, if URL for your Experience Cloud is (), then your SLA reports URL is ().`https://<Experience Cloud URL>/content/mac/<Experience Cloud Tenant>/managedservices/sla.html``https://weretailprod.experiencecloud.adobe.com``https://weretailprod.experiencecloud.adobe.com/content/mac/weretailprod/managedservices/sla/html`
+   Per formulare questo URL, segui il pattern (`https://<Experience Cloud URL>/content/mac/<Experience Cloud Tenant>/managedservices/sla.html`), ad esempio, se l’URL per Experience Cloud è (`https://weretailprod.experiencecloud.adobe.com`), l’URL dei rapporti SLA è (`https://weretailprod.experiencecloud.adobe.com/content/mac/weretailprod/managedservices/sla/html`).
 
-   This is expected to be resolved in the next release with the availability of SLA reports inside [!UICONTROL Cloud Manager].
+   Questo problema dovrebbe essere risolto nella prossima release con la disponibilità di rapporti SLA all'interno [!UICONTROL Cloud Manager].
