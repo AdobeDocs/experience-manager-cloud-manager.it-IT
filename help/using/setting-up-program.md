@@ -36,7 +36,7 @@ Per impostare il programma e definire KPI, procedere come segue:
 
    ![](assets/SetUpProgram1.png)
 
-1. Nella schermata **Programma** di installazione vengono visualizzate le informazioni sul programma di modifica.
+1. Nella schermata Programma **di** installazione sono visualizzate le informazioni sul programma di modifica.
 
 1. Verranno visualizzate tre opzioni: **Generale**, **KPI** e **Provisioning** .
 
