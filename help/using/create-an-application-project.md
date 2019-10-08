@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: guida introduttiva
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: 365cd6dfe65059c0c529f774bbcda946d47b0db5
+source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
 
 ---
 
@@ -112,7 +112,7 @@ Cloud Manager crea e verifica il codice utilizzando un ambiente di build special
 
 In alcuni casi limitati, potrebbe essere necessario variare leggermente il processo di creazione quando si esegue in Cloud Manager rispetto a quando viene eseguito su workstation sviluppatore. Per questi casi, [Maven Profiles](https://maven.apache.org/guides/introduction/introduction-to-profiles.html) può essere utilizzato per definire in che modo la build deve essere diversa in ambienti diversi, incluso Cloud Manager.
 
-L'attivazione di un profilo Maven all'interno dell'ambiente di generazione di Cloud Manager deve essere eseguita cercando la presenza di una variabile di ambiente denominata `CM_BUILD`. Questa variabile verrà sempre impostata all'interno dell'ambiente di generazione di Cloud Manager. In alternativa, un profilo destinato ad essere utilizzato solo al di fuori dell'ambiente di build di Cloud Manager dovrebbe essere fatto cercando l'assurdità di questa variabile.
+L'attivazione di un profilo Maven all'interno dell'ambiente di generazione di Cloud Manager deve essere eseguita cercando la presenza di una variabile di ambiente denominata `CM_BUILD`. Questa variabile verrà sempre impostata all'interno dell'ambiente di generazione di Cloud Manager. In alternativa, un profilo destinato a essere utilizzato solo al di fuori dell'ambiente di build di Cloud Manager dovrebbe essere fatto cercando l'assurdità di questa variabile.
 
 Ad esempio, se desideri inviare un messaggio semplice solo quando la build viene eseguita in Cloud Manager, effettua questa operazione:
 
@@ -186,7 +186,9 @@ Se desideri inviare un messaggio semplice solo quando la build viene eseguita al
         </profile>
 ```
 
-## Variabili di ambiente personalizzate
+## Variabili di ambiente {#environment-variables}
+
+### Variabili di ambiente standard {#standard-environ-variables}
 
 In alcuni casi, il processo di creazione di un cliente può dipendere da variabili di configurazione specifiche che non sarebbe appropriato inserire nel repository git. Cloud Manager consente di configurare queste variabili da un Customer Success Engineer (CSE) cliente per cliente. Queste variabili sono memorizzate in una posizione di archiviazione protetta e sono visibili solo nel contenitore di compilazione per il cliente specifico. I clienti che desiderano utilizzare questa funzione devono contattare il CSE per configurare le proprie variabili.
 
