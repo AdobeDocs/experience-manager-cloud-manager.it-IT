@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: utilizzo
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: 548d18f251cf8c4c827d2208fec04cde235ce731
+source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
 
 ---
 
@@ -93,6 +93,13 @@ Quando Cloud Manager si distribuisce su topologie non di produzione, l'obiettivo
 
 1. Cloud Manager determina se ogni artifact è un pacchetto AEM o dispatcher.
 1. Cloud Manager rimuove tutti i dispatcher dal sistema di bilanciamento del carico per isolare l'ambiente durante la distribuzione.
+
+   Se non è configurata diversamente, è possibile saltare le modifiche del sistema di bilanciamento del carico nelle implementazioni di sviluppo e fasi, ovvero scollegare e allegare i passaggi sia nelle condotte non di produzione, per gli ambienti di sviluppo, sia nella pipeline di produzione, per gli ambienti di fase.
+
+   >[!NOTE]
+   >
+   >Questa funzionalità dovrebbe essere utilizzata principalmente da 1-1-1 clienti.
+
 1. Ogni artifact di AEM viene distribuito in ogni istanza di AEM tramite le API di Package Manager, con le dipendenze del pacchetto che determinano l'ordine di distribuzione.
 
    Per ulteriori informazioni su come utilizzare i pacchetti per installare nuove funzionalità, trasferire contenuti tra le istanze ed eseguire il backup del contenuto del repository, vedere Come utilizzare i pacchetti.
@@ -113,6 +120,10 @@ Quando Cloud Manager si distribuisce su topologie non di produzione, l'obiettivo
    >Cloud Manager prevede che l'artifact del dispatcher contenga l'intero set di file.  Tutti i file di configurazione del dispatcher devono essere presenti nel repository git. I file o le cartelle mancanti genereranno un errore di distribuzione.
 
 1. Dopo la corretta distribuzione di tutti i pacchetti AEM e dispatcher a tutti i nodi, i dispatcher vengono aggiunti nuovamente al sistema di bilanciamento del carico e la distribuzione è completa.
+
+   >[!NOTE]
+   >
+   >È possibile ignorare le modifiche del sistema di bilanciamento del carico nelle implementazioni di sviluppo e fasi, ovvero scollegare e allegare i passaggi sia nelle condotte non di produzione, per gli ambienti di sviluppo, sia nel ciclo di produzione, per gli ambienti di fase. Questa funzionalità dovrebbe essere utilizzata principalmente da 1-1-1 clienti.
 
 ### Fase di distribuzione {#deployment-production-phase}
 
