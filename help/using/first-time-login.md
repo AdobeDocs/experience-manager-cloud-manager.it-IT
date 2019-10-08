@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: guida introduttiva
 discoiquuid: 2221d1d5-dbc2-4175-8371-60344f932a82
 translation-type: tm+mt
-source-git-commit: eea425b9bfa178720cbea0653cf8c8f17702281b
+source-git-commit: de9d2834ffa6c235e580227bd020fb8a0b94d22c
 
 ---
 
@@ -26,6 +26,7 @@ Una volta configurate le configurazioni generali per [!UICONTROL Cloud Manager],
 
 Il seguente video fornisce una panoramica dei programmi di Cloud Manager che rappresentano set di ambienti AEM che supportano set logici di iniziative aziendali, in genere corrispondenti a un contratto di servizio (SLA) acquistato.
 
+>[!VIDEO](https://video.tv.adobe.com/v/26313/?captions=ita)
 
 ## Accesso per la prima volta {#logging-in-for-the-first-time}
 
