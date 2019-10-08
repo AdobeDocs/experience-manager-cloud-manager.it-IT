@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: utilizzo
 discoiquuid: c5b39de2-3a9b-437f-98e8-e6e6249a5b3a
 translation-type: tm+mt
-source-git-commit: 2b71bb61e00d462a43519ec0a2dcfe9231fe53ff
+source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
 
 ---
 
@@ -21,6 +21,13 @@ La pagina **Panoramica** di Cloud Manager include il riquadro **Ambienti** in cu
 Ciascuno degli ambienti elencati visualizza il relativo stato associato.
 
 ![](assets/Manage_Environments1.png)
+
+## Panoramica Video sugli ambienti {#environments-video}
+
+Il video seguente fornisce una panoramica sugli ambienti di Cloud Manager composti da istanze di AEM Author, AEM Publish e Dispatcher.
+Per ulteriori informazioni, consulta il video sottostante.
+
+>[!VIDEO](https://video.tv.adobe.com/v/26318/?captions=ita)
 
 ## Accesso agli ambienti in Cloud Manager {#accessing-environments-in-cloud-manager}
 
