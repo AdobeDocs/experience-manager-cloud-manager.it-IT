@@ -4,7 +4,7 @@ seo-title: Monitorare gli ambienti
 description: 'null'
 seo-description: Segui questa pagina per saperne di più sul monitoraggio del sistema in Cloud Manager che viene fatto osservando le singole istanze all'interno di un ambiente e monitorando una serie di metriche per ogni istanza.
 translation-type: tm+mt
-source-git-commit: 548d18f251cf8c4c827d2208fec04cde235ce731
+source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
 
 ---
 
@@ -48,6 +48,13 @@ Lo stato di ciascuna categoria è un riepilogo di singole metriche. Se una metri
 >[!NOTE]
 >
 >Per impostazione predefinita, quando si passa a questa pagina, le istanze dell'ambiente di produzione sono visibili, ma è possibile aprire anche altri ambienti.
+
+## Panoramica video sui report {#video-reports}
+
+I rapporti di Cloud Manager forniscono una visualizzazione degli ambienti del programma e delle istanze di AEM tramite un set di grafici che segnalano e tracciano una serie di metriche per ciascuna istanza di AEM.
+Per ulteriori informazioni, consulta il video sottostante.
+
+>[!VIDEO](https://video.tv.adobe.com/v/26315/?captions=ita)
 
 ## Dettagli di monitoraggio del sistema {#system-monitoring-detail}
 
