@@ -7,10 +7,10 @@ uuid: 35fd56ac-dc9c-4aca-8ad6-36c29c4ec497
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: utilizzo
-content-type: riferimento
+content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: 862501f28f5104d0829a6d2d2ad5f5ce9f8ba341
+source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
 
 ---
 
@@ -168,6 +168,13 @@ Per configurare le invalide del dispatcher, effettuate le seguenti operazioni:
 ## Tubazioni non di produzione e di qualità del codice
 
 Oltre alla pipeline principale che viene implementata per fasi e produzione, i clienti sono in grado di impostare altri oleodotti, denominati **Non-Production Pipelines**. Tali pipeline eseguono sempre i passaggi di creazione e qualità del codice. Facoltativamente, possono anche essere distribuiti nell'ambiente Adobe Managed Services.
+
+### Video su tubazioni non di produzione e di qualità del codice
+
+I gasdotti CI/CD non di produzione sono suddivisi in due categorie, i gasdotti Code Quality e i gasdotti di distribuzione. La qualità del codice distribuisce tutto il codice da un ramo Git per creare e per essere valutato in base alla scansione della qualità del codice di Cloud Manager.
+Per ulteriori informazioni, consulta il seguente video.
+
+>[!VIDEO](https://video.tv.adobe.com/v/26316/?captions=ita)
 
 Nella schermata iniziale, queste condotte sono elencate in una nuova scheda:
 
