@@ -4,12 +4,12 @@ sub-product: experience manager Cloud Manager
 archetype: administrator
 user-guide-title: Aiuto di Experience Manager Cloud Manager
 translation-type: tm+mt
-source-git-commit: 548d18f251cf8c4c827d2208fec04cde235ce731
+source-git-commit: de9d2834ffa6c235e580227bd020fb8a0b94d22c
 
 ---
 
 
-# Aiuto di Experience Manager {#using}
+# Experience Manager Help {#using}
 
 + [Introduzione a Cloud Manager](introduction-to-cloud-manager.md)
 + Panoramica {#overview}
@@ -23,7 +23,7 @@ source-git-commit: 548d18f251cf8c4c827d2208fec04cde235ce731
    + [Repository del codice sorgente](source-code-repository.md)
    + [Aggiungi utenti e ruoli](setting-up-users-and-roles.md)
    + [Ambienti forniti](environments-provisioned.md)
-+ Introduzione {#getting-started}
++ Guida introduttiva {#getting-started}
    + [Accesso iniziale](first-time-login.md)
    + [Configurazione del programma](setting-up-program.md)
    + [Creare un progetto di applicazione AEM](create-an-application-project.md)
@@ -43,7 +43,8 @@ source-git-commit: 548d18f251cf8c4c827d2208fec04cde235ce731
    + [Panoramica](overview-productupdate-wizard.md)
    + [Valutazione](evaluation.md)
 + Note sulla versione {#release-notes}
-   + [Note sulla versione corrente (2019.9.0)](release-notes-current.md)
+   + [Note sulla versione corrente (2019.10.0)](release-notes-current.md)
+   + [Note sulla versione 2019.9.0](release-notes-2019-9-0.md)
    + [Note sulla versione 2019.8.0](release-notes-2019-8-0.md)
    + [Note sulla versione 2019.7.0](release-notes-2019-7-0.md)
    + [Note sulla versione 2019.6.0](release-notes-2019-6-0.md)
