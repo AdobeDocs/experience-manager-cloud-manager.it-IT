@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: guida introduttiva
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
+source-git-commit: 2028569406bcaacb27c42879a79832dec7ec91f4
 
 ---
 
@@ -108,11 +108,56 @@ Cloud Manager crea e verifica il codice utilizzando un ambiente di build special
 * Maven è sempre eseguito con il comando: mvn — *batch-mode clean org.jacoco:jacoco-maven-plugin:Preparare-agent package*
 * Maven è configurato a livello di sistema con un file settings.xml che include automaticamente il repository pubblico di Adobe **Artifact** . Per ulteriori informazioni, consultate [Adobe Public Maven Repository](https://repo.adobe.com/) .
 
+
+## Variabili di ambiente {#environment-variables}
+
+### Variabili di ambiente standard {#standard-environ-variables}
+
+In alcuni casi, i clienti trovano necessario variare il processo di creazione in base alle informazioni sul programma o sulla pipeline.
+
+Ad esempio, se si sta effettuando una minificazione JavaScript in fase di creazione, attraverso uno strumento come gulp, potrebbe essere necessario utilizzare un livello di minificazione diverso quando si crea un ambiente di sviluppo anziché costruire per il palco e la produzione.
+
+Per supportare questa funzione, Cloud Manager aggiunge queste variabili di ambiente standard al contenitore di build per ogni esecuzione.
+
+| **Nome variabile** | **Definizione** |
+|---|---|
+| CM_BUILD | Sempre impostato su "true" |
+| BRANCH | Il ramo configurato per l'esecuzione |
+| CM_PIPELINE_ID | Identificatore numerico della pipeline |
+| CM_PIPELINE_NAME | Il nome della pipeline |
+| CM_PROGRAM_ID | Identificatore numerico del programma |
+| CM_PROGRAM_NAME | Nome del programma |
+| ARTIFACTS_VERSION | Per una fase o una pipeline di produzione, la versione sintetica generata da Cloud Manager |
+
+### Variabili di ambiente personalizzate {#custom-environ-variables}
+
+In alcuni casi, il processo di creazione di un cliente può dipendere da variabili di configurazione specifiche che non sarebbe appropriato inserire nel repository git. Cloud Manager consente di configurare queste variabili da un Customer Success Engineer (CSE) cliente per cliente. Queste variabili sono memorizzate in una posizione di archiviazione protetta e sono visibili solo nel contenitore di compilazione per il cliente specifico. I clienti che desiderano utilizzare questa funzione devono contattare il CSE per configurare le proprie variabili.
+
+Una volta configurate, queste variabili saranno disponibili come variabili di ambiente. Per utilizzarle come proprietà Maven, potete farvi riferimento all'interno del file pom.xml, potenzialmente all'interno di un profilo come descritto in precedenza:
+
+```xml
+        <profile>
+            <id>cmBuild</id>
+            <activation>
+                  <property>
+                        <name>env.CM_BUILD</name>
+                  </property>
+            </activation>
+            <properties>
+                  <my.custom.property>${env.MY_CUSTOM_PROPERTY}</my.custom.property>  
+            </properties>
+        </profile>
+```
+
+>[!NOTE]
+>
+>I nomi delle variabili di ambiente possono contenere solo caratteri alfanumerici e caratteri di sottolineatura (_). Per convenzione, i nomi devono essere tutti maiuscoli.
+
 ## Attivazione dei profili condivisi in Cloud Manager {#activating-maven-profiles-in-cloud-manager}
 
 In alcuni casi limitati, potrebbe essere necessario variare leggermente il processo di creazione quando si esegue in Cloud Manager rispetto a quando viene eseguito su workstation sviluppatore. Per questi casi, [Maven Profiles](https://maven.apache.org/guides/introduction/introduction-to-profiles.html) può essere utilizzato per definire in che modo la build deve essere diversa in ambienti diversi, incluso Cloud Manager.
 
-L'attivazione di un profilo Maven all'interno dell'ambiente di generazione di Cloud Manager deve essere eseguita cercando la presenza di una variabile di ambiente denominata `CM_BUILD`. Questa variabile verrà sempre impostata all'interno dell'ambiente di generazione di Cloud Manager. In alternativa, un profilo destinato a essere utilizzato solo al di fuori dell'ambiente di build di Cloud Manager dovrebbe essere fatto cercando l'assurdità di questa variabile.
+L'attivazione di un profilo Maven all'interno dell'ambiente di generazione di Cloud Manager deve essere effettuata cercando la variabile di ambiente CM_BUILD descritta in precedenza. In alternativa, un profilo destinato a essere utilizzato solo al di fuori dell'ambiente di build di Cloud Manager dovrebbe essere fatto cercando l'assurdità di questa variabile.
 
 Ad esempio, se desideri inviare un messaggio semplice solo quando la build viene eseguita in Cloud Manager, effettua questa operazione:
 
@@ -186,31 +231,6 @@ Se desideri inviare un messaggio semplice solo quando la build viene eseguita al
         </profile>
 ```
 
-## Variabili di ambiente {#environment-variables}
-
-### Variabili di ambiente standard {#standard-environ-variables}
-
-In alcuni casi, il processo di creazione di un cliente può dipendere da variabili di configurazione specifiche che non sarebbe appropriato inserire nel repository git. Cloud Manager consente di configurare queste variabili da un Customer Success Engineer (CSE) cliente per cliente. Queste variabili sono memorizzate in una posizione di archiviazione protetta e sono visibili solo nel contenitore di compilazione per il cliente specifico. I clienti che desiderano utilizzare questa funzione devono contattare il CSE per configurare le proprie variabili.
-
-Una volta configurate, queste variabili saranno disponibili come variabili di ambiente. Per utilizzarle come proprietà Maven, potete farvi riferimento all'interno del file pom.xml, potenzialmente all'interno di un profilo come descritto in precedenza:
-
-```xml
-        <profile>
-            <id>cmBuild</id>
-            <activation>
-                  <property>
-                        <name>env.CM_BUILD</name>
-                  </property>
-            </activation>
-            <properties>
-                  <my.custom.property>${env.MY_CUSTOM_PROPERTY}</my.custom.property>  
-            </properties>
-        </profile>
-```
-
->[!NOTE]
->
->I nomi delle variabili di ambiente possono contenere solo caratteri alfanumerici e caratteri di sottolineatura (_). Per convenzione, i nomi devono essere tutti maiuscoli.
 
 ## Installazione di pacchetti di sistema aggiuntivi {#installing-additional-system-packages}
 
