@@ -10,7 +10,7 @@ topic-tags: utilizzo
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
+source-git-commit: f5ff89820eb843b35b617d300dbbc07f19ca2c17
 
 ---
 
@@ -127,6 +127,11 @@ Per configurare le invalide del dispatcher, effettuate le seguenti operazioni:
    Fate clic su **Salva** per mantenere la configurazione.
 
    ![](assets/image2018-8-7_15-4-30.png)
+
+   **Approva dopo la distribuzione** dello stage È disponibile un passaggio facoltativo **Approva dopo la distribuzione** dello stage, che può essere configurato nella pipeline di produzione.
+   >[!NOTE]
+   >
+   >**L'approvazione dopo la distribuzione** dello stage funziona in modo simile all'approvazione prima dell'implementazione della produzione, ma avviene immediatamente dopo il passaggio di distribuzione dello stadio, ovvero prima che venga eseguito un test, rispetto all'approvazione prima dell'implementazione della produzione, che viene fatta dopo che il test è stato completato.
 
 1. Accedete alla scheda **Test** per definire i criteri di test per il programma.
 
