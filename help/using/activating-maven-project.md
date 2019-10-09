@@ -4,7 +4,7 @@ seo-title: Gestione delle versioni del progetto Maven
 description: Ulteriori informazioni sulla gestione della versione del progetto Paradiso.
 seo-description: Segui questa pagina per saperne di più su Maven Project Version Handling
 translation-type: tm+mt
-source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
+source-git-commit: f5ff89820eb843b35b617d300dbbc07f19ca2c17
 
 ---
 
@@ -29,4 +29,4 @@ Se la versione originale non soddisfa questo criterio, la versione generata verr
 
 >[!NOTE]
 >
->Indipendentemente dal fatto che la versione originale sia stata incorporata o meno nella versione inizializzata di Cloud Manager, la versione originale è disponibile come proprietà Maven con il nome *cloudManagerOriginalVersion*.
+>Indipendentemente dal fatto che la versione originale sia stata incorporata o meno nella versione inizializzata di Cloud Manager, la versione originale è disponibile come proprietà Maven con il nome *cloudManagerOriginalVersion.*
