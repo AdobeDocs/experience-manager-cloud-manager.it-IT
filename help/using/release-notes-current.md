@@ -4,13 +4,14 @@ seo-title: Note sulla versione di AEM Cloud Manager per la versione 2019.10.0
 description: Segui questa pagina per ottenere informazioni sulla versione 2019.10.0 di Cloud Manager.
 seo-description: Segui questa pagina per ottenere informazioni sulla versione 2019.10.0 di AEM Cloud Manager.
 translation-type: tm+mt
-source-git-commit: de9d2834ffa6c235e580227bd020fb8a0b94d22c
+source-git-commit: 1e927076e6bc84e8e1761e33a86cff61a3be0d2f
 
 ---
 
 # Note sulla versione 2019.10.0 {#release-notes-for}
 
-La release [!UICONTROL Cloud Manager] 2019.10.0 aggiorna i criteri di test di sicurezza, aggiunge grafici di monitoraggio scaricabili e risolve alcuni problemi di usabilità riportati dai clienti.
+La sezione seguente illustra le note generali sulla versione per la [!UICONTROL Cloud Manager] release 2018.10.0 e aggiunge aggiornamenti ai passaggi di distribuzione e alla gestione della versione del progetto maven.
+Segui la pagina sottostante per ulteriori dettagli.
 
 ## Data di rilascio {#release-date}
 
@@ -24,11 +25,12 @@ La data di rilascio per la [!UICONTROL Cloud Manager] versione 2019.10.0 è il 1
 * Le tubazioni non di produzione possono essere eliminate dalla scheda nella pagina Panoramica e dall'API.
 * È disponibile un nuovo passaggio di approvazione opzionale immediatamente dopo il passaggio di distribuzione dell'area di visualizzazione, ma prima del passaggio del test di protezione.
 * Durante la configurazione di una pipeline CI/CD, è possibile saltare lo scollegamento e il collegamento delle istanze del dispatcher dal sistema di bilanciamento del carico per gli ambienti di sviluppo e di passaggio.
+Per ulteriori informazioni, consulta **[Processo](deploying-code.md#deployment-process)** di distribuzione.
 * L'interfaccia CLI di Cloud Manager è stata incrementata per supportare l'accesso ai log delle fasi di esecuzione.
 * L'API Cloud Manager ora supporta la modifica del ramo configurato di una pipeline.
-* Le richieste eseguite durante il test delle prestazioni ora includono un token specifico ("CloudManagerTest") nell'agente utente.
+* Le richieste eseguite durante il test delle prestazioni ora includono un token specifico ***CloudManagerTest*** nell'agente utente.
 
 ## Correzioni dei bug {#bug-fixes}
 
-* Alcune schede nella pagina Panoramica non erano allineate verticalmente correttamente.
+* Alcune schede nella pagina **Panoramica** non erano allineate verticalmente correttamente.
 * Alcune condizioni di errore non consentivano di contrassegnare correttamente le esecuzioni della pipeline e di impedire le esecuzioni successive.
