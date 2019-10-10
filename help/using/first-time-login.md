@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: guida introduttiva
 discoiquuid: 2221d1d5-dbc2-4175-8371-60344f932a82
 translation-type: tm+mt
-source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
+source-git-commit: 316ec3ec088271a6524d4c8fd4c84fd36e2ac4db
 
 ---
 
@@ -22,7 +22,9 @@ Una volta configurate le configurazioni generali per [!UICONTROL Cloud Manager],
 >
 >A seconda dei ruoli assegnati [!UICONTROL Cloud Manager] e dello stato dell’applicazione, durante l’utilizzo dell’ [!UICONTROL Cloud Manager] interfaccia utente verranno visualizzate diverse schermate.
 
-## Panoramica Video sui programmi {#programs-video}
+## Esercitazione video {#video-tutorial-one}
+
+### Programmi di Cloud Manager {#programs-video}
 
 Il seguente video fornisce una panoramica dei programmi di Cloud Manager che rappresentano set di ambienti AEM che supportano set logici di iniziative aziendali, in genere corrispondenti a un contratto di servizio (SLA) acquistato.
 
@@ -48,7 +50,9 @@ Il seguente video fornisce una panoramica dei programmi di Cloud Manager che rap
    >
    >Consultate [Configurazione del programma](https://helpx.adobe.com/experience-manager/cloud-manager/using/setting-up-program.html) per completare i passaggi successivi.
 
-## Scheda Attività {#activity-video}
+## Esercitazione video {#video-tutorial-two}
+
+### Scheda Attività di Cloud Manager {#activity-video}
 
 Cloud Manager offre una vista consolidata sull'attività di un programma, in cui sono elencate tutte le esecuzioni di pipeline CI/CD, sia di produzione che di non produzione, consentendo la visibilità nell'attività passata e presente, e i dettagli di qualsiasi attività possono essere rivisti.
 
