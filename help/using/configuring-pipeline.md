@@ -10,7 +10,7 @@ topic-tags: utilizzo
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: dd23fc2277c2e2c51e3ab9b071d6336d2e0d6488
+source-git-commit: 316ec3ec088271a6524d4c8fd4c84fd36e2ac4db
 
 ---
 
@@ -18,6 +18,15 @@ source-git-commit: dd23fc2277c2e2c51e3ab9b071d6336d2e0d6488
 # Configurare la pipeline CI/CD {#configure-your-ci-cd-pipeline}
 
 Nella pagina seguente viene illustrato come configurare la **tubazione**. Per maggiori informazioni concettuali sul funzionamento della tubazione, consulta la panoramica [della pipeline](ci-cd-pipeline.md)CI/CD.
+
+## Esercitazione video {#video-tutorial-one}
+
+### Configurazione della pipeline in Cloud Manager {#config-pipeline-video}
+
+La configurazione della pipeline di produzione CI/CD definisce il trigger che avvierà la pipeline, i parametri che controllano la distribuzione di produzione e i parametri di test delle prestazioni.
+
+>[!VIDEO](https://video.tv.adobe.com/v/26314/?captions=ita)
+
 
 ## Informazioni sul flusso {#understanding-the-flow}
 
@@ -100,6 +109,21 @@ Selezionate il ramo Git e fate clic su **Avanti**.
 >
 >L'opzione **Usa controllo** CSE non è disponibile per tutti i clienti.
 
+**Approva dopo la distribuzione dello stage**
+
+È disponibile un passaggio facoltativo **Approva dopo la distribuzione** dell'area di produzione che può essere configurato nella pipeline di produzione.
+Questa opzione è attivata in una nuova opzione nella schermata di modifica **della** tubazione:
+
+![](assets/post_deployment1.png)
+
+Viene quindi visualizzata come un passaggio separato durante l'esecuzione della pipeline:
+
+![](assets/post_deployment2.png)
+
+>[!NOTE]
+>
+>**L'approvazione dopo la distribuzione** dello stage funziona in modo simile all'approvazione prima dell'implementazione della produzione, ma avviene immediatamente dopo il passaggio di distribuzione dello stadio, ovvero prima che venga eseguito un test, rispetto all'approvazione prima dell'implementazione della produzione, che viene fatta dopo che il test è stato completato.
+
 **Annullamento convalida dispatcher**
 
 In qualità di Gestione distribuzione, potete configurare un set di percorsi che verranno **invalidati** o **scaricati** dalla cache del dispatcher AEM, durante la configurazione o la modifica della pipeline.
@@ -127,18 +151,6 @@ Per configurare le invalide del dispatcher, effettuate le seguenti operazioni:
    Fate clic su **Salva** per mantenere la configurazione.
 
    ![](assets/image2018-8-7_15-4-30.png)
-
-   **Approva dopo la distribuzione** dello stage È disponibile un passaggio facoltativo **Approva dopo la distribuzione** dello stage, che può essere configurato nella pipeline di produzione.
-Questa opzione è attivata in una nuova opzione nella schermata di modifica **della** tubazione:
-
-   ![](assets/post_deployment1.png)
-
-   Viene quindi visualizzata come un passaggio separato durante l'esecuzione della pipeline:
-   ![](assets/post_deployment2.png)
-
-   >[!NOTE]
-   >
-   >**L'approvazione dopo la distribuzione** dello stage funziona in modo simile all'approvazione prima dell'implementazione della produzione, ma avviene immediatamente dopo il passaggio di distribuzione dello stadio, ovvero prima che venga eseguito un test, rispetto all'approvazione prima dell'implementazione della produzione, che viene fatta dopo che il test è stato completato.
 
 
 1. Accedete alla scheda **Test** per definire i criteri di test per il programma.
@@ -182,10 +194,13 @@ Questa opzione è attivata in una nuova opzione nella schermata di modifica **de
 
 Oltre alla pipeline principale che viene implementata per fasi e produzione, i clienti sono in grado di impostare altri oleodotti, denominati **Non-Production Pipelines**. Tali pipeline eseguono sempre i passaggi di creazione e qualità del codice. Facoltativamente, possono anche essere distribuiti nell'ambiente Adobe Managed Services.
 
-### Video su tubazioni non di produzione e di qualità del codice
+## Video su tubazioni non di produzione e di qualità del codice
+
+## Esercitazione video {#video-tutorial-two}
+
+### Pipeline Solo Qualità Codice E Non Produzione Di Cloud Manager {#non-prod-video}
 
 I gasdotti CI/CD non di produzione sono suddivisi in due categorie, i gasdotti Code Quality e i gasdotti di distribuzione. La qualità del codice distribuisce tutto il codice da un ramo Git per creare e per essere valutato in base alla scansione della qualità del codice di Cloud Manager.
-Per ulteriori informazioni, consulta il seguente video.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26316/?captions=ita)
 
