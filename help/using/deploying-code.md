@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: utilizzo
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
+source-git-commit: dd23fc2277c2e2c51e3ab9b071d6336d2e0d6488
 
 ---
 
@@ -95,6 +95,8 @@ Quando Cloud Manager si distribuisce su topologie non di produzione, l'obiettivo
 1. Cloud Manager rimuove tutti i dispatcher dal sistema di bilanciamento del carico per isolare l'ambiente durante la distribuzione.
 
    Se non è configurata diversamente, è possibile saltare le modifiche del sistema di bilanciamento del carico nelle implementazioni di sviluppo e fasi, ovvero scollegare e allegare i passaggi sia nelle condotte non di produzione, per gli ambienti di sviluppo, sia nella pipeline di produzione, per gli ambienti di fase.
+
+   ![](assets/load_balancer.png)
 
    >[!NOTE]
    >
