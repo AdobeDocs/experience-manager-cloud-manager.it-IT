@@ -10,7 +10,7 @@ topic-tags: utilizzo
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: 316ec3ec088271a6524d4c8fd4c84fd36e2ac4db
+source-git-commit: 581e78ef4163e8e9b2b26613512b82223c214071
 
 ---
 
@@ -193,8 +193,6 @@ Per configurare le invalide del dispatcher, effettuate le seguenti operazioni:
 ## Tubazioni non di produzione e di qualità del codice
 
 Oltre alla pipeline principale che viene implementata per fasi e produzione, i clienti sono in grado di impostare altri oleodotti, denominati **Non-Production Pipelines**. Tali pipeline eseguono sempre i passaggi di creazione e qualità del codice. Facoltativamente, possono anche essere distribuiti nell'ambiente Adobe Managed Services.
-
-## Video su tubazioni non di produzione e di qualità del codice
 
 ## Esercitazione video {#video-tutorial-two}
 
