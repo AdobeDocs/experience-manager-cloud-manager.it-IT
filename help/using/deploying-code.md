@@ -1,6 +1,6 @@
 ---
-title: Distribuzione del codice
-seo-title: Distribuzione del codice
+title: Implementare il codice
+seo-title: Implementare il codice
 description: 'null'
 seo-description: Dopo aver configurato la pipeline (repository, ambiente e ambiente di verifica), potete distribuire il codice. Segui questa pagina per saperne di più.
 uuid: 4e3807e1-437e-4922-ba48-0bcadf293a99
@@ -9,12 +9,12 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: utilizzo
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: dd23fc2277c2e2c51e3ab9b071d6336d2e0d6488
+source-git-commit: 5a9d5fc71968741948c519681bcc25bb40d4da45
 
 ---
 
 
-# Distribuzione del codice {#deploy-your-code}
+# Implementare il codice {#deploy-your-code}
 
 ## Distribuzione del codice con Cloud Manager {#deploying-code-with-cloud-manager}
 
@@ -125,7 +125,7 @@ Quando Cloud Manager si distribuisce su topologie non di produzione, l'obiettivo
 
    >[!NOTE]
    >
-   >È possibile ignorare le modifiche del sistema di bilanciamento del carico nelle implementazioni di sviluppo e fasi, ovvero scollegare e allegare i passaggi sia nelle condotte non di produzione, per gli ambienti di sviluppo, sia nel ciclo di produzione, per gli ambienti di fase. Questa funzionalità dovrebbe essere utilizzata principalmente da 1-1-1 clienti.
+   >È possibile ignorare le modifiche del sistema di bilanciamento del carico nelle implementazioni di sviluppo e fasi, ovvero scollegare e allegare i passaggi sia nelle condotte non di produzione, per gli ambienti di sviluppo, sia nel ciclo di produzione, per gli ambienti di fase.
 
 ### Fase di distribuzione {#deployment-production-phase}
 
