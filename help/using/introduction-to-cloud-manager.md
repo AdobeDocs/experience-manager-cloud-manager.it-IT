@@ -1,14 +1,14 @@
 ---
 title: Introduzione a Cloud Manager
 seo-title: Introduzione a Cloud Manager
-description: 'Questa pagina funge da punto di partenza per imparare a utilizzare Cloud Manager. '
-seo-description: 'Questa pagina funge da punto di partenza per imparare a usare Adobe AEM Cloud Manager ed evidenzia i vantaggi e le funzioni chiave. '
-uuid: 62 d68e79-c2ba-4d8b-ba7d-33709014d5b6
+description: 'Questa pagina offre una guida introduttiva per Cloud Manager. '
+seo-description: 'Questa pagina offre una guida introduttiva per Adobe AEM Cloud Manager e ne evidenzia vantaggi e principali funzioni. '
+uuid: 62d68e79-c2ba-4d8b-ba7d-33709014d5b6
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: introduzione
+topic-tags: introduction
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: d7c9ab3795fb3df02ab7dffd1328760ccd914a18
 
 ---
@@ -18,53 +18,53 @@ source-git-commit: d7c9ab3795fb3df02ab7dffd1328760ccd914a18
 
 ## Introduzione {#introduction}
 
-[!UICONTROL Cloud Manager], parte dei servizi Adobe Managed Cloud, consente alle organizzazioni di gestire autonomamente Experience Manager nel cloud. Include un framework di integrazione continua e consegna continua (CI/CD) che consente ai team IT e ai partner di implementazione di accelerare la fornitura di personalizzazioni o aggiornamenti senza compromettere le prestazioni o la sicurezza.
+[!UICONTROL Cloud Manager], parte di Adobe Managed Cloud Services, consente alle organizzazioni di gestire in modo autonomo Experience Manager nel cloud. Include un framework di integrazione continua e distribuzione continua (CI/CD, Continuous Integration/Continuous Delivery) che consente ai team IT e ai partner dell’implementazione di accelerare la distribuzione di personalizzazioni o aggiornamenti senza compromettere prestazioni o sicurezza.
 
-Tramite il portale [!UICONTROL Cloud Manager] dei clienti self-service, **le organizzazioni** possono eseguire o sfruttare i seguenti elementi:
+Tramite il portale clienti self-service di [!UICONTROL Cloud Manager], le **organizzazioni** possono eseguire o sfruttare quanto segue:
 
-* **Integrazione continua / Consegna** continua del codice per ridurre il tempo sul mercato da mesi/settimane a giorni/ore.
-* **Ispezione del codice, test delle prestazioni e convalida** della sicurezza basati sulle best practice prima di passare alla produzione per ridurre al minimo le interruzioni di produzione.
-* **Implementazione** automatica, programmata o manuale anche al di fuori delle ore di lavoro per garantire la massima flessibilità e controllo.
-* **La funzione di ridimensionamento automatico** rileva in modo intelligente la necessità di una maggiore capacità e porta automaticamente online altri segmenti Dispatcher/Publish.
+* **Integrazione continua/distribuzione continua** del codice per ridurre i tempi di realizzazione da mesi/settimane a giorni/ore.
+* **Ispezione del codice, test delle prestazioni e convalida di sicurezza** basati sulle procedure consigliate ed effettuati prima del passaggio alla fase produttiva, al fine di ridurre al minimo le interruzioni di produzione.
+* **Distribuzione automatica, programmata o manuale** anche al di fuori dell’orario di lavoro, per garantire flessibilità e controllo di massimo grado.
+* **Funzione di scalabilità automatica** che rileva in modo intelligente la necessità di capacità aggiuntive e porta automaticamente in linea altri segmenti Dispatcher/Publish.
 
-La seguente immagine illustra il flusso di processo CI/CD utilizzato in [!UICONTROL Cloud Manager]:
+L’immagine riportata di seguito illustra il flusso di processo CI/CD utilizzato in [!UICONTROL Cloud Manager]:
 
 ![](assets/screen_shot_2018-05-12at73843pm.png)
 
-## Funzioni principali in [!UICONTROL Cloud Manager]{#key-features-in-cloud-manager}
+## Funzioni principali in [!UICONTROL Cloud Manager] {#key-features-in-cloud-manager}
 
-Le organizzazioni possono sfruttare le seguenti funzionalità, con [!UICONTROL Cloud Manager]:
+Con [!UICONTROL Cloud Manager] le organizzazioni possono sfruttare le seguenti funzionalità:
 
 ### Interfaccia self-service {#self-service-interface}
 
-L’interfaccia utente [!UICONTROL Cloud Manager] consente ai clienti di accedere e gestire facilmente l’ambiente cloud e la pipeline CI/CD per le applicazioni Experience Manager.
+L’interfaccia utente di [!UICONTROL Cloud Manager] offre ai clienti un accesso semplificato e la possibilità di gestire l’ambiente cloud e la pipeline CI/CD per le applicazioni di Experience Manager.
 
-I clienti definiscono indicatori prestazioni chiave (KPI, Key Performance Indicators) specifici per l'applicazione: visualizzazioni della pagina di picco al minuto e tempo di risposta previsto per un caricamento di pagina, che in ultima analisi costituiscono la base per la misurazione di un'implementazione di successo. I ruoli e le autorizzazioni per i diversi membri del team possono essere facilmente definiti. La nuova interfaccia self-service permette di mettere il controllo nelle mani degli utenti, ma offre anche collegamenti alle best practice e l'accesso agli esperti di Adobe che possono fornire le necessarie indicazioni in base alle esigenze.
+I clienti definiscono gli indicatori chiave di prestazioni (KPI, Key Performance Indicators) specifici per l’applicazione, come i picchi di visualizzazioni della pagina al minuto e i tempi di risposta previsti per il caricamento di una pagina, che in ultima analisi costituiscono la base per la misurazione di una distribuzione di successo. È possibile definire facilmente ruoli e autorizzazioni per i diversi membri del gruppo. Se da una parte la nuova interfaccia self-service riporta il controllo nelle mani dell’utente, offre anche collegamenti alle best practice e accesso ai consigli degli esperti di Adobe, in grado di fornire il supporto necessario secondo necessità.
 
-Per esplorare e iniziare a usare l’interfaccia utente [!UICONTROL Cloud Manager]di Adobe Connect, consulta Accesso [alla](https://helpx.adobe.com/experience-manager/cloud-manager/using/first-time-login.html)prima volta.
+Per esplorare e iniziare a usare l’interfaccia utente di [!UICONTROL Cloud Manager], consulta l’articolo sul [primo accesso](https://helpx.adobe.com/it/experience-manager/cloud-manager/using/first-time-login.html).
 
 ### Pipeline CI/CD {#ci-cd-pipeline}
 
-Una delle funzionalità chiave di [!UICONTROL Cloud Manager] è la capacità di esercitare una pipeline CI/CD ottimizzata per velocizzare la distribuzione di codice personalizzato o aggiornamenti, come l'aggiunta di nuovi componenti sul sito web.
+Una delle funzionalità principali di [!UICONTROL Cloud Manager] è la capacità di sfruttare una pipeline CI/CD ottimizzata per velocizzare la distribuzione di codice personalizzato o aggiornamenti, come l’aggiunta di nuovi componenti sul sito web.
 
-Attraverso l' [!UICONTROL Cloud Manager] interfaccia utente, i clienti possono configurare e avviare la propria pipeline CI/CD. Durante questo ciclo di produzione, viene eseguita un'analisi approfondita del codice per garantire che solo le applicazioni di alta qualità passino all'ambiente di produzione.
+Attraverso l’interfaccia utente di [!UICONTROL Cloud Manager] i clienti possono configurare e avviare la pipeline CI/CD. Durante l’esecuzione della pipeline viene eseguita un’analisi approfondita del codice per garantire che solo le applicazioni di qualità elevata passino all’ambiente di produzione.
 
-Per ulteriori informazioni sulla configurazione della pipeline dall' [!UICONTROL Cloud Manager]interfaccia utente, vedere [Configurare la pipeline](https://helpx.adobe.com/experience-manager/cloud-manager/using/configuring-pipeline.html)CI/CD.
+Per ulteriori informazioni, consulta l’articolo sulla [configurazione della pipeline](https://helpx.adobe.com/it/experience-manager/cloud-manager/using/configuring-pipeline.html) dall’interfaccia utente di [!UICONTROL Cloud Manager].
 
 ### Modalità di distribuzione flessibili {#flexible-deployment-modes}
 
-[!UICONTROL Cloud Manager] offre ai clienti modalità di implementazione flessibili e configurabili in modo da poter distribuire esperienze in base alle esigenze aziendali in continua evoluzione.
+[!UICONTROL Cloud Manager] offre ai clienti delle modalità di distribuzione flessibili e configurabili, che consentono di distribuire esperienze personalizzate in base alle esigenze aziendali in continua evoluzione.
 
-Con una modalità di attivazione automatica, il codice viene distribuito automaticamente in un ambiente basato su eventi specifici come commit del codice. È inoltre possibile pianificare le distribuzioni del codice durante l'intervallo di tempo specificato, anche al di fuori dell'orario di lavoro.
+Grazie alla modalità di attivazione automatica, il codice viene distribuito automaticamente in un ambiente in base a eventi specifici, come ad esempio il commit del codice. È inoltre possibile programmare le distribuzioni del codice durante intervalli di tempo specifici, anche al di fuori dell’orario di lavoro.
 
-Indipendentemente dal trigger di distribuzione, i controlli di qualità vengono sempre eseguiti nell'ambito dell'esecuzione della pipeline CI/CD, ogni volta che viene attivata una distribuzione. I controlli di qualità comprendono l'ispezione del codice, i test di sicurezza e i test delle prestazioni forniti senza alcun sforzo da parte dei clienti o dei partner.
+Indipendentemente dalla modalità di attivazione della distribuzione, ogni volta che ne viene attivata una vengono sempre eseguiti controlli di qualità come parte dell’esecuzione della pipeline CI/CD. I controlli di qualità, che comprendono l’ispezione del codice, i test di sicurezza e i test delle prestazioni, sono integrati nella soluzione e possono essere usati subito, senza complessità, da parte dei clienti o dei partner.
 
-Per ulteriori informazioni sulla distribuzione dei controlli di qualità e codice, consulta [Distribuzione del codice](deploying-code.md)
+Per ulteriori informazioni sulla distribuzione del codice e sui controlli di qualità, consulta [Implementare il codice](deploying-code.md)
 
-### Ridimensionamento automatico {#autoscaling}
+### Scalabilità automatica {#autoscaling}
 
-[!UICONTROL Cloud Manager] rileva la necessità di una capacità aggiuntiva quando l'ambiente di produzione è soggetto a un carico insolitamente elevato e porta automaticamente una capacità aggiuntiva online tramite la funzione di scalabilità automatica.
+Quando l’ambiente di produzione è soggetto a un carico insolitamente elevato, [!UICONTROL Cloud Manager] rileva la necessità di una maggiore capacità e la rende automaticamente disponibile tramite la funzione di scalabilità automatica.
 
-Durante un evento di scalabilità automatica, attiva [!UICONTROL Cloud Manager] automaticamente il processo di provisioning di scalabilità automatica, invia una notifica dell'evento di scalabilità automatica e mette in linea la capacità aggiuntiva in pochi minuti. La capacità aggiuntiva verrà fornita nell'ambiente di produzione, nella stessa area o nelle stesse aree e sarà conforme alle stesse specifiche di sistema dei nodi Dispatcher/Publish in esecuzione.
+Durante un evento di scalabilità automatica, [!UICONTROL Cloud Manager] attiva automaticamente il processo di provisioning, invia una notifica dell’evento in corso e in pochi minuti rende disponibile la capacità necessaria. Questo avviene nell’ambiente di produzione, nelle stesse aree e in conformità alle stesse specifiche di sistema dei nodi Dispatcher/Publish in esecuzione.
 
-La funzione di ridimensionamento automatico verrà applicata solo al livello Dispatcher/Publish e verrà sempre eseguita con un metodo di ridimensionamento orizzontale, con almeno un segmento aggiuntivo di una coppia Dispatcher/Publish e fino a un massimo di dieci segmenti. Qualsiasi capacità aggiuntiva fornita verrà scalata manualmente entro un periodo di dieci giorni lavorativi, come determinato dal CSE (Customer Success Engineer).
+La funzione di scalabilità automatica si applica solo al livello Dispatcher/Publish e viene sempre eseguita con un metodo di scalabilità orizzontale, con almeno un segmento aggiuntivo di una coppia Dispatcher/Publish e fino a un massimo di dieci segmenti. La capacità aggiuntiva fornita verrà scalata manualmente entro un periodo di dieci giorni lavorativi, come determinato dal CSE (Customer Success Engineer).
