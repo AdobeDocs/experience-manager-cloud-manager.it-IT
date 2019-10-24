@@ -10,7 +10,7 @@ topic-tags: utilizzo
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: 581e78ef4163e8e9b2b26613512b82223c214071
+source-git-commit: bc419b96554a40b84878140f8f532c9f4e10c9f3
 
 ---
 
