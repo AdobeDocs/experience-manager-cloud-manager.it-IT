@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: utilizzo
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: f9df9c05fb708aed3f9ea91780f7a92c24e04673
+source-git-commit: bc9454120c92181503efbf8270ce621af26801d9
 
 ---
 
@@ -51,8 +51,8 @@ Dopo aver configurato la **pipeline** (repository, ambiente e ambiente di test),
 
    La **fase di test** comporta i seguenti passaggi:
 
-   * Test di sicurezza - Questo passaggio valuta l'impatto sulla sicurezza del codice dell'applicazione nell'ambiente AEM. Consultate [Comprendere i risultati](understand-your-test-results.md) del test per informazioni dettagliate sul processo di test.
-   * Test delle prestazioni - Questo passaggio valuta le prestazioni del codice dell'applicazione. Consultate [Comprendere i risultati](understand-your-test-results.md) del test per informazioni dettagliate sul processo di test.
+   * Test di protezione: Questo passaggio valuta l’impatto sulla sicurezza del codice dell’applicazione sull’ambiente AEM. Consultate [Comprendere i risultati](understand-your-test-results.md) del test per informazioni dettagliate sul processo di test.
+   * Test delle prestazioni: Questo passaggio valuta le prestazioni del codice dell'applicazione. Consultate [Comprendere i risultati](understand-your-test-results.md) del test per informazioni dettagliate sul processo di test.
    ![](assets/Stage_Testing1.png)
 
    La distribuzione **** di produzione prevede i seguenti passaggi:
