@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: utilizzo
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: 5a9d5fc71968741948c519681bcc25bb40d4da45
+source-git-commit: f9df9c05fb708aed3f9ea91780f7a92c24e04673
 
 ---
 
@@ -43,15 +43,16 @@ Dopo aver configurato la **pipeline** (repository, ambiente e ambiente di test),
 
    La distribuzione **** dello stage prevede i seguenti passaggi:
 
-   * Build e unit test
-   * Analisi del codice
+   * Convalida: Questo passaggio assicura che la pipeline sia configurata per utilizzare le risorse attualmente disponibili, ad esempio che il ramo configurato esiste, gli ambienti sono disponibili.
+   * Build e unit test: Questo passaggio esegue un processo di compilazione containerizzato. Consultate [Creare un progetto](create-an-application-project.md) di applicazione AEM per informazioni dettagliate sull'ambiente di creazione.
+   * Scansione del codice: Questo passaggio valuta la qualità del codice dell’applicazione. Consultate [Comprendere i risultati](understand-your-test-results.md) del test per informazioni dettagliate sul processo di test.
    * Distribuisci nello stage
    ![](assets/Stage_Deployment1.png)
 
    La **fase di test** comporta i seguenti passaggi:
 
-   * Test di protezione
-   * Test delle prestazioni
+   * Test di sicurezza - Questo passaggio valuta l'impatto sulla sicurezza del codice dell'applicazione nell'ambiente AEM. Consultate [Comprendere i risultati](understand-your-test-results.md) del test per informazioni dettagliate sul processo di test.
+   * Test delle prestazioni - Questo passaggio valuta le prestazioni del codice dell'applicazione. Consultate [Comprendere i risultati](understand-your-test-results.md) del test per informazioni dettagliate sul processo di test.
    ![](assets/Stage_Testing1.png)
 
    La distribuzione **** di produzione prevede i seguenti passaggi:
