@@ -4,7 +4,7 @@ seo-title: Monitorare gli ambienti
 description: 'null'
 seo-description: Segui questa pagina per saperne di più sul monitoraggio del sistema in Cloud Manager che viene fatto osservando le singole istanze all'interno di un ambiente e monitorando una serie di metriche per ogni istanza.
 translation-type: tm+mt
-source-git-commit: dd23fc2277c2e2c51e3ab9b071d6336d2e0d6488
+source-git-commit: 1edfbc0adb04026cd29ba93b4ba155d3b61439dc
 
 ---
 
@@ -43,7 +43,7 @@ Nella pagina Panoramica del monitoraggio del sistema sono elencati gli ambienti 
 
 Lo stato di ciascuna categoria è un riepilogo di singole metriche. Se una metrica in una categoria è in stato critico, l’intera categoria è in stato critico ai fini della pagina di panoramica. Lo stesso riepilogo può essere visualizzato a livello di ambiente e di istanza.
 
-![](assets/Reports.png)
+![](assets/System-Monitoring-Reports.png)
 
 >[!NOTE]
 >
@@ -107,11 +107,11 @@ Ad esempio, se fai clic sulla serie di soglie di avviso, verrà visualizzata sol
 I clienti possono vedere le prestazioni dell’ambiente AEM di produzione in relazione al contratto di assistenza a livello di contratto (SLA). È disponibile tramite un sottomenu nella schermata Rapporti.
 Ad esempio, il grafico seguente mostra il raggiungimento mensile dello SLA per il 2018.
 
-![](assets/sla-reporting1.png)
+![](assets/SLA-Reports-one.png)
 
 Come per i grafici di monitoraggio del sistema, il passaggio del mouse su un punto dati mostra i valori specifici per quel mese.
 
-![](assets/sla-reporting2.png)
+![](assets/SLA-Reports-two.png)
 
 La sezione Analisi evento sotto questo grafico mostra la serie di incidenti verificatisi per il programma durante l'anno attualmente selezionato. Ogni incidente ha un intervallo di tempo, una causa e una serie di commenti.
 
