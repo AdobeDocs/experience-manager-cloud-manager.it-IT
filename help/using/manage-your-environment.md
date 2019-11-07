@@ -1,6 +1,6 @@
 ---
-title: Gestione degli ambienti
-seo-title: Gestione degli ambienti
+title: Gestire gli ambienti
+seo-title: Gestire gli ambienti
 description: 'null'
 seo-description: Seguite questa pagina per visualizzare l'elenco degli ambienti di produzione e non produzione utilizzati per configurare ed eseguire la pipeline CI/CD in Cloud Manager.
 uuid: 04e67572-11db-4d5d-acf3-fd7f644a95f0
@@ -9,18 +9,18 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: utilizzo
 discoiquuid: c5b39de2-3a9b-437f-98e8-e6e6249a5b3a
 translation-type: tm+mt
-source-git-commit: dd23fc2277c2e2c51e3ab9b071d6336d2e0d6488
+source-git-commit: 72daabd54cd6216743dfbf4d843f685b3b12b3aa
 
 ---
 
 
-# Gestione degli ambienti {#manage-your-environments}
+# Gestire gli ambienti {#manage-your-environments}
 
 La pagina **Panoramica** di Cloud Manager include il riquadro **Ambienti** in cui sono elencati tutti gli ambienti AEM gestiti.
 
 Ciascuno degli ambienti elencati visualizza il relativo stato associato.
 
-![](assets/Manage_Environments1.png)
+![](assets/Manage-Environments1.png)
 
 ## Esercitazione video {#video-tutorial}
 
@@ -36,7 +36,7 @@ Nella sezione **Ambienti** sono visualizzati gli ambienti Produzione e Fase pred
 
 Lo stato è lo stato di alimentazione rollup tra i nodi nell'ambiente. È verde se tutti i nodi sono in esecuzione, rosso se anche un nodo viene arrestato, blu se anche un nodo è in arrivo, giallo se anche un nodo ha uno stato di alimentazione non disponibile (in questo ordine di priorità).
 
-![](assets/manage_environments-screen2.png)
+![](assets/Environments-card-new.png)
 
 ### Ambienti {#environments}
 
@@ -48,4 +48,4 @@ Nella schermata **Ambienti** viene visualizzata una scheda per ogni *ambiente di
 >
 >Lo **STATO** del nodo rappresenta lo stato di alimentazione della VM e non riflette lo stato di AEM sul server. Lo stato può essere **Corrente** (cerchio verde), **Interrotto** (cerchio rosso), **In alto** (cerchio blu) o **Non disponibile** (cerchio giallo).
 
-![](assets/Manage_Environments2.png)
+![](assets/Environments-tab.png)
