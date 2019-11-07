@@ -10,7 +10,7 @@ topic-tags: utilizzo
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: bc419b96554a40b84878140f8f532c9f4e10c9f3
+source-git-commit: 06154ad565168d25e18de49c10e5944f39a293c2
 
 ---
 
@@ -58,7 +58,7 @@ Per configurare il comportamento e le preferenze della pipeline, effettuate le s
 
 1. Fate clic su **Imposta tubazione** per impostare e configurare la tubazione.
 
-   ![](assets/Configure_ci-cd-1.png)
+   ![](assets/Setup-Pipeline.png)
 
 1. Viene visualizzata la schermata **Configurazione tubazione** .
 
@@ -188,7 +188,7 @@ Per configurare le invalide del dispatcher, effettuate le seguenti operazioni:
    >
    >Inoltre, una volta impostata la pipeline, puoi comunque modificare le impostazioni per la stessa cosa utilizzando la sezione Impostazioni **pipeline di** produzione dall' [!UICONTROL Cloud Manager] interfaccia utente.
 
-   ![](assets/Prod-Pipeline-Settings-Dialog.png)
+   ![](assets/Production-Pipeline.png)
 
 ## Tubazioni non di produzione e di qualità del codice
 
@@ -206,7 +206,7 @@ Nella schermata iniziale, queste condotte sono elencate in una nuova scheda:
 
 1. Accedete alla sezione **Tubi** non di produzione dalla schermata iniziale di Cloud Manager.
 
-   ![](assets/Configuring_Pipeline_Add-Production.png)
+   ![](assets/Non-Production-Pipeline.png)
 
 1. Fate clic sul pulsante Aggiungi per specificare il nome della tubazione, il tipo di tubazione e il ramo Git.
 
