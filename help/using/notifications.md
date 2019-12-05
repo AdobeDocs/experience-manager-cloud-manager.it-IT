@@ -6,17 +6,17 @@ seo-description: Segui questa pagina per scoprire in che modo gli utenti ricevon
 uuid: 73e4bb80-36c1-4408-bdbd-1ac5328359d1
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: utilizzo
+topic-tags: using
 discoiquuid: 8ef574c8-47d9-404b-8e9c-9c6716c1f49a
 translation-type: tm+mt
-source-git-commit: 1d4bb0b24cdcd6dc0ed9db58f1e14b6714bb96d6
+source-git-commit: be0350b98c19b3b84519947c04a7e362b46bba21
 
 ---
 
 
 # Notifiche {#notifications}
 
-[!UICONTROL Cloud Manager] consente all'utente di ricevere notifiche all'avvio e al completamento (con esito positivo o negativo) di una pipeline, all'inizio di una distribuzione di produzione, nonché quando vengono raggiunti i passi **Go-Live Approval** e **Scheduled** . Queste notifiche vengono inviate tramite il sistema di [!UICONTROL Experience Cloud] notifica Adobe.
+[!UICONTROL Cloud Manager] consente all'utente di ricevere le notifiche all'avvio e al completamento della pipeline di produzione (con esito positivo o negativo), all'inizio di una distribuzione di produzione, nonché quando vengono raggiunti i passi **Go-Live Approval** e **Scheduled** . Queste notifiche vengono inviate tramite il sistema di [!UICONTROL Experience Cloud] notifica Adobe.
 
 >[!NOTE]
 >
