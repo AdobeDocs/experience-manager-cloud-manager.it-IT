@@ -1,29 +1,36 @@
 ---
-title: Note sulla versione 2019.11.0
-seo-title: Note sulla versione di AEM Cloud Manager per la versione 2019.11.0
-description: Segui questa pagina per ottenere informazioni sulla versione 2019.11.0 di Cloud Manager.
-seo-description: Segui questa pagina per ottenere informazioni sulla versione 2019.11.0 di AEM Cloud Manager.
+title: Note sulla versione 2019.12.0
+seo-title: Note sulla versione di AEM Cloud Manager per la versione 2019.12.0
+description: Segui questa pagina per ottenere informazioni sulla versione 2019.12.0 di Cloud Manager.
+seo-description: Segui questa pagina per ottenere informazioni sulla versione 2019.12.0 di AEM Cloud Manager.
 translation-type: tm+mt
-source-git-commit: 52c54568d8ab7b5091c25b3b65b4baa126bf61f5
+source-git-commit: 1f31e654272afa60cac3376ce4dc3bc76f0d9dda
 
 ---
 
-# Note sulla versione 2019.11.0 {#release-notes-for}
+# Note sulla versione 2019.12.0 {#release-notes-for}
 
-La sezione seguente illustra le note generali sulla versione per la [!UICONTROL Cloud Manager] release 2019.11.0 e aggiunge aggiornamenti al processo di convalida della pipeline e miglioramenti ai test delle prestazioni delle risorse.
+La sezione seguente illustra le note generali sulla versione per la [!UICONTROL Cloud Manager] release 2019.12.0 e aggiunge aggiornamenti all'esecuzione della pipeline e miglioramenti alle analisi di qualità del codice.
 Seguite le sezioni riportate di seguito per ulteriori dettagli.
 
-## Data di rilascio {#release-date}
+## Release Date {#release-date}
 
-La Data di rilascio per la [!UICONTROL Cloud Manager] versione 2019.11.0 è il 7 novembre 2019.
+La data di rilascio per la [!UICONTROL Cloud Manager] versione 2019.12.0 è il 12 dicembre 2019.
 
 ## Novità {#whats-new}
 
-* Se il passaggio di convalida della pipeline non riesce, ora viene visualizzato lo specifico errore di convalida rilevato.
-* È stato migliorato il meccanismo utilizzato per eliminare le risorse durante il test delle prestazioni delle risorse.
-* Le schede *Pipeline* e *Ambienti* nella pagina **Panoramica** sono state aggiornate visivamente.
-* Il programma Switcher è stato spostato (ora si trova sotto il logo Adobe Experience Manager).
+* I passaggi nell'esecuzione della pipeline ora mostrano la marca temporale di completamento per ogni passaggio.
+* La scansione della qualità del codice per i progetti che non contengono codice Java ora segnala un tasso di copertura del codice pari al 100%.
+* Il controllo dello stato di configurazione del dispatcher CQ è stato rimosso.
+
 
 ## Correzioni dei bug {#bug-fixes}
 
-* In alcune situazioni, selezionando l'opzione **Ignora modifiche** bilanciamento carico sulle condotte non di produzione, questa opzione non veniva effettivamente abilitata.
+* Le date non venivano visualizzate correttamente in alcuni browser.
+* In rari casi, la pipeline di produzione passava alla fase di approvazione mentre era ancora in esecuzione la verifica delle prestazioni.
+* In alcuni stati, i pulsanti nella parte superiore della pagina della panoramica non erano allineati correttamente.
+* In alcune circostanze, gli utenti non autorizzati hanno visto un pulsante per avviare la pipeline, anche se il pulsante stesso non era selezionabile.
+* I pulsanti di azione per le condotte non di produzione talvolta venivano visualizzati nella posizione sbagliata.
+* I pacchetti con il tipo di nodo granito:Classificazione non sono stati in grado di essere analizzati per determinate violazioni delle regole di qualità.
+* Alcuni errori nel processo di qualità del codice venivano erroneamente considerati come bug.
+* Impossibile caricare i dati di monitoraggio per alcune topologie.
