@@ -6,10 +6,10 @@ seo-description: Segui questa pagina per apprendere tre livelli di cancelli dura
 uuid: 93caa01f-0df2-4a6f-81dc-23dfee24dc93
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: utilizzo
+topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: 26014cfabfee6226033ba2fc1167d8f5509e17c6
+source-git-commit: 1f31e654272afa60cac3376ce4dc3bc76f0d9dda
 
 ---
 
@@ -44,7 +44,7 @@ Come parte della pipeline, il codice sorgente viene analizzato per garantire che
 
 | Nome | Definizione | Categoria | Soglia di errore |
 |--- |--- |--- |--- |
-| Valutazione sicurezza | A = 0 Vulnerabilità <br/>B = almeno 1 Vulnerabilità<br/> minore C = almeno 1 Vulnerabilità maggiore <br/>D = almeno 1 Vulnerabilità critica <br/>E = almeno 1 Vulnerabilità blocco |  Critico | &lt; B |
+| Valutazione sicurezza | A = 0 Vulnerabilità <br/>B = almeno 1 Vulnerabilità<br/> minore C = almeno 1 Vulnerabilità maggiore <br/>D = almeno 1 Vulnerabilità critica <br/>E = almeno 1 Vulnerabilità blocco | Critico | &lt; B |
 | Valutazione affidabilità | A = 0 Bug <br/>B = almeno 1 Bug Minore <br/>C = almeno 1 Bug Principale <br/>D = almeno 1 Bug Critico E = almeno 1 Bug Blocco | Importante | &lt; C |
 | Classificazione manutenibilità | L'eccezionale costo di riparazione per gli odori di codice è: <br/><ul><li>&lt;=5% del tempo che è già passato nell'applicazione, la valutazione è A </li><li>tra il 6 e il 10% il rating è a B </li><li>tra l'11% e il 20% il rating è a C </li><li>tra il 21% e il 50% la valutazione è una D</li><li>un valore superiore al 50% è un E</li></ul> | Importante | &lt; A |
 | Copertura | Una combinazione di copertura della linea di prova di unità e copertura della condizione utilizzando la seguente formula: <br/>`Coverage = (CT + CF + LC)/(2*B + EL)` <br/>dove: CT = condizioni che sono state valutate come 'true' almeno una volta durante l'esecuzione di unit test <br/>CF = condizioni che sono state valutate come 'false' almeno una volta durante l'esecuzione di unit test <br/>LC = linee coperte = lines_to_cover - uncover_lines <br/><br/> B = numero totale di condizioni <br/>EL = numero totale di linee eseguibili (lines_to_cover) | Importante | &lt; 50% |
@@ -107,17 +107,16 @@ Nella tabella seguente sono elencati i controlli correnti:
 
 | **Nome** | **Implementazione della verifica dello stato** | **Categoria** |
 |---|---|---|
-| La disponibilità dell'API Attacco firewall di deserializzazione è in uno stato accettabile | Compatibilità Attach Api di firewall deserializzazione |  Critico |
-| Il firewall di deserializzazione funziona | Firewall deserializzazione funzionale |  Critico |
-| Firewall di deserializzazione caricato | Firewall deserializzazione caricato |  Critico |
-| L'implementazione AuthorizableNodeName non espone l'ID autorizzabile nel nome/percorso del nodo. | Generazione nome nodo autorizzabile |  Critico |
-| Le password predefinite sono state modificate | Account di login predefiniti |  Critico |
-| Il servlet GET predefinito Sling è protetto dagli attacchi DOS. | Sling Get Servlet |  Critico |
-| Il dispatcher applica correttamente il filtro delle richieste | Configurazione dispatcher CQ |  Critico |
-| Il gestore Sling Java Script è configurato correttamente | Sling Java Script Handler |  Critico |
-| Il gestore Sling JSP Script è configurato correttamente | Gestore di script JSP Sling |  Critico |
-| SSL è configurato correttamente | Configurazione SSL |  Critico |
-| Nessun criterio profilo utente ovviamente non sicuro trovato | Accesso standard profilo utente |  Critico |
+| La disponibilità dell'API Attacco firewall di deserializzazione è in uno stato accettabile | Compatibilità Attach Api di firewall deserializzazione | Critico |
+| Il firewall di deserializzazione funziona | Firewall deserializzazione funzionale | Critico |
+| Firewall di deserializzazione caricato | Firewall deserializzazione caricato | Critico |
+| L'implementazione AuthorizableNodeName non espone l'ID autorizzabile nel nome/percorso del nodo. | Generazione nome nodo autorizzabile | Critico |
+| Le password predefinite sono state modificate | Account di login predefiniti | Critico |
+| Il servlet GET predefinito Sling è protetto dagli attacchi DOS. | Sling Get Servlet | Critico |
+| Il gestore Sling Java Script è configurato correttamente | Sling Java Script Handler | Critico |
+| Il gestore Sling JSP Script è configurato correttamente | Gestore di script JSP Sling | Critico |
+| SSL è configurato correttamente | Configurazione SSL | Critico |
+| Nessun criterio profilo utente ovviamente non sicuro trovato | Accesso standard profilo utente | Critico |
 | Il filtro Sling Referrer è configurato per prevenire attacchi CSRF | Sling Referrer Filter | Importante |
 | Adobe Granite HTML Library Manager è configurato correttamente | Configurazione manager libreria CQ HTML | Importante |
 | Il bundle di supporto CRXDE è disattivato | Supporto CRXDE | Importante |
@@ -144,9 +143,9 @@ La tabella seguente riassume la matrice del test di prestazione utilizzando il s
 
 | **Metrica** | **Categoria** | **Soglia di errore** |
 |---|---|---|
-| Tasso di errore richiesta pagina % |  Critico | &gt;= 2% |
-| Tasso di utilizzo CPU |  Critico | &gt;= 80% |
-| Tempo di attesa IO disco |  Critico | &gt;= 50% |
+| Tasso di errore richiesta pagina % | Critico | &gt;= 2% |
+| Tasso di utilizzo CPU | Critico | &gt;= 80% |
+| Tempo di attesa IO disco | Critico | &gt;= 50% |
 | Tempo di risposta percentuale 95 | Importante | &gt;= Indicatore KPI a livello di programma |
 | Tempo di risposta picco | Importante | &gt;= 18 secondi |
 | Visualizzazioni pagina al minuto | Importante | &lt; Indicatore KPI a livello di programma |
