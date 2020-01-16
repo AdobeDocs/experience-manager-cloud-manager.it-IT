@@ -1,36 +1,30 @@
 ---
-title: Note sulla versione 2019.12.0
-seo-title: Note sulla versione di AEM Cloud Manager per la versione 2019.12.0
-description: Segui questa pagina per ottenere informazioni sulla versione 2019.12.0 di Cloud Manager.
-seo-description: Segui questa pagina per ottenere informazioni sulla versione 2019.12.0 di AEM Cloud Manager.
+title: Note sulla versione 2020.1.0
+seo-title: Note sulla versione di AEM Cloud Manager per la versione 2020.1.0
+description: Segui questa pagina per ottenere informazioni sulla versione 2020.1.0 di Cloud Manager
+seo-description: Segui questa pagina per ottenere informazioni sulla versione 2020.1.0 di AEM Cloud Manager
 translation-type: tm+mt
-source-git-commit: 1f31e654272afa60cac3376ce4dc3bc76f0d9dda
+source-git-commit: e22345e23731cf97502e6a8654d254d68f884ba7
 
 ---
 
-# Note sulla versione 2019.12.0 {#release-notes-for}
+# Note sulla versione 2020.1.0 {#release-notes-for}
 
-La sezione seguente illustra le note generali sulla versione per la [!UICONTROL Cloud Manager] release 2019.12.0 e aggiunge aggiornamenti all'esecuzione della pipeline e miglioramenti alle analisi di qualità del codice.
-Seguite le sezioni riportate di seguito per ulteriori dettagli.
+La sezione seguente illustra le note generali sulla versione per la [!UICONTROL Cloud Manager] release 2020.1.0 e aggiunge aggiornamenti all’accesso alle credenziali Git e all’esperienza di accesso.
 
 ## Release Date {#release-date}
 
-La data di rilascio per la [!UICONTROL Cloud Manager] versione 2019.12.0 è il 12 dicembre 2019.
+La data di rilascio per la [!UICONTROL Cloud Manager] versione 2020.1.0 è il 16 gennaio 2020.
 
 ## Novità {#whats-new}
 
-* I passaggi nell'esecuzione della pipeline ora mostrano la marca temporale di completamento per ogni passaggio.
-* La scansione della qualità del codice per i progetti che non contengono codice Java ora segnala un tasso di copertura del codice pari al 100%.
-* Il controllo dello stato di configurazione del dispatcher CQ è stato rimosso.
+* Ora è possibile ottenere le credenziali Git dall&#39;interfaccia utente di Cloud Manager. Per ulteriori informazioni, consultate [Accesso a Git](/help/using/accessing-git.md) .
+* L’esperienza di accesso e la struttura URL sono cambiate nell’ambito di un’iniziativa a livello di Adobe. I segnalibri precedenti verranno reindirizzati ai nuovi URL.
 
 
 ## Correzioni dei bug {#bug-fixes}
 
-* Le date non venivano visualizzate correttamente in alcuni browser.
-* In rari casi, la pipeline di produzione passava alla fase di approvazione mentre era ancora in esecuzione la verifica delle prestazioni.
-* In alcuni stati, i pulsanti nella parte superiore della pagina della panoramica non erano allineati correttamente.
-* In alcune circostanze, gli utenti non autorizzati hanno visto un pulsante per avviare la pipeline, anche se il pulsante stesso non era selezionabile.
-* I pulsanti di azione per le condotte non di produzione talvolta venivano visualizzati nella posizione sbagliata.
-* I pacchetti con il tipo di nodo granito:Classificazione non sono stati in grado di essere analizzati per determinate violazioni delle regole di qualità.
-* Alcuni errori nel processo di qualità del codice venivano erroneamente considerati come bug.
-* Impossibile caricare i dati di monitoraggio per alcune topologie.
+* Le distribuzioni alle topologie di sola creazione non distribuivano le modifiche alla configurazione del dispatcher.
+* In alcune configurazioni, non è stato possibile creare una pipeline di sola qualità del codice.
+* Talvolta il rendering della scheda di riepilogo dell&#39;ambiente nella pagina di panoramica non veniva eseguito correttamente.
+* Le esecuzioni della pipeline potrebbero verificarsi in timeout su topologie di grandi dimensioni.
