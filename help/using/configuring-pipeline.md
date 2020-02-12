@@ -6,11 +6,11 @@ seo-description: 'Prima di iniziare a distribuire il codice, devi configurare le
 uuid: 35fd56ac-dc9c-4aca-8ad6-36c29c4ec497
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: utilizzo
+topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: c81243708d938a8bffdec8a35f32a2cf552c1c95
+source-git-commit: 854c09878a633bd46e4d7e9d604a8335c225a1c4
 
 ---
 
@@ -25,14 +25,14 @@ Nella pagina seguente viene illustrato come configurare la **tubazione**. Per ma
 
 La configurazione della pipeline di produzione CI/CD definisce il trigger che avvierà la pipeline, i parametri che controllano la distribuzione di produzione e i parametri di test delle prestazioni.
 
->[!VIDEO](https://video.tv.adobe.com/v/26314/?captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/26314/)
 
 
 ## Informazioni sul flusso {#understanding-the-flow}
 
 Potete configurare la tubazione dalla sezione Impostazioni **** tubazione nell’ [!UICONTROL Cloud Manager] interfaccia utente.
 
-Gestione distribuzione è responsabile della configurazione della pipeline. In questo caso, selezionate prima un ramo dall'archivio **Git**. La configurazione della tubazione è costituita da:
+Gestione distribuzione è responsabile della configurazione della pipeline. In questo caso, selezionate prima un ramo dall&#39;archivio **Git**. La configurazione della tubazione è costituita da:
 
 * definizione del trigger che avvierà la pipeline.
 * definizione dei parametri che controllano la distribuzione di produzione.
@@ -42,7 +42,7 @@ Gestione distribuzione è responsabile della configurazione della pipeline. In q
 
 >[!CAUTION]
 >
->Impossibile impostare la pipeline finché l'archivio Git non dispone di almeno una diramazione e l'impostazione [del](setting-up-program.md) programma non è completa.
+>Impossibile impostare la pipeline finché l&#39;archivio Git non dispone di almeno una diramazione e l&#39;impostazione [del](setting-up-program.md) programma non è completa.
 
 Prima di iniziare a distribuire il codice, devi configurare le impostazioni della pipeline dal [!UICONTROL Cloud Manager].
 
@@ -52,7 +52,7 @@ Prima di iniziare a distribuire il codice, devi configurare le impostazioni dell
 
 ### Configurazione delle impostazioni della tubazione da [!UICONTROL Cloud Manager]{#configuring-the-pipeline-settings-from-cloud-manager}
 
-Una volta configurato il programma utilizzando l' [!UICONTROL Cloud Manager] interfaccia utente, è possibile impostare la pipeline.
+Una volta configurato il programma utilizzando l&#39; [!UICONTROL Cloud Manager] interfaccia utente, è possibile impostare la pipeline.
 
 Per configurare il comportamento e le preferenze della pipeline, effettuate le seguenti operazioni:
 
@@ -62,7 +62,7 @@ Per configurare il comportamento e le preferenze della pipeline, effettuate le s
 
 1. Viene visualizzata la schermata **Configurazione tubazione** .
 
-   La procedura guidata in tre fasi consente di configurare l'ambiente **ramo**, **ambienti** e **test** .
+   La procedura guidata in tre fasi consente di configurare l&#39;ambiente **ramo**, **ambienti** e **test** .
 Selezionate il ramo Git e fate clic su **Avanti**.
 
    >[!NOTE]
@@ -77,60 +77,59 @@ Selezionate il ramo Git e fate clic su **Avanti**.
    È possibile definire il trigger per avviare la pipeline:
 
    * **Su modifiche** Git - avvia la pipeline CI/CD ogni volta che vengono aggiunti impegni al ramo git configurato. Anche se selezionate questa opzione, potete sempre avviare la pipeline manualmente.
-   * **Manuale** : l'utilizzo dell'interfaccia utente consente di avviare manualmente la pipeline.
-   * **Pianificato** : questa opzione sarà disponibile a breve in una prossima release.
+   * **Manuale** : l&#39;utilizzo dell&#39;interfaccia utente consente di avviare manualmente la pipeline.
    Durante la configurazione o la modifica della pipeline, Gestione distribuzione ha la possibilità di definire il comportamento della pipeline quando si verifica un errore importante in una delle porte di qualità come Qualità del codice, Test di sicurezza e Test delle prestazioni.
 
    Questo è utile per i clienti che desiderano un maggior numero di processi automatizzati. Le opzioni disponibili sono:
 
-* **Chiedi ogni volta** - Questa è l'impostazione predefinita e richiede l'intervento manuale su qualsiasi errore importante.
+* **Chiedi ogni volta** - Questa è l&#39;impostazione predefinita e richiede l&#39;intervento manuale su qualsiasi errore importante.
 * **Errore immediato** - Se selezionato, la pipeline verrà annullata ogni volta che si verifica un errore importante. In pratica, questo consente di emulare manualmente un utente che rifiuta ogni errore.
-* **Continua immediatamente** : se questa opzione è selezionata, la pipeline procederà automaticamente ogni volta che si verifica un errore importante. Si tratta essenzialmente di un'emulazione manuale di un utente che approva ogni errore.
+* **Continua immediatamente** : se questa opzione è selezionata, la pipeline procederà automaticamente ogni volta che si verifica un errore importante. Si tratta essenzialmente di un&#39;emulazione manuale di un utente che approva ogni errore.
 
    Ora definite i parametri che controllano la distribuzione di produzione. Le tre opzioni disponibili sono le seguenti:
 
-* **Usa approvazione** Go Live - Una distribuzione deve essere approvata manualmente da un proprietario aziendale, da un project manager o da un manager distribuzione tramite l' [!UICONTROL Cloud Manager] interfaccia utente.
-* **Usa CSE Oversight** : un CSE è impegnato per avviare effettivamente la distribuzione. Durante l'impostazione della pipeline o la modifica quando CSE Oversight è abilitato, Gestione distribuzione può selezionare:
+* **Usa approvazione** Go Live - Una distribuzione deve essere approvata manualmente da un proprietario aziendale, da un project manager o da un manager distribuzione tramite l&#39; [!UICONTROL Cloud Manager] interfaccia utente.
+* **Usa CSE Oversight** : un CSE è impegnato per avviare effettivamente la distribuzione. Durante l&#39;impostazione della pipeline o la modifica quando CSE Oversight è abilitato, Gestione distribuzione può selezionare:
 
    * **Eventuali CSE**: si riferisce a qualsiasi CSE disponibile
    * **CSE** personale: si riferisce a un caso specifico assegnato al cliente o al suo backup, se il caso è fuori ufficio
 
-* **Pianificato** : questa opzione consente all'utente di abilitare la distribuzione di produzione pianificata.
+* **Pianificato** : questa opzione consente all&#39;utente di abilitare la distribuzione di produzione pianificata.
 
 >[!NOTE]
 >
->Se è selezionata l'opzione **Pianificato** , potete pianificare la distribuzione di produzione nella pipeline **dopo** la distribuzione dell'area di visualizzazione (e **utilizzare l'opzione Approvazione** GoLive, se è stata attivata) in modo da attendere l'impostazione di una pianificazione. L'utente può anche scegliere di eseguire immediatamente la distribuzione di produzione.
+>Se è selezionata l&#39;opzione **Pianificato** , potete pianificare la distribuzione di produzione nella pipeline **dopo** la distribuzione dell&#39;area di visualizzazione (e **utilizzare l&#39;opzione Approvazione** GoLive, se è stata attivata) in modo da attendere l&#39;impostazione di una pianificazione. L&#39;utente può anche scegliere di eseguire immediatamente la distribuzione di produzione.
 >
->Fare riferimento a [**Distribuzione del codice**](deploying-code.md), per impostare la pianificazione della distribuzione o eseguire la produzione immediatamente.
+>Fare riferimento a [**Distribuzione del codice **](deploying-code.md), per impostare la pianificazione della distribuzione o eseguire la produzione immediatamente.
 
 ![](assets/Configure_ci-cd-3.png)
 
 >[!NOTE]
 >
->L'opzione **Usa controllo** CSE non è disponibile per tutti i clienti.
+>L&#39;opzione **Usa controllo** CSE non è disponibile per tutti i clienti.
 
 **Approva dopo la distribuzione dello stage**
 
-È disponibile un passaggio facoltativo **Approva dopo la distribuzione** dell'area di produzione che può essere configurato nella pipeline di produzione.
+È disponibile un passaggio facoltativo **Approva dopo la distribuzione** dell&#39;area di produzione che può essere configurato nella pipeline di produzione.
 Questa opzione è attivata in una nuova opzione nella schermata di modifica **della** tubazione:
 
 ![](assets/post_deployment1.png)
 
-Viene quindi visualizzata come un passaggio separato durante l'esecuzione della pipeline:
+Viene quindi visualizzata come un passaggio separato durante l&#39;esecuzione della pipeline:
 
 ![](assets/post_deployment2.png)
 
 >[!NOTE]
 >
->**L'approvazione dopo la distribuzione** dello stage funziona in modo simile all'approvazione prima dell'implementazione della produzione, ma avviene immediatamente dopo il passaggio di distribuzione dello stadio, ovvero prima che venga eseguito un test, rispetto all'approvazione prima dell'implementazione della produzione, che viene fatta dopo che il test è stato completato.
+>**L&#39;approvazione dopo la distribuzione** dello stage funziona in modo simile all&#39;approvazione prima dell&#39;implementazione della produzione, ma avviene immediatamente dopo il passaggio di distribuzione dello stadio, ovvero prima che venga eseguito un test, rispetto all&#39;approvazione prima dell&#39;implementazione della produzione, che viene fatta dopo che il test è stato completato.
 
 **Annullamento convalida dispatcher**
 
 In qualità di Gestione distribuzione, potete configurare un set di percorsi che verranno **invalidati** o **scaricati** dalla cache del dispatcher AEM, durante la configurazione o la modifica della pipeline.
 
-Potete configurare un set di percorsi separato per la distribuzione di Stage e Produzione. Se configurate, queste azioni della cache verranno eseguite come parte del passaggio della pipeline di distribuzione, subito dopo la distribuzione di eventuali pacchetti di contenuto. Queste impostazioni utilizzano il comportamento standard di AEM Dispatcher. L'annullamento della validità esegue un'annullamento della validità della cache, simile a quando il contenuto viene attivato dall'autore alla pubblicazione; flush esegue un'eliminazione della cache.
+Potete configurare un set di percorsi separato per la distribuzione di Stage e Produzione. Se configurate, queste azioni della cache verranno eseguite come parte del passaggio della pipeline di distribuzione, subito dopo la distribuzione di eventuali pacchetti di contenuto. Queste impostazioni utilizzano il comportamento standard di AEM Dispatcher. L&#39;annullamento della validità esegue un&#39;annullamento della validità della cache, simile a quando il contenuto viene attivato dall&#39;autore alla pubblicazione; flush esegue un&#39;eliminazione della cache.
 
-In generale, l'utilizzo dell'azione di annullamento della validità è preferibile, ma in alcuni casi potrebbe essere necessario eseguire lo scaricamento, soprattutto quando si utilizzano le librerie client HTML di AEM.
+In generale, l&#39;utilizzo dell&#39;azione di annullamento della validità è preferibile, ma in alcuni casi potrebbe essere necessario eseguire lo scaricamento, soprattutto quando si utilizzano le librerie client HTML di AEM.
 
 >[!NOTE]
 >
@@ -163,7 +162,7 @@ Per configurare le invalide del dispatcher, effettuate le seguenti operazioni:
 
    Cloud Manager esegue il test delle prestazioni per i programmi AEM Sites richiedendo pagine (come utente non autenticato) sul server di pubblicazione dell’area di visualizzazione per un periodo di test di 30 minuti e misurando il tempo di risposta per ciascuna pagina e varie metriche a livello di sistema.Le pagine sono selezionate da tre set **di** pagine; potete scegliere da uno a tutti e tre i set. La distribuzione del traffico si basa sul numero di set selezionati, ossia, se tutti e tre i set sono selezionati, il 33% delle visualizzazioni di pagina totali viene indirizzato verso ciascun set; se sono selezionati due, il 50% va a ciascun set; se ne è selezionata una, il 100% del traffico arriva a quel set.
 
-   Ad esempio, supponiamo che esista una divisione del 50%/50% tra le pagine Live popolari e le nuove pagine impostate (in questo esempio, non vengono utilizzate altre pagine Live) e che il set Nuove pagine contenga 3000 pagine. L'indicatore KPI per le visualizzazioni di pagina al minuto è impostato su 200. Nel periodo di prova di 30 minuti:
+   Ad esempio, supponiamo che esista una divisione del 50%/50% tra le pagine Live popolari e le nuove pagine impostate (in questo esempio, non vengono utilizzate altre pagine Live) e che il set Nuove pagine contenga 3000 pagine. L&#39;indicatore KPI per le visualizzazioni di pagina al minuto è impostato su 200. Nel periodo di prova di 30 minuti:
 
    * Ognuna delle 25 pagine del set Popular Live Pages verrà visualizzata 240 volte - (200 * 0.5) / 25) * 30 = 120
 
@@ -186,21 +185,21 @@ Per configurare le invalide del dispatcher, effettuate le seguenti operazioni:
 
    >[!NOTE]
    >
-   >Inoltre, una volta impostata la pipeline, puoi comunque modificare le impostazioni per la stessa cosa utilizzando la sezione Impostazioni **pipeline di** produzione dall' [!UICONTROL Cloud Manager] interfaccia utente.
+   >Inoltre, una volta impostata la pipeline, puoi comunque modificare le impostazioni per la stessa cosa utilizzando la sezione Impostazioni **pipeline di** produzione dall&#39; [!UICONTROL Cloud Manager] interfaccia utente.
 
    ![](assets/Production-Pipeline.png)
 
 ## Tubazioni non di produzione e di qualità del codice
 
-Oltre alla pipeline principale che viene implementata per fasi e produzione, i clienti sono in grado di impostare altri oleodotti, denominati **Non-Production Pipelines**. Tali pipeline eseguono sempre i passaggi di creazione e qualità del codice. Facoltativamente, possono anche essere distribuiti nell'ambiente Adobe Managed Services.
+Oltre alla pipeline principale che viene implementata per fasi e produzione, i clienti sono in grado di impostare altri oleodotti, denominati **Non-Production Pipelines**. Tali pipeline eseguono sempre i passaggi di creazione e qualità del codice. Facoltativamente, possono anche essere distribuiti nell&#39;ambiente Adobe Managed Services.
 
 ## Esercitazione video {#video-tutorial-two}
 
 ### Pipeline Solo Qualità Codice E Non Produzione Di Cloud Manager {#non-prod-video}
 
-I gasdotti CI/CD non di produzione sono suddivisi in due categorie, i gasdotti Code Quality e i gasdotti di distribuzione. La qualità del codice distribuisce tutto il codice da un ramo Git per creare e per essere valutato in base alla scansione della qualità del codice di Cloud Manager.
+I gasdotti CI/CD non di produzione sono suddivisi in due categorie, i gasdotti Code Quality e i gasdotti di distribuzione. La qualità del codice distribuisce tutto il codice da un ramo Git per generare e viene valutato in base alla scansione della qualità del codice di Cloud Manager.
 
->[!VIDEO](https://video.tv.adobe.com/v/26316/?captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/26316/)
 
 Nella schermata iniziale, queste condotte sono elencate in una nuova scheda:
 
@@ -210,20 +209,20 @@ Nella schermata iniziale, queste condotte sono elencate in una nuova scheda:
 
 1. Fate clic sul pulsante Aggiungi per specificare il nome della tubazione, il tipo di tubazione e il ramo Git.
 
-   Inoltre, puoi impostare l'attivatore di distribuzione e un importante comportamento di errore dalle opzioni della pipeline.
+   Inoltre, puoi impostare l&#39;attivatore di distribuzione e un importante comportamento di errore dalle opzioni della pipeline.
 
    ![](assets/Configuring_Pipeline_Add-Production2.png)
 
 1. Fate clic su **Salva** e la pipeline viene visualizzata sulla scheda nella schermata iniziale con tre azioni:
 
    * **Modifica** : consente di modificare le impostazioni della pipeline
-   * **Dettaglio** : visualizza l'ultima esecuzione della pipeline (se presente)
+   * **Dettaglio** : visualizza l&#39;ultima esecuzione della pipeline (se presente)
    * **Genera** : consente di passare alla pagina di esecuzione dalla quale è possibile eseguire la pipeline
    ![](assets/Non-prod-2.png)
 
    >[!NOTE]
    >
-   >Durante l'esecuzione della pipeline, viene visualizzato il passaggio corrente ed è disponibile solo l'azione **Dettagli** .
+   >Durante l&#39;esecuzione della pipeline, viene visualizzato il passaggio corrente ed è disponibile solo l&#39;azione **Dettagli** .
 
 ## Passaggi successivi {#the-next-steps}
 
