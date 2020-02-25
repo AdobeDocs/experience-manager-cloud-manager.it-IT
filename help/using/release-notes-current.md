@@ -4,11 +4,11 @@ seo-title: Note sulla versione di AEM Cloud Manager 2020.2.0
 description: Segui questa pagina per ottenere informazioni sulla release 2020.2.0 di Cloud Manager
 seo-description: Segui questa pagina per ottenere informazioni sulla versione 2020.2.0 di AEM Cloud Manager
 translation-type: tm+mt
-source-git-commit: f9c8c1d7b63749e6994481324392aee7330046fb
+source-git-commit: b030b526ab5501059f4d605c8c4b7423696cbd7f
 
 ---
 
-# Note sulla versione 2020.1.0 {#release-notes-for}
+# Note sulla versione 2020.2.0 {#release-notes-for}
 
 La sezione seguente illustra le note generali sulla versione per la [!UICONTROL Cloud Manager] release 2020.2.0.
 
