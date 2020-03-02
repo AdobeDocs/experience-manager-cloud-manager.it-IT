@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: 67a54bae-99a9-4405-91e3-9a0a8b3ccc98
 translation-type: tm+mt
-source-git-commit: a038a3d6e35ff28190441e9d11d9c539641a85af
+source-git-commit: 45548c965b57d53ce931a3c740b0b72ff0496815
 
 ---
 
@@ -42,6 +42,7 @@ Per ulteriori informazioni su come impostare gli utenti, consulta [Impostazione 
 |--- |--- |--- |--- |--- |--- |--- |
 | Lettura applicazione | Leggi KPI del programma. | x | x | x | x | x |
 | Scrivi applicazione | Installazione o modifica del programma. | x |  |  |  |  |
+| Aggiungi programma | Aggiungi nuovo programma. | x |  |  |  |  |
 | Ambiente di lettura | Consultate Dettagli ambiente. | x | x | x | x | x |
 | Crea esecuzione | Avviate la tubazione. | x | x | x |  |  |
 | Lettura esecuzione | Vedere stato di esecuzione. | x | x | x | x | x |
