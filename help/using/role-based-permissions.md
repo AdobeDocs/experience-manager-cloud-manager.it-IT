@@ -6,14 +6,14 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: 67a54bae-99a9-4405-91e3-9a0a8b3ccc98
 translation-type: tm+mt
-source-git-commit: 45548c965b57d53ce931a3c740b0b72ff0496815
+source-git-commit: 157370b193c104915be063d1a4375f81839b88a2
 
 ---
 
 
 # Autorizzazioni basate sul ruolo {#role-based-permissions}
 
-[!UICONTROL Cloud Manager] dispone di ruoli preconfigurati con autorizzazioni appropriate. Ad esempio, uno sviluppatore sviluppa il codice e ha l&#39;autorizzazione per inviare il codice al repository **** Git. In alternativa, il proprietario di un&#39;azienda dispone di autorizzazioni diverse che consentono di definire gli indicatori prestazioni chiave (KPI, Key Performance Indicators) e di approvare le distribuzioni.
+[!UICONTROL Cloud Manager] dispone di ruoli preconfigurati con autorizzazioni appropriate. Ad esempio, uno sviluppatore sviluppa il codice e ha l&#39;autorizzazione per inviare il codice al repository **** Git. In alternativa, il proprietario di un&#39;azienda dispone di autorizzazioni diverse che consentono di definire gli indicatori prestazioni chiave (KPI) e di approvare le distribuzioni.
 
 ## Ruoli utente {#user-roles}
 
@@ -58,3 +58,5 @@ Per ulteriori informazioni su come impostare gli utenti, consulta [Impostazione 
 | Approvazione modifica pipeline | Consente di modificare l&#39;opzione Proprietario business. |  | x |  |  |  |
 | Distribuzione gestita tramite modifica pipeline | Consente di modificare l&#39;opzione CSE Oversight. |  | x |  |  |  |
 | Lettura passaggio | Vedi i risultati delle metriche sulla qualità dei passaggi. | x | x | x | x | x |
+| Genera token di accesso personale | Git di accesso. |  | x |  | x |  |
+
