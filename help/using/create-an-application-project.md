@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: dd892ddb2ac2d003229f5a9e2c8e0013b0f11e1b
+source-git-commit: b093f1712d9ca9e91b87e925a43e2992a4f11cc0
 
 ---
 
@@ -20,25 +20,15 @@ source-git-commit: dd892ddb2ac2d003229f5a9e2c8e0013b0f11e1b
 
 Quando i clienti sono collegati a Cloud Manager, vengono forniti con un repository git vuoto. I clienti attuali di Adobe Managed Services (AMS) (o i clienti interni di AEM che eseguono la migrazione ad AMS) in genere hanno già il codice di progetto in git (o un altro sistema di controllo della versione) e importeranno il loro progetto nell’archivio Git di Cloud Manager. I nuovi clienti, tuttavia, non hanno progetti esistenti.
 
-Per aiutare a far iniziare i nuovi clienti, Cloud Manager è ora in grado di creare un progetto AEM minimo come punto di partenza. Questo processo è basato sul tipo di archivio del progetto [**AEM **](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
+Per iniziare a rivolgerti ai nuovi clienti, Cloud Manager è ora in grado di creare un progetto AEM minimo come punto di partenza. Questo processo è basato sul tipo di archivio del progetto [**AEM **](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
 
-<!-- 
-
-Comment Type: annotation
-Last Modified By: jsyal
-Last Modified Date: 2018-10-08T12:52:50.071-0400
-
-2018.8.0: Added this new section
-
- -->
 
 Per creare un progetto di applicazione AEM in Cloud Manager, procedi come segue:
 
-1. Una volta effettuato l&#39;accesso a Cloud Manager e la configurazione del programma di base è completa, nella schermata **Panoramica** verrà visualizzata una speciale chiamata alla scheda azione, se il repository è vuoto.
+1. Una volta effettuato l’accesso a Cloud Manager e quando la configurazione del programma di base è completa, nella schermata **Panoramica** verrà visualizzato uno speciale invito all’azione, se l’archivio è vuoto.
 
    ![](assets/image2018-10-3_14-29-44.png)
 
-[Shankari] il secondo passo descritto di seguito è errato. cancellala, per piacere.
 1. Fate clic su **Crea** per passare alla schermata Impostazione **** tubazione.
 
    ![](assets/image2018-10-3_14-30-22.png)
@@ -56,10 +46,10 @@ Per creare un progetto di applicazione AEM in Cloud Manager, procedi come segue:
 
    >[!NOTE]
    >
-   >Ad esempio, se il **Titolo** è ***We.Finance***, il parametro ID artefatto del Paradiso di base viene generato come ***com.wefinance***. Se necessario, questi valori possono essere modificati.
+   >Ad esempio, se il **Titolo** è ***We.Finance***, il parametro ID artefatto del Paradiso di base viene generato come ***com.wefinance***. Se lo desiderate, questi valori possono essere modificati.
    >
    >
-   >Ad esempio, potete passare dal ***valore generato com.wefinance*** a ***net.wefinance***.
+   >Ad esempio, puoi passare dal ***valore generato com.wefinance*** a ***net.wefinance***.
 
 1. Fate clic su **Crea** nel passaggio precedente per creare il progetto iniziale utilizzando archetype e impegnatevi sul ramo git denominato. Al termine, è possibile impostare la pipeline.
 
@@ -89,7 +79,7 @@ Last Modified Date: 2018-10-08T09:20:10.106-0400
 
  -->
 
-## Dettagli ambiente build {#build-environment-details}
+## Dettagli ambiente di generazione {#build-environment-details}
 
 Cloud Manager crea e verifica il codice utilizzando un ambiente di build specializzato. Questo ambiente ha i seguenti attributi:
 
@@ -132,7 +122,7 @@ Per supportare questa funzione, Cloud Manager aggiunge queste variabili di ambie
 
 ### Variabili di ambiente personalizzate {#custom-environ-variables}
 
-In alcuni casi, il processo di creazione di un cliente può dipendere da variabili di configurazione specifiche che non sarebbe appropriato inserire nel repository git. Cloud Manager consente di configurare queste variabili da un Customer Success Engineer (CSE) cliente per cliente. Queste variabili sono memorizzate in una posizione di archiviazione protetta e sono visibili solo nel contenitore di compilazione per il cliente specifico. I clienti che desiderano utilizzare questa funzione devono contattare il CSE per configurare le proprie variabili.
+In alcuni casi, il processo di creazione di un cliente può dipendere da variabili di configurazione specifiche che non sarebbe appropriato inserire nel repository Git. Cloud Manager consente di configurare queste variabili da un Customer Success Engineer (CSE) cliente per cliente. Queste variabili sono memorizzate in una posizione di archiviazione protetta e sono visibili solo nel contenitore di compilazione per il cliente specifico. I clienti che desiderano utilizzare questa funzione devono contattare il CSE per configurare le proprie variabili.
 
 Una volta configurate, queste variabili saranno disponibili come variabili di ambiente. Per utilizzarle come proprietà Maven, potete farvi riferimento all&#39;interno del file pom.xml, potenzialmente all&#39;interno di un profilo come descritto in precedenza:
 
@@ -158,9 +148,9 @@ Una volta configurate, queste variabili saranno disponibili come variabili di am
 
 In alcuni casi limitati, potrebbe essere necessario variare leggermente il processo di creazione quando si esegue in Cloud Manager rispetto a quando viene eseguito su workstation sviluppatore. Per questi casi, [Maven Profiles](https://maven.apache.org/guides/introduction/introduction-to-profiles.html) può essere utilizzato per definire in che modo la build deve essere diversa in ambienti diversi, incluso Cloud Manager.
 
-L&#39;attivazione di un profilo Maven all&#39;interno dell&#39;ambiente di generazione di Cloud Manager deve essere effettuata cercando la variabile di ambiente CM_BUILD descritta in precedenza. In alternativa, un profilo destinato ad essere utilizzato solo al di fuori dell&#39;ambiente di build di Cloud Manager dovrebbe essere fatto cercando l&#39;assurdità di questa variabile.
+L&#39;attivazione di un profilo Maven all&#39;interno dell&#39;ambiente di generazione di Cloud Manager deve essere eseguita ricercando la variabile di ambiente CM_BUILD descritta in precedenza. In alternativa, un profilo destinato a essere utilizzato solo al di fuori dell&#39;ambiente di build di Cloud Manager dovrebbe essere fatto cercando l&#39;assurdità di questa variabile.
 
-Ad esempio, se desideri inviare un messaggio semplice solo quando la build viene eseguita in Cloud Manager, effettua questa operazione:
+Ad esempio, se desiderate inviare un messaggio semplice solo quando la build viene eseguita in Cloud Manager, effettuate le seguenti operazioni:
 
 ```xml
         <profile>
@@ -299,7 +289,7 @@ Questa stessa tecnica può essere utilizzata per installare pacchetti specifici 
 In Cloud Manager, le build possono generare un numero qualsiasi di pacchetti di contenuto.
 Per diversi motivi, può essere utile produrre un pacchetto di contenuti ma non distribuirlo. Questo può essere utile, ad esempio, quando si creano pacchetti di contenuto utilizzati solo per il test o che verranno reinseriti in un pacchetto da un altro passaggio del processo di creazione, ovvero come pacchetto secondario di un altro pacchetto.
 
-Per soddisfare questi scenari, Cloud Manager cercherà una proprietà denominata ***cloudManagerTarget*** nelle proprietà dei pacchetti di contenuto incorporati. Se questa proprietà è impostata su none, il pacchetto verrà ignorato e non distribuito. Il meccanismo per impostare questa proprietà dipende dal modo in cui la build produce il pacchetto di contenuto. Ad esempio, con il filevault-maven-plugin si configura il plugin come segue:
+Per soddisfare questi scenari, Cloud Manager cercherà una proprietà denominata ***cloudManagerTarget*** tra le proprietà dei pacchetti di contenuto incorporati. Se questa proprietà è impostata su none, il pacchetto verrà ignorato e non distribuito. Il meccanismo per impostare questa proprietà dipende dal modo in cui la build produce il pacchetto di contenuto. Ad esempio, con filevault-maven-plugin si configura il plugin come segue:
 
 ```xml
         <plugin>
