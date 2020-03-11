@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: b093f1712d9ca9e91b87e925a43e2992a4f11cc0
+source-git-commit: 25edab26146d7d98ef5a38a45b4fe67b0d5e564e
 
 ---
 
@@ -28,10 +28,6 @@ Per creare un progetto di applicazione AEM in Cloud Manager, procedi come segue:
 1. Una volta effettuato l’accesso a Cloud Manager e quando la configurazione del programma di base è completa, nella schermata **Panoramica** verrà visualizzato uno speciale invito all’azione, se l’archivio è vuoto.
 
    ![](assets/image2018-10-3_14-29-44.png)
-
-1. Fate clic su **Crea** per passare alla schermata Impostazione **** tubazione.
-
-   ![](assets/image2018-10-3_14-30-22.png)
 
 1. Fate clic su **Crea per** aprire una finestra di dialogo che consente all&#39;utente di fornire i parametri richiesti da AEM Project Archetype. Nel modulo predefinito, la finestra di dialogo richiede due valori:
 
