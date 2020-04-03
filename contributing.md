@@ -56,4 +56,4 @@ Naturalmente, siamo lieti di qualsiasi contributo e valuteremo il vostro contrib
 
 ## Ulteriori informazioni
 
-Per ulteriori informazioni sull’utilizzo della piattaforma di authoring GitHub, consulta la Guida [per i collaboratori di](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html) Adobe Docs.
+Per ulteriori informazioni sull’utilizzo della piattaforma di creazione GitHub, consulta la Guida [per i collaboratori di](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html) Adobe Docs.
