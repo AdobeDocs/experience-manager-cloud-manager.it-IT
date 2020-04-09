@@ -1,42 +1,48 @@
 ---
-title: Configurazione del programma
-seo-title: Configurazione del programma
+title: Configurare il programma
+seo-title: Configurare il programma
 description: Dopo l'imbarco, il proprietario dell'azienda dovrà effettuare una configurazione iniziale del programma.
-seo-description: 'Dopo la registrazione, il proprietario dell''azienda dovrà effettuare una configurazione iniziale di Adobe AEM Cloud Manager. Ciò comporta l''impostazione della descrizione del programma e la definizione dei KPI che verranno utilizzati per il test delle prestazioni. '
+seo-description: 'Dopo l''imbarco, il proprietario dell''azienda dovrà effettuare una configurazione iniziale di Adobe AEM Cloud Manager. Ciò comporta l''impostazione della descrizione del programma e la definizione dei KPI che verranno utilizzati per il test delle prestazioni. '
 uuid: 9ecf8743-1f5a-4744-86af-e2256567642f
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: guida introduttiva
+topic-tags: getting-started
 discoiquuid: c2393540-e852-4f7c-aafd-1427209065d2
 translation-type: tm+mt
-source-git-commit: 2c05eb4610e35d5126c6c67e44f4b71f3026c887
+source-git-commit: 16893b8bcd2b2d681a14bb6be3786e358e1952fb
 
 ---
 
 
-# Configurazione del programma {#setup-your-program}
+# Configurare il programma {#setup-your-program}
 
-Dopo l'imbarco, il proprietario dell'azienda dovrà completare la configurazione iniziale del programma. Ciò comporta l'impostazione della descrizione del programma e la definizione degli indicatori prestazioni chiave (KPI) che verranno utilizzati per il test delle prestazioni. Facoltativamente, è possibile caricare una miniatura. Inoltre, il proprietario dell'azienda può configurare il provisioning degli ambienti durante la configurazione del programma.
+Dopo l&#39;imbarco, il proprietario dell&#39;azienda dovrà completare la configurazione iniziale del programma. Ciò comporta l&#39;impostazione della descrizione del programma e la definizione degli indicatori prestazioni chiave (KPI) che verranno utilizzati per il test delle prestazioni. Facoltativamente, è possibile caricare una miniatura. Inoltre, il proprietario dell&#39;azienda può configurare il provisioning degli ambienti durante la configurazione del programma.
 
 I KPI definiti fungono da riferimento per il test delle prestazioni, che viene passato ogni volta che viene eseguita la pipeline.
 
 >[!NOTE]
 >
->I KPI definiti vengono misurati sui test eseguiti nell'ambiente **stage** . In genere, questi KPI vengono ridotti per adattarsi alle funzionalità dell’ambiente di visualizzazione.
+>I KPI definiti vengono misurati sui test eseguiti nell&#39;ambiente **stage** . In genere, questi KPI vengono ridotti per adattarsi alle funzionalità dell’ambiente di visualizzazione.
 >
 >Ad esempio, un utente che prevede una media di 1000 visualizzazioni di pagina al minuto nell’ **ambiente** di produzione e che dispone di quattro server dispatcher/pubblicazione in produzione, deve ridimensionare tale visualizzazione a 250 visualizzazioni di pagina al minuto (supponendo che l’ambiente in cui si trova lo stage sia costituito da una sola coppia di server dispatcher/pubblicazione).
 >
 >Inoltre, molti utenti dispongono di una rete CDN (Content Delivery Network), come Akamai o CloudFront, davanti al proprio ambiente di produzione. Poiché [!UICONTROL Cloud Manager] i test vengono eseguiti direttamente sull’ambiente di passaggio, l’indicatore KPI deve riflettere solo il traffico previsto attraverso la rete CDN, ovvero gli errori della cache. In genere si tratta di un sottoinsieme relativamente piccolo del traffico di produzione totale.
 
-## Utilizzo [!UICONTROL Cloud Manager] del programma {#using-cloud-manager-to-setup-your-program}
+## Utilizzo [!UICONTROL Cloud Manager] della configurazione del programma {#using-cloud-manager-to-setup-your-program}
 
 Per impostare il programma e definire KPI, procedere come segue:
 
 1. Fate clic su **Programma** di installazione per avviare il processo di configurazione in [!UICONTROL Cloud Manager].
 
-   ![](assets/SetUpProgram1.png)
+   ![image1](assets/set-up-program/setup1.png)
 
-1. Nella schermata Programma **di** installazione sono visualizzate le informazioni sul programma di modifica.
+   >[!NOTE]
+   > Puoi sempre cambiare, modificare o aggiungere un nuovo programma dalla barra delle azioni, come mostrato nella figura seguente.
+
+   ![image1](assets/set-up-program/setup2.png)
+
+
+1. Nella schermata **Programma** di installazione vengono visualizzate le informazioni sul programma di modifica.
 
 1. Verranno visualizzate tre opzioni: **Generale**, **KPI** e **Provisioning** .
 
@@ -51,7 +57,7 @@ Per impostare il programma e definire KPI, procedere come segue:
    1. Qual è il tempo di risposta del 95° percentile accettabile per voi?
 
       * Valore consigliato - 3 secondi
-   1. Quante visualizzazioni di pagina al minuto sotto il carico massimo?
+   1. Quante visualizzazioni di pagina al minuto sotto il carico di picco?
 
       * Valore consigliato: 200 visualizzazioni di pagina al minuto
    **AEM Assets**
@@ -63,11 +69,11 @@ Durante l’impostazione del programma, vengono specificati KPI specifici per le
    * Risorse caricate al minuto
    ![](assets/Setup_Program-KPIs.png)
 
-1. In **Provisioning**, potete visualizzare o modificare la configurazione di provisioning per gli ambienti di produzione e non di produzione del programma. Se è stato attivato il ridimensionamento automatico per il programma, verrà visualizzato **l'opzione Scala automatica attivata**.
+1. In **Provisioning**, potete visualizzare o modificare la configurazione di provisioning per gli ambienti di produzione e non di produzione del programma. Se è stato attivato il ridimensionamento automatico per il programma, verrà visualizzato **l&#39;opzione Scala automatica attivata**.
 
    >[!NOTE]
    >
-   >* La funzione di scalabilità automatica è applicabile solo all'ambiente di produzione e potrebbe non essere disponibile per tutti i programmi dei clienti.
+   >* La funzione di scalabilità automatica è applicabile solo all&#39;ambiente di produzione e potrebbe non essere disponibile per tutti i programmi dei clienti.
    >* Il ridimensionamento su richiesta non è disponibile per questa versione di [!UICONTROL Cloud Manager].
 
 
