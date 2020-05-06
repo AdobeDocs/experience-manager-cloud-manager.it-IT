@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
 translation-type: tm+mt
-source-git-commit: 278858465592482449080fedc3c0165805db223d
+source-git-commit: cd6272bfd1ffdbf1802c30217e0c615392076109
 workflow-type: tm+mt
-source-wordcount: '2289'
+source-wordcount: '2282'
 ht-degree: 6%
 
 ---
@@ -558,6 +558,35 @@ public void doThis(Resource resource) {
 }
 ```
 
+### Il Programma Sling Non Deve Essere Utilizzato {#sonarqube-sling-scheduler}
+
+**Chiave**: CQRules:AMSCORE-554
+
+**Tipo**: Odore di codice
+
+**Gravità**: Minore
+
+**Dal** momento: Versione 2020.5.0
+
+Sling Scheduler non deve essere utilizzato per le attività che richiedono un&#39;esecuzione garantita. I processi pianificati Sling garantiscono l’esecuzione e sono più adatti sia per gli ambienti cluster che per quelli non cluster.
+
+Per ulteriori informazioni sulla gestione dei processi Sling in ambienti cluster, consultate [Apache Sling Eventing and Job Handling](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html) .
+
+### Le API obsolete di AEM non devono essere utilizzate {#sonarqube-aem-deprecated}
+
+**Chiave**: AMSCORE-553
+
+**Tipo**: Odore di codice
+
+**Gravità**: Minore
+
+**Dal** momento: Versione 2020.5.0
+
+La superficie dell’API AEM è soggetta a revisioni costanti per identificare le API per le quali l’utilizzo è scoraggiato e quindi considerato obsoleto.
+
+In molti casi, queste API sono obsolete utilizzando l&#39;annotazione standard Java *@Deprecated* e, come tali, identificata da `squid:CallToDeprecatedMethod`.
+
+Tuttavia, in alcuni casi un’API è obsoleta nel contesto di AEM ma potrebbe non essere obsoleta in altri contesti. Questa regola identifica questa seconda classe.
 
 ## Regole contenuto OakPAL {#oakpal-rules}
 
@@ -642,7 +671,7 @@ Un problema comune è rappresentato dall’uso di nodi denominati `config` nelle
       + rtePlugins [nt:unstructured]
 ```
 
-#### I Pacchetti Non Devono Sovrapporsi {#oakpal-no-overlap}
+### I Pacchetti Non Devono Sovrapporsi {#oakpal-no-overlap}
 
 **Chiave**: PackageOverlaps
 
@@ -654,7 +683,7 @@ Un problema comune è rappresentato dall’uso di nodi denominati `config` nelle
 
 Simili ai *pacchetti Non devono contenere configurazioni OSGi duplicate* si tratta di un problema comune nei progetti complessi in cui lo stesso percorso nodo è scritto da più pacchetti di contenuto separati. Anche se è possibile utilizzare le dipendenze del pacchetto di contenuti per garantire un risultato coerente, è meglio evitare sovrapposizioni del tutto.
 
-#### OakPAL - La modalità di authoring predefinita non deve essere un’interfaccia classica {#oakpal-default-authoring}
+### La Modalità Di Authoring Predefinita Non Deve Essere Interfaccia Classica {#oakpal-default-authoring}
 
 **Chiave**: ClassicUIAuthoringMode
 
@@ -666,7 +695,7 @@ Simili ai *pacchetti Non devono contenere configurazioni OSGi duplicate* si trat
 
 La configurazione OSGi `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` definisce la modalità di authoring predefinita in AEM. Poiché l’interfaccia classica è obsoleta a partire da AEM 6.4, ora viene generato un problema quando la modalità di authoring predefinita è configurata per l’interfaccia classica.
 
-#### OakPal - I componenti con finestre di dialogo devono avere finestre di dialogo dell&#39;interfaccia utente touch {#oakpal-components-dialogs}
+### I Componenti Con Finestre Di Dialogo Devono Avere Finestre Di Dialogo Touch {#oakpal-components-dialogs}
 
 **Chiave**: ComponentWithOnlyClassicUIDialog
 
@@ -684,7 +713,7 @@ I componenti AEM che dispongono di una finestra di dialogo dell’interfaccia cl
 
 La documentazione Strumenti di modernizzazione AEM fornisce documentazione e strumenti per la conversione dei componenti dall’interfaccia classica all’interfaccia utente touch. Per ulteriori informazioni, consultate [Strumenti](https://opensource.adobe.com/aem-modernize-tools/pages/tools.html) di modernizzazione AEM.
 
-#### OakPal - I pacchetti non devono mescolare contenuto variabile e immutabile {#oakpal-packages-immutable}
+### I pacchetti non devono mescolare contenuto variabile e immutabile {#oakpal-packages-immutable}
 
 **Chiave**: ImmutableMeableMixedPackage
 
@@ -698,7 +727,7 @@ Per essere compatibile con il modello di distribuzione del servizio cloud, i sin
 
 Per ulteriori informazioni, consultate Struttura [progetto](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) AEM.
 
-### OakPal - Gli agenti di replica inversa non devono essere utilizzati {#oakpal-reverse-replication}
+### Gli Agenti Di Replica Inverti Non Devono Essere Utilizzati {#oakpal-reverse-replication}
 
 **Chiave**: ReverseReplication
 
@@ -712,35 +741,7 @@ Il supporto per la replica inversa non è disponibile nelle distribuzioni del se
 
 I clienti che utilizzano la replica inversa devono contattare Adobe per trovare soluzioni alternative.
 
-### SonarQube - Il programma Sling non deve essere utilizzato {#sonarqube-sling-scheduler}
 
-**Chiave**: CQRules:AMSCORE-554
-
-**Tipo**: Odore di codice
-
-**Gravità**: Minore
-
-**Dal** momento: Versione 2020.5.0
-
-Sling Scheduler non deve essere utilizzato per le attività che richiedono un&#39;esecuzione garantita. I processi pianificati Sling garantiscono l’esecuzione e sono più adatti sia per gli ambienti cluster che per quelli non cluster.
-
-Per ulteriori informazioni sulla gestione dei processi Sling in ambienti cluster, consultate [Apache Sling Eventing and Job Handling](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html) .
-
-### SonarQube - SonarQube - Le API obsolete di AEM non devono essere utilizzate {#sonarqube-aem-deprecated}
-
-**Chiave**: AMSCORE-553
-
-**Tipo**: Odore di codice
-
-**Gravità**: Minore
-
-**Dal** momento: Versione 2020.5.0
-
-La superficie dell’API AEM è soggetta a revisioni costanti per identificare le API per le quali l’utilizzo è scoraggiato e quindi considerato obsoleto.
-
-In molti casi, queste API sono obsolete utilizzando l&#39;annotazione standard Java *@Deprecated* e, come tali, identificata da `squid:CallToDeprecatedMethod`.
-
-Tuttavia, in alcuni casi un’API è obsoleta nel contesto di AEM ma potrebbe non essere obsoleta in altri contesti. Questa regola identifica questa seconda classe.
 
 
 
