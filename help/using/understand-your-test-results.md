@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: 278858465592482449080fedc3c0165805db223d
+source-git-commit: 4edbbff4e519a1403c3140cc742def35f9516eff
 workflow-type: tm+mt
 source-wordcount: '1461'
 ht-degree: 8%
@@ -54,7 +54,7 @@ Come parte della pipeline, il codice sorgente viene analizzato per garantire che
 | Test di unità ignorati | Numero di unit test ignorati. | Info | > 1 |
 | Problemi aperti | Tipi di problemi generali - Vulnerabilità, bug e odori di codice | Info | > 1 |
 | Linee duplicate | Numero di righe coinvolte in blocchi duplicati. <br/>Per considerare un blocco di codice come duplicato: <br/><ul><li>**Progetti non Java:**</li><li>Devono essere presenti almeno 100 token successivi e duplicati.</li><li>Tali token devono essere ripartiti almeno su: </li><li>30 righe di codice per COBOL </li><li>20 righe di codice per ABAP </li><li>10 righe di codice per altre lingue</li><li>**Progetti Java:**</li><li> Devono essere presenti almeno 10 istruzioni successive e duplicate, indipendentemente dal numero di token e di righe.</li></ul> <br/>Le differenze nei rientri e nei letterali di stringa vengono ignorate durante il rilevamento di duplicati. | Info | > 1% |
-| Compatibilità con i servizi cloud | Numero di problemi di compatibilità del servizio cloud identificati. | Info | >0 |
+| Compatibilità con i servizi cloud | Numero di problemi di compatibilità del servizio cloud identificati. | Info | > 0 |
 
 
 >[!NOTE]
