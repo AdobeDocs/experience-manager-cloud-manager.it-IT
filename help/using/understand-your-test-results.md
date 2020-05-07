@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: 4edbbff4e519a1403c3140cc742def35f9516eff
+source-git-commit: 4fbcb42157af0200ece491df9b8da4d0ed83efb5
 workflow-type: tm+mt
 source-wordcount: '1461'
 ht-degree: 8%
@@ -52,7 +52,7 @@ Come parte della pipeline, il codice sorgente viene analizzato per garantire che
 | Classificazione manutenibilità | L&#39;eccezionale costo di riparazione per gli odori di codice è: <br/><ul><li>&lt;=5% del tempo che è già passato nell&#39;applicazione, la valutazione è A </li><li>tra il 6 e il 10% il rating è a B </li><li>tra l&#39;11% e il 20% il rating è a C </li><li>tra il 21% e il 50% la valutazione è una D</li><li>un valore superiore al 50% è un E</li></ul> | Importante | &lt; A |
 | Copertura | Una combinazione di copertura della linea di prova di unità e copertura della condizione utilizzando la seguente formula: <br/>`Coverage = (CT + CF + LC)/(2*B + EL)`  <br/>dove: CT = condizioni che sono state valutate come &#39;true&#39; almeno una volta durante l&#39;esecuzione di unit test <br/>CF = condizioni che sono state valutate come &#39;false&#39; almeno una volta durante l&#39;esecuzione di unit test <br/>LC = linee coperte = lines_to_cover - uncover_lines <br/><br/> B = numero totale di condizioni <br/>EL = numero totale di linee eseguibili (lines_to_cover) | Importante | &lt; 50% |
 | Test di unità ignorati | Numero di unit test ignorati. | Info | > 1 |
-| Problemi aperti | Tipi di problemi generali - Vulnerabilità, bug e odori di codice | Info | > 1 |
+| Problemi aperti | Tipi di problemi generali - Vulnerabilità, bug e odori di codice | Info | > 0 |
 | Linee duplicate | Numero di righe coinvolte in blocchi duplicati. <br/>Per considerare un blocco di codice come duplicato: <br/><ul><li>**Progetti non Java:**</li><li>Devono essere presenti almeno 100 token successivi e duplicati.</li><li>Tali token devono essere ripartiti almeno su: </li><li>30 righe di codice per COBOL </li><li>20 righe di codice per ABAP </li><li>10 righe di codice per altre lingue</li><li>**Progetti Java:**</li><li> Devono essere presenti almeno 10 istruzioni successive e duplicate, indipendentemente dal numero di token e di righe.</li></ul> <br/>Le differenze nei rientri e nei letterali di stringa vengono ignorate durante il rilevamento di duplicati. | Info | > 1% |
 | Compatibilità con i servizi cloud | Numero di problemi di compatibilità del servizio cloud identificati. | Info | > 0 |
 
