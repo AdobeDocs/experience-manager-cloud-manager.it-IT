@@ -2,7 +2,7 @@
 title: Configurare la pipeline CI/CD
 seo-title: Configurare la pipeline CI/CD
 description: Segui questa pagina per configurare le impostazioni della pipeline da Cloud Manager.
-seo-description: 'Prima di iniziare a distribuire il codice, devi configurare le impostazioni della pipeline da AEM Cloud Manager. '
+seo-description: 'Prima di iniziare a distribuire il codice, è necessario configurare le impostazioni della pipeline da AEM Cloud Manager. '
 uuid: 35fd56ac-dc9c-4aca-8ad6-36c29c4ec497
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
@@ -10,7 +10,10 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: fb84c2d41c76c64fc0be1e9f86356ee0cb5bcf9c
+source-git-commit: 18b539951e286cb14d5c10404b42ba80682bbef0
+workflow-type: tm+mt
+source-wordcount: '1563'
+ht-degree: 2%
 
 ---
 
@@ -30,7 +33,7 @@ La configurazione della pipeline di produzione CI/CD definisce il trigger che av
 
 ## Informazioni sul flusso {#understanding-the-flow}
 
-Potete configurare la tubazione dalla sezione Impostazioni **** tubazione nell’ [!UICONTROL Cloud Manager] interfaccia utente.
+Puoi configurare la pipeline dalla sezione **Pipeline Settings (Impostazioni pipeline)** dell’interfaccia utente di [!UICONTROL Cloud Manager].
 
 Gestione distribuzione è responsabile della configurazione della pipeline. In questo caso, selezionate prima un ramo dall&#39;archivio **Git**. La configurazione della tubazione è costituita da:
 
@@ -50,7 +53,7 @@ Prima di iniziare a distribuire il codice, devi configurare le impostazioni dell
 >
 >È possibile modificare le impostazioni della pipeline dopo la configurazione iniziale.
 
-### Configurazione delle impostazioni della tubazione da [!UICONTROL Cloud Manager]{#configuring-the-pipeline-settings-from-cloud-manager}
+### Configurazione delle impostazioni della tubazione da [!UICONTROL Cloud Manager] {#configuring-the-pipeline-settings-from-cloud-manager}
 
 Una volta configurato il programma utilizzando l&#39; [!UICONTROL Cloud Manager] interfaccia utente, è possibile impostare la pipeline.
 
@@ -74,7 +77,7 @@ Selezionate il ramo Git e fate clic su **Avanti**.
 
 1. Accedete alla scheda **Ambienti** per selezionare le opzioni **Stage** e **Produzione** .
 
-   È possibile definire il trigger per avviare la pipeline:
+   È possibile definire l&#39;attivatore per avviare la pipeline:
 
    * **Su modifiche** Git - avvia la pipeline CI/CD ogni volta che vengono aggiunti impegni al ramo git configurato. Anche se selezionate questa opzione, potete sempre avviare la pipeline manualmente.
    * **Manuale** : l&#39;utilizzo dell&#39;interfaccia utente consente di avviare manualmente la pipeline.
@@ -89,7 +92,7 @@ Selezionate il ramo Git e fate clic su **Avanti**.
    Ora definite i parametri che controllano la distribuzione di produzione. Le tre opzioni disponibili sono le seguenti:
 
 * **Usa approvazione** Go Live - Una distribuzione deve essere approvata manualmente da un proprietario aziendale, da un project manager o da un manager distribuzione tramite l&#39; [!UICONTROL Cloud Manager] interfaccia utente.
-* **Usa CSE Oversight** : un CSE è impegnato per avviare effettivamente la distribuzione. Durante l&#39;impostazione della pipeline o la modifica quando CSE Oversight è abilitato, Gestione distribuzione può selezionare:
+* **Usa CSE Oversight** : un CSE è impegnato per avviare effettivamente la distribuzione. Durante l&#39;impostazione della pipeline o la modifica quando CSE Oversight è abilitato, Gestione distribuzione ha l&#39;opzione di selezionare:
 
    * **Eventuali CSE**: si riferisce a qualsiasi CSE disponibile
    * **CSE** personale: si riferisce a un caso specifico assegnato al cliente o al suo backup, se il caso è fuori ufficio
@@ -125,7 +128,7 @@ Viene quindi visualizzata come un passaggio separato durante l&#39;esecuzione de
 
 **Annullamento convalida dispatcher**
 
-In qualità di Gestione distribuzione, potete configurare un set di percorsi che verranno **invalidati** o **scaricati** dalla cache del dispatcher AEM, durante la configurazione o la modifica della pipeline.
+In qualità di Gestione distribuzione, potete configurare un set di percorsi di contenuto che verranno **invalidati** o **scaricati** dalla cache del dispatcher AEM, durante la configurazione o la modifica della pipeline.
 
 Potete configurare un set di percorsi separato per la distribuzione di Stage e Produzione. Se configurate, queste azioni della cache verranno eseguite come parte del passaggio della pipeline di distribuzione, subito dopo la distribuzione di eventuali pacchetti di contenuto. Queste impostazioni utilizzano il comportamento standard di AEM Dispatcher. L&#39;annullamento della validità esegue un&#39;annullamento della validità della cache, simile a quando il contenuto viene attivato dall&#39;autore alla pubblicazione; flush esegue un&#39;eliminazione della cache.
 
@@ -133,9 +136,9 @@ In generale, l&#39;utilizzo dell&#39;azione di annullamento della validità è p
 
 >[!NOTE]
 >
->Fare riferimento a [Dispatcher Overview (Panoramica](dispatcher-configurations.md) del dispatcher) per ulteriori informazioni sul caching del dispatcher.
+>Fare riferimento a [Dispatcher Overview](dispatcher-configurations.md) (Panoramicadel dispatcher) per ulteriori informazioni sul caching del dispatcher.
 
-Per configurare le invalide del dispatcher, effettuate le seguenti operazioni:
+Segui i passaggi indicati di seguito per configurare le invalide del dispatcher:
 
 1. Fate clic su **Configura** sotto l’intestazione Configurazione dispatcher
 
@@ -197,7 +200,7 @@ Oltre alla pipeline principale che viene implementata per fasi e produzione, i c
 
 ### Pipeline Solo Qualità Codice E Non Produzione Di Cloud Manager {#non-prod-video}
 
-I gasdotti CI/CD non di produzione sono suddivisi in due categorie, i gasdotti Code Quality e i gasdotti di distribuzione. La qualità del codice distribuisce tutto il codice da un ramo Git per generare e viene valutato in base alla scansione della qualità del codice di Cloud Manager.
+I gasdotti CI/CD non di produzione sono suddivisi in due categorie, i gasdotti Code Quality e i gasdotti di distribuzione. La qualità del codice distribuisce tutto il codice da un ramo Git per creare e per essere valutato in base alla scansione della qualità del codice di Cloud Manager.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26316/)
 
