@@ -9,7 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: 67a54bae-99a9-4405-91e3-9a0a8b3ccc98
 translation-type: tm+mt
-source-git-commit: 7cbc42108a6ccc8f7303eb76fd8ca2e9027f49e0
+source-git-commit: e2187565e7f06d64841eb2af9b4b1a56feb5ebe4
+workflow-type: tm+mt
+source-wordcount: '231'
+ht-degree: 2%
 
 ---
 
@@ -27,7 +30,7 @@ I clienti che utilizzano [!UICONTROL Cloud Manager] avranno bisogno delle creden
 
 ## Protezione dei dati {#data-security}
 
-Il codice in [!UICONTROL Cloud Manager] è crittografato in transito. I binari generati da Coud Manager vengono inoltre crittografati in transito e cifrati al momento della memorizzazione.
+Il codice in [!UICONTROL Cloud Manager] è crittografato in transito. I binari generati da Cloud Manager sono inoltre crittografati in transito e cifrati al momento della memorizzazione.
 
 Ogni cliente ottiene il proprio **Git Repository** e il suo codice è sicuro e non condiviso con altre **organizzazioni**.
 
