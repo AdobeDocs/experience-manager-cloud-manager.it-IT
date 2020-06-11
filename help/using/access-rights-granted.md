@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: requirements
 discoiquuid: 072dbc1b-e608-4b1f-b0e8-0e4f88c8ad12
 translation-type: tm+mt
-source-git-commit: e8484052124c23d4849c59f6c76262a3284ef2ac
+source-git-commit: e48f9121423f46f4cf858c4951ad412582020bdb
 workflow-type: tm+mt
 source-wordcount: '231'
 ht-degree: 21%
@@ -26,6 +26,6 @@ Per iniziare a utilizzare un Adobe ID, visita [Gestisci tipi](https://helpx.adob
 
 ### Utenti e ruoli {#users-and-roles}
 
-Una volta creata l’organizzazione per la società, l’amministratore designato vi verrà aggiunto come primo membro. The administrator will be granted the administrator permissions by default, and assigned the [!UICONTROL AEM Managed Services] **Product**, and one or more [!UICONTROL Cloud Manager] **Product Profiles**. Per ulteriori informazioni su come configurare e gestire gli utenti del team tramite Admin Console, visita [Aggiungi utenti e ruoli](setting-up-users-and-roles.md).
+Una volta creata l’organizzazione per la società, l’amministratore designato vi verrà aggiunto come primo membro. The administrator will be granted the administrator permissions by default, and assigned the [!UICONTROL AEM Managed Services] Product, and one or more [!UICONTROL Cloud Manager] Product Profiles. Per ulteriori informazioni su come configurare e gestire gli utenti del team tramite Admin Console, visita [Aggiungi utenti e ruoli](setting-up-users-and-roles.md).
 
 Con questi diritti concessi, l&#39;amministratore è ora configurato con un singolo accesso (tramite Adobe ID) per accedere ai [!UICONTROL Experience Cloud] servizi, accedere ai vostri ambienti cloud AEM e utilizzarli [!UICONTROL Cloud Manager].
