@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: ce3ed17e74a5cb7e798bb583ddd75b18518a59bd
+source-git-commit: 509a74b2e85d5880bafa56cd0ab3bae9c57b0683
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '952'
 ht-degree: 3%
 
 ---
@@ -106,7 +106,7 @@ Quando Cloud Manager si distribuisce su topologie non di produzione, l&#39;obiet
    >
    >Questa funzionalità dovrebbe essere utilizzata principalmente da 1-1-1 clienti.
 
-1. Ogni artifact di AEM viene distribuito in ogni istanza di AEM tramite le API di Package Manager, con le dipendenze del pacchetto che determinano l&#39;ordine di distribuzione.
+1. Ogni artifact di AEM viene distribuito in ogni istanza di AEM tramite le API di Package Manager, con dipendenze del pacchetto che determinano l&#39;ordine di distribuzione.
 
    Per ulteriori informazioni su come utilizzare i pacchetti per installare nuove funzionalità, trasferire contenuti tra le istanze ed eseguire il backup del contenuto del repository, vedere Come utilizzare i pacchetti.
 
@@ -118,7 +118,7 @@ Quando Cloud Manager si distribuisce su topologie non di produzione, l&#39;obiet
 
    1. Le configurazioni correnti vengono sottoposte a backup e copiate in una posizione temporanea
    1. Tutte le configurazioni vengono eliminate tranne i file immutabili. Per ulteriori informazioni, consulta Gestione delle configurazioni Dispatcher. In questo modo le directory vengono cancellate per evitare che vengano lasciati indietro i file orfani.
-   1. L&#39;artifact viene estratto nella directory httpd.  I file immutabili non vengono sovrascritti. Eventuali modifiche apportate ai file immutabili nel repository git verranno ignorate al momento della distribuzione.  Questi file sono fondamentali per il framework del dispatcher AMS e non possono essere modificati.
+   1. L&#39;artifact viene estratto nella `httpd` directory.  I file immutabili non vengono sovrascritti. Eventuali modifiche apportate ai file immutabili nel repository git verranno ignorate al momento della distribuzione.  Questi file sono fondamentali per il framework del dispatcher AMS e non possono essere modificati.
    1. Apache esegue un test di configurazione. Se non viene rilevato alcun errore, il servizio viene ricaricato. Se si verifica un errore, le configurazioni vengono ripristinate dal backup, il servizio viene ricaricato e l&#39;errore viene riportato a Cloud Manager.
    1. Ogni percorso specificato nella configurazione della pipeline viene invalidato o scaricato dalla cache del dispatcher.
    >[!NOTE]
