@@ -2,14 +2,14 @@
 title: Regole per la qualità del codice personalizzato
 seo-title: Regole per la qualità del codice personalizzato
 description: Seguite questa pagina per informazioni sulle regole di qualità del codice personalizzate eseguite da Cloud Manager.
-seo-description: Segui questa pagina per saperne di più sulle regole di qualità del codice personalizzate eseguite da Adobe Experience Manager Cloud Manager.
+seo-description: Seguite questa pagina per informazioni sulle regole di qualità del codice personalizzate eseguite da  Adobe Experience Manager Cloud Manager.
 uuid: a7feb465-1982-46be-9e57-e67b59849579
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
 translation-type: tm+mt
-source-git-commit: 3663bd773c0043282359d690621de5023fa2974c
+source-git-commit: 8c651bcb187d911448475f6031c93bf956277e9f
 workflow-type: tm+mt
 source-wordcount: '2282'
 ht-degree: 6%
@@ -621,7 +621,8 @@ Un problema comune che si verifica in progetti complessi è rappresentato dalla 
 
 #### Codice non conforme {#non-compliant-code-osgi}
 
-```+ apps
+```
++ apps
   + projectA
     + config
       + com.day.cq.commons.impl.ExternalizerImpl
@@ -632,7 +633,8 @@ Un problema comune che si verifica in progetti complessi è rappresentato dalla 
 
 #### Codice conforme {#compliant-code-osgi}
 
-```+ apps
+```
++ apps
   + shared-config
     + config
       + com.day.cq.commons.impl.ExternalizerImpl
@@ -705,7 +707,7 @@ La configurazione OSGi `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` def
 
 **Dal** momento: Versione 2020.5.0
 
-I componenti AEM che dispongono di una finestra di dialogo dell’interfaccia classica devono sempre disporre di una finestra di dialogo dell’interfaccia utente touch per fornire un’esperienza di authoring ottimale e per essere compatibili con il modello di distribuzione del servizio cloud, in cui l’interfaccia classica non è supportata. Questa regola verifica i seguenti scenari:
+I componenti AEM che dispongono di una finestra di dialogo dell’interfaccia classica devono sempre disporre di una finestra di dialogo dell’interfaccia utente touch per fornire un’esperienza di authoring ottimale e per essere compatibili con il modello di distribuzione Cloud Service, dove l’interfaccia classica non è supportata. Questa regola verifica i seguenti scenari:
 
 * Un componente con una finestra di dialogo dell’interfaccia classica (ovvero un nodo secondario della finestra di dialogo) deve avere una finestra di dialogo dell’interfaccia utente touch corrispondente (ovvero un nodo `cq:dialog` secondario).
 * Un componente con una finestra di dialogo per la progettazione dell’interfaccia classica (ad es. un nodo design_dialog) deve avere una finestra di dialogo corrispondente per la progettazione dell’interfaccia utente touch (ovvero un nodo `cq:design_dialog` secondario).
@@ -723,9 +725,9 @@ La documentazione Strumenti di modernizzazione AEM fornisce documentazione e str
 
 **Dal** momento: Versione 2020.5.0
 
-Per essere compatibile con il modello di distribuzione del servizio cloud, i singoli pacchetti di contenuto devono contenere contenuti per le aree immutabili dell&#39;archivio (ovvero, non `/apps and /libs, although /libs` devono essere modificati dal codice cliente e causeranno una violazione separata) o l&#39;area modificabile (ovvero tutto il resto), ma non entrambi. Ad esempio, un pacchetto che include entrambi `/apps/myco/components/text and /etc/clientlibs/myco` non è compatibile con il servizio cloud e causerà la segnalazione di un problema.
+Per essere compatibile con il modello di distribuzione Cloud Service, i singoli pacchetti di contenuto devono contenere contenuti per le aree immutabili dell&#39;archivio (ovvero, non `/apps and /libs, although /libs` devono essere modificati dal codice cliente e causeranno una violazione separata) o l&#39;area modificabile (ovvero tutto il resto), ma non entrambi. Ad esempio, un pacchetto che include entrambi `/apps/myco/components/text and /etc/clientlibs/myco` non è compatibile con Cloud Service e causerà la segnalazione di un problema.
 
-Per ulteriori informazioni, consultate Struttura [progetto](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) AEM.
+Refer to [AEM Project Structure](https://docs.adobe.com/content/help/it-IT/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) for more details.
 
 ### Gli Agenti Di Replica Inverti Non Devono Essere Utilizzati {#oakpal-reverse-replication}
 
@@ -737,7 +739,7 @@ Per ulteriori informazioni, consultate Struttura [progetto](https://docs.adobe.c
 
 **Dal** momento: Versione 2020.5.0
 
-Il supporto per la replica inversa non è disponibile nelle distribuzioni del servizio cloud, come descritto nelle note [sulla versione: Rimozione degli agenti](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/release-notes/aem-cloud-changes.html#replication-agents)di replica.
+Il supporto per la replica inversa non è disponibile nelle distribuzioni Cloud Service, come descritto nelle note [sulla versione: Rimozione degli agenti](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/release-notes/aem-cloud-changes.html#replication-agents)di replica.
 
 I clienti che utilizzano la replica inversa devono contattare Adobe per trovare soluzioni alternative.
 
