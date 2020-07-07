@@ -2,9 +2,12 @@
 title: Accesso a Git
 seo-title: Accesso a Git
 description: Questa pagina descrive come accedere e gestire l’archivio Git.
-seo-description: Seguite questa pagina per apprendere come accedere e gestire il repository Git.
+seo-description: Segui questa pagina per apprendere come accedere e gestire il repository Git.
 translation-type: tm+mt
-source-git-commit: 027408326960153963d2e8604dc0ed33d921df66
+source-git-commit: 3bb435aae932b9446867c30b7dd6b0a8e0839ee2
+workflow-type: tm+mt
+source-wordcount: '152'
+ht-degree: 3%
 
 ---
 
@@ -28,6 +31,7 @@ Utilizzate il pulsante **Gestisci Git** disponibile nell&#39;interfaccia utente 
    ![](assets/manage-git-new2.png)
 
 >[!NOTE]
+>
 >L&#39;opzione **Gestisci Git** è visibile agli utenti nel ruolo Developer o Deployment Manager. Facendo clic su questo pulsante si apre una finestra di dialogo che consente all&#39;utente di trovare l&#39;URL del repository Git di Cloud Manager insieme al nome utente e alla password.
 
 ![](assets/manage-git3.png)
