@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: c07e88564dc1419bd0305c9d25173a8e0e1f47cf
+source-git-commit: 02515ac6e3ac54909e23a276a78f571ea5c249c4
 workflow-type: tm+mt
-source-wordcount: '1514'
+source-wordcount: '1518'
 ht-degree: 7%
 
 ---
@@ -49,7 +49,7 @@ Per creare un progetto di applicazione AEM in Cloud Manager, procedi come segue:
    >Ad esempio, se il **Titolo** è ***We.Finance***, il parametro ID artefatto del Paradiso di base viene generato come ***com.wefinance***. Se lo desiderate, questi valori possono essere modificati.
    >
    >
-   >Ad esempio, puoi passare dal ***valore generato com.wefinance*** a ***net.wefinance***.
+   >Ad esempio, potete passare dal ***valore generato com.wefinance*** a ***net.wefinance***.
 
 1. Fate clic su **Crea** nel passaggio precedente per creare il progetto iniziale utilizzando archetype e impegnatevi sul ramo git denominato. Al termine, è possibile impostare la pipeline.
 
@@ -153,13 +153,15 @@ Per supportare questa funzione, Cloud Manager aggiunge queste variabili di ambie
 
 ### Variabili pipeline {#pipeline-variables}
 
-In alcuni casi, il processo di creazione di un cliente può dipendere da variabili di configurazione specifiche che non sarebbe appropriato inserire nel repository Git. Cloud Manager consente di configurare queste variabili tramite l&#39;API di Cloud Manager o l&#39;interfaccia CLI di Cloud Manager in base alla pipeline. Le variabili possono essere memorizzate come testo normale o cifrate a riposo. In entrambi i casi, le variabili sono rese disponibili all&#39;interno dell&#39;ambiente di generazione come variabile di ambiente a cui si può fare riferimento all&#39;interno del file pom.xml o di altri script di compilazione.
+In alcuni casi, il processo di creazione di un cliente può dipendere da variabili di configurazione specifiche che non sarebbe appropriato inserire nell&#39;archivio di Git. Cloud Manager consente di configurare queste variabili tramite l&#39;API di Cloud Manager o l&#39;interfaccia CLI di Cloud Manager in base alla pipeline.
 
-Per impostare una variabile utilizzando CLI, eseguire un comando come:
+Le variabili possono essere memorizzate come testo normale o cifrate a riposo. In entrambi i casi, le variabili sono rese disponibili all&#39;interno dell&#39;ambiente di generazione come variabile di ambiente a cui si può fare riferimento all&#39;interno del file pom.xml o di altri script di compilazione.
+
+Utilizzare il comando seguente per impostare una variabile utilizzando CLI:
 
 `$ aio cloudmanager:set-pipeline-variables PIPELINEID --variable MY_CUSTOM_VARIABLE test`
 
-È possibile elencare le variabili correnti:
+Puoi elencare le variabili correnti, come illustrato di seguito:
 
 `$ aio cloudmanager:list-pipeline-variables PIPELINEID`
 
