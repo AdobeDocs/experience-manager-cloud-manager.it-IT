@@ -10,9 +10,9 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: 18b539951e286cb14d5c10404b42ba80682bbef0
+source-git-commit: afbb9a9f9f227309946f0d1891172a89d15de7a7
 workflow-type: tm+mt
-source-wordcount: '1563'
+source-wordcount: '1634'
 ht-degree: 2%
 
 ---
@@ -81,6 +81,7 @@ Selezionate il ramo Git e fate clic su **Avanti**.
 
    * **Su modifiche** Git - avvia la pipeline CI/CD ogni volta che vengono aggiunti impegni al ramo git configurato. Anche se selezionate questa opzione, potete sempre avviare la pipeline manualmente.
    * **Manuale** : l&#39;utilizzo dell&#39;interfaccia utente consente di avviare manualmente la pipeline.
+
    Durante la configurazione o la modifica della pipeline, Gestione distribuzione ha la possibilità di definire il comportamento della pipeline quando si verifica un errore importante in una delle porte di qualità come Qualità del codice, Test di sicurezza e Test delle prestazioni.
 
    Questo è utile per i clienti che desiderano un maggior numero di processi automatizzati. Le opzioni disponibili sono:
@@ -126,21 +127,21 @@ Viene quindi visualizzata come un passaggio separato durante l&#39;esecuzione de
 >
 >**L&#39;approvazione dopo la distribuzione** dello stage funziona in modo simile all&#39;approvazione prima dell&#39;implementazione della produzione, ma avviene immediatamente dopo il passaggio di distribuzione dello stadio, ovvero prima che venga eseguito un test, rispetto all&#39;approvazione prima dell&#39;implementazione della produzione, che viene fatta dopo che il test è stato completato.
 
-**Annullamento convalida dispatcher**
+**Dispatcher Invalidazione**
 
-In qualità di Gestione distribuzione, potete configurare un set di percorsi di contenuto che verranno **invalidati** o **scaricati** dalla cache del dispatcher AEM, durante la configurazione o la modifica della pipeline.
+In qualità di Gestione distribuzione, potete configurare un set di percorsi di contenuto che verranno **invalidati** o **scaricati** dalla cache di AEM Dispatcher durante la configurazione o la modifica della pipeline.
 
-Potete configurare un set di percorsi separato per la distribuzione di Stage e Produzione. Se configurate, queste azioni della cache verranno eseguite come parte del passaggio della pipeline di distribuzione, subito dopo la distribuzione di eventuali pacchetti di contenuto. Queste impostazioni utilizzano il comportamento standard di AEM Dispatcher. L&#39;annullamento della validità esegue un&#39;annullamento della validità della cache, simile a quando il contenuto viene attivato dall&#39;autore alla pubblicazione; flush esegue un&#39;eliminazione della cache.
+Potete configurare un set di percorsi separato per la distribuzione di Stage e Produzione. Se configurate, queste azioni della cache verranno eseguite come parte del passaggio della pipeline di distribuzione, subito dopo la distribuzione di eventuali pacchetti di contenuto. Queste impostazioni utilizzano il comportamento standard di AEM Dispatcher; l’opzione Annulla validità esegue un’annullamento della validità della cache, simile a quando il contenuto viene attivato dall’autore alla pubblicazione; flush esegue un&#39;eliminazione della cache.
 
 In generale, l&#39;utilizzo dell&#39;azione di annullamento della validità è preferibile, ma in alcuni casi potrebbe essere necessario eseguire lo scaricamento, soprattutto quando si utilizzano le librerie client HTML di AEM.
 
 >[!NOTE]
 >
->Fare riferimento a [Dispatcher Overview](dispatcher-configurations.md) (Panoramicadel dispatcher) per ulteriori informazioni sul caching del dispatcher.
+>Per ulteriori informazioni sulla memorizzazione nella cache di Dispatcher, consultare [Dispatcher Overview](dispatcher-configurations.md) .
 
-Segui i passaggi indicati di seguito per configurare le invalide del dispatcher:
+Per configurare le invalide di Dispatcher, effettuate le seguenti operazioni:
 
-1. Fate clic su **Configura** sotto l’intestazione Configurazione dispatcher
+1. Fate clic su **Configura** sotto l’intestazione Configurazione Dispatcher
 
    ![](assets/image2018-8-7_14-53-24.png)
 
@@ -159,22 +160,27 @@ Segui i passaggi indicati di seguito per configurare le invalide del dispatcher:
 
    Ora potete configurare i parametri del test delle prestazioni.
 
-   Puoi configurare *AEM Sites* e *AEM Assets* Performance Testing, a seconda dei prodotti per i quali hai concesso la licenza.
+   Potete configurare *AEM Sites* e *AEM Assets* Performance Testing, a seconda dei prodotti per i quali disponete della licenza.
 
    **AEM Sites:**
 
-   Cloud Manager esegue il test delle prestazioni per i programmi AEM Sites richiedendo pagine (come utente non autenticato) sul server di pubblicazione dell’area di visualizzazione per un periodo di test di 30 minuti e misurando il tempo di risposta per ciascuna pagina e varie metriche a livello di sistema.Le pagine sono selezionate da tre set **di** pagine; potete scegliere da uno a tutti e tre i set. La distribuzione del traffico si basa sul numero di set selezionati, ossia, se tutti e tre i set sono selezionati, il 33% delle visualizzazioni di pagina totali viene indirizzato verso ciascun set; se sono selezionati due, il 50% va a ciascun set; se ne è selezionata una, il 100% del traffico arriva a quel set.
+   Cloud Manager esegue il test delle prestazioni per i programmi AEM Sites richiedendo pagine (come utente non autenticato) sul server di pubblicazione dell’area di visualizzazione per un periodo di test di 30 minuti e misurando il tempo di risposta per ciascuna pagina e varie metriche a livello di sistema.
+
+   Prima dell&#39;inizio del periodo di test di 30 minuti, Cloud Manager eseguirà la ricerca per indicizzazione nell&#39;ambiente Stage utilizzando un set di uno o più URL *iniziali* configurati dal Customer Success Engineer. A partire da questi URL, l’HTML di ciascuna pagina viene ispezionato e i collegamenti vengono attraversati in modo completamente lineare. Questo processo di ricerca per indicizzazione è limitato a un massimo di 5000 pagine. Le richieste del crawler hanno un timeout fisso di 10 secondi.
+
+   Le pagine sono selezionate da tre set **di** pagine; potete scegliere da uno a tutti e tre i set. La distribuzione del traffico si basa sul numero di set selezionati, ossia, se tutti e tre i set sono selezionati, il 33% delle visualizzazioni di pagina totali viene indirizzato verso ciascun set; se sono selezionati due, il 50% va a ciascun set; se ne è selezionata una, il 100% del traffico arriva a quel set.
 
    Ad esempio, supponiamo che esista una divisione del 50%/50% tra le pagine Live popolari e le nuove pagine impostate (in questo esempio, non vengono utilizzate altre pagine Live) e che il set Nuove pagine contenga 3000 pagine. L&#39;indicatore KPI per le visualizzazioni di pagina al minuto è impostato su 200. Nel periodo di prova di 30 minuti:
 
    * Ognuna delle 25 pagine del set Popular Live Pages verrà visualizzata 240 volte - (200 * 0.5) / 25) * 30 = 120
 
    * Ognuna delle 3000 pagine del set di nuove pagine verrà visualizzata una volta - (200 * 0,5) / 3000) * 30 = 1
+
    ![](assets/Configuring_Pipeline_AEM-Sites.png)
 
    **AEM Assets:**
 
-   Cloud Manager esegue test delle prestazioni per i programmi AEM Assets caricando ripetutamente risorse per un periodo di test di 30 minuti e misurando il tempo di elaborazione per ciascuna risorsa, nonché varie metriche a livello di sistema. Questa funzione può caricare sia immagini che documenti PDF. La distribuzione del numero di risorse di ciascun tipo caricate al minuto viene impostata nella schermata Impostazione tubazione o Modifica.
+   Cloud Manager esegue test delle prestazioni per i programmi AEM Assets caricando ripetutamente le risorse per un periodo di test di 30 minuti e misurando il tempo di elaborazione per ciascuna risorsa, nonché varie metriche a livello di sistema. Questa funzione può caricare sia immagini che documenti PDF. La distribuzione del numero di risorse di ciascun tipo caricate al minuto viene impostata nella schermata Impostazione tubazione o Modifica.
 
    Ad esempio, se viene utilizzata una divisione 70/30, come illustrato nella figura riportata di seguito. Ci sono 10 risorse caricate al minuto, 7 immagini saranno caricate al minuto e 3 documenti.
 
@@ -194,7 +200,7 @@ Segui i passaggi indicati di seguito per configurare le invalide del dispatcher:
 
 ## Tubazioni non di produzione e di qualità del codice
 
-Oltre alla pipeline principale che viene implementata per fasi e produzione, i clienti sono in grado di impostare altri oleodotti, denominati **Non-Production Pipelines**. Tali pipeline eseguono sempre i passaggi di creazione e qualità del codice. Facoltativamente, possono anche essere distribuiti nell&#39;ambiente Adobe Managed Services.
+Oltre alla pipeline principale che viene implementata per fasi e produzione, i clienti sono in grado di impostare altri oleodotti, denominati **Non-Production Pipelines**. Tali pipeline eseguono sempre i passaggi di creazione e qualità del codice. Facoltativamente, possono anche essere implementati nell&#39;ambiente  Adobi Managed Services.
 
 ## Esercitazione video {#video-tutorial-two}
 
@@ -221,6 +227,7 @@ Nella schermata iniziale, queste condotte sono elencate in una nuova scheda:
    * **Modifica** : consente di modificare le impostazioni della pipeline
    * **Dettaglio** : visualizza l&#39;ultima esecuzione della pipeline (se presente)
    * **Genera** : consente di passare alla pagina di esecuzione dalla quale è possibile eseguire la pipeline
+
    ![](assets/Non-prod-2.png)
 
    >[!NOTE]
