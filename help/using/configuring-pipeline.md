@@ -10,9 +10,9 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: 3be958aa21d5423ddf371c286825d01afd554c4b
+source-git-commit: 68330a3a6d9e1f95782418dbd72cbc0e6ee7362c
 workflow-type: tm+mt
-source-wordcount: '1755'
+source-wordcount: '1759'
 ht-degree: 1%
 
 ---
@@ -205,17 +205,14 @@ Segui i passaggi indicati di seguito per configurare le invalide del dispatcher:
 
 I clienti di Adobe Managed Services (AMS) con siti autenticati possono specificare un nome utente e una password che Cloud Manager utilizzerà per accedere al sito Web durante il test delle prestazioni di Sites.
 
-Il nome utente e la password sono specificati come Variabili pipeline con i nomi `CM_PERF_TEST_BASIC_USERNAME` e `CM_PERF_TEST_BASIC_PASSWORD` .
+Il nome utente e la password sono specificati come Variabili [](create-an-application-project.md#pipeline-variables) tubazione con i nomi `CM_PERF_TEST_BASIC_USERNAME` e `CM_PERF_TEST_BASIC_PASSWORD` .
 
 >[!NOTE]
 > Sebbene non sia strettamente richiesto, si consiglia di utilizzare il tipo di variabile stringa per il nome utente e il tipo di variabile secretString per la password. Se vengono specificati entrambi, ogni richiesta del crawler test delle prestazioni e degli utenti virtuali di prova conterrà queste credenziali come autenticazione HTTP di base.
 
-Per impostare queste variabili utilizzando l&#39;interfaccia CLI di Cloud Manager, esegui:
+Per impostare queste variabili utilizzando l&#39;interfaccia CLI di [Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager), esegui:
 
 `$ aio cloudmanager:set-pipeline-variables <pipeline id> --variable CM_PERF_TEST_BASIC_USERNAME <username> --secret CM_PERF_TEST_BASIC_PASSWORD <password>`
-
-
-
 
 ## Tubazioni non di produzione e di qualità del codice
 
