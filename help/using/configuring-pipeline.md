@@ -2,7 +2,7 @@
 title: Configurare la pipeline CI/CD
 seo-title: Configurare la pipeline CI/CD
 description: Segui questa pagina per configurare le impostazioni della pipeline da Cloud Manager.
-seo-description: 'Prima di iniziare a distribuire il codice, è necessario configurare le impostazioni della pipeline da AEM Cloud Manager. '
+seo-description: 'Prima di iniziare a distribuire il codice, devi configurare le impostazioni della pipeline da AEM Cloud Manager. '
 uuid: 35fd56ac-dc9c-4aca-8ad6-36c29c4ec497
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
@@ -10,10 +10,10 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: afbb9a9f9f227309946f0d1891172a89d15de7a7
+source-git-commit: 3be958aa21d5423ddf371c286825d01afd554c4b
 workflow-type: tm+mt
-source-wordcount: '1634'
-ht-degree: 2%
+source-wordcount: '1755'
+ht-degree: 1%
 
 ---
 
@@ -102,7 +102,7 @@ Selezionate il ramo Git e fate clic su **Avanti**.
 
 >[!NOTE]
 >
->Se è selezionata l&#39;opzione **Pianificato** , potete pianificare la distribuzione di produzione nella pipeline **dopo** la distribuzione dell&#39;area di visualizzazione (e **utilizzare l&#39;opzione Approvazione** GoLive, se è stata attivata) in modo da attendere l&#39;impostazione di una pianificazione. L&#39;utente può anche scegliere di eseguire immediatamente la distribuzione di produzione.
+>Se è selezionata l&#39;opzione **Pianificato** , potete pianificare la distribuzione di produzione nella pipeline **dopo** la distribuzione dell&#39;area di visualizzazione (e **Usa approvazione** GoLive, se questa è stata abilitata) in modo da attendere l&#39;impostazione di una pianificazione. L&#39;utente può anche scegliere di eseguire immediatamente la distribuzione di produzione.
 >
 >Fare riferimento a [**Distribuzione del codice **](deploying-code.md), per impostare la pianificazione della distribuzione o eseguire la produzione immediatamente.
 
@@ -127,21 +127,21 @@ Viene quindi visualizzata come un passaggio separato durante l&#39;esecuzione de
 >
 >**L&#39;approvazione dopo la distribuzione** dello stage funziona in modo simile all&#39;approvazione prima dell&#39;implementazione della produzione, ma avviene immediatamente dopo il passaggio di distribuzione dello stadio, ovvero prima che venga eseguito un test, rispetto all&#39;approvazione prima dell&#39;implementazione della produzione, che viene fatta dopo che il test è stato completato.
 
-**Dispatcher Invalidazione**
+**Annullamento convalida dispatcher**
 
-In qualità di Gestione distribuzione, potete configurare un set di percorsi di contenuto che verranno **invalidati** o **scaricati** dalla cache di AEM Dispatcher durante la configurazione o la modifica della pipeline.
+In qualità di Gestione distribuzione, potete configurare un set di percorsi di contenuto che verranno **invalidati** o **scaricati** dalla cache del dispatcher AEM durante la configurazione o la modifica della pipeline.
 
-Potete configurare un set di percorsi separato per la distribuzione di Stage e Produzione. Se configurate, queste azioni della cache verranno eseguite come parte del passaggio della pipeline di distribuzione, subito dopo la distribuzione di eventuali pacchetti di contenuto. Queste impostazioni utilizzano il comportamento standard di AEM Dispatcher; l’opzione Annulla validità esegue un’annullamento della validità della cache, simile a quando il contenuto viene attivato dall’autore alla pubblicazione; flush esegue un&#39;eliminazione della cache.
+Potete configurare un set di percorsi separato per la distribuzione di Stage e Produzione. Se configurate, queste azioni della cache verranno eseguite come parte del passaggio della pipeline di distribuzione, subito dopo la distribuzione di eventuali pacchetti di contenuto. Queste impostazioni utilizzano il comportamento standard AEM Dispatcher. L&#39;opzione Annulla validità esegue un&#39;annullamento della validità della cache, simile a quando il contenuto viene attivato dall&#39;autore alla pubblicazione; flush esegue un&#39;eliminazione della cache.
 
-In generale, l&#39;utilizzo dell&#39;azione di annullamento della validità è preferibile, ma in alcuni casi potrebbe essere necessario eseguire lo scaricamento, soprattutto quando si utilizzano le librerie client HTML di AEM.
+In generale, l&#39;uso dell&#39;azione di annullamento della validità è preferibile, ma in alcuni casi potrebbe essere necessario eseguire lo scaricamento, soprattutto quando si utilizzano AEM HTML Client Libraries.
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulla memorizzazione nella cache di Dispatcher, consultare [Dispatcher Overview](dispatcher-configurations.md) .
+>Fare riferimento a [Dispatcher Overview](dispatcher-configurations.md) (Panoramicadel dispatcher) per ulteriori informazioni sul caching del dispatcher.
 
-Per configurare le invalide di Dispatcher, effettuate le seguenti operazioni:
+Segui i passaggi indicati di seguito per configurare le invalide del dispatcher:
 
-1. Fate clic su **Configura** sotto l’intestazione Configurazione Dispatcher
+1. Fate clic su **Configura** sotto l’intestazione Configurazione dispatcher
 
    ![](assets/image2018-8-7_14-53-24.png)
 
@@ -164,7 +164,7 @@ Per configurare le invalide di Dispatcher, effettuate le seguenti operazioni:
 
    **AEM Sites:**
 
-   Cloud Manager esegue il test delle prestazioni per i programmi AEM Sites richiedendo pagine (come utente non autenticato) sul server di pubblicazione dell’area di visualizzazione per un periodo di test di 30 minuti e misurando il tempo di risposta per ciascuna pagina e varie metriche a livello di sistema.
+   Cloud Manager esegue il test delle prestazioni per  programmi AEM Sites richiedendo pagine (come utente non autenticato per impostazione predefinita) sul server di pubblicazione dell’area di visualizzazione per un periodo di test di 30 minuti e misurando il tempo di risposta per ciascuna pagina e varie metriche a livello di sistema.
 
    Prima dell&#39;inizio del periodo di test di 30 minuti, Cloud Manager eseguirà la ricerca per indicizzazione nell&#39;ambiente Stage utilizzando un set di uno o più URL *iniziali* configurati dal Customer Success Engineer. A partire da questi URL, l’HTML di ciascuna pagina viene ispezionato e i collegamenti vengono attraversati in modo completamente lineare. Questo processo di ricerca per indicizzazione è limitato a un massimo di 5000 pagine. Le richieste del crawler hanno un timeout fisso di 10 secondi.
 
@@ -178,9 +178,12 @@ Per configurare le invalide di Dispatcher, effettuate le seguenti operazioni:
 
    ![](assets/Configuring_Pipeline_AEM-Sites.png)
 
+
+   Per informazioni su come autenticare  test delle prestazioni di AEM Sites, fare riferimento a Test [delle prestazioni dei siti](configuring-pipeline.md#authenticated-sites-performance) autenticati.
+
    **AEM Assets:**
 
-   Cloud Manager esegue test delle prestazioni per i programmi AEM Assets caricando ripetutamente le risorse per un periodo di test di 30 minuti e misurando il tempo di elaborazione per ciascuna risorsa, nonché varie metriche a livello di sistema. Questa funzione può caricare sia immagini che documenti PDF. La distribuzione del numero di risorse di ciascun tipo caricate al minuto viene impostata nella schermata Impostazione tubazione o Modifica.
+   Cloud Manager esegue test delle prestazioni per  programmi AEM Assets caricando ripetutamente risorse per un periodo di test di 30 minuti e misurando il tempo di elaborazione per ciascuna risorsa, nonché varie metriche a livello di sistema. Questa funzione può caricare sia immagini che documenti PDF. La distribuzione del numero di risorse di ciascun tipo caricate al minuto viene impostata nella schermata Impostazione tubazione o Modifica.
 
    Ad esempio, se viene utilizzata una divisione 70/30, come illustrato nella figura riportata di seguito. Ci sono 10 risorse caricate al minuto, 7 immagini saranno caricate al minuto e 3 documenti.
 
@@ -188,7 +191,7 @@ Per configurare le invalide di Dispatcher, effettuate le seguenti operazioni:
 
    >[!NOTE]
    >
-   >Esiste un’immagine e un documento PDF predefiniti, ma nella maggior parte dei casi i clienti desiderano caricare le proprie risorse. Questa operazione può essere eseguita dalla schermata Configurazione tubazione o Modifica. Sono supportati i formati immagine più comuni, come JPEG, PNG, GIF e BMP, insieme ai file Photoshop, Illustrator e Postscript.
+   >Esiste un’immagine e un documento PDF predefiniti, ma nella maggior parte dei casi i clienti desiderano caricare le proprie risorse. Questa operazione può essere eseguita dalla schermata Configurazione tubazione o Modifica. Sono supportati i formati immagine più comuni, come JPEG, PNG, GIF e BMP, insieme ai file Photoshop,  Illustrator e Postscript.
 
 1. Fare clic su **Salva** per completare la configurazione del processo di pipeline.
 
@@ -198,9 +201,25 @@ Per configurare le invalide di Dispatcher, effettuate le seguenti operazioni:
 
    ![](assets/Production-Pipeline.png)
 
+### Verifica delle prestazioni dei siti autenticati {#authenticated-sites-performance}
+
+I clienti di Adobe Managed Services (AMS) con siti autenticati possono specificare un nome utente e una password che Cloud Manager utilizzerà per accedere al sito Web durante il test delle prestazioni di Sites.
+
+Il nome utente e la password sono specificati come Variabili pipeline con i nomi `CM_PERF_TEST_BASIC_USERNAME` e `CM_PERF_TEST_BASIC_PASSWORD` .
+
+>[!NOTE]
+> Sebbene non sia strettamente richiesto, si consiglia di utilizzare il tipo di variabile stringa per il nome utente e il tipo di variabile secretString per la password. Se vengono specificati entrambi, ogni richiesta del crawler test delle prestazioni e degli utenti virtuali di prova conterrà queste credenziali come autenticazione HTTP di base.
+
+Per impostare queste variabili utilizzando l&#39;interfaccia CLI di Cloud Manager, esegui:
+
+`$ aio cloudmanager:set-pipeline-variables <pipeline id> --variable CM_PERF_TEST_BASIC_USERNAME <username> --secret CM_PERF_TEST_BASIC_PASSWORD <password>`
+
+
+
+
 ## Tubazioni non di produzione e di qualità del codice
 
-Oltre alla pipeline principale che viene implementata per fasi e produzione, i clienti sono in grado di impostare altri oleodotti, denominati **Non-Production Pipelines**. Tali pipeline eseguono sempre i passaggi di creazione e qualità del codice. Facoltativamente, possono anche essere implementati nell&#39;ambiente  Adobi Managed Services.
+Oltre alla pipeline principale che viene implementata per fasi e produzione, i clienti sono in grado di impostare altri oleodotti, denominati **Non-Production Pipelines**. Tali pipeline eseguono sempre i passaggi di creazione e qualità del codice. Facoltativamente, possono anche essere distribuiti nell&#39;ambiente Adobe Managed Services.
 
 ## Esercitazione video {#video-tutorial-two}
 
