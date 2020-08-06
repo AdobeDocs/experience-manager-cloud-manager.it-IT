@@ -4,10 +4,10 @@ seo-title: Note sulla versione di AEM Cloud Manager per la versione 2020.8.0
 description: Segui questa pagina per ottenere informazioni sulla versione 2020.8.0 di Cloud Manager
 seo-description: Segui questa pagina per ottenere informazioni su AEM Cloud Manager Release 2020.8.0
 translation-type: tm+mt
-source-git-commit: c0881ccf602a14b00b7cc68c3d1fc60e7b6954ed
+source-git-commit: cff6f23a674fda2f57ea481d89644de9be3f5722
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 6%
+source-wordcount: '166'
+ht-degree: 7%
 
 ---
 
@@ -21,11 +21,7 @@ La data di rilascio per la [!UICONTROL Cloud Manager] versione 2020.8.0 è il 6 
 
 ## Novità {#whats-new}
 
-* Il test delle prestazioni dei siti ora supporta l&#39;uso facoltativo dell&#39;autenticazione.
-
-   Per informazioni su come autenticare  test delle prestazioni di AEM Sites, fare riferimento a Test [delle prestazioni dei siti](configuring-pipeline.md#authenticated-sites-performance) autenticati.
-
-* Sono ora supportati i repository privati con binding di autenticazione.
+Sono ora supportati i repository privati con binding di autenticazione.
 
 ## Correzioni di bug {#bug-fixes}
 
