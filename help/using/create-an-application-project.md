@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: 0fda91c2fe319fb58b3a6dd09f75eac7a60d9038
+source-git-commit: 200057885f068ff8df889601a401e06d89981209
 workflow-type: tm+mt
-source-wordcount: '1705'
+source-wordcount: '1721'
 ht-degree: 6%
 
 ---
@@ -21,9 +21,9 @@ ht-degree: 6%
 
 ## Utilizzo della procedura guidata per creare un progetto di applicazione AEM {#using-wizard-to-create-an-aem-application-project}
 
-Quando i clienti sono collegati a Cloud Manager, vengono forniti con un repository git vuoto. I clienti attuali  Adobi Managed Services (AMS) (o i clienti interni di AEM che eseguono la migrazione ad AMS) in genere hanno già il codice di progetto in git (o un altro sistema di controllo della versione) e importeranno il loro progetto nell’archivio Git di Cloud Manager. I nuovi clienti, tuttavia, non hanno progetti esistenti.
+Quando i clienti sono collegati a Cloud Manager, vengono forniti con un repository git vuoto. Gli attuali clienti di Adobe Managed Services (AMS) (o AEM clienti interni che stanno effettuando la migrazione ad AMS) in genere hanno già il codice di progetto in git (o un altro sistema di controllo della versione) e importeranno il loro progetto nell’archivio Git di Cloud Manager. I nuovi clienti, tuttavia, non hanno progetti esistenti.
 
-Per iniziare a rivolgerti ai nuovi clienti, Cloud Manager è ora in grado di creare un progetto AEM minimo come punto di partenza. Questo processo è basato sul tipo di archivio del progetto [**AEM **](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
+Per aiutare a far iniziare i nuovi clienti, Cloud Manager è ora in grado di creare un progetto AEM minimo come punto di partenza. Questo processo si basa sul [**AEM Project Archetype **](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
 
 
 Per creare un progetto di applicazione AEM in Cloud Manager, procedi come segue:
@@ -32,7 +32,7 @@ Per creare un progetto di applicazione AEM in Cloud Manager, procedi come segue:
 
    ![](assets/image2018-10-3_14-29-44.png)
 
-1. Fate clic su **Crea per** aprire una finestra di dialogo che consente all&#39;utente di fornire i parametri richiesti da AEM Project Archetype. Nel modulo predefinito, la finestra di dialogo richiede due valori:
+1. Fate clic su **Crea per** aprire una finestra di dialogo che consente all&#39;utente di fornire i parametri richiesti dall&#39;archivio AEM progetto. Nel modulo predefinito, la finestra di dialogo richiede due valori:
 
    * **Titolo** : per impostazione predefinita questo valore è impostato su Nome *programma*
 
@@ -49,7 +49,7 @@ Per creare un progetto di applicazione AEM in Cloud Manager, procedi come segue:
    >Ad esempio, se il **Titolo** è ***We.Finance***, il parametro ID artefatto del Paradiso di base viene generato come ***com.wefinance***. Se lo desiderate, questi valori possono essere modificati.
    >
    >
-   >Ad esempio, potete passare dal ***valore generato com.wefinance*** a ***net.wefinance***.
+   >Ad esempio, puoi passare dal ***valore generato com.wefinance*** a ***net.wefinance***.
 
 1. Fate clic su **Crea** nel passaggio precedente per creare il progetto iniziale utilizzando archetype e impegnatevi sul ramo git denominato. Al termine, è possibile impostare la pipeline.
 
@@ -65,7 +65,7 @@ Per essere generati e distribuiti correttamente con Cloud Manager, i progetti AE
 * Potete aggiungere riferimenti ad altri archivi di artefatti Maven nei file *pom.xml* . L&#39;accesso agli archivi di artefatti protetti da [password è supportato se configurato](#password-protected-maven-repositories) . Tuttavia, l&#39;accesso ai repository di artifact protetti dalla rete non è supportato.
 * I pacchetti di contenuto distribuibile vengono rilevati mediante la scansione dei file *zip* del pacchetto di contenuto contenuti contenuti in una directory denominata *target*. Un numero qualsiasi di sottomoduli può produrre pacchetti di contenuto.
 
-* Gli artefatti Dispatcher distribuibili vengono scoperti analizzando i file *zip* (ancora una volta, contenuti in una directory denominata *target*) con directory denominate *conf* e *conf.d*.
+* Gli artifact del Dispatcher distribuibile vengono rilevati mediante la scansione di file *zip* (ancora, contenuti in una directory denominata *target*) con directory denominate *conf* e *conf.d*.
 
 * In presenza di più pacchetti di contenuto, l&#39;ordine delle distribuzioni dei pacchetti non è garantito. Se è necessario un ordine specifico, per definire l’ordine è possibile utilizzare le dipendenze del pacchetto di contenuto. I pacchetti possono essere [ignorati](#skipping-content-packages) dalla distribuzione.
 
@@ -97,7 +97,7 @@ Cloud Manager crea e verifica il codice utilizzando un ambiente di build special
 * Altri pacchetti possono essere installati in fase di creazione come descritto [di seguito](#installing-additional-system-packages).
 * Ogni costruzione è fatta su un ambiente incontaminato; il contenitore di compilazione non mantiene alcuno stato tra le esecuzioni.
 * Maven è sempre eseguito con il comando: *mvn —batch-mode clean org.jacoco:jacoco-maven-plugin:Preparare-agent package*
-* Maven è configurato a livello di sistema con un file settings.xml che include automaticamente il repository pubblico di Adobe **Artifact** . Per ulteriori informazioni, consultate [Adobe Public Maven Repository](https://repo.adobe.com/) .
+* Maven è configurato a livello di sistema con un file settings.xml che include automaticamente il repository **Artifact**  Adobe pubblico. Per ulteriori informazioni, consultate [archivio](https://repo.adobe.com/) Pubblico Paradiso in Adobe.
 
 >[!NOTE]
 >Anche se Cloud Manager non definisce una versione specifica di `jacoco-maven-plugin`, la versione utilizzata deve essere almeno `0.7.5.201505241946`.
@@ -266,7 +266,7 @@ Se desideri inviare un messaggio semplice solo quando la build viene eseguita al
 
 ## Supporto dell&#39;archivio protetto da password {#password-protected-maven-repositories}
 
-Per utilizzare un repository Maven protetto da password da Cloud Manager, specificate la password (e facoltativamente il nome utente) come variabile [](#pipeline-variables) pipeline segreta e fate riferimento a tale segreto all&#39;interno di un file denominato `.cloudmanager/maven/settings.xml` nel repository Git. Questo file segue lo schema [Maven Settings File](https://maven.apache.org/settings.html) . All&#39;avvio del processo di build di Cloud Manager, l&#39; `<servers>` elemento in questo file verrà unito al `settings.xml` file predefinito fornito da Cloud Manager. Con questo file in posizione, all&#39;ID del server viene fatto riferimento dall&#39;interno di un elemento `<repository>` e/o `<pluginRepository>` all&#39;interno del `pom.xml` file. In genere, questi `<repository>` e/o `<pluginRepository>` elementi sono contenuti in un profilo [specifico di]{#activating-maven-profiles-in-cloud-manager}Cloud Manager, anche se non è strettamente necessario.
+Per utilizzare un repository Maven protetto da password da Cloud Manager, specificate la password (e facoltativamente il nome utente) come variabile [](#pipeline-variables) pipeline segreta e fate riferimento a tale segreto all&#39;interno di un file denominato `.cloudmanager/maven/settings.xml` nel repository Git. Questo file segue lo schema [Maven Settings File](https://maven.apache.org/settings.html) . All&#39;avvio del processo di build di Cloud Manager, l&#39; `<servers>` elemento in questo file verrà unito al `settings.xml` file predefinito fornito da Cloud Manager. Gli ID server che iniziano con `adobe` e `cloud-manager` sono considerati riservati e non devono essere utilizzati dai server personalizzati. Con questo file in posizione, all&#39;ID del server viene fatto riferimento dall&#39;interno di un elemento `<repository>` e/o `<pluginRepository>` all&#39;interno del `pom.xml` file. In genere, questi `<repository>` e/o `<pluginRepository>` elementi sono contenuti in un profilo [specifico di]{#activating-maven-profiles-in-cloud-manager}Cloud Manager, anche se non è strettamente necessario.
 
 Ad esempio, supponiamo che il repository si trovi all&#39;indirizzo https://repository.myco.com/maven2, che il nome utente Cloud Manager debba utilizzare sia `cloudmanager` e la password sia `secretword`.
 
@@ -392,7 +392,7 @@ Questa stessa tecnica può essere utilizzata per installare pacchetti specifici 
 
 >[!NOTE]
 >
->L&#39;installazione di un pacchetto di sistema in questo modo **non** lo installa nell&#39;ambiente di runtime utilizzato per eseguire  Adobe Experience Manager. Se hai bisogno di installare un pacchetto di sistema nell’ambiente AEM, contatta il tuo Customer Success Engineers (CSE).
+>L&#39;installazione di un pacchetto di sistema in questo modo **non** lo installa nell&#39;ambiente di runtime utilizzato per eseguire Adobe Experience Manager. Se hai bisogno di installare un pacchetto di sistema nell&#39;ambiente AEM, contatta il tuo Customer Success Engineers (CSE).
 
 ## Skiping Content Packages {#skipping-content-packages}
 
@@ -433,4 +433,4 @@ Con content-package-maven-plugin è simile:
 
 ## Sviluppare il codice in base alle best practice {#develop-your-code-based-on-best-practices}
 
-I team Adobe Engineering e Consulting hanno sviluppato una serie [completa di best practice per gli sviluppatori](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/best-practices.html)di AEM.
+ team di progettazione e consulenza del Adobe hanno sviluppato una serie [completa di best practice per AEM sviluppatori](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/best-practices.html).
