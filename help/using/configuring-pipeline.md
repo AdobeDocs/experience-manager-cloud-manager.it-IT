@@ -10,10 +10,10 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: cff6f23a674fda2f57ea481d89644de9be3f5722
+source-git-commit: c2f5caf50f2e20c07807369aee7914c17fded4de
 workflow-type: tm+mt
-source-wordcount: '1636'
-ht-degree: 2%
+source-wordcount: '1751'
+ht-degree: 1%
 
 ---
 
@@ -104,7 +104,7 @@ Selezionate il ramo Git e fate clic su **Avanti**.
 >
 >Se è selezionata l&#39;opzione **Pianificato** , potete pianificare la distribuzione di produzione nella pipeline **dopo** la distribuzione dell&#39;area di visualizzazione (e **Usa approvazione** GoLive, se questa è stata abilitata) in modo da attendere l&#39;impostazione di una pianificazione. L&#39;utente può anche scegliere di eseguire immediatamente la distribuzione di produzione.
 >
->Fare riferimento a [**Distribuzione del codice **](deploying-code.md), per impostare la pianificazione della distribuzione o eseguire la produzione immediatamente.
+>Fare riferimento a [**Distribuzione del codice**](deploying-code.md), per impostare la pianificazione della distribuzione o eseguire la produzione immediatamente.
 
 ![](assets/configure-pipeline3.png)
 
@@ -129,7 +129,7 @@ Viene quindi visualizzata come un passaggio separato durante l&#39;esecuzione de
 
 **Annullamento convalida dispatcher**
 
-In qualità di Gestione distribuzione, potete configurare un set di percorsi di contenuto che verranno **invalidati** o **scaricati** dalla cache del dispatcher AEM durante la configurazione o la modifica della pipeline.
+In qualità di Gestione distribuzione, potete configurare un set di percorsi di contenuto che verranno **invalidati** o **scaricati** dalla cache del dispatcher AEM per le istanze di pubblicazione, durante la configurazione o la modifica della pipeline.
 
 Potete configurare un set di percorsi separato per la distribuzione di Stage e Produzione. Se configurate, queste azioni della cache verranno eseguite come parte del passaggio della pipeline di distribuzione, subito dopo la distribuzione di eventuali pacchetti di contenuto. Queste impostazioni utilizzano il comportamento standard AEM Dispatcher. L&#39;opzione Annulla validità esegue un&#39;annullamento della validità della cache, simile a quando il contenuto viene attivato dall&#39;autore alla pubblicazione; flush esegue un&#39;eliminazione della cache.
 
@@ -178,6 +178,8 @@ Segui i passaggi indicati di seguito per configurare le invalide del dispatcher:
 
    ![](assets/Configuring_Pipeline_AEM-Sites.png)
 
+   Per ulteriori informazioni, consulta Test [delle prestazioni](#authenticated-performance-testing) autenticati.
+
    **AEM Assets:**
 
    Cloud Manager esegue test delle prestazioni per  programmi AEM Assets caricando ripetutamente risorse per un periodo di test di 30 minuti e misurando il tempo di elaborazione per ciascuna risorsa, nonché varie metriche a livello di sistema. Questa funzione può caricare sia immagini che documenti PDF. La distribuzione del numero di risorse di ciascun tipo caricate al minuto viene impostata nella schermata Impostazione tubazione o Modifica.
@@ -198,6 +200,17 @@ Segui i passaggi indicati di seguito per configurare le invalide del dispatcher:
 
    ![](assets/Production-Pipeline.png)
 
+### Test delle prestazioni autenticato {#authenticated-performance-testing}
+
+I clienti AMS con siti autenticati possono specificare un nome utente e una password che Cloud Manager utilizzerà per accedere al sito Web durante la verifica delle prestazioni di Sites.
+
+Il nome utente e la password sono specificati come Variabili [](/help/using/create-an-application-project.md#pipeline-variables) pipeline con i nomi `CM_PERF_TEST_BASIC_USERNAME` e `CM_PERF_TEST_BASIC_PASSWORD`.
+
+Sebbene non sia strettamente richiesto, si consiglia di utilizzare il tipo di variabile stringa per il nome utente e il tipo di variabile secretString per la password. Se vengono specificati entrambi, ogni richiesta del crawler test delle prestazioni e degli utenti virtuali di prova conterrà queste credenziali come autenticazione HTTP di base.
+
+Per impostare queste variabili utilizzando l&#39;interfaccia CLI di [Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager), esegui:
+
+`$ aio cloudmanager:set-pipeline-variables <pipeline id> --variable CM_PERF_TEST_BASIC_USERNAME <username> --secret CM_PERF_TEST_BASIC_PASSWORD <password>`
 
 ## Tubazioni non di produzione e di qualità del codice
 
