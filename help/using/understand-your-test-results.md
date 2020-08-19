@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: f062ee126ad12d164c36b2e1535ee709f43b6900
+source-git-commit: 1143e58d4c3a02d85676f94fc1a30cc1c2856222
 workflow-type: tm+mt
-source-wordcount: '1461'
-ht-degree: 8%
+source-wordcount: '1544'
+ht-degree: 7%
 
 ---
 
@@ -43,7 +43,15 @@ Per ciascuno di questi cancelli, esiste una struttura a tre livelli per i proble
 
 ## Verifica della qualità del codice {#code-quality-testing}
 
-Come parte della pipeline, il codice sorgente viene analizzato per garantire che le distribuzioni soddisfino determinati criteri di qualità. Attualmente, questo è implementato tramite una combinazione di SonarQube e l&#39;esame a livello di pacchetto di contenuti tramite OakPAL. Esistono più di 100 regole che combinano regole Java generiche e regole specifiche di AEM. La tabella seguente riassume la valutazione per i criteri di prova:
+Questo passaggio valuta la qualità del codice dell’applicazione. Si tratta dell&#39;obiettivo principale di una conduttura di sola qualità del codice ed è eseguito immediatamente dopo la fase di costruzione in tutti i gasdotti non di produzione e produzione. Per ulteriori informazioni sui diversi tipi di tubazioni, vedere [Configurazione della tubazione](/help/using/configuring-pipeline.md) CI-CD.
+
+### Comprensione del test di qualità del codice {#understanding-code-quality-testing}
+
+In Test qualità codice, il codice sorgente viene analizzato per garantire che la distribuzione soddisfi determinati criteri di qualità. Attualmente, questo è implementato tramite una combinazione di SonarQube e l&#39;esame a livello di pacchetto di contenuti tramite OakPAL. Ci sono più di 100 regole che combinano regole Java generiche e regole AEM specifiche. Alcune delle regole specifiche AEM vengono create in base alle best practice di AEM Engineering e sono denominate regole [di qualità del codice](/help/using/custom-code-quality-rules.md)personalizzate.
+
+È possibile scaricare l&#39;elenco delle regole [qui](/help/using/assets/CodeQuality-rules-latest.xlsx).
+
+I risultati di questo passaggio vengono presentati come *Valutazione*. La tabella seguente riassume le valutazioni per vari criteri di prova:
 
 | Nome | Definizione | Categoria | Soglia di errore |
 |--- |--- |--- |--- |
@@ -54,14 +62,12 @@ Come parte della pipeline, il codice sorgente viene analizzato per garantire che
 | Test di unità ignorati | Numero di unit test ignorati. | Info | > 1 |
 | Problemi aperti | Tipi di problemi generali - Vulnerabilità, bug e odori di codice | Info | > 0 |
 | Linee duplicate | Numero di righe coinvolte in blocchi duplicati. <br/>Per considerare un blocco di codice come duplicato: <br/><ul><li>**Progetti non Java:**</li><li>Devono essere presenti almeno 100 token successivi e duplicati.</li><li>Tali token devono essere ripartiti almeno su: </li><li>30 righe di codice per COBOL </li><li>20 righe di codice per ABAP </li><li>10 righe di codice per altre lingue</li><li>**Progetti Java:**</li><li> Devono essere presenti almeno 10 istruzioni successive e duplicate, indipendentemente dal numero di token e di righe.</li></ul> <br/>Le differenze nei rientri e nei letterali di stringa vengono ignorate durante il rilevamento di duplicati. | Info | > 1% |
-| Compatibilità con i servizi cloud | Numero di problemi di compatibilità del servizio cloud identificati. | Info | > 0 |
+| Compatibilità Cloud Service | Numero di problemi di compatibilità Cloud Service identificati. | Info | > 0 |
 
 
 >[!NOTE]
 >
 >Per informazioni più dettagliate, fare riferimento a Definizioni [metriche](https://docs.sonarqube.org/display/SONAR/Metric+Definitions) .
-
-Puoi scaricare l&#39;elenco delle regole qui [code-quality-rules.xlsx](/help/using/assets/CodeQuality-rules-latest.xlsx)
 
 >[!NOTE]
 >
@@ -73,7 +79,7 @@ Il processo di scansione della qualità non è perfetto e a volte identificherà
 
 In questi casi, il codice sorgente può essere annotato con l&#39; `@SuppressWarnings` annotazione Java standard che specifica l&#39;ID regola come attributo annotazione. Ad esempio, un problema comune è che la regola SonarQube per rilevare le password hardcoded può essere aggressiva per quanto riguarda il modo in cui viene identificata una password hardcoded.
 
-Per un esempio specifico, questo codice è abbastanza comune in un progetto AEM con codice per la connessione a un servizio esterno:
+Per osservare un esempio specifico, questo codice è abbastanza comune in un progetto AEM con codice per la connessione a un servizio esterno:
 
 ```java
 @Property(label = "Service Password")
@@ -103,7 +109,7 @@ Quindi la soluzione corretta è rimuovere la password hardcoded.
 
 ## Test di protezione {#security-testing}
 
-[!UICONTROL Cloud Manager] esegue i controlli ***di integrità di*** AEM Security esistenti sul passaggio successivo alla distribuzione e segnala lo stato tramite l&#39;interfaccia utente. I risultati sono aggregati da tutte le istanze di AEM presenti nell’ambiente.
+[!UICONTROL Cloud Manager] esegue i controlli ***di integrità*** AEM protezione esistenti sul passaggio successivo alla distribuzione e segnala lo stato tramite l&#39;interfaccia utente. I risultati vengono aggregati da tutte le istanze AEM nell&#39;ambiente.
 
 Se una delle **istanze** segnala un errore per una determinata verifica dello stato di salute, l&#39;intero **Ambiente** non riesce a controllare lo stato di salute. Come nel caso del Code Quality and Performance Testing, questi controlli dello stato di salute sono organizzati in categorie e riportati utilizzando il sistema di controllo a tre livelli. L&#39;unica distinzione è che non esiste una soglia nel caso di test di sicurezza. Tutti i controlli sanitari sono semplicemente superati o falliti.
 
@@ -116,13 +122,13 @@ Nella tabella seguente sono elencati i controlli correnti:
 | Il firewall di deserializzazione è caricato | Firewall deserializzazione caricato | Critico |
 | L&#39;implementazione AuthorizableNodeName non espone l&#39;ID autorizzabile nel nome/percorso del nodo. | Generazione nome nodo autorizzabile | Critico |
 | Le password predefinite sono state modificate | Account di login predefiniti | Critico |
-| Il servlet GET predefinito Sling è protetto dagli attacchi DOS. | Sling Get Servlet | Critico |
+| Il servlet di GET predefinito Sling è protetto dagli attacchi DOS. | Sling Get Servlet | Critico |
 | Il gestore Sling Java Script è configurato correttamente | Sling Java Script Handler | Critico |
 | Il gestore Sling JSP Script è configurato correttamente | Gestore di script JSP Sling | Critico |
 | SSL è configurato correttamente | Configurazione SSL | Critico |
 | Nessun criterio profilo utente ovviamente non sicuro trovato | Accesso standard profilo utente | Critico |
 | Il filtro Sling Referrer è configurato per prevenire attacchi CSRF | Sling Referrer Filter | Importante |
-| Adobe Granite HTML Library Manager è configurato correttamente | Configurazione manager libreria CQ HTML | Importante |
+|  Adobe Granite HTML Library Manager è configurato correttamente | Configurazione manager libreria CQ HTML | Importante |
 | Il bundle di supporto CRXDE è disattivato | Supporto CRXDE | Importante |
 | Il bundle Sling DavEx e il servlet sono disattivati | Verifica stato DavEx | Importante |
 | Contenuto di esempio non installato | Pacchetti contenuti di esempio | Importante |
