@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: d38b6da61c552a3e9ad03dac49a64553f0cb00b4
+source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
 workflow-type: tm+mt
 source-wordcount: '953'
 ht-degree: 1%
@@ -127,13 +127,11 @@ Quando Cloud Manager si distribuisce su topologie non di produzione, l&#39;obiet
    1. Ogni percorso specificato nella configurazione della pipeline viene invalidato o scaricato dalla cache del dispatcher.
 
    >[!NOTE]
-   >
    >Cloud Manager prevede che l&#39;artifact del dispatcher contenga l&#39;intero set di file.  Tutti i file di configurazione del dispatcher devono essere presenti nel repository git. I file o le cartelle mancanti genereranno un errore di distribuzione.
 
 1. Dopo la corretta distribuzione di tutti i pacchetti di AEM e dispatcher a tutti i nodi, i dispatcher vengono aggiunti nuovamente al sistema di bilanciamento del carico e la distribuzione è completa.
 
    >[!NOTE]
-   >
    >È possibile ignorare le modifiche al sistema di bilanciamento del carico nelle implementazioni di sviluppo e fasi, ovvero scollegare e allegare i passaggi sia nelle condotte non di produzione, per gli ambienti di sviluppo, sia nel ciclo di produzione, per gli ambienti di fase.
 
 ### Fase di distribuzione {#deployment-production-phase}
