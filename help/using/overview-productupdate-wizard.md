@@ -8,7 +8,7 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 translation-type: tm+mt
-source-git-commit: 3bb435aae932b9446867c30b7dd6b0a8e0839ee2
+source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
 workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 5%
@@ -18,9 +18,9 @@ ht-degree: 5%
 
 # Panoramica {#overview-product-update-wizard}
 
-La procedura guidata Aggiornamento prodotto è un’esperienza guidata e passo-passo per i clienti di Cloud Manager che effettuano l’aggiornamento all’ultimo Adobe Experience Manager di  (AEM) 6.5. Semplifica il processo end-to-end e assicura l’adesione alle best practice di AEM tramite il framework CI/CD di Cloud Manager e il testing automatico integrato.
+La procedura guidata Aggiornamento prodotto è un&#39;esperienza guidata e passo-passo per i clienti di Cloud Manager che effettuano l&#39;aggiornamento all&#39;ultimo Adobe Experience Manager (AEM) 6.5. Semplifica il processo end-to-end, assicura l’adesione alle procedure ottimali AEM il framework CI/CD di Cloud Manager e il testing automatizzato integrato.
 
-La procedura guidata include cinque fasi che guidano l’utente durante un aggiornamento del prodotto AEM:
+La procedura guidata include cinque fasi che guidano l&#39;utente durante un aggiornamento AEM prodotto:
 
 * **Valutazione**
 * **Rimediamento**
@@ -33,7 +33,7 @@ La procedura guidata include cinque fasi che guidano l’utente durante un aggio
 
 >[!NOTE]
 >
->I clienti collegati a Cloud Manager e idonei per effettuare l&#39;aggiornamento ad AEM 6.5 potranno utilizzare la procedura guidata Aggiornamento prodotto. Contatta il tuo Customer Success Engineer (CSE) per maggiori informazioni.
+>I clienti collegati a Cloud Manager e idonei per effettuare l&#39;aggiornamento a AEM 6.5 potranno utilizzare la procedura guidata Aggiornamento prodotto. Contatta il tuo Customer Success Engineer (CSE) per maggiori informazioni.
 
 1. Riceverai una notifica tramite Cloud Manager per informarti che AEM 6.5 è disponibile per il tuo programma.
 
