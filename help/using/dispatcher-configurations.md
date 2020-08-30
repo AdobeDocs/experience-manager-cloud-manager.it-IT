@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 8888dd80-d908-464e-927d-779db1a832a4
 translation-type: tm+mt
-source-git-commit: cdf2c82192c2e9c375316ae6e28646594ba2a462
+source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '597'
 ht-degree: 2%
 
 ---
@@ -19,21 +19,21 @@ ht-degree: 2%
 
 # Gestire le configurazioni del Dispatcher {#manage-your-dispatcher-configurations}
 
-## Utilizzo di Cloud Manager per distribuire i file di configurazione Dispatcher {#using-cloud-manager-to-deploy-dispatcher-configuration-files}
+## Utilizzo di Cloud Manager per distribuire i file di configurazione del dispatcher {#using-cloud-manager-to-deploy-dispatcher-configuration-files}
 
-Cloud Manager è in grado di distribuire i file di configurazione del server Web e Dispatcher, purché siano memorizzati nell&#39;archivio **** Git, oltre ai normali pacchetti di contenuti AEM.
+Cloud Manager è in grado di distribuire i file di configurazione del server Web e del dispatcher, purché siano memorizzati nell&#39;archivio **** Git, oltre ai normali pacchetti di contenuto AEM.
 
-Per sfruttare questa funzionalità, la build Maven deve produrre un file zip contenente almeno due directory - ***conf*** e ***conf.d***. Questo file zip può essere prodotto utilizzando il plug-in maven-assembly. I progetti generati da Cloud Manager con la [procedura guidata](/help/using/create-an-application-project.md) integrata presentano la struttura di progetto Maven corretta creata nell&#39;ambito della creazione del progetto. Questo è il percorso consigliato per i nuovi clienti dei servizi gestiti.
+Per sfruttare questa funzionalità, la build Maven deve produrre un file zip contenente almeno due directory - ***conf*** e ***conf.d***. Questo file zip può essere prodotto utilizzando il plug-in maven-assembly. I progetti generati da Cloud Manager con la [procedura guidata](/help/using/create-an-application-project.md) integrata presentano la struttura di progetto Maven corretta creata nell&#39;ambito della creazione del progetto. Questo è il percorso consigliato per i nuovi clienti Managed Services.
 
-Dopo la distribuzione a un’ **istanza** dispatcher, il contenuto di queste directory sovrascriverà il contenuto di tali directory nell’istanza Dispatcher. Poiché i file di configurazione del server Web e di Dispatcher richiedono spesso informazioni specifiche per l&#39;ambiente, per poter utilizzare correttamente questa funzionalità, è innanzitutto necessario lavorare con il Customer Success Engineers (CSE) per impostare queste variabili di ambiente in ***/etc/sysconfig/httpd***.
+Dopo la distribuzione a un’ **istanza** dispatcher, il contenuto di queste directory sovrascriverà il contenuto di tali directory nell’istanza Dispatcher. Poiché i file di configurazione del server Web e del dispatcher spesso richiedono informazioni specifiche per l’ambiente, per poter utilizzare correttamente questa funzionalità, è necessario innanzitutto lavorare con il Customer Success Engineers (CSE) per impostare queste variabili di ambiente in `/etc/sysconfig/httpd`.
 
-### Passaggi per la configurazione di Dispatcher per i clienti esistenti di servizi gestiti {#steps-for-configuring-dispatcher}
+### Passaggi per la configurazione del dispatcher per i clienti Managed Services esistenti {#steps-for-configuring-dispatcher}
 
-Per completare il processo iniziale nella configurazione di Dispatcher, effettuate le seguenti operazioni:
+Per completare il processo iniziale nella configurazione del dispatcher, effettuate le operazioni seguenti:
 
 1. Ottenete i file di configurazione di produzione correnti dal vostro CSE.
 1. Rimuovete i dati specifici dell&#39;ambiente codificato (ad esempio, IP del renderer di pubblicazione) e sostituiteli con le variabili.
-1. Definite le variabili richieste nelle coppie chiave-valore per ciascun Dispatcher di destinazione e richiedete al CSE di aggiungere a ***/etc/sysconfig/httpd*** in ogni istanza.
+1. Definite le variabili richieste nelle coppie chiave-valore per ciascun dispatcher di destinazione e richiedete al CSE di aggiungerle a `/etc/sysconfig/httpd` ogni istanza.
 1. Verificate le configurazioni aggiornate nell’ambiente di visualizzazione, quindi richiedete al CSE di distribuirle in produzione.
 1. Eseguire il commit dei file nell&#39;archivio **Git**.
 
@@ -41,18 +41,18 @@ Per completare il processo iniziale nella configurazione di Dispatcher, effettua
 
 >[!NOTE]
 >
->La migrazione delle configurazioni di Dispatcher e del server Web al repository **** Git potrebbe essere eseguita durante l&#39;installazione di Cloud Manager, ma anche in un secondo momento.
+>La migrazione delle configurazioni del dispatcher e del server Web all&#39;archivio **** Git potrebbe essere eseguita durante l&#39;avvio di Cloud Manager, ma anche in un secondo momento.
 
 ### Esempio {#example}
 
-La struttura di file e directory specifica può variare in base alle specifiche del progetto, ma in questo esempio dovrebbe essere disponibile una guida concreta per la struttura del progetto in modo da includere le configurazioni Apache e Dispatcher.
+La struttura di file e directory specifica può variare in base alle specifiche del progetto, ma in questo esempio deve essere fornita una guida concreta per la struttura del progetto in modo da includere le configurazioni Apache e Dispatcher.
 
 1. Creare una sottodirectory denominata `dispatcher`.
 
    >[!NOTE]
    Potete utilizzare un nome qualsiasi, ma il nome della directory creato in questo passaggio deve essere uguale al nome utilizzato al punto 6.
 
-1. Questa sottodirectory conterrà un modulo Maven che crea il file zip Dispatcher utilizzando il plug-in di assemblaggio Maven. Per avviare questa operazione, nella `dispatcher` directory, create un `pom.xml` file con il contenuto, modificando il riferimento principale, artifactId e il nome come necessario.
+1. Questa sottodirectory conterrà un modulo Maven che crea il file zip del Dispatcher utilizzando il plug-in di assemblaggio Maven. Per avviare questa operazione, nella `dispatcher` directory, create un `pom.xml` file con il contenuto, modificando il riferimento principale, artifactId e il nome come necessario.
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
