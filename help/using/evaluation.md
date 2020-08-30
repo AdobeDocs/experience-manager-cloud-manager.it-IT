@@ -8,7 +8,7 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 translation-type: tm+mt
-source-git-commit: 3bb435aae932b9446867c30b7dd6b0a8e0839ee2
+source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
 workflow-type: tm+mt
 source-wordcount: '289'
 ht-degree: 0%
@@ -21,13 +21,13 @@ ht-degree: 0%
 La prima fase della procedura guidata Aggiornamento prodotto è la **[!UICONTROL Evaluation]** fase.
 Qui è possibile valutare la complessità dell&#39;aggiornamento con il rilevatore di pattern accessibile direttamente dalla procedura guidata. Al termine di questo passaggio, avrete accesso al rapporto di valutazione.
 
-Il rapporto generato consente di controllare l&#39;istanza Author per la aggiornabilità rilevando pattern che:
+Il rapporto generato consente di controllare l&#39;istanza Author per l&#39;aggiornamento rilevando pattern che:
 
 * Violare determinate regole e vengono eseguite in aree che saranno interessate o sovrascritte dall&#39;aggiornamento.
 
-* Utilizzate una funzione AEM 6.x o un&#39;API che non sia compatibile con le versioni precedenti del nuovo AEM e che possa interrompersi dopo l&#39;aggiornamento.
+* Utilizzate una funzione AEM 6.x o un&#39;API non compatibile con le versioni precedenti sul nuovo AEM e che può interrompersi dopo l&#39;aggiornamento.
 
-Questo serve come valutazione dello sforzo di sviluppo associato all’aggiornamento  Adobe Experience Manager (AEM) 6.5.
+Questo serve come valutazione dello sforzo di sviluppo che comporta l’aggiornamento ad Adobe Experience Manager (AEM) 6.5.
 
 >[!NOTE]
 >
