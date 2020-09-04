@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
+source-git-commit: c35398110e9d8311bf58f217efdd082cf0cfd90a
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '952'
 ht-degree: 1%
 
 ---
@@ -48,7 +48,7 @@ Dopo aver configurato la pipeline di produzione (repository, ambiente e ambiente
    La **distribuzione della fase** prevede i seguenti passaggi:
 
    * Convalida: Questo passaggio assicura che la pipeline sia configurata per utilizzare le risorse attualmente disponibili, ad esempio che il ramo configurato esiste, gli ambienti sono disponibili.
-   * Build e unit test: Questo passaggio esegue un processo di compilazione containerizzato. Consultate [Creare un progetto](create-an-application-project.md) applicazione AEM per informazioni dettagliate sull&#39;ambiente di creazione.
+   * Build e unit test: Questo passaggio esegue un processo di compilazione containerizzato. Per [informazioni dettagliate sull’ambiente](/help/using/build-environment-details.md) di compilazione, consultate Informazioni sull’ambientedi generazione.
    * Scansione del codice: Questo passaggio valuta la qualità del codice dell’applicazione. Consultate [Comprendere i risultati](understand-your-test-results.md) del test per informazioni dettagliate sul processo di test.
    * Distribuisci nello stage
 
