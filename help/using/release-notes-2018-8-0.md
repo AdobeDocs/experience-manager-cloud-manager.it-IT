@@ -2,16 +2,16 @@
 title: Note sulla versione 2018.8.0
 seo-title: Note sulla versione di AEM Cloud Manager per la versione 2018.8.0
 description: Segui questa pagina per ottenere informazioni sulla versione 2018.8.0 di Cloud Manager.
-seo-description: Segui questa pagina per ottenere informazioni sulla versione 2018.8.0 di AEM Cloud Manager.
+seo-description: Segui questa pagina per ottenere informazioni su AEM Cloud Manager Release 2018.8.0.
 uuid: e8aaba32-89b4-4bc5-b295-09b753252612
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: release-notes
 discoiquuid: 9222ac3b-525e-47c1-b481-ac9d22e3d559
 translation-type: tm+mt
-source-git-commit: cdf2c82192c2e9c375316ae6e28646594ba2a462
+source-git-commit: c35398110e9d8311bf58f217efdd082cf0cfd90a
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '329'
 ht-degree: 4%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 # Note sulla versione 2018.8.0 {#release-notes-for}
 
-La release [!UICONTROL Cloud Manager] 2018.8.0 aggiunge il supporto per attivare automaticamente la pipeline CI/CD quando si impegna git e una nuova procedura guidata per la creazione di progetti di applicazione in git basata su AEM Project Archetype.
+La release [!UICONTROL Cloud Manager] 2018.8.0 aggiunge il supporto per attivare automaticamente la pipeline CI/CD quando si impegna git e una nuova procedura guidata per la creazione di progetti di applicazione in git basata sul AEM Project Archetype.
 
 ## Data di rilascio {#release-date}
 
@@ -27,7 +27,7 @@ La data di rilascio per la [!UICONTROL Cloud Manager] versione 2018.8.0 è il 4 
 
 ## Novità {#what-s-new}
 
-* **Impostazione** programma - Nuova procedura guidata per creare un progetto di applicazione in git utilizzando il tipo di archivio del progetto AEM. Per ulteriori informazioni, fare riferimento a [Creazione di un progetto](/help/using/create-an-application-project.md) di applicazione AEM.
+* **Impostazione** programma - Nuova procedura guidata per creare un progetto di applicazione in git utilizzando AEM Project Archetype
 
 * **Pipeline** CI/CD - Le seguenti modifiche sono aggiunte alla tubazione CI/CD. Per ulteriori informazioni, consultare [Configurare la pipeline](configuring-pipeline.md) CI/CD.
 
@@ -36,7 +36,7 @@ La data di rilascio per la [!UICONTROL Cloud Manager] versione 2018.8.0 è il 4 
    * Nella pagina Activity (Attività) è ora riportato il ramo specifico utilizzato per ogni esecuzione.
    * La pagina Attività ora indica la durata in ore e minuti.
    * Nella pagina di esecuzione della pipeline viene ora visualizzato il nome della versione o del tag creato per l&#39;esecuzione.
-   * Versione Apache Maven aggiornata alla 3.5.3.
+   * Versione di Apache Maven aggiornata alla 3.5.3.
 
 * **Navigazione** - Sono state aggiunte le seguenti modifiche alla [!UICONTROL Cloud Manager].
 
