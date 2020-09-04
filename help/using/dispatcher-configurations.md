@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 8888dd80-d908-464e-927d-779db1a832a4
 translation-type: tm+mt
-source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
+source-git-commit: 2ada697ca21acd0c73dbce2bce3e9481ac50272c
 workflow-type: tm+mt
 source-wordcount: '597'
 ht-degree: 2%
@@ -23,7 +23,7 @@ ht-degree: 2%
 
 Cloud Manager è in grado di distribuire i file di configurazione del server Web e del dispatcher, purché siano memorizzati nell&#39;archivio **** Git, oltre ai normali pacchetti di contenuto AEM.
 
-Per sfruttare questa funzionalità, la build Maven deve produrre un file zip contenente almeno due directory - ***conf*** e ***conf.d***. Questo file zip può essere prodotto utilizzando il plug-in maven-assembly. I progetti generati da Cloud Manager con la [procedura guidata](/help/using/create-an-application-project.md) integrata presentano la struttura di progetto Maven corretta creata nell&#39;ambito della creazione del progetto. Questo è il percorso consigliato per i nuovi clienti Managed Services.
+Per sfruttare questa funzionalità, la build Maven deve produrre un file zip contenente almeno due directory - ***conf*** e ***conf.d***. Questo file zip può essere prodotto utilizzando il plug-in maven-assembly. I progetti generati da Cloud Manager con la [procedura guidata](/help/using/using-the-wizard.md) integrata presentano la struttura di progetto Maven corretta creata nell&#39;ambito della creazione del progetto. Questo è il percorso consigliato per i nuovi clienti Managed Services.
 
 Dopo la distribuzione a un’ **istanza** dispatcher, il contenuto di queste directory sovrascriverà il contenuto di tali directory nell’istanza Dispatcher. Poiché i file di configurazione del server Web e del dispatcher spesso richiedono informazioni specifiche per l’ambiente, per poter utilizzare correttamente questa funzionalità, è necessario innanzitutto lavorare con il Customer Success Engineers (CSE) per impostare queste variabili di ambiente in `/etc/sysconfig/httpd`.
 
