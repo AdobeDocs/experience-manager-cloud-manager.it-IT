@@ -10,10 +10,10 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: c2f5caf50f2e20c07807369aee7914c17fded4de
+source-git-commit: c35398110e9d8311bf58f217efdd082cf0cfd90a
 workflow-type: tm+mt
 source-wordcount: '1751'
-ht-degree: 1%
+ht-degree: 2%
 
 ---
 
@@ -204,7 +204,7 @@ Segui i passaggi indicati di seguito per configurare le invalide del dispatcher:
 
 I clienti AMS con siti autenticati possono specificare un nome utente e una password che Cloud Manager utilizzerà per accedere al sito Web durante la verifica delle prestazioni di Sites.
 
-Il nome utente e la password sono specificati come Variabili [](/help/using/create-an-application-project.md#pipeline-variables) pipeline con i nomi `CM_PERF_TEST_BASIC_USERNAME` e `CM_PERF_TEST_BASIC_PASSWORD`.
+Il nome utente e la password sono specificati come Variabili [](/help/using/build-environment-details.md#pipeline-variables) pipeline con i nomi `CM_PERF_TEST_BASIC_USERNAME` e `CM_PERF_TEST_BASIC_PASSWORD`.
 
 Sebbene non sia strettamente richiesto, si consiglia di utilizzare il tipo di variabile stringa per il nome utente e il tipo di variabile secretString per la password. Se vengono specificati entrambi, ogni richiesta del crawler test delle prestazioni e degli utenti virtuali di prova conterrà queste credenziali come autenticazione HTTP di base.
 
