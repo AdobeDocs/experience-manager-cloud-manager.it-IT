@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: d38b6da61c552a3e9ad03dac49a64553f0cb00b4
+source-git-commit: 39e6af753cdd43da96746c7609a8f502b3ac9e77
 workflow-type: tm+mt
 source-wordcount: '1544'
 ht-degree: 7%
@@ -162,7 +162,7 @@ La tabella seguente riassume la matrice del test di prestazione utilizzando il s
 | Visualizzazioni pagina al minuto | Importante | &lt; Indicatore KPI a livello di programma |
 | Utilizzo della larghezza di banda del disco | Importante | >= 90% |
 | Utilizzo della larghezza di banda di rete | Importante | >= 90% |
-| Richieste al minuto | Info | &lt; 6000 |
+| Richieste al minuto | Info | >= 6000 |
 
 ### Grafici dei risultati del test delle prestazioni {#performance-testing-results-graphs}
 
