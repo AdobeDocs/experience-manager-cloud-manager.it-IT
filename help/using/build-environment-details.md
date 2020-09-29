@@ -2,9 +2,9 @@
 title: Informazioni sull’ambiente di creazione
 description: Seguite questa pagina per informazioni sugli ambienti
 translation-type: tm+mt
-source-git-commit: f73ea3db4bc50891518bebbe5da2d69dd2890a81
+source-git-commit: 57a99792e151bd5fe69c8372b6a9d3b100036a51
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -69,6 +69,9 @@ A questo scopo, nel file pom.xml aggiungete una `<plugin>` voce che si presenta 
 
 >[!NOTE]
 >I `vendor` valori supportati sono `oracle` e `sun` e i `version` valori supportati sono `1.8`, `1.11`e `11`.
+
+>[!NOTE]
+>La build del progetto Cloud Manager utilizza ancora Java 8 per richiamare Maven, pertanto il controllo o l&#39;applicazione della versione Java configurata nel plug-in della catena di strumenti tramite plug-in come il plug-in [](https://maven.apache.org/enforcer/maven-enforcer-plugin/) Apache Maven Enforcer non funziona e tali plug-in non devono essere utilizzati.
 
 ## Variabili di ambiente {#environment-variables}
 
