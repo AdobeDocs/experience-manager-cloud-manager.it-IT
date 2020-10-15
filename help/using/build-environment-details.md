@@ -2,9 +2,9 @@
 title: Informazioni sull’ambiente di creazione
 description: Seguite questa pagina per informazioni sugli ambienti
 translation-type: tm+mt
-source-git-commit: 57a99792e151bd5fe69c8372b6a9d3b100036a51
+source-git-commit: 000843f902a180181981de2b1307fd2777d32994
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '723'
 ht-degree: 0%
 
 ---
@@ -107,7 +107,7 @@ Per impostare una variabile utilizzando CLI, eseguire un comando come:
 
 `$ aio cloudmanager:list-pipeline-variables PIPELINEID`
 
-I nomi delle variabili possono contenere solo caratteri alfanumerici e carattere di sottolineatura (_). Per convenzione, i nomi devono essere tutti maiuscoli. Esiste un limite di 200 variabili per pipeline, ogni nome deve essere inferiore a 100 caratteri e ogni valore deve essere inferiore a 2048 caratteri.
+I nomi delle variabili possono contenere solo caratteri alfanumerici e carattere di sottolineatura (_). Per convenzione, i nomi devono essere tutti maiuscoli. Esiste un limite di 200 variabili per pipeline, ogni nome deve essere inferiore a 100 caratteri e ogni valore deve essere inferiore a 2048 caratteri per le variabili di tipo stringa e a 500 caratteri per le variabili di tipo secretString.
 
 Se utilizzata all&#39;interno di un `Maven pom.xml` file, è generalmente utile mappare queste variabili alle proprietà Maven utilizzando una sintassi simile a quella riportata di seguito:
 
@@ -183,5 +183,4 @@ Alcune build richiedono l&#39;installazione di pacchetti di sistema aggiuntivi p
 Questa stessa tecnica può essere utilizzata per installare pacchetti specifici per la lingua, ad esempio per `gem` RubyGems o `pip` per Python Packages.
 
 >[!NOTE]
->
->L&#39;installazione di un pacchetto di sistema in questo modo **non** lo installa nell&#39;ambiente di runtime utilizzato per eseguire Adobe Experience Manager. Se hai bisogno di installare un pacchetto di sistema nell&#39;ambiente AEM, contatta il tuo Customer Success Engineers (CSE).
+>L&#39;installazione di un pacchetto di sistema in questo modo **non** lo installa nell&#39;ambiente di runtime utilizzato per eseguire Adobe Experience Manager. Se avete bisogno di installare un pacchetto di sistema nell&#39;ambiente AEM, contattate il rappresentante  Adobe.
