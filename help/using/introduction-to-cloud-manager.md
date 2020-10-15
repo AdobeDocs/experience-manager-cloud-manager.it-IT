@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 translation-type: tm+mt
-source-git-commit: 2005b7e7689d3bc0656f92ecdbe368519f0d52a9
+source-git-commit: d3f17b1fd4fcc1c75836c9dd67d54e22422db120
 workflow-type: tm+mt
 source-wordcount: '680'
 ht-degree: 91%
@@ -73,4 +73,4 @@ Durante un evento di scalabilità automatica, [!UICONTROL Cloud Manager] attiva 
 La funzione di scalabilità automatica si applica solo al livello Dispatcher/Publish e viene sempre eseguita con un metodo di scalabilità orizzontale, con almeno un segmento aggiuntivo di una coppia Dispatcher/Publish e fino a un massimo di dieci segmenti. La capacità aggiuntiva fornita verrà scalata manualmente entro un periodo di dieci giorni lavorativi, come determinato dal CSE (Customer Success Engineer).
 
 >[!NOTE]
->I clienti interessati a verificare se l&#39;opzione di ridimensionamento automatico è appropriata per la propria applicazione devono contattare il proprio rappresentante del Adobe CSE o .
+>I clienti interessati a verificare se la scalabilità automatica è appropriata per la propria applicazione devono contattare il proprio rappresentante del Adobe CSE o .
