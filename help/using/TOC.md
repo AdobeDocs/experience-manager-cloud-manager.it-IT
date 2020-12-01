@@ -8,8 +8,8 @@ user-guide-description: Scopri come utilizzare Adobe Managed Services per gestir
 translation-type: tm+mt
 source-git-commit: 30d782f5a095b1b07ec4f2039def9ba30a559325
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 87%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
