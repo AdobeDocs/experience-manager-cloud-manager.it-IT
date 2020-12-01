@@ -1,24 +1,27 @@
 ---
-title: Configurare i rami di rilascio
-seo-title: Configurare i rami di rilascio
+title: Configurare i rami della versione
+seo-title: Configurare i rami della versione
 description: Configurare le filiali di rilascio in Git per AEM Cloud Manager
 seo-description: Segui questa pagina per apprendere come configurare i rami della release in git.
 uuid: d12a8b85-b7fd-4b55-a05a-a0f874ce598c
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: guida introduttiva
+topic-tags: getting-started
 discoiquuid: 53807ea6-9464-429d-9322-85c9f405dff6
 translation-type: tm+mt
 source-git-commit: 9c0df236c1e800802d62dea09996bb8e1e7033f7
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
-# Configurare i rami di rilascio {#configure-your-release-branches}
+# Configurare i rami della versione {#configure-your-release-branches}
 
 ## Impostazione del primo ramo in Git {#setting-up-your-first-branch-in-git}
 
-Viene fornito un unico archivio **Git inizialmente vuoto** per ciascun programma fornito su Cloud Manager. Questo repository può contenere un numero illimitato di filiali (o un numero ridotto) come segue nel processo di sviluppo, ma deve essere presente almeno un ramo utilizzato dalla pipeline CI/CD per distribuire il codice dell'applicazione allo stage e alla produzione. La procedura ottimale consiste nell'utilizzare `master` come nome di questo ramo. Comodamente, questo è il comportamento predefinito dei client Git quando si configurano nuovi progetti.
+Per ogni programma caricato in Cloud Manager è disponibile un **Repository Git** singolo, inizialmente vuoto. Questo repository può contenere un numero illimitato di filiali (o un numero ridotto) come segue nel processo di sviluppo, ma deve essere presente almeno un ramo utilizzato dalla pipeline CI/CD per distribuire il codice dell&#39;applicazione allo stage e alla produzione. La procedura ottimale consiste nell&#39;utilizzare `master` come nome di questo ramo. Comodamente, questo è il comportamento predefinito dei client Git quando si configurano nuovi progetti.
 
 Ad esempio, quando si configura un nuovo progetto, verrà eseguito un set di comandi come quello seguente:
 
@@ -52,11 +55,11 @@ $ git commit -m "initial commit"
 
 >[!NOTE]
 >
->Non è necessario utilizzare il client della riga di comando. Sono disponibili diversi client Git grafici sia come applicazioni autonome che come parte di un ambiente di sviluppo integrato (IDE) come Eclipse o IntelliJ. Fintanto che l'applicazione client supporta Git utilizzando HTTPS, dovrebbe essere compatibile con [!UICONTROL Cloud Manager].
+>Non è un requisito per utilizzare il client della riga di comando. Sono disponibili diversi client Git grafici, sia come applicazioni autonome che come parte di un ambiente di sviluppo integrato (IDE) come Eclipse o IntelliJ. Fintanto che l&#39;applicazione client supporta Git utilizzando HTTPS, deve essere compatibile con [!UICONTROL Cloud Manager].
 
-## Invio della prima diramazione {#pushing-your-first-branch}
+## Invio del primo ramo {#pushing-your-first-branch}
 
-Una volta completata almeno una revisione, potete aggiungere l' [!UICONTROL Cloud Manager] archivio come **remoto** e quindi inviarvi i commit:
+Dopo aver eseguito almeno una revisione, è possibile aggiungere il repository [!UICONTROL Cloud Manager] come **remoto** e quindi inviare i commit ad esso:
 
 ```shell
 $ git remote add adobe <url>
@@ -72,11 +75,11 @@ To <url>
 
 >[!NOTE]
 >
->L'URL specifico, insieme alle credenziali, verrà fornito al cliente dal Customer Success Engineering durante la [!UICONTROL Cloud Manager] registrazione.
+>L&#39;URL specifico, insieme alle credenziali, verrà fornito al cliente dal Customer Success Engineering durante l&#39;onboarding di [!UICONTROL Cloud Manager].
 
-## Altri rami {#additional-branches}
+## Brani aggiuntivi {#additional-branches}
 
-Un solo `master` ramo può essere sufficiente per progetti molto semplici, ma nella maggior parte dei casi sarà necessaria una strategia di ramificazione più complessa. Molti clienti seguono un processo in cui le attività di sviluppo quotidiane vengono eseguite su un ramo denominato `develop` e il ramo di sviluppo viene unito nel `master` ramo quando è il momento di una distribuzione.
+Un singolo ramo `master` può essere sufficiente per progetti molto semplici, ma nella maggior parte dei casi sarà necessaria una strategia di ramificazione più complessa. Molti clienti seguono un processo in cui le attività di sviluppo quotidiane vengono eseguite su un ramo denominato `develop` e il ramo di sviluppo viene unito nel ramo `master` quando è il momento di una distribuzione.
 
 >[!NOTE]
 >
