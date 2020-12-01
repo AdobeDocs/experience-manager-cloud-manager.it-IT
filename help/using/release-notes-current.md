@@ -6,18 +6,18 @@ seo-description: Segui questa pagina per ottenere informazioni su AEM Cloud Mana
 translation-type: tm+mt
 source-git-commit: 30d782f5a095b1b07ec4f2039def9ba30a559325
 workflow-type: tm+mt
-source-wordcount: '160'
-ht-degree: 7%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # Note sulla versione 2020.11.0 {#release-notes-for}
 
-La sezione seguente illustra le note generali sulla versione per la [!UICONTROL Cloud Manager] release 2020.11.0.
+La sezione seguente illustra le note generali sulla versione per la versione [!UICONTROL Cloud Manager] 2020.11.0.
 
 ## Data di rilascio {#release-date}
 
-La Data di rilascio per la [!UICONTROL Cloud Manager] versione 2020.11.0 è il 12 novembre 2020.
+La data di rilascio per la versione [!UICONTROL Cloud Manager] 2020.11.0 è il 12 novembre 2020.
 
 ## Novità {#whats-new}
 
