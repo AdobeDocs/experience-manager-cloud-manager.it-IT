@@ -6,17 +6,20 @@ seo-description: Seguite questa pagina per visualizzare l'elenco degli ambienti 
 uuid: 04e67572-11db-4d5d-acf3-fd7f644a95f0
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: utilizzo
+topic-tags: using
 discoiquuid: c5b39de2-3a9b-437f-98e8-e6e6249a5b3a
 translation-type: tm+mt
 source-git-commit: c81243708d938a8bffdec8a35f32a2cf552c1c95
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
 # Gestire gli ambienti {#manage-your-environments}
 
-La pagina **Panoramica** di Cloud Manager include il riquadro **Ambienti** in cui sono elencati tutti gli ambienti AEM gestiti.
+La pagina **Panoramica** di Cloud Manager include la sezione **Ambienti** che elenca tutti gli ambienti AEM gestiti.
 
 Ciascuno degli ambienti elencati visualizza il relativo stato associato.
 
@@ -24,28 +27,28 @@ Ciascuno degli ambienti elencati visualizza il relativo stato associato.
 
 ## Esercitazione video {#video-tutorial}
 
-### Panoramica ambiente di Cloud Manager {#environ-video}
+### Panoramica dell&#39;ambiente di Cloud Manager {#environ-video}
 
 Il video seguente fornisce una panoramica sugli ambienti di Cloud Manager composti da istanze di AEM Author, AEM Publish e Dispatcher.
 
->[!VIDEO](https://video.tv.adobe.com/v/26318/?captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/26318/)
 
 ## Accesso agli ambienti in Cloud Manager {#accessing-environments-in-cloud-manager}
 
-Nella sezione **Ambienti** sono visualizzati gli ambienti Produzione e Fase predisposti nel programma insieme allo stato.
+La sezione **Ambienti** visualizza gli ambienti di produzione e fase predisposti nel programma insieme allo stato.
 
-Lo stato è lo stato di alimentazione rollup tra i nodi nell'ambiente. È verde se tutti i nodi sono in esecuzione, rosso se anche un nodo viene arrestato, blu se anche un nodo è in arrivo, giallo se anche un nodo ha uno stato di alimentazione non disponibile (in questo ordine di priorità).
+Lo stato è lo stato di alimentazione rollup tra i nodi nell&#39;ambiente. È verde se tutti i nodi sono in esecuzione, rosso se anche un nodo viene arrestato, blu se anche un nodo è in arrivo, giallo se anche un nodo ha uno stato di alimentazione non disponibile (in questo ordine di priorità).
 
 ![](assets/Environments-card-new.png)
 
 ### Ambienti {#environments}
 
-Fate clic su **Gestisci** per visualizzare la schermata **Ambienti** .
+Fare clic su **Gestisci** per visualizzare la schermata **Ambienti**.
 
-Nella schermata **Ambienti** viene visualizzata una scheda per ogni *ambiente di produzione* e *fase* (in base alle esigenze) del programma. Il nome dell'ambiente è visualizzato sopra ogni scheda. La scheda include una tabella di nodi nell'ambiente insieme alla dimensione della t-shirt della cpu, dello storage, della regione e dello stato.
+Nella schermata **Ambienti** viene visualizzata una scheda per gli ambienti *Produzione* e *Stage* (a seconda dei casi) del programma. Il nome dell&#39;ambiente è visualizzato sopra ogni scheda. La scheda include una tabella di nodi nell&#39;ambiente insieme alla dimensione della t-shirt della cpu, dello storage, della regione e dello stato.
 
 >[!NOTE]
 >
->Lo **STATO** del nodo rappresenta lo stato di alimentazione della VM e non riflette lo stato di AEM sul server. Lo stato può essere **Corrente** (cerchio verde), **Interrotto** (cerchio rosso), **In alto** (cerchio blu) o **Non disponibile** (cerchio giallo).
+>Il **STATUS** del nodo rappresenta lo stato di alimentazione della VM e non riflette lo stato del AEM sul server. Lo stato può essere **Running** (cerchio verde), **Stopped** (cerchio rosso), **Coming up** (cerchio blu) o **Unavailable** (cerchio giallo).
 
 ![](assets/Environments-tab.png)
