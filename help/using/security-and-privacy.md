@@ -11,8 +11,8 @@ discoiquuid: 67a54bae-99a9-4405-91e3-9a0a8b3ccc98
 translation-type: tm+mt
 source-git-commit: e2187565e7f06d64841eb2af9b4b1a56feb5ebe4
 workflow-type: tm+mt
-source-wordcount: '231'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -21,21 +21,21 @@ ht-degree: 2%
 
 [!UICONTROL Cloud Manager] dispone di ruoli preconfigurati con autorizzazioni appropriate. In questa sezione vengono evidenziate la sicurezza e la privacy delle risorse (codice/artifact) mediante AEM Cloud Manager. Inoltre, [!UICONTROL Cloud Manager] dispone di ruoli preconfigurati con le autorizzazioni appropriate.
 
-Per informazioni sui possibili ruoli che puoi assegnare nell’Admin Console e nelle autorizzazioni per i ruoli utente, consulta Autorizzazioni [basate sui](/help/using/role-based-permissions.md)ruoli.
+Per informazioni sui possibili ruoli che potete assegnare nel Admin Console  e nelle autorizzazioni per i ruoli utente, consultate [Autorizzazioni basate sui ruoli](/help/using/role-based-permissions.md).
 
 
 ## Isolamento risorse {#resource-isolation}
 
-I clienti che utilizzano [!UICONTROL Cloud Manager] avranno bisogno delle credenziali IMS per l&#39;autenticazione, in quanto tutte le autorizzazioni associate [!UICONTROL Cloud Manager] verranno configurate e associate alla propria organizzazione IMS. Durante il processo di registrazione, il team di provisioning garantisce l&#39;applicazione dell&#39;isolamento delle risorse in [!UICONTROL Cloud Manager].
+I clienti che utilizzano [!UICONTROL Cloud Manager] avranno bisogno delle proprie credenziali IMS per l&#39;autenticazione, in quanto tutte le autorizzazioni associate a [!UICONTROL Cloud Manager] verranno configurate e associate alla propria organizzazione IMS. Durante il processo di registrazione, il team di provisioning assicura che l&#39;isolamento delle risorse sia applicato in [!UICONTROL Cloud Manager].
 
 ## Protezione dei dati {#data-security}
 
 Il codice in [!UICONTROL Cloud Manager] è crittografato in transito. I binari generati da Cloud Manager sono inoltre crittografati in transito e cifrati al momento della memorizzazione.
 
-Ogni cliente ottiene il proprio **Git Repository** e il suo codice è sicuro e non condiviso con altre **organizzazioni**.
+Ogni cliente ottiene il proprio **Git Repository** e il suo codice è sicuro e non condiviso con nessun altro **Organizations**.
 
 ## Privacy dei dati {#data-privacy}
 
-[!UICONTROL Cloud Manager] aderisce ai principi di privacy definiti da Adobe. Gli sviluppatori inviano il codice in modo sicuro nell&#39;archivio **Git** tramite HTTPS.
+[!UICONTROL Cloud Manager] aderisce ai principi di privacy definiti dal  Adobe. Gli sviluppatori inviano il codice in modo sicuro nell&#39; **Git Repository** attraverso il protocollo HTTPS.
 
-L&#39;interfaccia utente per [!UICONTROL Cloud Manager] è basata su servizi conformi a un framework di controllo comune definito da Adobe. Interfaccia utente per [!UICONTROL Cloud Manager] l&#39;utilizzo di servizi protetti da diversi fornitori di cloud.
+L&#39;interfaccia utente per [!UICONTROL Cloud Manager] è basata su servizi conformi a un framework di controllo comune definito da  Adobe. L&#39;interfaccia utente per [!UICONTROL Cloud Manager] utilizza i servizi protetti di diversi fornitori di cloud.
