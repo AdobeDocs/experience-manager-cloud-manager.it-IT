@@ -11,18 +11,18 @@ discoiquuid: 2221d1d5-dbc2-4175-8371-60344f932a82
 translation-type: tm+mt
 source-git-commit: 2005b7e7689d3bc0656f92ecdbe368519f0d52a9
 workflow-type: tm+mt
-source-wordcount: '247'
-ht-degree: 8%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
 # Primo accesso {#first-time-login}
 
-Una volta configurate le configurazioni generali per [!UICONTROL Cloud Manager], potete utilizzare l&#39;interfaccia utente per [!UICONTROL Cloud Manager].
+Una volta configurate le configurazioni generali per [!UICONTROL Cloud Manager], è possibile utilizzare l&#39;interfaccia utente per [!UICONTROL Cloud Manager].
 
 >[!NOTE]
->A seconda dei ruoli assegnati [!UICONTROL Cloud Manager] e dello stato dell’applicazione, durante l’utilizzo dell’ [!UICONTROL Cloud Manager] interfaccia utente verranno visualizzate diverse schermate.
+>A seconda dei ruoli assegnati in [!UICONTROL Cloud Manager] e dello stato dell&#39;applicazione, durante l&#39;utilizzo dell&#39;interfaccia utente [!UICONTROL Cloud Manager] saranno visualizzate diverse schermate.
 
 ## Esercitazione video {#video-tutorial-one}
 
@@ -34,15 +34,15 @@ Il seguente video fornisce una panoramica dei programmi di Cloud Manager che rap
 
 ## Accesso per la prima volta {#logging-in-for-the-first-time}
 
-1. Accedete al Adobe **[!UICONTROL Experience Cloud]** e visualizzerete l&#39;elenco dei **programmi**.
+1. Accedete al Adobe **[!UICONTROL Experience Cloud]** e verrà visualizzato l&#39;elenco dei **Programmi**.
 
    ![](assets/screen_shot_2018-06-04at120643pm.png)
 
-1. Selezionate il programma (ad esempio, **We.Retail Global**) e fate clic sull&#39;icona in alto a sinistra per aprire [!UICONTROL Cloud Manager].
+1. Selezionare il programma (ad esempio, **We.Retail Global**) e fare clic sull&#39;icona in alto a sinistra per aprire [!UICONTROL Cloud Manager].
 
    ![](assets/first-timea1.png)
 
-1. Dashboard da [!UICONTROL Cloud Manager] visualizzare.
+1. Viene visualizzato il dashboard di [!UICONTROL Cloud Manager].
 
    ![](assets/FirstLogin1.png)
 
@@ -50,7 +50,7 @@ Il seguente video fornisce una panoramica dei programmi di Cloud Manager che rap
 
    >[!NOTE]
    >
-   >Per completare i passaggi successivi, consulta [Configurazione del programma](https://helpx.adobe.com/experience-manager/cloud-manager/using/setting-up-program.html) .
+   >Per completare i passaggi successivi, vedere [Configurazione del programma](https://helpx.adobe.com/experience-manager/cloud-manager/using/setting-up-program.html).
 
 ## Esercitazione video {#video-tutorial-two}
 
