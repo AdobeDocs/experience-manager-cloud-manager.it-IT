@@ -6,18 +6,18 @@ seo-description: Segui questa pagina per ottenere informazioni su AEM Cloud Mana
 translation-type: tm+mt
 source-git-commit: c35398110e9d8311bf58f217efdd082cf0cfd90a
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 51%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # Note sulla versione 2020.7.0 {#release-notes-for}
 
-La sezione seguente illustra le note generali sulla versione per la [!UICONTROL Cloud Manager] release 2020.7.0.
+La sezione seguente illustra le note generali sulla versione per la versione [!UICONTROL Cloud Manager] 2020.7.0.
 
 ## Data di rilascio {#release-date}
 
-The Release Date for [!UICONTROL Cloud Manager] Version 2020.7.0 is July 09, 2020.
+La data di rilascio per la versione [!UICONTROL Cloud Manager] 2020.7.0 è il 09 luglio 2020.
 
 ## Novità {#whats-new}
 
@@ -30,7 +30,7 @@ Per ulteriori informazioni, consulta [Variabili delle pipeline](/help/using/buil
 
 ## Correzioni di bug {#bug-fixes}
 
-* The **Cancel** and **Save** options on the Non-Production Pipeline Edit page were not always visible.
+* Le opzioni **Annulla** e **Salva** nella pagina Modifica tubazione non produzione non erano sempre visibili.
 
 * Alcuni errori nel processo di qualità del codice potevano causare la generazione non corretta del file di registro.
 
