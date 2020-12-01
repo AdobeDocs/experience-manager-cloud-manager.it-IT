@@ -11,8 +11,8 @@ discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
 source-git-commit: c35398110e9d8311bf58f217efdd082cf0cfd90a
 workflow-type: tm+mt
-source-wordcount: '952'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -27,9 +27,9 @@ Dopo aver configurato la pipeline di produzione (repository, ambiente e ambiente
 
    ![](assets/Deploy1.png)
 
-1. Viene visualizzata la schermata **Esecuzione** tubazione.
+1. Viene visualizzata la schermata **Esecuzione tubazione**.
 
-   Fate clic su **Genera** per avviare il processo.
+   Fare clic su **Build** per avviare il processo.
 
    ![](assets/Deploy2.png)
 
@@ -48,46 +48,46 @@ Dopo aver configurato la pipeline di produzione (repository, ambiente e ambiente
    La **distribuzione della fase** prevede i seguenti passaggi:
 
    * Convalida: Questo passaggio assicura che la pipeline sia configurata per utilizzare le risorse attualmente disponibili, ad esempio che il ramo configurato esiste, gli ambienti sono disponibili.
-   * Build e unit test: Questo passaggio esegue un processo di compilazione containerizzato. Per [informazioni dettagliate sull’ambiente](/help/using/build-environment-details.md) di compilazione, consultate Informazioni sull’ambientedi generazione.
-   * Scansione del codice: Questo passaggio valuta la qualità del codice dell’applicazione. Consultate [Comprendere i risultati](understand-your-test-results.md) del test per informazioni dettagliate sul processo di test.
+   * Build e unit test: Questo passaggio esegue un processo di compilazione containerizzato. Per informazioni sull&#39;ambiente di compilazione, vedere [Informazioni sull&#39;ambiente di generazione](/help/using/build-environment-details.md).
+   * Scansione del codice: Questo passaggio valuta la qualità del codice dell’applicazione. Per informazioni dettagliate sul processo di test, vedere [Comprendere i risultati dei test](understand-your-test-results.md).
    * Distribuisci nello stage
 
    ![](assets/Stage_Deployment1.png)
 
-   The **Stage Testing**, involves the following steps:
+   La **fase di test** prevede i seguenti passaggi:
 
-   * Test di protezione: Questo passaggio valuta l&#39;impatto del codice dell&#39;applicazione sull&#39;ambiente AEM. Consultate [Comprendere i risultati](understand-your-test-results.md) del test per informazioni dettagliate sul processo di test.
-   * Test delle prestazioni: Questo passaggio valuta le prestazioni del codice dell&#39;applicazione. Consultate [Comprendere i risultati](understand-your-test-results.md) del test per informazioni dettagliate sul processo di test.
+   * Test di protezione: Questo passaggio valuta l&#39;impatto del codice dell&#39;applicazione sull&#39;ambiente AEM. Per informazioni dettagliate sul processo di test, vedere [Comprendere i risultati dei test](understand-your-test-results.md).
+   * Test delle prestazioni: Questo passaggio valuta le prestazioni del codice dell&#39;applicazione. Per informazioni dettagliate sul processo di test, vedere [Comprendere i risultati dei test](understand-your-test-results.md).
 
    ![](assets/Stage_Testing1.png)
 
-   The **Production Deployment**, involves the following steps:
+   La **distribuzione di produzione** prevede i seguenti passaggi:
 
-   * **Domanda di approvazione** (se attivata)
-   * **Pianificazione distribuzione** produzione (se abilitata)
-   * **Supporto** CSE (se attivato)
+   * **Domanda di approvazione**  (se abilitata)
+   * **Pianificazione distribuzione**  produzione (se abilitata)
+   * **Supporto**  CSE (se abilitato)
    * **Distribuisci in produzione**
 
    ![](assets/Prod_Deployment1.png)
 
    >[!NOTE]
    >
-   >La distribuzione **di produzione** programmata è abilitata durante la configurazione della pipeline.
+   >La **distribuzione di produzione programmata** è abilitata durante la configurazione della pipeline.
    >
    >
-   >Utilizzando questa opzione, potete pianificare la distribuzione di produzione oppure fare clic su **Ora** per eseguire immediatamente la distribuzione di produzione.
+   >Utilizzando questa opzione, potete pianificare la distribuzione di produzione oppure fare clic su **Now** per eseguire immediatamente la distribuzione di produzione.
    >
    >
    >La data e l&#39;ora pianificate vengono specificate in termini di fuso orario dell&#39;utente.
    >
    >
-   >Fate clic su **Conferma** per verificare le impostazioni.
+   >Fare clic su **Conferma** per verificare le impostazioni.
 
    ![](assets/Production_Deployment1.png)
 
    Una volta confermata la pianificazione della distribuzione, la distribuzione del codice viene completata.
 
-   Viene visualizzata la schermata seguente, quando si seleziona l’opzione **Ora** dal passaggio precedente.
+   Viene visualizzata la schermata seguente, quando l&#39;opzione **Now** è selezionata nel passaggio precedente.
 
    ![](assets/Production_Deployment2.png)
 
@@ -122,7 +122,7 @@ Quando Cloud Manager si distribuisce su topologie non di produzione, l&#39;obiet
 
    1. Le configurazioni correnti vengono sottoposte a backup e copiate in una posizione temporanea
    1. Tutte le configurazioni vengono eliminate tranne i file immutabili. Per ulteriori informazioni, consulta Gestione delle configurazioni del dispatcher. In questo modo le directory vengono cancellate per evitare che vengano lasciati indietro i file orfani.
-   1. L&#39;artifact viene estratto nella `httpd` directory.  I file immutabili non vengono sovrascritti. Eventuali modifiche apportate ai file immutabili nel repository git verranno ignorate al momento della distribuzione.  Questi file sono fondamentali per il framework del dispatcher AMS e non possono essere modificati.
+   1. L&#39;artifact viene estratto nella directory `httpd`.  I file immutabili non vengono sovrascritti. Eventuali modifiche apportate ai file immutabili nel repository git verranno ignorate al momento della distribuzione.  Questi file sono fondamentali per il framework del dispatcher AMS e non possono essere modificati.
    1. Apache esegue un test di configurazione. Se non viene rilevato alcun errore, il servizio viene ricaricato. Se si verifica un errore, le configurazioni vengono ripristinate dal backup, il servizio viene ricaricato e l&#39;errore viene riportato a Cloud Manager.
    1. Ogni percorso specificato nella configurazione della pipeline viene invalidato o scaricato dalla cache del dispatcher.
 
@@ -134,7 +134,7 @@ Quando Cloud Manager si distribuisce su topologie non di produzione, l&#39;obiet
    >[!NOTE]
    >È possibile ignorare le modifiche al sistema di bilanciamento del carico nelle implementazioni di sviluppo e fasi, ovvero scollegare e allegare i passaggi sia nelle condotte non di produzione, per gli ambienti di sviluppo, sia nel ciclo di produzione, per gli ambienti di fase.
 
-### Fase di distribuzione {#deployment-production-phase}
+### Fase di produzione {#deployment-production-phase}
 
 Il processo di implementazione nelle topologie di produzione è leggermente diverso per ridurre al minimo l&#39;impatto sui visitatori AEM sito.
 
