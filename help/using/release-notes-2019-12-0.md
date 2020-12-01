@@ -1,22 +1,25 @@
 ---
 title: Note sulla versione 2019.12.0
-seo-title: Note sulla versione di AEM Cloud Manager per la versione 2019.12.0
+seo-title: AEM Cloud Manager - Note sulla versione 2019.12.0
 description: Segui questa pagina per ottenere informazioni sulla versione 2019.12.0 di Cloud Manager.
-seo-description: Segui questa pagina per ottenere informazioni sulla versione 2019.12.0 di AEM Cloud Manager.
+seo-description: Segui questa pagina per ottenere informazioni su AEM Cloud Manager Release 2019.12.0.
 translation-type: tm+mt
 source-git-commit: 0fa1fedccb013e82c8df5838a612ce26a1efb7e8
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
 # Note sulla versione 2019.12.0 {#release-notes-for}
 
-La sezione seguente illustra le note generali sulla versione per la [!UICONTROL Cloud Manager] release 2019.12.0 e aggiunge aggiornamenti all&#39;esecuzione della pipeline e miglioramenti alle analisi di qualità del codice.
+La sezione seguente illustra le note generali sulla versione per la versione [!UICONTROL Cloud Manager] 2019.12.0 e aggiunge aggiornamenti all&#39;esecuzione della pipeline e miglioramenti alle analisi della qualità del codice.
 Seguite le sezioni riportate di seguito per ulteriori dettagli.
 
-## Release Date {#release-date}
+## Data di rilascio {#release-date}
 
-La data di rilascio per la [!UICONTROL Cloud Manager] versione 2019.12.0 è il 12 dicembre 2019.
+La data di rilascio per la versione [!UICONTROL Cloud Manager] 2019.12.0 è il 12 dicembre 2019.
 
 ## Novità {#whats-new}
 
@@ -24,7 +27,7 @@ La data di rilascio per la [!UICONTROL Cloud Manager] versione 2019.12.0 è il 1
 * La scansione della qualità del codice per i progetti che non contengono codice Java ora segnala un tasso di copertura del codice pari al 100%.
 * Il controllo dello stato di configurazione del dispatcher CQ è stato rimosso.
 
-## Correzioni dei bug {#bug-fixes}
+## Correzioni di bug {#bug-fixes}
 
 * Le date non venivano visualizzate correttamente in alcuni browser.
 * In rari casi, la pipeline di produzione passava alla fase di approvazione mentre era ancora in esecuzione la verifica delle prestazioni.
