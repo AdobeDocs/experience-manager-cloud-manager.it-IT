@@ -5,13 +5,16 @@ description: 'null'
 seo-description: Segui questa pagina per saperne di più sul monitoraggio del sistema in Cloud Manager che viene fatto osservando le singole istanze all'interno di un ambiente e monitorando una serie di metriche per ogni istanza.
 translation-type: tm+mt
 source-git-commit: 16893b8bcd2b2d681a14bb6be3786e358e1952fb
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
 # Monitoraggio del sistema {#system-monitoring}
 
-Il monitoraggio del sistema in [!UICONTROL Cloud Manager] viene eseguito osservando le singole istanze all&#39;interno di un ambiente e monitorando una serie di metriche per ogni istanza. Ogni metrica ha due soglie definite, una soglia *di* avviso e una soglia ** critica.
+Il monitoraggio del sistema in [!UICONTROL Cloud Manager] viene eseguito osservando le singole istanze all&#39;interno di un ambiente e monitorando diverse metriche per ogni istanza. Ogni metrica ha due soglie definite: una *soglia di avviso* e una *soglia critica*.
 
 Se una metrica supera la sua soglia critica, è considerata in stato critico; se una metrica supera la soglia di avviso (ma è al di sotto della soglia critica), viene considerata in stato di avviso. Le soglie sono impostate da Adobe Managed Services e possono essere visualizzate in [!UICONTROL Cloud Manager]. Nella maggior parte dei casi, le soglie sono coerenti tra i clienti, ma in alcuni casi i servizi gestiti Adobe modificheranno le soglie in base a specifiche esigenze dei clienti. Le domande sulle soglie devono essere indirizzate al Customer Success Engineer (CSE).
 
@@ -19,7 +22,7 @@ Se una metrica supera la sua soglia critica, è considerata in stato critico; se
 
 Per accedere alla funzione di monitoraggio del sistema è possibile procedere in due modi.
 
-1. Accedi alla pagina di destinazione **Servizi gestiti - Programmi** .
+1. Accedete alla pagina di destinazione **Managed Services - Programmi**.
 
    ![](assets/ProgramLanding.png)
 
@@ -29,7 +32,7 @@ Per accedere alla funzione di monitoraggio del sistema è possibile procedere in
 
    *Oppure*,
 
-* Passate alla pagina di destinazione **System Monitoring** (Monitoraggio **del sistema) attraverso la voce di menu di navigazione globale** Reports [!UICONTROL Cloud Manager]all&#39;interno.
+* Andate alla pagina di destinazione **System Monitoring** attraverso la voce di menu di navigazione globale **Reports** all&#39;interno di [!UICONTROL Cloud Manager].
 
 
 ## Pagina Panoramica del monitoraggio del sistema {#system-monitoring-overview-page}
@@ -53,7 +56,7 @@ Lo stato di ciascuna categoria è un riepilogo di singole metriche. Se una metri
 
 ### Panoramica dei report di Cloud Manager {#reports-video}
 
-I rapporti di Cloud Manager forniscono una visualizzazione degli ambienti del programma e delle istanze di AEM tramite un set di grafici che segnalano e tracciano una serie di metriche per ciascuna istanza di AEM.
+I report di Cloud Manager forniscono una visualizzazione degli ambienti e delle istanze AEM del programma tramite un set di grafici che eseguono il report e tengono traccia di una serie di metriche per ogni istanza AEM.
 Per ulteriori informazioni, consulta il video sottostante.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26315/)
@@ -95,7 +98,7 @@ Ad esempio, se fai clic sulla serie di soglie di avviso, verrà visualizzata sol
 **Archiviazione**
 
 * Spazio su disco: Lo spazio su disco utilizzato (in megabyte) per ogni punto di montaggio sull&#39;host. Esistono diverse metriche per ogni punto di montaggio. Vedrai almeno le metriche per &quot;/&quot; e &quot;/mnt&quot;, ma potrebbero essere disponibili ulteriori metriche del punto di montaggio a seconda della configurazione dell&#39;istanza specifica.
-* Dimensione cartella: Archivio segmenti AEM: Lo spazio su disco utilizzato (in Gigabyte) per AEM Segment Store.
+* Dimensione cartella: AEM archivio segmenti: Lo spazio su disco utilizzato (in Gigabyte) per AEM Segment Store.
 
 **Applicazione**
 
@@ -104,7 +107,7 @@ Ad esempio, se fai clic sulla serie di soglie di avviso, verrà visualizzata sol
 
 ## Report SLA {#sla-reporting}
 
-I clienti possono vedere le prestazioni dell’ambiente AEM di produzione in relazione al contratto di assistenza a livello di contratto (SLA). Questo è disponibile tramite un sottomenu nella schermata Rapporti.
+I clienti possono vedere le prestazioni del proprio ambiente di produzione AEM rispetto al contratto di assistenza (SLA). Questo è disponibile tramite un sottomenu nella schermata Rapporti.
 Ad esempio, il grafico seguente mostra il raggiungimento mensile dello SLA per il 2018.
 
 ![](assets/SLA-Reports-one.png)
@@ -113,7 +116,7 @@ Come per i grafici di monitoraggio del sistema, il passaggio del mouse su un pun
 
 ![](assets/SLA-Reports-two.png)
 
-La sezione Analisi evento sotto questo grafico mostra la serie di incidenti verificatisi per il programma durante l&#39;anno attualmente selezionato. Ogni incidente ha un intervallo di tempo, una causa e una serie di commenti.
+La sezione Analisi evento sotto questo grafico mostra la serie di incidenti verificatisi per il programma durante l&#39;anno selezionato. Ogni incidente ha un intervallo di tempo, una causa e una serie di commenti.
 
 ![](assets/sla-reporting3.png)
 
@@ -121,12 +124,12 @@ La sezione Analisi evento sotto questo grafico mostra la serie di incidenti veri
 
 * **Contratto** autore: Si tratta dello SLA definito nel contratto con Adobe Managed Services per il livello di autore.
 
-* **SLA** autore AMS: Questo è il tempo di attività misurato degli incidenti di factoring relativi al livello dell&#39;autore della produzione causati da Adobe o dai nostri fornitori.
+* **SLA** autore AMS: Questo è il tempo di attività misurato degli incidenti di factoring di livello autore di produzione causati da  Adobe o i nostri venditori.
 
 * **SLA** autore: Si tratta del tempo di attività misurato del livello di authoring, ignorando i tempi di inattività pianificati come finestre di manutenzione.
 
 * **Contratto** utente finale: Si tratta dello SLA definito nel contratto con Adobe Managed Services per il livello di pubblicazione.
 
-* **SLA** utente finale AMS: Questo è il tempo di attività misurato degli incidenti di factoring del livello di pubblicazione della produzione causati da Adobe o dai nostri fornitori.
+* **SLA** utente finale AMS: Questo è il tempo di attività misurato degli incidenti di factoring del livello di pubblicazione della produzione causati dal Adobe  o dai nostri venditori.
 
 * **SLA** utente finale: Si tratta del tempo di attività misurato del livello di pubblicazione, ignorando i tempi di inattività pianificati come finestre di manutenzione.
