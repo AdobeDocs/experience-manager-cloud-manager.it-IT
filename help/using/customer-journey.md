@@ -11,7 +11,7 @@ discoiquuid: bc9a0d63-ae6b-4fe9-81e5-bf9844f04e54
 translation-type: tm+mt
 source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -19,45 +19,45 @@ ht-degree: 0%
 
 # Customer Journey {#customer-journey}
 
-In qualità di cliente, potreste essere nuovi ad Adobe Experience Manager (AEM), al momento utilizzando AEM 6.4, o dover effettuare l&#39;aggiornamento alla versione AEM 6.4 per poter utilizzare [!UICONTROL Cloud Manager]. Gli scenari seguenti illustrano il percorso come cliente nuovo o esistente con cui iniziare [!UICONTROL Cloud Manager].
+In qualità di cliente, potreste essere nuovi ad Adobe Experience Manager (AEM), al momento utilizzando AEM 6.4, o dover effettuare l&#39;aggiornamento alla versione AEM 6.4 per utilizzare [!UICONTROL Cloud Manager]. Gli scenari seguenti illustrano il percorso come cliente nuovo o esistente con cui iniziare [!UICONTROL Cloud Manager].
 
 >[!NOTE]
 >
 >[!UICONTROL Cloud Manager] è disponibile solo per i clienti dei servizi gestiti Adobe che utilizzano AEM 6.4 o versioni successive.
 
-## On-boarding a [!UICONTROL Cloud Manager]{#on-boarding-to-cloud-manager}
+## On-boarding su [!UICONTROL Cloud Manager]{#on-boarding-to-cloud-manager}
 
 1. **Nuovo AEM cliente sui servizi gestiti Adobe**
 
-   In qualità di nuovo cliente, l&#39;utente sarà imbarcato [!UICONTROL Cloud Manager] nell&#39;ambito del processo di registrazione per i servizi gestiti Adobe.
+   Come nuovo cliente, l&#39;utente sarà imbarcato su [!UICONTROL Cloud Manager] nell&#39;ambito del processo di registrazione per i servizi gestiti Adobe.
 
-   L&#39;URL a cui accedere [!UICONTROL Cloud Manager] verrà incluso nel messaggio e-mail di benvenuto, insieme alle istruzioni per accedere a [!UICONTROL Experience Cloud]e utilizzare l&#39;Adobe Admin Console per gestire gli utenti e le rispettive autorizzazioni, per gli utenti a cui è necessario accedere [!UICONTROL Cloud Manager].
+   L&#39;URL per accedere a [!UICONTROL Cloud Manager] verrà incluso nel messaggio e-mail di benvenuto, insieme alle istruzioni per accedere a [!UICONTROL Experience Cloud], e utilizzare l&#39;Adobe Admin Console per gestire i vostri utenti e le rispettive autorizzazioni, per gli utenti che devono accedere a [!UICONTROL Cloud Manager].
 
 1. **Cliente AEM esistente su Adobe Managed Services**
 
-   In qualità di cliente esistente, sarà prima necessario aggiornare gli ambienti di produzione e non produzione esistenti alla versione AEM 6.4. Contemporaneamente all&#39;esecuzione dell&#39;aggiornamento, l&#39;utente verrà imbarcato e gli verrà fornito l&#39;URL a cui accedere [!UICONTROL Cloud Manager]. Inoltre, dovrete iniziare a utilizzare l&#39;Adobe Admin Console per gestire i vostri utenti e le rispettive autorizzazioni, per gli utenti a cui è necessario accedere [!UICONTROL Cloud Manager].
+   In qualità di cliente esistente, sarà prima necessario aggiornare gli ambienti di produzione e non produzione esistenti alla versione AEM 6.4. Al contempo, eseguirete l&#39;aggiornamento, vi verrà fornito con l&#39;URL per accedere a [!UICONTROL Cloud Manager]. Inoltre, sarà necessario iniziare a utilizzare l&#39;Adobe Admin Console per la gestione degli utenti e delle rispettive autorizzazioni, per gli utenti che devono accedere a [!UICONTROL Cloud Manager].
 
-   Anche il progetto AEM esistente dovrà essere conforme alle best practice consigliate, in quanto inizierà a utilizzare [!UICONTROL Cloud Manager] per distribuire nuove modifiche al codice negli ambienti AEM.
+   Anche il progetto AEM esistente dovrà essere conforme alle best practice consigliate, in quanto inizierete a utilizzare [!UICONTROL Cloud Manager] per distribuire nuove modifiche al codice negli ambienti AEM.
 
-   Per ulteriori informazioni sui vantaggi dell&#39;aggiornamento a AEM 6.4, consulta [Aggiornamento a AEM 6.4](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/upgrade.html).
+   Per ulteriori informazioni sui vantaggi dell&#39;aggiornamento alla AEM 6.4, vedere [Aggiornamento alla AEM 6.4](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/upgrade.html).
 
-## Accesso [!UICONTROL Cloud Manager] {#accessing-cloud-manager}
+## Accesso a [!UICONTROL Cloud Manager] {#accessing-cloud-manager}
 
-Per accedere a [!UICONTROL Cloud Manager] e agli ambienti di AEM, è sufficiente accedere alla pagina di [!UICONTROL Experience Cloud] destinazione, utilizzare  Adobe  credenziali Identity Management e selezionare AEM dall&#39;interfaccia dello switcher di soluzione.
+Per accedere a [!UICONTROL Cloud Manager] e agli ambienti di AEM, è sufficiente accedere alla [!UICONTROL Experience Cloud] pagina di destinazione, utilizzare il proprio Adobe   credenziali Identity Management e selezionare AEM dall&#39;interfaccia del commutatore di soluzione.
 
-Dopo aver effettuato [!UICONTROL Cloud Manager] il primo accesso, potrete accedere ai vostri ambienti AEM direttamente dall’ [!UICONTROL Cloud Manager] interfaccia utente. A questo punto, è possibile esplorare tutte le possibilità di [!UICONTROL Cloud Manager], una volta che il primo ramo di codice sarà pronto per essere distribuito nelle fasi e negli ambienti di produzione.
+Dopo aver eseguito per la prima volta l&#39;accesso a [!UICONTROL Cloud Manager], sarà possibile accedere agli ambienti AEM direttamente dall&#39;interfaccia utente di [!UICONTROL Cloud Manager]. A questo punto, è possibile esplorare tutte le possibilità di [!UICONTROL Cloud Manager], una volta che si dispone del primo ramo di codice pronto per essere implementato nel vostro stadio e negli ambienti di produzione.
 
-Per esplorare e iniziare con [!UICONTROL Cloud Manager], consulta Accesso [alla](first-time-login.md)prima volta. Per ulteriori informazioni sulle AEM, consulta [Guida introduttiva a AEM 6.4](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/deploy.html). Per ulteriori informazioni, fare riferimento a [AEM Risorse](https://www.adobe.com/marketing-cloud/experience-manager/resources.html?promoid=759X6WV8&amp;mv=other) .
+Per esplorare e iniziare a utilizzare [!UICONTROL Cloud Manager], vedere [Accesso alla prima volta](first-time-login.md). Per ulteriori informazioni sulle AEM, vedere [Guida introduttiva a AEM 6.4](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/deploy.html). Per ulteriori informazioni, fare riferimento a [AEM Risorse](https://www.adobe.com/marketing-cloud/experience-manager/resources.html?promoid=759X6WV8&amp;mv=other).
 
-## Getting Started with [!UICONTROL Cloud Manager] {#getting-started-with-cloud-manager}
+## Guida introduttiva di [!UICONTROL Cloud Manager] {#getting-started-with-cloud-manager}
 
-Una volta effettuato l’accesso, [!UICONTROL Cloud Manager]la prima cosa da fare è configurare l’ambiente dell’archivio di codice, quindi il team e i ruoli. Nello specifico, le appartenenze ai ruoli vengono assegnate aggiungendo l&#39;utente a un [!UICONTROL Cloud Manager] profilo utilizzando l&#39;interfaccia utente del Admin Console .
+Una volta effettuato l&#39;accesso a [!UICONTROL Cloud Manager], la prima cosa da fare è configurare l&#39;ambiente di repository del codice, quindi il team e i ruoli. Nello specifico, le appartenenze ai ruoli vengono assegnate aggiungendo l&#39;utente a un profilo [!UICONTROL Cloud Manager] utilizzando l&#39;interfaccia utente del Admin Console .
 
-Successivamente, è necessario impostare i rami del codice sorgente nell&#39;archivio **** Git, definire gli obiettivi in termini di KPI per carico e prestazioni e scenari di test per distribuire correttamente il codice nell&#39;area di visualizzazione e negli ambienti di produzione una volta che tutti i controlli di qualità siano stati superati.
+Successivamente, è necessario impostare i rami del codice sorgente nell&#39; **Repository Git**, definire gli obiettivi in termini di KPI di carico e prestazioni e gli scenari di test per distribuire correttamente il codice al livello e agli ambienti di produzione una volta superati tutti i controlli di qualità.
 
-## Fine del viaggio {#end-to-end-journey}
+## Fine del percorso {#end-to-end-journey}
 
-Il diagramma seguente illustra il percorso del cliente ad alto livello, quando si utilizza la pipeline [!UICONTROL Cloud Manager] CI/CD per distribuire le modifiche del codice allo stadio e agli ambienti di produzione.
+Il diagramma seguente illustra il percorso del cliente ad alto livello, quando si utilizza la pipeline [!UICONTROL Cloud Manager] CI/CD per distribuire le modifiche del codice negli ambienti di produzione e stadio.
 
 ![](assets/screen_shot_2018-05-15at124004pm.png)
 
