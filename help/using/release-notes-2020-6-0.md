@@ -1,23 +1,23 @@
 ---
 title: Note sulla versione 2020.6.0
-seo-title: Note sulla versione di AEM Cloud Manager per la versione 2020.6.0
+seo-title: AEM Cloud Manager - Note sulla versione 2020.6.0
 description: Segui questa pagina per ottenere informazioni sulla versione 2020.6.0 di Cloud Manager
-seo-description: Segui questa pagina per ottenere informazioni sulla versione 2020.6.0 di AEM Cloud Manager
+seo-description: Segui questa pagina per ottenere informazioni su AEM Cloud Manager Release 2020.6.0
 translation-type: tm+mt
 source-git-commit: f673a7c6e0d8e0814101beab1ad529ea69350a2a
 workflow-type: tm+mt
-source-wordcount: '177'
-ht-degree: 63%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # Note sulla versione 2020.6.0 {#release-notes-for}
 
-La sezione seguente illustra le note generali sulla versione per la [!UICONTROL Cloud Manager] release 2020.6.0.
+La sezione seguente illustra le note generali sulla versione per la versione [!UICONTROL Cloud Manager] 2020.6.0.
 
 ## Data di rilascio {#release-date}
 
-La Data di rilascio per la [!UICONTROL Cloud Manager] versione 2020.6.0 è il 4 giugno 2020.
+La data di rilascio per la versione [!UICONTROL Cloud Manager] 2020.6.0 è il 4 giugno 2020.
 
 ## Novità {#whats-new}
 
