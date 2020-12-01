@@ -8,6 +8,9 @@ topic-tags: introduction
 discoiquuid: 1cdb76eb-1a91-4689-8579-0fa9fccc0592
 translation-type: tm+mt
 source-git-commit: 8580cec50ac5dafb4e2525371a39d58c82f1cbc9
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -16,11 +19,11 @@ source-git-commit: 8580cec50ac5dafb4e2525371a39d58c82f1cbc9
 
 ## Panoramica sulla tubazione {#pipeline-overview}
 
-[!UICONTROL Cloud Manager] include un framework di integrazione continua (CI) e di consegna continua (CD) che consente ai team di implementazione di testare e distribuire rapidamente codice nuovo o aggiornato. Ad esempio, i team di implementazione possono configurare, configurare e avviare una pipeline CI/CD automatizzata che sfrutta le procedure ottimali di codifica Adobe per eseguire una scansione del codice approfondita e garantire la massima qualità del codice.
+[!UICONTROL Cloud Manager] include un framework di integrazione continua (CI) e di consegna continua (CD) che consente ai team di implementazione di testare e distribuire rapidamente codice nuovo o aggiornato. Ad esempio, i team di implementazione possono configurare, configurare e avviare una pipeline CI/CD automatizzata che sfrutta  best practice di codifica dei Adobi per eseguire una scansione approfondita del codice e garantire la massima qualità del codice.
 
 La pipeline CI/CD automatizza inoltre i processi di testing delle unità e delle prestazioni per aumentare l&#39;efficienza dell&#39;implementazione e identificare proattivamente i problemi critici che sono costosi da risolvere dopo l&#39;implementazione. I team di implementazione possono accedere a un report completo sulle prestazioni del codice per ottenere visibilità sul potenziale impatto sui KPI e sulle convalide di sicurezza critiche se il codice viene distribuito in produzione.
 
-## Processo pipeline {#pipeline-process}
+## Processo di tubazione {#pipeline-process}
 
 Il diagramma seguente illustra cosa accade quando una versione viene attivata in [!UICONTROL Cloud Manager]. La tabella di accompagnamento illustra ogni passaggio del flusso di lavoro.
 
@@ -35,19 +38,19 @@ Nella tabella seguente sono descritti in dettaglio gli eventi in corso in ogni f
 | 3. Costruito come versione con versione generata automaticamente | [!UICONTROL Cloud Manager] crea l&#39;applicazione con il numero di versione assegnato di recente. |
 | 4. Valutazione qualità codice | [!UICONTROL Cloud Manager] analizza il codice sorgente e fornisce un riepilogo prima che il codice possa essere distribuito nell’ambiente del passaggio |
 | 5. Artefatti con versione memorizzati | Gli artefatti relativi alla versione vengono memorizzati per un utilizzo successivo nei passaggi di distribuzione. |
-| 6. Distribuzione automatica di artifact in AMS AEM Stage | L’artifact della versione viene distribuito nell’ambiente di visualizzazione. |
+| 6. Distribuzione automatica di artifact in AMS AEM fase | L’artifact della versione viene distribuito nell’ambiente di visualizzazione. |
 | 7. Attiva test automatici | [!UICONTROL Cloud Manager] esegue i test Prestazioni e Sicurezza sull&#39;artifact. |
-| 8. Implementazione trigger produzione | Al termine dei test automatizzati [!UICONTROL Cloud Manager] viene avviata la distribuzione in produzione. |
-| 9. ottiene gli [!UICONTROL Cloud Manager] artefatti da distribuire | [!UICONTROL Cloud Manager] richiama gli artefatti di rilascio memorizzati. |
+| 8. Implementazione trigger produzione | Al termine dei test automatizzati, [!UICONTROL Cloud Manager] avvia la distribuzione in produzione. |
+| 9. [!UICONTROL Cloud Manager] ottiene artifact da distribuire | [!UICONTROL Cloud Manager] richiama gli artefatti di rilascio memorizzati. |
 | 10. Distribuisci artefatti alla produzione | Gli artefatti di rilascio vengono distribuiti nell&#39;ambiente di produzione. |
 
 ### Come impostare una tubazione CI/CD {#how-to-setup-a-ci-cd-pipeline}
 
-Per ulteriori informazioni sulla configurazione della pipeline, vedere [Configurazione della pipeline](configuring-pipeline.md).
+Per ulteriori informazioni sulla configurazione della pipeline, vedere [configurazione della pipeline](configuring-pipeline.md).
 
-## Gate di qualità {#quality-gates}
+## Portata di qualità {#quality-gates}
 
-La pipeline CI/CD fornisce dei cancelli di qualità, o criteri di accettazione, che devono essere soddisfatti prima che il codice possa essere spostato dall’ambiente di sviluppo all’ambiente di distribuzione. La conduttura prevede tre porte:
+La pipeline CI/CD fornisce dei cancelli di qualità, o criteri di accettazione, che devono essere soddisfatti prima che il codice possa essere spostato dall’ambiente di sviluppo all’ambiente di distribuzione. La conduttura prevede tre cancelli:
 
 * Qualità del codice
 * Test delle prestazioni
@@ -55,14 +58,14 @@ La pipeline CI/CD fornisce dei cancelli di qualità, o criteri di accettazione, 
 
 Per ciascuna di queste porte, sono stati individuati tre livelli di problemi:
 
-* **Critiche** - problemi individuati dal gate che causano un immediato fallimento della conduttura.
-* **Importante** - problemi identificati dal gate che causano l&#39;ingresso della pipeline in stato di pausa. Un gestore di distribuzione, un project manager o un proprietario aziendale possono ignorare i problemi, nel qual caso la pipeline procede, oppure accettare i problemi, nel qual caso la pipeline si interrompe con un errore.
-* **Informazioni** - questioni individuate dalla porta che sono fornite esclusivamente a fini informativi e non hanno alcun impatto sull&#39;esecuzione della conduttura.
+* **Critiche**  - problemi identificati dal cancello che causano un immediato fallimento della conduttura.
+* **Importante**  - problemi identificati dal gate che causano l&#39;ingresso della pipeline in stato di pausa. Un gestore di distribuzione, un project manager o un proprietario aziendale possono ignorare i problemi, nel qual caso la pipeline procede, oppure possono accettare i problemi, nel qual caso la pipeline si interrompe con un errore.
+* **Informazioni** : questioni individuate dalla porta che sono fornite esclusivamente a fini informativi e che non hanno alcun impatto sull&#39;esecuzione della conduttura.
 
 Di seguito è riportato un esempio di analisi del codice con problemi identificati per il codice:
 
 ![](assets/quality-gate-failed.png)
 
-### Come impostare i cancelli {#how-to-setup-gates}
+### Come impostare le porte {#how-to-setup-gates}
 
-Consultate **[Configurazione dei cancelli](configuring-pipeline.md)**per informazioni dettagliate sulla configurazione del codice, della qualità e delle prestazioni.
+Per informazioni dettagliate sulla configurazione del codice, della qualità e delle prestazioni, vedere **[Configurazione di cancelli](configuring-pipeline.md)**.
