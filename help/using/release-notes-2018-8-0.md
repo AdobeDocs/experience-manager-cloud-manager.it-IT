@@ -11,25 +11,25 @@ discoiquuid: 9222ac3b-525e-47c1-b481-ac9d22e3d559
 translation-type: tm+mt
 source-git-commit: c35398110e9d8311bf58f217efdd082cf0cfd90a
 workflow-type: tm+mt
-source-wordcount: '329'
-ht-degree: 4%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
 # Note sulla versione 2018.8.0 {#release-notes-for}
 
-La release [!UICONTROL Cloud Manager] 2018.8.0 aggiunge il supporto per attivare automaticamente la pipeline CI/CD quando si impegna git e una nuova procedura guidata per la creazione di progetti di applicazione in git basata sul AEM Project Archetype.
+Il rilascio di [!UICONTROL Cloud Manager] 2018.8.0 aggiunge il supporto per attivare automaticamente la pipeline CI/CD con commit git e una nuova procedura guidata per la creazione di progetti di applicazione in git in base al AEM Project Archetype.
 
 ## Data di rilascio {#release-date}
 
-La data di rilascio per la [!UICONTROL Cloud Manager] versione 2018.8.0 è il 4 ottobre 2018.
+La data di rilascio per la versione [!UICONTROL Cloud Manager] 2018.8.0 è il 04 ottobre 2018.
 
 ## Novità {#what-s-new}
 
-* **Impostazione** programma - Nuova procedura guidata per creare un progetto di applicazione in git utilizzando AEM Project Archetype
+* **Impostazione**  programma - Nuova procedura guidata per creare un progetto di applicazione in git utilizzando AEM Project Archetype
 
-* **Pipeline** CI/CD - Le seguenti modifiche sono aggiunte alla tubazione CI/CD. Per ulteriori informazioni, consultare [Configurare la pipeline](configuring-pipeline.md) CI/CD.
+* **Pipeline**  CI/CD - Le seguenti modifiche sono aggiunte alla tubazione CI/CD. Per ulteriori informazioni, consultare [Configurare la pipeline CI/CD](configuring-pipeline.md).
 
    * In Modifiche Git viene attivato il ciclo di produzione CI/CD ogni volta che vengono aggiunti impegni al ramo git configurato.
    * Le schede nella schermata principale ora si collegano in sezioni specifiche della pagina di esecuzione della pipeline.
@@ -38,10 +38,10 @@ La data di rilascio per la [!UICONTROL Cloud Manager] versione 2018.8.0 è il 4 
    * Nella pagina di esecuzione della pipeline viene ora visualizzato il nome della versione o del tag creato per l&#39;esecuzione.
    * Versione di Apache Maven aggiornata alla 3.5.3.
 
-* **Navigazione** - Sono state aggiunte le seguenti modifiche alla [!UICONTROL Cloud Manager].
+* **Navigazione** : vengono aggiunte le seguenti modifiche al  [!UICONTROL Cloud Manager].
 
    * Il collegamento delle risorse nella navigazione globale passa al Runbook in Sharepoint.
-   * Il menu Aiuto è stato riorganizzato per includere contenuto più [!UICONTROL Cloud Manager]specifico.
+   * Il menu Aiuto è stato riorganizzato in modo da includere contenuto [!UICONTROL Cloud Manager] specifico.
 
 ## Correzioni di bug {#bug-fixes}
 
@@ -54,5 +54,5 @@ La data di rilascio per la [!UICONTROL Cloud Manager] versione 2018.8.0 è il 4 
 ## Problemi noti {#known-issues}
 
 * I rami creati con la Creazione guidata progetto applicazione non possono contenere trattini.
-* La barra laterale delle [!UICONTROL Experience Cloud] notifiche potrebbe non caricare le notifiche in modo coerente. Le notifiche, tuttavia, sono visibili nel [!UICONTROL Experience Cloud] file e, se configurate, vengono comunque inviate tramite e-mail.
+* La barra laterale di notifica [!UICONTROL Experience Cloud] potrebbe non caricare le notifiche in modo coerente. Le notifiche, tuttavia, sono visibili in [!UICONTROL Experience Cloud] e, se configurate, saranno comunque inviate tramite e-mail.
 
