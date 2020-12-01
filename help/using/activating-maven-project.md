@@ -6,15 +6,15 @@ seo-description: Segui questa pagina per saperne di più su Maven Project Versio
 translation-type: tm+mt
 source-git-commit: e2187565e7f06d64841eb2af9b4b1a56feb5ebe4
 workflow-type: tm+mt
-source-wordcount: '253'
-ht-degree: 7%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
 # Gestione delle versioni dei progetti Maven {#project-version}
 
-## Understanding Maven Project Version Handling {#understanding-project-version}
+## Comprendere la gestione della versione del progetto di superficie {#understanding-project-version}
 
 Per le distribuzioni di fase e produzione, Cloud Manager genera una versione univoca e incrementale.
 
@@ -26,7 +26,7 @@ Se la versione originale non soddisfa questo criterio, la versione generata verr
 
 | **Versione** | **versione in pom.xml** | **Commento** |
 |---|---|---|
-| 1.0.0 | 1.0.0.2019_0926_121356_0000020490 | Versione originale formata correttamente |
+| 1.0.0 | 1.0.0.2019_0926_121356_000020490 | Versione originale formata correttamente |
 | 1.0.0-SNAPSHOT | 2019.926.121356.0000020490 | Versione snapshot, sovrascritta |
 | 1 | 2019.926.121356.0000020490 | Versione incompleta, sovrascritta |
 
