@@ -11,8 +11,8 @@ discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 translation-type: tm+mt
 source-git-commit: 213d1b2ee52496cc8cf6bc699488d9da9f7b9946
 workflow-type: tm+mt
-source-wordcount: '682'
-ht-degree: 88%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -44,7 +44,7 @@ L’interfaccia utente di [!UICONTROL Cloud Manager] offre ai clienti un accesso
 
 I clienti definiscono gli indicatori chiave di prestazioni (KPI, Key Performance Indicators) specifici per l’applicazione, come i picchi di visualizzazioni della pagina al minuto e i tempi di risposta previsti per il caricamento di una pagina, che in ultima analisi costituiscono la base per la misurazione di una distribuzione di successo. È possibile definire facilmente ruoli e autorizzazioni per i diversi membri del gruppo. Se da una parte la nuova interfaccia self-service riporta il controllo nelle mani dell’utente, offre anche collegamenti alle best practice e accesso ai consigli degli esperti di Adobe, in grado di fornire il supporto necessario secondo necessità.
 
-Per esplorare e iniziare a usare l’interfaccia utente [!UICONTROL Cloud Manager]di Adobe Connect, consulta Accesso [alla](https://helpx.adobe.com/experience-manager/cloud-manager/using/first-time-login.html)prima volta.
+Per esplorare e iniziare a utilizzare l&#39;interfaccia utente di [!UICONTROL Cloud Manager], vedere [Accesso alla prima volta](https://helpx.adobe.com/experience-manager/cloud-manager/using/first-time-login.html).
 
 ### Pipeline CI/CD {#ci-cd-pipeline}
 
@@ -52,7 +52,7 @@ Una delle funzionalità principali di [!UICONTROL Cloud Manager] è la capacità
 
 Attraverso l’interfaccia utente di [!UICONTROL Cloud Manager] i clienti possono configurare e avviare la pipeline CI/CD. Durante l’esecuzione della pipeline viene eseguita un’analisi approfondita del codice per garantire che solo le applicazioni di qualità elevata passino all’ambiente di produzione.
 
-Per ulteriori informazioni sulla configurazione della pipeline dall&#39; [!UICONTROL Cloud Manager]interfaccia utente, consulta [Configurare la pipeline](https://helpx.adobe.com/experience-manager/cloud-manager/using/configuring-pipeline.html)CI/CD.
+Per ulteriori informazioni sulla configurazione della pipeline dall&#39;interfaccia utente di [!UICONTROL Cloud Manager], vedere [Configurare la pipeline CI/CD](https://helpx.adobe.com/experience-manager/cloud-manager/using/configuring-pipeline.html).
 
 ### Modalità di distribuzione flessibili {#flexible-deployment-modes}
 
