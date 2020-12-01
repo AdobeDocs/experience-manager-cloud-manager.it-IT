@@ -2,22 +2,22 @@
 title: Note sulla versione 2020.4.0
 seo-title: Note sulla versione di AEM Cloud Manager per la versione 2020.4.0
 description: Segui questa pagina per ottenere informazioni sulla versione 2020.4.0 di Cloud Manager
-seo-description: Segui questa pagina per ottenere informazioni sulla versione 2020.4.0 di AEM Cloud Manager
+seo-description: Segui questa pagina per ottenere informazioni su AEM Cloud Manager Release 2020.4.0
 translation-type: tm+mt
 source-git-commit: 278858465592482449080fedc3c0165805db223d
 workflow-type: tm+mt
-source-wordcount: '239'
-ht-degree: 37%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # Note sulla versione 2020.4.0 {#release-notes-for}
 
-La sezione seguente illustra le note generali sulla versione per la [!UICONTROL Cloud Manager] release 2020.4.0.
+La sezione seguente illustra le note generali sulla versione per la versione [!UICONTROL Cloud Manager] 2020.4.0.
 
 ## Data di rilascio {#release-date}
 
-La Data di rilascio per la [!UICONTROL Cloud Manager] versione 2020.4.0 è il 09 aprile 2020.
+La data di rilascio per la versione [!UICONTROL Cloud Manager] 2020.4.0 è il 09 aprile 2020.
 
 ## Novità {#whats-new}
 
@@ -31,7 +31,7 @@ La Data di rilascio per la [!UICONTROL Cloud Manager] versione 2020.4.0 è il 09
 
 * Talvolta i dati di monitoraggio potrebbero essere visualizzati in modo errato o non in base a variazioni minori nei valori tecnici.
 * La configurazione Maven utilizzata nel contenitore di build è stata aggiornata per evitare deadlock durante il download dei metadati dell’artefatto.
-* Il processo di verifica delle prestazioni di Risorse non è stato in grado di decifrare la password di AEM, causando errori di verifica.
+* Il processo di verifica delle prestazioni di Risorse non è stato in grado di decifrare la password AEM, causando errori di verifica.
 * Alcune topologie con istanze in standby potrebbero presentare falsi negativi nei test di sicurezza.
 * Se l’ambiente di visualizzazione conteneva un’istanza arrestata, il passaggio di test di protezione potrebbe non riuscire.
 * Le notifiche di Experience Cloud non venivano ricevute in modo costante.
