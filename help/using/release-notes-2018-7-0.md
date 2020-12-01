@@ -11,33 +11,33 @@ discoiquuid: b64bf9ab-27ed-4f33-adc8-d73d34094f1b
 translation-type: tm+mt
 source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
 workflow-type: tm+mt
-source-wordcount: '350'
-ht-degree: 5%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
 # Note sulla versione 2018.7.0 {#release-notes-for}
 
-La sezione seguente illustra la versione [!UICONTROL Cloud Manager] 2018.7.0 che offre la funzione di *scalabilità* automatica.
+La sezione seguente illustra la versione [!UICONTROL Cloud Manager] 2018.7.0 che offre la funzione *scalabilità automatica*.
 
-**Il ridimensionamento** automatico è abilitato tramite la scalabilità orizzontale dei `Dispatcher/Publish` segmenti nell&#39;ambiente di produzione per supportare un improvviso aumento di carico, volume, accesso e altre metriche monitorate definite.
+**Il** ridimensionamento automatico è abilitato tramite la scalabilità orizzontale dei  `Dispatcher/Publish` segmenti nell&#39;ambiente di produzione per supportare un aumento improvviso di carico, volume, accesso e altre metriche monitorate definite.
 
 ## Data di rilascio {#release-date}
 
-La data di rilascio per la [!UICONTROL Cloud Manager] versione 2018.7.0 è il 10 settembre 2018.
+La data di rilascio per la versione [!UICONTROL Cloud Manager] 2018.7.0 è il 10 settembre 2018.
 
 ## Novità {#what-s-new}
 
-* **Provisioning** : ora [!UICONTROL Cloud Manager] è possibile scalare automaticamente l&#39;ambiente di produzione sul programma del cliente ridimensionandolo orizzontalmente con i segmenti Dispatcher/Publish. Nell’interfaccia utente è stata aggiunta la sezione Provisioning di Program Setup (Provisioning), che verrà visualizzata se l’opzione di ridimensionamento automatico è abilitata nel programma del cliente. Per ulteriori informazioni, fare riferimento a [Configurazione del programma](setting-up-program.md) .
+* **Provisioning** : ora  [!UICONTROL Cloud Manager] sarà possibile scalare automaticamente l&#39;ambiente di produzione sul programma del cliente ridimensionandolo orizzontalmente con i segmenti Dispatcher/Publish. Nell’interfaccia utente è stata aggiunta la sezione Provisioning di Program Setup (Provisioning), che verrà visualizzata se l’opzione di ridimensionamento automatico è abilitata nel programma del cliente. Per ulteriori informazioni, fare riferimento a [Configurazione del programma](setting-up-program.md).
 
-* **Ambienti** - È ora possibile visualizzare una visualizzazione dettagliata degli ambienti di produzione e fase insieme alle dimensioni, allo storage, alla regione e allo stato dei nodi associati a ciascun ambiente. Per ulteriori informazioni, consulta [Gestione degli ambienti](manage-your-environment.md) .
+* **Ambienti**  - È ora possibile visualizzare una visualizzazione dettagliata degli ambienti di produzione e fase insieme alle dimensioni, allo storage, alla regione e allo stato dei nodi associati a ciascun ambiente. Per ulteriori informazioni, fare riferimento a [Gestione degli ambienti](manage-your-environment.md).
 
-* **Analisi** della qualità del codice - Nuova regola per identificare un utilizzo API non corretto. Per ulteriori informazioni, fare riferimento a Regole [di qualità del codice](custom-code-quality-rules.md) personalizzate.
+* **Analisi**  della qualità del codice - Nuova regola per identificare un utilizzo API non corretto. Per ulteriori informazioni, fare riferimento a [Custom Code Quality Rules](custom-code-quality-rules.md).
 
-* **Test** delle prestazioni - Durante la visualizzazione dei risultati dei test delle prestazioni, sono disponibili grafici per l&#39;utilizzo della CPU, Tempo di attesa I/O disco, Frequenza errori di pagina, Utilizzo della larghezza di banda del disco, Utilizzo della larghezza di banda della rete, Tempo di risposta della pagina di picco e Tempo di risposta della pagina 95esima percentuale. Fare riferimento alla sezione *Performance Testing* nella pagina [Comprendere i risultati](understand-your-test-results.md) dei test.
+* **Test**  delle prestazioni - Durante la visualizzazione dei risultati dei test delle prestazioni, sono disponibili grafici per l&#39;utilizzo della CPU, tempi di attesa I/O disco, frequenza errori di pagina, utilizzo della larghezza di banda del disco, utilizzo della larghezza di banda di rete, tempo di risposta della pagina di picco e tempo di risposta della pagina di 95° percentuale. Fare riferimento alla sezione *Performance Testing* nella pagina [Comprendere i risultati dei test](understand-your-test-results.md).
 
-* **Test** delle prestazioni - Durante la visualizzazione dei risultati dei test delle prestazioni, è possibile scaricare l&#39;elenco degli errori di pagina e delle richieste lente. Fare riferimento alla sezione *Performance Testing* nella pagina [Comprendere i risultati](understand-your-test-results.md) dei test.
+* **Test**  delle prestazioni - Durante la visualizzazione dei risultati dei test delle prestazioni, è possibile scaricare l&#39;elenco degli errori di pagina e delle richieste lente. Fare riferimento alla sezione *Performance Testing* nella pagina [Comprendere i risultati dei test](understand-your-test-results.md).
 
 ## Correzioni di bug {#bug-fixes}
 
@@ -48,5 +48,5 @@ La data di rilascio per la [!UICONTROL Cloud Manager] versione 2018.7.0 è il 10
 ## Problemi noti {#known-issues}
 
 * Sebbene i clienti siano in grado di selezionare il trigger di commit, la pipeline potrebbe non avviarsi in realtà in base a nuovi commit.
-* La barra laterale delle [!UICONTROL Experience Cloud] notifiche potrebbe non caricare le notifiche in modo coerente. Le notifiche, tuttavia, sono visibili nel [!UICONTROL Experience Cloud] file e, se configurate, vengono comunque inviate tramite e-mail.
+* La barra laterale di notifica [!UICONTROL Experience Cloud] potrebbe non caricare le notifiche in modo coerente. Le notifiche, tuttavia, sono visibili in [!UICONTROL Experience Cloud] e, se configurate, saranno comunque inviate tramite e-mail.
 
