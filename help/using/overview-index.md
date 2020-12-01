@@ -9,8 +9,8 @@ discoiquuid: 5ca5a413-639e-43fb-93dd-16ce8935a3fd
 translation-type: tm+mt
 source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
 workflow-type: tm+mt
-source-wordcount: '108'
-ht-degree: 73%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 73%
 
 In questa sezione troverai una panoramica dell’elenco delle risorse introduttive di [!UICONTROL Cloud Manager].
 
-Follow the resources below to begin your journey for using [!UICONTROL Cloud Manager], from understanding the key concepts and terminologies to setting up configurations (pre-requisites), that finally lets you get started with [!UICONTROL Cloud Manager].
+Seguite le risorse riportate di seguito per iniziare il viaggio per utilizzare [!UICONTROL Cloud Manager], dalla comprensione dei concetti chiave e delle terminologie alla configurazione delle configurazioni (prerequisiti), che finalmente vi consente di iniziare con [!UICONTROL Cloud Manager].
 
 La figura riportata di seguito illustra la tabella di apprendimento per l’uso di [!UICONTROL Cloud Manager]:
 
