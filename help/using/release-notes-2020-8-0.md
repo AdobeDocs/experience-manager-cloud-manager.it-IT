@@ -6,18 +6,18 @@ seo-description: Segui questa pagina per ottenere informazioni su AEM Cloud Mana
 translation-type: tm+mt
 source-git-commit: c1d07c95088a279376ef495001a5165c7e459642
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 6%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # Note sulla versione 2020.8.0 {#release-notes-for}
 
-La sezione seguente illustra le note generali sulla versione per la [!UICONTROL Cloud Manager] release 2020.8.0.
+La sezione seguente illustra le note generali sulla versione per la versione [!UICONTROL Cloud Manager] 2020.8.0.
 
 ## Data di rilascio {#release-date}
 
-La data di rilascio per la [!UICONTROL Cloud Manager] versione 2020.8.0 è il 6 agosto 2020.
+La data di rilascio per la versione [!UICONTROL Cloud Manager] 2020.8.0 è il 6 agosto 2020.
 
 ## Novità {#whats-new}
 
@@ -33,11 +33,11 @@ Sono ora supportati i repository privati con binding di autenticazione.
 
 * In alcuni casi, le esecuzioni completate della pipeline non sono state registrate come completate, impedendo così nuove esecuzioni della pipeline.
 
-* Le esecuzioni delle tubazioni si *bloccavano* occasionalmente a causa di problemi di comunicazione interni.
+* A volte le esecuzioni della tubazione vengono bloccate a causa di problemi di comunicazione interni.**
 
 * La descrizione comandi sulle schede del programma non era corretta in modo coerente.
 
-* Nella pagina **Panoramica** si verificava una mancata corrispondenza dei colori.
+* C&#39;è stata una mancata corrispondenza di colore nella pagina **Panoramica**.
 
 * Il test delle prestazioni dei siti ora supporta l&#39;uso facoltativo dell&#39;autenticazione.
 
