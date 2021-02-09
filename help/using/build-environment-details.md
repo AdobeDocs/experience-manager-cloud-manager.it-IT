@@ -2,7 +2,7 @@
 title: Informazioni sull’ambiente di creazione
 description: Seguite questa pagina per informazioni sugli ambienti
 translation-type: tm+mt
-source-git-commit: 60270a7adb612355ff6d6928adcff8e94cabe092
+source-git-commit: 5a6148fd7750544def87147c5f012c09077b2b60
 workflow-type: tm+mt
 source-wordcount: '768'
 ht-degree: 0%
@@ -33,7 +33,8 @@ Cloud Manager crea e verifica il codice utilizzando un ambiente di build special
    * `mvn --batch-mode org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean -Dmaven.clean.failOnError=false`
    * `mvn --batch-mode org.jacoco:jacoco-maven-plugin:prepare-agent package`
 
-* Maven è configurato a livello di sistema con un file settings.xml che include automaticamente l&#39;archivio dell&#39;Adobe pubblico **Artifact**. Per ulteriori informazioni, fare riferimento a [ Adobe Public Maven Repository](https://repo.adobe.com/).
+* Maven è configurato a livello di sistema con un file settings.xml che include automaticamente l&#39;archivio dell&#39;Adobe pubblico **Artifact**.
+Per ulteriori informazioni, fare riferimento a [ Adobe Public Maven Repository](https://repo.adobe.com/).
 
 >[!NOTE]
 >Sebbene Cloud Manager non definisca una versione specifica di `jacoco-maven-plugin`, la versione utilizzata deve essere almeno `0.7.5.201505241946`.
