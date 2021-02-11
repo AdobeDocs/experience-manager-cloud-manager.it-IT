@@ -1,7 +1,7 @@
 ---
 title: Comprendere i risultati del test
 seo-title: Comprendere i risultati del test
-description: 'null'
+description: Scopri di più sulle tre porte di livello durante l'esecuzione di una pipeline in Cloud Manager
 seo-description: Segui questa pagina per apprendere tre livelli di cancelli durante l’esecuzione di una pipeline, la scansione del codice, le prestazioni e i test di sicurezza che convalidano il programma in Cloud Manager.
 uuid: 93caa01f-0df2-4a6f-81dc-23dfee24dc93
 contentOwner: jsyal
@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: 39e6af753cdd43da96746c7609a8f502b3ac9e77
+source-git-commit: 2dda85baa5e7ed9bfd8933df3580ec6fc3c210fd
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1556'
+ht-degree: 7%
 
 ---
 
@@ -50,7 +50,7 @@ Questo passaggio valuta la qualità del codice dell’applicazione. Si tratta de
 In Test qualità codice, il codice sorgente viene analizzato per garantire che soddisfi determinati criteri di qualità. Attualmente, questo è implementato tramite una combinazione di SonarQube e l&#39;esame a livello di pacchetto di contenuti tramite OakPAL. Ci sono più di 100 regole che combinano regole Java generiche e regole AEM specifiche. Alcune delle regole specifiche AEM vengono create in base alle best practice di AEM Engineering e sono denominate [Custom Code Quality Rules](/help/using/custom-code-quality-rules.md).
 
 >[!NOTE]
->È possibile scaricare l&#39;elenco completo delle regole [qui](/help/using/assets/CodeQuality-rules-latest.xlsx).
+>È possibile scaricare l&#39;elenco completo delle regole [qui](/help/using/assets/CodeQuality-rules-latest-AMS.xlsx).
 
 I risultati di questo passaggio vengono forniti come *Valutazione*. La tabella seguente riassume le valutazioni per vari criteri di prova:
 
