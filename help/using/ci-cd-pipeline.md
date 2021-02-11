@@ -1,16 +1,16 @@
 ---
 title: Pipeline CI/CD
 seo-title: Pipeline CI/CD
-description: 'null'
-seo-description: Seguite questa sezione per informazioni sulla pipeline CI/CD, che gestisce le distribuzioni per l'area di visualizzazione e la produzione in Cloud Manager.
+description: Panoramica sulla pipeline CI/CD, che gestisce le distribuzioni per l'area di visualizzazione e la produzione in Cloud Manager
+seo-description: Segui questa sezione per saperne di più sulla pipeline CI/CD, che gestisce le distribuzioni sull'area di visualizzazione e la produzione in Cloud Manager
 uuid: 763ddb24-05cd-463f-8d72-a2e69bbe6b7e
 topic-tags: introduction
 discoiquuid: 1cdb76eb-1a91-4689-8579-0fa9fccc0592
 translation-type: tm+mt
-source-git-commit: 8580cec50ac5dafb4e2525371a39d58c82f1cbc9
+source-git-commit: 2dda85baa5e7ed9bfd8933df3580ec6fc3c210fd
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '546'
+ht-degree: 1%
 
 ---
 
