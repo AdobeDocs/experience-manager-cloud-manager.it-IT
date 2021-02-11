@@ -1,18 +1,18 @@
 ---
 title: Implementare il codice
 seo-title: Implementare il codice
-description: 'null'
-seo-description: Dopo aver configurato la pipeline (repository, ambiente e ambiente di verifica), potete distribuire il codice. Segui questa pagina per saperne di più.
+description: Fornisce una panoramica sul processo di distribuzione in Cloud Manager
+seo-description: Scopri come distribuire il codice dopo aver configurato la pipeline (repository, ambiente e ambiente di testing)
 uuid: 4e3807e1-437e-4922-ba48-0bcadf293a99
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: c35398110e9d8311bf58f217efdd082cf0cfd90a
+source-git-commit: 2dda85baa5e7ed9bfd8933df3580ec6fc3c210fd
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '957'
+ht-degree: 1%
 
 ---
 
@@ -142,10 +142,10 @@ Le distribuzioni di produzione seguono generalmente gli stessi passaggi sopra, m
 
 1. Distribuire AEM pacchetti per l&#39;authoring.
 1. Scollegare dispatcher1 dal sistema di bilanciamento del carico.
-1. Distribuire pacchetti AEM per publish1 e il pacchetto dispatcher nella cache dispatcher1 e dello scaricamento.
+1. Distribuire pacchetti AEM per publish1 e il pacchetto dispatcher per dispatcher1 nella cache del dispatcher dello scaricamento parallelo.
 1. Rimettere dispatcher1 nel sistema di bilanciamento del carico.
 1. Una volta che dispatcher1 è tornato in servizio, scollegare dispatcher2 dal sistema di bilanciamento del carico.
-1. Distribuire AEM pacchetti in publish2 e il pacchetto dispatcher nella cache dispatcher2 e nello scaricamento.
+1. Distribuire pacchetti AEM a publish2 e il pacchetto dispatcher a dispatcher2 nella cache del dispatcher dello scaricamento parallelo.
 1. Rimettere dispatcher2 nel sistema di bilanciamento del carico.
 Questo processo continua finché la distribuzione non raggiunge tutti gli editori e i dispatcher nella topologia.
 
