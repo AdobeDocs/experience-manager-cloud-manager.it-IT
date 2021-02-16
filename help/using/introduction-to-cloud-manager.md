@@ -9,15 +9,22 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 translation-type: tm+mt
-source-git-commit: 213d1b2ee52496cc8cf6bc699488d9da9f7b9946
+source-git-commit: 6ff4b6e950e153c98b6981ec09dfa0648809c693
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '749'
+ht-degree: 85%
 
 ---
 
 
 # Introduzione a [!UICONTROL Cloud Manager]{#introduction-to-cloud-manager}
+
+>[!CONTEXTUALHELP]
+>id="aemcloud_cloudmanager_introduction"
+>title="Introduzione a Cloud Manager"
+>abstract="Consente alle organizzazioni di gestire autonomamente  Experience Manager nel cloud. Include un framework di integrazione continua e distribuzione continua (CI/CD, Continuous Integration/Continuous Delivery) che consente ai team IT e ai partner dell’implementazione di accelerare la distribuzione di personalizzazioni o aggiornamenti senza compromettere prestazioni o sicurezza."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/programs.html?lang=en#cloud-manager" text="Creazione di programmi"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/environments.html?lang=en#cloud-manager" text="Creazione di ambienti"
 
 ## Introduzione {#introduction}
 
