@@ -4,9 +4,9 @@ seo-title: Domande frequenti su Cloud Manager
 description: Consulta le domande frequenti su Cloud Manager per ottenere alcuni suggerimenti per la risoluzione dei problemi
 seo-description: Segui questa pagina per ottenere le risposte sulle domande frequenti su Cloud Manager
 translation-type: tm+mt
-source-git-commit: 0db6a6a4e430cd2619db1739fd322224e4e129e7
+source-git-commit: da3346852df4e421a69321830d7efee81d58e20c
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '880'
 ht-degree: 0%
 
 ---
@@ -55,9 +55,9 @@ Alcune note sul passaggio Performance Test:
 
 1. Cloud Manager aggiunge automaticamente la propria versione alle build di Stage e Produzione e crea anche un ramo Git. Non è richiesta alcuna configurazione speciale. Se si ignora il passaggio 3, la distribuzione funzionerebbe comunque correttamente e verrebbe automaticamente impostata una versione.
 
-1. Se lasciate la versione con `-SNAPSHOT` per le build o le distribuzioni di fase e produzione, anche questo va bene. Cloud Manager imposta automaticamente un numero di versione corretto e crea un tag per voi in Git. Se necessario, potete fare riferimento a questo tag in un secondo momento.
+1. Se lasciate la versione con `-SNAPSHOT` per le build o le distribuzioni di fase e produzione, non si verificano problemi. Cloud Manager imposta automaticamente un numero di versione corretto e crea un tag per voi in Git. Se necessario, potete fare riferimento a questo tag in un secondo momento.
 
-1. Se desiderate provare alcuni codici sperimentali sull&#39;ambiente di sviluppo, potete creare un nuovo ramo Git e impostare la tubazione per utilizzare quel ramo diverso. Questa funzione è utile quando le distribuzioni iniziano a non funzionare e si desidera eseguire il test con versioni precedenti del codice per vedere quando si è interrotta.
+1. Se si desidera provare un codice sperimentale sull&#39;ambiente di sviluppo, è possibile creare un nuovo ramo Git e impostare la pipeline in modo che utilizzi quel ramo diverso. Questa funzione è utile quando le distribuzioni iniziano a non funzionare e si desidera eseguire il test con versioni precedenti del codice per vedere quando si è interrotta.
 
    Il comando Git di seguito crea un ramo remoto denominato *testbranch1* rispetto a un commit preesistente specifico `485548e4fbafbc83b11c3cb12b035c9d26b6532b`.  Questo ramo speciale può essere utilizzato in Cloud Manager senza influenzare altri rami:
 
