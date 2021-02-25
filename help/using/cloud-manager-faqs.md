@@ -4,9 +4,9 @@ seo-title: Domande frequenti su Cloud Manager
 description: Consulta le domande frequenti su Cloud Manager per ottenere alcuni suggerimenti per la risoluzione dei problemi
 seo-description: Segui questa pagina per ottenere le risposte sulle domande frequenti su Cloud Manager
 translation-type: tm+mt
-source-git-commit: 31627bf11a46b2e6f1d0aa196bc4a9cf9648e775
+source-git-commit: fbf91ad0d200a9f1cbde4e87cf6b78a8479d0614
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '881'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Alcune note sul passaggio Performance Test:
 * Il *Passo prestazioni* è un passaggio delle prestazioni Web, ovvero il momento in cui caricare la pagina utilizzando un browser Web.
 * Gli URL elencati nel file risultato *CSV* vengono caricati in un browser Chrome nell&#39;infrastruttura di Cloud Manager durante il test.
 * Una metrica comune che non riesce è la *frequenza di errore*. Affinché un URL possa passare, l&#39;URL principale deve essere caricato con lo stato `200` e in meno di `20` secondi. I carichi di pagina superiori a `20` secondi sono contrassegnati come errori `504`.
-* Se il sito richiede l&#39;autenticazione dell&#39;utente, vedere [Autenticazione delle prestazioni](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#how-to-use) per configurare il test per l&#39;autenticazione sul sito.
+* Se il sito richiede l&#39;autenticazione dell&#39;utente, vedere [Autenticazione delle prestazioni](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#how-to-use) per configurare il test per l&#39;autenticazione nel sito.
 
 ## Siamo autorizzati a usare SNAPSHOT nella versione del progetto Maven? Come funziona il controllo delle versioni dei pacchetti e dei file JAR dei bundle per le installazioni di fase e produzione? {#snapshot-version}
 
