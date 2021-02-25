@@ -4,7 +4,7 @@ seo-title: Domande frequenti su Cloud Manager
 description: Consulta le domande frequenti su Cloud Manager per ottenere alcuni suggerimenti per la risoluzione dei problemi
 seo-description: Segui questa pagina per ottenere le risposte sulle domande frequenti su Cloud Manager
 translation-type: tm+mt
-source-git-commit: fbf91ad0d200a9f1cbde4e87cf6b78a8479d0614
+source-git-commit: 0db6a6a4e430cd2619db1739fd322224e4e129e7
 workflow-type: tm+mt
 source-wordcount: '881'
 ht-degree: 0%
@@ -47,11 +47,11 @@ Alcune note sul passaggio Performance Test:
 
 ## Siamo autorizzati a usare SNAPSHOT nella versione del progetto Maven? Come funziona il controllo delle versioni dei pacchetti e dei file JAR dei bundle per le installazioni di fase e produzione? {#snapshot-version}
 
-1. Per le distribuzioni di sviluppo, il ramo Git `pom.xml` file deve contenere `-SNAPSHOT` alla fine del valore `<version>`. Questo consente la distribuzione successiva in cui la versione non viene modificata per essere ancora installata. Nelle distribuzioni di sviluppo, non viene aggiunta o generata alcuna versione automatica per la build maven.
+1. Per le implementazioni degli sviluppatori, i file del ramo Git `pom.xml` devono contenere `-SNAPSHOT` alla fine del valore `<version>`. Questo consente la distribuzione successiva in cui la versione non viene modificata per essere ancora installata. Nelle distribuzioni per gli sviluppatori, non viene aggiunta o generata alcuna versione automatica per la build Paradiso.
 
-1. Nell&#39;implementazione di fase e produzione, viene generata una versione automatica come documentato [here](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/activating-maven-project.html?lang=en#managing-code).
+1. Nella distribuzione Stage e Produzione, viene generata una versione automatica come documentato [here](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/activating-maven-project.html?lang=en#managing-code).
 
-1. Per le versioni personalizzate nelle implementazioni di fase e produzione, impostate una versione pari a 3 parti come `1.0.0`. Aumentate la versione ogni volta che dovete eseguire un&#39;altra distribuzione in produzione.
+1. Per le versioni personalizzate nelle distribuzioni di fase e produzione, impostate una versione pari a 3 parti come `1.0.0`. Aumentate la versione ogni volta che dovete eseguire un&#39;altra distribuzione in produzione.
 
 1. Cloud Manager aggiunge automaticamente la propria versione alle build di Stage e Produzione e crea anche un ramo Git. Non è richiesta alcuna configurazione speciale. Se si ignora il passaggio 3, la distribuzione funzionerebbe comunque correttamente e verrebbe automaticamente impostata una versione.
 
@@ -82,8 +82,8 @@ Comandi ed errori correlati:
 
 `$ aio cloudmanager:list-pipeline-variables 222`
 
-Errore: `Cannot get variables: https://cloudmanager.adobe.io/api/program/111/pipeline/222/variables (403 Forbidden)`
+*Errore*:  `Cannot get variables: https://cloudmanager.adobe.io/api/program/111/pipeline/222/variables (403 Forbidden)`
 
 `$ aio cloudmanager:set-pipeline-variables 222 --variable TEST 1`
 
-Errore: `Cannot get variables: https://cloudmanager.adobe.io/api/program/111/pipeline/222/variables (403 Forbidden)`
+*Errore*:  `Cannot get variables: https://cloudmanager.adobe.io/api/program/111/pipeline/222/variables (403 Forbidden)`
