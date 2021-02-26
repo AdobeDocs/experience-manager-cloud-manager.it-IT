@@ -4,9 +4,9 @@ seo-title: Domande frequenti su Cloud Manager
 description: Consulta le domande frequenti su Cloud Manager per ottenere alcuni suggerimenti per la risoluzione dei problemi
 seo-description: Segui questa pagina per ottenere le risposte sulle domande frequenti su Cloud Manager
 translation-type: tm+mt
-source-git-commit: da3346852df4e421a69321830d7efee81d58e20c
+source-git-commit: cf5c02c8c594015b6baa00e1a8aaa2d898aa60a9
 workflow-type: tm+mt
-source-wordcount: '880'
+source-wordcount: '901'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,9 @@ Alcune note sul passaggio Performance Test:
 * Una metrica comune che non riesce è la *frequenza di errore*. Affinché un URL possa passare, l&#39;URL principale deve essere caricato con lo stato `200` e in meno di `20` secondi. I carichi di pagina superiori a `20` secondi sono contrassegnati come errori `504`.
 * Se il sito richiede l&#39;autenticazione dell&#39;utente, vedere [Autenticazione delle prestazioni](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#how-to-use) per configurare il test per l&#39;autenticazione nel sito.
 
-## Siamo autorizzati a usare SNAPSHOT nella versione del progetto Maven? Come funziona il controllo delle versioni dei pacchetti e dei file JAR dei bundle per le installazioni di fase e produzione? {#snapshot-version}
+## Siamo autorizzati a usare SNAPSHOT nella versione del progetto Maven? In che modo funziona il controllo delle versioni dei pacchetti e dei file JAR dei bundle per le distribuzioni di fase e produzione? {#snapshot-version}
+
+Per informazioni sul controllo delle versioni dei pacchetti e dei file JAR per le distribuzioni di fase e produzione, fare riferimento agli scenari seguenti:
 
 1. Per le implementazioni degli sviluppatori, i file del ramo Git `pom.xml` devono contenere `-SNAPSHOT` alla fine del valore `<version>`. Questo consente la distribuzione successiva in cui la versione non viene modificata per essere ancora installata. Nelle distribuzioni per gli sviluppatori, non viene aggiunta o generata alcuna versione automatica per la build Paradiso.
 
