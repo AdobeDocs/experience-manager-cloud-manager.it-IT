@@ -6,10 +6,10 @@ user-guide-title: Guida di Experience Manager Cloud Manager
 breadcrumb-title: Guida di Cloud Manager
 user-guide-description: Scopri come utilizzare Adobe Managed Services per gestire autonomamente Experience Manager nel cloud.
 translation-type: tm+mt
-source-git-commit: 12898b57c3e7039da271481a6619d4ad0a0a90d1
+source-git-commit: b5233e1932888b515d8dc26a6493cbd26686bc3c
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 84%
+source-wordcount: '261'
+ht-degree: 85%
 
 ---
 
@@ -35,7 +35,7 @@ ht-degree: 84%
    + [Configurare il programma](setting-up-program.md)
    + Creare un progetto di applicazione AEM {#create-application-project}
       + [Utilizzo della procedura guidata](using-the-wizard.md)
-      + [Impostazione del progetto](setting-up-project.md)
+      + [Configurazione del progetto](setting-up-project.md)
       + [Informazioni sull’ambiente di creazione](build-environment-details.md)
    + [Configurare i rami della versione](configure-your-release-branches.md)
    + [Gestire le configurazioni del Dispatcher](dispatcher-configurations.md)
@@ -49,16 +49,17 @@ ht-degree: 84%
    + [CLI di Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/main/README.md)
    + [Notifiche](notifications.md)
    + [Regole per la qualità del codice personalizzato](custom-code-quality-rules.md)
-+ Gestione del codice {#managing-code}
++ Gestire il codice {#managing-code}
    + [Gestione delle versioni dei progetti Maven](activating-maven-project.md)
    + [Accesso a Git](accessing-git.md)
    + [Integrazione con Git](setup-cloud-manager-git-integration.md)
-   + [Utilizzo di più repository Git di origine](/help/using/working-with-multiple-source-git-repos.md)
+   + [Utilizzo di più archivi Git di origine](/help/using/working-with-multiple-source-git-repos.md)
 + Procedura guidata di aggiornamento del prodotto {#product-update-wizard}
    + [Panoramica](overview-productupdate-wizard.md)
    + [Valutazione](evaluation.md)
 + Note sulla versione {#release-notes}
-   + [Note sulla versione corrente (2021.2.0)](release-notes-current.md)
+   + [Note sulla versione corrente (2021.3.0)](release-notes-current.md)
+   + [Note sulla versione 2021.2.0](release-notes-2021-2-0.md)
    + [Note sulla versione 2020.12.0](release-notes-2020-12-0.md)
    + [Note sulla versione 2020.11.0](release-notes-2020-11-0.md)
    + [Note sulla versione 2020.10.0](release-notes-2020-10-0.md)
