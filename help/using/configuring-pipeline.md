@@ -10,7 +10,7 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: bbcd5e59a9f9e8cb83cefb8af79d3ce7987bf388
+source-git-commit: 5542942da33efc2926e62cce00ea39e3c65b3e16
 workflow-type: tm+mt
 source-wordcount: '1776'
 ht-degree: 2%
@@ -20,13 +20,13 @@ ht-degree: 2%
 
 # Configurare la pipeline CI/CD {#configure-your-ci-cd-pipeline}
 
-Nella pagina seguente viene illustrato come configurare la **tubazione**. Per maggiori informazioni concettuali sul funzionamento della tubazione, vedere la [panoramica della pipeline CI/CD](ci-cd-pipeline.md).
+La pagina seguente spiega come configurare la **pipeline**. Per ulteriori informazioni concettuali sul funzionamento della pipeline, consulta la [panoramica della pipeline CI/CD](ci-cd-pipeline.md) .
 
-## Esercitazione video {#video-tutorial-one}
+## Tutorial video {#video-tutorial-one}
 
 ### Configurazione della pipeline in Cloud Manager {#config-pipeline-video}
 
-La configurazione della pipeline di produzione CI/CD definisce il trigger che avvierà la pipeline, i parametri che controllano la distribuzione di produzione e i parametri di test delle prestazioni.
+La configurazione della pipeline di produzione CI/CD definisce il trigger che avvierà la pipeline, i parametri che controllano la distribuzione di produzione e i parametri del test delle prestazioni.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26314/)
 
@@ -35,219 +35,219 @@ La configurazione della pipeline di produzione CI/CD definisce il trigger che av
 
 Puoi configurare la pipeline dalla sezione **Pipeline Settings (Impostazioni pipeline)** dell’interfaccia utente di [!UICONTROL Cloud Manager].
 
-Gestione distribuzione è responsabile della configurazione della pipeline. In questo caso, è necessario selezionare un ramo dal **Git Repository**. La configurazione della tubazione è costituita da:
+Gestione distribuzione è responsabile della configurazione della pipeline. In questo modo, seleziona prima un ramo dal **Archivio Git**. La configurazione della pipeline consiste in:
 
 * definizione del trigger che avvierà la pipeline.
 * definizione dei parametri che controllano la distribuzione di produzione.
 * configurazione dei parametri del test delle prestazioni.
 
-## Impostazione della tubazione {#setting-up-the-pipeline}
+## Impostazione della pipeline {#setting-up-the-pipeline}
 
 >[!CAUTION]
 >
->Impossibile impostare la pipeline finché l&#39;archivio Git non dispone di almeno un ramo e [Programma Setup](setting-up-program.md) non è completo.
+>Impossibile impostare la pipeline finché l’archivio Git non dispone di almeno un ramo e [Configurazione programma](setting-up-program.md) non è completato.
 
-Prima di iniziare a distribuire il codice, è necessario configurare le impostazioni della pipeline da [!UICONTROL Cloud Manager].
+Prima di iniziare a distribuire il codice, devi configurare le impostazioni della pipeline da [!UICONTROL Cloud Manager].
 
 >[!NOTE]
 >
 >È possibile modificare le impostazioni della pipeline dopo la configurazione iniziale.
 
-### Configurazione delle impostazioni della tubazione da [!UICONTROL Cloud Manager] {#configuring-the-pipeline-settings-from-cloud-manager}
+### Configurazione delle impostazioni della pipeline da [!UICONTROL Cloud Manager] {#configuring-the-pipeline-settings-from-cloud-manager}
 
-Una volta configurato il programma utilizzando l&#39;interfaccia utente [!UICONTROL Cloud Manager], è possibile impostare la pipeline.
+Una volta configurato il programma utilizzando l’interfaccia utente [!UICONTROL Cloud Manager], è possibile impostare la pipeline.
 
-Per configurare il comportamento e le preferenze della pipeline, effettuate le seguenti operazioni:
+Per configurare il comportamento e le preferenze per la pipeline, effettua le seguenti operazioni:
 
-1. Fare clic su **Imposta tubazione** per impostare e configurare la tubazione.
+1. Fai clic su **Imposta pipeline** per impostare e configurare la pipeline.
 
    ![](assets/Setup-Pipeline.png)
 
-1. Viene visualizzata la schermata **Setup Pipeline**.
+1. Viene visualizzata la schermata **Pipeline di installazione**.
 
-   La procedura guidata in tre fasi consente di impostare l&#39;ambiente **Branch**, **Ambienti** e **Testing**.
-Selezionate il ramo Git e fate clic su **Avanti**.
+   La procedura guidata in tre passaggi consente di configurare l&#39;ambiente **Branch**, **Environments** e **Testing**.
+Seleziona il ramo Git e fai clic su **Avanti**.
 
    >[!NOTE]
    >
-   >Le filiali presenti nel repository Git sono collegate al programma.
+   >I rami trovati nell’archivio Git sono collegati al tuo programma.
 
 
-1. Accedete alla scheda **Ambienti** per selezionare le opzioni **Stage** e **Produzione**.
+1. Accedi alla scheda **Ambienti** per selezionare le opzioni **Stage** e **Produzione** .
 
-   È possibile definire l&#39;attivatore per avviare la pipeline:
+   Puoi definire il trigger per avviare la pipeline:
 
-   * **In Modifiche**  Git: avvia la pipeline CI/CD ogni volta che vengono aggiunti impegni al ramo git configurato. Anche se selezionate questa opzione, potete sempre avviare la pipeline manualmente.
-   * **Manuale** : l&#39;utilizzo dell&#39;interfaccia utente consente di avviare manualmente la pipeline.
+   * **In Modifiche Git** : avvia la pipeline CI/CD ogni volta che vengono aggiunti dei commit al ramo Git configurato. Anche se selezioni questa opzione, puoi sempre avviare la pipeline manualmente.
+   * **Manuale** : utilizzando l’interfaccia utente si avvia manualmente la pipeline.
 
-   Durante la configurazione o la modifica della pipeline, Gestione distribuzione ha la possibilità di definire il comportamento della pipeline quando si verifica un errore importante in una delle porte di qualità come Qualità del codice, Test di sicurezza e Test delle prestazioni.
+   Durante la configurazione o la modifica della pipeline, Deployment Manager ha la possibilità di definire il comportamento della pipeline quando si verifica un errore importante in uno qualsiasi dei gate di qualità come la qualità del codice, il test di sicurezza e il test delle prestazioni.
 
-   Questo è utile per i clienti che desiderano un maggior numero di processi automatizzati. Le opzioni disponibili sono:
+   Questo è utile per i clienti che desiderano processi più automatizzati. Le opzioni disponibili sono:
 
-* **Chiedi ogni volta**  - Questa è l&#39;impostazione predefinita e richiede l&#39;intervento manuale su qualsiasi errore importante.
-* **Errore immediato** : se selezionato, la pipeline verrà annullata ogni volta che si verifica un errore importante. In pratica, questo consente di emulare manualmente un utente che rifiuta ogni errore.
-* **Continua immediatamente** : se questa opzione è selezionata, la pipeline procederà automaticamente ogni volta che si verifica un errore importante. Si tratta essenzialmente di un&#39;emulazione manuale di un utente che approva ogni errore.
+* **Chiedi ogni volta**  - Questa è l&#39;impostazione predefinita e richiede un intervento manuale su qualsiasi errore importante.
+* **Annulla immediatamente** : se selezionata, la pipeline verrà annullata ogni volta che si verifica un errore importante. In sostanza, questo sta simulando un utente che rifiuta manualmente ogni errore.
+* **Approva immediatamente** : se selezionata, la pipeline procede automaticamente ogni volta che si verifica un errore importante. In sostanza, questo sta simulando un utente che approva manualmente ogni errore.
 
-   Ora definite i parametri che controllano la distribuzione di produzione. Le tre opzioni disponibili sono le seguenti:
+   Ora puoi definire i parametri che controllano l’implementazione di produzione. Le tre opzioni disponibili sono le seguenti:
 
-* **Usa approvazione**  diretta: una distribuzione deve essere approvata manualmente dal proprietario aziendale, dal project manager o dal manager della distribuzione tramite l&#39; [!UICONTROL Cloud Manager] interfaccia utente.
-* **Usa CSE Oversight** : un CSE è impegnato per avviare effettivamente la distribuzione. Durante l&#39;impostazione della pipeline o la modifica quando CSE Oversight è abilitato, Gestione distribuzione ha l&#39;opzione di selezionare:
+* **Utilizzare l&#39;approvazione Go Live**  - Una distribuzione deve essere approvata manualmente da un proprietario business, da un project manager o da un manager di distribuzione tramite l&#39; [!UICONTROL Cloud Manager] interfaccia utente.
+* **Utilizzare CSE Oversight** : un CSE è impegnato per avviare effettivamente l’implementazione. Durante la configurazione della pipeline o la modifica quando CSE Oversight è abilitato, Deployment Manager può selezionare:
 
-   * **Eventuali CSE**: si riferisce a qualsiasi CSE disponibile
-   * **CSE** personale: si riferisce a un caso specifico assegnato al cliente o al suo backup, se il caso è fuori ufficio
+   * **Qualsiasi caso**: si riferisce a qualsiasi CSE disponibile
+   * **Caso**: si riferisce a un CSE specifico assegnato al cliente o al relativo backup, se il CSE è fuori sede
 
-* **Pianificato** : questa opzione consente all&#39;utente di abilitare la distribuzione di produzione pianificata.
-
->[!NOTE]
->
->Se l&#39;opzione **Pianificati** è selezionata, è possibile pianificare la distribuzione di produzione nella pipeline **dopo** la distribuzione dell&#39;area di visualizzazione (e **Usa approvazione GoLive**, se è stata attivata) in modo da attendere l&#39;impostazione di una pianificazione. L&#39;utente può anche scegliere di eseguire immediatamente la distribuzione di produzione.
->
->Fare riferimento a [**Implementare il codice**](deploying-code.md) per impostare la pianificazione della distribuzione o eseguire la produzione immediatamente.
-
-![](assets/configure-pipeline3.png)
+* **Pianificata** : questa opzione consente all&#39;utente di abilitare la distribuzione di produzione pianificata.
 
 >[!NOTE]
 >
->L&#39;opzione **Usa CSE Oversight** non è disponibile per tutti i clienti.
+>Se è selezionata l’opzione **Pianificato** , puoi pianificare la distribuzione di produzione nella pipeline **dopo** la distribuzione dell’area di visualizzazione (e **Usa approvazione GoLive**, se abilitata) in modo da attendere che venga impostata una pianificazione. L’utente può anche scegliere di eseguire immediatamente la distribuzione di produzione.
+>
+>Fai riferimento a [**Distribuisci il codice**](deploying-code.md) per impostare la pianificazione della distribuzione o eseguire la produzione immediatamente.
+
+![](assets/configure-pipeline-new.png)
+
+>[!NOTE]
+>
+>L’opzione **Usa controllo CSE** non è disponibile per tutti i clienti.
 
 **Approva dopo la distribuzione dello stage**
 
-È disponibile un passaggio opzionale **Approva dopo la distribuzione dell&#39;area di lavoro** che può essere configurato nella pipeline di produzione.
-Questa opzione è attivata in una nuova opzione nella schermata **Modifica pipeline**:
+È disponibile un passaggio facoltativo **Approva dopo la distribuzione della fase** che può essere configurato nella pipeline di produzione.
+Questa opzione è abilitata in una nuova opzione nella schermata **Modifica pipeline** :
 
 ![](assets/post_deployment1.png)
 
-Viene quindi visualizzata come un passaggio separato durante l&#39;esecuzione della pipeline:
+Viene quindi visualizzato come un passaggio separato durante l’esecuzione della pipeline:
 
 ![](assets/post_deployment2.png)
 
 >[!NOTE]
 >
->**L&#39;approvazione dopo l&#39;** implementazione delle fasi funziona in modo simile all&#39;approvazione prima dell&#39;implementazione della produzione, ma avviene subito dopo il passaggio di distribuzione dello stadio, ovvero prima che venga eseguito un test, rispetto all&#39;approvazione prima dell&#39;implementazione della produzione, che viene eseguita dopo che tutti i test sono stati completati.
+>**L&#39;approvazione dopo la distribuzione delle fasi** funziona in modo simile all&#39;approvazione prima dell&#39;implementazione di produzione, ma avviene immediatamente dopo la fase di distribuzione dello stadio, ovvero prima che venga eseguito un test, rispetto all&#39;approvazione prima dell&#39;implementazione di produzione, che viene eseguita dopo il completamento di tutti i test.
 
-**Annullamento convalida dispatcher**
+**Annullamento della validità di Dispatcher**
 
-In qualità di gestore distribuzione, potete configurare un set di percorsi di contenuto che saranno **invalidati** o **scaricati** dalla cache del dispatcher AEM per le istanze di pubblicazione, durante la configurazione o la modifica della pipeline.
+In qualità di gestore dell’implementazione, puoi configurare un set di percorsi di contenuto che saranno **invalidati** o **scaricati** dalla cache del Dispatcher AEM per le istanze di pubblicazione, durante l’impostazione o la modifica della pipeline.
 
-Potete configurare un set di percorsi separato per la distribuzione di Stage e Produzione. Se configurate, queste azioni della cache verranno eseguite come parte del passaggio della pipeline di distribuzione, subito dopo la distribuzione di eventuali pacchetti di contenuto. Queste impostazioni utilizzano il comportamento standard AEM Dispatcher. L&#39;opzione Annulla validità esegue un&#39;annullamento della validità della cache, simile a quando il contenuto viene attivato dall&#39;autore alla pubblicazione; flush esegue un&#39;eliminazione della cache.
+È possibile configurare un set separato di percorsi per la distribuzione Stage e Production. Se configurate, queste azioni della cache verranno eseguite come parte del passaggio della pipeline di distribuzione, subito dopo la distribuzione di eventuali pacchetti di contenuto. Queste impostazioni utilizzano il comportamento standard AEM Dispatcher: l’opzione Annulla convalida esegue un’invalidazione della cache, simile a quando il contenuto viene attivato dall’autore alla pubblicazione; flush esegue un&#39;eliminazione della cache.
 
-In generale, l&#39;uso dell&#39;azione di annullamento della validità è preferibile, ma in alcuni casi potrebbe essere necessario eseguire lo scaricamento, soprattutto quando si utilizzano AEM HTML Client Libraries.
+In generale, l’utilizzo dell’azione di annullamento della validità è preferibile, ma in alcuni casi può essere richiesto lo scaricamento, soprattutto quando si utilizzano AEM librerie client HTML.
 
 >[!NOTE]
 >
->Fare riferimento a [Dispatcher Overview](dispatcher-configurations.md) per ulteriori informazioni sul caching del dispatcher.
+>Fai riferimento a [Panoramica di Dispatcher](dispatcher-configurations.md) per ulteriori informazioni sul caching di Dispatcher.
 
-Segui i passaggi indicati di seguito per configurare le invalide del dispatcher:
+Per configurare gli invalidamenti del Dispatcher, effettua le seguenti operazioni:
 
-1. Fare clic su **Configura** sotto l&#39;intestazione Dispatcher Configuration (Configurazione dispatcher)
+1. Fai clic su **Configura** nell’intestazione Configurazione del Dispatcher
 
    ![](assets/image2018-8-7_14-53-24.png)
 
-1. Immettere il percorso, selezionare l&#39;azione da **Tipo**, quindi fare clic su **Aggiungi**. Potete specificare fino a 100 percorsi per ambiente. Dopo aver aggiunto i percorsi, fare clic su **Applica**.
+1. Inserisci il percorso, seleziona l’azione da **Tipo**, quindi fai clic su **Aggiungi**. Puoi specificare fino a 100 percorsi per ambiente. Dopo aver aggiunto i percorsi, fai clic su **Applica**.
 
    ![](assets/image2018-8-7_14-58-11.png)
 
-1. Una volta tornati sulla pagina **Impostazioni pipeline**, verrà visualizzato un riepilogo aggiornato delle selezioni.
+1. Una volta tornati alla pagina **Impostazioni pipeline**, viene visualizzato un riepilogo aggiornato delle selezioni.
 
-   Fare clic su **Salva** per mantenere tale configurazione.
+   Fai clic su **Salva** per mantenere questa configurazione.
 
    ![](assets/image2018-8-7_15-4-30.png)
 
 
-1. Accedete alla scheda **Testing** per definire i criteri di test per il programma.
+1. Accedi alla scheda **Testing** per definire i criteri di test per il programma.
 
-   Ora potete configurare i parametri del test delle prestazioni.
+   Ora puoi configurare i parametri del test delle prestazioni.
 
-   È possibile configurare *AEM Sites* e *AEM Assets* Performance Testing, a seconda dei prodotti per i quali si dispone della licenza.
+   Puoi configurare i test delle prestazioni *AEM Sites* e *AEM Assets* in base ai prodotti per i quali hai concesso la licenza.
 
    **AEM Sites:**
 
-   Cloud Manager esegue il test delle prestazioni per  programmi AEM Sites richiedendo pagine (come utente non autenticato per impostazione predefinita) sul server di pubblicazione dell’area di visualizzazione per un periodo di test di 30 minuti e misurando il tempo di risposta per ciascuna pagina e varie metriche a livello di sistema. Queste richieste sono effettuate da un set di indirizzi noti e dedicati. Gli intervalli di indirizzi possono essere ottenuti dal Customer Success Engineer o  rappresentante del Adobe.
+   Cloud Manager esegue test delle prestazioni per i programmi AEM Sites richiedendo pagine (come utente non autenticato per impostazione predefinita) sul server di pubblicazione dell’area di visualizzazione per un periodo di test di 30 minuti e misurando il tempo di risposta per ciascuna pagina e varie metriche a livello di sistema. Queste richieste vengono effettuate da un set di indirizzi noti e dedicati. Gli intervalli di indirizzi possono essere ottenuti dal tuo Customer Success Engineer o rappresentante di Adobe.
 
-   Prima dell&#39;inizio del periodo di test di 30 minuti, Cloud Manager eseguirà la ricerca per indicizzazione nell&#39;ambiente Stage utilizzando un set di uno o più *seed* URL configurati dal Customer Success Engineer. A partire da questi URL, l’HTML di ciascuna pagina viene ispezionato e i collegamenti vengono attraversati in modo completamente lineare. Questo processo di ricerca per indicizzazione è limitato a un massimo di 5000 pagine. Le richieste del crawler hanno un timeout fisso di 10 secondi.
+   Prima dell’inizio del periodo di test di 30 minuti, Cloud Manager eseguirà la ricerca per indicizzazione dell’ambiente Stage utilizzando un set di uno o più URL *seed* configurati dal Customer Success Engineer. A partire da questi URL, l’HTML di ogni pagina viene esaminato e i collegamenti vengono attraversati in modo molto semplice. Questo processo di ricerca per indicizzazione è limitato a un massimo di 5000 pagine. Le richieste del crawler hanno un timeout fisso di 10 secondi.
 
-   Le pagine sono selezionate da tre **set di pagine**; potete scegliere da uno a tutti e tre i set. La distribuzione del traffico si basa sul numero di set selezionati, ossia, se tutti e tre i set sono selezionati, il 33% delle visualizzazioni di pagina totali viene indirizzato verso ciascun set; se sono selezionati due, il 50% va a ciascun set; se ne è selezionata una, il 100% del traffico arriva a quel set.
+   Le pagine sono selezionate da tre **set di pagine**; puoi scegliere da uno a tutti e tre i set. La distribuzione del traffico si basa sul numero di set selezionati, ovvero, se sono selezionati tutti e tre, il 33% delle visualizzazioni di pagina totali viene indirizzato a ciascun set; se sono selezionati due, il 50% va a ciascun set; se ne è selezionato uno, il 100% del traffico viene indirizzato a tale set.
 
-   Ad esempio, supponiamo che esista una divisione del 50%/50% tra le pagine Live popolari e le nuove pagine impostate (in questo esempio, non vengono utilizzate altre pagine Live) e che il set Nuove pagine contenga 3000 pagine. L&#39;indicatore KPI per le visualizzazioni di pagina al minuto è impostato su 200. Nel periodo di prova di 30 minuti:
+   Ad esempio, supponiamo che ci sia una divisione del 50%/50% tra le pagine popolari Live e le nuove pagine impostate (in questo esempio, non vengono utilizzate altre pagine Live) e che il set Nuove pagine contenga 3000 pagine. Il KPI per le visualizzazioni di pagina al minuto è impostato su 200. Nel periodo di prova di 30 minuti:
 
-   * Ognuna delle 25 pagine del set Popular Live Pages verrà visualizzata 120 volte - (200 * 0.5) / 25) * 30 = 120
+   * Ognuna delle 25 pagine del set di pagine popolari in tempo reale verrà visualizzata 120 volte - (200 * 0.5) / 25) * 30 = 120
 
-   * Ognuna delle 3000 pagine del set di nuove pagine verrà visualizzata una volta - (200 * 0,5) / 3000) * 30 = 1
+   * Ognuna delle 3000 pagine del set di nuove pagine verrà visualizzata una volta - (200 * 0.5) / 3000) * 30 = 1
 
    ![](assets/Configuring_Pipeline_AEM-Sites.png)
 
-   Per ulteriori informazioni, fare riferimento a [Test delle prestazioni autenticate](#authenticated-performance-testing).
+   Per ulteriori informazioni, consulta [Test delle prestazioni autenticate](#authenticated-performance-testing) .
 
    **AEM Assets:**
 
-   Cloud Manager esegue test delle prestazioni per  programmi AEM Assets caricando ripetutamente risorse per un periodo di test di 30 minuti e misurando il tempo di elaborazione per ciascuna risorsa, nonché varie metriche a livello di sistema. Questa funzione può caricare sia immagini che documenti PDF. La distribuzione del numero di risorse di ciascun tipo caricate al minuto viene impostata nella schermata Impostazione tubazione o Modifica.
+   Cloud Manager esegue test delle prestazioni per i programmi AEM Assets caricando ripetutamente le risorse per un periodo di test di 30 minuti e misurando il tempo di elaborazione per ciascuna risorsa e varie metriche a livello di sistema. Questa funzionalità può caricare sia immagini che documenti PDF. La distribuzione del numero di risorse di ciascun tipo caricate al minuto viene impostata nella schermata Configurazione della pipeline o Modifica.
 
-   Ad esempio, se viene utilizzata una divisione 70/30, come illustrato nella figura riportata di seguito. Ci sono 10 risorse caricate al minuto, 7 immagini saranno caricate al minuto e 3 documenti.
+   Ad esempio, se si utilizza una suddivisione 70/30, come illustrato nella figura riportata di seguito. Le risorse caricate al minuto sono 10, verranno caricate 7 immagini al minuto e 3 documenti.
 
    ![](assets/Configuring_Pipeline_AEM-Assets.png)
 
    >[!NOTE]
    >
-   >Esiste un’immagine e un documento PDF predefiniti, ma nella maggior parte dei casi i clienti desiderano caricare le proprie risorse. Questa operazione può essere eseguita dalla schermata Configurazione tubazione o Modifica. Sono supportati i formati immagine più comuni, come JPEG, PNG, GIF e BMP, insieme ai file Photoshop,  Illustrator e Postscript.
+   >Esiste un’immagine e un documento PDF predefiniti, ma nella maggior parte dei casi i clienti desiderano caricare le proprie risorse. Questa operazione può essere eseguita dalla schermata Configurazione della pipeline o Modifica. Sono supportati i formati immagine più comuni, come JPEG, PNG, GIF e BMP, insieme ai file Photoshop, Illustrator e Postscript.
 
-1. Fare clic su **Salva** per completare la configurazione del processo di pipeline.
+1. Fai clic su **Salva** per completare la configurazione del processo di pipeline.
 
    >[!NOTE]
    >
-   >Inoltre, una volta impostata la pipeline, è ancora possibile modificare le impostazioni per lo stesso tramite la sezione **Impostazioni pipeline di produzione** dell&#39; [!UICONTROL Cloud Manager] interfaccia utente.
+   >Inoltre, una volta impostata la pipeline, è comunque possibile modificare le impostazioni per la stessa tramite la sezione **Impostazioni pipeline di produzione** dell’interfaccia utente [!UICONTROL Cloud Manager].
 
    ![](assets/Production-Pipeline.png)
 
-### Verifica delle prestazioni autenticate {#authenticated-performance-testing}
+### Test delle prestazioni autenticati {#authenticated-performance-testing}
 
-I clienti AMS con siti autenticati possono specificare un nome utente e una password che Cloud Manager utilizzerà per accedere al sito Web durante la verifica delle prestazioni di Sites.
+I clienti AMS con siti autenticati possono specificare un nome utente e una password che Cloud Manager utilizzerà per accedere al sito web durante il test delle prestazioni di Sites.
 
-Il nome utente e la password sono specificati come [Variabili pipeline](/help/using/build-environment-details.md#pipeline-variables) con i nomi `CM_PERF_TEST_BASIC_USERNAME` e `CM_PERF_TEST_BASIC_PASSWORD`.
+Il nome utente e la password sono specificati come [Variabili della pipeline](/help/using/build-environment-details.md#pipeline-variables) con i nomi `CM_PERF_TEST_BASIC_USERNAME` e `CM_PERF_TEST_BASIC_PASSWORD`.
 
-Sebbene non sia strettamente richiesto, si consiglia di utilizzare il tipo di variabile stringa per il nome utente e il tipo di variabile secretString per la password. Se vengono specificati entrambi, ogni richiesta del crawler test delle prestazioni e degli utenti virtuali di prova conterrà queste credenziali come autenticazione HTTP di base.
+Sebbene non sia strettamente richiesto, si consiglia di utilizzare il tipo di variabile stringa per il nome utente e il tipo di variabile secretString per la password. Se vengono specificati entrambi, ogni richiesta del crawler dei test delle prestazioni e degli utenti virtuali del test conterrà queste credenziali come autenticazione HTTP Basic.
 
-Per impostare queste variabili utilizzando l&#39;interfaccia CLI [Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager), eseguire:
+Per impostare queste variabili utilizzando la [CLI di Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager), esegui:
 
 `$ aio cloudmanager:set-pipeline-variables <pipeline id> --variable CM_PERF_TEST_BASIC_USERNAME <username> --secret CM_PERF_TEST_BASIC_PASSWORD <password>`
 
-## Tubazioni non di produzione e di qualità del codice
+## Solo pipeline non di produzione e di qualità del codice
 
-Oltre alla pipeline principale che viene implementata per la fase e la produzione, i clienti possono impostare altri oleodotti, denominati **Non-Production Pipelines**. Tali pipeline eseguono sempre i passaggi di creazione e qualità del codice. Facoltativamente, possono anche essere distribuiti nell&#39;ambiente Adobe Managed Services.
+Oltre alla pipeline principale che viene implementata in fase e produzione, i clienti possono impostare pipeline aggiuntive, denominate **Non-Production Pipelines**. Queste pipeline eseguono sempre i passaggi di creazione e qualità del codice. Facoltativamente, possono anche distribuire in ambiente Adobe Managed Services.
 
-## Esercitazione video {#video-tutorial-two}
+## Tutorial video {#video-tutorial-two}
 
-### Pipeline non produzione e qualità codice di Cloud Manager{#non-prod-video}
+### Pipeline solo per la qualità del codice e non di produzione di Cloud Manager {#non-prod-video}
 
-I gasdotti CI/CD non di produzione sono suddivisi in due categorie, i gasdotti Code Quality e i gasdotti di distribuzione. La qualità del codice distribuisce tutto il codice da un ramo Git per creare e per essere valutato in base alla scansione della qualità del codice di Cloud Manager.
+Le pipeline CI/CD non di produzione sono suddivise in due categorie: pipeline di qualità del codice e pipeline di distribuzione. La qualità del codice pipeline tutto il codice da un ramo Git alla creazione ed è valutata in base alla scansione della qualità del codice di Cloud Manager.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26316/)
 
-Nella schermata iniziale, queste condotte sono elencate in una nuova scheda:
+Nella schermata iniziale, queste pipeline sono elencate in una nuova scheda:
 
-1. Accedete alla sezione **Pipeline non di produzione** dalla schermata principale di Cloud Manager.
+1. Accedi alla sezione **pipeline non di produzione** dalla schermata iniziale di Cloud Manager.
 
    ![](assets/Non-Production-Pipeline.png)
 
-1. Fate clic sul pulsante Aggiungi per specificare il nome della tubazione, il tipo di tubazione e il ramo Git.
+1. Fate clic sul pulsante Aggiungi per specificare il nome della pipeline, il tipo di pipeline e la diramazione Git.
 
-   Inoltre, puoi impostare l&#39;attivatore di distribuzione e un importante comportamento di errore dalle opzioni della pipeline.
+   Inoltre, è possibile impostare il trigger di distribuzione e il comportamento di errore importante dalle opzioni della pipeline.
 
    ![](assets/non-prod-pipe.png)
 
-1. Fate clic su **Salva** e la pipeline viene visualizzata sulla scheda nella schermata iniziale con tre azioni:
+1. Fai clic su **Salva** e la pipeline viene visualizzata sulla scheda nella schermata iniziale con tre azioni:
 
    * **Modifica** : consente di modificare le impostazioni della pipeline
-   * **Dettaglio** : visualizza l&#39;ultima esecuzione della pipeline (se presente)
-   * **Build** : passa alla pagina di esecuzione dalla quale è possibile eseguire la pipeline
+   * **Dettaglio** : visualizza l’ultima esecuzione della pipeline (se presente)
+   * **Build** : consente di passare alla pagina di esecuzione dalla quale è possibile eseguire la pipeline.
 
    ![](assets/Non-prod-2.png)
 
    >[!NOTE]
    >
-   >Durante l&#39;esecuzione della pipeline, viene visualizzato il passaggio corrente ed è disponibile solo l&#39;azione **Details**.
+   >Durante l’esecuzione della pipeline, viene visualizzato il passaggio corrente ed è disponibile solo l’azione **Dettagli** .
 
 ## Passaggi successivi {#the-next-steps}
 
-Dopo aver configurato la pipeline, è necessario distribuire il codice.
+Dopo aver configurato la pipeline, devi distribuire il codice.
 
-Per ulteriori informazioni, vedere [Distribuzione del codice](deploying-code.md).
+Per ulteriori informazioni, consulta [Implementare il codice](deploying-code.md) .
