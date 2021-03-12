@@ -4,10 +4,10 @@ seo-title: Note sulla versione di AEM Cloud Manager 2021.3.0
 description: Segui questa pagina per ottenere informazioni sulla versione 2021.3.0 di Cloud Manager
 seo-description: Segui questa pagina per ottenere informazioni sulla versione 2021.3.0 di AEM Cloud Manager
 translation-type: tm+mt
-source-git-commit: b5233e1932888b515d8dc26a6493cbd26686bc3c
+source-git-commit: b0c29ed6712abd556458aea6d49f6382f183cdae
 workflow-type: tm+mt
-source-wordcount: '221'
-ht-degree: 5%
+source-wordcount: '279'
+ht-degree: 4%
 
 ---
 
@@ -21,6 +21,12 @@ La data di rilascio per la versione 2021.3.0 di [!UICONTROL Cloud Manager] è l�
 
 ## Novità {#whats-new}
 
+* Gli utenti con le autorizzazioni necessarie possono ora modificare il programma, consentendo loro di effettuare le seguenti operazioni in modalità self-service:
+
+   *Aggiungere la soluzione Sites a un programma esistente con Assets (o viceversa).
+   * Rimuovi Sites (o Assets) da un programma esistente sia con Sites che con Assets.
+   * È possibile aggiungere (indietro) una soluzione al programma esistente o come nuovo programma.
+
 * È stato introdotto un nuovo strumento per la qualità del codice per convalidare la configurazione del dispatcher cliente (strumento di ottimizzazione del dispatcher).
 
 * Gli utenti possono ora visualizzare i propri ruoli di Cloud Manager selezionando l’opzione **Visualizza ruoli di Cloud Manager** dopo aver visualizzato l’icona Profilo utente (in alto a destra) di Unified Shell.
@@ -29,7 +35,7 @@ La data di rilascio per la versione 2021.3.0 di [!UICONTROL Cloud Manager] è l�
 
 * L’etichetta **Versione** è stata rinominata **Tag Git** nella schermata di esecuzione della pipeline di produzione.
 
-* Le etichette che definiscono il comportamento quando le metriche importanti non soddisfano la soglia definita sono state rinominate per rispecchiare il loro comportamento effettivo - Annulla immediatamente e Approva immediatamente.
+* Le etichette che definiscono il comportamento quando le metriche importanti non soddisfano la soglia definita sono state rinominate per riflettere il loro comportamento vero: *Annulla immediatamente* e Approva *Immediatamente*.
 
 * Gli elenchi di elementi obsoleti di classi e metodi sono stati aggiornati in base alla versione `2021.3.4997.20210303T022849Z-210225` dell’SDK del Cloud Service AEM.
 
