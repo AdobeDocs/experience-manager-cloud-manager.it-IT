@@ -4,9 +4,9 @@ seo-title: Note sulla versione di AEM Cloud Manager 2021.3.0
 description: Segui questa pagina per ottenere informazioni sulla versione 2021.3.0 di Cloud Manager
 seo-description: Segui questa pagina per ottenere informazioni sulla versione 2021.3.0 di AEM Cloud Manager
 translation-type: tm+mt
-source-git-commit: 090505e737b8cb224d87f117a9b5e786a4f99851
+source-git-commit: 47424ea0e087f1f69db0aef8ca2122de2352a6e0
 workflow-type: tm+mt
-source-wordcount: '311'
+source-wordcount: '308'
 ht-degree: 3%
 
 ---
@@ -35,7 +35,7 @@ La data di rilascio per la versione 2021.3.0 di [!UICONTROL Cloud Manager] è l�
 
 * L’etichetta **Versione** è stata rinominata **Tag Git** nella schermata di esecuzione della pipeline di produzione.
 
-* Le etichette che definiscono il comportamento quando le metriche importanti non soddisfano la soglia definita sono state rinominate per riflettere il loro comportamento vero: **Annulla immediatamente** e **Approva immediatamente**. Per ulteriori informazioni, consulta [Configurazione delle impostazioni della pipeline da Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#configuring-the-pipeline-settings-from-cloud-manager) .
+* Le etichette che definiscono il comportamento quando le metriche importanti non soddisfano la soglia definita sono state rinominate per riflettere il loro comportamento vero: **Annulla immediatamente** e **Approva immediatamente**. Per ulteriori informazioni, consulta [Configurazione delle impostazioni della pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#configuring-the-pipeline-settings-from-cloud-manager) .
 
 * Gli elenchi di elementi obsoleti di classi e metodi sono stati aggiornati in base alla versione `2021.3.4997.20210303T022849Z-210225` dell’SDK del Cloud Service AEM.
 
