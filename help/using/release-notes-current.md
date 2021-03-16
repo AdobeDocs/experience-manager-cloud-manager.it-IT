@@ -4,10 +4,10 @@ seo-title: Note sulla versione di AEM Cloud Manager 2021.3.0
 description: Segui questa pagina per ottenere informazioni sulla versione 2021.3.0 di Cloud Manager
 seo-description: Segui questa pagina per ottenere informazioni sulla versione 2021.3.0 di AEM Cloud Manager
 translation-type: tm+mt
-source-git-commit: fde8cbd22ff36e0d30409f68e8a0523c814ccf90
+source-git-commit: 8c057ca2d3dfe8c8575300084b7bc83c95556d67
 workflow-type: tm+mt
-source-wordcount: '315'
-ht-degree: 3%
+source-wordcount: '257'
+ht-degree: 4%
 
 ---
 
@@ -21,12 +21,6 @@ La data di rilascio per la versione 2021.3.0 di [!UICONTROL Cloud Manager] è l�
 La prossima versione è prevista per il 08 aprile 2021.
 
 ## Novità {#whats-new}
-
-* Gli utenti con le autorizzazioni necessarie possono ora modificare il programma, consentendo loro di effettuare le seguenti operazioni in modalità self-service:
-
-   * Aggiungi la soluzione Sites a un programma esistente con Assets (o viceversa).
-   * Rimuovi Sites (o Assets) da un programma esistente sia con Sites che con Assets.
-   * È possibile aggiungere (indietro) una soluzione al programma esistente o come nuovo programma.
 
 * È stato introdotto un nuovo strumento per la qualità del codice [Dispatcher Optimization Tool](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html?lang=en#dispatcher-optimization-tool-rules) per convalidare la configurazione del dispatcher cliente.
 
