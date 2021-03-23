@@ -1,13 +1,14 @@
 ---
 title: Note sulla versione 2020.5.0
-seo-title: Note sulla versione di AEM Cloud Manager per la versione 2020.5.0
+seo-title: Note sulla versione di AEM Cloud Manager 2020.5.0
 description: Segui questa pagina per ottenere informazioni sulla versione 2020.5.0 di Cloud Manager
-seo-description: Segui questa pagina per ottenere informazioni su AEM Cloud Manager Release 2020.5.0
+seo-description: Segui questa pagina per ottenere informazioni sulla versione 2020.5.0 di AEM Cloud Manager
+feature: Informazioni sulla versione
 translation-type: tm+mt
-source-git-commit: 0652436ec0c1c95d270a06a600424dbfd0140b27
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '189'
+ht-degree: 67%
 
 ---
 
@@ -17,7 +18,7 @@ La sezione seguente illustra le note generali sulla versione per la versione [!U
 
 ## Data di rilascio {#release-date}
 
-La data di rilascio per la versione [!UICONTROL Cloud Manager] 2020.5.0 è il 07 maggio 2020.
+La data di rilascio per la versione 2020.5.0 è il 7 maggio 2020.[!UICONTROL Cloud Manager]
 
 ## Novità {#whats-new}
 
@@ -39,5 +40,5 @@ La data di rilascio per la versione [!UICONTROL Cloud Manager] 2020.5.0 è il 07
 
 * Alcune schede nella pagina della panoramica non visualizzavano correttamente i nomi delle entità.
 
-* Alcune configurazioni di topologia genererebbero un errore nel passaggio del test delle prestazioni, anziché riportare le metriche mancanti.
+* Alcune configurazioni di topologia genererebbero un errore durante il passaggio del test delle prestazioni, anziché riportare le metriche mancanti.
 
