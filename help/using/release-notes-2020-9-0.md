@@ -1,13 +1,14 @@
 ---
 title: Note sulla versione 2020.9.0
-seo-title: Note sulla versione di AEM Cloud Manager per la versione 2020.9.0
-description: Segui questa pagina per ottenere informazioni sulla release 2020.9.0 di Cloud Manager
-seo-description: Segui questa pagina per ottenere informazioni su AEM Cloud Manager Release 2020.9.0
+seo-title: Note sulla versione di AEM Cloud Manager 2020.9.0
+description: Segui questa pagina per ottenere informazioni sulla versione 2020.9.0 di Cloud Manager
+seo-description: Segui questa pagina per ottenere informazioni sulla versione 2020.9.0 di AEM Cloud Manager
+feature: Informazioni sulla versione
 translation-type: tm+mt
-source-git-commit: aad2da58e5934999884553619dd97d42cc725d88
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
-source-wordcount: '99'
-ht-degree: 10%
+source-wordcount: '101'
+ht-degree: 11%
 
 ---
 
@@ -17,10 +18,10 @@ La sezione seguente illustra le note generali sulla versione per la versione [!U
 
 ## Data di rilascio {#release-date}
 
-La data di rilascio per la versione [!UICONTROL Cloud Manager] 2020.9.0 è il 3 settembre 2020.
+La data di rilascio per la versione 2020.9.0 è il 3 settembre 2020.[!UICONTROL Cloud Manager]
 
 ## Novità {#whats-new}
 
-* Il processo di costruzione è stato separato in tre diversi comandi Maven.
-* Se il repository git non viene clonato, verrà ripetuto fino a tre volte.
-* Ora è presente un indicatore nella pagina dei dettagli di esecuzione della pipeline quando l&#39;autenticazione viene utilizzata durante il test delle prestazioni.
+* Il processo di creazione è stato separato in tre diversi comandi Maven.
+* Se l’archivio Git non viene clonato, verranno eseguiti fino a tre tentativi.
+* È ora presente un indicatore nella pagina dei dettagli di esecuzione della pipeline quando viene utilizzata l’autenticazione durante il test delle prestazioni.
