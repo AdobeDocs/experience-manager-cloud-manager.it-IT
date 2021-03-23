@@ -1,32 +1,33 @@
 ---
 title: Note sulla versione 2019.11.0
-seo-title: Note sulla versione di AEM Cloud Manager per la versione 2019.11.0
+seo-title: Note sulla versione di AEM Cloud Manager 2019.11.0
 description: Segui questa pagina per ottenere informazioni sulla versione 2019.11.0 di Cloud Manager.
-seo-description: Segui questa pagina per ottenere informazioni su AEM Cloud Manager Release 2019.11.0.
+seo-description: Segui questa pagina per ottenere informazioni sulla versione 2019.11.0 di AEM Cloud Manager.
+feature: Informazioni sulla versione
 translation-type: tm+mt
-source-git-commit: 1f31e654272afa60cac3376ce4dc3bc76f0d9dda
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '152'
+ht-degree: 9%
 
 ---
 
 # Note sulla versione 2019.11.0 {#release-notes-for}
 
-La sezione seguente illustra le note generali sulla versione per la versione [!UICONTROL Cloud Manager] 2019.11.0 e aggiunge aggiornamenti al processo di convalida della pipeline e miglioramenti al test delle prestazioni delle risorse.
-Seguite le sezioni riportate di seguito per ulteriori dettagli.
+La sezione seguente illustra le note generali sulla versione per [!UICONTROL Cloud Manager] la versione 2019.11.0 e aggiunge aggiornamenti al processo di convalida della pipeline e miglioramenti al test delle prestazioni delle risorse.
+Per ulteriori informazioni, consulta le sezioni seguenti.
 
 ## Data di rilascio {#release-date}
 
-La data di rilascio per la versione [!UICONTROL Cloud Manager] 2019.11.0 è il 7 novembre 2019.
+La data di rilascio di [!UICONTROL Cloud Manager] versione 2019.11.0 è il 7 novembre 2019.
 
 ## Novità {#whats-new}
 
-* Se il passaggio di convalida della pipeline non riesce, ora viene visualizzato lo specifico errore di convalida rilevato.
+* Se la fase di convalida della pipeline non riesce, ora viene visualizzato l’errore di convalida specifico rilevato.
 * È stato migliorato il meccanismo utilizzato per eliminare le risorse durante il test delle prestazioni delle risorse.
-* Le schede *Pipelines* e *Ambiments* nella pagina **Overview** sono state aggiornate visivamente.
-* Lo switcher di programma è stato spostato (ora si trova sotto il logo Adobe Experience Manager).
+* Le schede *Pipelines* e *Ambienti* nella pagina **Panoramica** sono state aggiornate visivamente.
+* È stato spostato il Programma di commutazione (ora si trova sotto il logo Adobe Experience Manager).
 
 ## Correzioni di bug {#bug-fixes}
 
-* In alcune situazioni, la selezione dell&#39;opzione **Ignora modifiche bilanciamento carico** sulle tubazioni non di produzione non consentiva effettivamente questa opzione.
+* In alcune situazioni, la selezione dell&#39;opzione **Ignora modifiche bilanciamento carico** sulle pipeline non di produzione non attivava effettivamente questa opzione.
