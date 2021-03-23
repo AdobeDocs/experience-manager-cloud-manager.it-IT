@@ -8,10 +8,12 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
+feature: Guida introduttiva
+level: Principiante
 translation-type: tm+mt
-source-git-commit: 6ff4b6e950e153c98b6981ec09dfa0648809c693
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '752'
 ht-degree: 85%
 
 ---
@@ -22,13 +24,13 @@ ht-degree: 85%
 >[!CONTEXTUALHELP]
 >id="aemcloud_cloudmanager_introduction"
 >title="Introduzione a Cloud Manager"
->abstract="Consente alle organizzazioni di gestire autonomamente  Experience Manager nel cloud. Include un framework di integrazione continua e distribuzione continua (CI/CD, Continuous Integration/Continuous Delivery) che consente ai team IT e ai partner dell’implementazione di accelerare la distribuzione di personalizzazioni o aggiornamenti senza compromettere prestazioni o sicurezza."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/programs.html?lang=en#cloud-manager" text="Creazione di programmi"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/environments.html?lang=en#cloud-manager" text="Creazione di ambienti"
+>abstract="Consente alle organizzazioni di gestire in modo autonomo gli Experienci Manager nel cloud. Include un framework di integrazione continua e distribuzione continua (CI/CD, Continuous Integration/Continuous Delivery) che consente ai team IT e ai partner dell’implementazione di accelerare la distribuzione di personalizzazioni o aggiornamenti senza compromettere prestazioni o sicurezza."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/programs.html?lang=en#cloud-manager" text="Creare programmi"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/environments.html?lang=en#cloud-manager" text="Creare ambienti"
 
 ## Introduzione {#introduction}
 
-[!UICONTROL Cloud Manager], parte di Adobe Experience Manager (AEM) in Cloud, consente alle organizzazioni di gestire autonomamente  Experience Manager nel cloud. Include un framework di integrazione continua e distribuzione continua (CI/CD, Continuous Integration/Continuous Delivery) che consente ai team IT e ai partner dell’implementazione di accelerare la distribuzione di personalizzazioni o aggiornamenti senza compromettere prestazioni o sicurezza.
+[!UICONTROL Cloud Manager], parte di Adobe Experience Manager (AEM) in Cloud, consente alle organizzazioni di gestire in modo autonomo gli Experienci Manager nel cloud. Include un framework di integrazione continua e distribuzione continua (CI/CD, Continuous Integration/Continuous Delivery) che consente ai team IT e ai partner dell’implementazione di accelerare la distribuzione di personalizzazioni o aggiornamenti senza compromettere prestazioni o sicurezza.
 
 Tramite il portale clienti self-service di [!UICONTROL Cloud Manager], le **organizzazioni** possono eseguire o sfruttare quanto segue:
 
@@ -51,7 +53,7 @@ L’interfaccia utente di [!UICONTROL Cloud Manager] offre ai clienti un accesso
 
 I clienti definiscono gli indicatori chiave di prestazioni (KPI, Key Performance Indicators) specifici per l’applicazione, come i picchi di visualizzazioni della pagina al minuto e i tempi di risposta previsti per il caricamento di una pagina, che in ultima analisi costituiscono la base per la misurazione di una distribuzione di successo. È possibile definire facilmente ruoli e autorizzazioni per i diversi membri del gruppo. Se da una parte la nuova interfaccia self-service riporta il controllo nelle mani dell’utente, offre anche collegamenti alle best practice e accesso ai consigli degli esperti di Adobe, in grado di fornire il supporto necessario secondo necessità.
 
-Per esplorare e iniziare a utilizzare l&#39;interfaccia utente di [!UICONTROL Cloud Manager], vedere [Accesso alla prima volta](https://helpx.adobe.com/experience-manager/cloud-manager/using/first-time-login.html).
+Per esplorare e iniziare a utilizzare l&#39;interfaccia utente di [!UICONTROL Cloud Manager], consulta [Primo accesso](https://helpx.adobe.com/experience-manager/cloud-manager/using/first-time-login.html).
 
 ### Pipeline CI/CD {#ci-cd-pipeline}
 
@@ -59,7 +61,7 @@ Una delle funzionalità principali di [!UICONTROL Cloud Manager] è la capacità
 
 Attraverso l’interfaccia utente di [!UICONTROL Cloud Manager] i clienti possono configurare e avviare la pipeline CI/CD. Durante l’esecuzione della pipeline viene eseguita un’analisi approfondita del codice per garantire che solo le applicazioni di qualità elevata passino all’ambiente di produzione.
 
-Per ulteriori informazioni sulla configurazione della pipeline dall&#39;interfaccia utente di [!UICONTROL Cloud Manager], vedere [Configurare la pipeline CI/CD](https://helpx.adobe.com/experience-manager/cloud-manager/using/configuring-pipeline.html).
+Per ulteriori informazioni sulla configurazione della pipeline dall’interfaccia utente di [!UICONTROL Cloud Manager], consulta [Configurare la pipeline CI/CD](https://helpx.adobe.com/experience-manager/cloud-manager/using/configuring-pipeline.html).
 
 ### Modalità di distribuzione flessibili {#flexible-deployment-modes}
 
@@ -80,4 +82,4 @@ Durante un evento di scalabilità automatica, [!UICONTROL Cloud Manager] attiva 
 La funzione di scalabilità automatica si applica solo al livello Dispatcher/Publish e viene sempre eseguita con un metodo di scalabilità orizzontale, con almeno un segmento aggiuntivo di una coppia Dispatcher/Publish e fino a un massimo di dieci segmenti. La capacità aggiuntiva fornita verrà scalata manualmente entro un periodo di dieci giorni lavorativi, come determinato dal CSE (Customer Success Engineer).
 
 >[!NOTE]
->I clienti interessati a verificare se la scalabilità automatica è appropriata per la propria applicazione devono contattare il proprio rappresentante del Adobe CSE o .
+>I clienti interessati a verificare se la scalabilità automatica è appropriata per la propria applicazione devono contattare il proprio rappresentante CSE o Adobe.
