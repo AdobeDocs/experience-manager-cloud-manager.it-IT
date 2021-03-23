@@ -1,13 +1,14 @@
 ---
 title: Note sulla versione 2020.7.0
-seo-title: AEM Cloud Manager - Note sulla versione 2020.7.0
+seo-title: Note sulla versione di AEM Cloud Manager 2020.7.0
 description: Segui questa pagina per ottenere informazioni sulla versione 2020.7.0 di Cloud Manager
-seo-description: Segui questa pagina per ottenere informazioni su AEM Cloud Manager Release 2020.7.0
+seo-description: Segui questa pagina per ottenere informazioni sulla versione 2020.7.0 di AEM Cloud Manager
+feature: Informazioni sulla versione
 translation-type: tm+mt
-source-git-commit: c35398110e9d8311bf58f217efdd082cf0cfd90a
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '212'
+ht-degree: 52%
 
 ---
 
@@ -17,11 +18,11 @@ La sezione seguente illustra le note generali sulla versione per la versione [!U
 
 ## Data di rilascio {#release-date}
 
-La data di rilascio per la versione [!UICONTROL Cloud Manager] 2020.7.0 è il 09 luglio 2020.
+La data di rilascio per la versione 2020.7.0 è il 9 luglio 2020.[!UICONTROL Cloud Manager]
 
 ## Novità {#whats-new}
 
-* Lo scollegamento e il collegamento delle istanze dello dispatcher dai bilanciatori del carico durante le distribuzioni di produzione ora funzionano in modo più coerente.
+* Il collegamento e il collegamento delle istanze del dispatcher dai load balancer durante le distribuzioni di produzione ora funziona in modo più coerente.
 
 * Il contenitore di build di Cloud Manager ora supporta sia Java 8 che Java 11.
 
@@ -30,7 +31,7 @@ Per ulteriori informazioni, consulta [Variabili delle pipeline](/help/using/buil
 
 ## Correzioni di bug {#bug-fixes}
 
-* Le opzioni **Annulla** e **Salva** nella pagina Modifica tubazione non produzione non erano sempre visibili.
+* Le opzioni **Annulla** e **Salva** nella pagina Modifica pipeline non di produzione non erano sempre visibili.
 
 * Alcuni errori nel processo di qualità del codice potevano causare la generazione non corretta del file di registro.
 
@@ -38,6 +39,6 @@ Per ulteriori informazioni, consulta [Variabili delle pipeline](/help/using/buil
 
 ## Problemi noti {#known-issues}
 
-* Quando un ambiente AMS contiene un&#39;istanza in standby, il messaggio registrato indica che l&#39;istanza è disattivata anziché in modalità standby.
+* Quando un ambiente AMS contiene un’istanza di standby, il messaggio registrato indica che l’istanza è inattiva anziché in modalità standby.
 
 * A causa di una modifica nel modo in cui viene calcolata la copertura del codice, la versione _minima_ del plugin Jacoco è ora 0.7.5.201505241946 (rilasciata a maggio 2015). I clienti che fanno esplicito riferimento a una versione precedente riceveranno un messaggio di errore nel processo di qualità del codice.
