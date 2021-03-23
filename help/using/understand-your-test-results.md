@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: 7061910ae2cb0aae10876faf448838570f02d9be
+source-git-commit: f62c967feec3960499de93443548422167fedfa7
 workflow-type: tm+mt
-source-wordcount: '2593'
+source-wordcount: '2681'
 ht-degree: 4%
 
 ---
@@ -112,28 +112,30 @@ Quindi la soluzione corretta è quella di rimuovere la password hardcoded.
 
 [!UICONTROL Cloud Manager] esegue la fase  ***AEM Security Heath*** Checkson esistente dopo la distribuzione e segnala lo stato tramite l’interfaccia utente. I risultati vengono aggregati da tutte le istanze AEM nell’ambiente.
 
+Questi stessi controlli di integrità possono essere eseguiti in qualsiasi momento tramite la console Web o il dashboard delle operazioni.
+
 Se una delle **Istanze** segnala un errore per una determinata verifica dello stato di salute, l&#39;intero **Ambiente** non riesce a controllare lo stato di salute. Come per i test di qualità e prestazioni del codice, questi controlli di integrità sono organizzati in categorie e segnalati utilizzando il sistema di verifica a tre livelli. L&#39;unica distinzione è che non esiste alcuna soglia nel caso di test di sicurezza. Tutti i controlli sanitari sono semplicemente superati o falliti.
 
 Nella tabella seguente sono elencati i controlli correnti:
 
 | **Nome** | **Implementazione del controllo dello stato** | **Categoria** |
 |---|---|---|
-| Preparazione dell&#39;API dell&#39;attacco firewall di deserializzazione in uno stato accettabile | Compatibilità Attach Api di firewall deserializzazione | Critico |
-| Il firewall di deserializzazione funziona | Firewall deserializzazione funzionale | Critico |
-| Firewall di deserializzazione caricato | Firewall deserializzazione caricato | Critico |
-| L&#39;implementazione AuthorizableNodeName non espone l&#39;ID autorizzabile nel nome/percorso del nodo. | Generazione nome nodo autorizzabile | Critico |
-| Le password predefinite sono state modificate | Account di login predefiniti | Critico |
+| Preparazione dell&#39;API dell&#39;attacco firewall di deserializzazione in uno stato accettabile | [Compatibilità Attach Api di firewall deserializzazione](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/mitigating-serialization-issues.html?lang=en#security) | Critico |
+| Il firewall di deserializzazione funziona | [Firewall deserializzazione funzionale](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/mitigating-serialization-issues.html?lang=en#security) | Critico |
+| Firewall di deserializzazione caricato | [Firewall deserializzazione caricato](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/mitigating-serialization-issues.html?lang=en#security) | Critico |
+| L&#39;implementazione AuthorizableNodeName non espone l&#39;ID autorizzabile nel nome/percorso del nodo. | [Generazione nome nodo autorizzabile](https://experienceleague.adobe.com/docs/experience-manager-64/administering/security/security-checklist.html?lang=en#security) | Critico |
+| Le password predefinite sono state modificate | [Account di login predefiniti](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=en#users-and-groups-in-aem) | Critico |
 | Il servlet di GET predefinito Sling è protetto dagli attacchi DOS. | Sling Get Servlet | Critico |
 | Il gestore Java Script Sling è configurato in modo appropriato | Sling Java Script Handler | Critico |
 | Il gestore di script Sling JSP è configurato in modo appropriato | Sling JSP Script Handler | Critico |
 | SSL è configurato correttamente | Configurazione SSL | Critico |
 | Nessun criterio di profilo utente ovviamente non sicuro trovato | Accesso standard profilo utente | Critico |
-| Il filtro Sling Referrer è configurato per prevenire attacchi CSRF | Sling Referrer Filter | Importante |
+| Il filtro Sling Referrer è configurato per prevenire attacchi CSRF | [Sling Referrer Filter](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-checklist.html?lang=en#security) | Importante |
 | Adobe Granite HTML Library Manager è configurato in modo appropriato | Configurazione manager libreria CQ HTML | Importante |
 | Il bundle CRXDE Support è disabilitato | Supporto CRXDE | Importante |
 | Il bundle e il servlet Sling DavEx sono disabilitati | Verifica stato DavEx | Importante |
 | Contenuto di esempio non installato | Pacchetti contenuti di esempio | Importante |
-| Il filtro di richiesta WCM e il filtro di debug WCM sono disabilitati | Configurazione filtri WCM | Importante |
+| Il filtro di richiesta WCM e il filtro di debug WCM sono disabilitati | [Configurazione filtri WCM](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/osgi-configuration-settings.html?lang=en#configuring) | Importante |
 | Il bundle e il servlet Sling WebDAV sono configurati in modo appropriato | Verifica stato WebDAV | Importante |
 | Il server web è configurato per impedire il click-jacking | Configurazione server Web | Importante |
 | La replica non utilizza l&#39;utente &quot;admin&quot; | Utenti replica e trasporto | Info |
