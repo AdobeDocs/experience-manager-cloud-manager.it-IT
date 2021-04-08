@@ -4,7 +4,7 @@ description: Segui questa pagina per ottenere informazioni sulla versione 2021.4
 feature: Informazioni sulla versione
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 translation-type: tm+mt
-source-git-commit: 0c33fd9f1af4c98564c9fd14a468fc3bf27744ee
+source-git-commit: 1f7f87a4b944d1fadc708958a96a1bda7d41da5d
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 7%
@@ -33,11 +33,11 @@ La prossima versione è prevista per il 6 maggio 2021.
 
 * È stato chiarito il messaggio di errore durante l’avvio di una pipeline quando un ambiente è stato eliminato.
 
-* I bundle OSGi forniti dai progetti Eclipse ora sono esclusi dalla regola.
+* I bundle OSGi forniti dai progetti Eclipse ora sono esclusi dalla regola `CQBP-84--dependencies`.
 
 ## Correzioni di bug {#bug-fixes}
 
-* Errori rari e transitori che possono verificarsi durante il passaggio Test risorse nella pipeline di produzione.
+* Errori rari e transitori che possono verificarsi al passaggio *Assets Test* nella pipeline di produzione.
 
 * Una barra finale nel test di caricamento della pipeline di produzione causava un errore 404.
 
