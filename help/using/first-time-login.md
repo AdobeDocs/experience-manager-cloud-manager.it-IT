@@ -9,14 +9,14 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 2221d1d5-dbc2-4175-8371-60344f932a82
 feature: Guida introduttiva
+exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
 translation-type: tm+mt
-source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
+source-git-commit: 9be78d21b455095c1b1bd49cdb267a8aa5624927
 workflow-type: tm+mt
-source-wordcount: '249'
-ht-degree: 9%
+source-wordcount: '213'
+ht-degree: 10%
 
 ---
-
 
 # Primo accesso {#first-time-login}
 
@@ -24,14 +24,6 @@ Dopo aver configurato le configurazioni generali per [!UICONTROL Cloud Manager],
 
 >[!NOTE]
 >A seconda dei ruoli assegnati in [!UICONTROL Cloud Manager] e dello stato dell’applicazione, durante l’utilizzo dell’interfaccia utente [!UICONTROL Cloud Manager] verranno visualizzate diverse schermate.
-
-## Tutorial video {#video-tutorial-one}
-
-### Programmi di Cloud Manager {#programs-video}
-
-Il video seguente fornisce una panoramica dei programmi Cloud Manager che rappresentano set di ambienti AEM che supportano set logici di iniziative aziendali, in genere corrispondenti a un contratto a livello di servizio (SLA, Service Level Agreement) acquistato.
-
->[!VIDEO](https://video.tv.adobe.com/v/26313/)
 
 ## Accesso per la prima volta {#logging-in-for-the-first-time}
 
