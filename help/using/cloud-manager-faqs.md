@@ -3,7 +3,7 @@ title: Domande frequenti su Cloud Manager
 seo-title: Domande frequenti su Cloud Manager
 description: Fai riferimento alle domande frequenti su Cloud Manager per ricevere alcuni suggerimenti per la risoluzione dei problemi
 seo-description: Segui questa pagina per ottenere le risposte sulle domande frequenti su Cloud Manager
-feature: Guida introduttiva
+feature: Getting Started
 translation-type: tm+mt
 source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt

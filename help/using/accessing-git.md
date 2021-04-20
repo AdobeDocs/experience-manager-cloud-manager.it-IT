@@ -3,7 +3,7 @@ title: Accesso a Git
 seo-title: Accesso a Git
 description: Questa pagina descrive come accedere e gestire l’archivio Git.
 seo-description: Segui questa pagina per scoprire come accedere e gestire l’archivio Git.
-feature: Archivi Git
+feature: Git Repositories
 translation-type: tm+mt
 source-git-commit: c5d32d49782c899d013fcc60b9c4d2b67e9350ae
 workflow-type: tm+mt

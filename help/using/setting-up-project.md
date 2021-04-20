@@ -1,7 +1,7 @@
 ---
 title: Impostazione del progetto
 description: Segui questa pagina per scoprire come impostare un progetto
-feature: Guida introduttiva, produzione
+feature: Getting Started, Production
 translation-type: tm+mt
 source-git-commit: c5d32d49782c899d013fcc60b9c4d2b67e9350ae
 workflow-type: tm+mt

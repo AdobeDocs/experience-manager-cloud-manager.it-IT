@@ -1,7 +1,7 @@
 ---
 title: Utilizzo della procedura guidata
 description: Segui questa pagina per scoprire come utilizzare la procedura guidata per creare un progetto di applicazione AEM
-feature: Guida introduttiva
+feature: Getting Started
 translation-type: tm+mt
 source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
