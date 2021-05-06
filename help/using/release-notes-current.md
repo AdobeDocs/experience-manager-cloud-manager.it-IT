@@ -3,10 +3,10 @@ title: Note sulla versione 2021.5.0
 description: Segui questa pagina per ottenere informazioni sulla versione 2021.5.0 di Cloud Manager
 feature: Informazioni sulla versione
 translation-type: tm+mt
-source-git-commit: 3d6f9a760a1e5bafdae6ece5627358524467a0d2
+source-git-commit: 849a2df2f272973740c1dd8580daaa518f2c9ec4
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '181'
+ht-degree: 7%
 
 ---
 
@@ -33,8 +33,6 @@ La prossima versione è prevista per il 3 giugno 2021.
 * L&#39;esperienza del programma Edit è stata aggiornata.
 
 ## Correzioni di bug {#bug-fixes}
-
-* A volte, l&#39;utente può visualizzare uno stato verde *attivo* accanto a un Inserire nell&#39;elenco Consentiti IP anche quando tale configurazione non è stata distribuita.
 
 * Invece di rimuovere le variabili &quot;eliminate&quot;, le variabili delle pipeline API le contrassegnavano solo con lo stato &quot;ELIMINATO&quot;.
 
