@@ -1,44 +1,43 @@
 ---
-title: Note sulla versione 2021.4.0
-description: Segui questa pagina per ottenere informazioni sulla versione 2021.4.0 di Cloud Manager
-feature: Release Information
-exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
+title: Note sulla versione 2021.5.0
+description: Segui questa pagina per ottenere informazioni sulla versione 2021.5.0 di Cloud Manager
+feature: Informazioni sulla versione
 translation-type: tm+mt
-source-git-commit: 1f7f87a4b944d1fadc708958a96a1bda7d41da5d
+source-git-commit: 5f81fdb86b1dfa6c748bb7784ef00dc062c9f8ef
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 7%
+source-wordcount: '202'
+ht-degree: 6%
 
 ---
 
-# Note sulla versione 2021.4.0 {#release-notes-for}
+# Note sulla versione 2021.5.0 {#release-notes-for}
 
-La sezione seguente illustra le note generali sulla versione per [!UICONTROL Cloud Manager] la versione 2021.4.0.
+La sezione seguente illustra le note generali sulla versione per [!UICONTROL Cloud Manager] la versione 2021.5.0.
 
 ## Data di rilascio {#release-date}
 
-La data di rilascio per la versione 2021.4.0 è il 8 aprile 2021.
+La data di rilascio per la versione 2021.5.0 è il 6 maggio 2021.
 [!UICONTROL Cloud Manager]
-La prossima versione è prevista per il 6 maggio 2021.
+La prossima versione è prevista per il 6 giugno 2021.
 
 ## Novità {#whats-new}
 
-* Il timeout della richiesta per gli utenti virtuali del test delle prestazioni è stato aumentato da 20 a 60 secondi.
+* La regola di qualità PackageOverlaps ora rileva i casi in cui lo stesso pacchetto è stato distribuito più volte, ovvero in più posizioni incorporate, nello stesso set di pacchetti distribuito.
 
-* Il pulsante Manage Git (Gestisci Git) viene visualizzato sulla scheda Pipelines (Pipelines) anche se non è stata configurata alcuna pipeline.
+* L’endpoint dell’archivio nell’API pubblica ora include l’URL Git.
 
-* Durante la fase di distribuzione della pagina di esecuzione della pipeline, l’utente sarà in grado di visualizzare i passaggi di distribuzione completati e futuri, oltre al passaggio corrente nell’interfaccia utente per lo stato *In corso* .
+* Nel flusso di lavoro Modifica programma , all’utente sarà consentito impostare solo valori KPI non decimali.
 
-* La versione dell’archetipo di progetto AEM utilizzato da Cloud Manager è stata aggiornata alla versione 27.
+* Sono stati risolti gli errori intermittenti rilevati durante il push del codice a Git di Adobe.
 
-* È stato chiarito il messaggio di errore durante l’avvio di una pipeline quando un ambiente è stato eliminato.
-
-* I bundle OSGi forniti dai progetti Eclipse ora sono esclusi dalla regola `CQBP-84--dependencies`.
+* L&#39;esperienza del programma Edit è stata aggiornata.
 
 ## Correzioni di bug {#bug-fixes}
 
-* Errori rari e transitori che possono verificarsi al passaggio *Assets Test* nella pipeline di produzione.
+* A volte, l&#39;utente può visualizzare uno stato verde *attivo* accanto a un Inserire nell&#39;elenco Consentiti IP anche quando tale configurazione non è stata distribuita.
 
-* Una barra finale nel test di caricamento della pipeline di produzione causava un errore 404.
+* Invece di rimuovere le variabili &quot;eliminate&quot;, le variabili delle pipeline API le contrassegnavano solo con lo stato &quot;ELIMINATO&quot;.
 
-* Il controllo `Runmode` produceva falsi positivi sui nodi non presenti nelle cartelle.
+* Alcuni problemi di qualità del tipo di odore del codice hanno avuto un impatto errato sul rating di affidabilità.
+
+* Quando è stata avviata l’esecuzione di una pipeline tra la mezzanotte e l’1:00 UTC, la versione dell’artefatto generata da Cloud Manager non era garantita come maggiore di una versione creata il giorno precedente.
