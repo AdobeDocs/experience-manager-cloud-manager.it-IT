@@ -8,15 +8,15 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
-feature: CI-CD Pipeline, Test Results
+feature: Pipeline CI-CD, risultati del test
+exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
 translation-type: tm+mt
-source-git-commit: 12a7d6199983e2d19ef401051f60e3f24bb6d4f8
+source-git-commit: 9e7c6f7241900432155a1a32abfb440fb3f93172
 workflow-type: tm+mt
-source-wordcount: '2685'
+source-wordcount: '2694'
 ht-degree: 4%
 
 ---
-
 
 # Comprendere i risultati del test {#understand-your-test-results}
 
@@ -35,7 +35,7 @@ La pipeline è composta da tre gate:
 Per ciascuno di questi cancelli, esiste una struttura a tre livelli per i problemi identificati dal cancello.
 
 * **Critico** : si tratta di problemi identificati dal gate che causano un errore immediato della pipeline.
-* **Importante** : si tratta di problemi identificati dal gate che fanno sì che la pipeline entri in uno stato di pausa. Un manager distribuzione, un project manager o un proprietario business possono ignorare i problemi, nel qual caso la pipeline procede, oppure possono accettare i problemi, nel qual caso la pipeline si interrompe con un errore.
+* **Importante** : si tratta di problemi identificati dal gate che fanno sì che la pipeline entri in uno stato di pausa. Un manager distribuzione, un project manager o un proprietario business possono ignorare i problemi, nel qual caso la pipeline procede, oppure possono accettare i problemi, nel qual caso la pipeline si interrompe con un errore. L&#39;override di errori importanti è soggetto a un [Timeout](deploying-code.md#timeouts).
 * **Informazioni** : si tratta di problemi identificati dal gate che sono forniti a scopo puramente informativo e non hanno alcun impatto sull’esecuzione della pipeline.
 
 >[!NOTE]
@@ -274,4 +274,3 @@ Le immagini seguenti mostrano i grafici dei test delle prestazioni:
 ![](assets/understand_test-results-screen1.png)
 
 ![](assets/screen_shot_2018-09-05at83933pm.png)
-
