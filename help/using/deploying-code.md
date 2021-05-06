@@ -8,15 +8,15 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
-feature: Code Deployment
+feature: Distribuzione del codice
+exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
 translation-type: tm+mt
-source-git-commit: c5d32d49782c899d013fcc60b9c4d2b67e9350ae
+source-git-commit: 9e7c6f7241900432155a1a32abfb440fb3f93172
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '994'
 ht-degree: 1%
 
 ---
-
 
 # Implementare il codice {#deploy-your-code}
 
@@ -92,6 +92,19 @@ Dopo aver configurato la pipeline di produzione (archivio, ambiente e ambiente d
 
    ![](assets/Production_Deployment2.png)
 
+## Timeout {#timeouts}
+
+I seguenti passaggi si interrompono se rimangono in attesa del feedback degli utenti:
+
+| Incremento | Timeout |
+|--- |--- |
+| Test della qualità del codice | 7 giorni |
+| Test di sicurezza | 7 giorni |
+| Test delle prestazioni | 7 giorni |
+| Domanda di approvazione | 7 giorni |
+| Pianificazione distribuzione produzione | 7 giorni |
+| Supporto CSE | 7 giorni |
+
 ## Processo di distribuzione {#deployment-process}
 
 La sezione seguente descrive come i pacchetti AEM e dispatcher vengono distribuiti nella fase di stage e nella fase di produzione.
@@ -149,5 +162,3 @@ Le distribuzioni di produzione seguono generalmente gli stessi passaggi indicati
 1. Distribuisci pacchetti AEM a publish2 e il pacchetto dispatcher a dispatcher2 in parallelo, svuota la cache del dispatcher.
 1. Rimetti dispatcher2 nel load balancer.
 Questo processo continua fino a quando la distribuzione non raggiunge tutti gli editori e i dispatcher nella topologia.
-
-
