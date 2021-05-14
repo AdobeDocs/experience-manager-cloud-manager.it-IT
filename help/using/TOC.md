@@ -3,16 +3,15 @@ product: adobe experience manager
 sub-product: experience manager cloud manager
 archetype: administrator
 user-guide-title: Guida di Experience Manager Cloud Manager
-breadcrumb-title: Guida di Cloud Manager
+breadcrumb-title: Guida di Cloud Manager per AEM 6.x
 user-guide-description: Scopri come utilizzare Adobe Managed Services per gestire autonomamente Experience Manager nel cloud.
 feature-set: Experience Manager Cloud Manager, Experience Manager
 role: Administrator
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: 5f81fdb86b1dfa6c748bb7784ef00dc062c9f8ef
+source-git-commit: 9cca6fd7d4ef3351fa024bac0f95f5592105dbae
 workflow-type: tm+mt
-source-wordcount: '267'
-ht-degree: 85%
+source-wordcount: '270'
+ht-degree: 83%
 
 ---
 
@@ -29,11 +28,11 @@ ht-degree: 85%
    + [Domande frequenti su Cloud Manager](cloud-manager-faqs.md)
 + Requisiti{#requirements}
    + [Diritti di accesso concessi](access-rights-granted.md)
-   + [Repository del codice sorgente](source-code-repository.md)
+   + [Archivio del codice sorgente](source-code-repository.md)
    + [Autorizzazioni basate sul ruolo](role-based-permissions.md)
    + [Aggiungere utenti e ruoli](setting-up-users-and-roles.md)
    + [Ambienti con provisioning](environments-provisioned.md)
-+ Introduzione {#getting-started}
++ Guida introduttiva {#getting-started}
    + [Primo accesso](first-time-login.md)
    + [Configurare il programma](setting-up-program.md)
    + Creare un progetto di applicazione AEM {#create-application-project}
