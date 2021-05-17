@@ -10,15 +10,17 @@ topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 feature: Pipeline CI-CD, risultati del test
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-translation-type: tm+mt
-source-git-commit: 9e7c6f7241900432155a1a32abfb440fb3f93172
+source-git-commit: df2f598f91201d362f54b17e4092ff6bd6a72cec
 workflow-type: tm+mt
-source-wordcount: '2694'
+source-wordcount: '2722'
 ht-degree: 4%
 
 ---
 
 # Comprendere i risultati del test {#understand-your-test-results}
+
+>[!NOTE]
+>Per informazioni sui risultati dei test e sui test supportati da Cloud Manager per la pipeline dei Cloud Services, consulta [qui](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/overview-test-results.html?lang=en#using-cloud-manager).
 
 Durante l’esecuzione della pipeline, vengono acquisite e confrontate diverse metriche con gli indicatori prestazioni chiave (KPI, Key Performance Indicators) definiti dal proprietario dell’azienda o con gli standard impostati da Adobe Managed Services.
 
