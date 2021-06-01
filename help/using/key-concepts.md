@@ -8,16 +8,15 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: b702dfc0-3534-4d90-af19-8559d8baf6a6
-feature: Getting Started
+feature: Guida introduttiva
 level: Beginner
-translation-type: tm+mt
-source-git-commit: c5d32d49782c899d013fcc60b9c4d2b67e9350ae
+exl-id: 86dfc976-f3da-479a-9faa-08f40ca909e0
+source-git-commit: f9b33de0f1f2203175f66f261c8ee553f47e0c3b
 workflow-type: tm+mt
-source-wordcount: '348'
+source-wordcount: '347'
 ht-degree: 2%
 
 ---
-
 
 # Concetti fondamentali {#key-concepts}
 
@@ -41,7 +40,7 @@ Ad esempio, *We.Retail*.
 
 **** PipelineUn insieme di passaggi di distribuzione eseguiti in sequenza.
 
-**** ProdottoUn set specifico di funzionalità all’interno di una soluzione concessa in licenza da un’organizzazione. I diversi programmi all&#39;interno di un&#39;organizzazione possono avere diritto a diversi tipi di prodotti. Ad esempio, Sites, Assets di Forms.
+**** ProdottoUn set specifico di funzionalità all’interno di una soluzione concessa in licenza da un’organizzazione. I diversi programmi all&#39;interno di un&#39;organizzazione possono avere diritto a diversi tipi di prodotti. Ad esempio, Sites, Assets o Forms.
 
 **** ProgrammaUn set di ambienti che supportano un raggruppamento logico di iniziative dei clienti, solitamente corrispondente a un contratto a livello di servizio (SLA) acquistato. Ogni programma ha esattamente un ambiente di produzione e può avere molti ambienti non di produzione.
 
