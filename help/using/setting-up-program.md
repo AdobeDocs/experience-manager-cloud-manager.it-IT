@@ -5,7 +5,7 @@ description: Dopo l'onboarding, il proprietario dell'azienda dovrà effettuare u
 seo-description: 'Dopo l’onboarding, il proprietario aziendale dovrà effettuare una configurazione iniziale di Adobe AEM Cloud Manager. Ciò comporta l’impostazione della descrizione del programma e la definizione dei KPI che verranno utilizzati per il test delle prestazioni. '
 feature: Guida introduttiva
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
-source-git-commit: f14725f87d5c4c3afe63d4bfc924962a92705c7c
+source-git-commit: c39390f34cf4ab6c9b2d5957b169c3c2cb43e6d3
 workflow-type: tm+mt
 source-wordcount: '729'
 ht-degree: 2%
@@ -78,7 +78,7 @@ Durante l’impostazione del programma, vengono specificati i KPI specifici per 
    >[!NOTE]
    >È sempre possibile modificare il programma una volta che il programma iniziale è già stato impostato. Per ulteriori informazioni, segui i passaggi riportati di seguito.
 
-## Modifica di un programma
+## Modifica di un programma {#editing-program}
 
 1. Passa al programma dalla schermata principale **Cloud Manager**.
 
