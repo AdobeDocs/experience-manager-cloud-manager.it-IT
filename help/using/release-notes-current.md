@@ -2,10 +2,10 @@
 title: Note sulla versione 2021.6.0
 description: Segui questa pagina per ottenere informazioni sulla versione 2021.6.0 di Cloud Manager
 feature: Informazioni sulla versione
-source-git-commit: 5111a918b8063ab576ef587dc3c8d66ad976fc1a
+source-git-commit: c39390f34cf4ab6c9b2d5957b169c3c2cb43e6d3
 workflow-type: tm+mt
-source-wordcount: '277'
-ht-degree: 5%
+source-wordcount: '285'
+ht-degree: 4%
 
 ---
 
@@ -29,7 +29,7 @@ La prossima versione è prevista per il 15 luglio 2021.
 
 * Il nome del ramo predefinito utilizzato sia durante la creazione del progetto che nel comando push predefinito tramite gestione flussi di lavoro Git è stato modificato in `main`.
 
-* L’esperienza di modifica del programma nell’interfaccia utente è stata aggiornata.
+* L’esperienza di modifica del programma nell’interfaccia utente è stata aggiornata. Per ulteriori informazioni, consulta [Modifica di un programma](/help/using/setting-up-program.md#editing-program) .
 
 * La regola di qualità `ImmutableMutableMixCheck` è stata aggiornata per classificare i nodi `/oak:index` come immutabili.
 
