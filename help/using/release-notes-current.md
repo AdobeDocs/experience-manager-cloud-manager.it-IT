@@ -2,9 +2,9 @@
 title: Note sulla versione 2021.6.0
 description: Segui questa pagina per ottenere informazioni sulla versione 2021.6.0 di Cloud Manager
 feature: Informazioni sulla versione
-source-git-commit: c39390f34cf4ab6c9b2d5957b169c3c2cb43e6d3
+source-git-commit: 5ddbf718ad01b11dcba5dc2c5d1ab5d3cff2e9a9
 workflow-type: tm+mt
-source-wordcount: '285'
+source-wordcount: '310'
 ht-degree: 4%
 
 ---
@@ -33,7 +33,7 @@ La prossima versione è prevista per il 15 luglio 2021.
 
 * La regola di qualità `ImmutableMutableMixCheck` è stata aggiornata per classificare i nodi `/oak:index` come immutabili.
 
-* Le regole di qualità `CQBP-84` e `CQBP-84--dependencies` sono state consolidate in un’unica regola.
+* Le regole di qualità `CQBP-84` e `CQBP-84--dependencies` sono state consolidate in un’unica regola. Come parte di questo consolidamento, la scansione delle dipendenze identifica più accuratamente i problemi nelle dipendenze di terze parti che vengono distribuiti nel runtime di AEM.
 
 * In alcune situazioni, se non si calcola la metrica Test ignorati , le esecuzioni della pipeline non avranno esito positivo.
 
