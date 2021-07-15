@@ -3,9 +3,9 @@ title: Informazioni sull’ambiente di creazione
 description: Segui questa pagina per informazioni sugli ambienti
 feature: Ambienti
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: 0a5556729e64c9e8736d13b357db001dd57bc03a
+source-git-commit: ee701dd2d0c3921455a0960cbb6ca9a3ec4793e7
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: '999'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Cloud Manager crea ed esegue il test del codice utilizzando un ambiente di build
 
 * L&#39;ambiente di creazione è basato su Linux, derivato da Ubuntu 18.04.
 * Apache Maven 3.6.0 è installato.
-* Le versioni Java installate sono Oracle JDK 8u202 e 11.0.2.
+* Le versioni Java installate sono Oracle JDK 8u202, Azul Zulu 8u292, Oracle JDK 11.0.2 e Azul Zulu 11.0.11.
 * Sono installati alcuni pacchetti di sistema aggiuntivi necessari:
 
    * bzip2
@@ -47,40 +47,62 @@ Per ulteriori informazioni, consulta [Adobe Public Maven Repository](https://rep
 >* [Autorizzazioni API](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html#!AdobeDocs/cloudmanager-api-docs/master/permissions.md)
 
 
-## Utilizzo di Java 11 {#using-java-11}
+## Utilizzo di una versione Java specifica {#using-java-version}
 
-Cloud Manager ora supporta la creazione di progetti per i clienti sia con Java 8 che con Java 11. Per impostazione predefinita, i progetti vengono generati utilizzando Java 8. I clienti che intendono utilizzare Java 11 nei loro progetti possono farlo utilizzando il [plugin delle catene degli strumenti Apache Maven](https://maven.apache.org/plugins/maven-toolchains-plugin/).
+Per impostazione predefinita, i progetti sono generati dal processo di creazione di Cloud Manager utilizzando il JDK di Oracle 8. I clienti che desiderano utilizzare un JDK alternativo hanno due opzioni: Maven Toolchain e selezione di una versione JDK alternativa per l&#39;intero processo di esecuzione Maven.
 
-A questo scopo, nel file pom.xml aggiungi una voce `<plugin>` simile a questa:
+### Catene di strumenti Maven {#maven-toolchains}
+
+Il [Plug-in Maven Toolchain](https://maven.apache.org/plugins/maven-toolchains-plugin/) consente ai progetti di selezionare un JDK specifico (o *toolchain*) da utilizzare nel contesto dei plug-in Maven consapevoli delle catene degli strumenti. Questo viene fatto nel file `pom.xml` del progetto specificando un valore di fornitore e versione. Una sezione di esempio nel file `pom.xml` è:
 
 ```xml
         <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-toolchains-plugin</artifactId>
-            <version>1.1</version>
-            <executions>
-                <execution>
-                    <goals>
-                        <goal>toolchain</goal>
-                    </goals>
-                </execution>
-            </executions>
-            <configuration>
-                <toolchains>
-                    <jdk>
-                        <version>11</version>
-                        <vendor>oracle</vendor>
-                    </jdk>
-                </toolchains>
-            </configuration>
-        </plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-toolchains-plugin</artifactId>
+    <version>1.1</version>
+    <executions>
+        <execution>
+            <goals>
+                <goal>toolchain</goal>
+            </goals>
+        </execution>
+    </executions>
+    <configuration>
+        <toolchains>
+            <jdk>
+                <version>11</version>
+                <vendor>oracle</vendor>
+            </jdk>
+        </toolchains>
+    </configuration>
+</plugin>
 ```
 
->[!NOTE]
->I valori supportati `vendor` sono `oracle` e `sun` e i valori supportati sono `version`, `1.8`, `1.11` e `11`.
+Questo farà sì che tutti i plug-in Maven consapevoli delle catene di strumenti utilizzino l’Oracle JDK, versione 11.
+
+Quando si utilizza questo metodo, Maven stesso viene comunque eseguito utilizzando il JDK predefinito (Oracle 8). Pertanto, il controllo o l&#39;applicazione della versione Java tramite plug-in come [Apache Maven Enforcer Plugin](https://maven.apache.org/enforcer/maven-enforcer-plugin/) non funziona e tali plug-in non devono essere utilizzati.
+
+Le combinazioni fornitore/versione attualmente disponibili sono:
+
+* oracle 1.8
+* oracle 1.11
+* oracle 11
+* Sole 1.8
+* sole 1.11
+* sole 11
+* azul 1.8
+* azul 1,11
+* azul 8
+
+### Versione JDK di esecuzione Maven alternativa {#alternate-maven}
+
+È anche possibile selezionare Azul 8 o Azul 11 come JDK per l&#39;intera esecuzione Maven. A differenza delle opzioni delle catene degli strumenti, questo cambia il JDK utilizzato per tutti i plugin a meno che la configurazione delle catene degli utensili non sia impostata anche nel qual caso la configurazione delle catene degli utensili viene ancora applicata per i plugin Maven consapevoli delle catene degli utensili. Di conseguenza, il controllo e l&#39;applicazione della versione Java utilizzando il [plugin Apache Maven Enforcer](https://maven.apache.org/enforcer/maven-enforcer-plugin/) funzionerà.
+
+A questo scopo, crea un file denominato `.cloudmanager/java-version` nel ramo dell’archivio Git utilizzato dalla pipeline. Questo file può avere il contenuto 11 o 8. Qualsiasi altro valore viene ignorato. Se è specificato 11, viene utilizzato Azul 11. Se si specifica 8, viene utilizzato Azul 8.
 
 >[!NOTE]
->La build del progetto Cloud Manager utilizza ancora Java 8 per richiamare Maven, pertanto il controllo o l’applicazione della versione Java configurata nel plug-in toolchain tramite plug-in come il [plug-in Apache Maven Enforcer](https://maven.apache.org/enforcer/maven-enforcer-plugin/) non funziona e tali plug-in non devono essere utilizzati.
+>In una versione futura di Cloud Manager, attualmente stimata a ottobre 2021, il JDK predefinito verrà modificato e il valore predefinito sarà Azul 11. I progetti non compatibili con Java 11 devono creare questo file con il contenuto 8 il prima possibile per evitare che siano interessati da questo passaggio.
+
 
 ## Variabili di ambiente {#environment-variables}
 
@@ -193,4 +215,4 @@ Alcune build richiedono l&#39;installazione di pacchetti di sistema aggiuntivi p
 Questa stessa tecnica può essere utilizzata per installare pacchetti specifici per la lingua, ad esempio utilizzando `gem` per RubyGems o `pip` per pacchetti Python.
 
 >[!NOTE]
->L&#39;installazione di un pacchetto di sistema in questo modo **non** lo installa nell&#39;ambiente di runtime utilizzato per l&#39;esecuzione di Adobe Experience Manager. Se hai bisogno di un pacchetto di sistema installato nell’ambiente AEM, contatta il tuo rappresentante Adobe.
+>L&#39;installazione di un pacchetto di sistema in questo modo **non** lo installa nell&#39;ambiente di runtime utilizzato per l&#39;esecuzione di Adobe Experience Manager. Se hai bisogno di installare un pacchetto di sistema nell’ambiente AEM, contatta il tuo rappresentante Adobe.
