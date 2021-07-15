@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: Pipeline CI-CD
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 83fcc49c7e3e3742930a7179b27f899bff3c4ae1
+source-git-commit: 1c103b1c43a1e5fe7a6fa27110fc692bba6fb8b2
 workflow-type: tm+mt
-source-wordcount: '1280'
+source-wordcount: '1308'
 ht-degree: 2%
 
 ---
@@ -173,7 +173,7 @@ Oltre alla pipeline principale che viene implementata in fase e produzione, i cl
 
 ## Tutorial video {#video-tutorial-two}
 
-### Pipeline solo per la qualità del codice e non di produzione di Cloud Manager {#non-prod-video}
+### Pipelines solo per la qualità del codice e non di produzione di Cloud Manager {#non-prod-video}
 
 Le pipeline CI/CD non di produzione sono suddivise in due categorie: pipeline di qualità del codice e pipeline di distribuzione. La qualità del codice pipeline tutto il codice da un ramo Git alla creazione ed è valutata in base alla scansione della qualità del codice di Cloud Manager.
 
@@ -183,22 +183,23 @@ Nella schermata iniziale, queste pipeline sono elencate in una nuova scheda:
 
 1. Accedi alla sezione **pipeline non di produzione** dalla schermata iniziale di Cloud Manager.
 
-   ![](assets/Non-Production-Pipeline.png)
+   ![](/help/using/assets/non-prod-add.png)
 
-1. Fate clic sul pulsante Aggiungi per specificare il nome della pipeline, il tipo di pipeline e la diramazione Git.
+1. Fate clic sul pulsante **Aggiungi** per specificare il nome della pipeline, il tipo di pipeline e la diramazione Git.
 
    Inoltre, è possibile impostare il trigger di distribuzione e il comportamento di errore importante dalle opzioni della pipeline.
 
    ![](assets/non-prod-pipe.png)
 
-1. Fai clic su **Salva** e la pipeline viene visualizzata sulla scheda nella schermata iniziale con tre azioni:
+1. Fai clic su **Salva** e la pipeline viene visualizzata sulla scheda nella schermata iniziale con cinque azioni:
 
    * **Modifica** : consente di modificare le impostazioni della pipeline
-   * **Dettaglio** : visualizza l’ultima esecuzione della pipeline (se presente)
+   * **Dettagli** : visualizza l’ultima esecuzione della pipeline (se presente)
    * **Build** : consente di passare alla pagina di esecuzione dalla quale è possibile eseguire la pipeline.
+   * **Accesso a informazioni sul repository** : consente all’utente di ottenere le informazioni necessarie per accedere all’archivio Git di Cloud Manager
+   * **Ulteriori informazioni** : descrive la risorsa della documentazione della pipeline CI/CD.
 
-   ![](assets/Non-prod-2.png)
-
+      ![](assets/prod-one.png)
    >[!NOTE]
    >
    >Durante l’esecuzione della pipeline, viene visualizzato il passaggio corrente ed è disponibile solo l’azione **Dettagli** .
