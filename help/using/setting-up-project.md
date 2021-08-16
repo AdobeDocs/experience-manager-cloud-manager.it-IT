@@ -3,10 +3,9 @@ title: Impostazione del progetto
 description: Segui questa pagina per scoprire come impostare un progetto
 feature: Guida introduttiva, programmi di produzione
 exl-id: ed994daf-0195-485a-a8b1-87796bc013fa
-translation-type: tm+mt
-source-git-commit: cf19c7dfd593810779c03c51e08081954f8fc11e
+source-git-commit: 2a253abb98fa096f9f1c07bac94804849fad2ebb
 workflow-type: tm+mt
-source-wordcount: '877'
+source-wordcount: '884'
 ht-degree: 8%
 
 ---
@@ -106,10 +105,10 @@ E se desideri inviare un messaggio semplice solo quando la build viene eseguita 
         </profile>
 ```
 
-## Supporto per l&#39;archivio Maven protetto da password {#password-protected-maven-repositories}
+## Supporto dell&#39;archivio Maven protetto da password {#password-protected-maven-repositories}
 
 >[!NOTE]
->Gli artefatti provenienti da un archivio Maven protetto da password devono essere utilizzati con molta cautela, in quanto il codice distribuito tramite questo meccanismo non viene attualmente eseguito tramite i Gates di qualità di Cloud Manager. Pertanto dovrebbe essere utilizzato solo in rari casi e per codice non legato a AEM. Si consiglia inoltre di distribuire le origini Java e l&#39;intero codice sorgente del progetto insieme al binario.
+>Gli artefatti provenienti da un archivio Maven protetto da password devono essere utilizzati con molta cautela, in quanto il codice distribuito tramite questo meccanismo attualmente non viene eseguito attraverso tutte le regole di qualità implementate nei Gates di qualità di Cloud Manager. Pertanto dovrebbe essere utilizzato solo in rari casi e per codice non legato a AEM. Si consiglia inoltre di distribuire le origini Java e l&#39;intero codice sorgente del progetto insieme al binario.
 
 Per utilizzare un archivio Maven protetto da password da Cloud Manager, specifica la password (e facoltativamente il nome utente) come segreto [Variabile pipeline](/help/using/build-environment-details.md#pipeline-variables) e fai riferimento a tale segreto all’interno di un file denominato `.cloudmanager/maven/settings.xml` nell’archivio Git. Questo file segue lo schema [File impostazioni Maven](https://maven.apache.org/settings.html) . All’avvio del processo di compilazione di Cloud Manager, l’elemento `<servers>` in questo file verrà unito al file `settings.xml` predefinito fornito da Cloud Manager. Gli ID server che iniziano con `adobe` e `cloud-manager` sono considerati riservati e non devono essere utilizzati dai server personalizzati. Gli ID server **non** che corrispondono a uno di questi prefissi o l&#39;ID predefinito `central` non verranno mai rispecchiati da Cloud Manager. Con questo file attivo, all&#39;interno di un elemento `<repository>` e/o `<pluginRepository>` all&#39;interno del file `pom.xml` viene fatto riferimento all&#39;ID del server. In genere, questi elementi `<repository>` e/o `<pluginRepository>` sono contenuti all’interno di un profilo specifico di [Cloud Manager](#activating-maven-profiles-in-cloud-manager), anche se ciò non è strettamente necessario.
 
