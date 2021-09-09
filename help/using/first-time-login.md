@@ -1,8 +1,8 @@
 ---
 title: Primo accesso
-seo-title: Primo accesso ad Adobe AEM Cloud Manager
+seo-title: First Time Login to Adobe AEM Cloud Manager
 description: Se hai configurato le configurazioni generali e sei pronto per utilizzare Cloud Manager per la prima volta, segui questa pagina.
-seo-description: Se hai configurato le configurazioni generali e sei pronto per utilizzare Adobe AEM Cloud Manager per la prima volta, segui questa pagina.
+seo-description: Follow this page if you have set up your general configurations and you are ready to use Adobe AEM Cloud Manager for the first time.
 uuid: 7c8458a6-6de8-4946-ac0c-fb10bce17a15
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
@@ -10,10 +10,9 @@ topic-tags: getting-started
 discoiquuid: 2221d1d5-dbc2-4175-8371-60344f932a82
 feature: Getting Started
 exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
-translation-type: tm+mt
-source-git-commit: 9be78d21b455095c1b1bd49cdb267a8aa5624927
+source-git-commit: eea3d82a803e7dcd172ce4c0b3506f952f46ff51
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '201'
 ht-degree: 10%
 
 ---
@@ -31,11 +30,11 @@ Dopo aver configurato le configurazioni generali per [!UICONTROL Cloud Manager],
 
    ![](assets/screen_shot_2018-06-04at120643pm.png)
 
-1. Seleziona il programma (ad esempio, **We.Retail Global**) e fai clic sull&#39;icona in alto a sinistra per aprire [!UICONTROL Cloud Manager].
+1. Seleziona il programma (ad esempio, **We.Retail Global**). Una volta visualizzata la scheda del programma nella pagina di destinazione, seleziona la cartella **...** per visualizzare le opzioni di menu disponibili.   Seleziona **Cloud Manager** per passare alla pagina **Panoramica** di Cloud Manager.
 
-   ![](assets/first-timea1.png)
+   ![](assets/navigate-cm1.png)
 
-1. Viene visualizzato il dashboard di [!UICONTROL Cloud Manager].
+1. Viene visualizzata la pagina **Panoramica** di Cloud Manager.
 
    ![](assets/FirstLogin1.png)
 
