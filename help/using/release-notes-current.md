@@ -3,10 +3,10 @@ title: Note sulla versione 2021.9.0
 description: Segui questa pagina per ottenere informazioni sulla versione 2021.9.0 di Cloud Manager
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 3fccb0b577662ebc12b65777cbf9624e06d4259d
+source-git-commit: 4bfd31875a2c1ac29ae93872406308ee1c1328c8
 workflow-type: tm+mt
-source-wordcount: '179'
-ht-degree: 6%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +19,7 @@ La sezione seguente illustra le note generali sulla versione per [!UICONTROL Clo
 
 ## Data di rilascio {#release-date}
 
-La data di rilascio per la versione 2021.8.0 di [!UICONTROL Cloud Manager] è il 9 settembre 2021.
+La data di rilascio per la versione 2021.9.0 di [!UICONTROL Cloud Manager] è il 9 settembre 2021.
 La prossima versione è prevista per il 7 ottobre 2021.
 
 ## Novità {#whats-new}
