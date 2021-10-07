@@ -1,9 +1,10 @@
 ---
 title: Repository di Cloud Manager
 description: Repository di Cloud Manager
-source-git-commit: 7bda34be143d2d7587e61c09dab642f3419dfad9
+exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
+source-git-commit: 2a1f471f2e4148a424688ab9858c534935c3fe69
 workflow-type: tm+mt
-source-wordcount: '420'
+source-wordcount: '425'
 ht-degree: 0%
 
 ---
@@ -51,7 +52,7 @@ I sottomoduli Git possono essere utilizzati per unire il contenuto di più rami 
 $ git submodule update --init
 ```
 
-In questo modo, ogni sottomodulo verrà sottoposto a Check-Out nella directory appropriata. Questa tecnica rappresenta una potenziale alternativa a https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/managing-code/working-with-multiple-source-git-repositories.html per le organizzazioni che hanno dimestichezza con l’utilizzo dei sottomoduli git e non desiderano gestire un processo di unione esterno.
+In questo modo, ogni sottomodulo verrà sottoposto a Check-Out nella directory appropriata. Questa tecnica rappresenta una potenziale alternativa all’ [utilizzo con più archivi Git di origine](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/managing-code/working-with-multiple-source-git-repositories.html) per le organizzazioni che hanno dimestichezza con l’utilizzo di sottomoduli Git e che non desiderano gestire un processo di unione esterno.
 
 Ad esempio, supponiamo che ci siano tre archivi, ciascuno contenente un singolo ramo denominato main . Nell’archivio &quot;primario&quot;, cioè quello configurato nelle pipeline, il ramo principale ha un file pom.xml che dichiara i progetti contenuti negli altri due archivi:
 
@@ -101,4 +102,3 @@ Quando utilizzi i sottomoduli git, tieni a mente quanto segue:
 * L’URL Git deve essere esattamente nella sintassi descritta sopra. Per motivi di sicurezza, non incorporare le credenziali in questi URL.
 * Sono supportati solo i sottomoduli nella directory principale del ramo.
 * I riferimenti ai sottomoduli Git vengono archiviati in commit specifici Git. Di conseguenza, quando vengono apportate modifiche all’archivio dei sottomoduli, il commit a cui si fa riferimento deve essere aggiornato, ad esempio, utilizzando `git submodule update --remote` .
-
