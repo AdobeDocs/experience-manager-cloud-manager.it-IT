@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: bdbee51ff0a61c2a72ff7ae3a742e2dd817c671a
+source-git-commit: fd172a7168074630e85f3b110e032f783d39ddca
 workflow-type: tm+mt
-source-wordcount: '1451'
+source-wordcount: '1491'
 ht-degree: 1%
 
 ---
@@ -98,7 +98,9 @@ Segui questi passaggi per configurare il comportamento e le preferenze per la pi
       * **L&#39;approvazione dopo la distribuzione delle fasi** funziona in modo simile all&#39;approvazione prima dell&#39;implementazione di produzione, ma avviene immediatamente dopo la fase di distribuzione dello stadio, ovvero prima che venga eseguito un test, rispetto all&#39;approvazione prima dell&#39;implementazione di produzione, che viene eseguita dopo il completamento di tutti i test.
 
       * **Salta il bilanciamento del carico**
-   1. Seleziona **Configurazioni Dispatcher** per Stage.
+   1. Seleziona **Configurazioni Dispatcher** per Stage. Inserisci il percorso, seleziona l’azione da **Tipo**, quindi fai clic su **Aggiungi percorso**. Puoi specificare fino a 100 percorsi per ambiente.
+
+      ![](/help/using/assets/configure-pipelines/dispatcher-stage.png)
 
    1. Seleziona le **Opzioni di distribuzione** per Produzione. Ora puoi definire i parametri che controllano l’implementazione di produzione. Le tre opzioni disponibili sono le seguenti:
 
@@ -114,7 +116,9 @@ Segui questi passaggi per configurare il comportamento e le preferenze per la pi
          >Se è selezionata l’opzione **Pianificato** , puoi pianificare la distribuzione di produzione nella pipeline **dopo** la distribuzione dell’area di visualizzazione (e **Usa approvazione GoLive**, se abilitata) in modo da attendere che venga impostata una pianificazione. L’utente può anche scegliere di eseguire immediatamente la distribuzione di produzione.
          >
          >Fai riferimento a [Distribuisci il codice](deploying-code.md) per impostare la pianificazione della distribuzione o eseguire la produzione immediatamente.
-   1. Imposta le **Configurazioni del dispatcher** per la produzione.
+   1. Imposta le **Configurazioni del dispatcher** per la produzione. Inserisci il percorso, seleziona l’azione da **Tipo**, quindi fai clic su **Aggiungi percorso**. Puoi specificare fino a 100 percorsi per ambiente.
+
+      ![](/help/using/assets/configure-pipelines/dispatcher-prod.png)
 
       In qualità di gestore dell’implementazione, puoi configurare un set di percorsi di contenuto che saranno **invalidati** o **scaricati** dalla cache del Dispatcher AEM per le istanze di pubblicazione, durante l’impostazione o la modifica della pipeline.
 
