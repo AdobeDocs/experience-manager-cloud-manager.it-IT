@@ -1,18 +1,18 @@
 ---
 title: Implementare il codice
-seo-title: Implementare il codice
+seo-title: Deploy your Code
 description: Fornisce una panoramica sul processo di implementazione in Cloud Manager
-seo-description: Scopri come distribuire il codice una volta configurata la pipeline (archivio, ambiente e ambiente di test)
+seo-description: Learn how to deploy your code once you have configured your pipeline (repository, environment, and testing environment)
 uuid: 4e3807e1-437e-4922-ba48-0bcadf293a99
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
-feature: Distribuzione del codice
+feature: Code Deployment
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-source-git-commit: df2f598f91201d362f54b17e4092ff6bd6a72cec
+source-git-commit: 2fcefda1e30871d44e3a1353470a4728904d7598
 workflow-type: tm+mt
-source-wordcount: '1020'
+source-wordcount: '1220'
 ht-degree: 1%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 1%
 ## Distribuzione del codice con Cloud Manager {#deploying-code-with-cloud-manager}
 
 >[!NOTE]
->Per informazioni sulla distribuzione del codice per Cloud Manager in AEM come Cloud Service, consulta [qui](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#using-cloud-manager).
+>Per informazioni sulla distribuzione del codice per Cloud Manager in AEM as a Cloud Service, consulta [qui](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#using-cloud-manager).
 
 Dopo aver configurato la pipeline di produzione (archivio, ambiente e ambiente di test), è possibile distribuire il codice.
 
@@ -150,7 +150,7 @@ Quando Cloud Manager viene implementato in topologie non di produzione, l’obie
    >[!NOTE]
    >È possibile saltare le modifiche di Load Balancer nelle distribuzioni di sviluppo e stage, ovvero scollegare e allegare i passaggi sia nelle pipeline non di produzione, per gli ambienti di sviluppo e nella pipeline di produzione, per gli ambienti di stage.
 
-### Fase di distribuzione alla produzione {#deployment-production-phase}
+### Fase di implementazione a produzione {#deployment-production-phase}
 
 Il processo di distribuzione nelle topologie di produzione è leggermente diverso per ridurre al minimo l’impatto sui visitatori AEM sito.
 
@@ -164,3 +164,32 @@ Le distribuzioni di produzione seguono generalmente gli stessi passaggi indicati
 1. Distribuisci pacchetti AEM a publish2 e il pacchetto dispatcher a dispatcher2 in parallelo, svuota la cache del dispatcher.
 1. Rimetti dispatcher2 nel load balancer.
 Questo processo continua fino a quando la distribuzione non raggiunge tutti gli editori e i dispatcher nella topologia.
+
+## Modalità di esecuzione della tubazione di emergenza {#emergency-pipeline}
+
+In situazioni critiche, i clienti di Adobe Managed Services potrebbero dover implementare modifiche al codice nei rispettivi ambienti di stage e produzione senza attendere l’esecuzione di un ciclo di test completo di Cloud Manager.
+
+Per risolvere queste situazioni, la pipeline di produzione di Cloud Manager può essere eseguita in modalità *Emergency* . Quando si utilizza questa modalità, i passaggi del test di sicurezza e prestazioni non vengono eseguiti; tutti gli altri passaggi, compresi eventuali passaggi di approvazione configurati, vengono eseguiti come nella normale modalità di esecuzione della pipeline.
+
+>[!NOTE]
+>La funzionalità di esecuzione della pipeline di emergenza viene attivata a livello di programma dai tecnici di successo del cliente.
+
+### Utilizzo della modalità di esecuzione della pipeline di emergenza {#using-emergency-pipeline}
+
+Quando si avvia un’esecuzione della pipeline di produzione, se questa funzione è stata attivata, è possibile avviare l’esecuzione in modalità normale o di emergenza dalla finestra di dialogo, come illustrato nella figura riportata di seguito.
+
+![](assets/execution-emergency1.png)
+
+Inoltre, visualizzando la pagina dei dettagli di esecuzione della pipeline per un’esecuzione in modalità di emergenza, le breadcrumb nella parte superiore dello schermo mostrano un indicatore che indica che la modalità di emergenza è stata utilizzata per questa particolare esecuzione.
+
+![](assets/execution-emergency2.png)
+
+
+La creazione di un’esecuzione della pipeline in questa modalità di emergenza può essere eseguita anche tramite l’API o CLI di Cloud Manager. Per avviare un’esecuzione in modalità di emergenza, invia una richiesta PUT all’endpoint di esecuzione della pipeline con il parametro di query `?pipelineExecutionMode=EMERGENCY` o, quando utilizzi CLI:
+
+```
+$ aio cloudmanager:pipeline:create-execution PIPELINE_ID --emergency
+```
+
+>[!IMPORTANT]
+>L’utilizzo del flag `--emergency` potrebbe richiedere l’aggiornamento alla versione più recente `aio-cli-plugin-cloudmanager` .

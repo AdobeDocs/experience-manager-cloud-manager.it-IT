@@ -2,9 +2,9 @@
 title: Repository di Cloud Manager
 description: Repository di Cloud Manager
 exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
-source-git-commit: 2a1f471f2e4148a424688ab9858c534935c3fe69
+source-git-commit: 17f79fdc7278cae532485570a6e2b8700683ef0d
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '443'
 ht-degree: 0%
 
 ---
@@ -101,4 +101,5 @@ Quando utilizzi i sottomoduli git, tieni a mente quanto segue:
 
 * L’URL Git deve essere esattamente nella sintassi descritta sopra. Per motivi di sicurezza, non incorporare le credenziali in questi URL.
 * Sono supportati solo i sottomoduli nella directory principale del ramo.
-* I riferimenti ai sottomoduli Git vengono archiviati in commit specifici Git. Di conseguenza, quando vengono apportate modifiche all’archivio dei sottomoduli, il commit a cui si fa riferimento deve essere aggiornato, ad esempio, utilizzando `git submodule update --remote` .
+* I riferimenti ai sottomoduli Git vengono archiviati in commit specifici Git. Di conseguenza, quando vengono apportate modifiche all’archivio dei sottomoduli, il commit a cui si fa riferimento deve essere aggiornato, ad esempio, utilizzando `git submodule update --remote`.
+* Se non diversamente necessario, si consiglia vivamente di utilizzare sottomoduli &quot;superficiali&quot;. A questo scopo, esegui `git config -f .gitmodules submodule.<submodule path>.shallow true` per ogni sottomodulo.
