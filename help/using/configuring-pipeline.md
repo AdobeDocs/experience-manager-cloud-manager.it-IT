@@ -1,27 +1,27 @@
 ---
 title: Configurare la pipeline CI/CD
-seo-title: Configurare la pipeline CI/CD
+seo-title: Configure your CI/CD Pipeline
 description: Segui questa pagina per configurare le impostazioni della pipeline da Cloud Manager.
-seo-description: 'Prima di iniziare a distribuire il codice, devi configurare le impostazioni della pipeline da AEM Cloud Manager. '
+seo-description: Before you start to deploy your code, you must configure your pipeline settings from the AEM Cloud Manager.
 uuid: 35fd56ac-dc9c-4aca-8ad6-36c29c4ec497
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
-feature: Pipeline CI-CD
+feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 1c103b1c43a1e5fe7a6fa27110fc692bba6fb8b2
+source-git-commit: dde991d2dbd02f4b4145f79d67b6d2f1244e5648
 workflow-type: tm+mt
-source-wordcount: '1308'
-ht-degree: 2%
+source-wordcount: '1378'
+ht-degree: 1%
 
 ---
 
 # Configurare la pipeline CI/CD {#configure-your-ci-cd-pipeline}
 
 >[!NOTE]
->Per informazioni su come configurare la pipeline CI/CD per Cloud Manager in AEM come Cloud Service, consulta [qui](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html?lang=en#using-cloud-manager).
+>Per informazioni su come configurare la pipeline CI/CD per Cloud Manager in AEM as a Cloud Service, consulta [qui](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html?lang=en#using-cloud-manager).
 
 La pagina seguente spiega come configurare la **pipeline**. Per ulteriori informazioni concettuali sul funzionamento della pipeline, consulta la [panoramica della pipeline CI/CD](ci-cd-pipeline.md) .
 
@@ -133,7 +133,7 @@ In qualità di gestore dell’implementazione, puoi configurare un set di percor
 
 È possibile configurare un set separato di percorsi per la distribuzione Stage e Production. Se configurate, queste azioni della cache verranno eseguite come parte del passaggio della pipeline di distribuzione, subito dopo la distribuzione di eventuali pacchetti di contenuto. Queste impostazioni utilizzano il comportamento standard AEM Dispatcher: l’opzione Annulla convalida esegue un’invalidazione della cache, simile a quando il contenuto viene attivato dall’autore alla pubblicazione; flush esegue un&#39;eliminazione della cache.
 
-In generale, l’utilizzo dell’azione di annullamento della validità è preferibile, ma in alcuni casi può essere richiesto lo scaricamento, soprattutto quando si utilizzano AEM librerie client HTML.
+In generale, l’utilizzo dell’azione di annullamento della validità è preferibile, ma in alcuni casi può essere richiesto lo scaricamento, soprattutto quando si utilizzano le librerie client di HTML.
 
 >[!NOTE]
 >
@@ -179,30 +179,53 @@ Le pipeline CI/CD non di produzione sono suddivise in due categorie: pipeline di
 
 >[!VIDEO](https://video.tv.adobe.com/v/26316/)
 
+### Aggiunta di una pipeline non di produzione {#add-non-production-pipeline}
+
 Nella schermata iniziale, queste pipeline sono elencate in una nuova scheda:
 
-1. Accedi alla sezione **pipeline non di produzione** dalla schermata iniziale di Cloud Manager.
+1. Accedi alla scheda **Pipelines** dalla schermata iniziale di Cloud Manager. Fai clic su **+Aggiungi** e seleziona **Aggiungi pipeline non di produzione**.
 
-   ![](/help/using/assets/non-prod-add.png)
+   ![](/help/using/assets/configure-pipelines/nonprod-pipeline-add1.png)
 
-1. Fate clic sul pulsante **Aggiungi** per specificare il nome della pipeline, il tipo di pipeline e la diramazione Git.
+1. **Viene visualizzata la finestra di dialogo Aggiungi**  pipeline non di produzione. Selezionare il tipo di pipeline che si desidera creare, ovvero **Pipeline di qualità del codice** o **Pipeline di distribuzione**.
 
-   Inoltre, è possibile impostare il trigger di distribuzione e il comportamento di errore importante dalle opzioni della pipeline.
+   Inoltre, è possibile impostare **Trigger distribuzione** e **Comportamento errore importante** da **Opzioni di distribuzione**. Fai clic su **Continua**.
 
-   ![](assets/non-prod-pipe.png)
+   ![](/help/using/assets/configure-pipelines/nonprod-pipeline-add2.png)
 
-1. Fai clic su **Salva** e la pipeline viene visualizzata sulla scheda nella schermata iniziale con cinque azioni:
 
-   * **Modifica** : consente di modificare le impostazioni della pipeline
-   * **Dettagli** : visualizza l’ultima esecuzione della pipeline (se presente)
-   * **Build** : consente di passare alla pagina di esecuzione dalla quale è possibile eseguire la pipeline.
-   * **Accesso a informazioni sul repository** : consente all’utente di ottenere le informazioni necessarie per accedere all’archivio Git di Cloud Manager
+1. La pipeline non di produzione appena creata viene ora visualizzata nella scheda **Pipelines** .
+
+   ![](/help/using/assets/configure-pipelines/nonprod-pipeline-add4.png)
+
+
+   La pipeline viene visualizzata sulla scheda nella schermata iniziale con tre azioni, come illustrato di seguito:
+
+   * **Aggiungi** : consente di aggiungere una nuova pipeline.
+   * **Accesso a informazioni sul repository** : consente all’utente di ottenere le informazioni necessarie per accedere all’archivio Git di Cloud Manager.
    * **Ulteriori informazioni** : descrive la risorsa della documentazione della pipeline CI/CD.
 
-      ![](assets/prod-one.png)
-   >[!NOTE]
-   >
-   >Durante l’esecuzione della pipeline, viene visualizzato il passaggio corrente ed è disponibile solo l’azione **Dettagli** .
+### Modifica di una pipeline non di produzione {#editing-nonprod-pipeline}
+
+Puoi modificare le configurazioni della pipeline dalla **scheda Pipelines** dalla pagina **Panoramica del programma** .
+
+Per modificare la pipeline non di produzione configurata, effettua le seguenti operazioni:
+
+1. Passa alla scheda **Pipelines** dalla pagina **Panoramica del programma** .
+
+1. Seleziona la pipeline non di produzione e fai clic su **..**. Fai clic su **Modifica**, come illustrato nella figura seguente.
+
+
+1. Viene visualizzata la finestra di dialogo **Modifica pipeline di produzione**.
+
+   1. La scheda **Configurazione** ti consente di aggiornare il **Nome pipeline**, **Trigger distribuzione** e **Comportamento di errore delle metriche importanti**.
+
+      >[!NOTE]
+      >Per informazioni su come aggiungere e gestire archivi in Cloud Manager, consulta [Aggiunta e gestione di archivi](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) .
+
+
+1. Fai clic su **Aggiorna** una volta completata la modifica della pipeline non di produzione.
+
 
 ## Passaggi successivi {#the-next-steps}
 
