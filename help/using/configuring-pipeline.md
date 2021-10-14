@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: dde991d2dbd02f4b4145f79d67b6d2f1244e5648
+source-git-commit: e748383fb627ac6ecf69f1b6e313bb5710fbf444
 workflow-type: tm+mt
-source-wordcount: '1378'
+source-wordcount: '1379'
 ht-degree: 1%
 
 ---
@@ -215,13 +215,14 @@ Per modificare la pipeline non di produzione configurata, effettua le seguenti o
 
 1. Seleziona la pipeline non di produzione e fai clic su **..**. Fai clic su **Modifica**, come illustrato nella figura seguente.
 
+   ![](/help/using/assets/configure-pipelines/non-prod-pipeline-edit1.png)
 
-1. Viene visualizzata la finestra di dialogo **Modifica pipeline di produzione**.
+1. Viene visualizzata la finestra di dialogo **Modifica pipeline di produzione** che consente di aggiornare **Nome pipeline**, **Repository**, **Ramo Git**, **Trigger distribuzione** e **Comportamento errore metriche importanti**.
 
-   1. La scheda **Configurazione** ti consente di aggiornare il **Nome pipeline**, **Trigger distribuzione** e **Comportamento di errore delle metriche importanti**.
+   ![](/help/using/assets/configure-pipelines/non-prod-pipeline-edit2.png)
 
-      >[!NOTE]
-      >Per informazioni su come aggiungere e gestire archivi in Cloud Manager, consulta [Aggiunta e gestione di archivi](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) .
+   >[!NOTE]
+   >Per informazioni su come aggiungere e gestire archivi in Cloud Manager, consulta [Aggiunta e gestione di archivi](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) .
 
 
 1. Fai clic su **Aggiorna** una volta completata la modifica della pipeline non di produzione.
