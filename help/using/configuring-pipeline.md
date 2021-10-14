@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: e748383fb627ac6ecf69f1b6e313bb5710fbf444
+source-git-commit: bdbee51ff0a61c2a72ff7ae3a742e2dd817c671a
 workflow-type: tm+mt
-source-wordcount: '1379'
+source-wordcount: '1451'
 ht-degree: 1%
 
 ---
@@ -56,115 +56,126 @@ Prima di iniziare a distribuire il codice, devi configurare le impostazioni dell
 >
 >È possibile modificare le impostazioni della pipeline dopo la configurazione iniziale.
 
-### Configurazione delle impostazioni della pipeline da [!UICONTROL Cloud Manager] {#configuring-the-pipeline-settings-from-cloud-manager}
+## Aggiunta di una nuova pipeline di produzione dalla scheda Pipelines {#adding-production-pipeline}
 
-Una volta configurato il programma utilizzando l’interfaccia utente [!UICONTROL Cloud Manager], è possibile impostare la pipeline.
+Dopo aver configurato il programma e disporre di almeno un ambiente utilizzando l’interfaccia utente [!UICONTROL Cloud Manager], puoi aggiungere una pipeline di produzione.
 
-Per configurare il comportamento e le preferenze per la pipeline, effettua le seguenti operazioni:
+Segui questi passaggi per configurare il comportamento e le preferenze per la pipeline di produzione:
+
+1. Passa alla scheda **Pipelines** dalla pagina **Panoramica del programma** .
+
+1. Fai clic su **+Aggiungi** e seleziona **Aggiungi pipeline di produzione**.
+
+   ![](/help/using/assets/configure-pipelines/add-prod1.png)
+
+1. **Viene visualizzata la finestra di dialogo Aggiungi** pipeline di produzione .
+
+   1. Immettere il nome della pipeline. È possibile scegliere il **Repository** e il **Ramo Git**.
+
+      ![](/help/using/assets/configure-pipelines/add-prod2.png)
+
+   1. È possibile impostare **Trigger distribuzione** e **Comportamento errore importante** da **Opzioni di distribuzione**.
+
+      ![](/help/using/assets/configure-pipelines/add-prod3.png)
+
+
+      Puoi definire il trigger per avviare la pipeline:
+
+      * **Manuale** : utilizzando l’interfaccia utente si avvia manualmente la pipeline.
+      * **In Modifiche Git** : avvia la pipeline CI/CD ogni volta che vengono aggiunti dei commit al ramo Git configurato. Anche se selezioni questa opzione, puoi sempre avviare la pipeline manualmente.
+
+         >[!NOTE]
+         >Durante la configurazione o la modifica della pipeline, Deployment Manager ha la possibilità di definire il comportamento della pipeline quando si verifica un errore importante in uno qualsiasi dei gate di qualità.
+      Questo è utile per i clienti che desiderano processi più automatizzati. Le opzioni disponibili sono:
+
+      * **Chiedi ogni volta**  - Questa è l&#39;impostazione predefinita e richiede un intervento manuale su qualsiasi errore importante.
+      * **Annulla immediatamente** : se selezionata, la pipeline verrà annullata ogni volta che si verifica un errore importante. In sostanza, questo sta simulando un utente che rifiuta manualmente ogni errore.
+      * **Approva immediatamente** : se selezionata, la pipeline procede automaticamente ogni volta che si verifica un errore importante. In sostanza, questo sta simulando un utente che approva manualmente ogni errore.
+   1. Selezionare le **Opzioni di distribuzione**.
+
+      ![](/help/using/assets/configure-pipelines/add-prod4.png)
+
+      * **L&#39;approvazione dopo la distribuzione delle fasi** funziona in modo simile all&#39;approvazione prima dell&#39;implementazione di produzione, ma avviene immediatamente dopo la fase di distribuzione dello stadio, ovvero prima che venga eseguito un test, rispetto all&#39;approvazione prima dell&#39;implementazione di produzione, che viene eseguita dopo il completamento di tutti i test.
+
+      * **Salta il bilanciamento del carico**
+   1. Seleziona **Configurazioni Dispatcher** per Stage.
+
+   1. Seleziona le **Opzioni di distribuzione** per Produzione. Ora puoi definire i parametri che controllano l’implementazione di produzione. Le tre opzioni disponibili sono le seguenti:
+
+      * **Utilizzare l&#39;approvazione Go Live**  - Una distribuzione deve essere approvata manualmente da un proprietario business, da un project manager o da un manager di distribuzione tramite l&#39; [!UICONTROL Cloud Manager] interfaccia utente.
+      * **Utilizzare CSE Oversight** : un CSE è impegnato per avviare effettivamente l’implementazione. Durante la configurazione della pipeline o la modifica quando CSE Oversight è abilitato, Deployment Manager può selezionare:
+
+      * **Qualsiasi caso**: si riferisce a qualsiasi CSE disponibile
+      * **Caso**: si riferisce a un CSE specifico assegnato al cliente o al relativo backup, se il CSE è fuori sede
+
+      * **Pianificata** : questa opzione consente all&#39;utente di abilitare la distribuzione di produzione pianificata.
+
+         >[!NOTE]
+         >Se è selezionata l’opzione **Pianificato** , puoi pianificare la distribuzione di produzione nella pipeline **dopo** la distribuzione dell’area di visualizzazione (e **Usa approvazione GoLive**, se abilitata) in modo da attendere che venga impostata una pianificazione. L’utente può anche scegliere di eseguire immediatamente la distribuzione di produzione.
+         >
+         >Fai riferimento a [Distribuisci il codice](deploying-code.md) per impostare la pianificazione della distribuzione o eseguire la produzione immediatamente.
+   1. Imposta le **Configurazioni del dispatcher** per la produzione.
+
+      In qualità di gestore dell’implementazione, puoi configurare un set di percorsi di contenuto che saranno **invalidati** o **scaricati** dalla cache del Dispatcher AEM per le istanze di pubblicazione, durante l’impostazione o la modifica della pipeline.
+
+      È possibile configurare un set separato di percorsi per la distribuzione Stage e Production. Se configurate, queste azioni della cache verranno eseguite come parte del passaggio della pipeline di distribuzione, subito dopo la distribuzione di eventuali pacchetti di contenuto. Queste impostazioni utilizzano il comportamento standard AEM Dispatcher: l’opzione Annulla convalida esegue un’invalidazione della cache, simile a quando il contenuto viene attivato dall’autore alla pubblicazione; flush esegue un&#39;eliminazione della cache.
+
+      In generale, l’utilizzo dell’azione di annullamento della validità è preferibile, ma in alcuni casi può essere richiesto lo scaricamento, soprattutto quando si utilizzano le librerie client di HTML.
+
+      >[!NOTE]
+      >
+      >Fai riferimento a [Panoramica di Dispatcher](dispatcher-configurations.md) per ulteriori informazioni sul caching di Dispatcher.
+
+
+
+
+
+1. Fai clic su **Continua** dopo aver selezionato tutte le opzioni.
+
+1. Seleziona le opzioni dal passaggio **Test stage** . Puoi configurare i test delle prestazioni *AEM Sites* e *AEM Assets* in base ai prodotti per i quali hai concesso la licenza. Per ulteriori informazioni, consulta [Test delle prestazioni](understand-your-test-results.md#performance-testing) .
+
+   1. Seleziona le opzioni da **Distribuzione dei contenuti dei siti/Peso del caricamento distribuito**. Per ulteriori informazioni, consulta [AEM Sites in Performance Testing](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html?lang=en#aem-sites) .
+
+      ![](/help/using/assets/configure-pipelines/add-prod5.png)
+
+   1. Seleziona le opzioni da **Distribuzione dei test di prestazioni delle risorse**. Per ulteriori informazioni, consulta [AEM Assets in Performance Testing](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html?lang=en#aem-assets) .
+
+      ![](/help/using/assets/configure-pipelines/add-prod6.png)
+
+1. Fai clic su **Salva** per completare l’aggiunta della pipeline di produzione.
+
+### Modifica di una pipeline di produzione {#editing-prod-pipeline}
+
+Puoi modificare le configurazioni della pipeline dalla pagina **Panoramica del programma** .
+
+Per modificare la pipeline configurata, effettua le seguenti operazioni:
+
+1. Passa alla scheda **Pipelines** dalla pagina **Panoramica del programma** .
+
+1. Fai clic su **..** dalla scheda **Pipelines** e fai clic su **Modifica**, come illustrato nella figura seguente.
+
+
+1. Viene visualizzata la finestra di dialogo **Modifica pipeline di produzione**.
+
+   1. La scheda **Configurazione** ti consente di aggiornare il **Nome pipeline**, **Trigger distribuzione** e **Comportamento di errore delle metriche importanti**.
+
+      >[!NOTE]
+      >Per informazioni su come aggiungere e gestire archivi in Cloud Manager, consulta [Aggiunta e gestione di archivi](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) .
+
+
+   1. La scheda **Origine** offre un’opzione per selezionare o deselezionare le opzioni **Pausa prima della distribuzione in Produzione** e **Pianificata** da **Opzioni di distribuzione di produzione**.
+
+
+   1. L’opzione **Audit esperienze** consente di aggiornare o aggiungere nuove pagine.
+
+
+1. Una volta completata la modifica della pipeline, fai clic su **Aggiorna** .
 
 1. Fai clic su **Imposta pipeline** per impostare e configurare la pipeline.
 
    ![](assets/Setup-Pipeline.png)
 
-1. Viene visualizzata la schermata **Pipeline di installazione**.
 
-   La procedura guidata in tre passaggi consente di configurare l&#39;ambiente **Branch**, **Environments** e **Testing**.
-Seleziona il ramo Git e fai clic su **Avanti**.
-
-   >[!NOTE]
-   >
-   >I rami trovati nell’archivio Git sono collegati al tuo programma.
-
-
-1. Accedi alla scheda **Ambienti** per selezionare le opzioni **Stage** e **Produzione** .
-
-   Puoi definire il trigger per avviare la pipeline:
-
-   * **In Modifiche Git** : avvia la pipeline CI/CD ogni volta che vengono aggiunti dei commit al ramo Git configurato. Anche se selezioni questa opzione, puoi sempre avviare la pipeline manualmente.
-   * **Manuale** : utilizzando l’interfaccia utente si avvia manualmente la pipeline.
-
-   Durante la configurazione o la modifica della pipeline, Deployment Manager ha la possibilità di definire il comportamento della pipeline quando si verifica un errore importante in uno qualsiasi dei gate di qualità come la qualità del codice, il test di sicurezza e il test delle prestazioni.
-
-   Questo è utile per i clienti che desiderano processi più automatizzati. Le opzioni disponibili sono:
-
-* **Chiedi ogni volta**  - Questa è l&#39;impostazione predefinita e richiede un intervento manuale su qualsiasi errore importante.
-* **Annulla immediatamente** : se selezionata, la pipeline verrà annullata ogni volta che si verifica un errore importante. In sostanza, questo sta simulando un utente che rifiuta manualmente ogni errore.
-* **Approva immediatamente** : se selezionata, la pipeline procede automaticamente ogni volta che si verifica un errore importante. In sostanza, questo sta simulando un utente che approva manualmente ogni errore.
-
-   Ora puoi definire i parametri che controllano l’implementazione di produzione. Le tre opzioni disponibili sono le seguenti:
-
-* **Utilizzare l&#39;approvazione Go Live**  - Una distribuzione deve essere approvata manualmente da un proprietario business, da un project manager o da un manager di distribuzione tramite l&#39; [!UICONTROL Cloud Manager] interfaccia utente.
-* **Utilizzare CSE Oversight** : un CSE è impegnato per avviare effettivamente l’implementazione. Durante la configurazione della pipeline o la modifica quando CSE Oversight è abilitato, Deployment Manager può selezionare:
-
-   * **Qualsiasi caso**: si riferisce a qualsiasi CSE disponibile
-   * **Caso**: si riferisce a un CSE specifico assegnato al cliente o al relativo backup, se il CSE è fuori sede
-
-* **Pianificata** : questa opzione consente all&#39;utente di abilitare la distribuzione di produzione pianificata.
-
->[!NOTE]
->Se è selezionata l’opzione **Pianificato** , puoi pianificare la distribuzione di produzione nella pipeline **dopo** la distribuzione dell’area di visualizzazione (e **Usa approvazione GoLive**, se abilitata) in modo da attendere che venga impostata una pianificazione. L’utente può anche scegliere di eseguire immediatamente la distribuzione di produzione.
->
->Fai riferimento a [**Distribuisci il codice**](deploying-code.md) per impostare la pianificazione della distribuzione o eseguire la produzione immediatamente.
-
-![](assets/configure-pipeline-new.png)
-
->[!NOTE]
->
->L’opzione **Usa controllo CSE** non è disponibile per tutti i clienti.
-
-**Approva dopo la distribuzione dello stage**
-
-È disponibile un passaggio facoltativo **Approva dopo la distribuzione della fase** che può essere configurato nella pipeline di produzione.
-Questa opzione è abilitata in una nuova opzione nella schermata **Modifica pipeline** :
-
-![](assets/post_deployment1.png)
-
-Viene quindi visualizzato come un passaggio separato durante l’esecuzione della pipeline:
-
-![](assets/post_deployment2.png)
-
->[!NOTE]
->
->**L&#39;approvazione dopo la distribuzione delle fasi** funziona in modo simile all&#39;approvazione prima dell&#39;implementazione di produzione, ma avviene immediatamente dopo la fase di distribuzione dello stadio, ovvero prima che venga eseguito un test, rispetto all&#39;approvazione prima dell&#39;implementazione di produzione, che viene eseguita dopo il completamento di tutti i test.
-
-**Annullamento della validità di Dispatcher**
-
-In qualità di gestore dell’implementazione, puoi configurare un set di percorsi di contenuto che saranno **invalidati** o **scaricati** dalla cache del Dispatcher AEM per le istanze di pubblicazione, durante l’impostazione o la modifica della pipeline.
-
-È possibile configurare un set separato di percorsi per la distribuzione Stage e Production. Se configurate, queste azioni della cache verranno eseguite come parte del passaggio della pipeline di distribuzione, subito dopo la distribuzione di eventuali pacchetti di contenuto. Queste impostazioni utilizzano il comportamento standard AEM Dispatcher: l’opzione Annulla convalida esegue un’invalidazione della cache, simile a quando il contenuto viene attivato dall’autore alla pubblicazione; flush esegue un&#39;eliminazione della cache.
-
-In generale, l’utilizzo dell’azione di annullamento della validità è preferibile, ma in alcuni casi può essere richiesto lo scaricamento, soprattutto quando si utilizzano le librerie client di HTML.
-
->[!NOTE]
->
->Fai riferimento a [Panoramica di Dispatcher](dispatcher-configurations.md) per ulteriori informazioni sul caching di Dispatcher.
-
-Per configurare gli invalidamenti del Dispatcher, effettua le seguenti operazioni:
-
-1. Fai clic su **Configura** nell’intestazione Configurazione del Dispatcher
-
-   ![](assets/image2018-8-7_14-53-24.png)
-
-1. Inserisci il percorso, seleziona l’azione da **Tipo**, quindi fai clic su **Aggiungi**. Puoi specificare fino a 100 percorsi per ambiente. Dopo aver aggiunto i percorsi, fai clic su **Applica**.
-
-   ![](assets/image2018-8-7_14-58-11.png)
-
-1. Una volta tornati alla pagina **Impostazioni pipeline**, viene visualizzato un riepilogo aggiornato delle selezioni.
-
-   Fai clic su **Salva** per mantenere questa configurazione.
-
-   ![](assets/image2018-8-7_15-4-30.png)
-
-1. Accedi alla scheda **Testing** per definire i criteri di test per il programma. Ora puoi configurare i parametri del test delle prestazioni.
-
-   Puoi configurare i test delle prestazioni *AEM Sites* e *AEM Assets* in base ai prodotti per i quali hai concesso la licenza. Per ulteriori informazioni, consulta [Test delle prestazioni](understand-your-test-results.md#performance-testing) .
-
-1. Fai clic su **Salva** per completare la configurazione del processo di pipeline.
-
-   >[!NOTE]
-   >Inoltre, una volta impostata la pipeline, è comunque possibile modificare le impostazioni per la stessa tramite la sezione **Impostazioni pipeline di produzione** dell’interfaccia utente [!UICONTROL Cloud Manager].
-
-   ![](assets/Production-Pipeline.png)
 
 
 ## Solo pipeline non di produzione e di qualità del codice
