@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 1e3dc17d28ab69dcd6b2337280bb38ba07352beb
+source-git-commit: 9509f83f3cecbeaa81543e3c1f8ec33028009e6a
 workflow-type: tm+mt
 source-wordcount: '1834'
 ht-degree: 1%
@@ -25,14 +25,6 @@ ht-degree: 1%
 
 La pagina seguente spiega come configurare la **pipeline**. Per ulteriori informazioni concettuali sul funzionamento della pipeline, consulta la [panoramica della pipeline CI/CD](ci-cd-pipeline.md) .
 
-## Tutorial video {#video-tutorial-one}
-
-### Configurazione della pipeline in Cloud Manager {#config-pipeline-video}
-
-La configurazione della pipeline di produzione CI/CD definisce il trigger che avvierà la pipeline, i parametri che controllano la distribuzione di produzione e i parametri del test delle prestazioni.
-
->[!VIDEO](https://video.tv.adobe.com/v/26314/)
-
 
 ## Informazioni sul flusso {#understanding-the-flow}
 
@@ -43,6 +35,14 @@ Gestione distribuzione è responsabile della configurazione della pipeline. In q
 * definizione del trigger che avvierà la pipeline.
 * definizione dei parametri che controllano la distribuzione di produzione.
 * configurazione dei parametri del test delle prestazioni.
+
+## Tutorial video {#video-tutorial-one}
+
+### Configurazione della pipeline in Cloud Manager {#config-pipeline-video}
+
+La configurazione della pipeline di produzione CI/CD definisce il trigger che avvierà la pipeline, i parametri che controllano la distribuzione di produzione e i parametri del test delle prestazioni.
+
+>[!VIDEO](https://video.tv.adobe.com/v/26314/)
 
 ## Impostazione della pipeline {#setting-up-the-pipeline}
 
@@ -56,7 +56,7 @@ Prima di iniziare a distribuire il codice, devi configurare le impostazioni dell
 >
 >È possibile modificare le impostazioni della pipeline dopo la configurazione iniziale.
 
-## Aggiunta di una nuova pipeline di produzione dalla scheda Pipelines {#adding-production-pipeline}
+### Aggiunta di una nuova pipeline di produzione dalla scheda Pipelines {#adding-production-pipeline}
 
 Dopo aver configurato il programma e disporre di almeno un ambiente utilizzando l’interfaccia utente [!UICONTROL Cloud Manager], puoi aggiungere una pipeline di produzione.
 
