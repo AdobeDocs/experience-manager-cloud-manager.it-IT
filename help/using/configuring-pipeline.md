@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 973fec504cd5f35435b10e3d1d28f3ba20ff4ab9
+source-git-commit: 78a6c939cdb7c4335891e27209b221fc3e6efec2
 workflow-type: tm+mt
-source-wordcount: '1478'
+source-wordcount: '1729'
 ht-degree: 1%
 
 ---
@@ -70,45 +70,45 @@ Segui questi passaggi per configurare il comportamento e le preferenze per la pi
 
 1. **Viene visualizzata la finestra di dialogo Aggiungi** pipeline di produzione .
 
-   1. Immettere il nome della pipeline. È possibile scegliere il **Repository** e il **Ramo Git**.
+   1. Inserisci il **Nome pipeline**. È possibile scegliere il **Repository** e il **Ramo Git**.
 
       ![](/help/using/assets/configure-pipelines/add-prod2.png)
 
-   1. È possibile impostare **Trigger distribuzione** e **Comportamento errore importante** da **Opzioni di distribuzione**.
+   1. Puoi impostare **Trigger distribuzione** e **Comportamento errori di metrica importanti** da **Opzioni di distribuzione**.
 
       ![](/help/using/assets/configure-pipelines/add-prod3.png)
 
 
-      Puoi definire il trigger per avviare la pipeline:
+      Puoi assegnare i seguenti trigger di distribuzione per avviare la pipeline:
 
       * **Manuale** : utilizzando l’interfaccia utente si avvia manualmente la pipeline.
       * **In Modifiche Git** : avvia la pipeline CI/CD ogni volta che vengono aggiunti dei commit al ramo Git configurato. Anche se selezioni questa opzione, puoi sempre avviare la pipeline manualmente.
 
-         >[!NOTE]
-         >Durante la configurazione o la modifica della pipeline, Deployment Manager ha la possibilità di definire il comportamento della pipeline quando si verifica un errore importante in uno qualsiasi dei gate di qualità.
+      Durante la configurazione o la modifica della pipeline, Deployment Manager ha la possibilità di definire il comportamento della pipeline quando si verifica un errore importante in uno qualsiasi dei gate di qualità.
+
       Questo è utile per i clienti che desiderano processi più automatizzati. Le opzioni disponibili sono:
 
       * **Chiedi ogni volta**  - Questa è l&#39;impostazione predefinita e richiede un intervento manuale su qualsiasi errore importante.
-      * **Annulla immediatamente** : se selezionata, la pipeline verrà annullata ogni volta che si verifica un errore importante. In sostanza, questo sta simulando un utente che rifiuta manualmente ogni errore.
-      * **Approva immediatamente** : se selezionata, la pipeline procede automaticamente ogni volta che si verifica un errore importante. In sostanza, questo sta simulando un utente che approva manualmente ogni errore.
+      * **Non riuscito Immediatamente**  - Se selezionato, la pipeline verrà annullata ogni volta che si verifica un errore importante. In sostanza, questo sta simulando un utente che rifiuta manualmente ogni errore.
+      * **Continua immediatamente** : se selezionata, la pipeline procede automaticamente ogni volta che si verifica un errore importante. In sostanza, questo sta simulando un utente che approva manualmente ogni errore.
    1. Selezionare le **Opzioni di distribuzione**.
 
       ![](/help/using/assets/configure-pipelines/add-prod4.png)
 
       * **L&#39;approvazione dopo la distribuzione delle fasi** funziona in modo simile all&#39;approvazione prima dell&#39;implementazione di produzione, ma avviene immediatamente dopo la fase di distribuzione dello stadio, ovvero prima che venga eseguito un test, rispetto all&#39;approvazione prima dell&#39;implementazione di produzione, che viene eseguita dopo il completamento di tutti i test.
 
-      * **Salta il bilanciamento del carico**
-   1. Seleziona **Configurazioni Dispatcher** per Stage. Inserisci il percorso, seleziona l’azione da **Tipo**, quindi fai clic su **Aggiungi percorso**. Puoi specificare fino a 100 percorsi per ambiente.
+      * **Salta le** modifiche del Load Balancer.
+   1. Seleziona la **Configurazione del Dispatcher** per Stage. Inserisci il percorso, seleziona l’azione da **Tipo**, quindi fai clic su **Aggiungi percorso**. Puoi specificare fino a 100 percorsi per ambiente.
 
       ![](/help/using/assets/configure-pipelines/dispatcher-stage.png)
 
-   1. Seleziona le **Opzioni di distribuzione** per Produzione. Ora puoi definire i parametri che controllano l’implementazione di produzione. Le tre opzioni disponibili sono le seguenti:
+   1. Seleziona le **Opzioni di distribuzione** per Produzione. Ora puoi definire i parametri che controllano l’implementazione di produzione.
+
+      ![](/help/using/assets/configure-pipelines/prod-deploymentoptions.png)
+
+      Le tre opzioni disponibili sono le seguenti:
 
       * **Utilizzare l&#39;approvazione Go Live**  - Una distribuzione deve essere approvata manualmente da un proprietario business, da un project manager o da un manager di distribuzione tramite l&#39; [!UICONTROL Cloud Manager] interfaccia utente.
-      * **Utilizzare CSE Oversight** : un CSE è impegnato per avviare effettivamente l’implementazione. Durante la configurazione della pipeline o la modifica quando CSE Oversight è abilitato, Deployment Manager può selezionare:
-
-      * **Qualsiasi caso**: si riferisce a qualsiasi CSE disponibile
-      * **Caso**: si riferisce a un CSE specifico assegnato al cliente o al relativo backup, se il CSE è fuori sede
 
       * **Pianificata** : questa opzione consente all&#39;utente di abilitare la distribuzione di produzione pianificata.
 
@@ -116,6 +116,11 @@ Segui questi passaggi per configurare il comportamento e le preferenze per la pi
          >Se è selezionata l’opzione **Pianificato** , puoi pianificare la distribuzione di produzione nella pipeline **dopo** la distribuzione dell’area di visualizzazione (e **Usa approvazione GoLive**, se abilitata) in modo da attendere che venga impostata una pianificazione. L’utente può anche scegliere di eseguire immediatamente la distribuzione di produzione.
          >
          >Fai riferimento a [Distribuisci il codice](deploying-code.md) per impostare la pianificazione della distribuzione o eseguire la produzione immediatamente.
+
+         * **Utilizzare CSE Oversight** : un CSE è impegnato per avviare effettivamente l’implementazione. Durante la configurazione della pipeline o la modifica quando CSE Oversight è abilitato, Deployment Manager può selezionare:
+
+            * **Qualsiasi caso**: si riferisce a qualsiasi CSE disponibile
+            * **Caso**: si riferisce a un CSE specifico assegnato al cliente o al relativo backup, se il CSE è fuori sede
    1. Imposta le **Configurazioni del dispatcher** per la produzione. Inserisci il percorso, seleziona l’azione da **Tipo**, quindi fai clic su **Aggiungi percorso**. Puoi specificare fino a 100 percorsi per ambiente.
 
       ![](/help/using/assets/configure-pipelines/dispatcher-prod.png)
@@ -172,6 +177,28 @@ Per modificare la pipeline configurata, effettua le seguenti operazioni:
 
 1. Una volta completata la modifica della pipeline, fai clic su **Aggiorna** .
 
+### Azioni aggiuntive della pipeline di produzione {#additional-prod-actions}
+
+#### Esecuzione di una pipeline di produzione {#run-prod}
+
+Puoi eseguire la pipeline di produzione dalla scheda Pipelines :
+
+1. Passa alla scheda **Pipelines** dalla pagina **Panoramica del programma** .
+
+1. Fai clic su **..** dalla scheda **Pipelines** e fai clic su **Esegui**, come illustrato nella figura seguente.
+
+   ![](/help/using/assets/configure-pipelines/prod-run.png)
+
+#### Eliminazione di una pipeline di produzione {#delete-prod}
+
+Puoi eliminare la pipeline di produzione dalla scheda Pipelines :
+
+1. Passa alla scheda **Pipelines** dalla pagina **Panoramica del programma** .
+
+1. Fai clic su **..** dalla scheda **Pipelines** e fai clic su **Elimina**, come illustrato nella figura seguente.
+
+   ![](/help/using/assets/configure-pipelines/prod-delete.png)
+
 ## Solo pipeline non di produzione e di qualità del codice
 
 Oltre alla pipeline principale che viene implementata in fase e produzione, i clienti possono impostare pipeline aggiuntive, denominate **Non-Production Pipelines**. Queste pipeline eseguono sempre i passaggi di creazione e qualità del codice. Facoltativamente, possono anche distribuire in ambiente Adobe Managed Services.
@@ -194,7 +221,7 @@ Nella schermata iniziale, queste pipeline sono elencate in una nuova scheda:
 
 1. **Viene visualizzata la finestra di dialogo Aggiungi**  pipeline non di produzione. Selezionare il tipo di pipeline che si desidera creare, ovvero **Pipeline di qualità del codice** o **Pipeline di distribuzione**.
 
-   Inoltre, è possibile impostare **Trigger distribuzione** e **Comportamento errore importante** da **Opzioni di distribuzione**. Fai clic su **Continua**.
+   Inoltre, puoi anche impostare **Trigger distribuzione** e **Comportamento errori di metrica importanti** da **Opzioni di distribuzione**. Fai clic su **Continua**.
 
    ![](/help/using/assets/configure-pipelines/nonprod-pipeline-add2.png)
 
@@ -228,6 +255,17 @@ Per modificare la pipeline non di produzione configurata, effettua le seguenti o
 
    >[!NOTE]
    >Per informazioni su come aggiungere e gestire archivi in Cloud Manager, consulta [Aggiunta e gestione di archivi](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) .
+
+   Puoi assegnare i seguenti trigger di distribuzione per avviare la pipeline:
+
+   * **Manuale** : utilizzando l’interfaccia utente si avvia manualmente la pipeline.
+   * **In Modifiche Git** : avvia la pipeline CI/CD ogni volta che vengono aggiunti dei commit al ramo Git configurato. Anche se selezioni questa opzione, puoi sempre avviare la pipeline manualmente.
+
+   Durante la configurazione o la modifica della pipeline, Deployment Manager ha la possibilità di definire il comportamento della pipeline quando si verifica un errore importante in uno qualsiasi dei gate di qualità. Questo è utile per i clienti che desiderano processi più automatizzati. Le opzioni disponibili sono:
+
+   * **Chiedi ogni volta**  - Questa è l&#39;impostazione predefinita e richiede un intervento manuale su qualsiasi errore importante.
+   * **Non riuscito Immediatamente**  - Se selezionato, la pipeline verrà annullata ogni volta che si verifica un errore importante. In sostanza, questo sta simulando un utente che rifiuta manualmente ogni errore.
+   * **Continua immediatamente** : se selezionata, la pipeline procede automaticamente ogni volta che si verifica un errore importante. In sostanza, questo sta simulando un utente che approva manualmente ogni errore.
 
 
 1. Fai clic su **Aggiorna** una volta completata la modifica della pipeline non di produzione.
