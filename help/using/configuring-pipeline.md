@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: fd172a7168074630e85f3b110e032f783d39ddca
+source-git-commit: 973fec504cd5f35435b10e3d1d28f3ba20ff4ab9
 workflow-type: tm+mt
-source-wordcount: '1491'
+source-wordcount: '1478'
 ht-degree: 1%
 
 ---
@@ -158,29 +158,19 @@ Per modificare la pipeline configurata, effettua le seguenti operazioni:
 
 1. Fai clic su **..** dalla scheda **Pipelines** e fai clic su **Modifica**, come illustrato nella figura seguente.
 
+   ![](/help/using/assets/configure-pipelines/edit-prod1.png)
 
 1. Viene visualizzata la finestra di dialogo **Modifica pipeline di produzione**.
 
-   1. La scheda **Configurazione** ti consente di aggiornare il **Nome pipeline**, **Trigger distribuzione** e **Comportamento di errore delle metriche importanti**.
+   1. La scheda **Configurazione** consente di aggiornare **Nome pipeline**, **Repository**, **Ramo Git**, **Trigger distribuzione**, **Comportamento errore metriche importanti**, &lt;a1 2/>Opzioni di distribuzione **e** Configurazioni del Dispatcher **.**
 
       >[!NOTE]
       >Per informazioni su come aggiungere e gestire archivi in Cloud Manager, consulta [Aggiunta e gestione di archivi](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) .
 
 
-   1. La scheda **Origine** offre un’opzione per selezionare o deselezionare le opzioni **Pausa prima della distribuzione in Produzione** e **Pianificata** da **Opzioni di distribuzione di produzione**.
-
-
-   1. L’opzione **Audit esperienze** consente di aggiornare o aggiungere nuove pagine.
-
+   1. La scheda **Test stage** ti offre l’opzione di selezionare nuovamente le opzioni da **Distribuzione dei contenuti dei siti/Peso del carico distribuito** e **Distribuzione dei test delle prestazioni delle risorse**.
 
 1. Una volta completata la modifica della pipeline, fai clic su **Aggiorna** .
-
-1. Fai clic su **Imposta pipeline** per impostare e configurare la pipeline.
-
-   ![](assets/Setup-Pipeline.png)
-
-
-
 
 ## Solo pipeline non di produzione e di qualità del codice
 
