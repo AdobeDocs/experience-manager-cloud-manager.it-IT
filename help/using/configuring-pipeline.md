@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 78a6c939cdb7c4335891e27209b221fc3e6efec2
+source-git-commit: 1e3dc17d28ab69dcd6b2337280bb38ba07352beb
 workflow-type: tm+mt
-source-wordcount: '1729'
+source-wordcount: '1834'
 ht-degree: 1%
 
 ---
@@ -199,6 +199,9 @@ Puoi eliminare la pipeline di produzione dalla scheda Pipelines :
 
    ![](/help/using/assets/configure-pipelines/prod-delete.png)
 
+   >[!NOTE]
+   >Un utente con il ruolo di Deployment Manager può ora eliminare la pipeline di produzione in modo self-service tramite l’opzione **Elimina** dalla scheda Pipeline.
+
 ## Solo pipeline non di produzione e di qualità del codice
 
 Oltre alla pipeline principale che viene implementata in fase e produzione, i clienti possono impostare pipeline aggiuntive, denominate **Non-Production Pipelines**. Queste pipeline eseguono sempre i passaggi di creazione e qualità del codice. Facoltativamente, possono anche distribuire in ambiente Adobe Managed Services.
@@ -269,6 +272,28 @@ Per modificare la pipeline non di produzione configurata, effettua le seguenti o
 
 
 1. Fai clic su **Aggiorna** una volta completata la modifica della pipeline non di produzione.
+
+### Azioni aggiuntive di pipeline non di produzione {#additional-nonprod-actions}
+
+#### Esecuzione di una pipeline non di produzione {#run-nonprod}
+
+Puoi eseguire la pipeline di produzione dalla scheda Pipelines :
+
+1. Passa alla scheda **Pipelines** dalla pagina **Panoramica del programma** .
+
+1. Fai clic su **..** dalla scheda **Pipelines** e fai clic su **Esegui**, come illustrato nella figura seguente.
+
+   ![](/help/using/assets/configure-pipelines/nonprod-run1.png)
+
+#### Eliminazione di una pipeline non di produzione {#delete-nonprod}
+
+Puoi eliminare la pipeline di produzione dalla scheda Pipelines :
+
+1. Passa alla scheda **Pipelines** dalla pagina **Panoramica del programma** .
+
+1. Fai clic su **..** dalla scheda **Pipelines** e fai clic su **Elimina**, come illustrato nella figura seguente.
+
+   ![](/help/using/assets/configure-pipelines/nonprod-delete.png)
 
 
 ## Passaggi successivi {#the-next-steps}
