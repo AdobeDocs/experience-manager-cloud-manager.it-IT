@@ -1,20 +1,20 @@
 ---
 title: Introduzione a Cloud Manager
-seo-title: Introduzione a Cloud Manager
+seo-title: Introduction to Cloud Manager
 description: 'Questa pagina offre una guida introduttiva per Cloud Manager. '
-seo-description: 'Questa pagina offre una guida introduttiva per Adobe AEM Cloud Manager e ne evidenzia vantaggi e principali funzioni. '
+seo-description: This page serves as a starting point for learning about Adobe AEM Cloud Manager and highlights the benefits and key features.
 uuid: 62d68e79-c2ba-4d8b-ba7d-33709014d5b6
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
-feature: Guida introduttiva
+feature: Getting Started
 level: Beginner
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
-source-git-commit: 81c14382821de6b2d249000a79799747a6d9cb19
+source-git-commit: 08d831c560510d58062ed81fab809c12169810cb
 workflow-type: tm+mt
-source-wordcount: '805'
-ht-degree: 79%
+source-wordcount: '814'
+ht-degree: 66%
 
 ---
 
@@ -29,16 +29,19 @@ ht-degree: 79%
 
 ## Introduzione {#introduction}
 
-[!UICONTROL Cloud Manager], parte di Adobe Experience Manager (AEM) in Cloud, consente alle organizzazioni di gestire in modo autonomo gli Experienci Manager nel cloud. Include un framework di integrazione continua e distribuzione continua (CI/CD, Continuous Integration/Continuous Delivery) che consente ai team IT e ai partner dell’implementazione di accelerare la distribuzione di personalizzazioni o aggiornamenti senza compromettere prestazioni o sicurezza.
+[!UICONTROL Cloud Manager] Adobe Experience Manager offre agli sviluppatori la possibilità di creare esperienze cliente di impatto attraverso flussi di lavoro semplificati, basati sulle best practice di Adobe Experience Manager. Le pipeline CI/CD ottimizzate per Adobe Experience Manager ti consentono di unire facilmente i flussi di lavoro di sviluppo semplicemente controllando il codice e spostandoti fino alla fase di produzione. Durante la fase di creazione, gli aggiornamenti del codice personalizzato vengono testati accuratamente utilizzando best practice comprovate e apprese per fornire esperienze digitali di impatto ai clienti. Cloud Manager utilizza un approccio open-API e consente di integrarsi con i sistemi senza interrompere i processi e gli strumenti esistenti.
 
-Questo sito di documentazione descrive in modo specifico le funzioni e le funzioni di Cloud Manager disponibili per i clienti di Adobe Managed Services (AMS). La documentazione sulle funzioni e sulle funzioni di Cloud Manager per i clienti AEM come Cloud Service si trova in [Implementazione di applicazioni per AEM come Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/home.html?lang=en).
+Questo sito di documentazione descrive in modo specifico le funzioni e le funzioni di Cloud Manager per i clienti di Adobe Managed Services (AMS). La documentazione equivalente per AEM clienti as a Cloud Service si trova nella sezione [Implementazione di applicazioni per AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/home.html?lang=en).
 
-Tramite il portale clienti self-service di [!UICONTROL Cloud Manager], le **organizzazioni** possono eseguire o sfruttare quanto segue:
+Con Cloud Manager, il team di sviluppo può sfruttare quanto segue:
 
-* **Integrazione continua/distribuzione continua** del codice per ridurre i tempi di realizzazione da mesi/settimane a giorni/ore.
-* **Ispezione del codice, test delle prestazioni e convalida di sicurezza** basati sulle procedure consigliate ed effettuati prima del passaggio alla fase produttiva, al fine di ridurre al minimo le interruzioni di produzione.
-* **Distribuzione automatica, programmata o manuale** anche al di fuori dell’orario di lavoro, per garantire flessibilità e controllo di massimo grado.
-* **Funzione di scalabilità automatica** che rileva in modo intelligente la necessità di capacità aggiuntive e porta automaticamente in linea altri segmenti Dispatcher/Publish.
+* Integrazione continua/distribuzione continua del codice per ridurre i tempi di realizzazione da mesi/settimane a giorni/ore.
+
+* Ispezione del codice, test delle prestazioni e convalida di sicurezza basati sulle best practice prima di passare alla produzione per ridurre al minimo le interruzioni di produzione.
+
+* Connettività API per integrare i processi DevOps esistenti.
+
+* Funzione di scalabilità automatica che rileva in modo intelligente la necessità di capacità aggiuntive e porta automaticamente in linea altri segmenti Dispatcher/Publish.
 
 L’immagine riportata di seguito illustra il flusso di processo CI/CD utilizzato in [!UICONTROL Cloud Manager]:
 
@@ -54,7 +57,7 @@ L’interfaccia utente di [!UICONTROL Cloud Manager] offre ai clienti un accesso
 
 I clienti definiscono gli indicatori chiave di prestazioni (KPI, Key Performance Indicators) specifici per l’applicazione, come i picchi di visualizzazioni della pagina al minuto e i tempi di risposta previsti per il caricamento di una pagina, che in ultima analisi costituiscono la base per la misurazione di una distribuzione di successo. È possibile definire facilmente ruoli e autorizzazioni per i diversi membri del gruppo. Se da una parte la nuova interfaccia self-service riporta il controllo nelle mani dell’utente, offre anche collegamenti alle best practice e accesso ai consigli degli esperti di Adobe, in grado di fornire il supporto necessario secondo necessità.
 
-Per esplorare e iniziare a utilizzare l&#39;interfaccia utente di [!UICONTROL Cloud Manager], consulta [Primo accesso](https://helpx.adobe.com/experience-manager/cloud-manager/using/first-time-login.html).
+Per esplorare e iniziare a utilizzare [!UICONTROL Cloud Manager]Interfaccia utente di , vedi [Primo accesso](https://helpx.adobe.com/experience-manager/cloud-manager/using/first-time-login.html).
 
 ### Pipeline CI/CD {#ci-cd-pipeline}
 
@@ -62,7 +65,7 @@ Una delle funzionalità principali di [!UICONTROL Cloud Manager] è la capacità
 
 Attraverso l’interfaccia utente di [!UICONTROL Cloud Manager] i clienti possono configurare e avviare la pipeline CI/CD. Durante l’esecuzione della pipeline viene eseguita un’analisi approfondita del codice per garantire che solo le applicazioni di qualità elevata passino all’ambiente di produzione.
 
-Per ulteriori informazioni sulla configurazione della pipeline dall’interfaccia utente di [!UICONTROL Cloud Manager], consulta [Configurare la pipeline CI/CD](https://helpx.adobe.com/experience-manager/cloud-manager/using/configuring-pipeline.html).
+Per ulteriori informazioni sulla configurazione della pipeline, consulta [!UICONTROL Cloud Manager]Interfaccia utente di , vedi [Configurare la pipeline CI/CD](https://helpx.adobe.com/experience-manager/cloud-manager/using/configuring-pipeline.html).
 
 ### Modalità di distribuzione flessibili {#flexible-deployment-modes}
 
