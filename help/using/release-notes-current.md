@@ -3,7 +3,7 @@ title: Note sulla versione 2021.11.0
 description: Segui questa pagina per ottenere informazioni sulla versione 2021.11.0 di Cloud Manager
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 0395fd4263ae37bce49c698e8e72ad7b08af046a
+source-git-commit: e6e5a17c16c42e0b0ed5aedd2f9a6360fd81d8cd
 workflow-type: tm+mt
 source-wordcount: '0'
 ht-degree: 0%
@@ -29,6 +29,8 @@ La prossima versione è prevista per il 9 dicembre 2021.
 * La `x-request-id` l&#39;intestazione di risposta è ora visibile in API Playground on [www.adobe.io](https://www.adobe.io/). Questa intestazione è utile quando si inviano problemi di assistenza clienti per la risoluzione dei problemi.
 
 * In qualità di utente, vedo la scheda Pipeline con tubazioni zero che mi forniscono la guida appropriata.
+
+* È ora disponibile una nuova pagina Attività in cui è possibile visualizzare le attività come la pipeline e le esecuzioni di codice insieme ai relativi dettagli associati. Nel tempo, le attività elencate in questa pagina si espanderanno nell’ambito insieme ai dettagli forniti.
 
 * È ora disponibile una nuova pagina Pipelines con un puntatore di stato al passaggio del mouse per una facile visualizzazione del riepilogo dei dettagli. Le esecuzioni della pipeline possono essere visualizzate insieme ai relativi dettagli associati.
 
