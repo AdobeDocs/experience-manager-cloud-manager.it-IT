@@ -1,53 +1,55 @@
 ---
-title: Note sulla versione 2021.10.0
-description: Segui questa pagina per ottenere informazioni sulla versione 2021.10.0 di Cloud Manager
+title: Note sulla versione 2021.11.0
+description: Segui questa pagina per ottenere informazioni sulla versione 2021.11.0 di Cloud Manager
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: b28f8f1bedb92428d332716510cbf0fd714fada6
+source-git-commit: 0395fd4263ae37bce49c698e8e72ad7b08af046a
 workflow-type: tm+mt
-source-wordcount: '365'
-ht-degree: 3%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # Note sulla versione 2021.10.0 {#release-notes-for}
 
-La sezione seguente illustra le note generali sulla versione per [!UICONTROL Cloud Manager] la versione 2021.10.0.
+La sezione seguente illustra le note generali sulla versione di [!UICONTROL Cloud Manager] Versione 2021.11.0.
 
 >[!NOTE]
 >Fai riferimento a [Note sulla versione corrente](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/release-notes-cloud-manager/release-notes-cm-current.html?lang=en#getting-access) per visualizzare le ultime note sulla versione per Cloud Manager in AEM as a Cloud Service.
 
 ## Data di pubblicazione {#release-date}
 
-La data di rilascio per la versione 2021.10.0 è il 14 ottobre 2021.
-[!UICONTROL Cloud Manager]
-La prossima versione è prevista per il 4 novembre 2021.
+Data di rilascio per [!UICONTROL Cloud Manager] La versione 2021.11.0 è il 4 novembre 2021.
+La prossima versione è prevista per il 9 dicembre 2021.
 
 ## Novità {#whats-new}
 
-* Le pipeline di produzione possono ora essere eseguite in modalità &quot;di emergenza&quot;, evitando i passaggi di test di sicurezza e prestazioni per le implementazioni di emergenza.
+* L’ID del commit Git verrà ora visualizzato nei dettagli di esecuzione della pipeline, facilitando il tracciamento del codice generato.
 
-* Per coerenza con il Cloud Service, le pipeline di distribuzione esistenti ora vengono referenziate ed etichettate nell’interfaccia utente come pipeline &quot;Full Stack&quot;.
+* La `x-request-id` l&#39;intestazione di risposta è ora visibile in API Playground on [www.adobe.io](https://www.adobe.io/). Questa intestazione è utile quando si inviano problemi di assistenza clienti per la risoluzione dei problemi.
 
-* La scheda della pipeline è stata aggiornata per visualizzare una singola faccia integrata che mostra sia le pipeline di produzione che quelle non di produzione e l’utente può selezionare Esegui/Pausa/Riprendi direttamente dal menu delle azioni associato a ciascuna pipeline.
+* In qualità di utente, vedo la scheda Pipeline con tubazioni zero che mi forniscono la guida appropriata.
 
-* Un utente con il ruolo di Deployment Manager può ora eliminare la pipeline di produzione in modo self-service tramite l’interfaccia utente.
+* È ora disponibile una nuova pagina Pipelines con un puntatore di stato al passaggio del mouse per una facile visualizzazione del riepilogo dei dettagli. Le esecuzioni della pipeline possono essere visualizzate insieme ai relativi dettagli associati.
 
-* Le esperienze di aggiunta e modifica delle pipeline sono state aggiornate per poter utilizzare modelli moderni e familiari.
+* L’API Edit Pipeline ora supporta l’impostazione dei percorsi di annullamento della validità e scaricamento del dispatcher.
 
-* Gli utenti di Cloud Manager ora possono inviare feedback direttamente dall’interfaccia utente tramite il pulsante **Feedback** in alto a destra della pagina di destinazione.
+* L’API Edit Pipeline ora supporta la modifica dell’ambiente utilizzato nelle fasi di distribuzione.
 
-* I grafici SLA annuali possono ora essere scaricati dall’interfaccia utente di Cloud Manager.
+* È stata introdotta un&#39;ottimizzazione nel processo di scansione OakPal per i pacchetti di grandi dimensioni.
 
-* Le esecuzioni della pipeline di qualità del codice e non di produzione ora utilizzeranno un processo di duplicazione poco profondo più efficiente durante il passaggio di creazione, consentendo ai clienti con archivi Git di dimensioni particolarmente grandi di ottenere tempi di creazione più rapidi.
+* Il file CSV del problema qualità conterrà ora la marca temporale per ogni problema di qualità.
 
-* La documentazione API di Cloud Manager ora include un parco giochi interattivo che consente agli utenti connessi di sperimentare l’API dal proprio browser. Per ulteriori informazioni, consulta [Cloud Manager API Playground](https://www.adobe.io/experience-cloud/cloud-manager/reference/playground/) .
-
-* La descrizione comandi nella scheda Programma sarà più descrittiva se un’opzione di selezione in &quot;Passa a&quot; è disabilitata. Ora si dirà &quot;Un ambiente di produzione non esiste&quot;.
-
+* Il pulsante Gestisci nella pagina Ambienti non sarà più visibile nell’interfaccia utente di .
 
 ## Correzioni di bug {#bug-fixes}
 
-* Quando i dati letti dai sistemi interni non venivano immessi correttamente, poteva causare la visualizzazione errata dei dati non correlati forniti dai CSE in Cloud Manager.
+* Alcune configurazioni di build non ortodosse hanno comportato la memorizzazione di file non necessari nella cache degli artefatti Maven della pipeline, causando un I/O di rete estranea all’avvio e all’arresto del contenitore di build.
 
-* In situazioni specifiche del cliente, gli artefatti non validi scaricati durante il passaggio di compilazione che avrebbero dovuto causare un errore di compilazione venivano ignorati.
+* L’API di Pipeline PATCH non riesce se la fase di distribuzione non esiste.
+
+* La `ClientlibProxyResourceCheck` la regola di qualità generava falsi problemi positivi in presenza di librerie client con percorsi di base comuni.
+
+* Il messaggio di errore quando è stato raggiunto il numero massimo di archivi non specifica il motivo dell&#39;errore.
+
+* In rari casi, le pipeline non riuscivano a causa di una gestione inappropriata dei tentativi di alcuni codici di risposta.
