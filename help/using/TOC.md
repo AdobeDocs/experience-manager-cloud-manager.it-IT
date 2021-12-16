@@ -8,9 +8,9 @@ user-guide-description: Scopri come utilizzare Adobe Managed Services per gestir
 feature-set: Experience Manager Cloud Manager, Experience Manager
 role: Admin
 level: Intermediate
-source-git-commit: 0ba21a1223c5cee5d8a46e08f38fc59b5188fd40
+source-git-commit: 53c5aed5e42408ae4503b6003350de3ae1f27edf
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '291'
 ht-degree: 82%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 82%
    + [Pipeline CI/CD](ci-cd-pipeline.md)
    + [Sicurezza e privacy](security-and-privacy.md)
    + [Risorse per assistenza](help-resources.md)
-   + [Cloud Manager FAQs](cloud-manager-faqs.md)
+   + [Domande frequenti su Cloud Manager](cloud-manager-faqs.md)
 + Requisiti{#requirements}
    + [Diritti di accesso concessi](access-rights-granted.md)
    + [Archivio del codice sorgente](source-code-repository.md)
@@ -38,7 +38,7 @@ ht-degree: 82%
    + Creare un progetto di applicazione AEM {#create-application-project}
       + [Utilizzo della procedura guidata](using-the-wizard.md)
       + [Configurazione del progetto](setting-up-project.md)
-      + [Understanding the Build Environment](build-environment-details.md)
+      + [Informazioni sull’ambiente di creazione](build-environment-details.md)
    + [Configurare i rami della versione](configure-your-release-branches.md)
    + [Gestire le configurazioni del Dispatcher](dispatcher-configurations.md)
 + Guida all’uso {#how-to-use}
@@ -48,20 +48,21 @@ ht-degree: 82%
    + [Gestire gli ambienti](manage-your-environment.md)
    + [Monitorare gli ambienti](monitor-your-environments.md)
    + [API di Cloud Manager](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html)
-   + [Cloud Manager CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/main/README.md)
+   + [CLI di Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/main/README.md)
    + [Notifiche](notifications.md)
    + [Regole per la qualità del codice personalizzato](custom-code-quality-rules.md)
-+ Manage your Code {#managing-code}
++ Gestire il codice {#managing-code}
    + [Gestione delle versioni dei progetti Maven](activating-maven-project.md)
    + [Repository in Cloud Manager](cloud-manager-repositories.md)
    + [Accesso agli archivi](accessing-repos.md)
-   + [Integrating with Git](setup-cloud-manager-git-integration.md)
+   + [Integrazione con Git](setup-cloud-manager-git-integration.md)
    + [Utilizzo di più archivi Git di origine](/help/using/working-with-multiple-source-git-repos.md)
 + Procedura guidata di aggiornamento del prodotto {#product-update-wizard}
    + [Panoramica](overview-productupdate-wizard.md)
    + [Valutazione](evaluation.md)
 + Note sulla versione {#release-notes}
-   + [Note sulla versione corrente (2021.11.0)](release-notes-current.md)
+   + [Note sulla versione corrente](release-notes-current.md)
+   + [Note sulla versione 2021.11.0](release-notes-2021-11-0.md)
    + [Note sulla versione 2021.10.0](release-notes-2021-10-0.md)
    + [Note sulla versione 2021.9.0](release-notes-2021-9-0.md)
    + [Note sulla versione 2021.8.0](release-notes-2021-8-0.md)

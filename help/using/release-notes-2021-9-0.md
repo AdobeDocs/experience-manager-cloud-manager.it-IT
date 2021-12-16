@@ -2,8 +2,7 @@
 title: Note sulla versione 2021.9.0
 description: Segui questa pagina per ottenere informazioni sulla versione 2021.9.0 di Cloud Manager
 feature: Release Information
-exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 17f79fdc7278cae532485570a6e2b8700683ef0d
+source-git-commit: 09dd8fe608d95cd9dbc95129cf86b9693c2839b5
 workflow-type: tm+mt
 source-wordcount: '172'
 ht-degree: 6%
@@ -12,14 +11,14 @@ ht-degree: 6%
 
 # Note sulla versione 2021.9.0 {#release-notes-for}
 
-La sezione seguente illustra le note generali sulla versione per [!UICONTROL Cloud Manager] la versione 2021.9.0.
+La sezione seguente illustra le note generali sulla versione di [!UICONTROL Cloud Manager] Versione 2021.9.0.
 
 >[!NOTE]
 >Fai riferimento a [Note sulla versione corrente](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/release-notes-cloud-manager/release-notes-cm-current.html?lang=en#getting-access) per visualizzare le ultime note sulla versione per Cloud Manager in AEM as a Cloud Service.
 
 ## Data di pubblicazione {#release-date}
 
-La data di rilascio per la versione 2021.9.0 di [!UICONTROL Cloud Manager] è il 9 settembre 2021.
+Data di rilascio per [!UICONTROL Cloud Manager] La versione 2021.9.0 è il 9 settembre 2021.
 
 ## Novità {#whats-new}
 
@@ -31,7 +30,7 @@ La data di rilascio per la versione 2021.9.0 di [!UICONTROL Cloud Manager] è il
 
 * Le opzioni del menu della pagina Attività includeranno ora un&#39;opzione per &quot;Download Log&quot; per le esecuzioni completate di Code Generator. Selezionando questa opzione, il registro del passaggio di compilazione verrà scaricato.
 
-* Facendo clic direttamente sulla scheda Programma passa alla pagina **Panoramica** di Cloud Manager.
+* Facendo clic direttamente sulla scheda Programma, ora passa a Cloud Manager’s **Panoramica** pagina.
 
 ## Correzioni di bug {#bug-fixes}
 

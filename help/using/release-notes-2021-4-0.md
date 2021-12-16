@@ -1,23 +1,21 @@
 ---
 title: Note sulla versione 2021.4.0
 description: Segui questa pagina per ottenere informazioni sulla versione 2021.4.0 di Cloud Manager
-feature: Informazioni sulla versione
-exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-translation-type: tm+mt
-source-git-commit: 5f81fdb86b1dfa6c748bb7784ef00dc062c9f8ef
+feature: Release Information
+source-git-commit: 09dd8fe608d95cd9dbc95129cf86b9693c2839b5
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 7%
+source-wordcount: '183'
+ht-degree: 6%
 
 ---
 
 # Note sulla versione 2021.4.0 {#release-notes-for}
 
-La sezione seguente illustra le note generali sulla versione per [!UICONTROL Cloud Manager] la versione 2021.4.0.
+La sezione seguente illustra le note generali sulla versione di [!UICONTROL Cloud Manager] Versione 2021.4.0.
 
-## Data di rilascio {#release-date}
+## Data di pubblicazione {#release-date}
 
-La data di rilascio per la versione 2021.4.0 è il 8 aprile 2021.[!UICONTROL Cloud Manager]
+Data di rilascio per [!UICONTROL Cloud Manager] La versione 2021.4.0 è il 08 aprile 2021.
 
 ## Novità {#whats-new}
 
@@ -25,7 +23,7 @@ La data di rilascio per la versione 2021.4.0 è il 8 aprile 2021.[!UICONTROL Clo
 
 * Il pulsante Manage Git (Gestisci Git) viene visualizzato sulla scheda Pipelines (Pipelines) anche se non è stata configurata alcuna pipeline.
 
-* Durante la fase di distribuzione della pagina di esecuzione della pipeline, l’utente sarà in grado di visualizzare i passaggi di distribuzione completati e futuri, oltre al passaggio corrente nell’interfaccia utente per lo stato *In corso* .
+* Durante la fase di distribuzione della pagina di esecuzione della pipeline, l’utente sarà in grado di visualizzare i passaggi di distribuzione completati e futuri, oltre al passaggio corrente nell’interfaccia utente per *In corso* stato.
 
 * La versione dell’archetipo di progetto AEM utilizzato da Cloud Manager è stata aggiornata alla versione 27.
 
@@ -35,8 +33,8 @@ La data di rilascio per la versione 2021.4.0 è il 8 aprile 2021.[!UICONTROL Clo
 
 ## Correzioni di bug {#bug-fixes}
 
-* Errori rari e transitori che possono verificarsi al passaggio *Assets Test* nella pipeline di produzione.
+* Errori rari e transitori che possono verificarsi a *Test delle risorse* nella pipeline di produzione.
 
 * Una barra finale nel test di caricamento della pipeline di produzione causava un errore 404.
 
-* Il controllo `Runmode` produceva falsi positivi sui nodi non presenti nelle cartelle.
+* La `Runmode` check stava producendo falsi positivi sui nodi non cartelle.
