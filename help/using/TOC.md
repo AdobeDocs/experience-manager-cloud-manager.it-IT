@@ -8,10 +8,10 @@ user-guide-description: Scopri come utilizzare Adobe Managed Services per gestir
 feature-set: Experience Manager Cloud Manager, Experience Manager
 role: Admin
 level: Intermediate
-source-git-commit: e3f0759437707f73dfc6851608e06e30064c0f16
+source-git-commit: 4f0e1d163001fd18cfa838256c813152d65c3b4c
 workflow-type: tm+mt
-source-wordcount: '294'
-ht-degree: 82%
+source-wordcount: '303'
+ht-degree: 88%
 
 ---
 
@@ -37,12 +37,15 @@ ht-degree: 82%
    + [Configurare il programma](setting-up-program.md)
    + Creare un progetto di applicazione AEM {#create-application-project}
       + [Utilizzo della procedura guidata](using-the-wizard.md)
-      + [Configurazione del progetto](setting-up-project.md)
-      + [Informazioni sull’ambiente di creazione](build-environment-details.md)
+      + [Impostazione del progetto](setting-up-project.md)
+      + [Informazioni sull’ambiente della versione](build-environment-details.md)
    + [Configurare i rami della versione](configure-your-release-branches.md)
    + [Gestire le configurazioni del Dispatcher](dispatcher-configurations.md)
 + Guida all’uso {#how-to-use}
-   + [Configurare la pipeline CI/CD](configuring-pipeline.md)
+   + Pipeline CI/CD {#pipelines}
+      + [Configurazione delle pipeline di produzione](configuring-production-pipelines.md)
+      + [Configurazione di pipeline non di produzione](configuring-non-production-pipelines.md)
+      + [Gestione delle pipeline](managing-pipelines.md)
    + [Implementare il codice](deploying-code.md)
    + [Comprendere i risultati del test](understand-your-test-results.md)
    + [Gestire gli ambienti](manage-your-environment.md)
@@ -62,6 +65,7 @@ ht-degree: 82%
    + [Valutazione](evaluation.md)
 + Note sulla versione {#release-notes}
    + [Note sulla versione corrente](release-notes-current.md)
+   + [Note sulla versione 2022.1.0](release-notes-2022-1-0.md)
    + [Note sulla versione 2021.12.0](release-notes-2021-12-0.md)
    + [Note sulla versione 2021.11.0](release-notes-2021-11-0.md)
    + [Note sulla versione 2021.10.0](release-notes-2021-10-0.md)

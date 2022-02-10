@@ -2,9 +2,10 @@
 title: Note sulla versione 2021.3.0
 description: Segui questa pagina per ottenere informazioni sulla versione 2021.3.0 di Cloud Manager
 feature: Release Information
-source-git-commit: 09dd8fe608d95cd9dbc95129cf86b9693c2839b5
+exl-id: e05b22fe-f071-4b69-9db1-e3d7ee4cfbcc
+source-git-commit: 71d44c7e3673ca62fcd2203ecc0bc4ed9fa22002
 workflow-type: tm+mt
-source-wordcount: '240'
+source-wordcount: '231'
 ht-degree: 5%
 
 ---
@@ -28,7 +29,7 @@ La prossima versione è prevista per il 08 aprile 2021.
 
 * La **Versione** l’etichetta è stata rinominata in **Tag Git** nella schermata di esecuzione della pipeline di produzione .
 
-* Le etichette che definiscono il comportamento quando le metriche importanti non soddisfano la soglia definita sono state rinominate per riflettere il loro comportamento effettivo - **Annulla immediatamente** e **Approva immediatamente**. Fai riferimento a [Configurazione delle impostazioni della pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#configuring-the-pipeline-settings-from-cloud-manager) per ulteriori dettagli.
+* Le etichette che definiscono il comportamento quando le metriche importanti non soddisfano la soglia definita sono state rinominate per riflettere il loro comportamento effettivo - **Annulla immediatamente** e **Approva immediatamente**. Consulta il documento [Configurazione delle pipeline di produzione](configuring-production-pipelines.md) per ulteriori dettagli.
 
 * Gli elenchi di elementi obsoleti di classi e metodi sono stati aggiornati in base alla versione `2021.3.4997.20210303T022849Z-210225` dell’SDK AEM Cloud Service.
 

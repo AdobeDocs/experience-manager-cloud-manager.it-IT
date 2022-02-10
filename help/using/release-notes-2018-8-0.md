@@ -1,36 +1,35 @@
 ---
 title: Note sulla versione 2018.8.0
-seo-title: Note sulla versione di AEM Cloud Manager 2018.8.0
+seo-title: AEM Cloud Manager Release Notes for 2018.8.0
 description: Segui questa pagina per ottenere informazioni sulla versione 2018.8.0 di Cloud Manager.
-seo-description: Segui questa pagina per ottenere informazioni sulla versione 2018.8.0 di AEM Cloud Manager.
+seo-description: Follow this page to get information for AEM Cloud Manager Release 2018.8.0.
 uuid: e8aaba32-89b4-4bc5-b295-09b753252612
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: release-notes
 discoiquuid: 9222ac3b-525e-47c1-b481-ac9d22e3d559
 feature: Release Information
-translation-type: tm+mt
-source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
+exl-id: 20f87048-30f7-4869-aad0-13ca383a404b
+source-git-commit: 4f0e1d163001fd18cfa838256c813152d65c3b4c
 workflow-type: tm+mt
-source-wordcount: '331'
+source-wordcount: '312'
 ht-degree: 4%
 
 ---
 
-
 # Note sulla versione 2018.8.0 {#release-notes-for}
 
-Il rilascio di [!UICONTROL Cloud Manager] 2018.8.0 aggiunge il supporto per l’attivazione automatica della pipeline CI/CD con commit git e una nuova procedura guidata per la creazione di progetti di applicazione in git in base al tipo di progetto AEM.
+La [!UICONTROL Cloud Manager] Con la versione 2018.8.0 è stato aggiunto il supporto per l’attivazione automatica della pipeline CI/CD con commit git e una nuova procedura guidata per la creazione di progetti di applicazione in git in base al tipo di progetto AEM.
 
-## Data di rilascio {#release-date}
+## Data di pubblicazione {#release-date}
 
-La data di rilascio di [!UICONTROL Cloud Manager] versione 2018.8.0 è il 4 ottobre 2018.
+Data di rilascio per [!UICONTROL Cloud Manager] La versione 2018.8.0 è il 4 ottobre 2018.
 
 ## Novità {#what-s-new}
 
-* **Configurazione del programma**  - Nuova procedura guidata per creare un progetto di applicazione in git utilizzando AEM Project Archetype
+* **Configurazione del programma** - Nuova procedura guidata per creare un progetto di applicazione in git utilizzando AEM Project Archetype
 
-* **Pipeline CI/CD**  - Le seguenti modifiche vengono aggiunte alla pipeline CI/CD. Per ulteriori informazioni, consulta [Configurare la pipeline CI/CD](configuring-pipeline.md) .
+* **Pipeline CI/CD** - Le seguenti modifiche vengono aggiunte alla pipeline CI/CD. Fare riferimento al documento [Configurare le pipeline di produzione](configuring-production-pipelines.md) per saperne di più.
 
    * All’attivazione delle modifiche Git viene avviata la pipeline CI/CD ogni volta che vengono aggiunti dei commit al ramo Git configurato.
    * Le schede nella schermata principale ora sono collegate in profondità a sezioni specifiche della pagina di esecuzione della pipeline.
@@ -39,10 +38,10 @@ La data di rilascio di [!UICONTROL Cloud Manager] versione 2018.8.0 è il 4 otto
    * Nella pagina di esecuzione della pipeline viene ora visualizzato il nome di versione/tag creato per l’esecuzione.
    * Aggiornamento della versione Apache Maven a 3.5.3.
 
-* **Navigazione** : le seguenti modifiche vengono aggiunte al  [!UICONTROL Cloud Manager].
+* **Navigazione** - Le seguenti modifiche vengono aggiunte al [!UICONTROL Cloud Manager].
 
    * Il collegamento Risorse nella navigazione globale consente di accedere al Runbook in Sharepoint.
-   * Il menu Aiuto è stato riorganizzato in modo da includere contenuti più [!UICONTROL Cloud Manager] specifici.
+   * Il menu Aiuto è stato riorganizzato per includere ulteriori informazioni [!UICONTROL Cloud Manager]Contenuto specifico.
 
 ## Correzioni di bug {#bug-fixes}
 
@@ -55,5 +54,4 @@ La data di rilascio di [!UICONTROL Cloud Manager] versione 2018.8.0 è il 4 otto
 ## Problemi noti {#known-issues}
 
 * I rami creati con Creazione guidata progetto applicazione non possono contenere trattini.
-* La barra laterale delle notifiche [!UICONTROL Experience Cloud] potrebbe non caricare le notifiche in modo coerente. Le notifiche, tuttavia, sono visibili in [!UICONTROL Experience Cloud] e, se configurate, saranno comunque inviate tramite e-mail.
-
+* La [!UICONTROL Experience Cloud] la barra laterale di notifica potrebbe non caricare le notifiche in modo coerente. Le notifiche, tuttavia, sono visibili nel [!UICONTROL Experience Cloud] e, se configurato, verrà comunque inviato tramite e-mail.

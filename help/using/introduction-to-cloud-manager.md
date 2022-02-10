@@ -11,9 +11,9 @@ discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 feature: Getting Started
 level: Beginner
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
-source-git-commit: 08d831c560510d58062ed81fab809c12169810cb
+source-git-commit: 71d44c7e3673ca62fcd2203ecc0bc4ed9fa22002
 workflow-type: tm+mt
-source-wordcount: '814'
+source-wordcount: '812'
 ht-degree: 66%
 
 ---
@@ -65,7 +65,7 @@ Una delle funzionalità principali di [!UICONTROL Cloud Manager] è la capacità
 
 Attraverso l’interfaccia utente di [!UICONTROL Cloud Manager] i clienti possono configurare e avviare la pipeline CI/CD. Durante l’esecuzione della pipeline viene eseguita un’analisi approfondita del codice per garantire che solo le applicazioni di qualità elevata passino all’ambiente di produzione.
 
-Per ulteriori informazioni sulla configurazione della pipeline, consulta [!UICONTROL Cloud Manager]Interfaccia utente di , vedi [Configurare la pipeline CI/CD](https://helpx.adobe.com/experience-manager/cloud-manager/using/configuring-pipeline.html).
+Per ulteriori informazioni sulla configurazione della pipeline, consulta [!UICONTROL Cloud Manager]Interfaccia utente, visualizzare i documenti [Configurazione delle pipeline di produzione](configuring-production-pipelines.md) e [Configurazione delle pipeline non di produzione.](configuring-non-production-pipelines.md)
 
 ### Modalità di distribuzione flessibili {#flexible-deployment-modes}
 

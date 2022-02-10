@@ -1,44 +1,43 @@
 ---
 title: Note sulla versione 2018.6.0
-seo-title: Note sulla versione di AEM Cloud Manager 2018.6.0
+seo-title: AEM Cloud Manager Release Notes for 2018.6.0
 description: Segui questa pagina per ottenere informazioni sulla versione 2018.6.0 di Cloud Manager.
-seo-description: Segui questa pagina per ottenere informazioni sulla versione 2018.6.0 di AEM Cloud Manager.
+seo-description: Follow this page to get information for AEM Cloud Manager Release 2018.6.0.
 uuid: 211b6e1b-10fb-46b0-b591-44d5e44abd77
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: release-notes
 discoiquuid: 8584f467-3e61-41ea-98e4-f79e68c86469
 feature: Release Information
-translation-type: tm+mt
-source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
+exl-id: 456f7892-c64c-4b3f-b845-15682d034aaa
+source-git-commit: 4f0e1d163001fd18cfa838256c813152d65c3b4c
 workflow-type: tm+mt
-source-wordcount: '336'
-ht-degree: 4%
+source-wordcount: '317'
+ht-degree: 3%
 
 ---
 
-
 # Note sulla versione 2018.6.0 {#release-notes-for}
 
-La sezione seguente illustra le note generali sulla versione per [!UICONTROL Cloud Manager] la versione 2018.6.0 e aggiunge il supporto per l’invalidazione del dispatcher durante le distribuzioni, notifiche aggiuntive e miglioramenti a livello di usabilità.
+La sezione seguente illustra le note generali sulla versione di [!UICONTROL Cloud Manager] La versione 2018.6.0 aggiunge il supporto per l’invalidazione del dispatcher durante le distribuzioni, notifiche aggiuntive e miglioramenti a livello di usabilità.
 
-## Data di rilascio {#release-date}
+## Data di pubblicazione {#release-date}
 
-La data di rilascio per la versione 2018.6.0 di [!UICONTROL Cloud Manager] è il 9 agosto 2018.
+Data di rilascio per [!UICONTROL Cloud Manager] La versione 2018.6.0 è il 9 agosto 2018.
 
 ## Novità {#what-s-new}
 
-* **Pipeline CI/CD**  - Annullamento della validità del dispatcher configurabile e scaricamento della cache sia sullo stage che sulla produzione durante l’esecuzione della pipeline CI/CD. Per ulteriori informazioni, consulta [Configurare la pipeline CI/CD](configuring-pipeline.md) .
+* **Pipeline CI/CD** - Annullamento della validità del Dispatcher configurabile e scaricamento della cache sia sullo stage che sulla produzione durante l’esecuzione della pipeline CI/CD. Fare riferimento al documento [Configurare le pipeline di produzione](configuring-production-pipelines.md) per saperne di più.
 
-* **Pipeline CI/CD** : durante la configurazione della pipeline è ora possibile definire il comportamento della pipeline quando si verifica un errore importante in uno dei gate di qualità. Per ulteriori informazioni, consulta [Configurare la pipeline CI/CD](configuring-pipeline.md) .
+* **Pipeline CI/CD** - Durante la configurazione della pipeline, è ora possibile definire il comportamento della pipeline quando si verifica un errore importante in uno dei gate di qualità. Fare riferimento al documento [Configurare le pipeline di produzione](configuring-production-pipelines.md) per saperne di più.
 
-* **Pipeline CI/CD** : durante la configurazione della pipeline è ora possibile selezionare se si desidera che la CSE Oversight venga eseguita dal CSE o da un CSE disponibile. Per ulteriori informazioni, consulta [Configurare la pipeline CI/CD](configuring-pipeline.md) .
+* **Pipeline CI/CD** - Durante la configurazione della pipeline, è ora possibile selezionare se si desidera che la supervisione del CSE venga eseguita dal CSE o da un CSE disponibile. Fare riferimento al documento [Configurare le pipeline di produzione](configuring-production-pipelines.md) per saperne di più.
 
-* **Pipeline CI/CD** : quando la pipeline CI/CD raggiunge la fase di approvazione aziendale, viene inviata una notifica agli utenti autorizzati ad approvare la distribuzione. Per ulteriori informazioni, consulta [Notifiche](notifications.md) .
+* **Pipeline CI/CD** - Quando la pipeline CI/CD raggiunge la fase di approvazione aziendale, viene inviata una notifica agli utenti autorizzati ad approvare la distribuzione. Fai riferimento a [Notifiche](notifications.md) per saperne di più.
 
-* **Pipeline CI/CD** : quando la pipeline CI/CD raggiunge il set di pianificazione, viene inviata una notifica agli utenti autorizzati a impostare la pianificazione. Per ulteriori informazioni, consulta [Notifiche](notifications.md) .
+* **Pipeline CI/CD** - Quando la pipeline CI/CD raggiunge il set di pianificazione, viene inviata una notifica agli utenti autorizzati a impostare la pianificazione. Fai riferimento a [Notifiche](notifications.md) per saperne di più.
 
-* **Analisi della qualità del codice**  - Nuove regole per identificare le richieste HTTP/HTTPS in uscita configurate in modo errato. Per ulteriori informazioni, consulta [Regole per la qualità del codice personalizzato](custom-code-quality-rules.md) .
+* **Analisi della qualità del codice** - Nuove regole per identificare le richieste HTTP/HTTPS in uscita configurate in modo errato. Fai riferimento a [Regole per la qualità del codice personalizzato](custom-code-quality-rules.md) per saperne di più.
 
 ## Correzioni di bug {#bug-fixes}
 

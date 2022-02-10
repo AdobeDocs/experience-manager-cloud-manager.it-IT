@@ -1,20 +1,19 @@
 ---
 title: Pipeline CI/CD
-seo-title: Pipeline CI/CD
+seo-title: CI/CD Pipeline
 description: Panoramica sulla pipeline CI/CD, che gestisce le implementazioni in stage e produzione in Cloud Manager
-seo-description: Leggi questa sezione per informazioni sulla pipeline CI/CD, che gestisce le implementazioni per lo stage e la produzione in Cloud Manager.
+seo-description: Follow this section to learn about the CI/CD pipeline, which handles deployments to stage and production in Cloud Manager
 uuid: 763ddb24-05cd-463f-8d72-a2e69bbe6b7e
 topic-tags: introduction
 discoiquuid: 1cdb76eb-1a91-4689-8579-0fa9fccc0592
 feature: CI-CD Pipeline
-translation-type: tm+mt
-source-git-commit: c5d32d49782c899d013fcc60b9c4d2b67e9350ae
+exl-id: 7130e5b7-6986-48c8-900c-90f3e4187f91
+source-git-commit: 4f0e1d163001fd18cfa838256c813152d65c3b4c
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '533'
 ht-degree: 1%
 
 ---
-
 
 # Pipeline CI/CD {#ci-cd-pipeline}
 
@@ -24,7 +23,7 @@ ht-degree: 1%
 
 La pipeline CI/CD automatizza inoltre i processi di testing delle unità e delle prestazioni per aumentare l’efficienza dell’implementazione e identificare in modo proattivo i problemi critici che sono costosi da risolvere dopo la distribuzione. I team di implementazione possono accedere a un rapporto completo sulle prestazioni del codice per ottenere visibilità sul potenziale impatto sui KPI e sulle convalide di sicurezza critiche se il codice viene distribuito in produzione.
 
-## Processo della pipeline {#pipeline-process}
+## Processo pipeline {#pipeline-process}
 
 Il diagramma seguente illustra cosa accade quando una versione viene attivata in [!UICONTROL Cloud Manager]. La tabella che accompagna viene illustrata ogni fase del flusso di lavoro.
 
@@ -47,9 +46,9 @@ La tabella seguente descrive cosa succede in ogni fase del processo:
 
 ### Come impostare una pipeline CI/CD {#how-to-setup-a-ci-cd-pipeline}
 
-Per ulteriori informazioni sulla configurazione della pipeline, consulta [configurazione della pipeline](configuring-pipeline.md).
+Per ulteriori informazioni sulla configurazione della pipeline, consulta i documenti [Configurazione delle pipeline di produzione](configuring-production-pipelines.md) e [Configurazione delle pipeline non di produzione.](configuring-non-production-pipelines.md)
 
-## Cancelli di qualità {#quality-gates}
+## Gates di qualità {#quality-gates}
 
 La pipeline CI/CD fornisce gate di qualità, o criteri di accettazione, che devono essere soddisfatti prima che il codice possa essere spostato dall’ambiente stage all’ambiente di distribuzione. La pipeline è composta da tre gate:
 
@@ -59,9 +58,9 @@ La pipeline CI/CD fornisce gate di qualità, o criteri di accettazione, che devo
 
 Per ciascuno di questi cancelli, esistono tre livelli di problemi identificati:
 
-* **Problemi critici** : problemi identificati dal gate che causano un errore immediato della pipeline.
-* **Importante** : problemi identificati dal gate che fanno sì che la pipeline entri in uno stato di pausa. Un manager distribuzione, un project manager o un proprietario business possono ignorare i problemi, nel qual caso la pipeline procede, oppure possono accettare i problemi, nel qual caso la pipeline si interrompe con un errore.
-* **Informazioni** : problemi identificati dal gate che sono forniti a scopo puramente informativo e non hanno alcun impatto sull’esecuzione della pipeline.
+* **Critico** - le questioni individuate dalla porta che causano un guasto immediato della conduttura.
+* **Importante** - problemi identificati dal gate che fanno sì che la pipeline entri in uno stato di pausa. Un manager distribuzione, un project manager o un proprietario business possono ignorare i problemi, nel qual caso la pipeline procede, oppure possono accettare i problemi, nel qual caso la pipeline si interrompe con un errore.
+* **Informazioni** - le questioni individuate dal cancello che sono fornite a scopo puramente informativo e non hanno alcun impatto sull’esecuzione del gasdotto.
 
 Di seguito è riportato un esempio di scansione del codice con problemi identificati per il codice:
 
@@ -69,4 +68,4 @@ Di seguito è riportato un esempio di scansione del codice con problemi identifi
 
 ### Come impostare i cancelli {#how-to-setup-gates}
 
-Consulta **[Configurazione di gate](configuring-pipeline.md)** per informazioni dettagliate sulla configurazione del codice, della qualità e delle prestazioni.
+Vedere il documento [Configurazione delle pipeline di produzione](configuring-production-pipelines.md) per informazioni dettagliate sulla configurazione del codice, della qualità e delle prestazioni.
