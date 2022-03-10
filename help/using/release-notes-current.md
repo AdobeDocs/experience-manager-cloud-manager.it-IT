@@ -3,10 +3,10 @@ title: Note sulla versione 2022.3.0
 description: Queste sono le note sulla versione per la versione 2022.3.0 di Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 0d14adda454889eebbb0a875978ceeaa5ee4f7ea
+source-git-commit: 79b2729814af483844d095ed8d6db6cead2ceaf7
 workflow-type: tm+mt
-source-wordcount: '197'
-ht-degree: 4%
+source-wordcount: '229'
+ht-degree: 3%
 
 ---
 
@@ -26,13 +26,14 @@ La data di rilascio per [!UICONTROL Cloud Manager] la versione 2022.3.0 è il 10
 ## Novità {#what-is-new}
 
 * Solo per il Cloud Service: per accedere al registro dell’ambiente di AEM è possibile utilizzare il ruolo Sviluppatore .
-* La [`reliability_rating` metrica critica](understand-your-test-results.md) è stato disattivato.
+* (AMS): Le richieste HTTP in uscita dai test delle risorse verranno ora effettuate da un intervallo IP fisso.
 
 
 ## Correzioni di bug {#bug-fixes}
 
-* [La **Ignora modifiche di Load Balancer** opzione](configuring-production-pipelines.md#adding-production-pipeline) ora può essere disabilitato correttamente.
-* [La **Ignora modifiche di Load Balancer** opzione](configuring-production-pipelines.md#adding-production-pipeline) viene ora visualizzato per il flusso di lavoro della pipeline di distribuzione di modifica.
-* Un sottoinsieme di archivi git creati manualmente presentava valori di nome non corretti che ne influenzavano l’utilizzo [la funzione di riutilizzo degli artefatti di build.](setting-up-project.md#build-artifact-reuse) I nomi di tali archivi sono stati modificati e gli utenti vedranno il nome corretto nell’API/interfaccia utente di Cloud Manager.
-* [Quando aggiungi o modifichi una pipeline di qualità del codice,](configuring-non-production-pipelines.md) le opzioni per gestire gli errori di metrica non vengono più visualizzate.
-* Le configurazioni impreviste delle variabili della pipeline non causano più errori nel passaggio di compilazione.
+* (Solo AMS) Il **Ignora modifiche di Load Balancer** impossibile disabilitare l&#39;opzione .
+* (AMS) **Ignora modifiche di Load Balancer** l&#39;opzione non è stata visualizzata in Distribuzione sviluppo AMS **Modifica flusso di lavoro della pipeline**.
+* Un sottoinsieme di archivi Git creati manualmente presentava un valore di nome errato che impediva l’efficacia della funzione di riutilizzo degli artefatti di generazione. I nomi di tali archivi sono stati modificati e gli utenti vedranno il nome corretto nell’API/interfaccia utente di Cloud Manager.
+* Gli artefatti di generazione da pipeline non di produzione sono stati riutilizzati in modo inappropriato sulle pipeline di stack complete di produzione.
+* Quando si aggiunge o si modifica una pipeline di qualità del codice, le opzioni per gestire gli errori di metrica non vengono più visualizzate.
+* Alcune configurazioni impreviste di variabili della pipeline potrebbero causare nel passaggio di compilazione.
