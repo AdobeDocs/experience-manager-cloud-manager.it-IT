@@ -1,18 +1,19 @@
 ---
-title: Note sulla versione 2022.2.0
-description: Queste sono le note sulla versione per la versione 2022.2.0 di Cloud Manager.
+title: Note sulla versione 2022.3.0
+description: Queste sono le note sulla versione per la versione 2022.3.0 di Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: ae4cc3e8056e6ac317628e997271b4b01c7251c3
+source-git-commit: 6e98f9d2fcd69799bad86d1e247212b26273bd0b
 workflow-type: tm+mt
-source-wordcount: '131'
-ht-degree: 6%
+source-wordcount: '197'
+ht-degree: 4%
 
 ---
 
-# Note sulla versione per Cloud Manager versione 2022.2.0 {#release-notes}
 
-La sezione seguente illustra le note generali sulla versione di [!UICONTROL Cloud Manager] versione 2022.2.0.
+# Note sulla versione per Cloud Manager versione 2022.3.0 {#release-notes}
+
+Questa pagina documenta le note sulla versione per [!UICONTROL Cloud Manager] versione 2022.3.0.
 
 >[!NOTE]
 >
@@ -20,13 +21,17 @@ La sezione seguente illustra le note generali sulla versione di [!UICONTROL Clou
 
 ## Data di pubblicazione {#release-date}
 
-La data di rilascio per [!UICONTROL Cloud Manager] la versione 2022.2.0 è il 10 febbraio 2022. La prossima versione è prevista per il 10 marzo 2022.
+La data di rilascio per [!UICONTROL Cloud Manager] la versione 2022.3.0 è il 10 marzo 2022. La prossima versione è prevista per il 7 aprile 2022.
 
-## Novità {#whats-new}
+## Novità {#what-is-new}
 
-* Un’esperienza aggiornata alla pagina di destinazione di Cloud Manager offre una navigazione migliore, un passaggio semplice tra le visualizzazioni griglia/riquadro e pop-up per un riepilogo rapido dei programmi.
+* [La `reliability_rating` metrica critica](understand-your-test-results.md) è stato disattivato.
+* Ora un utente può ordinare le colonne nel **Tubi** in Cloud Manager.
 
 ## Correzioni di bug {#bug-fixes}
 
-* Le esecuzioni di rollback ora sono correttamente differenziate dalle esecuzioni di pipeline di stack complete.
-* Le password dell’archivio Git precedente ora vengono sempre invalidate quando viene generata una nuova password.
+* [La **Ignora modifiche di Load Balancer** opzione](configuring-production-pipelines.md#adding-production-pipeline) ora può essere disabilitato correttamente.
+* [La **Ignora modifiche di Load Balancer** opzione](configuring-production-pipelines.md#adding-production-pipeline) viene ora visualizzato per il flusso di lavoro della pipeline di distribuzione di modifica.
+* Un sottoinsieme di archivi git creati manualmente presentava valori di nome non corretti che ne influenzavano l’utilizzo [la funzione di riutilizzo degli artefatti di build.](setting-up-project.md#build-artifact-reuse) I nomi di tali archivi sono stati modificati e gli utenti vedranno il nome corretto nell’API/interfaccia utente di Cloud Manager.
+* [Quando aggiungi o modifichi una pipeline di qualità del codice,](configuring-non-production-pipelines.md) le opzioni per gestire gli errori di metrica non vengono più visualizzate.
+* Le configurazioni impreviste delle variabili della pipeline non causano più errori nel passaggio di compilazione.

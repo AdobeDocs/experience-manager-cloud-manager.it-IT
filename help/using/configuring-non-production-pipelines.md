@@ -1,13 +1,13 @@
 ---
 title: Configurazione di pipeline non di produzione
 description: Scopri come utilizzare Cloud Manager per creare e configurare pipeline non di produzione per distribuire il codice.
-source-git-commit: 205113735cc743e11e140b1161413002844f5b79
+exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
+source-git-commit: 154b95e1b43717097b9ae9076a15792517dd613d
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '627'
 ht-degree: 0%
 
 ---
-
 
 # Configurazione di pipeline non di produzione {#configuring-non-production-pipelines}
 
@@ -71,7 +71,7 @@ Dopo aver configurato il programma e disporre di almeno un ambiente utilizzando 
 
       * **Manuale** - Utilizzare questa opzione per avviare manualmente la pipeline.
       * **Su modifiche Git** - Questa opzione avvia la pipeline ogni volta che vengono aggiunti dei commit al ramo git configurato. Con questa opzione, potete comunque avviare la pipeline manualmente come necessario.
-   1. Sotto **Comportamento di errori di metrica importanti**, definisci il comportamento della pipeline quando si verifica un errore importante in uno qualsiasi dei gate di qualità.
+   1. Per le condotte di distribuzione, in **Comportamento di errori di metrica importanti**, definisci il comportamento della pipeline quando si verifica un errore importante in uno qualsiasi dei gate di qualità.
 
       * **Chiedi sempre** - Questa è l&#39;impostazione predefinita e richiede l&#39;intervento manuale su qualsiasi errore importante.
       * **Non riuscito immediatamente** - Se selezionata, la pipeline verrà annullata ogni volta che si verifica un errore importante. In sostanza, questo sta simulando un utente che rifiuta manualmente ogni errore.
