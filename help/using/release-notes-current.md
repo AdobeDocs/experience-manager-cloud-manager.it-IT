@@ -3,10 +3,10 @@ title: Note sulla versione 2022.3.0
 description: Queste sono le note sulla versione per la versione 2022.3.0 di Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 79b2729814af483844d095ed8d6db6cead2ceaf7
+source-git-commit: 7611667d8c617d501f9b69cbc7c854c195a5ebbe
 workflow-type: tm+mt
-source-wordcount: '229'
-ht-degree: 3%
+source-wordcount: '210'
+ht-degree: 4%
 
 ---
 
@@ -25,14 +25,13 @@ La data di rilascio per [!UICONTROL Cloud Manager] la versione 2022.3.0 è il 10
 
 ## Novità {#what-is-new}
 
-* Solo per il Cloud Service: per accedere al registro dell’ambiente di AEM è possibile utilizzare il ruolo Sviluppatore .
-* (AMS): Le richieste HTTP in uscita dai test delle risorse verranno ora effettuate da un intervallo IP fisso.
+* Le richieste HTTP in uscita dai test delle risorse verranno ora effettuate da un intervallo IP fisso.
 
 
 ## Correzioni di bug {#bug-fixes}
 
-* (Solo AMS) Il **Ignora modifiche di Load Balancer** impossibile disabilitare l&#39;opzione .
-* (AMS) **Ignora modifiche di Load Balancer** l&#39;opzione non è stata visualizzata in Distribuzione sviluppo AMS **Modifica flusso di lavoro della pipeline**.
+* La **Ignora modifiche di Load Balancer** impossibile disabilitare l&#39;opzione .
+*Il **Ignora modifiche di Load Balancer** l&#39;opzione non è stata visualizzata in Distribuzione sviluppo AMS **Modifica flusso di lavoro della pipeline**.
 * Un sottoinsieme di archivi Git creati manualmente presentava un valore di nome errato che impediva l’efficacia della funzione di riutilizzo degli artefatti di generazione. I nomi di tali archivi sono stati modificati e gli utenti vedranno il nome corretto nell’API/interfaccia utente di Cloud Manager.
 * Gli artefatti di generazione da pipeline non di produzione sono stati riutilizzati in modo inappropriato sulle pipeline di stack complete di produzione.
 * Quando si aggiunge o si modifica una pipeline di qualità del codice, le opzioni per gestire gli errori di metrica non vengono più visualizzate.
