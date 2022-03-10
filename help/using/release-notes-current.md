@@ -3,7 +3,7 @@ title: Note sulla versione 2022.3.0
 description: Queste sono le note sulla versione per la versione 2022.3.0 di Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 6e98f9d2fcd69799bad86d1e247212b26273bd0b
+source-git-commit: 0d14adda454889eebbb0a875978ceeaa5ee4f7ea
 workflow-type: tm+mt
 source-wordcount: '197'
 ht-degree: 4%
@@ -25,8 +25,9 @@ La data di rilascio per [!UICONTROL Cloud Manager] la versione 2022.3.0 è il 10
 
 ## Novità {#what-is-new}
 
-* [La `reliability_rating` metrica critica](understand-your-test-results.md) è stato disattivato.
-* Ora un utente può ordinare le colonne nel **Tubi** in Cloud Manager.
+* Solo per il Cloud Service: per accedere al registro dell’ambiente di AEM è possibile utilizzare il ruolo Sviluppatore .
+* La [`reliability_rating` metrica critica](understand-your-test-results.md) è stato disattivato.
+
 
 ## Correzioni di bug {#bug-fixes}
 
