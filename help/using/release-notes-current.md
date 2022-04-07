@@ -1,19 +1,19 @@
 ---
-title: Note sulla versione 2022.3.0
-description: Queste sono le note sulla versione per la versione 2022.3.0 di Cloud Manager.
+title: Note sulla versione 2022.4.0
+description: Queste sono le note sulla versione per la versione 2022.4.0 di Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 4a5ddf3144ec50f1a7a4ac367b5c99bc9b486752
+source-git-commit: 3d4eea13c0f2e9c4030bbfd3b7c5c25336548498
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 4%
+source-wordcount: '277'
+ht-degree: 2%
 
 ---
 
 
-# Note sulla versione per Cloud Manager versione 2022.3.0 {#release-notes}
+# Note sulla versione per Cloud Manager versione 2022.4.0 {#release-notes}
 
-Questa pagina documenta le note sulla versione per [!UICONTROL Cloud Manager] versione 2022.3.0.
+Questa pagina documenta le note sulla versione per [!UICONTROL Cloud Manager] versione 2022.4.0.
 
 >[!NOTE]
 >
@@ -21,18 +21,15 @@ Questa pagina documenta le note sulla versione per [!UICONTROL Cloud Manager] ve
 
 ## Data di pubblicazione {#release-date}
 
-La data di rilascio per [!UICONTROL Cloud Manager] la versione 2022.3.0 è il 10 marzo 2022. La prossima versione è prevista per il 7 aprile 2022.
+La data di rilascio per [!UICONTROL Cloud Manager] la versione 2022.4.0 è il 7 aprile 2022. La prossima versione è prevista per il 5 maggio 2022.
 
 ## Novità {#what-is-new}
 
-* Le richieste HTTP in uscita dai test delle risorse verranno ora effettuate da un intervallo IP fisso.
-
-
-## Correzioni di bug {#bug-fixes}
-
-* La **Ignora modifiche di Load Balancer** impossibile disabilitare l&#39;opzione .
-* La **Ignora modifiche di Load Balancer** l&#39;opzione non è stata visualizzata in Distribuzione sviluppo AMS **Modifica flusso di lavoro della pipeline**.
-* Un sottoinsieme di archivi Git creati manualmente presentava un valore di nome errato che impediva l’efficacia della funzione di riutilizzo degli artefatti di generazione. I nomi di tali archivi sono stati modificati e gli utenti vedranno il nome corretto nell’API/interfaccia utente di Cloud Manager.
-* Gli artefatti di generazione da pipeline non di produzione sono stati riutilizzati in modo inappropriato sulle pipeline di stack complete di produzione.
-* Quando si aggiunge o si modifica una pipeline di qualità del codice, le opzioni per gestire gli errori di metrica non vengono più visualizzate.
-* Alcune configurazioni impreviste di variabili della pipeline potrebbero causare nel passaggio di compilazione.
+* Sono stati implementati miglioramenti alla durata e al tasso di successo delle fasi di generazione della pipeline e verranno distribuiti in modo incrementale a tutti i clienti entro il mese di aprile.
+* È ora possibile trovare facilmente un ramo git digitando i primi caratteri del nome nel campo di input nella procedura guidata di aggiunta e modifica della pipeline e selezionando dalle corrispondenze suggerite.
+* La **Tubi** La pagina ora dispone di impaginazione per migliorare l’usabilità dei programmi con un numero elevato di pipeline.
+   * Nella tabella vengono visualizzate 50 righe per pagina.
+* Versione del [Archetipo di progetto AEM](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html) utilizzato da Cloud Manager è stato aggiornato alla versione 36.
+* Oracle JDK è ora il JDK predefinito per lo sviluppo e il funzionamento delle applicazioni AEM. Il processo di creazione di Cloud Manager passa automaticamente a utilizzando Oracle JDK, anche se nella toolchain Maven è selezionata esplicitamente un’opzione alternativa.
+   * Per ulteriori informazioni su come passare ad Oracle JDK, consulta [la documentazione sull’ambiente di creazione.](/help/using/build-environment-details.md#using-java-support)
+   * Fai riferimento a [Domande frequenti sui criteri di supporto Java per Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-65/assets/Java_Policy_for_Adobe_Experience_Manager.pdf) per risolvere le domande comuni su questa modifica.
