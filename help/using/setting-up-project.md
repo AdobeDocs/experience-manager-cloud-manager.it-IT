@@ -3,14 +3,14 @@ title: Impostazione del progetto
 description: Segui questa pagina per scoprire come impostare un progetto
 feature: Getting Started, Production Programs
 exl-id: ed994daf-0195-485a-a8b1-87796bc013fa
-source-git-commit: 8861b5e48b8e1d081b4c8653000a8f2cf16dd11f
+source-git-commit: fd1a72f2fd3b3e3789fcb38a8d4a9585293ced50
 workflow-type: tm+mt
-source-wordcount: '1289'
+source-wordcount: '1440'
 ht-degree: 5%
 
 ---
 
-# Configurazione del progetto {#setting-up-your-project}
+# Impostazione del progetto {#setting-up-your-project}
 
 ## Modifica dei dettagli di configurazione del progetto {#modifying-project-setup-details}
 
@@ -266,7 +266,11 @@ Con content-package-maven-plugin è simile:
 
 In molti casi, lo stesso codice viene distribuito a più ambienti AEM. Laddove possibile, Cloud Manager evita di ricostruire la base di codice quando rileva che lo stesso commit git viene utilizzato in più esecuzioni di pipeline complete.
 
-All’avvio di un’esecuzione, viene estratto il commit corrente di HEAD per la pipeline di ramo. L’hash di commit è visibile nell’interfaccia utente e tramite l’API . Al completamento del passaggio della build, gli artefatti risultanti vengono memorizzati in base a tale hash di commit e possono essere riutilizzati nelle esecuzioni successive della pipeline. Quando si verifica un riutilizzo, i passaggi di creazione e qualità del codice vengono effettivamente sostituiti con i risultati dell’esecuzione originale. Il file di registro per la fase di compilazione elenca gli artefatti e le informazioni di esecuzione utilizzate per generarli originariamente.
+All’avvio di un’esecuzione, viene estratto il commit corrente di HEAD per la pipeline di ramo. L’hash di commit è visibile nell’interfaccia utente e tramite l’API . Al completamento del passaggio della build, gli artefatti risultanti vengono memorizzati in base a tale hash di commit e possono essere riutilizzati nelle esecuzioni successive della pipeline.
+
+I pacchetti vengono riutilizzati tra le pipeline se si trovano nello stesso programma. Quando cerchi pacchetti che possono essere riutilizzati, AEM ignora le ramificazioni e riutilizza gli artefatti tra rami.
+
+Quando si verifica un riutilizzo, i passaggi di creazione e qualità del codice vengono effettivamente sostituiti con i risultati dell’esecuzione originale. Il file di registro per la fase di compilazione elenca gli artefatti e le informazioni di esecuzione utilizzate per generarli originariamente.
 
 Di seguito è riportato un esempio di tale output di log.
 
@@ -277,6 +281,34 @@ build/aem-guides-wknd.dispatcher.cloud-2021.1216.1101633.0000884042.zip (dispatc
 ```
 
 Il registro del passaggio di qualità del codice conterrà informazioni simili.
+
+### Esempi {#example-reuse}
+
+#### Esempio 1 {#example-1}
+
+Considera che il tuo programma dispone di due pipeline di sviluppo:
+
+* Pipeline 1 su ramo `foo`
+* Pipeline 2 su ramo `bar`
+
+Entrambi i rami si trovano sullo stesso ID commit.
+
+1. Prima di tutto, l’esecuzione della pipeline 1 genererà i pacchetti normalmente.
+1. L’esecuzione della pipeline 2 riutilizzerà i pacchetti creati dalla pipeline 1.
+
+#### Esempio 2 {#example-2}
+
+Considera che il programma ha due rami:
+
+* Ramo `foo`
+* Ramo `bar`
+
+Entrambi i rami hanno lo stesso ID commit.
+
+1. Viene generata ed eseguita una pipeline di sviluppo `foo`.
+1. Successivamente viene creata ed eseguita una pipeline di produzione `bar`.
+
+In questo caso, l&#39;artefatto di `foo` verrà riutilizzato per la pipeline di produzione poiché è stato identificato lo stesso hash di commit.
 
 ### Rinuncia {#opting-out}
 
@@ -292,6 +324,8 @@ Se lo desideri, puoi disattivare il comportamento di riutilizzo per specifiche p
 
 ### Avvertenze {#caveats}
 
+* Gli artefatti di creazione non vengono riutilizzati in diversi programmi, indipendentemente dal fatto che l’hash di commit sia identico.
+* Gli artefatti di creazione vengono riutilizzati all’interno dello stesso programma anche se il ramo e/o la pipeline sono diversi.
 * [Gestione delle versioni Maven](/help/using/activating-maven-project.md) sostituisci la versione del progetto solo nelle pipeline di produzione. Pertanto, se lo stesso commit viene utilizzato sia su un’esecuzione di distribuzione di sviluppo che su un’esecuzione di pipeline di produzione e la pipeline di distribuzione di sviluppo viene eseguita per prima, le versioni verranno distribuite sullo stage e la produzione senza essere modificate. Tuttavia, in questo caso verrà comunque creato un tag .
 * Se il recupero degli artefatti memorizzati non ha esito positivo, il passaggio di compilazione verrà eseguito come se non fosse stato memorizzato alcun artefatto.
 * Variabili di pipeline diverse da `CM_DISABLE_BUILD_REUSE` non vengono considerati quando Cloud Manager decide di riutilizzare gli artefatti di build creati in precedenza.
