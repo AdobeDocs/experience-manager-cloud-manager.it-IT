@@ -10,7 +10,7 @@ topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 feature: Code Deployment
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-source-git-commit: 2fcefda1e30871d44e3a1353470a4728904d7598
+source-git-commit: 0ba7c49b3550666030249562219b2d0dc51f4ae1
 workflow-type: tm+mt
 source-wordcount: '1220'
 ht-degree: 1%
@@ -22,17 +22,17 @@ ht-degree: 1%
 ## Distribuzione del codice con Cloud Manager {#deploying-code-with-cloud-manager}
 
 >[!NOTE]
->Per informazioni sulla distribuzione del codice per Cloud Manager in AEM as a Cloud Service, consulta [qui](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#using-cloud-manager).
+>Per informazioni sulla distribuzione del codice per Cloud Manager in AEM as a Cloud Service, vedi [qui](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=en#using-cloud-manager).
 
 Dopo aver configurato la pipeline di produzione (archivio, ambiente e ambiente di test), è possibile distribuire il codice.
 
-1. Fai clic su **Distribuisci** da Cloud Manager per avviare il processo di distribuzione.
+1. Fai clic su **Distribuzione** da Cloud Manager per avviare il processo di distribuzione.
 
    ![](assets/Deploy1.png)
 
-1. Viene visualizzata la schermata **Esecuzione pipeline** .
+1. La **Esecuzione della pipeline** viene visualizzato lo schermo.
 
-   Fai clic su **Genera** per avviare il processo.
+   Fai clic su **Crea** per avviare il processo.
 
    ![](assets/Deploy2.png)
 
@@ -51,34 +51,34 @@ Dopo aver configurato la pipeline di produzione (archivio, ambiente e ambiente d
    La **distribuzione della fase** prevede i seguenti passaggi:
 
    * Convalida: Questo passaggio assicura che la pipeline sia configurata per utilizzare le risorse attualmente disponibili, ad esempio che il ramo configurato esista, che gli ambienti siano disponibili.
-   * Build &amp; Unit Testing: Questo passaggio esegue un processo di compilazione containerizzato. Per informazioni dettagliate sull’ambiente di creazione, consulta [Informazioni sull’ambiente di generazione](/help/using/build-environment-details.md) .
-   * Scansione del codice: Questo passaggio valuta la qualità del codice dell&#39;applicazione. Per informazioni dettagliate sul processo di test, consulta [Comprendere i risultati del test](understand-your-test-results.md) .
+   * Build &amp; Unit Testing: Questo passaggio esegue un processo di compilazione containerizzato. Vedi [Informazioni sull’ambiente di creazione](/help/using/build-environment-details.md) per informazioni dettagliate sull’ambiente di creazione.
+   * Scansione del codice: Questo passaggio valuta la qualità del codice dell&#39;applicazione. Vedi [Comprendere i risultati del test](understand-your-test-results.md) per informazioni dettagliate sul processo di test.
    * Distribuisci su Stage
 
    ![](assets/Stage_Deployment1.png)
 
-   La **prova della fase** prevede i seguenti passaggi:
+   La **Test della fase**, prevede i seguenti passaggi:
 
-   * Test di sicurezza: Questo passaggio valuta l&#39;impatto sulla sicurezza del codice dell&#39;applicazione nell&#39;ambiente AEM. Per informazioni dettagliate sul processo di test, consulta [Comprendere i risultati del test](understand-your-test-results.md) .
-   * Test delle prestazioni: Questo passaggio valuta le prestazioni del codice dell&#39;applicazione. Per informazioni dettagliate sul processo di test, consulta [Comprendere i risultati del test](understand-your-test-results.md) .
+   * Test di sicurezza: Questo passaggio valuta l&#39;impatto sulla sicurezza del codice dell&#39;applicazione nell&#39;ambiente AEM. Vedi [Comprendere i risultati del test](understand-your-test-results.md) per informazioni dettagliate sul processo di test.
+   * Test delle prestazioni: Questo passaggio valuta le prestazioni del codice dell&#39;applicazione. Vedi [Comprendere i risultati del test](understand-your-test-results.md) per informazioni dettagliate sul processo di test.
 
    ![](assets/Stage_Testing1.png)
 
-   La **distribuzione di produzione** prevede i seguenti passaggi:
+   La **Distribuzione di produzione**, prevede i seguenti passaggi:
 
-   * **Domanda di approvazione**  (se abilitata)
-   * **Pianificazione distribuzione produzione**  (se abilitata)
-   * **Supporto CSE**  (se abilitato)
+   * **Domanda di approvazione** (se attivato)
+   * **Pianificazione distribuzione produzione** (se attivato)
+   * **Supporto CSE** (se attivato)
    * **Distribuzione in produzione**
 
    ![](assets/Prod_Deployment1.png)
 
    >[!NOTE]
    >
-   >Durante la configurazione della pipeline, viene abilitato **Pianifica distribuzione di produzione** .
+   >La **Pianificazione distribuzione produzione** viene attivato durante la configurazione della pipeline.
    >
    >
-   >Utilizzando questa opzione, puoi pianificare la distribuzione di produzione oppure fare clic su **Now** per eseguire immediatamente la distribuzione di produzione.
+   >Utilizzando questa opzione, puoi pianificare la distribuzione di produzione oppure fare clic su **Ora** per eseguire immediatamente la distribuzione di produzione.
    >
    >
    >La data e l’ora pianificate vengono specificate in termini di fuso orario dell’utente.
@@ -90,7 +90,7 @@ Dopo aver configurato la pipeline di produzione (archivio, ambiente e ambiente d
 
    Una volta confermata la pianificazione della distribuzione, la distribuzione del codice viene completata.
 
-   Viene visualizzata la seguente schermata quando l’opzione **Now** è selezionata dal passaggio precedente.
+   Viene visualizzata la seguente schermata, quando **Ora** è selezionata dal passaggio precedente.
 
    ![](assets/Production_Deployment2.png)
 
@@ -100,12 +100,12 @@ I seguenti passaggi si interrompono se rimangono in attesa del feedback degli ut
 
 | Incremento | Timeout |
 |--- |--- |
-| Test della qualità del codice | 7 giorni |
-| Test di sicurezza | 7 giorni |
-| Test delle prestazioni | 7 giorni |
-| Domanda di approvazione | 7 giorni |
-| Pianificazione distribuzione produzione | 7 giorni |
-| Supporto CSE | 7 giorni |
+| Test della qualità del codice | 14 giorni |
+| Test di sicurezza | 14 giorni |
+| Test delle prestazioni | 14 giorni |
+| Domanda di approvazione | 14 giorni |
+| Pianificazione distribuzione produzione | 14 giorni |
+| Supporto CSE | 14 giorni |
 
 ## Processo di distribuzione {#deployment-process}
 
@@ -138,7 +138,7 @@ Quando Cloud Manager viene implementato in topologie non di produzione, l’obie
 
    1. Le configurazioni correnti vengono sottoposte a backup e copiate in una posizione temporanea
    1. Tutte le configurazioni vengono eliminate tranne i file immutabili. Per ulteriori informazioni, consulta Gestire le configurazioni del Dispatcher . Questo cancella le directory per garantire che non vengano lasciati indietro i file orfani.
-   1. L’artefatto viene estratto nella directory `httpd`.  I file immutabili non vengono sovrascritti. Eventuali modifiche apportate ai file immutabili nell’archivio Git verranno ignorate al momento della distribuzione.  Questi file sono di base del framework del dispatcher AMS e non possono essere modificati.
+   1. L’artefatto viene estratto nel `httpd` directory.  I file immutabili non vengono sovrascritti. Eventuali modifiche apportate ai file immutabili nell’archivio Git verranno ignorate al momento della distribuzione.  Questi file sono di base del framework del dispatcher AMS e non possono essere modificati.
    1. Apache esegue un test di configurazione. Se non viene rilevato alcun errore, il servizio viene ricaricato. Se si verifica un errore, le configurazioni vengono ripristinate dal backup, il servizio viene ricaricato e l&#39;errore viene riportato a Cloud Manager.
    1. Ogni percorso specificato nella configurazione della pipeline viene invalidato o scaricato dalla cache del dispatcher.
 
@@ -169,7 +169,7 @@ Questo processo continua fino a quando la distribuzione non raggiunge tutti gli 
 
 In situazioni critiche, i clienti di Adobe Managed Services potrebbero dover implementare modifiche al codice nei rispettivi ambienti di stage e produzione senza attendere l’esecuzione di un ciclo di test completo di Cloud Manager.
 
-Per risolvere queste situazioni, la pipeline di produzione di Cloud Manager può essere eseguita in modalità *Emergency* . Quando si utilizza questa modalità, i passaggi del test di sicurezza e prestazioni non vengono eseguiti; tutti gli altri passaggi, compresi eventuali passaggi di approvazione configurati, vengono eseguiti come nella normale modalità di esecuzione della pipeline.
+Per risolvere queste situazioni, la pipeline di produzione di Cloud Manager può essere eseguita in un *emergenza* modalità. Quando si utilizza questa modalità, i passaggi del test di sicurezza e prestazioni non vengono eseguiti; tutti gli altri passaggi, compresi eventuali passaggi di approvazione configurati, vengono eseguiti come nella normale modalità di esecuzione della pipeline.
 
 >[!NOTE]
 >La funzionalità di esecuzione della pipeline di emergenza viene attivata a livello di programma dai tecnici di successo del cliente.
@@ -185,11 +185,11 @@ Inoltre, visualizzando la pagina dei dettagli di esecuzione della pipeline per u
 ![](assets/execution-emergency2.png)
 
 
-La creazione di un’esecuzione della pipeline in questa modalità di emergenza può essere eseguita anche tramite l’API o CLI di Cloud Manager. Per avviare un’esecuzione in modalità di emergenza, invia una richiesta PUT all’endpoint di esecuzione della pipeline con il parametro di query `?pipelineExecutionMode=EMERGENCY` o, quando utilizzi CLI:
+La creazione di un’esecuzione della pipeline in questa modalità di emergenza può essere eseguita anche tramite l’API o CLI di Cloud Manager. Per avviare un’esecuzione in modalità di emergenza, invia una richiesta PUT all’endpoint di esecuzione della pipeline con il parametro query `?pipelineExecutionMode=EMERGENCY` oppure, quando si utilizza CLI:
 
 ```
 $ aio cloudmanager:pipeline:create-execution PIPELINE_ID --emergency
 ```
 
 >[!IMPORTANT]
->L’utilizzo del flag `--emergency` potrebbe richiedere l’aggiornamento alla versione più recente `aio-cli-plugin-cloudmanager` .
+>Utilizzo `--emergency` può essere necessario aggiornare il flag al più tardi `aio-cli-plugin-cloudmanager` versione.
