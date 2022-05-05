@@ -3,10 +3,10 @@ title: Note sulla versione 2022.5.0
 description: Queste sono le note sulla versione per la versione 2022.5.0 di Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 84cc4352488002ad40102ea2c507af652d9012a1
+source-git-commit: 59e57e33e52b2749865f8c92a8d947c9a04ffe79
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 29%
+source-wordcount: '137'
+ht-degree: 6%
 
 ---
 
@@ -25,13 +25,11 @@ La data di rilascio per [!UICONTROL Cloud Manager] la versione 2022.5.0 è il 5 
 
 ## Novità {#what-is-new}
 
-Le richieste HTTP in uscita dai test delle risorse verranno ora effettuate da un intervallo IP fisso.
+* La pagina Ambienti dispone di una colonna per visualizzare AEM versione dell’ambiente.
+* L’esecuzione della pipeline visualizza ora gli errori di livello superiore dell’interfaccia utente nella schermata di esecuzione.
+* Configurazione predefinita aggiornata per includere la pausa alla configurazione B/G.
 
 ## Correzioni di bug {#bug-fixes}
 
-* Impossibile disabilitare l&#39;opzione di modifica &quot;Salta bilanciamento del carico&quot;.
-* L’opzione Ignora modifiche bilanciamento carico non era visualizzata nel flusso di lavoro della pipeline di modifica di Distribuzione sviluppo AMS.
-* Un sottoinsieme di archivi GIT creati manualmente presentava un valore di nome errato che impediva l’efficacia della funzione di riutilizzo degli artefatti di generazione. I nomi di tali archivi sono stati modificati e gli utenti vedranno il nome corretto nell’API/interfaccia utente di Cloud Manager.
-* Gli artefatti di build da pipeline non di produzione venivano riutilizzati in modo inappropriato sulle pipeline full stack di produzione.
-* Quando si aggiunge o si modifica una pipeline di qualità del codice, le opzioni per gestire gli errori di metrica non vengono più visualizzate.
-* Alcune configurazioni impreviste delle variabili della pipeline potrebbero causare errori nel passaggio di compilazione.
+* Risultato del test delle prestazioni fuorviante con errore di timeout 504.
+* Alcune esecuzioni sono rimaste bloccate nel contesto del trigger di commit e dell&#39;annullamento del passaggio di approvazione.
