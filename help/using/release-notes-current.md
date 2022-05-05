@@ -3,9 +3,9 @@ title: Note sulla versione 2022.5.0
 description: Queste sono le note sulla versione per la versione 2022.5.0 di Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 59e57e33e52b2749865f8c92a8d947c9a04ffe79
+source-git-commit: d183e470db271bde0b5725f93b2a7bf97f00a89d
 workflow-type: tm+mt
-source-wordcount: '137'
+source-wordcount: '138'
 ht-degree: 6%
 
 ---
@@ -25,7 +25,7 @@ La data di rilascio per [!UICONTROL Cloud Manager] la versione 2022.5.0 è il 5 
 
 ## Novità {#what-is-new}
 
-* La pagina Ambienti dispone di una colonna per visualizzare AEM versione dell’ambiente.
+* La pagina Ambienti dispone di una colonna per visualizzare la versione AEM dell’ambiente.
 * L’esecuzione della pipeline visualizza ora gli errori di livello superiore dell’interfaccia utente nella schermata di esecuzione.
 * Configurazione predefinita aggiornata per includere la pausa alla configurazione B/G.
 
