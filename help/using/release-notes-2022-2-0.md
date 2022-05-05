@@ -3,10 +3,10 @@ title: Note sulla versione 2022.2.0
 description: Queste sono le note sulla versione per la versione 2022.2.0 di Cloud Manager.
 feature: Release Information
 exl-id: c13ee200-197e-4855-a08c-99d36b471bb6
-source-git-commit: d074bc1af7e681377ec5b961db23f0bde5d1aaca
+source-git-commit: 0ddfd152cb15731882d198d043dd8897b5073ab4
 workflow-type: tm+mt
-source-wordcount: '139'
-ht-degree: 6%
+source-wordcount: '136'
+ht-degree: 22%
 
 ---
 
@@ -26,7 +26,7 @@ La data di rilascio per [!UICONTROL Cloud Manager] la versione 2022.2.0 è il 10
 
 Ecco le novità della versione di febbraio:
 
-* Solo per il Cloud Service: per accedere al registro dell’ambiente di AEM è possibile utilizzare il ruolo Sviluppatore .
+* Per accedere al registro dell’ambiente di AEM è possibile utilizzare il ruolo Sviluppatore .
 * Ora puoi disattivare la metrica critica affidabilità_rating.
 
 ## Correzioni di bug {#bug-fixes}

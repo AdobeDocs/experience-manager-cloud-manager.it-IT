@@ -3,10 +3,10 @@ title: Note sulla versione 2022.5.0
 description: Queste sono le note sulla versione per la versione 2022.5.0 di Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 5dd9471e1044ce0dcc6a03099256d182b1776f02
+source-git-commit: 0ddfd152cb15731882d198d043dd8897b5073ab4
 workflow-type: tm+mt
-source-wordcount: '82'
-ht-degree: 10%
+source-wordcount: '180'
+ht-degree: 46%
 
 ---
 
@@ -25,4 +25,11 @@ La data di rilascio per [!UICONTROL Cloud Manager] la versione 2022.5.0 è il 5 
 
 ## Novità {#what-is-new}
 
+Per accedere al registro dell’ambiente di AEM è possibile utilizzare il ruolo Sviluppatore .
+
 ## Correzioni di bug {#bug-fixes}
+
+* Un sottoinsieme di archivi Git creati manualmente presentava un valore di nome errato che impediva l’efficacia della funzione di riutilizzo degli artefatti di build. I nomi di tali archivi sono stati modificati e gli utenti vedranno il nome corretto nell’API/interfaccia utente di Cloud Manager.
+* Gli artefatti di build da pipeline non di produzione venivano riutilizzati in modo inappropriato sulle pipeline full stack di produzione.
+* Quando si aggiunge o si modifica una pipeline di qualità del codice, le opzioni per gestire gli errori di metrica non vengono più visualizzate.
+* Alcune configurazioni impreviste delle variabili della pipeline potrebbero causare errori nel passaggio di compilazione.
