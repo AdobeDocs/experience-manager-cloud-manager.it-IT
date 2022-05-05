@@ -3,10 +3,10 @@ title: Note sulla versione 2022.5.0
 description: Queste sono le note sulla versione per la versione 2022.5.0 di Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 0ddfd152cb15731882d198d043dd8897b5073ab4
+source-git-commit: 84cc4352488002ad40102ea2c507af652d9012a1
 workflow-type: tm+mt
-source-wordcount: '180'
-ht-degree: 46%
+source-wordcount: '210'
+ht-degree: 29%
 
 ---
 
@@ -25,11 +25,13 @@ La data di rilascio per [!UICONTROL Cloud Manager] la versione 2022.5.0 è il 5 
 
 ## Novità {#what-is-new}
 
-Per accedere al registro dell’ambiente di AEM è possibile utilizzare il ruolo Sviluppatore .
+Le richieste HTTP in uscita dai test delle risorse verranno ora effettuate da un intervallo IP fisso.
 
 ## Correzioni di bug {#bug-fixes}
 
-* Un sottoinsieme di archivi Git creati manualmente presentava un valore di nome errato che impediva l’efficacia della funzione di riutilizzo degli artefatti di build. I nomi di tali archivi sono stati modificati e gli utenti vedranno il nome corretto nell’API/interfaccia utente di Cloud Manager.
+* Impossibile disabilitare l&#39;opzione di modifica &quot;Salta bilanciamento del carico&quot;.
+* L’opzione Ignora modifiche bilanciamento carico non era visualizzata nel flusso di lavoro della pipeline di modifica di Distribuzione sviluppo AMS.
+* Un sottoinsieme di archivi GIT creati manualmente presentava un valore di nome errato che impediva l’efficacia della funzione di riutilizzo degli artefatti di generazione. I nomi di tali archivi sono stati modificati e gli utenti vedranno il nome corretto nell’API/interfaccia utente di Cloud Manager.
 * Gli artefatti di build da pipeline non di produzione venivano riutilizzati in modo inappropriato sulle pipeline full stack di produzione.
 * Quando si aggiunge o si modifica una pipeline di qualità del codice, le opzioni per gestire gli errori di metrica non vengono più visualizzate.
 * Alcune configurazioni impreviste delle variabili della pipeline potrebbero causare errori nel passaggio di compilazione.
