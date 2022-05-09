@@ -10,9 +10,9 @@ topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 feature: Code Deployment
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-source-git-commit: 0ba7c49b3550666030249562219b2d0dc51f4ae1
+source-git-commit: 9a9d7067a1369e80ccf9b2925369a466b3da2901
 workflow-type: tm+mt
-source-wordcount: '1220'
+source-wordcount: '1615'
 ht-degree: 1%
 
 ---
@@ -184,7 +184,6 @@ Inoltre, visualizzando la pagina dei dettagli di esecuzione della pipeline per u
 
 ![](assets/execution-emergency2.png)
 
-
 La creazione di un’esecuzione della pipeline in questa modalità di emergenza può essere eseguita anche tramite l’API o CLI di Cloud Manager. Per avviare un’esecuzione in modalità di emergenza, invia una richiesta PUT all’endpoint di esecuzione della pipeline con il parametro query `?pipelineExecutionMode=EMERGENCY` oppure, quando si utilizza CLI:
 
 ```
@@ -193,3 +192,73 @@ $ aio cloudmanager:pipeline:create-execution PIPELINE_ID --emergency
 
 >[!IMPORTANT]
 >Utilizzo `--emergency` può essere necessario aggiornare il flag al più tardi `aio-cli-plugin-cloudmanager` versione.
+
+## Esegui nuovamente una distribuzione di produzione {#Reexecute-Deployment}
+
+La riesecuzione del passaggio di distribuzione di produzione è supportata per le esecuzioni in cui il passaggio di distribuzione di produzione è stato completato. Il tipo di completamento non è importante: la distribuzione potrebbe avere esito positivo (solo per i programmi AMS), essere annullata o non essere riuscita. Detto questo, si prevede che il caso d’uso principale sia quello in cui la fase di distribuzione della produzione non è riuscita per motivi transitori. La nuova esecuzione crea una nuova esecuzione utilizzando la stessa pipeline. Questa nuova esecuzione consiste in tre fasi:
+
+1. Passaggio di convalida : si tratta essenzialmente della stessa convalida che si verifica durante una normale esecuzione della pipeline.
+1. Passaggio della build: nel contesto di una nuova esecuzione, il passaggio della build sta copiando gli artefatti e non esegue effettivamente un nuovo processo di compilazione.
+1. Passaggio di distribuzione di produzione : utilizza la stessa configurazione e le stesse opzioni del passaggio di distribuzione di produzione in una normale esecuzione della pipeline.
+
+Il passaggio di compilazione può essere etichettato in modo leggermente diverso nell’interfaccia utente per indicare che sta copiando gli artefatti, non sta ricostruendo.
+
+![](assets/Re-deploy.png)
+
+Limiti:
+
+* La riesecuzione del passaggio di distribuzione di produzione sarà disponibile solo all’ultima esecuzione.
+* La riesecuzione non è disponibile per le esecuzioni di rollback.
+* Se l’ultima esecuzione è un’esecuzione di rollback, non è possibile eseguirla nuovamente.
+* Se l’ultima esecuzione è un’esecuzione di aggiornamento push, non è possibile eseguirla nuovamente.
+* Se l’ultima esecuzione non è riuscita in un qualsiasi punto prima della fase di distribuzione della produzione, non è possibile eseguire nuovamente l’esecuzione.
+
+### Esegui nuovamente l’API {#Reexecute-API}
+
+### Identificazione di un’esecuzione di nuova esecuzione
+
+Per identificare se un’esecuzione è un’esecuzione di nuova esecuzione, è possibile esaminare il campo trigger. Il suo valore sarà *RE_EXECUTE*.
+
+### Attivazione di una nuova esecuzione
+
+Per attivare una nuova esecuzione, è necessario effettuare una richiesta PUT al collegamento HAL &lt;(<http://ns.adobe.com/adobecloud/rel/pipeline/reExecute>)> sullo stato del passaggio di distribuzione di produzione. Se questo collegamento è presente, l’esecuzione può essere riavviata da quel passaggio. Se è assente, l’esecuzione non può essere riavviata da quel passaggio. Nella versione iniziale, questo collegamento sarà sempre presente solo nel passaggio di distribuzione della produzione, ma le versioni future potrebbero supportare l’avvio della pipeline da altri passaggi. Esempio:
+
+```Javascript
+ {
+  "_links": {
+    "http://ns.adobe.com/adobecloud/rel/pipeline/logs": {
+      "href": "/api/program/4/pipeline/1/execution/953671/phase/1575676/step/2983530/logs",
+      "templated": false
+    },
+    "http://ns.adobe.com/adobecloud/rel/pipeline/reExecute": {
+      "href": "/api/program/4/pipeline/1/execution?stepId=2983530",
+      "templated": false
+    },
+    "http://ns.adobe.com/adobecloud/rel/pipeline/metrics": {
+      "href": "/api/program/4/pipeline/1/execution/953671/phase/1575676/step/2983530/metrics",
+      "templated": false
+    },
+    "self": {
+      "href": "/api/program/4/pipeline/1/execution/953671/phase/1575676/step/2983530",
+      "templated": false
+    }
+  },
+  "id": "6187842",
+  "stepId": "2983530",
+  "phaseId": "1575676",
+  "action": "deploy",
+  "environment": "weretail-global-b75-prod",
+  "environmentType": "prod",
+  "environmentId": "59254",
+  "startedAt": "2022-01-20T14:47:41.247+0000",
+  "finishedAt": "2022-01-20T15:06:19.885+0000",
+  "updatedAt": "2022-01-20T15:06:20.803+0000",
+  "details": {
+  },
+  "status": "FINISHED"
+```
+
+
+Sintassi del collegamento HAL *href*  il valore di cui sopra non è destinato ad essere utilizzato come punto di riferimento. Il valore effettivo deve sempre essere letto dal collegamento HAL e non generato.
+
+Invio di un *PUT* la richiesta a questo endpoint darà luogo a un *201* in caso di esito positivo, l’organo di risposta sarà la rappresentazione della nuova esecuzione. È simile all’avvio di un’esecuzione regolare tramite l’API .
