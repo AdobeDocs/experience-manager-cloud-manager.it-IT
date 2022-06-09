@@ -1,19 +1,19 @@
 ---
-title: Note sulla versione 2022.5.0
-description: Queste sono le note sulla versione per la versione 2022.5.0 di Cloud Manager.
+title: Note sulla versione 2022.6.0
+description: Queste sono le note sulla versione per la versione 2022.6.0 di Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: dc28bbacfe86a68f416a525d386a2d8d1c1b0190
+source-git-commit: 844aa7c697c793af05766048ef4263a1bba87c94
 workflow-type: tm+mt
-source-wordcount: '134'
+source-wordcount: '132'
 ht-degree: 6%
 
 ---
 
 
-# Note sulla versione per Cloud Manager versione 2022.5.0 {#release-notes}
+# Note sulla versione per Cloud Manager versione 2022.6.0 {#release-notes}
 
-Questa pagina documenta le note sulla versione per [!UICONTROL Cloud Manager] versione 2022.5.0.
+Questa pagina documenta le note sulla versione per [!UICONTROL Cloud Manager] versione 2022.6.0.
 
 >[!NOTE]
 >
@@ -21,15 +21,12 @@ Questa pagina documenta le note sulla versione per [!UICONTROL Cloud Manager] ve
 
 ## Data di pubblicazione {#release-date}
 
-La data di rilascio per [!UICONTROL Cloud Manager] la versione 2022.5.0 è il 5 maggio 2022. La prossima versione è prevista per il 9 giugno 2022.
+La data di rilascio per [!UICONTROL Cloud Manager] la versione 2022.6.0 è il 9 giugno 2022. La prossima versione è prevista per il 30 giugno 2022.
 
 ## Novità {#what-is-new}
 
-* L’esecuzione della pipeline visualizza ora gli errori di livello superiore dell’interfaccia utente nella schermata di esecuzione.
-* Configurazione predefinita aggiornata per includere la pausa alla configurazione B/G.
-* Esegui nuovamente il passaggio di distribuzione della produzione tramite l’interfaccia utente di Cloud Manager.
+* Una nuova scheda di benvenuto nella pagina di destinazione di Cloud Manager consente agli utenti di accedere rapidamente alle esercitazioni di onboarding e alle metriche di avanzamento correlate al tenant.
+   * Questa funzione verrà implementata in un approccio graduale durante la settimana successiva alla versione 2022.06.0.
+* [È ora possibile riutilizzare gli artefatti di creazione](/help/using/setting-up-project.md#build-artifact-reuse) quando si utilizza il mirroring git.
 
 ## Correzioni di bug {#bug-fixes}
-
-* Risultato del test delle prestazioni fuorviante con errore di timeout 504.
-* Alcune esecuzioni sono rimaste bloccate nel contesto del trigger di commit e dell&#39;annullamento del passaggio di approvazione.
