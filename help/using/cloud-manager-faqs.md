@@ -5,9 +5,9 @@ description: Fai riferimento alle domande frequenti su Cloud Manager per ricever
 seo-description: Follow this page to get answers on Cloud Manager FAQs
 feature: Getting Started
 exl-id: 52c1ca23-5b42-4eae-b63a-4b22ef1a5aee
-source-git-commit: 71d44c7e3673ca62fcd2203ecc0bc4ed9fa22002
+source-git-commit: 6dce1f48b66c6970c3ba025031f0adcbd01195dd
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '874'
 ht-degree: 0%
 
 ---
@@ -30,9 +30,11 @@ La build di AEM Cloud Manager non riesce quando si tenta di passare da Java 8 a 
 
 ## La distribuzione è bloccata perché il controllo della qualità del codice non è riuscito. C&#39;è un modo per aggirare questo assegno? {#deployment-stuck}
 
-Tutti gli errori relativi alla qualità del codice tranne *Valutazione della sicurezza* sono metriche non critiche, in modo che possano essere ignorate espandendo gli elementi nell’interfaccia utente dei risultati.
+Sì. Tutti gli errori di qualità del codice, tranne *Valutazione della sicurezza* sono metriche non critiche, in modo che possano essere ignorate come parte di una pipeline di distribuzione espandendo gli elementi nell’interfaccia utente dei risultati.
 
-Un utente con [Responsabile distribuzione, Project Manager o Proprietario business](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html?lang=en#requirements) Il ruolo può ignorare i problemi, nel qual caso la pipeline procede o può accettare i problemi, nel qual caso la pipeline si interrompe con un errore.  Vedi [Cancelli a tre livelli durante l’esecuzione di una pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html?lang=en#how-to-use) per ulteriori dettagli.
+Un utente con [Responsabile distribuzione, Project Manager o Proprietario business](/help/using/setting-up-users-and-roles.md#role-definitions) Il ruolo può ignorare i problemi, nel qual caso la pipeline procede o può accettare i problemi, nel qual caso la pipeline si interrompe con un errore.
+
+Vedere i documenti [Cancelli a tre livelli durante l’esecuzione di una pipeline](/help/using/understand-your-test-results.md#three-tier-gates-while-running-a-pipeline) e [Configurazione di pipeline non di produzione](/help/using/configuring-non-production-pipelines.md#understanding-the-flow) per ulteriori dettagli.
 
 ## Le implementazioni di Cloud Manager non riescono al passaggio del test delle prestazioni negli ambienti Adobe Managed Services. Come eseguiamo il debug per passare le metriche critiche? {#debug-critical-metrics}
 
