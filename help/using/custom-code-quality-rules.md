@@ -7,9 +7,9 @@ topic-tags: using
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
 feature: Code Quality Rules
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: 834508109e34eb1e052abac482e981735c72d43d
+source-git-commit: d4c92a36ca3af123730d68fedf1dbf7ee819c66b
 workflow-type: tm+mt
-source-wordcount: '3611'
+source-wordcount: '3609'
 ht-degree: 3%
 
 ---
@@ -21,7 +21,7 @@ Questa pagina descrive le regole per la qualità del codice personalizzato esegu
 
 >[!NOTE]
 >
->Per informazioni sulle regole di qualità del codice personalizzato per Cloud Manager in AEM as a Cloud Service, fai riferimento a [alla presente documentazione.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/custom-code-quality-rules.html#using-cloud-manager).
+>Per informazioni sulle regole di qualità del codice personalizzato per Cloud Manager in AEM as a Cloud Service, fai riferimento a [a questa documentazione](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/custom-code-quality-rules.html#using-cloud-manager).
 
 >[!NOTE]
 >
@@ -651,7 +651,7 @@ I componenti AEM che dispongono di una finestra di dialogo dell’interfaccia cl
 * Un componente con una finestra di dialogo di progettazione dell’interfaccia classica (ad es. `design_dialog` deve avere una finestra di dialogo corrispondente per la progettazione dell&#39;interfaccia Touch (cioè, un `cq:design_dialog` nodo figlio).
 * Un componente con una finestra di dialogo di interfaccia classica e una finestra di dialogo di progettazione dell’interfaccia classica deve avere sia una finestra di dialogo corrispondente dell’interfaccia utente touch sia una finestra di dialogo corrispondente di progettazione dell’interfaccia touch.
 
-La documentazione AEM Strumenti di modernizzazione fornisce dettagli e strumenti per la conversione dei componenti dall’interfaccia classica all’interfaccia utente touch. Fai riferimento a [Documentazione degli strumenti di modernizzazione AEM ](https://opensource.adobe.com/aem-modernize-tools/pages/tools.html) per ulteriori dettagli.
+La documentazione AEM Strumenti di modernizzazione fornisce dettagli e strumenti per la conversione dei componenti dall’interfaccia classica all’interfaccia utente touch. Fai riferimento a [Documentazione degli strumenti di modernizzazione AEM ](https://opensource.adobe.com/aem-modernize-tools/) per ulteriori dettagli.
 
 ### I pacchetti non devono mescolare contenuto variabile e immutabile {#oakpal-packages-immutable}
 

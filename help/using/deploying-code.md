@@ -10,7 +10,7 @@ topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 feature: Code Deployment
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-source-git-commit: 9a9d7067a1369e80ccf9b2925369a466b3da2901
+source-git-commit: 4c86446127c8cd66f964b192f3602f02fd2ddf8e
 workflow-type: tm+mt
 source-wordcount: '1615'
 ht-degree: 1%
@@ -221,7 +221,7 @@ Per identificare se un’esecuzione è un’esecuzione di nuova esecuzione, è p
 
 ### Attivazione di una nuova esecuzione
 
-Per attivare una nuova esecuzione, è necessario effettuare una richiesta PUT al collegamento HAL &lt;(<http://ns.adobe.com/adobecloud/rel/pipeline/reExecute>)> sullo stato del passaggio di distribuzione di produzione. Se questo collegamento è presente, l’esecuzione può essere riavviata da quel passaggio. Se è assente, l’esecuzione non può essere riavviata da quel passaggio. Nella versione iniziale, questo collegamento sarà sempre presente solo nel passaggio di distribuzione della produzione, ma le versioni future potrebbero supportare l’avvio della pipeline da altri passaggi. Esempio:
+Per attivare una nuova esecuzione, è necessario effettuare una richiesta PUT al collegamento HAL ```http://ns.adobe.com/adobecloud/rel/pipeline/reExecute``` sullo stato del passaggio di distribuzione di produzione. Se questo collegamento è presente, l’esecuzione può essere riavviata da quel passaggio. Se è assente, l’esecuzione non può essere riavviata da quel passaggio. Nella versione iniziale, questo collegamento sarà sempre presente solo nel passaggio di distribuzione della produzione, ma le versioni future potrebbero supportare l’avvio della pipeline da altri passaggi. Esempio:
 
 ```Javascript
  {

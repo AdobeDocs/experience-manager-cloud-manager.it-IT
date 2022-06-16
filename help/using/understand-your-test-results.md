@@ -7,9 +7,9 @@ topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 feature: CI-CD Pipeline, Test Results
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-source-git-commit: 2179314120911cac8a0dd99a8b57974751959871
+source-git-commit: bfcb0fb5b9cf8317eb75e3b7b46455b14cd9d7b7
 workflow-type: tm+mt
-source-wordcount: '2897'
+source-wordcount: '2896'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ Questi sono segnalati utilizzando un sistema di rating a tre livelli come defini
 
 >[!NOTE]
 >
->Per informazioni sui test supportati da Cloud Manager per AEM as a Cloud Service, consulta [AEM documentazione as a Cloud Service.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/test-results/overview-test-results.html).
+>Per informazioni sui test supportati da Cloud Manager per AEM as a Cloud Service, consulta [AEM documentazione as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/test-results/overview-test-results.html).
 
 
 ## Valutazioni a tre livelli  {#three-tier-gates-while-running-a-pipeline}
@@ -61,7 +61,7 @@ Ci sono più di 100 regole che combinano regole Java generiche e regole specific
 >
 >Scaricare l’elenco completo delle regole [utilizzando questo collegamento.](/help/using/assets/CodeQuality-rules-latest-AMS.xlsx)
 
-I risultati del test della qualità del codice vengono consegnati come **valutazioni**. Nella tabella seguente sono riepilogate le valutazioni per vari criteri di prova.
+I risultati dei test di qualità del codice vengono consegnati come **valutazioni**. Nella tabella seguente sono riepilogate le valutazioni per vari criteri di prova.
 
 | Nome | Definizione | Categoria | Soglia errore |
 |--- |--- |--- |--- |
@@ -76,7 +76,7 @@ I risultati del test della qualità del codice vengono consegnati come **valutaz
 
 >[!NOTE]
 >
->Fai riferimento a [Definizioni delle metriche di SonarQube](https://docs.sonarqube.org/display/SONAR/Metric+Definitions) per informazioni più dettagliate.
+>Fai riferimento a [Definizioni delle metriche di SonarQube](https://docs.sonarqube.org/latest/user-guide/metric-definitions/) per informazioni più dettagliate.
 
 >[!NOTE]
 >
@@ -179,7 +179,7 @@ Puoi scegliere da uno a tutti e tre i set nella **Test** scheda [configurazione 
 Consideriamo questo esempio.
 
 * È disponibile una suddivisione 50/50 tra le pagine live più comuni e i nuovi set di pagine.
-* Altre pagine live non vengono utilizzate.
+* Non vengono utilizzate altre pagine live.
 * Il nuovo set di pagine contiene 3000 pagine.
 * Il KPI per le visualizzazioni di pagina al minuto è impostato su 200.
 
@@ -309,3 +309,4 @@ Un caso speciale può verificarsi quando il pacchetto di contenuti &quot;all&quo
 >
 >* Questa ottimizzazione non influisce sui pacchetti distribuiti in AEM.
 >* Poiché la corrispondenza tra i pacchetti di contenuto incorporati e i pacchetti di contenuto saltato si basa sui nomi di file, questa ottimizzazione non può essere eseguita se più pacchetti di contenuto saltato hanno esattamente lo stesso nome di file o se il nome di file viene modificato durante l’incorporazione.
+
