@@ -7,9 +7,9 @@ topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 feature: CI-CD Pipeline, Test Results
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-source-git-commit: bfcb0fb5b9cf8317eb75e3b7b46455b14cd9d7b7
+source-git-commit: fefb267793e5e1dc6f604a753e89cce2bf2620dd
 workflow-type: tm+mt
-source-wordcount: '2896'
+source-wordcount: '2917'
 ht-degree: 3%
 
 ---
@@ -160,7 +160,12 @@ Il numero di utenti o contenitori virtuali generati da Cloud Manager è determin
 
 #### Cacciatrice {#crawler}
 
-Prima dell’inizio del periodo di test di 30 minuti, Cloud Manager eseguirà la ricerca per indicizzazione dell’ambiente di staging utilizzando un set di uno o più URL di seed configurati dal Customer Success Engineer. A partire da questi URL, il HTML di ogni pagina viene ispezionato e i collegamenti vengono attraversati in modalità di prima lettura. Questo processo di ricerca per indicizzazione è limitato a un massimo di 5000 pagine. Le richieste del crawler hanno un timeout fisso di 10 secondi.
+Prima dell’inizio del periodo di test di 30 minuti, Cloud Manager eseguirà la ricerca per indicizzazione dell’ambiente di staging utilizzando un set di uno o più URL di seed configurati dal Customer Success Engineer. A partire da questi URL, il HTML di ogni pagina viene ispezionato e i collegamenti vengono attraversati in modalità di prima lettura.
+
+* Per impostazione predefinita, questo processo di ricerca per indicizzazione è limitato a un massimo di 5000 pagine.
+* Il numero massimo di pagine da sottoporre a test può essere sovrascritto impostando la variabile [variabile di ambiente](build-environment-details.md#environment-variables) `MAX_PAGES`.
+   * I valori consentiti sono `2000` - `7000`.
+* Le richieste del crawler hanno un timeout fisso di 10 secondi.
 
 #### Set di pagine per il test {#page-sets}
 
