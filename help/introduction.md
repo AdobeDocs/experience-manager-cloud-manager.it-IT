@@ -2,9 +2,9 @@
 title: Introduzione a Cloud Manager per AMS
 description: Inizia qui per scoprire Cloud Manager per Adobe Managed Services (AMS) e come consente alle organizzazioni di gestire autonomamente Adobe Experience Manager nel cloud.
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
-source-git-commit: 22d40a1f07f56ee7a7dddb4897e4079f1e346674
+source-git-commit: 14e35882765783b234ca35da14257279af5130a0
 workflow-type: tm+mt
-source-wordcount: '1292'
+source-wordcount: '1287'
 ht-degree: 10%
 
 ---
@@ -100,7 +100,7 @@ In qualsiasi momento, solo uno degli ambienti è live, con l&#39;ambiente live c
 * La distribuzione blu/verde è un componente aggiuntivo per le pipeline CI/CD di Cloud Manager in cui viene creato e utilizzato un secondo set di istanze di pubblicazione e Dispatcher (verde) per le distribuzioni. Le istanze verdi vengono quindi collegate al load balancer di produzione e le istanze precedenti (blu) vengono rimosse e terminate.
 * Questa implementazione di blu/verde considera le istanze come transitorie e ogni iterazione di una pipeline blu/verde creerà un nuovo set di server di pubblicazione e Dispatcher.
 * Verrà creato un bilanciamento del carico verde come parte della configurazione. Questo load balancer non cambierà mai ed è ciò a cui puntare il tuo URL verde o &quot;test&quot;.
-* Durante una distribuzione blu/verde, verrà creata una replica esatta dei livelli di pubblicazione/Dispatcher esistenti (come letto dal TDL).
+* Durante una distribuzione blu/verde, verrà creata una replica esatta dei livelli di pubblicazione/Dispatcher esistenti.
 
 #### Flusso di distribuzione blu/verde {#flow}
 
@@ -111,7 +111,7 @@ Quando la distribuzione blu/verde è abilitata, il flusso di distribuzione è di
 | 1 | Implementazione per l&#39;authoring | Implementazione per l&#39;authoring |
 | 2 | Pausa per test | - |
 | 3 | L&#39;infrastruttura verde viene creata | - |
-| 4 | Implementazione su livelli di pubblicazione/Dispatcher verdi | Distribuzione all&#39;editore |
+| 4 | Implementazione su livelli di pubblicazione/dispatcher verdi | Distribuzione all&#39;editore |
 | 5 | Pausa per test (fino a 24 ore) | - |
 | 6 | L&#39;infrastruttura verde viene aggiunta al load balancer di produzione | - |
 | 7 | L&#39;infrastruttura blu viene rimossa dal load balancer di produzione- |
