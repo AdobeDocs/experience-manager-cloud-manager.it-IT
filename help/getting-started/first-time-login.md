@@ -2,9 +2,9 @@
 title: Primo accesso
 description: Se hai configurato le configurazioni generali e sei pronto per utilizzare Cloud Manager per la prima volta, segui questa pagina.
 exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
-source-git-commit: d033b7cf53d4d9faf074f1dc09e2958eb91afe3b
+source-git-commit: 43d05eed9c2e7c4cf6c3becdbc3e4522428722b7
 workflow-type: tm+mt
-source-wordcount: '188'
+source-wordcount: '181'
 ht-degree: 3%
 
 ---
@@ -20,7 +20,7 @@ Una volta impostata la configurazione generale per [!UICONTROL Cloud Manager], p
 
 ## Accesso per la prima volta {#logging-in-for-the-first-time}
 
-1. Accedi all’Adobe [!UICONTROL Experience Cloud] e vedrete l&#39;elenco dei programmi.
+1. Accedi all’Adobe [!UICONTROL Experience Cloud] e vedete l&#39;elenco dei programmi.
 
 1. Selezionare il programma.
 
@@ -34,7 +34,7 @@ Una volta impostata la configurazione generale per [!UICONTROL Cloud Manager], p
 
 1. Fai clic su **Programma di installazione** per impostare la descrizione del programma e definire gli indicatori prestazioni chiave (KPI, Key Performance Indicators).
 
-Continuare con il documento [Configurazione del programma](https://helpx.adobe.com/experience-manager/cloud-manager/using/program-setup.html) per i passaggi successivi nella configurazione del programma.
+Continuare con il documento [Configurazione del programma](/help/getting-started/program-setup.md) per i passaggi successivi nella configurazione del programma.
 
 ## Attività di Cloud Manager {#activity}
 
