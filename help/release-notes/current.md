@@ -1,19 +1,19 @@
 ---
-title: Note sulla versione 2022.8.0
-description: Queste sono le note sulla versione per la versione 2022.8.0 di Cloud Manager.
+title: Note sulla versione 2022.9.0
+description: Queste sono le note sulla versione per la versione 2022.9.0 di Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 1c4fe7407dc059773cfd0c1779a11c1ba1acad22
+source-git-commit: e74d386d0b2d50a7e276bb7ead7594ef448742ae
 workflow-type: tm+mt
-source-wordcount: '150'
-ht-degree: 11%
+source-wordcount: '196'
+ht-degree: 4%
 
 ---
 
 
-# Note sulla versione per Cloud Manager versione 2022.8.0 {#release-notes}
+# Note sulla versione per Cloud Manager versione 2022.9.0 {#release-notes}
 
-Questa pagina documenta le note sulla versione per [!UICONTROL Cloud Manager] versione 2022.8.0.
+Questa pagina documenta le note sulla versione per [!UICONTROL Cloud Manager] versione 2022.9.0.
 
 >[!NOTE]
 >
@@ -21,14 +21,16 @@ Questa pagina documenta le note sulla versione per [!UICONTROL Cloud Manager] ve
 
 ## Data di pubblicazione {#release-date}
 
-La data di rilascio per [!UICONTROL Cloud Manager] la versione 2022.8.0 è l’11 agosto 2022. La prossima versione è prevista per il 9 settembre 2022.
+La data di rilascio per [!UICONTROL Cloud Manager] la versione 2022.9.0 è l’8 settembre 2022. La prossima versione è prevista per il 6 ottobre 2022.
 
 ## Novità {#what-is-new}
 
-* In alcuni scenari, un meccanismo di ripetizione silenziosa contribuirà a garantire che la pipeline di distribuzione non si traduca in uno stato di errore.
-* [Archetipo di progetto AEM](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=it) incluso in Cloud Manager è stato aggiornato alla versione 37.
+* Supporto di Cloud Manager per il ridimensionamento automatico orizzontale per più aree.
+* Nuova scheda Pagina di benvenuto personalizzata per gli utenti che hanno solo un ruolo utente di Cloud Manager che li guida su come navigare AEM ambienti e accesso limitato ai programmi.
+* I clienti che non dispongono di alcun ruolo di Cloud Manager non potranno accedere ai dettagli del programma. Tuttavia, possono passare ai punti finali di authoring dalla pagina di destinazione di CM.
+* Elimina gli errori della pipeline derivanti da tentativi non riusciti grazie alla creazione di una maggiore resilienza.
 
 ## Correzioni di bug {#bug-fixes}
 
-* Alcuni casi di errori di creazione dell’archivio non frequenti sono stati resi più resilienti.
-* Le occorrenze rare degli errori di configurazione dell’organizzazione VSTS ora vengono ridotte a causa dei nuovi tentativi introdotti.
+* È stato migliorato il feedback dei clienti sulla build delle app AEM dei clienti quando maven si trova ad affrontare problemi di connettività ai repository privati.
+* In rari casi, quando il sistema di controllo dello stato di salute non è in grado di recuperare un punteggio di integrità valido, non verrà attivato un evento di scalabilità automatica.
