@@ -2,10 +2,10 @@
 title: Primo accesso
 description: Se hai configurato le configurazioni generali e sei pronto per utilizzare Cloud Manager per la prima volta, segui questa pagina.
 exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
-source-git-commit: 43d05eed9c2e7c4cf6c3becdbc3e4522428722b7
+source-git-commit: d8f16deacfe52c76ff6b0aee0344d50bfe2b9c74
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 3%
+source-wordcount: '255'
+ht-degree: 2%
 
 ---
 
@@ -39,3 +39,7 @@ Continuare con il documento [Configurazione del programma](/help/getting-started
 ## Attività di Cloud Manager {#activity}
 
 Cloud Manager fornisce una visualizzazione consolidata dell’attività di un programma, elencando tutte le esecuzioni della pipeline CI/CD, sia di produzione che di non produzione, consentendo la visibilità delle attività passate e presenti.
+
+>[!NOTE]
+>
+>Per impostazione predefinita, un utente con accesso a un ambiente AEM avrà anche il ruolo Utente di Cloud Manager. Questo ruolo in e di per sé è insufficiente per consentire all&#39;utente di accedere alla visualizzazione dei dettagli del programma. Un utente con solo il ruolo utente di Cloud Manager può navigare tramite le opzioni del menu di programma fino all’URL dell’autore dell’ambiente AEM (se esistono ambienti). Gli utenti devono contattare il proprio amministratore se desiderano ottenere l&#39;accesso a livello di programma.
