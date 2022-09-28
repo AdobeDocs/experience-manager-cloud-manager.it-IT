@@ -2,7 +2,7 @@
 title: Notifiche
 description: Scopri in che modo Cloud Manager ti notifica di eventi importanti.
 exl-id: cfd5655f-2d2c-4304-b25c-6cdffe7ff64c
-source-git-commit: 804b537bbd61105a92b42960d44ecedabfb13099
+source-git-commit: e767d9ff5e3df0047d2cf47d7b0842854101a01a
 workflow-type: tm+mt
 source-wordcount: '563'
 ht-degree: 1%
@@ -82,7 +82,7 @@ Gli avvisi vengono visualizzati nell’angolo in alto a destra della finestra pe
 * **Gli avvisi dovrebbero rimanere sullo schermo fino a quando non li ignoro** - Controlla se gli avvisi devono persistere a meno che non vengano attivamente ignorati
 * **Durata** - Definisce per quanto tempo l&#39;avviso deve rimanere sullo schermo se non si è scelto di rimanere sullo schermo.
 
-## E-mail {#emails}
+### E-mail {#emails}
 
 Le notifiche sono disponibili nell’interfaccia utente web di Adobe [!UICONTROL Experience Cloud] soluzioni. Puoi anche optare per l’invio di queste notifiche tramite e-mail nella **E-mail** sezione .
 
