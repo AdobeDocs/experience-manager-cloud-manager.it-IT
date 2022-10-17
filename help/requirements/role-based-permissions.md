@@ -36,7 +36,7 @@ In questa tabella sono elencati i ruoli che è possibile assegnare nell’Admin 
 A ciascuno dei ruoli sono associate autorizzazioni preconfigurate specifiche. In questa tabella sono elencate le autorizzazioni disponibili e i ruoli che possono eseguirle.
 
 
-| Autorizzazione | Descrizione | Business Owner (Proprietario) | Deployment Manager (Responsabile implementazione) | Program Manager (Responsabile programma) | Developer (Sviluppatore) | CSE |
+| Autorizzazione | Descrizione | Proprietario business | Deployment Manager (Responsabile implementazione) | Program Manager (Responsabile programma) | Developer (Sviluppatore) | CSE |
 |--- |--- |--- |--- |--- |--- |--- |
 | Applicazione di lettura | KPI del programma di lettura | x | x | x | x | x |
 | Applicazione di scrittura | Configurazione o modifica del programma | x |  |  |  |  |
