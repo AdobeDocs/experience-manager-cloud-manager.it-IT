@@ -1,103 +1,103 @@
 ---
-title: Repository di Cloud Manager
-description: Scopri come accedere, creare e modificare archivi per i programmi Cloud Manager.
+title: Archivi di Cloud Manager
+description: Scopri come accedere, creare e modificare gli archivi per i programmi Cloud Manager.
 exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
 source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '666'
-ht-degree: 2%
+ht-degree: 100%
 
 ---
 
 
-# Repository di Cloud Manager {#cloud-manager-repos}
+# Archivi di Cloud Manager {#cloud-manager-repos}
 
-Gli archivi sono il luogo in cui gestisci il codice utilizzando git. Scopri come creare archivi per i programmi Cloud Manager.
+Gli archivi sono il luogo in cui gestisci il codice utilizzando Git. Scopri come creare archivi per i programmi Cloud Manager.
 
 ## Accesso agli archivi {#accessing-repos}
 
 Puoi accedere e gestire gli archivi Git in un self-service da Cloud Manager.
 
-Per accedere al tuo archivio, utilizza le **Accesso alle informazioni sul repository** pulsante disponibile in Cloud Manager, che si trova principalmente sulla scheda della pipeline.
+Per accedere al tuo archivio, utilizza il pulsante **Accedi a dati archivio** disponibile in Cloud Manager, che si trova in primo piano sulla scheda della pipeline.
 
-1. Accedi a Cloud Manager all&#39;indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) e selezionare l&#39;organizzazione e il programma appropriati.
+1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) e seleziona l’organizzazione e il programma appropriati.
 
-1. Passa a **Tubi** scheda da **Panoramica del programma** e visualizzerai la pagina **Accesso alle informazioni sul repository** opzione per accedere e gestire l’archivio git [con questa pipeline.](/help/using/production-pipelines.md)
+1. Passa alla scheda **Pipeline** dalla pagina **Panoramica del programma** e visualizzerai l’opzione **Accedi a dati archivio** per accedere e gestire l’archivio Git [configurato con questa pipeline.](/help/using/production-pipelines.md)
 
-   ![Pulsante Informazioni repository](/help/assets/access-repo1.png)
+   ![Pulsante Accedi a dati archivio](/help/assets/access-repo1.png)
 
-1. Se passi alla **Non produzione** scheda pipeline **Accesso alle informazioni sul repository** è disponibile anche in questo caso, in quanto [configurato per la pipeline.](/help/using/non-production-pipelines.md)
+1. Se passi alla scheda pipeline **Non di produzione** l’opzione **Accedi a dati archivio** è disponibile anche in questo caso, in quanto [configurata per la pipeline.](/help/using/non-production-pipelines.md)
 
-   ![gasdotti non di produzione](/help/assets/access-repo-nonprod.png)
+   ![Pipeline non di produzione](/help/assets/access-repo-nonprod.png)
 
-1. Fai clic sul pulsante **Accesso alle informazioni sul repository** per aprire una finestra di dialogo che presenta:
+1. Fai clic sul pulsante **Accedi a dati archivio** per aprire una finestra di dialogo che presenta:
 
-   * URL dell’archivio Git
+   * L’URL dell’archivio Git
    * Nome utente
    * Password
-   * Comando Git da eseguire per clonare l’archivio localmente
+   * Il comando Git da eseguire per clonare l’archivio in locale
 
    ![Finestra di dialogo Informazioni archivio](/help/assets/access-repo-create.png)
 
-Utilizza le informazioni fornite per clonare l’archivio localmente in modo da poter iniziare lo sviluppo locale.
+Utilizza le informazioni fornite per clonare l’archivio in locale in modo da poter iniziare lo sviluppo locale.
 
 >[!NOTE]
 >
->La **Accesso alle informazioni sul repository** è visibile agli utenti nella **Sviluppatore** o **Gestione distribuzione** ruolo.
+>L’opzione **Accedi a dati archivio** è visibile agli utenti con il ruolo di **Sviluppatore** o **Responsabile della distribuzione**.
 
 ## Aggiunta di archivi {#add-repos}
 
-Per aggiungere archivi in Cloud Manager, effettua le seguenti operazioni:
+Per aggiungere archivi in Cloud Manager, segui i passaggi seguenti:
 
-1. Accedi a Cloud Manager all&#39;indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) e selezionare l&#39;organizzazione e il programma appropriati.
+1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) e seleziona l’organizzazione e il programma appropriati.
 
-1. Da **Panoramica del programma** pagina, fai clic su **Repository** e passa alla **Repository** pagina.
+1. Dalla pagina **Panoramica del programma**, fai clic sulla scheda **Archivi** e passa alla pagina **Archivi**.
 
 1. Fai clic su **Aggiungi archivio** per avviare la procedura guidata.
 
    >[!NOTE]
    >
-   >Devi avere la **Gestione distribuzione** o **Proprietario business** ruolo per aggiungere un archivio.
+   >Per aggiungere un archivio devi avere il ruolo di **Responsabile della distribuzione** o **Proprietario business**.
 
    ![Aggiungi archivio](/help/assets/create-repo2.png)
 
 1. Inserisci il nome e la descrizione come richiesto e fai clic su **Salva**.
 
-   ![Dettagli sulle operazioni pronti contro termine](/help/assets/repo-1.png)
+   ![Dettagli dell’archivio](/help/assets/repo-1.png)
 
 1. Seleziona **Salva**.
 
-Verrà visualizzato il repository appena creato.
+Verrà visualizzato l’archivio appena creato.
 
-![Nuovo repository creato](/help/assets/create-repo3.png)
+![Nuovo archivio creato](/help/assets/create-repo3.png)
 
-Gli archivi creati in Cloud Manager sono disponibili per la selezione quando [crea le tubazioni.](/help/overview/ci-cd-pipelines.md)
+Gli archivi creati in Cloud Manager sono disponibili per la selezione quando [crei le pipeline.](/help/overview/ci-cd-pipelines.md)
 
 ## Visualizzare e modificare gli archivi {#edit-repos}
 
-Segui questi passaggi per modificare e visualizzare gli archivi in Cloud Manager:
+Per modificare e visualizzare gli archivi in Cloud Manager, segui i passaggi seguenti:
 
-1. Accedi a Cloud Manager all&#39;indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) e selezionare l&#39;organizzazione e il programma appropriati.
+1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) e seleziona l’organizzazione e il programma appropriati.
 
-1. Da **Panoramica del programma** pagina, fai clic su **Repository** e passa alla **Repository** pagina. Qui puoi visualizzare i dettagli degli archivi esistenti.
+1. Dalla pagina **Panoramica del programma**, fai clic sulla scheda **Archivi** e passa alla pagina **Archivi**. Qui puoi visualizzare i dettagli degli archivi esistenti.
 
-1. Seleziona l’archivio e fai clic sul pulsante con i puntini di sospensione all’estrema destra della tabella per **Copia URL archivio**, **Visualizza e aggiorna** o **Elimina** l’archivio.
+1. Seleziona l’archivio e fai clic sul pulsante con i puntini di sospensione all’estrema destra della tabella per effettuare sul tuo archivio le operazioni di **Copia URL archivio**, **Visualizza e aggiorna** o **Elimina**.
 
-![Modifica repository](/help/assets/create-repo3.png)
+![Modifica archivio](/help/assets/create-repo3.png)
 
 ## Supporto per i sottomoduli Git {#git-submodule-support}
 
 I sottomoduli Git possono essere utilizzati per unire il contenuto di più rami tra archivi Git in fase di creazione.
 
-Quando viene eseguito il processo di creazione di Cloud Manager, dopo che l’archivio configurato per la pipeline è stato clonato e il ramo configurato viene estratto, se il ramo contiene un `.gitmodules` file nella directory principale, il comando viene eseguito.
+Quando viene eseguito il processo di generazione di Cloud Manager, dopo che l’archivio configurato per la pipeline è stato clonato e il ramo configurato viene registrato, se il ramo contiene un file `.gitmodules` nella directory principale, il comando viene eseguito.
 
 ```
 $ git submodule update --init
 ```
 
-In questo modo, ogni sottomodulo verrà sottoposto a Check-Out nella directory appropriata. Questa tecnica è una potenziale alternativa a [utilizzo di più archivi Git di origine](/help/managing-code/multiple-git-repos.md) per le organizzazioni che hanno familiarità con l’utilizzo dei sottomoduli git e che non desiderano gestire un processo di unione esterno.
+In questo modo, ogni sottomodulo verrà registrato nella directory appropriata. Questa tecnica è una potenziale alternativa all’[utilizzo di più archivi Git di origine](/help/managing-code/multiple-git-repos.md) per le organizzazioni che hanno familiarità con l’utilizzo dei sottomoduli Git e che non desiderano gestire un processo di unione esterno.
 
-Ad esempio, supponiamo che ci siano tre archivi, ciascuno contenente un singolo ramo denominato `main`. Nell’archivio &quot;principale&quot;, ovvero quello configurato nelle pipeline, la `main` un ramo `pom.xml` file che dichiara i progetti contenuti negli altri due archivi:
+Ad esempio, supponiamo che ci siano tre archivi, ciascuno contenente un singolo ramo denominato `main`. Nell’archivio “principale”, ovvero quello configurato nelle pipeline, il ramo `main` ha un file `pom.xml` che dichiara i progetti contenuti negli altri due archivi:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -125,7 +125,7 @@ $ git submodule add -b main https://git.cloudmanager.adobe.com/ProgramName/proje
 $ git submodule add -b main https://git.cloudmanager.adobe.com/ProgramName/projectB/ project-b
 ```
 
-Questo determina un `.gitmodules` file con questo aspetto:
+Questo determina un file `.gitmodules` con questo aspetto:
 
 ```text
 [submodule "project-a"]
@@ -138,16 +138,16 @@ Questo determina un `.gitmodules` file con questo aspetto:
     branch = main
 ```
 
-Ulteriori informazioni sui sottomoduli git sono disponibili nella sezione [Manuale di riferimento Git](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
+Ulteriori informazioni sui sottomoduli Git sono disponibili nella sezione [Manuale di riferimento Git](https://git-scm.com/book/en/v2/Git-Tools-Submodules).
 
 ### Limitazioni  {#limitations}
 
-Quando utilizzi i sottomoduli git, tieni presente quanto segue:
+Quando utilizzi i sottomoduli Gt, tieni presente che:
 
-* L’URL Git deve essere esattamente nella sintassi descritta sopra.
+* L’URL Git deve avere esattamente la sintassi descritta sopra.
 * Per motivi di sicurezza, non incorporare le credenziali in questi URL.
 * Sono supportati solo i sottomoduli nella directory principale del ramo.
 * I riferimenti ai sottomoduli Git vengono archiviati in commit specifici Git.
    * Di conseguenza, quando vengono apportate modifiche all’archivio dei sottomoduli, il commit a cui si fa riferimento deve essere aggiornato, ad esempio, utilizzando `git submodule update --remote`.
-* Se non diversamente necessario, si consiglia vivamente di utilizzare sottomoduli &quot;superficiali&quot;.
-   * Per eseguire questa operazione, esegui `git config -f .gitmodules submodule.<submodule path>.shallow true` per ciascun sottomodulo.
+* Se non diversamente necessario, consigliamo vivamente di utilizzare sottomoduli “superficiali”.
+   * Per farlo, esegui `git config -f .gitmodules submodule.<submodule path>.shallow true` per ciascun sottomodulo.
