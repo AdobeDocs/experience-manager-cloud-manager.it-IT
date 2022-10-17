@@ -3,9 +3,9 @@ title: Diritti di accesso
 description: Scopri il tuo Adobe ID e come utilizzarlo per accedere alle risorse di Experience Cloud.
 exl-id: 9e51936c-9727-4b9c-a86a-2ea3aabd42cf
 source-git-commit: 522e5fbc650a8159602eb1aeaf42d64f4e23e8b4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '239'
-ht-degree: 0%
+ht-degree: 100%
 
 ---
 
@@ -16,12 +16,12 @@ Scopri il tuo Adobe ID e come utilizzarlo per accedere alle risorse di Experienc
 
 ## Tipi di identità utente {#user-identity-types}
 
-Come parte del processo di onboarding, Adobe creerà un identificatore organizzazione per la tua azienda in Adobe Identity Management System (IMS). IMS è il luogo in cui tutti gli utenti e le relative autorizzazioni possono essere gestiti. Ogni utente, che deve essere membro di questa organizzazione, e avrà accesso a uno qualsiasi dei [!UICONTROL Experience Cloud] i servizi dovranno disporre del proprio Adobe ID.
+Come parte del processo di onboarding, Adobe creerà un identificatore di organizzazione per la tua azienda in Adobe Identity Management System (IMS). IMS è il luogo in cui tutti gli utenti e le relative autorizzazioni possono essere gestiti. Ogni utente, che deve essere membro di questa organizzazione e avrà accesso a uno qualsiasi dei servizi [!UICONTROL Experience Cloud], dovrà disporre del proprio Adobe ID.
 
-Per iniziare a utilizzare un Adobe ID, consulta il documento [Gestire i tipi di identità Adobe](https://helpx.adobe.com/enterprise/using/identity.html) per istruzioni dettagliate su come ottenere un Adobe ID utilizzando uno dei tipi di identità disponibili.
+Per iniziare a utilizzare un Adobe ID, consulta il documento [Gestire i tipi di identità di Adobe](https://helpx.adobe.com/it/enterprise/using/identity.html) per istruzioni dettagliate su come ottenere un Adobe ID utilizzando uno dei tipi di identità disponibili.
 
 ### Utenti e ruoli {#users-and-roles}
 
-Dopo la creazione di un&#39;organizzazione per la società da parte di Adobe, l&#39;amministratore di sistema designato verrà aggiunto come primo membro di questa organizzazione. Per impostazione predefinita, all’amministratore di sistema vengono assegnate le autorizzazioni di amministratore e le [!UICONTROL AEM Managed Services] prodotto e uno o più [!UICONTROL Cloud Manager] profili di prodotto. Vedi il documento [Aggiungi utenti e ruoli](/help/requirements/users-and-roles.md) per ulteriori informazioni su come configurare e gestire gli utenti del team utilizzando l’Admin Console .
+Una volta creata l’organizzazione per la società, l’amministratore del sistema designato vi verrà aggiunto come primo membro. Per impostazione predefinita, all’amministratore del sistema vengono assegnate le autorizzazioni di amministratore, il prodotto [!UICONTROL AEM Managed Services] e uno o più profili di prodotto [!UICONTROL Cloud Manager]. Per ulteriori informazioni su come configurare e gestire gli utenti del team tramite Admin Console, consulta il documento [Aggiungere utenti e ruoli](/help/requirements/users-and-roles.md).
 
-Con questi diritti concessi, il tuo amministratore è ora configurato con un single sign-on utilizzando un Adobe ID per accedere al [!UICONTROL Experience Cloud] servizi, accedi agli ambienti cloud AEM e utilizza [!UICONTROL Cloud Manager].
+Con questi diritti concessi, il tuo amministratore è ora configurato con un accesso singolo utilizzando un Adobe ID per accedere ai servizi [!UICONTROL Experience Cloud], agli ambienti cloud AEM e utilizzare [!UICONTROL Cloud Manager].
