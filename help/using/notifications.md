@@ -1,40 +1,40 @@
 ---
 title: Notifiche
-description: Scopri in che modo Cloud Manager ti notifica di eventi importanti.
+description: Scopri in che modo Cloud Manager notifica gli eventi importanti.
 exl-id: cfd5655f-2d2c-4304-b25c-6cdffe7ff64c
 source-git-commit: e767d9ff5e3df0047d2cf47d7b0842854101a01a
 workflow-type: tm+mt
 source-wordcount: '563'
-ht-degree: 1%
+ht-degree: 23%
 
 ---
 
 
 # Notifiche {#notifications}
 
-Scopri in che modo Cloud Manager ti notifica di eventi importanti.
+Scopri in che modo Cloud Manager notifica gli eventi importanti.
 
 ## Notifiche in Cloud Manager {#cloud-manager-notifications}
 
-[!UICONTROL Cloud Manager] invia notifiche all’avvio e al completamento di una pipeline di produzione (con successo o senza successo), all’inizio di una distribuzione di produzione, nonché quando **Approvazione Go-Live** e **Pianificato** si raggiungono i passi necessari. Queste notifiche vengono inviate tramite [!UICONTROL Experience Cloud] sistema di notifica.
+[!UICONTROL Cloud Manager] invia notifiche all’avvio e al completamento (con o senza successo) di una pipeline di produzione, all’inizio di una distribuzione di produzione, nonché al raggiungimento dei passaggi **Approvazione Go-Live** e **Pianificato**. Queste notifiche vengono inviate tramite il sistema di notifica di [!UICONTROL Experience Cloud].
 
 >[!NOTE]
 >
->Le notifiche di approvazione e pianificate vengono inviate solo agli utenti nel **Proprietario business**, **Responsabile del programma** e **Gestione distribuzione** ruoli.
+>Le notifiche di approvazione e pianificate vengono inviate solo agli utenti nei ruoli **Proprietario business**, **Responsabile del programma** e **Responsabile della distribuzione**.
 
-Le notifiche vengono visualizzate in una barra laterale in [!UICONTROL Cloud Manager] e in tutto l&#39;Adobe [!UICONTROL Experience Cloud].
+Le notifiche vengono visualizzate in una barra laterale all’interno di [!UICONTROL Cloud Manager] e in Adobe [!UICONTROL Experience Cloud].
 
-L’icona della campana nell’intestazione viene contrassegnata quando si dispone di nuove notifiche.
+Quando ricevi nuove notifiche, l’icona a forma di campana nell’intestazione viene contrassegnata.
 
-![Icona Notifiche](/help/assets/notifications-bell-badged.png)
+![Icona delle notifiche](/help/assets/notifications-bell-badged.png)
 
-Fai clic sull’icona della campana per aprire la barra laterale e visualizzare le notifiche. La **Notifiche** nella barra laterale sono elencate le notifiche più recenti, ad esempio le conferme di distribuzione. Le notifiche riguardano i tuoi ambienti.
+Fai clic sull’icona a forma di campana per aprire la barra laterale e visualizzare le notifiche. La **Notifiche** nella barra laterale sono elencate le notifiche più recenti, ad esempio le conferme di distribuzione. Le notifiche riguardano i tuoi ambienti.
 
-![Barra laterale Notifiche](/help/assets/notifications-activities.png)
+![Barra laterale delle notifiche](/help/assets/notifications-activities.png)
 
 La **Annunci** La scheda include Adobi di annunci di prodotti. Gli annunci riguardano il prodotto.
 
-![Barra laterale Notifiche](/help/assets/notificaitons-announcements.png)
+![Barra laterale delle notifiche](/help/assets/notificaitons-announcements.png)
 
 Fai clic su una notifica o un annuncio per visualizzarne i dettagli. Le notifiche collegate ad attività come le distribuzioni di pipeline ti portano ai dettagli di quell’attività, ad esempio la finestra di esecuzione della pipeline.
 

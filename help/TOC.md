@@ -9,7 +9,7 @@ role: Admin
 source-git-commit: 101177e49ec276b8203a32767392538dc257394a
 workflow-type: tm+mt
 source-wordcount: '309'
-ht-degree: 78%
+ht-degree: 100%
 
 ---
 
@@ -19,27 +19,27 @@ ht-degree: 78%
 + [Cloud Manager per AMS](introduction.md)
 + Panoramica {#overview}
    + [Concetti fondamentali](overview/key-concepts.md)
-   + [Percorso utente](overview/user-journey.md)
+   + [Percorso dell’utente](overview/user-journey.md)
    + [Pipeline CI/CD](overview/ci-cd-pipelines.md)
    + [Sicurezza e privacy](overview/security-and-privacy.md)
    + [Risorse per assistenza](overview/help-resources.md)
    + [Domande frequenti su Cloud Manager](overview/faqs.md)
-+ Requisiti{#requirements}
++ Requisiti {#requirements}
    + [Diritti di accesso](requirements/access-rights.md)
    + [Archivio del codice sorgente](requirements/source-code-repository.md)
    + [Autorizzazioni basate sul ruolo](requirements/role-based-permissions.md)
-   + [Impostazione di utenti e ruoli](requirements/users-and-roles.md)
-   + [Provisioning dell&#39;ambiente](requirements/environment-provisioning.md)
+   + [Configurazione di utenti e ruoli](requirements/users-and-roles.md)
+   + [Provisioning dell’ambiente](requirements/environment-provisioning.md)
 + Guida introduttiva {#getting-started}
    + [Primo accesso](getting-started/first-time-login.md)
    + [Configurazione del programma](getting-started/program-setup.md)
-   + Creazione AEM progetti {#project-creation}
+   + Creazione di un progetto AEM {#project-creation}
       + [Utilizzo della procedura guidata](getting-started/using-the-wizard.md)
       + [Configurazione del progetto](getting-started/project-setup.md)
-      + [Ambiente di creazione](getting-started/build-environment.md)
+      + [Ambiente di build](getting-started/build-environment.md)
    + [Configurazione dei rami](getting-started/configuring-branches.md)
-   + [Configurazioni del Dispatcher](getting-started/dispatcher-configurations.md)
-+ Utilizzando {#using}
+   + [Configurazioni di Dispatcher](getting-started/dispatcher-configurations.md)
++ Utilizzo {#using}
    + Pipeline CI/CD {#pipelines}
       + [Configurazione delle pipeline di produzione](using/production-pipelines.md)
       + [Configurazione di pipeline non di produzione](using/non-production-pipelines.md)
@@ -54,7 +54,7 @@ ht-degree: 78%
    + [Regole per la qualità del codice personalizzato](using/custom-code-quality-rules.md)
 + Gestione del codice {#managing-code}
    + [Gestione delle versioni dei progetti Maven](managing-code/maven-project-version.md)
-   + [Repository](managing-code/repositories.md)
+   + [Archivi](managing-code/repositories.md)
    + [Integrazione con Git](managing-code/git-integration.md)
    + [Utilizzo di più archivi Git](managing-code/multiple-git-repos.md)
 + Procedura guidata di aggiornamento del prodotto {#product-update-wizard}
