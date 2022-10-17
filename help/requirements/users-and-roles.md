@@ -55,7 +55,7 @@ L’Admin Console è una posizione centrale per la gestione delle assegnazioni A
 Per fornire le autorizzazioni appropriate basate sul ruolo agli utenti [!UICONTROL Cloud Manager], un amministratore dell’organizzazione del cliente deve creare nuovi profili di prodotto nel contesto del prodotto [!UICONTROL AEM Managed Services] corrispondenti a ciascuno dei quattro ruoli [!UICONTROL Cloud Manager]:
 
 * Business Owner (Proprietario)
-* Deployment Manager (Responsabile implementazione)
+* Responsabile della distribuzione
 * Sviluppatore
 * Responsabile del programma
 
