@@ -169,4 +169,4 @@ Una volta utilizzata l’interfaccia utente [!UICONTROL Cloud Manager] per confi
 
 ## Passaggi successivi {#the-next-steps}
 
-Dopo aver configurato la pipeline, è necessario distribuire il codice. Per maggiori dettagli, consulta il documento [Distribuzione del codice](/help/using/code-deployment.md).
+Dopo aver configurato la pipeline, è necessario distribuire il codice. Per ulteriori dettagli, consulta il documento [Distribuzione del codice](/help/using/code-deployment.md).
