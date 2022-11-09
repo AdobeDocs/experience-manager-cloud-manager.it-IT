@@ -22,7 +22,7 @@ Per poter essere generati e distribuiti correttamente con Cloud Manager, i proge
 * Nella directory principale dell’archivio Git deve essere presente un file `pom.xml`.
    * Il file `pom.xml` può fare riferimento a tutti i sottomoduli (che a loro volta possono avere altri sottomoduli), a seconda delle necessità.
    * Puoi aggiungere riferimenti ad altri archivi di artefatti Maven nei tuoi file `pom.xml`.
-   * L’accesso agli [archivi di artefatti protetti da password](#password-protected-maven-repositories) è supportato se configurato. Tuttavia, l’accesso agli archivi di artefatti protetti dalla rete non è supportato.
+   * Quando configurato, l’accesso agli [archivi di artefatti protetti da password](#password-protected-maven-repositories) è supportato. Tuttavia, l’accesso agli archivi di artefatti protetti dalla rete non è supportato.
 * I pacchetti di contenuto distribuibili vengono rilevati eseguendo la scansione dei file .zip dei pacchetti di contenuto presenti in una directory denominata `target`.
    * Un numero qualsiasi di sottomoduli può produrre pacchetti di contenuti.
 * Gli artefatti del Dispatcher distribuibili vengono rilevati tramite la ricerca di file `zip` contenenti sottodirectory di `target` denominate `conf` e `conf.d`.
@@ -275,15 +275,15 @@ Con il `content-package-maven-plugin` è simile:
 
 ## Riutilizzo di artefatto di build {#build-artifact-reuse}
 
-In molti casi, lo stesso codice viene distribuito in più ambienti AEM. Cloud Manager evita di ricostruire la base di codice quando rileva che viene utilizzato lo stesso commit Git in più esecuzioni di pipeline full-stack.
+In molti casi, lo stesso codice viene distribuito in più ambienti AEM. Quando possibile, Cloud Manager evita di ricompilare la base di codice quando rileva che lo stesso commit Git viene utilizzato in più esecuzioni di pipeline full stack.
 
-All’avvio di un’esecuzione, viene estratto il commit corrente HEAD per la pipeline di ramo. L’hash del commit è visibile nell’interfaccia utente e tramite l’API. Al completamento del passaggio della build, gli artefatti risultanti vengono archiviati in base a tale hash del commit e possono essere riutilizzati nelle esecuzioni successive della pipeline.
+All’avvio di un’esecuzione, viene estratto il commit HEAD corrente per la pipeline del ramo. L’hash del commit è visibile nell’interfaccia utente e tramite l’API. Al termine della fase di build, gli artefatti risultanti vengono archiviati in base a tale hash di commit e possono essere riutilizzati nelle esecuzioni successive della pipeline.
 
-I pacchetti vengono riutilizzati tra le pipeline se si trovano nello stesso programma. Quando cerchi pacchetti che possono essere riutilizzati, AEM ignora i rami e riutilizza gli artefatti tra rami.
+Se si trovano nello stesso programma, i pacchetti vengono riutilizzati tra le pipeline. Durante la ricerca di pacchetti da poter riutilizzare, AEM ignora i rami e riutilizza gli artefatti tra rami.
 
-Quando si verifica un riutilizzo, i passaggi di creazione e qualità del codice vengono effettivamente sostituiti con i risultati dell’esecuzione originale. Il file di registro per il passaggio di build elenca gli artefatti e le informazioni di esecuzione utilizzate per generarli originariamente.
+In caso di un riutilizzo, i passaggi di build e qualità del codice vengono effettivamente sostituiti con i risultati dell’esecuzione originale. Il file di registro della fase di build elenca gli artefatti e le informazioni sull’esecuzione utilizzate per generarli originariamente.
 
-Di seguito è riportato un esempio di tale output di log.
+Di seguito è riportato un esempio di tale output di registro.
 
 ```shell
 The following build artifacts were reused from the prior execution 4 of pipeline 1 which used commit f6ac5e6943ba8bce8804086241ba28bd94909aef:
@@ -291,13 +291,13 @@ build/aem-guides-wknd.all-2021.1216.1101633.0000884042.zip (content-package)
 build/aem-guides-wknd.dispatcher.cloud-2021.1216.1101633.0000884042.zip (dispatcher-configuration)
 ```
 
-Il log del passaggio di qualità del codice conterrà informazioni simili.
+Il registro del passaggio di qualità del codice conterrà informazioni simili alle seguenti.
 
 ### Esempi {#example-reuse}
 
 #### Esempio 1 {#example-1}
 
-Considera che il programma dispone di due pipeline di sviluppo:
+Ipotizza di utilizzare un programma con due pipeline di sviluppo:
 
 * Pipeline 1 su ramo `foo`
 * Pipeline 2 su ramo `bar`
@@ -309,36 +309,36 @@ Entrambi i rami si trovano sullo stesso ID commit.
 
 #### Esempio 2 {#example-2}
 
-Considera che il programma ha due rami:
+Ipotizza di utilizzare un programma con due rami:
 
 * Ramo `foo`
 * Ramo `bar`
 
-Entrambi i rami hanno lo stesso ID commit.
+Entrambi i rami presentano lo stesso ID commit.
 
-1. Viene creata ed eseguita una pipeline di sviluppo `foo`.
-1. Successivamente viene creata ed eseguita una pipeline di produzione `bar`.
+1. Una pipeline di sviluppo genera ed esegue `foo`.
+1. Successivamente una pipeline di produzione genera ed esegue `bar`.
 
-In questo caso, l&#39;artefatto da `foo` verrà riutilizzato per la pipeline di produzione poiché è stato identificato lo stesso hash del commit.
+In questo caso, l’artefatto di `foo` viene riutilizzato per la pipeline di produzione poiché è stato identificato lo stesso hash di commit.
 
-### Disabilitazione {#opting-out}
+### Disattivazione {#opting-out}
 
-Se lo desideri, puoi disattivare il comportamento di riutilizzo per specifiche pipeline impostando la variabile di pipeline `CM_DISABLE_BUILD_REUSE` su `true`. Se questa variabile è impostata, l’hash del commit viene ancora estratto e gli artefatti risultanti verranno archiviati per un utilizzo successivo, ma gli eventuali artefatti archiviati in precedenza non verranno riutilizzati. Per comprendere questo comportamento, considera lo scenario seguente.
+Se lo desideri, puoi disattivare il comportamento di riutilizzo per specifiche pipeline impostando la variabile di pipeline `CM_DISABLE_BUILD_REUSE` su `true`. Configurando questa variabile, l’hash di commit viene comunque estratto e gli artefatti risultanti vengono archiviati per un uso successivo. Tuttavia, gli eventuali artefatti archiviati in precedenza non vengono riutilizzati. Per comprendere questo comportamento, considera lo scenario seguente.
 
 1. Viene creata una nuova pipeline.
-1. La pipeline viene eseguita (esecuzione n. 1) e il commit HEAD corrente è `becdddb`. L&#39;esecuzione ha esito positivo e gli artefatti risultanti vengono archiviati.
+1. La pipeline viene eseguita (esecuzione n. 1) e il commit HEAD corrente è `becdddb`. L’esecuzione ha esito positivo e gli artefatti risultanti vengono archiviati.
 1. Viene impostata la variabile `CM_DISABLE_BUILD_REUSE`.
-1. La pipeline viene rieseguita senza modificare il codice. Anche se sono presenti artefatti archiviati associati a `becdddb`, non vengono riutilizzati a causa della variabile `CM_DISABLE_BUILD_REUSE`.
-1. Il codice viene modificato e la pipeline viene eseguita. Il commit HEAD ora è `f6ac5e6`. L&#39;esecuzione ha esito positivo e gli artefatti risultanti vengono archiviati.
+1. La pipeline viene rieseguita senza modificare il codice. Anche se sono presenti artefatti archiviati associati a `becdddb`, non vengono riutilizzati per via della variabile `CM_DISABLE_BUILD_REUSE`.
+1. Il codice viene modificato e la pipeline eseguita. Il commit HEAD ora è `f6ac5e6`. L’esecuzione ha esito positivo e gli artefatti risultanti vengono archiviati.
 1. La variabile `CM_DISABLE_BUILD_REUSE` viene eliminata.
 1. La pipeline viene rieseguita senza modificare il codice. Poiché sono presenti artefatti archiviati associati a `f6ac5e6`, questi artefatti vengono riutilizzati.
 
-### Precisazioni {#caveats}
+### Avvertenze {#caveats}
 
-* Gli artefatti di build non vengono riutilizzati in diversi programmi, a prescindere se l’hash del commit sia identico.
+* Gli artefatti di generazione non vengono riutilizzati in diversi programmi, indipendentemente dal fatto che l’hash di commit sia identico.
 * Gli artefatti di build vengono riutilizzati all’interno dello stesso programma anche se il ramo e/o la pipeline sono diversi.
-* La [Gestione della versione Maven](/help/managing-code/maven-project-version.md) sostituisce la versione del progetto solo nelle pipeline di produzione. Pertanto, se lo stesso commit viene utilizzato sia su un’esecuzione di distribuzione di sviluppo che su un’esecuzione di pipeline di produzione e la pipeline di distribuzione di sviluppo viene eseguita per prima, le versioni verranno distribuite allo staging e alla produzione senza essere modificate. Tuttavia, in questo caso verrà comunque creato un tag.
-* Se il recupero degli artefatti archiviati non ha esito positivo, il passaggio di compilazione verrà eseguito come se non fosse stato archiviato alcun artefatto.
+* La [Gestione della versione Maven](/help/managing-code/maven-project-version.md) sostituisce la versione del progetto solo nelle pipeline di produzione. Pertanto, se lo stesso commit viene utilizzato sia su un’esecuzione di distribuzione di sviluppo che su un’esecuzione di pipeline di produzione e la pipeline di distribuzione di sviluppo viene eseguita per prima, le versioni verranno distribuite allo staging e alla produzione senza essere modificate. Tuttavia, anche in questo caso verrà creato un tag.
+* Se il recupero degli artefatti archiviati non ha esito positivo, la fase di build viene eseguita come se non fossero stati archiviati artefatti.
 * Le variabili di pipeline diverse da `CM_DISABLE_BUILD_REUSE` non vengono considerate quando Cloud Manager decide di riutilizzare gli artefatti di build creati in precedenza.
 
 ## Sviluppa il tuo codice in base alle best practice {#develop-your-code-based-on-best-practices}
