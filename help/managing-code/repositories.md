@@ -87,7 +87,7 @@ Per modificare e visualizzare gli archivi in Cloud Manager, segui i passaggi seg
 
 ## Supporto per i sottomoduli Git {#git-submodule-support}
 
-I sottomoduli Git possono essere utilizzati per unire il contenuto di più rami tra archivi Git in fase di creazione.
+È possibile utilizzare i moduli Git secondari per unire il contenuto di più rami tra archivi Git al momento della generazione.
 
 Quando viene eseguito il processo di generazione di Cloud Manager, dopo che l’archivio configurato per la pipeline è stato clonato e il ramo configurato viene registrato, se il ramo contiene un file `.gitmodules` nella directory principale, il comando viene eseguito.
 
