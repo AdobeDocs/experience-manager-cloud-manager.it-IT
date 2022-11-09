@@ -20,7 +20,7 @@ Per le distribuzioni di staging e produzione, Cloud Manager genera una versione 
 
 Questa versione viene visualizzata nella pagina dei dettagli di esecuzione della pipeline e nella pagina dell’attività. Quando viene eseguita una build, il progetto Maven viene aggiornato per utilizzare la versione e viene creato un tag nell’archivio Git con tale versione come nome.
 
-Se la versione del progetto originale soddisfa determinati criteri, la versione del progetto Maven aggiornata unirà sia la versione del progetto originale che la versione generata da Cloud Manager. Tuttavia, il tag utilizza sempre la versione generata. Affinché l’unione si verifichi, la versione originale del progetto deve essere formata con esattamente tre segmenti di versione, ad esempio: `1.0.0` o `1.2.3`, ma non `1.0` o `1` e la versione originale non deve terminare in `-SNAPSHOT`.
+Se la versione del progetto originale soddisfa determinati criteri, la versione del progetto Maven aggiornata unirà la versione del progetto originale e quella generata da Cloud Manager. Tuttavia, il tag utilizza sempre la versione generata. Affinché tale unione si verifichi, la versione originale del progetto deve essere formata da esattamente tre segmenti di versione, ad esempio `1.0.0` o `1.2.3`, ma non `1.0` o `1`, mentre la versione originale non deve terminare con `-SNAPSHOT`.
 
 >[!NOTE]
 >
@@ -31,9 +31,9 @@ Se la versione originale soddisfa questi criteri, la versione generata verrà ag
 | Versione | Versione in `pom.xml` | Commenti |
 |---|---|---|
 | `1.0.0` | `1.0.0.2019_0926_121356_0000020490` | Versione originale formata correttamente |
-| `1.0.0-SNAPSHOT` | `2019.926.121356.0000020490` | Versione istantanea, sovrascritta |
+| `1.0.0-SNAPSHOT` | `2019.926.121356.0000020490` | Versione snapshot, sovrascritta |
 | `1` | `2019.926.121356.0000020490` | Versione incompleta, sovrascritta |
 
 >[!NOTE]
 >
->A prescindere dal fatto che la versione originale sia stata incorporata o meno nella versione inizializzata da Cloud Manager, la versione originale è disponibile come proprietà Maven con il nome `cloudManagerOriginalVersion`.
+>Indipendentemente dal fatto che la versione originale fosse incorporata nella versione inizializzata da Cloud Manager, la versione originale è disponibile come proprietà Maven con il nome `cloudManagerOriginalVersion`.
