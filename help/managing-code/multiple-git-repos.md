@@ -53,8 +53,8 @@ A seconda della strategia e dei flussi di lavoro e di ramificazione, la sincroni
 Per aggiungere una nuova (di terze parti) origine o un nuovo archivio, segui i passaggi seguenti:
 
 1. Aggiungi una nuova azione GitHub al nuovo archivio che invia le modifiche da tale archivio all’archivio Git di Cloud Manager.
-1. Esegui questa azione almeno una volta per assicurarti che il codice del progetto sia nell’archivio Git di Cloud Manager.
-1. Aggiungi un riferimento alla nuova directory nella radice Maven `pom.xml` nell’archivio Git di Cloud Manager.
+1. Esegui questa azione almeno una volta per verificare che il codice del progetto sia riportato nell’archivio Git di Cloud Manager.
+1. Aggiungi un riferimento alla nuova directory nel file radice Maven `pom.xml` nell’archivio Git di Cloud Manager.
 
 ## Azione GitHub di esempio {#sample-github-action}
 
