@@ -21,9 +21,9 @@ Sì. È necessario aggiungere il `maven-toolchains-plugin` con le impostazioni c
 * Questo processo è documentato [qui.](/help/getting-started/using-the-wizard.md)
 * Ad esempio, consulta il [codice del progetto di esempio WKND.](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75)
 
-## Dopo il passaggio da Java 8 a Java 11, la build restituisce un errore relativo al maver-scr-plugin. Cosa si può fare? {#maven-src-plugin}
+## Dopo il passaggio da Java 8 a Java 11, la build restituisce un errore relativo al maver-scr-plugin. Cosa posso fare? {#maven-src-plugin}
 
-Quando si tenta di passare da Java 8 a 11, la build di AEM Cloud Manager potrebbe non riuscire. Se si verifica il seguente errore, è necessario rimuovere il `maven-scr-plugin` e convertire tutte le annotazioni OSGi in annotazioni OSGi R6.
+La build di AEM Cloud Manager potrebbe non riuscire durante il tentativo di passaggio da Java 8 a 11. Se si verifica il seguente errore, è necessario rimuovere il `maven-scr-plugin` e convertire tutte le annotazioni OSGi in annotazioni OSGi R6.
 
 ```text
 [main] [ERROR] Failed to execute goal org.apache.felix:maven-scr-plugin:1.26.4:scr (generate-scr-scrdescriptor) on project helloworld.core: /build_root/build/testsite/src/main/java/com/adobe/HelloWorldServiceImpl.java : Unable to load compiled class: com.adobe.HelloWorldServiceImpl: com/adobe/HelloWorldServiceImpl has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0 -> [Help 1]
@@ -39,9 +39,9 @@ Per le build di Cloud Manager, il `maven-enforcer-plugin` potrebbe restituire qu
 [main] [WARNING] Rule 1: org.apache.maven.plugins.enforcer.RequireJavaVersion
 ```
 
-Si tratta di un problema noto a causa del quale Cloud Manager utilizza una versione di Java diversa per eseguire il comando maven anziché compilare il codice. Basta omettere `requireJavaVersion` dalle configurazioni del `maven-enforcer-plugin`.
+Si tratta di un problema noto a causa del quale Cloud Manager utilizza una versione di Java diversa per eseguire il comando maven anziché compilare il codice. È sufficiente omettere `requireJavaVersion` dalle configurazioni `maven-enforcer-plugin`.
 
-## Il controllo di qualità del codice non è riuscito e la distribuzione è bloccata. Esiste un modo per aggirare il controllo? {#deployment-stuck}
+## Il controllo di qualità del codice non è riuscito e la distribuzione è bloccata. C’è un modo per aggirare questo controllo? {#deployment-stuck}
 
 Sì. Tutti gli errori di qualità del codice, ad eccezione delle valutazioni di sicurezza, non sono metriche critiche e possono quindi essere ignorati come parte di una pipeline di implementazione espandendo gli elementi nell’interfaccia utente dei risultati.
 
@@ -64,11 +64,11 @@ Consulta il documento [Comprendere i risultati dei test](/help/using/code-qualit
 
 ## Si può utilizzare SNAPSHOT per la versione del progetto Maven? {#snapshot}
 
-Sì. Per le distribuzioni per gli sviluppatori, i file del ramo Git `pom.xml` devono contenere `-SNAPSHOT` alla fine del valore della `<version>`.
+Sì. Per le distribuzioni nell’ambiente di sviluppo, i file `pom.xml` del ramo Git devono contenere `-SNAPSHOT` dopo il valore `<version>`.
 
-Ciò consente di installare la distribuzione successiva anche se la versione non è stata modificata. Nelle distribuzioni per gli sviluppatori, non viene aggiunta o generata alcuna versione automatica per la build Maven.
+Ciò consente di installare la distribuzione successiva anche se la versione non è stata modificata. Per le distribuzioni nell’ambiente di sviluppo, non viene aggiunta né generata una versione automatica della build Maven.
 
-È possibile anche impostare la versione su `-SNAPSHOT` per le build o le distribuzioni di produzione e staging. Cloud Manager imposta automaticamente un numero di versione corretto e crea un tag in Git. Se necessario, è possibile fare riferimento a questo tag in un secondo momento.
+È possibile impostare la versione su `-SNAPSHOT` per le build o le implementazioni negli ambienti di staging e produzione. Cloud Manager imposta automaticamente un numero di versione corretto e crea un tag in Git per l’utente. Se necessario, puoi fare riferimento a questo tag in un secondo momento.
 
 Ulteriori dettagli sulla gestione delle versioni sono [documentati qui.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/managing-code/project-version-handling.html?lang=it)
 
@@ -76,11 +76,11 @@ Ulteriori dettagli sulla gestione delle versioni sono [documentati qui.](https:/
 
 Nelle distribuzioni di staging e produzione, viene generata una versione automatica [come documentato qui.](/help/managing-code/maven-project-version.md)
 
-Per il controllo delle versioni personalizzate nelle distribuzioni di staging e produzione, imposta una versione maven corretta in tre parti come `1.0.0`. Aumenta la versione ogni volta che distribuisci alla produzione.
+Per il controllo delle versioni personalizzate nelle distribuzioni di staging e produzione, imposta una versione maven corretta in tre parti come `1.0.0`. Aumenta il numero della versione per ogni esecuzione della distribuzione nell’ambiente di produzione.
 
-Cloud Manager aggiunge automaticamente la propria versione alle build di staging e produzione e crea un ramo Git. Non è richiesta alcuna configurazione particolare. Se non si imposta una versione maven come descritto in precedenza, la distribuzione avverrà comunque e verrà impostata automaticamente una versione.
+Cloud Manager aggiunge automaticamente la versione alle build di staging e produzione e crea un ramo Git. Non è richiesta alcuna configurazione speciale. Se non imposti una versione Maven come descritto in precedenza, la distribuzione verrà comunque eseguita correttamente e verrà impostata automaticamente una versione.
 
-## La build Maven non riesce per le implementazioni di Cloud Manager, ma viene generata localmente senza errori. Qual è il problema? {#maven-build-fail}
+## L’esecuzione della build Maven non riesce per le distribuzioni di Cloud Manager, ma a livello locale non genera errori. Qual è il problema? {#maven-build-fail}
 
 Consulta questa [risorsa Git](https://github.com/cqsupport/cloud-manager/blob/main/cm-build-step-fails.md) per ulteriori dettagli.
 
@@ -106,4 +106,4 @@ Cannot set variables: https://cloudmanager.adobe.io/api/program/111/environment/
 
 In questo caso, l’utente che esegue questi comandi deve essere aggiunto al ruolo **Responsabile della distribuzione** in Admin Console.
 
-Consulta [Autorizzazioni API](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/) per ulteriori dettagli.
+Per ulteriori dettagli, consulta [Autorizzazioni API](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/).
