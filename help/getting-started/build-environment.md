@@ -51,7 +51,7 @@ Gli ambienti di build di Cloud Manager hanno i seguenti attributi.
 
 ## Utilizzo di una versione Java specifica {#using-java-version}
 
-Per impostazione predefinita, i progetti sono generati dal processo di build di Cloud Manager utilizzando Oracle 8 JDK. I clienti che desiderano utilizzare un JDK alternativo hanno due opzioni.
+Per impostazione predefinita, i progetti sono generati dal processo di build di Cloud Manager utilizzando il JDK di Oracle 8. I clienti che desiderano utilizzare un JDK alternativo hanno due opzioni.
 
 * [Toolchain Maven](#maven-toolchains)
 * [Selezione di una versione JDK alternativa per l’intero processo di esecuzione Maven](#alternate-maven)
@@ -89,7 +89,7 @@ Quando si utilizza questo metodo, Maven stesso viene comunque eseguito utilizzan
 
 Le combinazioni fornitore/versione attualmente disponibili sono:
 
-| Produttore | Versione |
+| Fornitore | Versione |
 |---|---|
 | oracle | 1.8 |
 | oracle | 1.11 |
@@ -104,7 +104,7 @@ Le combinazioni fornitore/versione attualmente disponibili sono:
 
 ### Versione JDK alternativa per l’esecuzione di Maven {#alternate-maven}
 
-È inoltre possibile selezionare Oracle 8 o Oracle 11 come JDK per l’intera esecuzione di Maven. A differenza delle opzioni toolchain, questo cambia il JDK utilizzato per tutti i plug-in a meno che non sia impostata anche la configurazione di toolchain, nel qual caso la configurazione di toolchain viene ancora applicata per i plug-in Maven che tengono conto delle toolchain. Sarà quindi possibile verificare e applicare la versione Java utilizzando il [plug-in Apache Maven Enforcer](https://maven.apache.org/enforcer/maven-enforcer-plugin/).
+È inoltre possibile selezionare Oracle 8 o Oracle 11 come JDK per l’intera esecuzione di Maven. A differenza delle opzioni toolchain, questo cambia il JDK utilizzato per tutti i plug-in a meno che non sia impostata anche la configurazione di toolchain, nel qual caso la configurazione di toolchain viene ancora applicata per i plug-in Maven che tengono conto delle toolchain. Di conseguenza, controllare e applicare la versione Java con il [plug-in Apache Maven Enforcer](https://maven.apache.org/enforcer/maven-enforcer-plugin/) funzionerà.
 
 A questo scopo, crea un file denominato `.cloudmanager/java-version` nel ramo dell’archivio Git utilizzato dalla pipeline. Questo file può avere come contenuto `11` o `8`. Qualsiasi altro valore viene ignorato. Se `11` è specificato, viene utilizzato Oracle 11 e la variabile di ambiente `JAVA_HOME` è impostata su `/usr/lib/jvm/jdk-11.0.2`. Se è specificato `8`, viene utilizzato Oracle 8 e la variabile di ambiente `JAVA_HOME` è impostata su `/usr/lib/jvm/jdk1.8.0_202`.
 
@@ -121,10 +121,10 @@ Per supportare questa funzione, Cloud Manager aggiunge al contenitore di creazio
 | Nome della variabile | Descrizione |
 |---|---|
 | `CM_BUILD` | Sempre impostato su `true` |
-| `BRANCH` | Il ramo configurato per l’esecuzione |
-| `CM_PIPELINE_ID` | L’identificatore numerico della pipeline |
-| `CM_PIPELINE_NAME` | Il nome della pipeline |
-| `CM_PROGRAM_ID` | L’identificatore numerico del programma |
+| `BRANCH` | Ramo configurato per l’esecuzione |
+| `CM_PIPELINE_ID` | Identificatore numerico della pipeline |
+| `CM_PIPELINE_NAME` | Nome della pipeline |
+| `CM_PROGRAM_ID` | Identificatore numerico del programma |
 | `CM_PROGRAM_NAME` | Il nome del programma |
 | `ARTIFACTS_VERSION` | Per una pipeline di staging o produzione, la versione sintetica generata da Cloud Manager |
 
@@ -132,7 +132,7 @@ Per supportare questa funzione, Cloud Manager aggiunge al contenitore di creazio
 
 In alcuni casi, il processo di creazione può dipendere da specifiche variabili di configurazione che non sarebbero appropriate per l’inserimento nell’archivio Git o dovrebbero variare tra le esecuzioni della pipeline che utilizzano lo stesso ramo.
 
-Cloud Manager consente di configurare queste variabili tramite l’API o il CLI di Cloud Manager in base alla pipeline. Le variabili possono essere memorizzate come testo normale o crittografate a riposo. In entrambi i casi, le variabili sono rese disponibili all’interno dell’ambiente di build come variabile di ambiente a cui è possibile fare riferimento dall’interno del file `pom.xml` o altri script di build.
+Cloud Manager consente di configurare queste variabili tramite l’API o il CLI di Cloud Manager in base alla pipeline. Le variabili possono essere archiviate come testo normale o crittografate quando inattive. In entrambi i casi, le variabili sono rese disponibili all’interno dell’ambiente di build come variabile di ambiente a cui è possibile fare riferimento dall’interno del file `pom.xml` o altri script di build.
 
 Per impostare una variabile utilizzando CLI, eseguire un comando simile al seguente.
 
@@ -230,4 +230,4 @@ Questa stessa tecnica può essere utilizzata per installare pacchetti specifici 
 
 >[!NOTE]
 >
->Se si installa in questo modo, il pacchetto di sistema non viene installato nell’ambiente di esecuzione utilizzato per eseguire Adobe Experience Manager. Se è necessario un pacchetto di sistema installato nell’ambiente AEM, contatta il tuo rappresentante Adobe.
+>Se si installa in questo modo, il pacchetto di sistema non viene installato nell’ambiente di esecuzione utilizzato per eseguire Adobe Experience Manager. Se hai bisogno di installare un pacchetto di sistema nell’ambiente AEM, contatta il rappresentante Adobe.
