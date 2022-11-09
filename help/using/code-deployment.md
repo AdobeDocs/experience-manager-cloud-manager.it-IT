@@ -80,15 +80,15 @@ Una volta completata la distribuzione, il codice si trova nel relativo ambiente 
 
 ## Interruzioni {#timeouts}
 
-I seguenti passaggi si interrompono se vengono lasciati in attesa del feedback degli utenti:
+Per i seguenti passaggi è previsto un timeout in caso di attesa del feedback dell’utente:
 
 | Passaggio | Timeout |
 |--- |--- |
-| Test della qualità del codice | 14 giorni |
+| Test di qualità del codice | 14 giorni |
 | Test di sicurezza | 14 giorni |
 | Test delle prestazioni | 14 giorni |
 | Domanda di approvazione | 14 giorni |
-| Pianificazione della distribuzione di produzione | 14 giorni |
+| Pianificazione della distribuzione nell’ambiente di produzione | 14 giorni |
 | Supporto CSE | 14 giorni |
 
 ## Dettagli del processo di distribuzione {#deployment-process}
