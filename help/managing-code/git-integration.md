@@ -21,9 +21,9 @@ Adobe Cloud Manager viene fornito con un unico archivio Git utilizzato per distr
 Questa serie di video esplora diversi casi d’uso relativi all’integrazione di un archivio Git gestito dal cliente con Cloud Manager.
 
 * [Sincronizzazione iniziale](#initial-sync)
-* [Strategia di diramazione di base](#branching-strategy)
-* [Sviluppo di rami per caratteristiche](#feature-development)
-* [Distribuzione di produzione](#production-deployment)
+* [Strategia di base per la ramificazione](#branching-strategy)
+* [Sviluppo dei rami delle funzioni](#feature-development)
+* [Implementazione nell’ambiente di produzione](#production-deployment)
 * [Sincronizzazione dei tag versione](#sync-tags)
 
 Questa serie di video si rivolge a chi conosce già le basi di Git e del controllo del codice sorgente. Per ulteriori dettagli su Git, consulta le [risorse aggiuntive di seguito](#additional-resources).
@@ -46,7 +46,7 @@ Imposta una strategia di diramazione di base per sfruttare i vantaggi offerti da
 
 ## Sviluppo di rami per caratteristiche {#feature-development}
 
-Utilizza una diramazione per caratteristiche (feature branch) per isolare le modifiche di codice in un archivio Git gestito dal cliente e sincronizzalo con l’archivio Git di Cloud Manager per utilizzare una pipeline non di produzione per testare la qualità e la convalida del codice.
+Un ramo della funzione serve per isolare le modifiche apportate al codice in un archivio Git gestito dal cliente e sincronizzarle con l’archivio Git di Cloud Manager per utilizzare una pipeline non di produzione a scopi di test di qualità del codice e di convalida.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28723/?quality=12)
 
@@ -66,5 +66,5 @@ Sincronizza i tag di versione da un archivio Git di Cloud Manager in un archivio
 
 * [Introduzione a Cloud Manager](/help/introduction.md)
 * [Risorse GitHub](https://try.github.io)
-* [Tutorial su Git Atlassian](https://www.atlassian.com/git/tutorials/what-is-version-control)
-* [Foglio di riferimento Git](https://education.github.com/git-cheat-sheet-education.pdf)
+* [Tutorial Atlassian Git](https://www.atlassian.com/git/tutorials/what-is-version-control)
+* [Scheda di riferimento rapido di Git](https://education.github.com/git-cheat-sheet-education.pdf)
