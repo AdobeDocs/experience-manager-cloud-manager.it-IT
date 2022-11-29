@@ -2,10 +2,10 @@
 title: Configurazione delle pipeline di produzione
 description: Scopri come utilizzare Cloud Manager per creare e configurare pipeline di produzione per distribuire il codice.
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 99325c28c379103db2ba4c19bb6d206849c6e126
-workflow-type: ht
-source-wordcount: '1296'
-ht-degree: 100%
+source-git-commit: 39b38da17ed1cadf4f2e9633a9e76b537325316f
+workflow-type: tm+mt
+source-wordcount: '1302'
+ht-degree: 92%
 
 ---
 
@@ -16,7 +16,7 @@ Scopri come utilizzare Cloud Manager per creare e configurare pipeline di produz
 
 ## Panoramica {#overview}
 
-Utilizzando il riquadro **Impostazioni della pipeline** in [!UICONTROL Cloud Manager] puoi creare due diversi tipi di pipeline.
+Utilizzo della **Impostazioni della pipeline** piastrelle [!UICONTROL Cloud Manager] puoi creare due diversi tipi di pipeline.
 
 * **Pipeline di produzione**: una pipeline di produzione è una pipeline appositamente creata composta da una serie di passaggi orchestrati per portare il codice sorgente dall’archivio Git fino alla fase di produzione.
 * **Pipeline non di produzione**: una pipeline non di produzione serve principalmente per eseguire scansioni di qualità del codice o per distribuire il codice sorgente in un ambiente di sviluppo.
@@ -41,7 +41,7 @@ Questo video fornisce una panoramica del processo di creazione della pipeline, d
 
 ## Aggiunta di una nuova pipeline di produzione {#adding-production-pipeline}
 
-Una volta utilizzata l’interfaccia utente [!UICONTROL Cloud Manager] per configurare il programma e disporre di almeno un ambiente, si può aggiungere una pipeline di produzione.
+Una volta utilizzato il [!UICONTROL Cloud Manager] Interfaccia utente per configurare il programma e disporre di almeno un ambiente, puoi aggiungere una pipeline di produzione.
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione e il programma appropriati.
 
@@ -75,9 +75,9 @@ Una volta utilizzata l’interfaccia utente [!UICONTROL Cloud Manager] per confi
             * **Cambiamenti su Git**: questa opzione avvia la pipeline CI/CD ogni volta che vengono aggiunti dei commit al ramo Git configurato. Con questa opzione, puoi comunque avviare la pipeline manualmente, in base alle esigenze.
          * **Comportamento in caso di errori di metriche importanti**: durante la configurazione o la modifica della pipeline, il Responsabile della distribuzione ha la possibilità di definire il comportamento della pipeline quando si verifica un errore importante in uno qualsiasi dei gate di qualità. Le opzioni disponibili sono:
 
-            * **Chiedi ogni volta**: questa è l’impostazione predefinita e richiede l’intervento manuale su qualsiasi errore importante.
-            * **Interrompi subito**: se selezionata, la pipeline verrà annullata ogni volta che si verifica un errore importante. In sostanza, questa opzione simula un utente che rifiuta manualmente ogni errore.
-            * **Continua immediatamente**: se selezionata, la pipeline procede automaticamente ogni volta che si verifica un errore importante. In sostanza, questa opzione simula un utente che approva manualmente ogni errore.
+            * **Chiedi sempre**: impostazione predefinita che richiede l’intervento manuale per tutti gli errori importanti.
+            * **Genera errore immediatamente**: selezionando questa opzione, la pipeline viene annullata ogni volta che si verifica un errore importante. In sostanza, quest’opzione simula un utente che rifiuta manualmente ogni errore.
+            * **Continua immediatamente**: selezionando questa opzione, la pipeline avanza automaticamente ogni volta che si verifica un errore importante. In sostanza, questa opzione simula un utente che approva manualmente ogni errore.
 
          ![Trigger di implementazione](/help/assets/configure-pipelines/add-prod3.png)
 
@@ -93,8 +93,9 @@ Una volta utilizzata l’interfaccia utente [!UICONTROL Cloud Manager] per confi
 
             1. Nel **PERCORSO** fornisci un percorso di contenuto.
             1. In **TIPO**, seleziona l’azione da intraprendere su quel percorso.
-            * **Scaricamento**: esegue un’invalidazione della cache, simile a quando il contenuto viene attivato da un’istanza di authoring a un’istanza di pubblicazione.
-            * **Invalida**: esegue l’eliminazione di una cache.
+
+               * **Flush** - Esegui un&#39;eliminazione della cache.
+               * **Annulla validità** - Esegui un’invalidazione della cache, simile a quando il contenuto viene attivato da un’istanza di authoring a un’istanza di pubblicazione.
             1. Fai clic su **Aggiungi percorso** per aggiungere il percorso specificato. Puoi aggiungere fino a 100 percorsi per ambiente.
 
          ![Configurazione del Dispatcher](/help/assets/configure-pipelines/dispatcher-stage.png)
@@ -107,7 +108,7 @@ Una volta utilizzata l’interfaccia utente [!UICONTROL Cloud Manager] per confi
 
          * **Opzioni di implementazione**: puoi definire i parametri che controllano la distribuzione di produzione.
 
-            * **Utilizza l’approvazione lancio**: una distribuzione deve essere approvata manualmente da un utente con il ruolo di **Proprietario business**, **Project Manager** oppure **Responsabile della distribuzione** tramite l&#39;interfaccia [!UICONTROL Cloud Manager].
+            * **Usa approvazione in tempo reale** - Una distribuzione deve essere approvata manualmente da un utente con **Proprietario business**, **Project Manager** oppure **Gestione distribuzione** tramite [!UICONTROL Cloud Manager] Interfaccia utente.
             * **Pianificato**: questa opzione interrompe la pipeline prima dell’implementazione di produzione per consentirne la pianificazione. Se questa opzione è selezionata, la pipeline si arresta dopo la distribuzione nell’ambiente di staging e richiede all’utente di eseguire l’azione.
                * **Ora**: questa opzione distribuisce immediatamente in produzione, completando in modo efficace la pipeline.
                * **Data**: questa opzione consente all’utente di pianificare un’ora in cui la distribuzione deve essere completata.
@@ -125,7 +126,6 @@ Una volta utilizzata l’interfaccia utente [!UICONTROL Cloud Manager] per confi
             ![Opzioni di implementazione di produzione](/help/assets/configure-pipelines/prod-deploymentoptions.png)
 
          * **Configurazione del Dispatcher**: definisce la configurazione del dispatcher per l’ambiente di produzione. Le opzioni sono le stesse dell’ambiente di staging.
-
 
 
 
