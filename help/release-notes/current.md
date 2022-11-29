@@ -1,19 +1,19 @@
 ---
-title: Note sulla versione 2022.11.0
-description: Queste sono le note sulla versione 2022.11.0 di Cloud Manager.
+title: Note sulla versione 2022.12.0
+description: Queste sono le note sulla versione 2022.12.0 di Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 2defbdbee0221540f66f7d824ccf1bd33179c9d9
+source-git-commit: 83a404c1f54bc6a791a4c13a22b7a78f83755869
 workflow-type: tm+mt
-source-wordcount: '132'
-ht-degree: 45%
+source-wordcount: '120'
+ht-degree: 50%
 
 ---
 
 
-# Note sulla versione 2022.11.0 di Cloud Manager {#release-notes}
+# Note sulla versione 2022.12.0 di Cloud Manager {#release-notes}
 
-Questa pagina documenta le note sulla versione per [!UICONTROL Cloud Manager] versione 2022.11.0.
+Questa pagina documenta le note sulla versione per [!UICONTROL Cloud Manager] versione 2022.12.0.
 
 >[!NOTE]
 >
@@ -21,12 +21,13 @@ Questa pagina documenta le note sulla versione per [!UICONTROL Cloud Manager] ve
 
 ## Data di pubblicazione {#release-date}
 
-La data di rilascio per [!UICONTROL Cloud Manager] la versione 2022.11.0 è il 3 novembre 2022. La prossima versione è prevista per il 29 novembre 2022.
+La data di rilascio per [!UICONTROL Cloud Manager] la versione 2022.12.0 è il 29 novembre 2022. La prossima versione è prevista per il 19 gennaio 2023.
 
 ## Novità {#what-is-new}
 
-* Quando un ambiente associato a una pipeline presenta uno stato che non consente l’esecuzione della pipeline, l’azione di esecuzione viene disabilitata con una descrizione del comando.
+* È ora disponibile la scalabilità automatica per più aree. Possono essere applicate determinate restrizioni.
+* Miglioramento della disponibilità e dell&#39;affidabilità [pipeline di Cloud Manager](/help/overview/ci-cd-pipelines.md) sono stati fatti.
 
 ## Correzioni di bug {#bug-fixes}
 
-* Il feedback durante la pipeline di produzione delle modifiche è stato migliorato per rilevare le occorrenze non frequenti di uno o più ambienti mancanti.
+* È stata apportata una modifica per evitare un `PATCH /program//environment//variables` richiesta per ambienti con `FAILED` stato.
