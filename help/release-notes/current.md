@@ -3,10 +3,10 @@ title: Note sulla versione 2022.12.0
 description: Queste sono le note sulla versione 2022.12.0 di Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 5c97e8bfa30ed6bbbaf361e5d3987aa2a0bf5b13
+source-git-commit: 1fe5fb860da07105ac7e8ce21fce683b238637c1
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '124'
+ht-degree: 46%
 
 ---
 
@@ -26,4 +26,5 @@ La data di rilascio per [!UICONTROL Cloud Manager] la versione 2022.12.0 è il 2
 ## Novità {#what-is-new}
 
 * È ora disponibile la scalabilità automatica per più aree. Possono essere applicate determinate restrizioni.
+   * Questa modifica verrà implementata in modo graduale nelle quattro-sei settimane successive al rilascio della versione 2022.12.0.
 * Miglioramento della disponibilità e dell&#39;affidabilità [pipeline di Cloud Manager](/help/overview/ci-cd-pipelines.md) sono stati fatti.
