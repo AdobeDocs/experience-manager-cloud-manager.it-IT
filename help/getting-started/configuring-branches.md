@@ -4,7 +4,7 @@ description: Scopri come configurare il primo ramo in Git e come viene utilizzat
 exl-id: ff2ae28f-902e-4fb2-aeb1-3636cb5cd9bb
 source-git-commit: 4c051cd1696f8a00d0278131c9521ad4dcb956a3
 workflow-type: ht
-source-wordcount: '323'
+source-wordcount: '329'
 ht-degree: 100%
 
 ---
@@ -54,7 +54,7 @@ $ git commit -m "initial commit"
 
 ## Invio del primo ramo {#pushing-your-first-branch}
 
-Dopo aver eseguito il commit di almeno una revisione, puoi aggiungere l&#39;archivio [!UICONTROL Cloud Manager] in modalità remota e quindi eseguire l’invio dei commit.
+Dopo aver eseguito il commit di almeno una revisione, puoi aggiungere l’archivio di [!UICONTROL Cloud Manager] in modalità remota e quindi eseguire l’invio dei commit.
 
 ```shell
 $ git remote add adobe <url>
@@ -70,7 +70,7 @@ To <url>
 
 >[!NOTE]
 >
->L’URL specifico, insieme alle tue credenziali, ti verrà fornito dal Customer Success Engineering durante l&#39;onboarding di [!UICONTROL Cloud Manager].
+>L’URL specifico, insieme alle tue credenziali, verrà fornito dal Customer Success Engineering durante l’onboarding di [!UICONTROL Cloud Manager].
 
 ## Rami aggiuntivi {#additional-branches}
 
