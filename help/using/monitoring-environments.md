@@ -4,7 +4,7 @@ description: Scopri come monitorare gli ambienti in Cloud Manager.
 exl-id: 32886133-d6c0-4aed-8bb0-81b84f63e825
 source-git-commit: 5907ca6337d33c26ff19a14bfeb358cd9f7b935d
 workflow-type: ht
-source-wordcount: '933'
+source-wordcount: '939'
 ht-degree: 100%
 
 ---
@@ -33,7 +33,7 @@ Segui questi passaggi per accedere al monitoraggio del sistema.
    ![Impostazioni](/help/assets/first-timea1.png)
 
 
-In alternativa, passa alla pagina di destinazione **Monitoraggio del sistema** attraverso la voce del menu di navigazione globale **Rapporti** in [!UICONTROL Cloud Manager].
+In alternativa, puoi passare alla pagina di destinazione del **Monitoraggio del sistema** attraverso la voce del menu di navigazione globale **Rapporti** in [!UICONTROL Cloud Manager].
 
 ## Panoramica di Monitoraggio del sistema {#system-monitoring-overview}
 
