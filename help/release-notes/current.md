@@ -5,15 +5,15 @@ feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: 1fe5fb860da07105ac7e8ce21fce683b238637c1
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 46%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
 # Note sulla versione 2022.12.0 di Cloud Manager {#release-notes}
 
-Questa pagina documenta le note sulla versione per [!UICONTROL Cloud Manager] versione 2022.12.0.
+In questa pagina sono documentate le note sulla versione 2022.12.0 di [!UICONTROL Cloud Manager].
 
 >[!NOTE]
 >
@@ -21,7 +21,7 @@ Questa pagina documenta le note sulla versione per [!UICONTROL Cloud Manager] ve
 
 ## Data di pubblicazione {#release-date}
 
-La data di rilascio per [!UICONTROL Cloud Manager] la versione 2022.12.0 è il 29 novembre 2022. La prossima versione è prevista per il 19 gennaio 2023.
+La data di pubblicazione della versione 2022.12.0 di [!UICONTROL Cloud Manager] è il 29 novembre 2022. La prossima versione è prevista per il 19 gennaio 2023.
 
 ## Novità {#what-is-new}
 
