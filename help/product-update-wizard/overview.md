@@ -4,7 +4,7 @@ description: Scopri in che modo la Procedura guidata di aggiornamento del prodot
 exl-id: 8134e956-bfcf-41b8-a408-fa4375058c6a
 source-git-commit: bbee49987e2f80825f5f7f5caf29c841e2b00dfb
 workflow-type: ht
-source-wordcount: '197'
+source-wordcount: '205'
 ht-degree: 100%
 
 ---
@@ -28,12 +28,12 @@ I clienti che utilizzano Cloud Manager e che possono effettuare l’aggiornament
 
 1. Riceverai una notifica push tramite Cloud Manager che ti informa sulla disponibilità di AEM 6.5 per il tuo programma.
 
-1. Una scheda **[!UICONTROL AEM 6.5 Update]** visualizzata nella schermata panoramica di [!UICONTROL Cloud Manager]. Questa scheda aiuterà a tenere traccia della fase del processo di aggiornamento in corso e ti informerà su quale sarà il prossimo passo da compiere.
+1. Una scheda **[!UICONTROL Aggiornamento AEM 6.5]** viene mostrata nella schermata di panoramica di [!UICONTROL Cloud Manager]. Questa scheda aiuterà a tenere traccia della fase del processo di aggiornamento in corso e ti informerà su quale sarà il prossimo passo da compiere.
 
    ![Scheda della procedura guidata di aggiornamento](/help/assets/Start-Update.png)
 
-1. Seleziona **[!UICONTROL Start Update]** per avviare la procedura guidata.
+1. Seleziona **[!UICONTROL Avvia aggiornamento]** per lanciare la procedura guidata.
 
-1. La procedura guidata visualizza la prima fase del processo **[!UICONTROL AEM 6.5 Update]**.
+1. La procedura guidata visualizza la prima fase del processo **[!UICONTROL Aggiornamento AEM 6.5]**.
 
 Per ulteriori informazioni sulla prima fase della procedura guidata, consulta il documento [Fase di valutazione.](/help/product-update-wizard/evaluation.md)
