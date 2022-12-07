@@ -3,9 +3,9 @@ title: Primo accesso
 description: Se hai impostato le configurazioni generali e sei pronto a utilizzare Cloud Manager per la prima volta, segui questa pagina.
 exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
 source-git-commit: d8f16deacfe52c76ff6b0aee0344d50bfe2b9c74
-workflow-type: tm+mt
-source-wordcount: '255'
-ht-degree: 70%
+workflow-type: ht
+source-wordcount: '261'
+ht-degree: 100%
 
 ---
 
@@ -16,11 +16,11 @@ Una volta impostata la configurazione generale per [!UICONTROL Cloud Manager], p
 
 >[!NOTE]
 >
->A seconda dei ruoli assegnati in [!UICONTROL Cloud Manager] e allo stato dell’applicazione, le schermate visualizzate possono variare delle illustrazioni.
+>A seconda dei ruoli assegnati in [!UICONTROL Cloud Manager] e allo stato dell’applicazione, le schermate visualizzate possono essere diverse dalle illustrazioni.
 
 ## Accesso per la prima volta {#logging-in-for-the-first-time}
 
-1. Accedi ad Adobe [!UICONTROL Experience Cloud] e visualizzerai l’elenco dei programmi.
+1. Accedi ad Adobe [!UICONTROL Experience Cloud] per visualizzare l’elenco dei programmi.
 
 1. Seleziona il programma.
 
@@ -42,4 +42,4 @@ Cloud Manager fornisce una visualizzazione consolidata dell’attività di un pr
 
 >[!NOTE]
 >
->Per impostazione predefinita, un utente con accesso a un ambiente AEM avrà anche il ruolo Utente di Cloud Manager. Questo ruolo in e di per sé è insufficiente per consentire all&#39;utente di accedere alla visualizzazione dei dettagli del programma. Un utente con solo il ruolo utente di Cloud Manager può navigare tramite le opzioni del menu di programma fino all’URL dell’autore dell’ambiente AEM (se esistono ambienti). Gli utenti devono contattare il proprio amministratore se desiderano ottenere l&#39;accesso a livello di programma.
+>Per impostazione predefinita, un utente con accesso a un ambiente AEM avrà anche il ruolo Utente di Cloud Manager. Questo ruolo di per sé non è sufficiente per consentire all’utente di accedere alla visualizzazione dei dettagli del programma. Un utente con solo il ruolo utente di Cloud Manager può navigare tramite le opzioni di menu del programma fino all’URL dell’autore dell’ambiente AEM (se esistono ambienti). Gli utenti devono contattare il proprio amministratore se desiderano ottenere l’accesso a livello di programma.
