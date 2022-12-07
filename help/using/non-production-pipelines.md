@@ -4,7 +4,7 @@ description: Scopri come utilizzare Cloud Manager per creare e configurare pipel
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
 source-git-commit: 567a16a032bf80451b5e8ba4e3d842cb617a615f
 workflow-type: ht
-source-wordcount: '598'
+source-wordcount: '600'
 ht-degree: 100%
 
 ---
@@ -24,7 +24,7 @@ Questo documento si concentra sulle pipeline non di produzione. Per informazioni
 
 Esistono due tipi di pipeline non di produzione:
 
-* **Pipeline di qualità del codice**: questa funzione esegue la scansione della qualità del codice in un ramo Git ed esegue i passaggi di generazione e qualità del codice.
+* **Pipeline di qualità del codice**: eseguono controlli di qualità del codice in un ramo Git ed eseguono i passaggi di generazione e qualità del codice.
 * **Pipeline di implementazione**: oltre a eseguire la generazione e i passaggi di qualità del codice come le pipeline di qualità del codice, queste pipeline distribuiscono il codice in un ambiente non di produzione.
 
 >[!NOTE]
@@ -69,8 +69,8 @@ Dopo aver configurato il programma e disponi di almeno un ambiente utilizzando l
    1. Per le pipeline di implementazione, in **Comportamento in caso di errori di metriche importanti**, definisci il comportamento della pipeline quando si verifica un errore importante in uno qualsiasi dei gate di qualità.
 
       * **Chiedi ogni volta**: questa è l’impostazione predefinita e richiede l’intervento manuale su qualsiasi errore importante.
-      * **Interrompi subito**: se selezionata, la pipeline verrà annullata ogni volta che si verifica un errore importante. In sostanza, questa opzione simula un utente che rifiuta manualmente ogni errore.
-      * **Continua immediatamente**: se selezionata, la pipeline procede automaticamente ogni volta che si verifica un errore importante. In sostanza, questa opzione simula un utente che approva manualmente ogni errore.
+      * **Interrompi subito**: selezionando questa opzione, la pipeline viene annullata ogni volta che si verifica un errore importante. In sostanza, quest’opzione simula un utente che rifiuta manualmente ogni errore.
+      * **Continua immediatamente**: selezionando questa opzione, la pipeline avanza automaticamente ogni volta che si verifica un errore importante. In sostanza, questa opzione simula un utente che approva manualmente ogni errore.
 
 
 1. Fai clic su **Salva** per salvare la pipeline.
