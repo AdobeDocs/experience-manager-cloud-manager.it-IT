@@ -1,16 +1,16 @@
 ---
 title: Test della qualità del codice
-description: Scopri come funziona il test della qualità del codice delle pipeline e come può migliorare la qualità delle distribuzioni.
+description: Scopri come funziona il test di qualità del codice delle pipeline e come può migliorare la qualità delle distribuzioni.
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
 source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
 workflow-type: ht
-source-wordcount: '2863'
+source-wordcount: '2867'
 ht-degree: 100%
 
 ---
 
 
-# Test della qualità del codice {#code-quality-testing}
+# Test di qualità del codice {#code-quality-testing}
 
 Scopri come funziona il test della qualità del codice delle pipeline e come può migliorare la qualità delle distribuzioni.
 
@@ -56,11 +56,11 @@ I risultati dei test di qualità del codice sono forniti come valutazione, come 
 |--- |--- |--- |--- |
 | Valutazione della sicurezza | A = Nessuna vulnerabilità<br/>B = Almeno 1 vulnerabilità minore<br/>C = Almeno 1 vulnerabilità grave<br/>D = Almeno 1 vulnerabilità critica<br/>E = Almeno 1 vulnerabilità bloccante | Critico | &lt; B |
 | Valutazione dell’affidabilità | A = Nessun bug<br/>B = Almeno 1 bug minore <br/>C = Almeno 1 bug grave<br/>D = Almeno 1 bug critico<br/>E = Almeno 1 bug bloccante | Importante | &lt; C |
-| Valutazione della manutenzione | Definita dal costo residuo di correzione dei code smell, espressa come percentuale del tempo già dedicato all’applicazione<br/><ul><li>A = &lt;=5%</li><li>B = 6-10%</li><li>C = 11-20%</li><li>D = 21-50%</li><li>E = >50%</li></ul> | Importante | &lt; A |
-| Copertura | Definita da una combinazione di copertura di righe di codice del test di unità e di copertura delle condizioni utilizzando la formula: <br/>`Coverage = (CT + CF + LC) / (2 * B + EL)`  <ul><li>`CT` = Condizioni valutate come `true` almeno una volta durante l’esecuzione dei test di unità</li><li>`CF` = Condizioni valutate come `false` almeno una volta durante l&#39;esecuzione dei test di unità</li><li>`LC` = Linee coperte = line_to_cover - uncover_lines</li><li>`B` = numero totale di condizioni</li><li>`EL` = numero totale di righe eseguibili (lines_to_cover)</li></ul> | Importante | &lt; 50% |
-| Test di unità ignorati | Numero di test di unità ignorati | Info | > 1 |
+| Valutazione della manutenzione | Definito dal costo residuo della correzione dei code smell come percentuale del tempo già trascorso nell’applicazione<br/><ul><li>A = &lt;= 5%</li><li>B = 6-10%</li><li>C = 11-20%</li><li>D = 21-50%</li><li>E = > 50%</li></ul> | Importante | &lt; A |
+| Copertura | Definito da una combinazione di copertura di righe e copertura di condizioni dello unit test utilizzando la formula: <br/>`Coverage = (CT + CF + LC) / (2 * B + EL)`  <ul><li>`CT` = condizioni già valutate come `true` almeno una volta durante l’esecuzione degli unit test</li><li>`CF` = condizioni già valutate come `false` almeno una volta durante l’esecuzione degli unit test</li><li>`LC` = righe coperte = lines_to_cover - uncovered_lines</li><li>`B` = numero totale di condizioni</li><li>`EL` = numero totale di righe eseguibili (lines_to_cover)</li></ul> | Importante | &lt; 50% |
+| Unit test ignorati | Numero di unit test ignorati | Info | > 1 |
 | Problemi aperti | Tipi di problemi generali: vulnerabilità, bug e code smell | Info | > 0 |
-| Linee duplicate | Definito come il numero di righe coinvolte nei blocchi duplicati. Un blocco di codice viene considerato duplicato nelle seguenti condizioni.<br>Progetti non Java:<ul><li>Ci dovrebbero essere almeno 100 token successivi e duplicati.</li><li>Tali token devono essere distribuiti almeno: </li><li>30 righe di codice per COBOL </li><li>20 righe di codice per ABAP </li><li>10 righe di codice per altre lingue</li></ul>Progetti Java:<ul></li><li> Devono essere presenti almeno 10 istruzioni successive e duplicate indipendentemente dal numero di token e righe.</li></ul>Le differenze nel rientro e nelle stringhe letterali vengono ignorate quando si rilevano duplicati. | Info | > 1% |
+| Righe duplicate | Definito come il numero di righe presenti in blocchi duplicati. Un blocco di codice si considera duplicato nelle seguenti condizioni.<br>Progetti non Java:<ul><li>Devono esserci almeno 100 token successivi e duplicati.</li><li>Tali token devono essere distribuiti, per lo meno, come segue: </li><li>30 righe di codice per COBOL </li><li>20 righe di codice per ABAP </li><li>10 righe di codice per altri linguaggi</li></ul>Progetti Java:<ul></li><li> Devono essere presenti almeno 10 istruzioni successive e duplicate indipendentemente dal numero di token e righe.</li></ul>Per il rilevamento dei duplicati, le differenze in termini di rientro e valori letterali della stringa vengono ignorate. | Info | > 1% |
 | Compatibilità Cloud Service | Numero di problemi di compatibilità Cloud Service identificati | Info | > 0 |
 
 >[!NOTE]
@@ -69,22 +69,22 @@ I risultati dei test di qualità del codice sono forniti come valutazione, come 
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle regole di qualità del codice personalizzato eseguite da [!UICONTROL Cloud Manager], consulta il documento [Regole per la qualità del codice personalizzato.](custom-code-quality-rules.md)
+>Per ulteriori informazioni sulle regole per la qualità del codice personalizzato eseguite da [!UICONTROL Cloud Manager], consulta il documento [Regole per la qualità del codice personalizzato.](custom-code-quality-rules.md)
 
 ### Gestione dei falsi positivi {#dealing-with-false-positives}
 
 Il processo di analisi della qualità non è perfetto e talvolta identificherà erroneamente problemi che non sono effettivamente tali. Tali problemi sono denominati falsi positivi.
 
-In questi casi, il codice sorgente può essere annotato con annotazione Java standard `@SuppressWarnings` che specifica l’ID della regola come attributo di annotazione. Ad esempio, un falso positivo comune è che la regola SonarQube rilevi che le password hardcoded siano aggressive riguardo al modo in cui viene identificata una password hardcoded.
+In questi casi, il codice sorgente può essere annotato con annotazione Java standard `@SuppressWarnings` che specifica l’ID della regola come attributo di annotazione. Tra i falsi positivi comuni si annovera ad esempio il caso in cui la regola SonarQube per rilevare le password hardcoded può essere molto rigida riguardo al modo in cui una password hardcoded viene identificata.
 
-Il codice seguente è abbastanza comune in un progetto AEM, che ha un codice per la connessione a un servizio esterno.
+Il codice riportato di seguito è abbastanza comune in un progetto AEM, che presenta un codice per la connessione a un servizio esterno.
 
 ```java
 @Property(label = "Service Password")
 private static final String PROP_SERVICE_PASSWORD = "password";
 ```
 
-SonarQube originerà quindi una vulnerabilità di blocco. Ma dopo aver esaminato il codice, riconosci che non si tratta di una vulnerabilità e puoi annotare il codice con l’ID regola appropriato.
+SonarQube genera in questo caso una vulnerabilità bloccante. Dopo aver esaminato il codice, riconosci che non si tratta di una vulnerabilità e puoi annotare il codice con l’ID della regola appropriato.
 
 ```java
 @SuppressWarnings("squid:S2068")
@@ -92,7 +92,7 @@ SonarQube originerà quindi una vulnerabilità di blocco. Ma dopo aver esaminato
 private static final String PROP_SERVICE_PASSWORD = "password";
 ```
 
-Tuttavia, se il codice era effettivamente questo:
+Tuttavia, se il codice era:
 
 ```java
 @Property(label = "Service Password", value = "mysecretpassword")
@@ -107,7 +107,7 @@ Quindi la soluzione corretta è quella di rimuovere la password hardcoded.
 
 ## Test di sicurezza {#security-testing}
 
-[!UICONTROL Cloud Manager] esegue i controlli di integrità e sicurezza AEM esistenti nell’ambiente di staging dopo la distribuzione e segnala lo stato tramite l’interfaccia utente. I risultati vengono aggregati da tutte le istanze AEM nell’ambiente.
+[!UICONTROL Cloud Manager] esegue le verifiche di integrità e sicurezza AEM esistenti nell’ambiente di staging dopo la distribuzione e segnala lo stato tramite l’interfaccia utente. I risultati vengono aggregati da tutte le istanze AEM nell’ambiente.
 
 Questi stessi controlli di integrità possono essere eseguiti in qualsiasi momento tramite la console web o il dashboard operazioni.
 
@@ -280,20 +280,20 @@ Questa funzionalità è disponibile per le metriche seguenti.
 
 ## Ottimizzazione dell’analisi dei pacchetti di contenuto {#content-package-scanning-optimization}
 
-Come parte del processo di analisi della qualità, Cloud Manager esegue l’analisi dei pacchetti di contenuto prodotti dalla build Maven. Cloud Manager offre ottimizzazioni per accelerare questo processo, che sono efficaci quando vengono osservati determinati vincoli per la creazione di pacchetti. La più significativa è l’ottimizzazione eseguita per i progetti che producono un singolo pacchetto di contenuto, generalmente denominato pacchetto “all”, che contiene una serie di altri pacchetti di contenuti prodotti dalla build, contrassegnati come ignorati. Quando Cloud Manager rileva questo scenario, anziché decomprimere il pacchetto “all”, i singoli pacchetti di contenuto vengono analizzati direttamente e ordinati in base alle dipendenze. Ad esempio, considera il seguente output di build.
+Come parte del processo di analisi della qualità, Cloud Manager esegue l’analisi dei pacchetti di contenuti prodotti dalla build Maven. Per accelerare il processo, Cloud Manager offre delle ottimizzazioni che risultano efficaci quando si osservano determinati vincoli relativi ai pacchetti. La più significativa è l’ottimizzazione dei progetti che producono un singolo pacchetto di contenuti, generalmente denominati pacchetti “all”, che contengono una serie di altri pacchetti di contenuti prodotti dalla build e contrassegnati come ignorati. Quando Cloud Manager rileva questo scenario, anziché decomprimere il pacchetto “all”, scansiona i singoli pacchetti di contenuti e li ordina in base alle dipendenze. Consideriamo ad esempio il seguente output di build.
 
-* `all/myco-all-1.0.0-SNAPSHOT.zip` (pacchetto di contenuto)
-* `ui.apps/myco-ui.apps-1.0.0-SNAPSHOT.zip` (pacchetto contenuto ignorato)
-* `ui.content/myco-ui.content-1.0.0-SNAPSHOT.zip` (pacchetto contenuto ignorato)
+* `all/myco-all-1.0.0-SNAPSHOT.zip` (pacchetto di contenuti)
+* `ui.apps/myco-ui.apps-1.0.0-SNAPSHOT.zip` (pacchetto di contenuti ignorato)
+* `ui.content/myco-ui.content-1.0.0-SNAPSHOT.zip` (pacchetto di contenuti ignorato)
 
-Se gli unici elementi all’interno di `myco-all-1.0.0-SNAPSHOT.zip` sono i due pacchetti di contenuto ignorato, allora i due pacchetti incorporati verranno analizzati al posto del pacchetto di contenuto “all”.
+Se gli unici elementi all’interno di `myco-all-1.0.0-SNAPSHOT.zip` sono i due pacchetti di contenuti ignorati, al posto del pacchetto “all” verranno analizzati i due pacchetti incorporati.
 
-Per i progetti che producono decine di pacchetti incorporati, è stato dimostrato che questa ottimizzazione risparmia fino a 10 minuti per esecuzione della pipeline.
+Per i progetti che producono decine di pacchetti incorporati, è comprovato che questa ottimizzazione consente di risparmiare fino a 10 minuti per ogni esecuzione della pipeline.
 
-Un caso speciale può verificarsi quando il pacchetto di contenuti “all” contiene una combinazione di pacchetti di contenuti ignorati e bundle OSGi. Ad esempio, se `myco-all-1.0.0-SNAPSHOT.zip` contiene i due pacchetti incorporati precedentemente menzionati e uno o più bundle OSGi, allora viene creato un nuovo pacchetto di contenuto minimo con solo i bundle OSGi. Questo pacchetto viene sempre denominato `cloudmanager-synthetic-jar-package` e i bundle contenuti sono inseriti in `/apps/cloudmanager-synthetic-installer/install`.
+Un caso speciale può verificarsi quando il pacchetto di contenuti “all” include una combinazione di pacchetti di contenuti e bundle OSGi ignorati. Ad esempio, se `myco-all-1.0.0-SNAPSHOT.zip` conteneva i due pacchetti incorporati precedentemente menzionati oltre a uno o più bundle OSGi, viene creato un nuovo pacchetto di contenuti minimo con i soli bundle OSGi. Questo pacchetto viene sempre denominato `cloudmanager-synthetic-jar-package` e i bundle contenuti vengono inseriti in `/apps/cloudmanager-synthetic-installer/install`.
 
 >[!NOTE]
 >
 >* Questa ottimizzazione non influisce sui pacchetti distribuiti in AEM.
->* Poiché la corrispondenza tra i pacchetti di contenuto incorporati e i pacchetti di contenuto ignorati si basa sui nomi di file, questa ottimizzazione non può essere eseguita se più pacchetti di contenuto ignorati hanno esattamente lo stesso nome di file oppure se il nome di file viene modificato durante l’incorporazione.
+>* Poiché la corrispondenza tra i pacchetti di contenuti incorporati e i pacchetti di contenuti ignorati si basa sui nomi file, questa ottimizzazione non può essere eseguita se più pacchetti di contenuti ignorati presentano lo stesso nome file o se questo viene modificato durante l’incorporamento.
 
