@@ -4,7 +4,7 @@ description: Scopri la sicurezza e la privacy del codice e delle risorse degli a
 exl-id: 67df1987-8db7-40bd-9717-1bf194e957f7
 source-git-commit: d7751757c1d3bda3d60406a1d39cb41c61f5c863
 workflow-type: ht
-source-wordcount: '189'
+source-wordcount: '205'
 ht-degree: 100%
 
 ---
@@ -22,7 +22,7 @@ Per informazioni sui possibili ruoli che è possibile assegnare nell’Admin Con
 
 ## Isolamento risorse {#resource-isolation}
 
-[!UICONTROL Cloud Manager] i clienti hanno bisogno delle credenziali IMS per autenticarsi in quanto tutte le autorizzazioni associate a [!UICONTROL Cloud Manager] sono collegate alle loro organizzazioni IMS. Durante il processo di onboarding, il team di provisioning assicura che l’isolamento delle risorse sia applicato in [!UICONTROL Cloud Manager].
+I clienti di [!UICONTROL Cloud Manager] hanno bisogno delle credenziali IMS per autenticarsi in quanto tutte le autorizzazioni associate a [!UICONTROL Cloud Manager] sono collegate alle loro organizzazioni IMS. Durante il processo di onboarding, il team di provisioning assicura che l’isolamento delle risorse sia applicato in [!UICONTROL Cloud Manager].
 
 ## Sicurezza dei dati {#data-security}
 
@@ -34,4 +34,4 @@ Ogni cliente ottiene il proprio archivio Git; il codice è sicuro e non condivis
 
 [!UICONTROL Cloud Manager] rispetta i principi sulla privacy definiti da Adobe. Gli sviluppatori inviano il codice in modo sicuro negli archivi Git tramite HTTPS.
 
-L&#39;interfaccia utente di [!UICONTROL Cloud Manager] è basata su servizi conformi a un framework di controllo comune di Adobe. L’interfaccia utente di [!UICONTROL Cloud Manager] utilizza servizi sicuri di diversi provider cloud.
+L’interfaccia utente di [!UICONTROL Cloud Manager] è basata su servizi conformi a un framework di controllo comune di Adobe. L’interfaccia utente di [!UICONTROL Cloud Manager] utilizza servizi sicuri di diversi provider cloud.
