@@ -4,7 +4,7 @@ description: Come tutti gli strumenti potenti, Cloud Manager include molti conce
 exl-id: 86dfc976-f3da-479a-9faa-08f40ca909e0
 source-git-commit: 73e322cf93dc7709b7581860974079c8d94034ba
 workflow-type: ht
-source-wordcount: '417'
+source-wordcount: '419'
 ht-degree: 100%
 
 ---
@@ -58,7 +58,7 @@ Un programma è un set di ambienti che supporta un raggruppamento logico di iniz
 
 ## Soluzione {#solution}
 
-Una soluzione è una delle soluzioni Adobe [!UICONTROL Experience Cloud]. Ad esempio, Adobe Experience Manager, Adobe Target o Adobe Analytics.
+Una soluzione è una delle soluzioni di Adobe [!UICONTROL Experience Cloud]. Ad esempio, Adobe Experience Manager, Adobe Target o Adobe Analytics.
 
 ## Passaggio {#step}
 
