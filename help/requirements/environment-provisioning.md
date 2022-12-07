@@ -4,7 +4,7 @@ description: Scopri come viene eseguito il provisioning degli ambienti come part
 exl-id: eade4255-89b5-4c65-a498-1c6d4e8c73ff
 source-git-commit: d033b7cf53d4d9faf074f1dc09e2958eb91afe3b
 workflow-type: ht
-source-wordcount: '293'
+source-wordcount: '314'
 ht-degree: 100%
 
 ---
@@ -20,7 +20,7 @@ Durante il processo di onboarding, tutti gli ambienti cloud AEM acquistati vengo
 
 ## E-mail di benvenuto {#welcome-email}
 
-Al termine del processo di provisioning dell’ambiente, l’amministratore del cliente designato riceve un messaggio e-mail di benvenuto con la conferma di accesso ad Adobe [!UICONTROL Experience Cloud]. L’e-mail di benvenuto contiene informazioni dettagliate su come iniziare a utilizzare i servizi [!UICONTROL Experience Cloud], gli ambienti cloud [!UICONTROL AEM Managed Services], nonché il portale self-service di [!UICONTROL Cloud Manager]. Inoltre, l’e-mail contiene informazioni importanti come le informazioni di contatto del Customer Success Engineer (CSE), dove sono disponibili risorse di supporto, forum, domande frequenti e molto altro. Nell’elenco delle risorse fornite nell’e-mail, riceverai anche informazioni su come accedere a [!UICONTROL Cloud Manager] per gli ambienti cloud AEM.
+Al termine del processo di provisioning dell’ambiente, l’amministratore del cliente designato riceve un messaggio e-mail di benvenuto con la conferma di accesso ad Adobe [!UICONTROL Experience Cloud]. L’e-mail di benvenuto contiene informazioni dettagliate su come iniziare a utilizzare i servizi di [!UICONTROL Experience Cloud], gli ambienti cloud di [!UICONTROL AEM Managed Services], nonché il portale self-service di [!UICONTROL Cloud Manager]. Inoltre, l’e-mail contiene informazioni importanti come le informazioni di contatto del Customer Success Engineer (CSE), dove sono disponibili risorse di supporto, forum, domande frequenti e molto altro. Nell’elenco delle risorse fornite nell’e-mail, riceverai anche informazioni su come accedere a [!UICONTROL Cloud Manager] per gli ambienti cloud AEM.
 
 ## Passaggi successivi {#next-steps}
 
