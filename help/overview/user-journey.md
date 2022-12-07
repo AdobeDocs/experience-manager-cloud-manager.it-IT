@@ -4,7 +4,7 @@ description: Questo documento illustra i diversi scenari di onboarding e spiega 
 exl-id: deb3429c-dfcf-4e52-9aba-d9368aa240e6
 source-git-commit: b0dbb602253939464ff034941ffbad84b7df77df
 workflow-type: ht
-source-wordcount: '504'
+source-wordcount: '546'
 ht-degree: 100%
 
 ---
@@ -36,13 +36,13 @@ Come parte del processo di onboarding, riceverai un’e-mail di benvenuto che in
 
 * L’URL di accesso [!UICONTROL Cloud Manager]
 * Le istruzioni per l’accesso a [!UICONTROL Experience Cloud]
-* Le istruzioni per utilizzare l’Admin Console per la gestione degli utenti e delle relative autorizzazioni in modo che possano accedere [!UICONTROL Cloud Manager] se necessario.
+* Le istruzioni per utilizzare l’Admin Console per la gestione degli utenti e delle relative autorizzazioni in modo che possano accedere a [!UICONTROL Cloud Manager] se necessario.
 
 ### Cliente esistente di Adobe Managed Services {#existing-customer}
 
 In qualità di cliente AMS esistente, dovrai prima aggiornare gli ambienti di produzione e non di produzione esistenti a AEM 6.4 o versione superiore.
 
-Durante l’aggiornamento, potrai iniziare a utilizzare Cloud Manager e riceverai l’URL per accedervi [!UICONTROL Cloud Manager]. Inoltre, dovrai iniziare a utilizzare l’Admin Console per gestire gli utenti che devono accedere a [!UICONTROL Cloud Manager] insieme alle relative autorizzazioni.
+Durante l’aggiornamento, potrai iniziare a utilizzare [!UICONTROL Cloud Manager] e riceverai l’URL per accedervi. Inoltre, dovrai iniziare a utilizzare l’Admin Console per gestire gli utenti che devono accedere a [!UICONTROL Cloud Manager] insieme alle relative autorizzazioni.
 
 Anche un progetto AEM esistente dovrà essere conforme alle best practice consigliate, poiché inizierai a utilizzare [!UICONTROL Cloud Manager] per la distribuzione di nuove modifiche al codice negli ambienti AEM.
 
@@ -52,7 +52,7 @@ Per ulteriori informazioni sui vantaggi dell’aggiornamento a AEM 6.5, consulta
 
 Effettuerai l’accesso a [!UICONTROL Cloud Manager] e agli ambienti AEM semplicemente registrandoti nella pagina di destinazione di [!UICONTROL Experience Cloud] utilizzando le credenziali di Adobe Identity Management e selezionando AEM dall’interfaccia del selettore della soluzione.
 
-Dopo esserti registrato in [!UICONTROL Cloud Manager] per la prima volta, potrai accedere agli ambienti di AEM direttamente dall&#39; interfaccia utente di [!UICONTROL Cloud Manager]. A questo punto, sei pronto per esplorare tutte le opportunità di [!UICONTROL Cloud Manager] e preparare il tuo primo ramo di codice da distribuire negli ambienti di staging e produzione.
+Dopo esserti registrato in [!UICONTROL Cloud Manager] per la prima volta, potrai accedere agli ambienti di AEM direttamente dall’interfaccia utente di [!UICONTROL Cloud Manager]. A questo punto, sei pronto per esplorare tutte le opportunità di [!UICONTROL Cloud Manager] e preparare il tuo primo ramo di codice da distribuire negli ambienti di staging e produzione.
 
 Per iniziare a utilizzare [!UICONTROL Cloud Manager], consulta il documento [Primo accesso](/help/getting-started/first-time-login.md).
 
@@ -60,7 +60,7 @@ Per ulteriori informazioni su AEM, consulta il documento [Distribuzione e manute
 
 ## Guida introduttiva a [!UICONTROL Cloud Manager] {#getting-started-with-cloud-manager}
 
-Dopo aver effettuato l’accesso a [!UICONTROL Cloud Manager] puoi iniziare a utilizzare il progetto AEM:
+Dopo aver effettuato l’accesso a [!UICONTROL Cloud Manager] puoi iniziare con il progetto AEM:
 
 1. Configurando l’ambiente dell&#39;archivio del codice.
 1. Configurando il team e i ruoli.
