@@ -4,7 +4,7 @@ description: Scopri le autorizzazioni preconfigurate basate sui ruoli di Cloud M
 exl-id: b66533fb-db93-40e8-919d-581261fdbf24
 source-git-commit: 522e5fbc650a8159602eb1aeaf42d64f4e23e8b4
 workflow-type: ht
-source-wordcount: '539'
+source-wordcount: '565'
 ht-degree: 100%
 
 ---
@@ -22,13 +22,13 @@ Per ulteriori informazioni su come configurare i ruoli, consulta il documento [C
 
 In questa tabella sono elencati i ruoli che è possibile assegnare nell’Admin Console.
 
-| [!UICONTROL Cloud Manager] Ruolo | Descrizione |
+| Ruolo di [!UICONTROL Cloud Manager] | Descrizione |
 |---|---|
-| Proprietario business | Questo è l’utente principale che completa la configurazione iniziale di [!UICONTROL Cloud Manager] ed è responsabile della definizione dei KPI, dell’approvazione delle implementazioni di produzione e della sostituzione di errori importanti a 3 livelli quando necessario. |
-| Responsabile del programma | Questo utente utilizza [!UICONTROL Cloud Manager] per eseguire la configurazione del team, esaminare lo stato, visualizzare i KPI e, se necessario, approvare importanti errori a 3 livelli. |
-| Responsabile della distribuzione | Questo utente gestisce le operazioni di distribuzione utilizzando [!UICONTROL Cloud Manager] per eseguire le distribuzioni dello staging e della produzione, può approvare importanti errori a 3 livelli quando necessario e ha accesso all’archivio Git. |
+| Proprietario business | Questo è l’utente principale che completa la configurazione iniziale di [!UICONTROL Cloud Manager] ed è responsabile della definizione dei KPI, dell’approvazione delle implementazioni di produzione e della sostituzione di errori importanti di terzo livello, quando necessario. |
+| Responsabile del programma | Questo utente utilizza [!UICONTROL Cloud Manager] per eseguire la configurazione del team, esaminare lo stato, visualizzare i KPI e, quando necessario, approvare errori importanti di terzo livello. |
+| Responsabile della distribuzione | Questo utente gestisce le operazioni di distribuzione utilizzando [!UICONTROL Cloud Manager] per eseguire le distribuzioni dello staging e della produzione, può approvare errori importanti di terzo livello, quando necessario, e ha accesso all’archivio Git. |
 | Sviluppatore | Questo utente sviluppa ed esegue il test del codice personalizzato dell’applicazione, utilizza principalmente [!UICONTROL Cloud Manager] per visualizzare lo stato di distribuzione e ha l’accesso ai commit dell’archivio Git. |
-| Customer Success Engineer (CSE) | Questo utente in genere supporta il successo dei clienti per i clienti AMS e interagisce con [!UICONTROL Cloud Manager] allo scopo di eseguire implementazioni che richiedono la supervisione del Customer Success Engineer (CSE). |
+| Customer Success Engineer (CSE) | Questo utente in genere supporta il successo dei clienti per i clienti AMS e interagisce con [!UICONTROL Cloud Manager] al fine di eseguire implementazioni che richiedono la supervisione del Customer Success Engineer (CSE). |
 | Autore del contenuto | Questo utente generalmente non interagisce con [!UICONTROL Cloud Manager], ma può utilizzare il selettore di programma di [!UICONTROL Cloud Manager] (arrivando da [!UICONTROL Experience Cloud]) per accedere ad Adobe Experience Manager (AEM). |
 
 ## Autorizzazioni utente {#user-permissions}
@@ -48,7 +48,7 @@ A ciascuno dei ruoli sono associate autorizzazioni preconfigurate specifiche. In
 | Approvare l’esecuzione della distribuzione alla produzione | Fornire l’approvazione Go-Live | x | x | x |  |  |
 | Esecuzione della pianificazione della distribuzione alla produzione | Pianificazione della distribuzione di produzione | x | x | x |  | x |
 | Esecuzione della distribuzione alla produzione | Distribuire l’applicazione in produzione quando viene messa in pausa per la supervisione del CSE |  |  |  |  | x |
-| Esecuzione Annulla | Annullare esecuzione corrente |  |  | x |  |  |
+| Annullamento dell’esecuzione | Annullamento dell’esecuzione corrente |  |  | x |  |  |
 | Esecuzione sostituzione errori gate di qualità | Approvare importanti errori gate di qualità | x | x | x |  |  |
 | Creare pipeline | Configurare/modificare la pipeline |  | x |  |  |  |
 | Lettura pipeline | Consultare dettagli della pipeline | x | x | x | x | x |
@@ -57,6 +57,6 @@ A ciascuno dei ruoli sono associate autorizzazioni preconfigurate specifiche. In
 | Distribuzione gestita della pipeline modificata | Consente la modifica dell’opzione di supervisione del CSE |  | x |  |  |  |
 | Elimina pipeline | Consente l’eliminazione della pipeline |  | x |  |  |  |
 | Leggi Passaggio | Consultare i risultati delle metriche di qualità del passaggio | x | x | x | x | x |
-| Generare token di accesso personale | Accesso a Git |  | x |  | x |  |
+| Generazione del token di accesso personale | Accesso a Git |  | x |  | x |  |
 
 Per ulteriori informazioni su come configurare gli utenti, consulta il documento [Configurazione di utenti e ruoli.](/help/requirements/users-and-roles.md)
