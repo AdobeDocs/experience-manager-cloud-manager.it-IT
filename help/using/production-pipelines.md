@@ -3,9 +3,9 @@ title: Configurazione delle pipeline di produzione
 description: Scopri come utilizzare Cloud Manager per creare e configurare pipeline di produzione per distribuire il codice.
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
 source-git-commit: 39b38da17ed1cadf4f2e9633a9e76b537325316f
-workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '1302'
+ht-degree: 100%
 
 ---
 
@@ -94,8 +94,8 @@ Una volta utilizzata l’interfaccia utente di [!UICONTROL Cloud Manager] per co
             1. Nel **PERCORSO** fornisci un percorso di contenuto.
             1. In **TIPO**, seleziona l’azione da intraprendere su quel percorso.
 
-               * **Flush** - Esegui un&#39;eliminazione della cache.
-               * **Annulla validità** - Esegui un’invalidazione della cache, simile a quando il contenuto viene attivato da un’istanza di authoring a un’istanza di pubblicazione.
+               * **Scaricamento**: esegui un’eliminazione della cache.
+               * **Invalida**: esegui un’invalidazione della cache, simile a quando il contenuto viene attivato da un’istanza di authoring a un’istanza di pubblicazione.
             1. Fai clic su **Aggiungi percorso** per aggiungere il percorso specificato. Puoi aggiungere fino a 100 percorsi per ambiente.
 
          ![Configurazione del Dispatcher](/help/assets/configure-pipelines/dispatcher-stage.png)
