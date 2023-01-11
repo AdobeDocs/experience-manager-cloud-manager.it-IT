@@ -2,9 +2,9 @@
 title: Ambiente di build
 description: Scopri l’ambiente di build specializzato che Cloud Manager usa per creare e testare il codice.
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: 60a6fd062a3878230dafdc34d9ce289ade361120
+source-git-commit: 42cafc03a607ace183d58adbe1c397c1a6c5c22f
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1152'
 ht-degree: 91%
 
 ---
@@ -138,7 +138,7 @@ Negli ambienti di authoring, anteprima e pubblicazione è possibile utilizzare s
 
 #### Dispatcher {#dispatcher}
 
-Solo le variabili di ambiente normali possono essere utilizzate sul dispatcher. I segreti non possono essere utilizzati.
+È possibile utilizzare solo le normali variabili di ambiente con [il dispatcher.](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=it) I segreti non possono essere utilizzati.
 
 Tuttavia, le variabili di ambiente non possono essere utilizzate in `IfDefine` direttive.
 
@@ -148,7 +148,7 @@ Tuttavia, le variabili di ambiente non possono essere utilizzate in `IfDefine` d
 
 #### Configurazioni OSGi {#osgi}
 
-Le normali variabili di ambiente e i segreti possono essere utilizzati nelle configurazioni OSGi.
+È possibile utilizzare sia le normali variabili di ambiente che i segreti in [Configurazioni OSGi.](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-osgi.html?lang=it)
 
 ### Variabili di pipeline {#pipeline-variables}
 
