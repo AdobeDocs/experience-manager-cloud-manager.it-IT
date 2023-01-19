@@ -1,19 +1,19 @@
 ---
-title: Note sulla versione 2022.12.0
-description: Queste sono le note sulla versione 2022.12.0 di Cloud Manager.
+title: Note sulla versione 2023.1.0
+description: Queste sono le note sulla versione 2023.1.0 di Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 1fe5fb860da07105ac7e8ce21fce683b238637c1
-workflow-type: ht
-source-wordcount: '124'
-ht-degree: 100%
+source-git-commit: 3e4937fc262016cef5c5c692c06244f411b28c0f
+workflow-type: tm+mt
+source-wordcount: '125'
+ht-degree: 61%
 
 ---
 
 
-# Note sulla versione 2022.12.0 di Cloud Manager {#release-notes}
+# Note sulla versione 2023.1.0 di Cloud Manager {#release-notes}
 
-In questa pagina sono documentate le note sulla versione 2022.12.0 di [!UICONTROL Cloud Manager].
+In questa pagina sono documentate le note sulla versione 2023.1.0 di [!UICONTROL Cloud Manager].
 
 >[!NOTE]
 >
@@ -21,10 +21,12 @@ In questa pagina sono documentate le note sulla versione 2022.12.0 di [!UICONTRO
 
 ## Data di pubblicazione {#release-date}
 
-La data di pubblicazione della versione 2022.12.0 di [!UICONTROL Cloud Manager] è il 29 novembre 2022. La prossima versione è pianificata per il 19 gennaio 2023.
+La data di rilascio per [!UICONTROL Cloud Manager] la versione 2023.1.0 è il 19 gennaio 2023. La prossima versione è prevista per il 16 febbraio 2023.
 
 ## Novità {#what-is-new}
 
-* È ora disponibile la scalabilità automatica per più aree geografiche. Possono essere applicate determinate restrizioni.
-   * Questa modifica verrà implementata in modo graduale nelle quattro-sei settimane successive al rilascio della versione 2022.12.0.
-* Sono stati apportati miglioramenti alla disponibilità e all’affidabilità di [pipeline di Cloud Manager](/help/overview/ci-cd-pipelines.md).
+* Sono stati apportati miglioramenti all’usabilità aggiornando gli stili del cursore che distinguono tra il punto in cui gli utenti possono intervenire e il puntatore predefinito.
+
+## Correzioni di bug {#bug-fixes}
+
+* Cloud Manager impedirà l’avvio simultaneo di due esecuzioni della pipeline in (o quasi), evitando così gli errori della pipeline.
