@@ -5,7 +5,7 @@ exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
 source-git-commit: 42cafc03a607ace183d58adbe1c397c1a6c5c22f
 workflow-type: tm+mt
 source-wordcount: '1152'
-ht-degree: 91%
+ht-degree: 98%
 
 ---
 
@@ -128,11 +128,11 @@ Per supportare questa funzione, Cloud Manager aggiunge al contenitore di creazio
 | `CM_PROGRAM_NAME` | Il nome del programma |
 | `ARTIFACTS_VERSION` | Per una pipeline di staging o produzione, la versione sintetica generata da Cloud Manager |
 
-### Disponibilità variabile ambiente standard {#availability}
+### Disponibilità di variabili di ambiente standard {#availability}
 
 Le variabili di ambiente standard possono essere utilizzate in diverse posizioni.
 
-#### Creazione, anteprima e pubblicazione {#author-preview-publish}
+#### Authoring, Anteprima e Pubblicazione {#author-preview-publish}
 
 Negli ambienti di authoring, anteprima e pubblicazione è possibile utilizzare sia le normali variabili di ambiente che i segreti.
 
@@ -140,11 +140,11 @@ Negli ambienti di authoring, anteprima e pubblicazione è possibile utilizzare s
 
 È possibile utilizzare solo le normali variabili di ambiente con [il dispatcher.](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=it) I segreti non possono essere utilizzati.
 
-Tuttavia, le variabili di ambiente non possono essere utilizzate in `IfDefine` direttive.
+Tuttavia, le variabili di ambiente non possono essere utilizzate nelle direttive `IfDefine`.
 
 >[!TIP]
 >
->È necessario convalidare l’utilizzo di variabili di ambiente con [dispatcher locale](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html) prima della distribuzione.
+>È necessario convalidare l’utilizzo di variabili di ambiente con il [Dispatcher localmente](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html?lang=it) prima della distribuzione.
 
 #### Configurazioni OSGi {#osgi}
 
