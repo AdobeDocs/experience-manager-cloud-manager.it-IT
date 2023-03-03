@@ -4,7 +4,7 @@ description: Queste sono le note sulla versione 2023.2.0 di Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: ab1747e14be783004544681f9aefefaa0587302e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '82'
 ht-degree: 100%
 
