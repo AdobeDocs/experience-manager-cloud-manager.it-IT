@@ -2,10 +2,10 @@
 title: Regole per la qualità del codice personalizzato
 description: Scopri i dettagli sulle regole della qualità del codice personalizzato eseguite da Cloud Manager come parte del test della qualità del codice, in base alle best practice di AEM Engineering.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: 5fe0d20d9020e6b90353ef5a54e49c93be5c00be
-workflow-type: ht
-source-wordcount: '3575'
-ht-degree: 100%
+source-git-commit: 611cd8f874e8e0d21a475365f4aceb6ae2565644
+workflow-type: tm+mt
+source-wordcount: '3537'
+ht-degree: 86%
 
 ---
 
@@ -16,7 +16,7 @@ Scopri i dettagli sulle regole della qualità del codice personalizzato eseguite
 
 >[!NOTE]
 >
->I campioni di codice qui forniti hanno valore puramente illustrativo. Consulta la [Documentazione sui concetti di SonarQube](https://docs.sonarqube.org/7.4/user-guide/concepts/) per scoprire di più sui concetti e sulle sue regole di qualità.
+>I campioni di codice qui forniti hanno valore puramente illustrativo. Consulta [Documentazione sui concetti di SonarQube](https://docs.sonarqube.org/latest/) per scoprire i concetti e le regole di qualità.
 
 ## Regole di SonarQube {#sonarqube-rules}
 
@@ -104,7 +104,7 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 * **Gravità**: critico
 * **Da**: versione 2018.6.0
 
-Durante l’esecuzione di richieste HTTP dall’interno di un’applicazione AEM, è fondamentale assicurarsi che siano configurati timeout appropriati al fine di evitare un consumo di thread inutile. Sfortunatamente, il comportamento predefinito di entrambi i client HTTP predefiniti di Java, `java.net.HttpUrlConnection` e il client Apache HTTP Components comunemente utilizzato non si interrompe mai, pertanto i timeout devono essere impostati in modo esplicito. Come best practice, questi timeout non devono superare i 60 secondi.
+Durante l’esecuzione delle richieste HTTP da un’applicazione AEM, è fondamentale assicurarsi che siano configurati i timeout appropriati al fine di evitare un inutile consumo di thread. Sfortunatamente, il comportamento predefinito di entrambi i client HTTP predefiniti di Java™ `java.net.HttpUrlConnection`, e il client Apache HTTP Components comunemente utilizzato non si interrompe mai, pertanto i timeout devono essere impostati in modo esplicito. Come best practice, questi timeout non devono superare i 60 secondi.
 
 #### Codice non conforme {#non-compliant-code-2}
 
@@ -179,9 +179,9 @@ public void orDoThis() {
 * **Gravità**: importante
 * **Da**: versione 2018.4.0
 
-Gli oggetti `ResourceResolver` ottenuti da `ResourceResolverFactory` consumano risorse di sistema. Sebbene esistano misure per recuperare tali risorse quando un `ResourceResolver` non è più in uso, è più efficiente chiudere in modo esplicito qualsiasi oggetto `ResourceResolver` aperto chiamando il metodo `close()`.
+Gli oggetti `ResourceResolver` ottenuti da `ResourceResolverFactory` consumano risorse di sistema. Sebbene esistano misure per recuperare tali risorse quando un oggetto `ResourceResolver` non è più in uso, è più efficiente chiudere in modo esplicito qualsiasi oggetto `ResourceResolver` aperto con una chiamata al metodo `close()`.
 
-Un equivoco relativamente comune è che gli oggetti `ResourceResolver` creati utilizzando una sessione JCR esistente non devono essere chiusi in modo esplicito, altrimenti la sessione JCR sottostante verrà chiusa. Non è così. Indipendentemente da come si apre un oggetto `ResourceResolver`, quando non viene più utilizzato deve essere chiuso. Poiché `ResourceResolver` implementa l’interfaccia `Closeable`, è possibile utilizzare anche la sintassi `try-with-resources` anziché richiamare esplicitamente `close()`.
+Un malinteso comune è che `ResourceResolver` Gli oggetti creati utilizzando una sessione JCR esistente non devono essere chiusi in modo esplicito oppure la sessione JCR sottostante deve essere chiusa. Questo non succede. Indipendentemente da come si apre un oggetto `ResourceResolver`, quando non viene più utilizzato deve essere chiuso. Poiché `ResourceResolver` implementa l’interfaccia `Closeable`, è possibile utilizzare anche la sintassi `try-with-resources` anziché richiamare esplicitamente `close()`.
 
 #### Codice non conforme {#non-compliant-code-4}
 
@@ -221,7 +221,7 @@ public void orDoThis(Session session) throws Exception {
 * **Gravità**: importante
 * **Da**: versione 2018.4.0
 
-Come descritto nella [documentazione di Sling](http://sling.apache.org/documentation/the-sling-engine/servlets.html), si sconsiglia di associare i servlet ai percorsi. I servlet associati ai percorsi non possono utilizzare controlli dell’accesso JCR standard e, di conseguenza, richiedono un’ulteriore misura di sicurezza. Anziché utilizzare i servlet associati ai percorsi, si consiglia di creare nodi nell’archivio e di registrare i servlet in base al tipo di risorsa.
+Come descritto nella [documentazione di Sling](https://sling.apache.org/documentation/the-sling-engine/servlets.html), si sconsiglia di associare i servlet ai percorsi. I servlet associati ai percorsi non possono utilizzare controlli dell’accesso JCR standard e, di conseguenza, richiedono un’ulteriore misura di sicurezza. Anziché utilizzare i servlet associati ai percorsi, si consiglia di creare nodi nell’archivio e di registrare i servlet in base al tipo di risorsa.
 
 #### Codice non conforme {#non-compliant-code-5}
 
@@ -283,7 +283,7 @@ public void orDoThis() throws MyCustomException {
 * **Gravità**: minore
 * **Da**: versione 2018.4.0
 
-Un altro modello comune da evitare è registrare un messaggio e generare immediatamente un’eccezione. Questo indica in genere che il messaggio relativo all’eccezione verrà duplicato nei file di registro.
+Un altro modello comune da evitare è registrare un messaggio e generare immediatamente un’eccezione. Questo indica in genere che il messaggio di eccezione viene duplicato nei file di registro.
 
 #### Codice non conforme {#non-compliant-code-7}
 
@@ -308,7 +308,7 @@ public void doThis() throws Exception {
 * **Tipo**: code smell
 * **Gravità**: minore
 
-In generale, per demarcare le azioni importanti si utilizza il livello registro INFO e, per impostazione predefinita, AEM è configurato per registrare al livello INFO o superiore. I metodi GET e HEAD devono essere sempre di sola lettura e non costituiscono pertanto azioni importanti. È probabile che la registrazione a livello INFO in risposta alle richieste GET o HEAD generi notevole confusione nel registro, rendendo così più difficile l’identificazione delle informazioni utili nei file di registro. La registrazione durante la gestione delle richieste di GET o HEAD deve essere a livello di WARN o ERROR quando si è verificato un errore o a livello di DEBUG o di TRACE se è utile fornire informazioni più approfondite sulla risoluzione dei problemi.
+In generale, per demarcare le azioni importanti si utilizza il livello registro INFO e, per impostazione predefinita, AEM è configurato per registrare al livello INFO o superiore. I metodi GET e HEAD devono essere sempre di sola lettura e non costituiscono pertanto azioni importanti. È probabile che la registrazione a livello INFO in risposta alle richieste GET o HEAD generi un notevole disturbo nel registro, rendendo così più difficile identificare le informazioni utili nei file di log. La registrazione durante la gestione delle richieste GET o HEAD deve essere a livello WARN o ERROR quando si è verificato un errore o a livello DEBUG o TRACE se è utilie fornire informazioni più approfondite sulla risoluzione dei problemi.
 
 >[!NOTE]
 >
@@ -337,7 +337,7 @@ public void doGet() throws Exception {
 * **Gravità**: minore
 * **Da**: versione 2018.4.0
 
-Come best practice, i messaggi del registro devono fornire informazioni contestuali sulla posizione in cui è stata generata un’eccezione nell’applicazione. Sebbene il contesto possa essere determinato anche tramite l’uso di tracce dello stack, in generale il messaggio del registro è più facile da leggere e comprendere. Di conseguenza, quando si registra un’eccezione, è sconsigliato utilizzare il messaggio dell’eccezione come messaggio del registro. Il messaggio dell’eccezione deve contenere la descrizione del problema che si è verificato, mentre il messaggio del registro deve fornire a chi legge informazioni sulle operazioni che erano in corso nell’applicazione al momento in cui l’eccezione si è verificata. Il messaggio di eccezione verrà comunque registrato. Specificando il tuo messaggio i registri saranno più facili da comprendere.
+Come best practice, i messaggi del registro devono fornire informazioni contestuali sulla posizione in cui è stata generata un’eccezione nell’applicazione. Mentre il contesto può essere determinato anche tramite l’utilizzo di tracce dello stack, in generale il messaggio di registro sarà più facile da leggere e comprendere. Di conseguenza, quando si registra un’eccezione, non è consigliabile utilizzare il messaggio di eccezione come messaggio di registro. Il messaggio di eccezione contiene la descrizione del problema che si è verificato, mentre il messaggio di registro deve essere utilizzato per comunicare al lettore del registro cosa stava facendo l’applicazione quando si è verificata l’eccezione. Il messaggio di eccezione è comunque registrato. Specificando il messaggio, i registri saranno più facili da comprendere.
 
 #### Codice non conforme {#non-compliant-code-9}
 
@@ -370,7 +370,7 @@ public void doThis() {
 * **Gravità**: minore
 * **Da**: versione 2018.4.0
 
-Come suggerisce il nome, le eccezioni Java dovrebbero sempre essere utilizzate in circostanze eccezionali. Di conseguenza, quando viene rilevata un’eccezione, è importante garantire che i messaggi del registro vengano registrati al livello appropriato: WARN o ERROR. In questo modo i messaggi verranno visualizzati correttamente nei registri.
+Come suggerisce il nome, le eccezioni Java™ dovrebbero sempre essere utilizzate in circostanze eccezionali. Di conseguenza, quando viene rilevata un’eccezione, è importante garantire che i messaggi del registro vengano registrati al livello appropriato: WARN o ERROR. In questo modo i messaggi verranno visualizzati correttamente nei registri.
 
 #### Codice non conforme {#non-compliant-code-10}
 
@@ -403,7 +403,7 @@ public void doThis() {
 * **Gravità**: minore
 * **Da**: versione 2018.4.0
 
-Il contesto è fondamentale per comprendere i messaggi del registro. L’utilizzo di `Exception.printStackTrace()` fa sì che solo l’analisi dello stack venga trasmessa al flusso di errore standard, perdendo così tutto il contesto. Inoltre, in un&#39;applicazione multi-thread come AEM se vengono stampate più eccezioni utilizzando questo metodo in parallelo, le rispettive tracce di stack possono sovrapporsi e creare confusione. Le eccezioni devono essere registrate solo tramite il framework di registrazione.
+Il contesto è fondamentale per comprendere i messaggi del registro. L’utilizzo di `Exception.printStackTrace()` fa sì che solo la traccia dello stack venga trasmessa al flusso di errore standard, perdendo così tutto il contesto. Inoltre, in un&#39;applicazione multi-thread come AEM se vengono stampate più eccezioni utilizzando questo metodo in parallelo, le rispettive tracce di stack possono sovrapporsi e creare confusione. Le eccezioni devono essere registrate solo tramite il framework di registrazione.
 
 #### Codice non conforme {#non-compliant-code-11}
 
@@ -436,7 +436,7 @@ public void doThis() {
 * **Gravità**: minore
 * **Da**: versione 2018.4.0
 
-La registrazione ad AEM deve sempre essere effettuata tramite il framework di registrazione SLF4J. L’output diretto nei flussi di output standard o errore standard perde le informazioni strutturali e contestuali fornite dal framework di registrazione e può, in alcuni casi, causare problemi di prestazioni.
+La registrazione ad AEM deve sempre essere effettuata tramite il framework di registrazione SLF4J. L’output diretto nei flussi di output standard o di errore standard causa la perdita delle informazioni strutturali e contestuali fornite dal framework di registrazione e può, a volte, causare problemi di prestazioni.
 
 #### Codice non conforme {#non-compliant-code-12}
 
@@ -494,9 +494,9 @@ public void doThis(Resource resource) {
 * **Gravità**: minore
 * **Da**: versione 2020.5.0
 
-Il modulo di pianificazione Sling non deve essere utilizzato per attività che richiedono la garanzia di esecuzione. I processi pianificati Sling garantiscono l’esecuzione e sono più adatti sia per gli ambienti cluster che per quelli non cluster.
+Non utilizzare lo Sling Scheduler per le attività che richiedono un’esecuzione garantita. I processi pianificati Sling garantiscono l’esecuzione e sono più adatti per gli ambienti cluster che per quelli non cluster.
 
-Fai riferimento a [Documentazione sull’evento Sling di Apache e sulla gestione dei processi](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html) per ulteriori informazioni sulla gestione dei processi Sling in ambienti cluster.
+Fai riferimento [Documentazione sull’evento Sling di Apache e sulla gestione dei processi](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html) per ulteriori informazioni sulla gestione dei processi Sling in ambienti cluster.
 
 ### Le API obsolete di AEM non devono essere utilizzate {#sonarqube-aem-deprecated}
 
@@ -505,11 +505,11 @@ Fai riferimento a [Documentazione sull’evento Sling di Apache e sulla gestione
 * **Gravità**: minore
 * **Da**: versione 2020.5.0
 
-La superficie API di AEM è soggetta a revisione costante per individuare le API di cui si sconsiglia l’utilizzo e che sono quindi considerate obsolete.
+La superficie dell’API AEM è soggetta a revisione costante per identificare le API di cui si sconsiglia l’utilizzo e pertanto considerate obsolete.
 
-In molti casi, queste API sono indicate come obsolete mediante l’annotazione Java standard *@Deprecated* e quindi individuate da `squid:CallToDeprecatedMethod`.
+Spesso queste API vengono indicate come obsolete con il Java standard™ *@Deprecated* annotazione e, in quanto tale, identificata da `squid:CallToDeprecatedMethod`.
 
-Tuttavia, in alcuni casi un’API è obsoleta nel contesto di AEM, ma potrebbe non esserlo in altri contesti. Questa regola identifica questa seconda classe.
+Tuttavia, in alcuni casi un’API è obsoleta nel contesto dell’AEM, ma potrebbe non esserlo in altri contesti. Questa regola identifica questa seconda classe.
 
 ## Regole per i contenuti OakPAL {#oakpal-rules}
 
@@ -526,11 +526,11 @@ Nella sezione seguente sono descritti i controlli OakPAL eseguiti da Cloud Manag
 * **Gravità**: critico
 * **Da**: versione 2018.7.0
 
-L’API AEM contiene interfacce e classi Java che devono essere utilizzate solo con il codice personalizzato, ma che non devono essere implementate. Ad esempio, l’interfaccia `com.day.cq.wcm.api.Page` è progettata per essere implementata solo da AEM.
+L’API AEM contiene interfacce e classi Java™ che devono essere utilizzate solo con codice personalizzato, ma che non devono essere implementate. Ad esempio, l’interfaccia `com.day.cq.wcm.api.Page` è implementato solo dall’AEM.
 
-Quando a queste interfacce vengono aggiunti nuovi metodi, essi non influiscono sul codice esistente che utilizza tali interfacce e, di conseguenza, l’aggiunta di nuovi metodi ad esse è considerata retrocompatibile. Tuttavia, se il codice personalizzato implementa una di queste interfacce, crea al cliente un rischio di compatibilità con le versioni precedenti.
+Quando a queste interfacce vengono aggiunti nuovi metodi, essi non influiscono sul codice esistente che utilizza tali interfacce e, di conseguenza, l’aggiunta di nuovi metodi ad esse è considerata retrocompatibile. Tuttavia, se il codice personalizzato implementa una di queste interfacce, genera per il cliente un rischio di retrocompatibilità con le versioni precedenti.
 
-Le interfacce e le classi che devono essere implementate solo da AEM sono annotate con `org.osgi.annotation.versioning.ProviderType` o, in alcuni casi, con l’annotazione precedente simile `aQute.bnd.annotation.ProviderType`. Questa regola identifica i casi in cui tale interfaccia viene implementata o una classe viene estesa da codice personalizzato.
+Le interfacce e le classi che devono essere implementate solo dall’AEM sono annotate con `org.osgi.annotation.versioning.ProviderType` oppure, a volte, un’annotazione legacy simile `aQute.bnd.annotation.ProviderType`. Questa regola identifica i casi in cui tale interfaccia viene implementata o in cui una classe viene estesa dal codice personalizzato.
 
 #### Codice non conforme {#non-compliant-code-3}
 
@@ -549,7 +549,7 @@ public class DontDoThis implements Page {
 * **Gravità**: bloccante
 * **Da**: versione 2019.6.0
 
-È una best practice consolidata da tempo che la struttura del contenuto `/libs` nell’archivio dei contenuti AEM debba essere considerata di sola lettura dai clienti. Modificare nodi e proprietà in `/libs` crea rischi significativi per gli aggiornamenti principali e secondari. Le modifiche a `/libs` devono essere effettuate esclusivamente da Adobe attraverso canali ufficiali.
+È una best practice consolidata da tempo che la struttura del contenuto `/libs` nell’archivio dei contenuti AEM debba essere considerata di sola lettura dai clienti. Modificare nodi e proprietà in `/libs` crea rischi significativi per gli aggiornamenti principali e secondari. Modifiche a `/libs` viene prodotto solo da Adobi attraverso canali ufficiali.
 
 ### I pacchetti non devono contenere duplicati delle configurazioni OSGi {#oakpal-package-osgi}
 
@@ -558,7 +558,7 @@ public class DontDoThis implements Page {
 * **Gravità**: importante
 * **Da**: versione 2019.6.0
 
-Un problema comune che si verifica in progetti complessi è che lo stesso componente OSGi è configurato più volte. Questo crea ambiguità riguardo alla configurazione da utilizzare. Questa regola è “sensibile alla modalità di esecuzione”; in quanto individua solo i problemi in cui lo stesso componente è configurato più volte nella stessa modalità di esecuzione o nella stessa combinazione di modalità di esecuzione.
+Un problema comune che si verifica in progetti complessi è che lo stesso componente OSGi viene configurato più volte. Questo crea un’ambiguità sulla configurazione da utilizzare. Questa regola è &quot;sensibile alla modalità di esecuzione&quot; in quanto identifica solo i problemi in cui lo stesso componente è configurato più volte nella stessa modalità di esecuzione o nella stessa combinazione di modalità di esecuzione.
 
 #### Codice non conforme {#non-compliant-code-osgi}
 
@@ -590,7 +590,7 @@ Un problema comune che si verifica in progetti complessi è che lo stesso compon
 
 Per motivi di sicurezza, i percorsi contenenti `/config/` e `/install/` sono leggibili solo dagli utenti amministratori in AEM e devono essere utilizzati solo per la configurazione OSGi e i bundle OSGi. Posizionare altri tipi di contenuto in percorsi che contengono questi segmenti determina un comportamento dell’applicazione che comporta un cambio accidentale tra utenti amministratori e non amministratori.
 
-Un problema comune è l’utilizzo di nodi denominati `config` nelle finestre di dialogo dei componenti o quando si specifica la configurazione dell’editor Rich Text per la modifica in linea. Per risolvere questo problema, il nome del nodo problematico deve essere modificato per essere conforme. Per la configurazione dell’editor Rich Text, specifica la nuova posizione con la proprietà `configPath` nel nodo `cq:inplaceEditing`.
+Un problema comune è l’utilizzo di nodi denominati `config` nelle finestre di dialogo dei componenti o quando si specifica la configurazione dell’editor Rich Text per la modifica in linea. Per risolvere questo problema, il nodo problematico deve essere rinominato con un nome conforme. Per la configurazione del rich text editor, specifica la nuova posizione con la proprietà `configPath` nel nodo `cq:inplaceEditing`.
 
 #### Codice non conforme {#non-compliant-code-config-install}
 
@@ -627,7 +627,7 @@ Simile alla regola [I pacchetti non devono contenere configurazioni OSGi duplica
 * **Gravità**: minore
 * **Da**: versione 2020.5.0
 
-La configurazione OSGi `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` definisce la modalità di authoring predefinita in AEM. Poiché [l’interfaccia classica è stata rimossa a partire dalla versione 6.4 di AEM,](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/deprecated-removed-features.html?lang=it) ora quando la modalità di authoring predefinita è configurata su Interfaccia classica viene generato un problema.
+La configurazione OSGi `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` definisce la modalità di authoring predefinita in AEM. Perché [l’interfaccia classica è diventata obsoleta a partire dalla versione 6.4 dell’AEM,](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/deprecated-removed-features.html?lang=it) ora viene sollevato un problema quando la modalità di authoring predefinita è configurata sull’interfaccia classica.
 
 ### I componenti con finestre di dialogo devono avere finestre di dialogo dell’interfaccia Touch {#oakpal-components-dialogs}
 
@@ -651,7 +651,7 @@ La documentazione sugli strumenti di modernizzazione AEM fornisce dettagli e str
 * **Gravità**: minore
 * **Da**: versione 2020.5.0
 
-Per la compatibilità con il modello di distribuzione di Cloud Service, i singoli pacchetti di contenuti devono contenere contenuti per aree non modificabili dell’archivio (ovvero `/apps` e `/libs`) o per l’area modificabile (ovvero tutto ciò che non si trova in `/apps` o `/libs`), ma non per entrambi i tipi. Ad esempio, un pacchetto che include `/apps/myco/components/text and /etc/clientlibs/myco` non è compatibile con Cloud Service e causerà la segnalazione di un problema.
+Per la compatibilità con il modello di distribuzione di Cloud Service, i singoli pacchetti di contenuti devono contenere contenuti per aree non modificabili dell’archivio (ovvero `/apps` e `/libs`) o per l’area modificabile (ovvero tutto ciò che non si trova in `/apps` o `/libs`), ma non per entrambi i tipi. Ad esempio, un pacchetto che include sia `/apps/myco/components/text and /etc/clientlibs/myco` non è compatibile con il Cloud Service e causa la segnalazione di un problema.
 
 Per ulteriori dettagli, consulta la [documentazione sulla struttura dei progetti AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-project-content-package-structure.html?lang=it).
 
@@ -719,7 +719,7 @@ Lo strumento di migrazione nell’[archivio GitHub di AEM Assets as a Cloud Serv
 * **Gravità**: minore
 * **Da**: versione 2021.2.0
 
-Anche se l’utilizzo di modelli statici è sempre stato molto comune nei progetti AEM, i modelli modificabili sono altamente consigliati, in quanto offrono la massima flessibilità e supportano funzionalità aggiuntive non presenti nei modelli statici. Per ulteriori informazioni consulta la sezione [Modelli di pagina: documentazione modificabile.](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html?lang=it)
+Anche se l’utilizzo di modelli statici è sempre stato comune nei progetti AEM, i modelli modificabili sono altamente consigliati in quanto offrono la massima flessibilità e supportano funzioni aggiuntive non presenti nei modelli statici. Per ulteriori informazioni consulta la sezione [Modelli di pagina: documentazione modificabile.](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html?lang=it)
 
 La migrazione da modelli statici a modificabili può essere in gran parte automatizzata utilizzando gli [Strumenti di modernizzazione AEM.](https://opensource.adobe.com/aem-modernize-tools/)
 
@@ -734,16 +734,16 @@ I componenti di base precedenti (ad esempio, i componenti in `/libs/foundation`)
 
 Questa conversione può essere facilitata dagli [Strumenti di modernizzazione AEM.](https://opensource.adobe.com/aem-modernize-tools/)
 
-### Utilizzare solo i nomi e l’ordinamento supportati per la modalità di esecuzione {#oakpal-supported-runmodes}
+### Utilizzare solo i nomi e l&#39;ordinamento della modalità di esecuzione supportati {#oakpal-supported-runmodes}
 
 * **Chiave**: SupportedRunmode
 * **Tipo**: code smell
 * **Gravità**: minore
 * **Da**: versione 2021.2.0
 
-AEM Cloud Service applica un criterio di denominazione rigoroso per i nomi in modalità di esecuzione e un ordine rigoroso per tali modalità di esecuzione. L’elenco delle modalità di esecuzione supportate è disponibile nella [Distribuzione alla documentazione di AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=it#runmodes) e qualsiasi deviazione da questo sarà identificata come un problema.
+AEM Cloud Service applica un criterio di denominazione rigoroso per i nomi delle modalità di esecuzione e un ordine rigoroso per tali modalità. L’elenco delle modalità di esecuzione supportate è disponibile nella sezione [Distribuzione alla documentazione as a Cloud Service AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=it#runmodes) e qualsiasi deviazione da questo è identificata come un problema.
 
-### I nodi di definizione dell’indice di ricerca personalizzato devono essere elementi secondari diretti di /oak:index {#oakpal-custom-search}
+### I nodi di definizione dell’indice di ricerca personalizzato devono essere nodi figlio diretti di /oak:index {#oakpal-custom-search}
 
 * **Chiave**: OakIndexLocation
 * **Tipo**: code smell
@@ -768,7 +768,7 @@ AEM Cloud Service richiede che le definizioni di indici di ricerca personalizzat
 * **Gravità**: minore
 * **Da**: versione 2021.2.0
 
-È possibile che si verifichino problemi difficili da risolvere quando si verifica un nodo di definizione dell’indice di ricerca personalizzato con nodi secondari non ordinati. Per evitarli, si consiglia che tutti i nodi discendenti di un nodo `oak:QueryIndexDefinition` siano di tipo `nt:unstructured`.
+Possono verificarsi problemi difficili da risolvere quando un nodo di definizione dell’indice di ricerca personalizzato presenta nodi secondari non ordinati. Per evitarli, si consiglia che tutti i nodi discendenti di un nodo `oak:QueryIndexDefinition` siano di tipo `nt:unstructured`.
 
 ### I nodi di definizione dell’indice di ricerca personalizzato devono contenere un nodo secondario denominato indexRules con elementi secondari {#oakpal-custom-search-index}
 
@@ -847,10 +847,10 @@ Nella sezione seguente sono elencati i controlli DOT (Dispatcher Optimization To
 
 * [Ogni farm del Dispatcher deve avere un nome univoco](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---each-dispatcher-farm-should-have-a-unique-name)
 
-* [La cache farm di pubblicazione del Dispatcher deve avere le regole ignoreUrlParams configurate per creare un elenco Consentiti](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-its-ignoreurlparams-rules-configured-in-an-allow-list-manner)
+* [Inserire nell&#39;elenco Consentiti La cache farm di pubblicazione del Dispatcher deve avere le regole ignoreUrlParams configurate in modo da eseguire un’operazione di](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-its-ignoreurlparams-rules-configured-in-an-allow-list-manner)
 
-* [I filtri farm di pubblicazione del Dispatcher devono specificare i selettori Sling consentiti per creare un elenco Consentiti](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-selectors-in-an-allow-list-manner)
+* [I filtri farm di pubblicazione del Dispatcher devono specificare i selettori Sling consentiti in modo da inserire nell&#39;elenco Consentiti il numero di elementi da pubblicare in modo](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-selectors-in-an-allow-list-manner)
 
-* [I filtri farm di pubblicazione del Dispatcher devono specificare i pattern di suffisso Sling consentiti per creare un elenco Consentiti](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-suffix-patterns-in-an-allow-list-manner)
+* [I filtri farm di pubblicazione del Dispatcher devono specificare i pattern di suffisso Sling consentiti in modo da inserire nell&#39;elenco Consentiti l’accesso a un’istanza di pubblico dominio (Sling) di un’istanza di pubblico accesso ()](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-suffix-patterns-in-an-allow-list-manner)
 
-* [La direttiva “Richiedi tutto concesso” non deve essere utilizzata in una sezione di directory VirtualHost con un percorso di directory radice](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-require-all-granted-directive-should-not-be-used-in-a-virtualhost-directory-section-with-a-root-directory-path)
+* [Non utilizzare la direttiva &quot;Richiedi tutto concesso&quot; in una sezione di directory VirtualHost con un percorso di directory radice](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-require-all-granted-directive-should-not-be-used-in-a-virtualhost-directory-section-with-a-root-directory-path)
