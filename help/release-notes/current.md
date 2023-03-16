@@ -1,19 +1,19 @@
 ---
-title: Note sulla versione 2023.2.0
-description: Queste sono le note sulla versione 2023.2.0 di Cloud Manager.
+title: Note sulla versione 2023.3.0
+description: Queste sono le note sulla versione 2023.3.0 di Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: ab1747e14be783004544681f9aefefaa0587302e
-workflow-type: ht
-source-wordcount: '82'
-ht-degree: 100%
+source-git-commit: 6ff44d7a7ccccc64f937df4dca854788c973bfd0
+workflow-type: tm+mt
+source-wordcount: '102'
+ht-degree: 82%
 
 ---
 
 
-# Note sulla versione 2023.2.0 di Cloud Manager {#release-notes}
+# Note sulla versione 2023.3.0 di Cloud Manager {#release-notes}
 
-In questa pagina sono documentate le note sulla versione 2023.2.0 di [!UICONTROL Cloud Manager].
+In questa pagina sono documentate le note sulla versione 2023.3.0 di [!UICONTROL Cloud Manager].
 
 >[!NOTE]
 >
@@ -21,4 +21,8 @@ In questa pagina sono documentate le note sulla versione 2023.2.0 di [!UICONTROL
 
 ## Data di pubblicazione {#release-date}
 
-La data di pubblicazione della versione 2023.1.0 di [!UICONTROL Cloud Manager] è il 16 febbraio 2023. La prossima versione è prevista per il 16 marzo 2023.
+La data di pubblicazione della versione 2023.3.0 di [!UICONTROL Cloud Manager] è il 16 marzo 2023. La prossima versione è prevista per il 13 aprile 2023.
+
+## Correzioni di bug {#bug-fixes}
+
+* La tessera commerciale sul **Scopri** In Cloud Manager l’utente ora passa alla pagina corretta.
