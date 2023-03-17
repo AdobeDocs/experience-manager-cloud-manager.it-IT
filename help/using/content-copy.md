@@ -1,10 +1,10 @@
 ---
 title: Lo strumento Copia contenuto
 description: Lo strumento Copia contenuto di Cloud Manager consente agli utenti di copiare contenuti modificabili su richiesta dagli ambienti di produzione AEM in ambienti inferiori a scopo di test.
-source-git-commit: 360cbf7e3a21e530a4e43f13f6d414dae4afa104
-workflow-type: ht
-source-wordcount: '1017'
-ht-degree: 100%
+source-git-commit: 7ab5bdea2b388f3e9e199a6d32a1a80977eba35b
+workflow-type: tm+mt
+source-wordcount: '1074'
+ht-degree: 93%
 
 ---
 
@@ -81,6 +81,11 @@ Prima di poter copiare qualsiasi contenuto, è necessario definire un set di con
 
 Il set di contenuti può ora essere utilizzato per copiare il contenuto tra ambienti diversi.
 
+>[!NOTE]
+>
+>Puoi aggiungere fino a 50 percorsi in un set di contenuti.
+>Non ci sono limitazioni per i percorsi esclusi.
+
 ## Modifica di un set di contenuti {#edit-content-set}
 
 Segui passaggi simili a quelli impiegati per la creazione del contenuto. Invece di toccare o fare clic su **Aggiungi set di contenuti**, seleziona un set esistente dalla console e quindi **Modifica** dal menu con i puntini di sospensione.
@@ -99,7 +104,7 @@ Una volta creato un set di contenuti, puoi utilizzarlo per copiare il contenuto.
 
 1. Dalla schermata **Ambienti**, passa alla pagina **Set di contenuti**.
 
-1. Seleziona un set di contenuti dalla console e seleziona **Copia contenuto** dal menu con i puntini di sospensione.
+1. Seleziona un set di contenuti dalla console e seleziona **Copia contenuto** dal menu ellissi.
 
    ![Copia contenuto](/help/assets/copy-content.png)
 
@@ -112,6 +117,8 @@ Una volta creato un set di contenuti, puoi utilizzarlo per copiare il contenuto.
 
 
 1. Nella finestra di dialogo **Copia contenuto**, specifica l’origine e la destinazione dell’azione di copia del contenuto.
+
+1. Puoi scegliere di eliminare o mantenere i percorsi di esclusione nell’ambiente di destinazione. Seleziona casella di controllo `Do not delete exclude paths from destination` se desideri mantenere i percorsi di esclusione specificati nel set di contenuti. Se la casella di controllo è deselezionata, i percorsi di esclusione vengono eliminati nell&#39;ambiente di destinazione.
 
    ![Copia del contenuto](/help/assets/copying-content.png)
 
@@ -150,7 +157,7 @@ Lo strumento Copia contenuto presenta le seguenti limitazioni.
 * Non è possibile copiare il contenuto tra più programmi.
 * Non è possibile eseguire operazioni simultanee di copia del contenuto nello stesso ambiente.
 * Non è possibile eseguire la copia del contenuto se è in esecuzione un’operazione attiva nell’ambiente di destinazione o di origine, ad esempio una pipeline CI/CD.
-* È possibile specificare fino a dieci percorsi per set di contenuti. Non ci sono limitazioni per i percorsi esclusi.
+* È possibile specificare fino a cinquanta percorsi per set di contenuti. Non ci sono limitazioni per i percorsi esclusi.
 * Lo strumento Copia contenuto non deve essere utilizzato come strumento di duplicazione o mirroring perché non può tenere traccia del contenuto spostato o eliminato nell’origine.
 * Lo strumento Copia contenuto non dispone di funzionalità di controllo delle versioni e non è in grado di rilevare automaticamente il contenuto modificato o appena creato nell’ambiente di origine in un set di contenuti dall’ultima operazione di copia di contenuto.
    * Se desideri aggiornare l’ambiente di destinazione con modifiche al contenuto solo a partire dall’ultima operazione di copia del contenuto, devi creare un set di contenuti. In tale set, specifica i percorsi nell’istanza di origine in cui sono state apportate modifiche dall’ultima operazione di copia del contenuto.
