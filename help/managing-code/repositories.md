@@ -2,10 +2,10 @@
 title: Archivi di Cloud Manager
 description: Scopri come accedere, creare e modificare gli archivi per i programmi Cloud Manager.
 exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
-source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
-workflow-type: ht
-source-wordcount: '666'
-ht-degree: 100%
+source-git-commit: 63cbcf8724a840efa67b8fafc4c321e04a5d70d9
+workflow-type: tm+mt
+source-wordcount: '796'
+ht-degree: 80%
 
 ---
 
@@ -81,11 +81,21 @@ Per modificare e visualizzare gli archivi in Cloud Manager, segui i passaggi seg
 
 1. Dalla pagina **Panoramica del programma**, fai clic sulla scheda **Archivi** e passa alla pagina **Archivi**. Qui puoi visualizzare i dettagli degli archivi esistenti.
 
-1. Seleziona l’archivio e fai clic sul pulsante con i puntini di sospensione all’estrema destra della tabella per effettuare sul tuo archivio le operazioni di **Copia URL archivio**, **Visualizza e aggiorna** o **Elimina**.
+1. Seleziona l’archivio e fai clic sul pulsante con i puntini di sospensione all’estrema destra della tabella per **Copia URL archivio** o **Visualizza e aggiorna** l’archivio.
 
 ![Modifica archivio](/help/assets/create-repo3.png)
 
-## Supporto per i sottomoduli Git {#git-submodule-support}
+## Eliminazione degli archivi {#delete-repos}
+
+Per eliminare un repository, segui gli stessi passaggi [per visualizzare e modificare gli archivi](#edit-repos) ma su **Repository** selezione pagina **Elimina** dal pulsante di sospensione dell&#39;archivio da eliminare.
+
+Nota che quando un archivio viene eliminato in Cloud Manager, viene contrassegnato come eliminato e non è più accessibile all’utente, ma viene mantenuto nel sistema a scopo di ripristino.
+
+Se tenti di creare un nuovo archivio dopo aver eliminato un repository con lo stesso nome, riceverai il messaggio di errore &quot;Si è verificato un errore durante il tentativo di creare il repository. Contatta il tuo CSE o l&#39;Assistenza Adobe.&quot;
+
+Se ricevi questo messaggio di errore, contatta il supporto Adobe in modo che possano aiutarti a rinominare l’archivio eliminato o scegliere un nome diverso per il tuo nuovo archivio.
+
+## Supporto per i moduli Git secondari {#git-submodule-support}
 
 È possibile utilizzare i moduli Git secondari per unire il contenuto di più rami tra archivi Git al momento della generazione.
 
