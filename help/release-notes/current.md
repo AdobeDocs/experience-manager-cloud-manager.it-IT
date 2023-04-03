@@ -4,9 +4,9 @@ description: Queste sono le note sulla versione 2023.3.0 di Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: 6ff44d7a7ccccc64f937df4dca854788c973bfd0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '102'
-ht-degree: 82%
+ht-degree: 100%
 
 ---
 
@@ -25,4 +25,4 @@ La data di pubblicazione della versione 2023.3.0 di [!UICONTROL Cloud Manager] �
 
 ## Correzioni di bug {#bug-fixes}
 
-* La tessera commerciale sul **Scopri** In Cloud Manager l’utente ora passa alla pagina corretta.
+* Tramite il riquadro Commerce nella scheda **Scopri** di Cloud Manager, l’utente può passare ora alla pagina corretta.
