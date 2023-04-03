@@ -2,9 +2,9 @@
 title: Lo strumento Copia contenuto
 description: Lo strumento Copia contenuto di Cloud Manager consente agli utenti di copiare contenuti modificabili su richiesta dagli ambienti di produzione AEM in ambienti inferiori a scopo di test.
 source-git-commit: 7ab5bdea2b388f3e9e199a6d32a1a80977eba35b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1074'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -104,7 +104,7 @@ Una volta creato un set di contenuti, puoi utilizzarlo per copiare il contenuto.
 
 1. Dalla schermata **Ambienti**, passa alla pagina **Set di contenuti**.
 
-1. Seleziona un set di contenuti dalla console e seleziona **Copia contenuto** dal menu ellissi.
+1. Seleziona un set di contenuti dalla console e seleziona **Copia contenuto** dal menu con i puntini di sospensione.
 
    ![Copia contenuto](/help/assets/copy-content.png)
 
@@ -118,7 +118,7 @@ Una volta creato un set di contenuti, puoi utilizzarlo per copiare il contenuto.
 
 1. Nella finestra di dialogo **Copia contenuto**, specifica l’origine e la destinazione dell’azione di copia del contenuto.
 
-1. Puoi scegliere di eliminare o mantenere i percorsi di esclusione nell’ambiente di destinazione. Seleziona casella di controllo `Do not delete exclude paths from destination` se desideri mantenere i percorsi di esclusione specificati nel set di contenuti. Se la casella di controllo è deselezionata, i percorsi di esclusione vengono eliminati nell&#39;ambiente di destinazione.
+1. Puoi scegliere di eliminare o mantenere i percorsi di esclusione nell’ambiente di destinazione. Se desideri mantenere i percorsi di esclusione specificati nel set di contenuti, seleziona la casella di controllo `Do not delete exclude paths from destination`. Se la casella di controllo è deselezionata, i percorsi di esclusione vengono eliminati nell’ambiente di destinazione.
 
    ![Copia del contenuto](/help/assets/copying-content.png)
 
