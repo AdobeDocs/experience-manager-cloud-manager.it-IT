@@ -4,8 +4,8 @@ description: Lo strumento Copia contenuto di Cloud Manager consente agli utenti 
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
 source-git-commit: 7ef29a244688de82537da0b879fbf397900427c0
 workflow-type: tm+mt
-source-wordcount: '1083'
-ht-degree: 98%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -33,7 +33,7 @@ Durante la copia del contenuto, l’ambiente sorgente è l’origine di riferime
 
    >[!NOTE]
    >
-   >Sono supportate solo le topologie basate su archivio dati di file.
+   >Sono supportate solo le topologie di archivio dati basate su file.
 
 ## Autorizzazioni {#permissions}
 
