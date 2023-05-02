@@ -3,9 +3,9 @@ title: Primo accesso
 description: Se hai impostato le configurazioni generali e sei pronto a utilizzare Cloud Manager per la prima volta, segui questa pagina.
 exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
 source-git-commit: 413edd167b5eda51c207113aaa00a92c808fb09f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '261'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -20,11 +20,11 @@ Una volta impostata la configurazione generale per [!UICONTROL Cloud Manager], p
 
 ## Accesso per la prima volta {#logging-in-for-the-first-time}
 
-1. Accedi a Cloud Manager all&#39;indirizzo [`my.cloudmanager.adobe.com`](https://my.cloudmanager.adobe.com/) e vedete la vostra lista di programmi.
+1. Accedi a Cloud Manager all’indirizzo [`my.cloudmanager.adobe.com`](https://my.cloudmanager.adobe.com/) per visualizzare l’elenco di programmi.
 
-   ![Console Cloud Manager](/help/assets/cloud-manager-console.png)
+   ![Console di Cloud Manager](/help/assets/cloud-manager-console.png)
 
-1. Sulla scheda del programma, selezionare il pulsante di sospensione e quindi **Panoramica del programma** per passare a Cloud Manager’s **Panoramica** pagina.
+1. Sulla scheda del programma, seleziona il pulsante con puntini di sospensione e quindi **Panoramica programma** per passare alla pagina **Panoramica** di Cloud Manager.
 
    ![Opzione Cloud Manager](/help/assets/program-overview-option.png)
 
