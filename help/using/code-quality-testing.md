@@ -2,9 +2,9 @@
 title: Test della qualità del codice
 description: Scopri come funziona il test di qualità del codice delle pipeline e come può migliorare la qualità delle distribuzioni.
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
+source-git-commit: 8c3b59ab9e00d6ee3b90b9255d025d9e19b3b89a
 workflow-type: ht
-source-wordcount: '2867'
+source-wordcount: '0'
 ht-degree: 100%
 
 ---
@@ -152,7 +152,7 @@ Il numero di utenti o contenitori virtuali generati da Cloud Manager è determin
 Prima dell’inizio del periodo di test di 30 minuti, Cloud Manager eseguirà la ricerca per indicizzazione dell’ambiente di staging utilizzando un set di uno o più URL di seed configurati dal Customer Success Engineer. Partendo da questi URL, l’HTML di ogni pagina viene ispezionato e i collegamenti vengono attraversati in modalità di ampiezza.
 
 * Per impostazione predefinita, questo processo di ricerca per indicizzazione è limitato a un massimo di 5000 pagine.
-* Il numero massimo di pagine da sottoporre a test può essere sovrascritto impostando la [variabile di ambiente](/help/getting-started/build-environment.md#environment-variables) `MAX_PAGES`.
+* Il numero massimo di pagine da sottoporre a test può essere sovrascritto impostando la [variabile di ambiente](/help/getting-started/build-environment.md#environment-variables) `CM_PERF_TEST_CRAWLER_MAX_PAGES`.
    * I valori consentiti sono `2000` - `7000`.
 * Le richieste del crawler hanno un timeout fisso di 10 secondi.
 
