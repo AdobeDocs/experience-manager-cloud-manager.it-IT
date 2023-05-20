@@ -21,8 +21,8 @@ In questa pagina sono documentate le note sulla versione 2023.5.0 di [!UICONTROL
 
 ## Data di pubblicazione {#release-date}
 
-La data di rilascio per [!UICONTROL Cloud Manager] la versione 2023.5.0 è l’11 maggio 2023. La prossima versione è prevista per il 8 giugno 2023.
+La data di rilascio per [!UICONTROL Cloud Manager] la versione 2023.5.0 di è l’11 maggio 2023. La prossima versione è prevista per il 8 giugno 2023.
 
 ## Novità {#what-is-new}
 
-* [Copia dei contenuti self-service](/help/using/content-copy.md) è ora disponibile da un ambiente superiore a un ambiente inferiore tramite l’interfaccia utente di Cloud Manager. Contatta il tuo Customer Success Engineer per i dettagli.
+* [Copia self-service dei contenuti](/help/using/content-copy.md) è ora disponibile da un ambiente superiore a un ambiente inferiore tramite l’interfaccia utente di Cloud Manager. Per ulteriori informazioni, contatta il tuo Customer Success Engineer.

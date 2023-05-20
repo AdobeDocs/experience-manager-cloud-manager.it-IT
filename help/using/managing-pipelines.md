@@ -3,7 +3,7 @@ title: Gestione delle pipeline
 description: Scopri come gestire, modificare, eseguire ed eliminare le pipeline esistenti.
 exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
 source-git-commit: 99325c28c379103db2ba4c19bb6d206849c6e126
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '517'
 ht-degree: 100%
 
@@ -25,7 +25,7 @@ Facendo clic sul pulsante con i puntini di sospensione accanto a ogni pipeline Ã
 * [Eseguire la pipeline](#running-pipelines)
 * [Modificare la pipeline](#editing-pipelines)
 * [Eliminare la pipeline](#deleting-pipelines)
-* [Visualizzare i dettagli](#view-details)
+* [Visualizza dettagli](#view-details)
 
 Nella parte inferiore dellâ€™elenco delle pipeline sono disponibili le opzioni generali.
 

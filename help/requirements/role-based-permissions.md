@@ -3,7 +3,7 @@ title: Autorizzazioni basate sul ruolo
 description: Scopri le autorizzazioni preconfigurate basate sui ruoli di Cloud Manager per gestire l’accesso alle risorse cloud.
 exl-id: b66533fb-db93-40e8-919d-581261fdbf24
 source-git-commit: 522e5fbc650a8159602eb1aeaf42d64f4e23e8b4
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '565'
 ht-degree: 100%
 
@@ -36,7 +36,7 @@ In questa tabella sono elencati i ruoli che è possibile assegnare nell’Admin 
 A ciascuno dei ruoli sono associate autorizzazioni preconfigurate specifiche. In questa tabella sono elencate le autorizzazioni disponibili e i ruoli che possono eseguirle.
 
 
-| Autorizzazione | Descrizione | Proprietario business | Deployment Manager (Responsabile implementazione) | Program Manager (Responsabile programma) | Developer (Sviluppatore) | CSE |
+| Autorizzazione | Descrizione | Proprietario business | Responsabile dell’implementazione | Program Manager (Responsabile programma) | Sviluppatore | CSE |
 |--- |--- |--- |--- |--- |--- |--- |
 | Applicazione di lettura | KPI del programma di lettura | x | x | x | x | x |
 | Applicazione di scrittura | Configurazione o modifica del programma | x |  |  |  |  |

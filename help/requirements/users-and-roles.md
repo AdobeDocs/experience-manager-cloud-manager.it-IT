@@ -3,7 +3,7 @@ title: Aggiungere utenti e ruoli
 description: Scopri come utilizzare l’Admin Console per aggiungere utenti e ruoli e creare profili.
 exl-id: 40086cf0-a1c4-4dde-9dbf-84ea5fa53b84
 source-git-commit: dd96d773ea3e6b9c45886fe41b28d3dd70cb8a61
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '780'
 ht-degree: 100%
 
@@ -51,7 +51,7 @@ L’Admin Console è una posizione centrale per la gestione delle assegnazioni A
 Per fornire le autorizzazioni appropriate basate sul ruolo agli utenti di [!UICONTROL Cloud Manager], un amministratore dell’organizzazione del cliente deve creare nuovi profili di prodotto nel contesto del prodotto [!UICONTROL AEM Managed Services] corrispondenti a ciascuno dei quattro ruoli di [!UICONTROL Cloud Manager]:
 
 * Business Owner (Proprietario)
-* Responsabile della distribuzione
+* Responsabile dell’implementazione
 * Sviluppatore
 * Responsabile del programma
 

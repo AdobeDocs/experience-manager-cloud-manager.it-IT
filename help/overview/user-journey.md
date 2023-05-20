@@ -3,7 +3,7 @@ title: Percorso dell’utente
 description: Questo documento illustra i diversi scenari di onboarding e spiega il tuo percorso per iniziare a utilizzare Cloud Manager.
 exl-id: deb3429c-dfcf-4e52-9aba-d9368aa240e6
 source-git-commit: b0dbb602253939464ff034941ffbad84b7df77df
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 100%
 

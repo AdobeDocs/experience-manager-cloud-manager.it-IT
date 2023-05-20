@@ -3,7 +3,7 @@ title: Utilizzo di più archivi Git
 description: Invece di utilizzare direttamente l’archivio Git di Cloud Manager, scopri come utilizzare il tuo archivio Git o più archivi Git.
 exl-id: 53bf78bb-489a-4a83-8459-c361f532d54a
 source-git-commit: da9dff997a277c207e2c48207217cb30325f3c0d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 100%
 

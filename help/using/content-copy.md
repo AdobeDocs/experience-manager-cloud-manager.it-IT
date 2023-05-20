@@ -158,8 +158,8 @@ Lo strumento Copia contenuto presenta le seguenti limitazioni.
 
 * Non è possibile eseguire una copia del contenuto da un ambiente inferiore a un ambiente superiore.
 * La copia del contenuto può essere eseguita solo all’interno dello stesso livello (ad esempio autore-autore o pubblicazione-pubblicazione).
-* Non è possibile copiare contenuti tra programmi e diverse aree geografiche.
-* La copia del contenuto per la topologia basata su archivio dati cloud può essere eseguita solo quando l’ambiente di origine e di destinazione si trova nello stesso provider cloud.
+* Non è possibile copiare contenuti per più programmi e aree geografiche.
+* È possibile eseguire la copia del contenuto per la topologia basata su archivio dati cloud solo quando l’ambiente di origine e quello di destinazione si trovano sullo stesso provider cloud.
 * Non è possibile eseguire operazioni simultanee di copia del contenuto nello stesso ambiente.
 * Non è possibile eseguire la copia del contenuto se è in esecuzione un’operazione attiva nell’ambiente di destinazione o di origine, ad esempio una pipeline CI/CD.
 * È possibile specificare fino a cinquanta percorsi per set di contenuti. Non ci sono limitazioni per i percorsi esclusi.
