@@ -5,7 +5,7 @@ exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
 source-git-commit: 65cca64cb230686617af7f797fa86b754658e46d
 workflow-type: tm+mt
 source-wordcount: '1123'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -158,8 +158,8 @@ Lo strumento Copia contenuto presenta le seguenti limitazioni.
 
 * Non è possibile eseguire una copia del contenuto da un ambiente inferiore a un ambiente superiore.
 * La copia del contenuto può essere eseguita solo all’interno dello stesso livello (ad esempio autore-autore o pubblicazione-pubblicazione).
-* Non è possibile copiare contenuti per più programmi e aree geografiche.
-* È possibile eseguire la copia del contenuto per la topologia basata su archivio dati cloud solo quando l’ambiente di origine e quello di destinazione si trovano sullo stesso provider cloud.
+* Non è possibile copiare il contenuto tra più programmi o aree geografiche diverse.
+* La copia del contenuto per la topologia di archivio dati basata su cloud può essere eseguita solo quando l’ambiente di origine e di destinazione si trovano nello stesso provider cloud.
 * Non è possibile eseguire operazioni simultanee di copia del contenuto nello stesso ambiente.
 * Non è possibile eseguire la copia del contenuto se è in esecuzione un’operazione attiva nell’ambiente di destinazione o di origine, ad esempio una pipeline CI/CD.
 * È possibile specificare fino a cinquanta percorsi per set di contenuti. Non ci sono limitazioni per i percorsi esclusi.
@@ -167,4 +167,4 @@ Lo strumento Copia contenuto presenta le seguenti limitazioni.
 * Lo strumento Copia contenuto non dispone di funzionalità di controllo delle versioni e non è in grado di rilevare automaticamente il contenuto modificato o appena creato nell’ambiente di origine in un set di contenuti dall’ultima operazione di copia di contenuto.
    * Se desideri aggiornare l’ambiente di destinazione con modifiche al contenuto solo a partire dall’ultima operazione di copia del contenuto, devi creare un set di contenuti. In tale set, specifica i percorsi nell’istanza di origine in cui sono state apportate modifiche dall’ultima operazione di copia del contenuto.
 * Le informazioni sulla versione non sono incluse in una copia del contenuto.
-* Una volta avviata, una copia del contenuto non può essere sospesa o annullata.
+* Una volta avviata, una copia del contenuto non può essere messa in pausa o annullata.
