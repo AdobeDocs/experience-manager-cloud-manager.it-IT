@@ -1,19 +1,19 @@
 ---
-title: Note sulla versione 2023.5.0
-description: Queste sono le note sulla versione 2023.5.0 di Cloud Manager.
+title: Note sulla versione 2023.6.0
+description: Queste sono le note sulla versione 2023.6.0 di Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 5a92ceb98de68025ca917c9b9cb358d54282b235
+source-git-commit: 1bbdc88a2c7a86e258d5fd56fab504aa7232e9fc
 workflow-type: tm+mt
-source-wordcount: '111'
-ht-degree: 100%
+source-wordcount: '99'
+ht-degree: 77%
 
 ---
 
 
-# Note sulla versione 2023.5.0 di Cloud Manager {#release-notes}
+# Note sulla versione 2023.6.0 di Cloud Manager {#release-notes}
 
-In questa pagina sono documentate le note sulla versione 2023.5.0 di [!UICONTROL Cloud Manager].
+In questa pagina sono documentate le note sulla versione 2023.6.0 di [!UICONTROL Cloud Manager].
 
 >[!NOTE]
 >
@@ -21,8 +21,8 @@ In questa pagina sono documentate le note sulla versione 2023.5.0 di [!UICONTROL
 
 ## Data di pubblicazione {#release-date}
 
-La data di pubblicazione della versione 2023.5.0 di [!UICONTROL Cloud Manager] è l’11 maggio 2023. La prossima versione è prevista per l’8 giugno 2023.
+La data di pubblicazione di [!UICONTROL Cloud Manager] versione 2023.6.0 è il 8 giugno 2023. La prossima versione è pianificata per il 6 luglio 2023.
 
 ## Novità {#what-is-new}
 
-* La [Copia del contenuto self-service](/help/using/content-copy.md) è ora disponibile da un ambiente superiore a un ambiente inferiore tramite l’interfaccia utente di Cloud Manager. Per ulteriori dettagli, contatta il tuo Customer Success Engineer.
+* Quando si riprende una [pipeline di produzione,](/help/using/production-pipelines.md) al passaggio di approvazione viene ora visualizzata una finestra di dialogo di conferma.
