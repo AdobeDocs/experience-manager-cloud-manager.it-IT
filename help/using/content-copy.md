@@ -2,10 +2,10 @@
 title: Lo strumento Copia contenuto
 description: Lo strumento Copia contenuto di Cloud Manager consente agli utenti di copiare contenuti modificabili su richiesta dagli ambienti di produzione AEM in ambienti inferiori a scopo di test.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 65cca64cb230686617af7f797fa86b754658e46d
+source-git-commit: 435efe2e6cecae738a62869c55034113c09f70e7
 workflow-type: tm+mt
-source-wordcount: '1123'
-ht-degree: 100%
+source-wordcount: '1090'
+ht-degree: 95%
 
 ---
 
@@ -119,7 +119,6 @@ Una volta creato un set di contenuti, puoi utilizzarlo per copiare il contenuto.
    >* L’utente non dispone delle autorizzazioni appropriate.
    >* L’ambiente dispone di una pipeline in esecuzione o di un’operazione di copia del contenuto in corso.
 
-
 1. Nella finestra di dialogo **Copia contenuto**, specifica l’origine e la destinazione dell’azione di copia del contenuto.
 
 1. Puoi scegliere di eliminare o mantenere i percorsi di esclusione nell’ambiente di destinazione. Se desideri mantenere i percorsi di esclusione specificati nel set di contenuti, seleziona la casella di controllo `Do not delete exclude paths from destination`. Se la casella di controllo è deselezionata, i percorsi di esclusione vengono eliminati nell’ambiente di destinazione.
@@ -164,7 +163,6 @@ Lo strumento Copia contenuto presenta le seguenti limitazioni.
 * Non è possibile eseguire la copia del contenuto se è in esecuzione un’operazione attiva nell’ambiente di destinazione o di origine, ad esempio una pipeline CI/CD.
 * È possibile specificare fino a cinquanta percorsi per set di contenuti. Non ci sono limitazioni per i percorsi esclusi.
 * Lo strumento Copia contenuto non deve essere utilizzato come strumento di duplicazione o mirroring perché non può tenere traccia del contenuto spostato o eliminato nell’origine.
-* Lo strumento Copia contenuto non dispone di funzionalità di controllo delle versioni e non è in grado di rilevare automaticamente il contenuto modificato o appena creato nell’ambiente di origine in un set di contenuti dall’ultima operazione di copia di contenuto.
-   * Se desideri aggiornare l’ambiente di destinazione con modifiche al contenuto solo a partire dall’ultima operazione di copia del contenuto, devi creare un set di contenuti. In tale set, specifica i percorsi nell’istanza di origine in cui sono state apportate modifiche dall’ultima operazione di copia del contenuto.
-* Le informazioni sulla versione non sono incluse in una copia del contenuto.
 * Una volta avviata, una copia del contenuto non può essere messa in pausa o annullata.
+* Lo strumento di copia dei contenuti copia le risorse, insieme ai metadati relativi agli elementi multimediali dinamici, dall’ambiente superiore all’ambiente inferiore selezionato.
+   * Le risorse copiate devono quindi essere rielaborate utilizzando [Flusso di lavoro Elabora risorse DAM](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html) nell’ambiente inferiore per utilizzare la rispettiva configurazione di dynamic media.
