@@ -1,21 +1,22 @@
 ---
 title: Lo strumento Copia contenuto
-description: Lo strumento Copia contenuto di Cloud Manager consente agli utenti di copiare contenuti modificabili su richiesta dagli ambienti di produzione AEM in ambienti inferiori a scopo di test.
+description: Lo strumento di copia dei contenuti di Cloud Manager consente agli utenti di copiare contenuti mutabili on-demand dagli ambienti di produzione AEM 6.x ospitati da AMS agli ambienti inferiori a scopo di test.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 435efe2e6cecae738a62869c55034113c09f70e7
+source-git-commit: 223b547d6bc94137dfbb7d92862a508fa67799d2
 workflow-type: tm+mt
-source-wordcount: '1090'
-ht-degree: 95%
+source-wordcount: '1096'
+ht-degree: 88%
 
 ---
 
+
 # Lo strumento Copia contenuto {#content-copy}
 
-Lo strumento Copia contenuto di Cloud Manager consente agli utenti di copiare contenuti modificabili su richiesta dagli ambienti di produzione AEM in ambienti inferiori a scopo di test.
+Lo strumento di copia dei contenuti di Cloud Manager consente agli utenti di copiare contenuti mutabili on-demand dagli ambienti di produzione AEM 6.x ospitati da AMS agli ambienti inferiori a scopo di test.
 
 ## Introduzione {#introduction}
 
-I dati attuali e reali sono utili a scopo di test, convalida e accettazione da parte degli utenti. Lo strumento Copia contenuto consente di copiare contenuti dall’ambiente di produzione AEM a un ambiente di staging o sviluppo a scopo di test.
+I dati attuali e reali sono utili a scopo di test, convalida e accettazione da parte degli utenti. Lo strumento Content Copy consente di copiare il contenuto dall’ambiente AEM 6.x ospitato da AMS di produzione a un ambiente di staging o sviluppo per tale test.
 
 Il contenuto da copiare è definito da un set di contenuti. Un set di contenuti è costituito da un elenco di percorsi JCR che contengono il contenuto modificabile da copiare da un ambiente sorgente a un ambiente di destinazione all’interno dello stesso programma di Cloud Manager. I percorsi seguenti sono consentiti in un set di contenuti.
 
