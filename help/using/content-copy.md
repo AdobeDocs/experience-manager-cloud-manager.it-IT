@@ -5,7 +5,7 @@ exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
 source-git-commit: 223b547d6bc94137dfbb7d92862a508fa67799d2
 workflow-type: tm+mt
 source-wordcount: '1096'
-ht-degree: 88%
+ht-degree: 92%
 
 ---
 
@@ -165,5 +165,5 @@ Lo strumento Copia contenuto presenta le seguenti limitazioni.
 * È possibile specificare fino a cinquanta percorsi per set di contenuti. Non ci sono limitazioni per i percorsi esclusi.
 * Lo strumento Copia contenuto non deve essere utilizzato come strumento di duplicazione o mirroring perché non può tenere traccia del contenuto spostato o eliminato nell’origine.
 * Una volta avviata, una copia del contenuto non può essere messa in pausa o annullata.
-* Lo strumento di copia dei contenuti copia le risorse, insieme ai metadati relativi agli elementi multimediali dinamici, dall’ambiente superiore all’ambiente inferiore selezionato.
-   * Le risorse copiate devono quindi essere rielaborate utilizzando [Flusso di lavoro Elabora risorse DAM](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html) nell’ambiente inferiore per utilizzare la rispettiva configurazione di dynamic media.
+* Lo strumento Copia contenuto copia le risorse insieme ai metadati relativi agli elementi multimediali dinamici, dall’ambiente superiore all’ambiente inferiore selezionato.
+   * Le risorse copiate devono quindi essere rielaborate utilizzando il [Flusso di lavoro di risorse di processo DAM](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html?lang=it) nell’ambiente inferiore per utilizzare la rispettiva configurazione di elementi multimediali dinamici.
