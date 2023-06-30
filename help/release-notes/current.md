@@ -1,19 +1,19 @@
 ---
-title: Note sulla versione 2023.6.0
-description: Queste sono le note sulla versione 2023.6.0 di Cloud Manager.
+title: Note sulla versione 2023.7.0
+description: Queste sono le note sulla versione 2023.7.0 di Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 1bbdc88a2c7a86e258d5fd56fab504aa7232e9fc
-workflow-type: ht
-source-wordcount: '99'
-ht-degree: 100%
+source-git-commit: 950fef5781c53f9bccf4c33c8b9d958edd5a0327
+workflow-type: tm+mt
+source-wordcount: '123'
+ht-degree: 68%
 
 ---
 
 
-# Note sulla versione 2023.6.0 di Cloud Manager {#release-notes}
+# Note sulla versione 2023.7.0 di Cloud Manager {#release-notes}
 
-In questa pagina sono documentate le note sulla versione 2023.6.0 di [!UICONTROL Cloud Manager].
+In questa pagina sono documentate le note sulla versione 2023.7.0 di [!UICONTROL Cloud Manager].
 
 >[!NOTE]
 >
@@ -21,8 +21,9 @@ In questa pagina sono documentate le note sulla versione 2023.6.0 di [!UICONTROL
 
 ## Data di pubblicazione {#release-date}
 
-La data di pubblicazione di [!UICONTROL Cloud Manager] versione 2023.6.0 è l’8 giugno 2023. La prossima versione è prevista per il 6 luglio 2023.
+La data di pubblicazione di [!UICONTROL Cloud Manager] versione 2023.7.0 è l’29 giugno 2023. La prossima versione è pianificata per l’10 Agosto 2023.
 
-## Novità {#what-is-new}
+## Correzioni di bug {#bug-fixes}
 
-* Quando si riprende una [pipeline di produzione,](/help/using/production-pipelines.md) al passaggio di approvazione viene ora visualizzata una finestra di dialogo di conferma.
+* Le schede nella pagina di destinazione di Cloud Manager ora indicano se [protezione avanzata](/help/getting-started/program-setup.md) è abilitato per i relativi programmi.
+* Quando [modifica di una pipeline di produzione,](/help/using/managing-pipelines.md#editing-pipelines) se l’utente tenta di rimuovere una risorsa da **Test dello staging** , viene visualizzato un errore.
