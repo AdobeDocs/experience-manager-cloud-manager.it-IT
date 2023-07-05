@@ -3,10 +3,10 @@ title: Note sulla versione 2023.7.0
 description: Queste sono le note sulla versione 2023.7.0 di Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 950fef5781c53f9bccf4c33c8b9d958edd5a0327
+source-git-commit: 9ecefd72cb9701026798ba47a743d99375f657c1
 workflow-type: tm+mt
-source-wordcount: '123'
-ht-degree: 68%
+source-wordcount: '106'
+ht-degree: 79%
 
 ---
 
@@ -25,5 +25,4 @@ La data di pubblicazione di [!UICONTROL Cloud Manager] versione 2023.7.0 è l’
 
 ## Correzioni di bug {#bug-fixes}
 
-* Le schede nella pagina di destinazione di Cloud Manager ora indicano se [protezione avanzata](/help/getting-started/program-setup.md) è abilitato per i relativi programmi.
 * Quando [modifica di una pipeline di produzione,](/help/using/managing-pipelines.md#editing-pipelines) se l’utente tenta di rimuovere una risorsa da **Test dello staging** , viene visualizzato un errore.
