@@ -6,7 +6,7 @@ exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: 9ecefd72cb9701026798ba47a743d99375f657c1
 workflow-type: tm+mt
 source-wordcount: '106'
-ht-degree: 79%
+ht-degree: 100%
 
 ---
 
@@ -21,8 +21,8 @@ In questa pagina sono documentate le note sulla versione 2023.7.0 di [!UICONTROL
 
 ## Data di pubblicazione {#release-date}
 
-La data di pubblicazione di [!UICONTROL Cloud Manager] versione 2023.7.0 è l’29 giugno 2023. La prossima versione è pianificata per l’10 Agosto 2023.
+La data di pubblicazione della versione 2023.7.0 di [!UICONTROL Cloud Manager] è il 29 giugno 2023. La prossima versione è pianificata per il 10 Agosto 2023.
 
 ## Correzioni di bug {#bug-fixes}
 
-* Quando [modifica di una pipeline di produzione,](/help/using/managing-pipelines.md#editing-pipelines) se l’utente tenta di rimuovere una risorsa da **Test dello staging** , viene visualizzato un errore.
+* Quando si [modifica una pipeline di produzione](/help/using/managing-pipelines.md#editing-pipelines), se l’utente tenta di rimuovere una risorsa dalla scheda del **Test dello staging**, viene visualizzato un errore.

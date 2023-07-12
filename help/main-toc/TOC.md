@@ -8,8 +8,8 @@ feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
 source-git-commit: 0e5753fe4bb575d1382ead4c273d8a654df82ba5
-workflow-type: ht
-source-wordcount: '0'
+workflow-type: tm+mt
+source-wordcount: '339'
 ht-degree: 100%
 
 ---
