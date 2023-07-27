@@ -2,10 +2,10 @@
 title: Introduzione a Cloud Manager per AMS
 description: Inizia qui per scoprire Cloud Manager per Adobe Managed Services (AMS) e come consente alle organizzazioni di gestire autonomamente Adobe Experience Manager nel cloud.
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
-source-git-commit: 14e35882765783b234ca35da14257279af5130a0
+source-git-commit: a2cea28061304d109a3c9a48650d01255579443c
 workflow-type: tm+mt
-source-wordcount: '1311'
-ht-degree: 100%
+source-wordcount: '1322'
+ht-degree: 99%
 
 ---
 
@@ -69,7 +69,7 @@ Per ulteriori informazioni sulla configurazione della pipeline dall’interfacci
 
 [!UICONTROL Cloud Manager] offre modalità di distribuzione flessibili e configurabili che consentono di distribuire esperienze in base alle esigenze aziendali in continua evoluzione.
 
-Grazie alla modalità di attivazione automatica, il codice viene distribuito automaticamente in un ambiente in base a eventi specifici, come ad esempio il commit del codice. È inoltre possibile programmare le distribuzioni del codice durante intervalli di tempo specifici, anche al di fuori dell’orario di lavoro.
+Grazie alla modalità di attivazione automatica, il codice viene distribuito automaticamente in un ambiente in base a eventi specifici, come ad esempio il commit del codice. È inoltre possibile programmare le distribuzioni del codice durante archi temporali specifici, anche al di fuori dell’orario di lavoro.
 
 Indipendentemente dalla modalità di trigger della distribuzione, ogni volta che ne viene attivata una vengono sempre eseguiti controlli di qualità come parte dell’esecuzione della pipeline CI/CD. I controlli di qualità, che comprendono l’ispezione del codice, i test di sicurezza e i test delle prestazioni, sono integrati nella soluzione e possono essere usati subito, senza complessità, da te o dai tuoi partner.
 
@@ -115,7 +115,9 @@ Quando la distribuzione blu/verde è abilitata, il flusso di distribuzione è di
 | 5 | Pausa per test (fino a 24 ore) | - |
 | 6 | L&#39;infrastruttura verde viene aggiunta al load balancer di produzione | - |
 | 7 | L&#39;infrastruttura blu viene rimossa dal load balancer di produzione |
-| 8 | L&#39;infrastruttura blu viene terminata automaticamente | - |
+| 8 | Pausa per l’approvazione finale (fino a 24 ore) | - |
+| 9 | L&#39;infrastruttura blu viene terminata automaticamente | - |
+| 10 | Completamenti pipeline | - |
 
 #### Implementazione blu/verde {#implementing}
 
