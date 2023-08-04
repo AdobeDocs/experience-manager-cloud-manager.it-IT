@@ -3,9 +3,9 @@ title: Introduzione a Cloud Manager per AMS
 description: Inizia qui per scoprire Cloud Manager per Adobe Managed Services (AMS) e come consente alle organizzazioni di gestire autonomamente Adobe Experience Manager nel cloud.
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
 source-git-commit: a2cea28061304d109a3c9a48650d01255579443c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1322'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -115,7 +115,7 @@ Quando la distribuzione blu/verde è abilitata, il flusso di distribuzione è di
 | 5 | Pausa per test (fino a 24 ore) | - |
 | 6 | L&#39;infrastruttura verde viene aggiunta al load balancer di produzione | - |
 | 7 | L&#39;infrastruttura blu viene rimossa dal load balancer di produzione |
-| 8 | Pausa per l’approvazione finale (fino a 24 ore) | - |
+| 8 | Pausa per approvazione finale (fino a 24 ore) | - |
 | 9 | L&#39;infrastruttura blu viene terminata automaticamente | - |
 | 10 | Completamenti pipeline | - |
 
