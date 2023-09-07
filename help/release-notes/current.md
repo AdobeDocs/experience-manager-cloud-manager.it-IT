@@ -1,19 +1,19 @@
 ---
-title: Note sulla versione 2023.8.0
-description: Queste sono le note sulla versione 2023.8.0 di Cloud Manager.
+title: Note sulla versione 2023.9.0
+description: Queste sono le note sulla versione 2023.9.0 di Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: f930f12b5f50dd96a1677ff7a56cf0e92a400556
-workflow-type: ht
-source-wordcount: '216'
+source-git-commit: 326e47e769c4f183fa3ee7d26952cb0f58e5067a
+workflow-type: tm+mt
+source-wordcount: '86'
 ht-degree: 100%
 
 ---
 
 
-# Note sulla versione 2023.8.0 di Cloud Manager {#release-notes}
+# Note sulla versione 2023.9.0 di Cloud Manager {#release-notes}
 
-In questa pagina sono documentate le note sulla versione 2023.8.0 di [!UICONTROL Cloud Manager].
+In questa pagina sono documentate le note sulla versione 2023.9.0 di [!UICONTROL Cloud Manager].
 
 >[!NOTE]
 >
@@ -21,18 +21,8 @@ In questa pagina sono documentate le note sulla versione 2023.8.0 di [!UICONTROL
 
 ## Data di pubblicazione {#release-date}
 
-La data di pubblicazione della versione 2023.8.0 di [!UICONTROL Cloud Manager] è il 10 agosto 2023. La versione successiva è pianificata per il 7 settembre 2023.
+La data di pubblicazione della versione 2023.9.0 di [!UICONTROL Cloud Manager] è l’7 settembre 2023. La prossima versione è prevista per il 5 ottobre 2023.
 
 ## Novità {#what-is-new}
 
-* Sono stati apportati miglioramenti nella comprensione e nella visualizzazione dei messaggi di errore all’interno dell’interfaccia utente di Cloud Manager.
-
 ## Correzioni di bug {#bug-fixes}
-
-* Sono stati risolti casi non frequenti di processi di [copia contenuto](/help/using/content-copy.md) che si bloccano.
-* È stato risolto un problema di test temporaneo per la clientela che non utilizza New Relic One.
-* [Le regole per la qualità del codice personalizzato](/help/using/custom-code-quality-rules.md) `SupportedRunmode` e `ImmutableMutableMixedPackage` sono state rimosse da SonarQube in quanto si applicano solo ad AEM as a Cloud Service.
-* Gli utenti non riscontreranno più pipeline bloccate che appaiono in stato di esecuzione.
-* Il menu **Ambienti** ora si chiude dopo aver attivato la vista modale **[Copia contenuto](/help/using/content-copy.md)**.
-* Non è più consentita [una riesecuzione della pipeline](/help/using/code-deployment.md#reexecute-deployment) se l’esecuzione precedente non ha un `commitId` impostato sullo stato della fase di compilazione.
-* Ora quando un utente fa clic su una pipeline nelle schermate **Attività** o **Pipeline** viene visualizzato un messaggio più comprensibile riguardante gli errori rari.
