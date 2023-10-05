@@ -2,7 +2,7 @@
 title: Configurazione delle pipeline di produzione
 description: Scopri come utilizzare Cloud Manager per creare e configurare pipeline di produzione per distribuire il codice.
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 39b38da17ed1cadf4f2e9633a9e76b537325316f
+source-git-commit: 33ccb0f2139162845cc1b72505b6a5bfc7cf43e7
 workflow-type: tm+mt
 source-wordcount: '1302'
 ht-degree: 100%
@@ -33,12 +33,6 @@ Il ruolo di **Responsabile della distribuzione** è responsabile della configura
 >
 >Non è possibile impostare una pipeline finché il relativo archivio Git associato non dispone di almeno un ramo e la [Configurazione del programma](/help/getting-started/program-setup.md) non è stata completata.
 
-## Tutorial video {#video-tutorial-one}
-
-Questo video fornisce una panoramica del processo di creazione della pipeline, descritto in questo documento.
-
->[!VIDEO](https://video.tv.adobe.com/v/26314/)
-
 ## Aggiunta di una nuova pipeline di produzione {#adding-production-pipeline}
 
 Una volta utilizzata l’interfaccia utente di [!UICONTROL Cloud Manager] per configurare il programma e disporre di almeno un ambiente, è possibile aggiungere una pipeline di produzione.
@@ -56,6 +50,7 @@ Una volta utilizzata l’interfaccia utente di [!UICONTROL Cloud Manager] per co
    1. Nella sezione **Codice sorgente**, definisci dove la pipeline recupera il codice che elaborerà.
 
       * **Archivio**: questa opzione definisce da quale archivio Git la pipeline deve recuperare il codice.
+
       >[!TIP]
       >
       >Consulta il documento [Configurazione del programma](/help/getting-started/program-setup.md) per scoprire come aggiungere e gestire archivi in Cloud Manager.
@@ -73,6 +68,7 @@ Una volta utilizzata l’interfaccia utente di [!UICONTROL Cloud Manager] per co
 
             * **Manuale**: utilizza questa opzione per avviare manualmente la pipeline utilizzando l’interfaccia utente di Cloud Manager.
             * **Cambiamenti su Git**: questa opzione avvia la pipeline CI/CD ogni volta che vengono aggiunti dei commit al ramo Git configurato. Con questa opzione, puoi comunque avviare la pipeline manualmente, in base alle esigenze.
+
          * **Comportamento in caso di errori di metriche importanti**: durante la configurazione o la modifica della pipeline, il Responsabile della distribuzione ha la possibilità di definire il comportamento della pipeline quando si verifica un errore importante in uno qualsiasi dei gate di qualità. Le opzioni disponibili sono:
 
             * **Chiedi ogni volta**: impostazione predefinita che richiede l’intervento manuale per tutti gli errori importanti.
@@ -96,6 +92,7 @@ Una volta utilizzata l’interfaccia utente di [!UICONTROL Cloud Manager] per co
 
                * **Scaricamento**: esegui un’eliminazione della cache.
                * **Invalida**: esegui un’invalidazione della cache, simile a quando il contenuto viene attivato da un’istanza di authoring a un’istanza di pubblicazione.
+
             1. Fai clic su **Aggiungi percorso** per aggiungere il percorso specificato. Puoi aggiungere fino a 100 percorsi per ambiente.
 
          ![Configurazione del Dispatcher](/help/assets/configure-pipelines/dispatcher-stage.png)
@@ -114,27 +111,18 @@ Una volta utilizzata l’interfaccia utente di [!UICONTROL Cloud Manager] per co
                * **Data**: questa opzione consente all’utente di pianificare un’ora in cui la distribuzione deve essere completata.
                * **Interrompi esecuzione**: questa opzione interrompe la distribuzione in produzione.
 
-            >[!TIP]
-            >
-            >Fare riferimento al documento [Distribuzione del codice,](/help/using/code-deployment.md) per scoprire come impostare la pianificazione della distribuzione o eseguire immediatamente la pipeline.
+           >[!TIP]
+           >
+           >Fare riferimento al documento [Distribuzione del codice,](/help/using/code-deployment.md) per scoprire come impostare la pianificazione della distribuzione o eseguire immediatamente la pipeline.
 
             * **Utilizza CSE Oversight**: se questa opzione è selezionata, viene attivato un CSE per avviare effettivamente la distribuzione. Se questa opzione è abilitata durante la creazione o la modifica di una pipeline, il ruolo **Responsabile della distribuzione** dispone delle seguenti opzioni.
 
                * **Qualsiasi CSE**: questa opzione consente a qualsiasi CSE disponibile di avviare la distribuzione.
                * **Il mio CSE**: questa opzione consente solo al CSE specifico assegnato al cliente di avviare la distribuzione. Questo vale anche per il backup designato del CSE, se quello assegnato non è disponibile.
 
-            ![Opzioni di implementazione di produzione](/help/assets/configure-pipelines/prod-deploymentoptions.png)
+           ![Opzioni di implementazione di produzione](/help/assets/configure-pipelines/prod-deploymentoptions.png)
 
          * **Configurazione del Dispatcher**: definisce la configurazione del dispatcher per l’ambiente di produzione. Le opzioni sono le stesse dell’ambiente di staging.
-
-
-
-
-
-
-
-
-
 
 1. Fai clic su **Continua** per passare alla scheda **Test dello staging**, in cui puoi configurare il test di prestazione di AEM Sites e AEM Assets, a seconda dei prodotti per i quali hai concesso la licenza.
 
@@ -163,10 +151,14 @@ Una volta utilizzata l’interfaccia utente di [!UICONTROL Cloud Manager] per co
 
       ![Distribuzione dei test delle risorse](/help/assets/configure-pipelines/add-prod6.png)
 
-
-
 1. Fai clic su **Salva** per completare l’aggiunta della pipeline di produzione.
 
 ## Passaggi successivi {#the-next-steps}
 
 Dopo aver configurato la pipeline, è necessario distribuire il codice. Per ulteriori dettagli, consulta il documento [Distribuzione del codice](/help/using/code-deployment.md).
+
+## Tutorial video {#video-tutorial-one}
+
+Questo video fornisce una panoramica del processo di creazione della pipeline, descritto in questo documento.
+
+>[!VIDEO](https://video.tv.adobe.com/v/26314/)
