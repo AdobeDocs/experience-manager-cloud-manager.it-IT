@@ -2,10 +2,10 @@
 title: Lo strumento Copia contenuto
 description: Lo strumento Copia contenuto di Cloud Manager consente agli utenti di copiare contenuti modificabili su richiesta dagli ambienti di produzione AEM 6.x in hosting AMS in ambienti inferiori a scopo di test.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 223b547d6bc94137dfbb7d92862a508fa67799d2
+source-git-commit: fe5de4e1ab5cd0d0e317cd399b8e44758a6312c4
 workflow-type: tm+mt
-source-wordcount: '1096'
-ht-degree: 100%
+source-wordcount: '1139'
+ht-degree: 93%
 
 ---
 
@@ -124,6 +124,8 @@ Una volta creato un set di contenuti, puoi utilizzarlo per copiare il contenuto.
 
 1. Puoi scegliere di eliminare o mantenere i percorsi di esclusione nell’ambiente di destinazione. Se desideri mantenere i percorsi di esclusione specificati nel set di contenuti, seleziona la casella di controllo `Do not delete exclude paths from destination`. Se la casella di controllo è deselezionata, i percorsi di esclusione vengono eliminati nell’ambiente di destinazione.
 
+1. Puoi scegliere di copiare la cronologia delle versioni dei percorsi copiati dall’ambiente di origine a quello di destinazione. Seleziona casella di controllo `Copy Versions` se si desidera copiare tutte le cronologie delle versioni.
+
    ![Copia del contenuto](/help/assets/copying-content.png)
 
 1. Tocca o fai clic su **Copia**.
@@ -159,7 +161,7 @@ Lo strumento Copia contenuto presenta le seguenti limitazioni.
 * Non è possibile eseguire una copia del contenuto da un ambiente inferiore a un ambiente superiore.
 * La copia del contenuto può essere eseguita solo all’interno dello stesso livello (ad esempio autore-autore o pubblicazione-pubblicazione).
 * Non è possibile copiare il contenuto tra più programmi o aree geografiche diverse.
-* La copia del contenuto per la topologia di archivio dati basata su cloud può essere eseguita solo quando l’ambiente di origine e di destinazione si trovano nello stesso provider cloud.
+* È possibile eseguire la copia del contenuto per la topologia basata sull&#39;archivio dati cloud solo quando l&#39;ambiente di origine e quello di destinazione si trovano sullo stesso provider cloud e nella stessa area.
 * Non è possibile eseguire operazioni simultanee di copia del contenuto nello stesso ambiente.
 * Non è possibile eseguire la copia del contenuto se è in esecuzione un’operazione attiva nell’ambiente di destinazione o di origine, ad esempio una pipeline CI/CD.
 * È possibile specificare fino a cinquanta percorsi per set di contenuti. Non ci sono limitazioni per i percorsi esclusi.
@@ -167,3 +169,4 @@ Lo strumento Copia contenuto presenta le seguenti limitazioni.
 * Una volta avviata, una copia del contenuto non può essere messa in pausa o annullata.
 * Lo strumento Copia contenuto copia le risorse insieme ai metadati relativi agli elementi multimediali dinamici, dall’ambiente superiore all’ambiente inferiore selezionato.
    * Le risorse copiate devono quindi essere rielaborate utilizzando il [Flusso di lavoro di risorse di processo DAM](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html?lang=it) nell’ambiente inferiore per utilizzare la rispettiva configurazione di elementi multimediali dinamici.
+* Il processo di copia del contenuto sarà notevolmente più veloce quando la cronologia delle versioni non viene copiata.
