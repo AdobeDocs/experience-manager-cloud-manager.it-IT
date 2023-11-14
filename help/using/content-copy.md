@@ -3,7 +3,7 @@ title: Lo strumento Copia contenuto
 description: Lo strumento Copia contenuto di Cloud Manager consente agli utenti di copiare contenuti modificabili su richiesta dagli ambienti di produzione AEM 6.x in hosting AMS in ambienti inferiori a scopo di test.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
 source-git-commit: c7803c75bcfcc967877808214704c5746015481d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1128'
 ht-degree: 100%
 
