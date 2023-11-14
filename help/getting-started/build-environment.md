@@ -2,7 +2,7 @@
 title: Ambiente di build
 description: Scopri l’ambiente di build specializzato che Cloud Manager usa per creare e testare il codice.
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: 42cafc03a607ace183d58adbe1c397c1a6c5c22f
+source-git-commit: 7f9866976667b485124cef60453ec3908ba41ec8
 workflow-type: tm+mt
 source-wordcount: '1152'
 ht-degree: 100%
@@ -19,9 +19,11 @@ Scopri l’ambiente di build specializzato che Cloud Manager usa per creare e te
 Gli ambienti di build di Cloud Manager hanno i seguenti attributi.
 
 * L’ambiente di build è basato su Linux, derivato da Ubuntu 18.04.
-* Apache Maven 3.6.0 è installato.
-* Le versioni Java installate sono Oracle JDK 8u202 e Oracle JDK 11.0.2.
-* Per impostazione predefinita, la variabile di ambiente `JAVA_HOME` è impostata su `/usr/lib/jvm/jdk1.8.0_202`, che contiene Oracle JDK 8u202. Per ulteriori dettagli, vedi la sezione [Versione JDK di esecuzione Maven alternativa](#alternate-maven).
+* Apache Maven 3.8.8 è installato.
+* Le versioni Java installate sono Oracle JDK 8u371 e Oracle JDK 11.0.20.
+   * `/usr/lib/jvm/jdk1.8.0_371`
+   * `/usr/lib/jvm/jdk-11.0.20`
+* Per impostazione predefinita, la variabile di ambiente `JAVA_HOME` è impostata su `/usr/lib/jvm/jdk1.8.0_371`, che contiene Oracle JDK 8u371. Per ulteriori dettagli, vedi la sezione [Versione JDK di esecuzione Maven alternativa](#alternate-maven).
 * Sono installati anche alcuni altri pacchetti di sistema necessari.
    * `bzip2`
    * `unzip`
@@ -47,7 +49,6 @@ Gli ambienti di build di Cloud Manager hanno i seguenti attributi.
 >* [aio-cli-plugin-cloudmanager](https://github.com/adobe/aio-cli-plugin-cloudmanager)
 >* [Creazione di un’integrazione API](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)
 >* [Autorizzazioni API](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
-
 
 ## Utilizzo di una versione Java specifica {#using-java-version}
 
