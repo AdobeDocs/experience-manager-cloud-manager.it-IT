@@ -2,9 +2,9 @@
 title: Lo strumento Copia contenuto
 description: Lo strumento Copia contenuto di Cloud Manager consente agli utenti di copiare contenuti modificabili su richiesta dagli ambienti di produzione AEM 6.x in hosting AMS in ambienti inferiori a scopo di test.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: fe5de4e1ab5cd0d0e317cd399b8e44758a6312c4
+source-git-commit: c7803c75bcfcc967877808214704c5746015481d
 workflow-type: ht
-source-wordcount: '1139'
+source-wordcount: '1128'
 ht-degree: 100%
 
 ---
@@ -31,10 +31,6 @@ Durante la copia del contenuto, l’ambiente sorgente è l’origine di riferime
 
 * Se il contenuto è stato modificato nell’ambiente di destinazione e i percorsi sono gli stessi, verrà sovrascritto dal contenuto nell’origine.
 * Se i percorsi sono diversi, il contenuto dell’origine verrà unito al contenuto della destinazione.
-
->[!NOTE]
->
->Contatta il tuo Customer Success Engineer (CSE) per abilitare questa funzione.
 
 ## Autorizzazioni {#permissions}
 
