@@ -3,10 +3,10 @@ title: Note sulla versione 2023.11.0
 description: Queste sono le note sulla versione 2023.11.0 di Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: c7803c75bcfcc967877808214704c5746015481d
+source-git-commit: 264c7ffcbc9e10903880a511a4ca605be666f7e8
 workflow-type: tm+mt
-source-wordcount: '351'
-ht-degree: 21%
+source-wordcount: '386'
+ht-degree: 19%
 
 ---
 
@@ -28,8 +28,10 @@ La data di pubblicazione della versione 2023.11.0 di [!UICONTROL Cloud Manager] 
 * [Pagina dei dettagli di esecuzione della pipeline](/help/using/managing-pipelines.md#view-details) mostrerà ora tutti i passaggi di un’esecuzione della pipeline con quelli non ancora avviati disattivati.
 * Su entrambi **[Attività](/help/using/managing-pipelines.md#activity)** e **[Pipeline](/help/using/managing-pipelines.md#pipelines)** Quando si fa clic su una pipeline con stato in esecuzione, è ora disponibile un riepilogo dell’esecuzione della pipeline.
 * Una nuova **Durata** è stata aggiunta alla sezione [pagina dei dettagli della pipeline](/help/using/managing-pipelines.md#view-details) che include la durata media del passaggio della pipeline in base alla tendenza storica per quel programma.
-* Nella pagina di esecuzione della pipeline, i passaggi completati ora visualizzano la durata
+* Il giorno [pagina di esecuzione della pipeline,](/help/using/managing-pipelines.md#activity-window) i passaggi completati ora visualizzano la durata
 * Cloud Manager [strumento copia contenuto](/help/using/content-copy.md) consente agli utenti di copiare contenuti mutabili on-demand dagli ambienti di produzione AEM 6.x ospitati da AMS agli ambienti inferiori a scopo di test.
+* Esecuzioni che [riutilizzare gli artefatti di build](/help/getting-started/project-setup.md#build-artifact-reuse) mostrerà ora il collegamento all’esecuzione che ha inizialmente creato tali artefatti.
+* Opzione da selezionare **Errori di metriche importanti** può ora essere configurato per [pipeline di qualità del codice](/help/using/non-production-pipelines.md) anche.
 
 ## Programma di adozione anticipata {#early-adoption}
 
