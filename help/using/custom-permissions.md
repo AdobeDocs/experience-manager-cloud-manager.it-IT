@@ -1,13 +1,13 @@
 ---
 title: Autorizzazioni personalizzate
 description: Scopri come utilizzare le autorizzazioni personalizzate per creare nuovi profili di autorizzazioni personalizzati con autorizzazioni configurabili per limitare l’accesso a programmi, pipeline e ambienti per gli utenti di Cloud Manager.
-source-git-commit: 769538ec21b21e612619b0c96718f27982574f6c
+exl-id: a81eda9f-aa89-40ea-8e4c-52367a0a6aba
+source-git-commit: 4ff8d66356b510600019daad78470ca5dd1c57d4
 workflow-type: tm+mt
 source-wordcount: '1489'
 ht-degree: 96%
 
 ---
-
 
 # Autorizzazioni personalizzate {#custom-permissions}
 
