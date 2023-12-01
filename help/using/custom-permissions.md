@@ -3,9 +3,9 @@ title: Autorizzazioni personalizzate
 description: Scopri come utilizzare le autorizzazioni personalizzate per creare nuovi profili di autorizzazioni personalizzati con autorizzazioni configurabili per limitare l’accesso a programmi, pipeline e ambienti per gli utenti di Cloud Manager.
 exl-id: a81eda9f-aa89-40ea-8e4c-52367a0a6aba
 source-git-commit: 4ff8d66356b510600019daad78470ca5dd1c57d4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1489'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -129,11 +129,11 @@ Per creare profili personalizzati sono disponibili le seguenti autorizzazioni.
 | Sostituzione/Rifiuto degli errori importanti della metrica | Consenti agli utenti di ignorare/rifiutare errori importanti di metrica |
 | Pianificazione delle distribuzioni in produzione | Consenti agli utenti di pianificare un passaggio di distribuzione in produzione |
 | Accesso alle informazioni dell’archivio | Consenti agli utenti di accedere alle informazioni dell’archivio e generare la password di accesso |
-| Creazione archivio | Consenti agli utenti di creare nuovi archivi Git |
-| Eliminazione archivio | Consenti agli utenti di eliminare gli archivi Git |
-| Modifica archivio | Consenti agli utenti di modificare gli archivi Git |
-| Genera codice archivio | Consenti agli utenti di generare un progetto da Archetipo |
-| Gestione copia contenuto | Consenti agli utenti di gestire le operazioni di copia dei contenuti |
+| Creazione di un archivio | Consenti agli utenti di creare nuovi archivi Git |
+| Eliminazione di un archivio | Consenti agli utenti di eliminare gli archivi Git |
+| Modifica di un archivio | Consenti agli utenti di modificare gli archivi Git |
+| Generazione del codice di un archivio | Consenti agli utenti di generare un progetto da un archetipo |
+| Gestione della copia dei contenuti | Consenti agli utenti di gestire le operazioni di copia dei contenuti |
 
 ### Autorizzazioni a livello di organizzazione {#organization-level}
 
