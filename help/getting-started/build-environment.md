@@ -3,9 +3,9 @@ title: Ambiente di build
 description: Scopri l’ambiente di build specializzato che Cloud Manager usa per creare e testare il codice.
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
 source-git-commit: 2ac254508e4015fea21c4fcd087703ac5fbeeec6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1283'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
@@ -18,9 +18,9 @@ Scopri l’ambiente di build specializzato che Cloud Manager usa per creare e te
 
 Gli ambienti di build di Cloud Manager hanno i seguenti attributi.
 
-* L’ambiente di build è basato su Linux, derivato da Ubuntu 22.04.
+* L’ambiente di build è basato su Linux, derivato da Ubuntu 22.04.
 * Apache Maven 3.8.8 è installato.
-   * Adobe di consigli per gli utenti [aggiorna i loro archivi Maven per utilizzare HTTPS invece di HTTP.](#https-maven)
+   * Adobe consiglia agli utenti di [aggiornare i loro archivi Maven per utilizzare HTTPS invece di HTTP.](#https-maven)
 * Le versioni Java installate sono Oracle JDK 8u371 e Oracle JDK 11.0.20.
    * `/usr/lib/jvm/jdk1.8.0_371`
    * `/usr/lib/jvm/jdk-11.0.20`
@@ -39,7 +39,7 @@ Gli ambienti di build di Cloud Manager hanno i seguenti attributi.
    * `mvn --batch-mode org.jacoco:jacoco-maven-plugin:prepare-agent package`
 * Maven è configurato a livello di sistema con un file `settings.xml` che include automaticamente l’archivio degli artefatti Adobe pubblico utilizzando un profilo denominato `adobe-public`.
    * Per ulteriori dettagli, consulta l’[archivio Maven pubblico di Adobe](https://repo1.maven.org/).
-* Node.js 18 è disponibile per [pipeline front-end e full stack.](/help/overview/ci-cd-pipelines.md)
+* Node.js 18 è disponibile per [pipeline front-end e full-stack.](/help/overview/ci-cd-pipelines.md)
 
 >[!NOTE]
 >
@@ -54,11 +54,11 @@ Gli ambienti di build di Cloud Manager hanno i seguenti attributi.
 
 ## Archivi Maven HTTPS {#https-maven}
 
-Cloud Manager [versione 2023.10.0](/help/release-notes/2023/2023-10-0.md) ha iniziato un aggiornamento continuo dell’ambiente di build (completandolo con la versione 2023.12.0), che includeva un aggiornamento a Maven 3.8.8. Una modifica significativa introdotta in Maven 3.8.1 è stata un miglioramento della sicurezza volto a mitigare potenziali vulnerabilità. In particolare, Maven ora disabilita tutti gli elementi non sicuri `http://*` specchiature per impostazione predefinita, come descritto nella [Note sulla versione di Maven.](http://maven.apache.org/docs/3.8.1/release-notes.html#cve-2021-26291)
+Cloud Manager [versione 2023.10.0](/help/release-notes/2023/2023-10-0.md) ha iniziato un aggiornamento continuo dell’ambiente di build (completandolo con la versione 2023.12.0), che includeva un aggiornamento a Maven 3.8.8. Come modifica significativa introdotta in Maven 3.8.1 è stato apportato un miglioramento della sicurezza volto a mitigare potenziali vulnerabilità. In particolare, Maven ora disabilita tutti le corrispondenze `http://*` non sicure per impostazione predefinita, come descritto nelle [note sulla versione di Maven.](http://maven.apache.org/docs/3.8.1/release-notes.html#cve-2021-26291)
 
-Come risultato di questo miglioramento della sicurezza, alcuni utenti potrebbero riscontrare problemi durante la fase di build, in particolare durante il download di artefatti dagli archivi Maven che utilizzano connessioni HTTP non sicure.
+Come risultato di questo miglioramento sulla sicurezza, alcuni utenti potrebbero riscontrare problemi durante la fase di build, in particolare durante il download di artefatti dagli archivi Maven che utilizzano connessioni HTTP non sicure.
 
-Per garantire un’esperienza fluida con la versione aggiornata, l’Adobe consiglia agli utenti di aggiornare gli archivi Maven per utilizzare HTTPS invece di HTTP. Questo adeguamento è in linea con il crescente passaggio del settore verso protocolli di comunicazione sicuri e contribuisce a mantenere un processo di creazione sicuro e affidabile.
+Per garantire un’esperienza fluida con la versione aggiornata, Adobe consiglia agli utenti di aggiornare gli archivi Maven per utilizzare HTTPS invece di HTTP. Questo adeguamento è in linea con la crescente tendenza del settore verso protocolli di comunicazione sicuri e contribuisce a mantenere un processo di creazione sicuro e affidabile.
 
 ## Utilizzo di una versione Java specifica {#using-java-version}
 
