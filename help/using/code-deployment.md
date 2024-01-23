@@ -2,10 +2,10 @@
 title: Distribuzione del codice
 description: Scopri come distribuire il codice e cosa accade in Cloud Manager quando lo fai.
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-source-git-commit: b85bd1bdf38360885bf2777d75bf7aa97c6da7ee
-workflow-type: ht
-source-wordcount: '1655'
-ht-degree: 100%
+source-git-commit: 70e68f8af17b0acf644176c2ed3afaf8fc219063
+workflow-type: tm+mt
+source-wordcount: '1650'
+ht-degree: 99%
 
 ---
 
@@ -84,12 +84,13 @@ Per i seguenti passaggi è previsto un timeout in caso di attesa del feedback de
 
 | Passaggio | Timeout |
 |--- |--- |
-| Test di qualità del codice | 14 giorni |
-| Test di sicurezza | 14 giorni |
-| Test delle prestazioni | 14 giorni |
-| Domanda di approvazione | 14 giorni |
+| Test di qualità del codice | 7 giorni |
+| Test di sicurezza | 7 giorni |
+| Test delle prestazioni | 7 giorni |
+| Domanda di approvazione (fase) | 7 giorni |
+| Domanda di approvazione (produzione) | 14 giorni |
 | Pianificazione della distribuzione nell’ambiente di produzione | 14 giorni |
-| Supporto CSE | 14 giorni |
+| Distribuzione di produzione gestita | 14 giorni |
 
 ## Dettagli del processo di distribuzione {#deployment-process}
 
