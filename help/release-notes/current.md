@@ -6,7 +6,7 @@ exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: b235e398b42e9da3dd2efacdc0ef38b6803bd213
 workflow-type: tm+mt
 source-wordcount: '243'
-ht-degree: 68%
+ht-degree: 100%
 
 ---
 
@@ -21,7 +21,7 @@ In questa pagina sono documentate le note sulla versione 2024.1.0 di [!UICONTROL
 
 ## Data di pubblicazione {#release-date}
 
-La data di rilascio per [!UICONTROL Cloud Manager] la versione 2024.1.0 di è il 17 gennaio 2024. La prossima versione è prevista per il 16 febbraio 2024.
+La data di rilascio della versione 2024.1.0 di [!UICONTROL Cloud Manager] è il 17 gennaio 2024. La prossima versione è prevista per il 16 febbraio 2024.
 
 ## Programma per i primi utilizzatori {#early-adoption}
 
@@ -35,5 +35,5 @@ Se ti interessa testare questa nuova funzionalità e condividere il tuo feedback
 
 ## Correzioni di bug {#bug-fixes}
 
-* È stato corretto un errore per alcuni casi d’angolo in cui i download non sono riusciti a causa del modo in cui l’applicazione di test interpreta i dati, causando l’errore nel test per la percentuale totale di errore.
-* Quando un passaggio della build termina con lo stato `FAILED` a causa di un `BUILD_MAVEN_TRANSFER_ARTIFACT_ERROR`, ora è descritto correttamente come un errore dovuto a conflitti di unione con il ramo di destinazione.
+* È stato corretto un errore per alcuni casi particolari in cui i download non andavano a buon fine a causa del modo in cui l’applicazione di test interpreta i dati, causando una percentuale totale di errore nel fallimento del test.
+* Quando un passaggio della build termina con lo stato `FAILED` a causa di un `BUILD_MAVEN_TRANSFER_ARTIFACT_ERROR`, ora è descritto correttamente come un errore dovuto all’unione di conflitti con il ramo di destinazione.
