@@ -3,10 +3,10 @@ title: Utilizzo degli archivi GitHub personali in Cloud Manager
 description: Scopri come configurare Cloud Manager per l’utilizzo degli archivi GitHub personali.
 feature: Release Information
 exl-id: e0d103c9-c147-4040-bf53-835e93d78a0b
-source-git-commit: 3bb59686a3c25e47e5c747bb8d5f626055e54a06
+source-git-commit: b5907179d3de329e8b86546bb8aa99608a5b351a
 workflow-type: tm+mt
-source-wordcount: '753'
-ht-degree: 100%
+source-wordcount: '767'
+ht-degree: 98%
 
 ---
 
@@ -18,6 +18,10 @@ Con la configurazione di Cloud Manager per l’utilizzo con gli archivi GitHub p
 >[!NOTE]
 >
 >Questa funzione è disponibile solo per [il programma di adozione anticipata.](/help/release-notes/current.md#early-adoption)
+
+>[!NOTE]
+>
+>Questa funzione è esclusiva per GitHub pubblico. Il supporto per GitHub con hosting autonomo non è disponibile.
 
 ## Configurazione {#configuration}
 
