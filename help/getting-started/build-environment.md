@@ -2,10 +2,10 @@
 title: Ambiente di build
 description: Scopri l’ambiente di build specializzato che Cloud Manager usa per creare e testare il codice.
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: 2ac254508e4015fea21c4fcd087703ac5fbeeec6
-workflow-type: ht
-source-wordcount: '1283'
-ht-degree: 100%
+source-git-commit: dc0b83fa045208fcd333af10f90f9590c2aa96b8
+workflow-type: tm+mt
+source-wordcount: '1280'
+ht-degree: 97%
 
 ---
 
@@ -19,12 +19,12 @@ Scopri l’ambiente di build specializzato che Cloud Manager usa per creare e te
 Gli ambienti di build di Cloud Manager hanno i seguenti attributi.
 
 * L’ambiente di build è basato su Linux, derivato da Ubuntu 22.04.
-* Apache Maven 3.8.8 è installato.
+* Apache Maven 3.9.4 è installato.
    * Adobe consiglia agli utenti di [aggiornare i loro archivi Maven per utilizzare HTTPS invece di HTTP.](#https-maven)
-* Le versioni Java installate sono Oracle JDK 8u371 e Oracle JDK 11.0.20.
-   * `/usr/lib/jvm/jdk1.8.0_371`
-   * `/usr/lib/jvm/jdk-11.0.20`
-* Per impostazione predefinita, la variabile di ambiente `JAVA_HOME` è impostata su `/usr/lib/jvm/jdk1.8.0_371`, che contiene Oracle JDK 8u371. Per ulteriori dettagli, vedi la sezione [Versione JDK di esecuzione Maven alternativa](#alternate-maven).
+* Le versioni Java installate sono Oracle JDK 8u401 e Oracle JDK 11.0.22.
+   * `/usr/lib/jvm/jdk1.8.0_401`
+   * `/usr/lib/jvm/jdk-11.0.22`
+* Per impostazione predefinita, il `JAVA_HOME`  variabile di ambiente impostata su `/usr/lib/jvm/jdk1.8.0_401` che contiene l’Oracle JDK 8u401. Per ulteriori dettagli, vedi la sezione [Versione JDK di esecuzione Maven alternativa](#alternate-maven).
 * Sono installati anche alcuni altri pacchetti di sistema necessari.
    * `bzip2`
    * `unzip`
@@ -39,7 +39,7 @@ Gli ambienti di build di Cloud Manager hanno i seguenti attributi.
    * `mvn --batch-mode org.jacoco:jacoco-maven-plugin:prepare-agent package`
 * Maven è configurato a livello di sistema con un file `settings.xml` che include automaticamente l’archivio degli artefatti Adobe pubblico utilizzando un profilo denominato `adobe-public`.
    * Per ulteriori dettagli, consulta l’[archivio Maven pubblico di Adobe](https://repo1.maven.org/).
-* Node.js 18 è disponibile per [pipeline front-end e full-stack.](/help/overview/ci-cd-pipelines.md)
+* Node.js 18 è disponibile per [pipeline front-end.](/help/overview/ci-cd-pipelines.md)
 
 >[!NOTE]
 >
@@ -117,7 +117,7 @@ Le combinazioni fornitore/versione attualmente disponibili sono:
 
 È inoltre possibile selezionare Oracle 8 o Oracle 11 come JDK per l’intera esecuzione di Maven. A differenza delle opzioni toolchain, questo cambia il JDK utilizzato per tutti i plug-in a meno che non sia impostata anche la configurazione di toolchain, nel qual caso la configurazione di toolchain viene ancora applicata per i plug-in Maven che tengono conto delle toolchain. Di conseguenza, controllare e applicare la versione Java con il [plug-in Apache Maven Enforcer](https://maven.apache.org/enforcer/maven-enforcer-plugin/) funzionerà.
 
-A questo scopo, crea un file denominato `.cloudmanager/java-version` nel ramo dell’archivio Git utilizzato dalla pipeline. Questo file può avere come contenuto `11` o `8`. Qualsiasi altro valore viene ignorato. Se `11` è specificato, viene utilizzato Oracle 11 e la variabile di ambiente `JAVA_HOME` è impostata su `/usr/lib/jvm/jdk-11.0.2`. Se è specificato `8`, viene utilizzato Oracle 8 e la variabile di ambiente `JAVA_HOME` è impostata su `/usr/lib/jvm/jdk1.8.0_202`.
+A questo scopo, crea un file denominato `.cloudmanager/java-version` nel ramo dell’archivio Git utilizzato dalla pipeline. Questo file può avere come contenuto `11` o `8`. Qualsiasi altro valore viene ignorato. Se `11` è specificato, viene utilizzato Oracle 11 e la variabile di ambiente `JAVA_HOME` è impostata su `/usr/lib/jvm/jdk-11.0.22`. Se è specificato `8`, viene utilizzato Oracle 8 e la variabile di ambiente `JAVA_HOME` è impostata su `/usr/lib/jvm/jdk1.8.0_401`.
 
 ## Variabili di ambiente {#environment-variables}
 

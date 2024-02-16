@@ -1,19 +1,19 @@
 ---
-title: Note sulla versione 2024.1.0
-description: Queste sono le note sulla versione 2024.1.0 di Cloud Manager.
+title: Note sulla versione 2024.2.0
+description: Queste sono le note sulla versione 2024.2.0 di Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: b5907179d3de329e8b86546bb8aa99608a5b351a
-workflow-type: ht
-source-wordcount: '257'
-ht-degree: 100%
+source-git-commit: 524471a87217c15dae96c3e6aee57426b43dcccb
+workflow-type: tm+mt
+source-wordcount: '299'
+ht-degree: 61%
 
 ---
 
 
-# Note sulla versione 2024.1.0 di Cloud Manager {#release-notes}
+# Note sulla versione 2024.2.0 di Cloud Manager {#release-notes}
 
-In questa pagina sono documentate le note sulla versione 2024.1.0 di [!UICONTROL Cloud Manager].
+In questa pagina sono documentate le note sulla versione 2024.2.0 di [!UICONTROL Cloud Manager].
 
 >[!NOTE]
 >
@@ -21,7 +21,12 @@ In questa pagina sono documentate le note sulla versione 2024.1.0 di [!UICONTROL
 
 ## Data di pubblicazione {#release-date}
 
-La data di rilascio della versione 2024.1.0 di [!UICONTROL Cloud Manager] è il 17 gennaio 2024. La prossima versione è prevista per il 16 febbraio 2024.
+La data di rilascio per [!UICONTROL Cloud Manager] la versione 2024.2.0 di è il 16 febbraio 2024. La prossima versione è prevista per il 16 marzo 2024.
+
+## Novità {#what-is-new}
+
+* Come parte di [distribuzione,](/help/using/code-deployment.md) la cache di Dispatcher è stata svuotata in corrispondenza del **Allega Dispatcher** passaggio. Per consentirti di verificare le modifiche su ciascun nodo prima di allegarlo al load balancer dell’applicazione, dopo aver distribuito il codice a un determinato editore, ora puoi testare le modifiche direttamente dal Dispatcher associato prima di allegarlo al load balancer.
+* [L’ambiente di build](/help/getting-started/build-environment.md) è stato aggiornato alle versioni Maven 3.9.4 e JDK jdk-11.0.22 e jdk1.8.0_401.
 
 ## Programma per i primi utilizzatori {#early-adoption}
 
@@ -35,5 +40,4 @@ Se ti interessa testare questa nuova funzionalità e condividere il tuo feedback
 
 ## Correzioni di bug {#bug-fixes}
 
-* È stato corretto un errore per alcuni casi particolari in cui i download non andavano a buon fine a causa del modo in cui l’applicazione di test interpreta i dati, causando una percentuale totale di errore nel fallimento del test.
-* Quando un passaggio della build termina con lo stato `FAILED` a causa di un `BUILD_MAVEN_TRANSFER_ARTIFACT_ERROR`, ora è descritto correttamente come un errore dovuto all’unione di conflitti con il ramo di destinazione.
+* Il JDK dei contenitori di build è stato aggiornato a una versione che risolve [JDK-8313765.](https://bugs.openjdk.org/browse/JDK-8313765)
