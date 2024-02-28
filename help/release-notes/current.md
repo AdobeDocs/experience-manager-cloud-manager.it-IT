@@ -4,9 +4,9 @@ description: Queste sono le note sulla versione 2024.2.0 di Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: cc87246503ab63d6dd60c691f15fc4759fcf6939
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '299'
-ht-degree: 61%
+ht-degree: 100%
 
 ---
 
@@ -21,11 +21,11 @@ In questa pagina sono documentate le note sulla versione 2024.2.0 di [!UICONTROL
 
 ## Data di pubblicazione {#release-date}
 
-La data di rilascio per [!UICONTROL Cloud Manager] la versione 2024.2.0 di è il 15 febbraio 2024. La prossima versione è prevista per il 16 marzo 2024.
+La data di pubblicazione della versione 2024.2.0 di [!UICONTROL Cloud Manager] è il 15 febbraio 2024. La prossima versione è prevista per il 16 marzo 2024.
 
 ## Novità {#what-is-new}
 
-* Come parte di [distribuzione,](/help/using/code-deployment.md) la cache di Dispatcher è stata svuotata in corrispondenza del **Allega Dispatcher** passaggio. Per consentirti di verificare le modifiche su ciascun nodo prima di allegarlo al load balancer dell’applicazione, dopo aver distribuito il codice a un determinato editore, ora puoi testare le modifiche direttamente dal Dispatcher associato prima di allegarlo al load balancer.
+* Come parte della [distribuzione,](/help/using/code-deployment.md) la cache del Dispatcher è stata svuotata nel passaggio **Allega Dispatcher**. Per consentirti di testare le modifiche su ciascun nodo prima di allegarlo al load balancer dell’applicazione, dopo aver distribuito il codice a un determinato editore, ora puoi effettuare quest’operazione direttamente dal Dispatcher associato prima di allegarlo al load balancer.
 * [L’ambiente di build](/help/getting-started/build-environment.md) è stato aggiornato alle versioni Maven 3.9.4 e JDK jdk-11.0.22 e jdk1.8.0_401.
 
 ## Programma per i primi utilizzatori {#early-adoption}
