@@ -2,10 +2,10 @@
 title: Autorizzazioni personalizzate
 description: Scopri come utilizzare le autorizzazioni personalizzate per creare nuovi profili di autorizzazioni personalizzati con autorizzazioni configurabili per limitare l’accesso a programmi, pipeline e ambienti per gli utenti di Cloud Manager.
 exl-id: a81eda9f-aa89-40ea-8e4c-52367a0a6aba
-source-git-commit: 16eef51d86647ae4f2515f3f3c4cb2d15e948854
+source-git-commit: 4a784f1594be4831be1c1c4aecb41b4f1b3b8be2
 workflow-type: tm+mt
 source-wordcount: '1474'
-ht-degree: 100%
+ht-degree: 90%
 
 ---
 
@@ -15,14 +15,14 @@ Scopri come utilizzare le autorizzazioni personalizzate per creare nuovi profili
 
 ## Introduzione {#introduction}
 
-Cloud Manager dispone di un set di ruoli predefiniti che determinano l’accesso a varie funzioni di Cloud Manager:
+Cloud Manager dispone di un set di ruoli predefiniti che disciplinano l’accesso a varie funzioni di Cloud Manager:
 
 * Proprietario business
 * Responsabile del programma
 * Responsabile della distribuzione
 * Sviluppatore
 
-Le autorizzazioni personalizzate consentono agli utenti di creare nuovi profili di autorizzazioni personalizzati con autorizzazioni configurabili per limitare l’accesso a programmi, pipeline e ambienti per gli utenti di Cloud Manager.
+Le autorizzazioni personalizzate consentono agli utenti di creare nuovi profili di autorizzazioni personalizzati con autorizzazioni configurabili per limitare l’accesso degli utenti di Cloud Manager a programmi, pipeline e ambienti.
 
 >[!TIP]
 >
@@ -44,7 +44,7 @@ Questa sezione descrive questi passaggi. Durante la creazione delle autorizzazio
 
 ### Creare un nuovo profilo di prodotto {#create}
 
-Per prima cosa è necessario creare un nuovo profilo di prodotto a cui assegnare le autorizzazioni personalizzate.
+Devi innanzitutto creare un nuovo profilo di prodotto prima di cui puoi assegnare autorizzazioni personalizzate.
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/)
 
@@ -79,10 +79,10 @@ Ora che disponi di un nuovo profilo di prodotto, puoi assegnargli le autorizzazi
 
 1. Tocca o fai clic sul collegamento **Modifica** di un’autorizzazione per modificarla.
 
-1. Viene visualizzata la finestra **Modifica autorizzazioni**.
+1. Il **Modifica autorizzazioni** viene visualizzata la finestra.
    * L’autorizzazione selezionata nel passaggio precedente è selezionata nella colonna a sinistra.
    * Gli elementi di autorizzazione disponibili per l’assegnazione dell’autorizzazione si trovano nella colonna centrale indicata con Elementi di **Autorizzazioni disponibili**.
-   * Gli elementi delle autorizzazioni assegnati si trovano nella colonna di destra indicata con **Elementi di autorizzazione inclusi**.
+   * Gli elementi di autorizzazione assegnati si trovano nella colonna a destra etichettata **Elementi autorizzazione inclusi**.
 
    ![Modifica elementi di autorizzazione](/help/assets/edit-permission-items.png)
 
@@ -121,14 +121,14 @@ Per creare profili personalizzati sono disponibili le seguenti autorizzazioni.
 | Modifica pipeline | Consenti agli utenti di modificare le pipeline |
 | Approvazione/rifiuto delle distribuzioni in produzione | Consenti agli utenti di approvare o rifiutare un passaggio di distribuzione di produzione |
 | Annullamento delle esecuzioni della pipeline | Consenti agli utenti di annullare le esecuzioni della pipeline |
-| Avvio delle esecuzioni della pipeline | Consenti agli utenti di avviare una nuova esecuzione della pipeline |
+| Avvio delle esecuzioni della pipeline | Consenti agli utenti di avviare nuove esecuzioni della pipeline |
 | Sostituzione/Rifiuto degli errori importanti della metrica | Consenti agli utenti di ignorare/rifiutare errori importanti di metrica |
 | Pianificazione delle distribuzioni in produzione | Consenti agli utenti di pianificare un passaggio di distribuzione in produzione |
 | Accesso alle informazioni dell’archivio | Consenti agli utenti di accedere alle informazioni dell’archivio e generare la password di accesso |
 | Creazione di un archivio | Consenti agli utenti di creare nuovi archivi Git |
 | Eliminazione di un archivio | Consenti agli utenti di eliminare gli archivi Git |
 | Modifica di un archivio | Consenti agli utenti di modificare gli archivi Git |
-| Generazione del codice di un archivio | Consenti agli utenti di generare un progetto da un archetipo |
+| Generazione del codice di un archivio | Consenti agli utenti di generare progetti da Archetipo |
 | Gestione della copia dei contenuti | Consenti agli utenti di gestire le operazioni di copia dei contenuti |
 
 ### Autorizzazioni a livello di organizzazione {#organization-level}
@@ -148,7 +148,7 @@ I seguenti termini vengono utilizzati per creare e gestire autorizzazioni person
 | Termine | Descrizione |
 |---|---|
 | Autorizzazioni predefinite | Ruoli predefiniti come **Proprietario business**, **Responsabile della distribuzione**, ecc. per gestire diverse funzioni di Cloud Manager. Per informazioni dettagliate sui ruoli predefiniti, consulta il documento [Autorizzazioni basate sul ruolo.](/help/requirements/role-based-permissions.md) |
-| Autorizzazioni personalizzate | Funzionalità di Cloud Manager che consentono agli utenti di creare profili di autorizzazione per definire i ruoli che gestiscono le funzionalità supportate di Cloud Manager |
+| Autorizzazioni personalizzate | Funzionalità di Cloud Manager che consentono agli utenti di creare profili di autorizzazione per definire ruoli da utilizzare per le funzioni supportate di Cloud Manager |
 | Profilo di autorizzazione | Creato in Admin Console per gestire le autorizzazioni configurabili che saranno applicabili agli utenti che fanno parte del profilo di autorizzazione |
 | Autorizzazione configurabile | Autorizzazioni di Cloud Manager che possono essere configurate nel profilo di autorizzazione |
 | Elemento di autorizzazione | Un programma, ambiente o risorsa pipeline a cui è possibile applicare un’autorizzazione |
