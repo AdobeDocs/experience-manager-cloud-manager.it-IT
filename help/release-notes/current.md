@@ -4,9 +4,9 @@ description: Queste sono le note sulla versione 2024.4.0 di Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: 4a7c6fbc3fa936ff1470420966823f94fb3a4d7b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '258'
-ht-degree: 70%
+ht-degree: 100%
 
 ---
 
@@ -21,12 +21,12 @@ In questa pagina sono documentate le note sulla versione 2024.4.0 di [!UICONTROL
 
 ## Data di pubblicazione {#release-date}
 
-La data di rilascio per [!UICONTROL Cloud Manager] la versione 2024.4.0 di è il 10 aprile 2024. La prossima versione è pianificata per il 9 maggio 2024.
+La data di pubblicazione della versione 2024.4.0 di [!UICONTROL Cloud Manager] è il 10 aprile 2024. La prossima versione è prevista per il 9 maggio 2024.
 
 ## Novità {#what-is-new}
 
 * È stato introdotto il supporto per le pipeline di sola staging e di sola produzione, che consente di suddividere le pipeline di distribuzione di produzione full stack in implementazioni più piccole e specializzate.
-* Messaggi di errore migliorati per i problemi di build del codice consentono di identificare più facilmente le cause principali e i passaggi successivi utilizzabili.
+* I messaggi di errore migliorati per i problemi di compilazione del codice consentono di identificare più facilmente le cause principali e i passaggi attuabili successivi.
 
 ## Programma per i primi utilizzatori {#early-adoption}
 
