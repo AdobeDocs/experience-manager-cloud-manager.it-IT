@@ -2,10 +2,10 @@
 title: Autorizzazioni basate sul ruolo
 description: Scopri le autorizzazioni preconfigurate basate sui ruoli di Cloud Manager per gestire l’accesso alle risorse cloud.
 exl-id: b66533fb-db93-40e8-919d-581261fdbf24
-source-git-commit: 10297789ac8f905f242ac52bdc6fc4812b989e8a
-workflow-type: ht
-source-wordcount: '602'
-ht-degree: 100%
+source-git-commit: 1c0c3a751ba2023fc2c2dd5d0d54f914373ad95b
+workflow-type: tm+mt
+source-wordcount: '620'
+ht-degree: 97%
 
 ---
 
@@ -66,3 +66,7 @@ A ciascuno dei ruoli sono associate autorizzazioni preconfigurate specifiche. In
 | Generazione del token di accesso personale | Accesso a Git |  | x |  | x |  |
 
 Per ulteriori informazioni su come configurare gli utenti, consulta il documento [Configurazione di utenti e ruoli.](/help/requirements/users-and-roles.md)
+
+>[!TIP]
+>
+>Sono inoltre disponibili profili di autorizzazione personalizzati con autorizzazioni configurabili. Consulta il documento [Autorizzazioni personalizzate](/help/using/custom-permissions.md) per ulteriori dettagli.
