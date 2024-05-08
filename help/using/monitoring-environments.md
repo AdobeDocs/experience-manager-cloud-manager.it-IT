@@ -2,10 +2,10 @@
 title: Ambienti di monitoraggio
 description: Scopri come monitorare gli ambienti in Cloud Manager.
 exl-id: 32886133-d6c0-4aed-8bb0-81b84f63e825
-source-git-commit: 5907ca6337d33c26ff19a14bfeb358cd9f7b935d
+source-git-commit: ab527beb706ab73a14cc933a3414873dee6b7a9e
 workflow-type: tm+mt
-source-wordcount: '939'
-ht-degree: 100%
+source-wordcount: '928'
+ht-degree: 89%
 
 ---
 
@@ -24,20 +24,17 @@ Se una metrica supera la soglia critica, viene considerata in uno stato critico.
 
 Segui questi passaggi per accedere al monitoraggio del sistema.
 
-1. Accedi alla pagina di destinazione **Managed Services - Programmi**.
+1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) e seleziona l’organizzazione e il programma appropriati.
 
-   ![Programmi Managed Services](/help/assets/ProgramLanding.png)
-
-1. Fai clic sulla quarta icona nella scheda dei programmi.
+1. Tocca o fai clic sul pulsante con i puntini di sospensione del programma che desideri monitorare e seleziona il **Mostra monitoraggio** opzione.
 
    ![Impostazioni](/help/assets/first-timea1.png)
 
-
-In alternativa, puoi passare alla pagina di destinazione del **Monitoraggio del sistema** attraverso la voce del menu di navigazione globale **Rapporti** in [!UICONTROL Cloud Manager].
+Il **Rapporti** viene visualizzata la pagina con le informazioni di monitoraggio del sistema.
 
 ## Panoramica di Monitoraggio del sistema {#system-monitoring-overview}
 
-Nella pagina di panoramica di Monitoraggio del sistema sono elencati gli ambienti monitorati nel programma e i rapporti sullo stato di salute di alto livello in quattro categorie diverse:
+Il **Monitoraggio del sistema** sezione del **Rapporti** In questa pagina sono elencati gli ambienti monitorati nel programma e i rapporti sullo stato di salute di alto livello in quattro categorie separate:
 
 * Host
 * Archiviazione
@@ -54,13 +51,11 @@ Lo stato di ciascuna categoria è un riepilogo delle singole metriche. Se una me
 
 ## Dettagli di Monitoraggio del sistema {#system-monitoring-detail}
 
-Per visualizzare i dettagli di specifiche metriche, fai clic su una delle categorie nella barra di navigazione a sinistra oppure su uno degli indicatori di categoria per una specifica istanza. Ogni pagina di dettagli mostra una serie di grafici per le metriche della categoria in questiione. Puoi visualizzare le metriche per tutte le istanze in un ambiente o per un’istanza specifica. Per passare dall’ambiente alle istanze, utilizza le caselle a discesa in alto a destra.
+Per visualizzare i dettagli di metriche specifiche, tocca o fai clic su una delle colonne di categoria di un’istanza specifica o sul titolo della categoria nel menu di navigazione a sinistra. Ogni pagina di dettagli mostra una serie di grafici per le metriche della categoria in questiione. Puoi visualizzare le metriche per tutte le istanze in un ambiente o per un’istanza specifica. Per passare dall’ambiente alle istanze, utilizza le caselle a discesa in alto a destra.
 
 ![Selezionare l’ambiente](/help/assets/System_Monitoring1.png)
 
 Nella barra di navigazione a sinistra vengono visualizzate le metriche disponibili nella categoria attualmente selezionata per la quale sono presenti dati relativi all’ambiente e alle istanze attualmente selezionati.
-
-![Metriche del monitoraggio](/help/assets/System_Monitoring2.png)
 
 Un singolo grafico mostra lo stato, un grafico dei dati nel tempo e le relative soglie. Se vengono visualizzate più istanze, i dati di ciascuna istanza saranno su una serie separata.
 
@@ -103,9 +98,9 @@ Ad esempio, se fai clic sulla serie delle soglie di avvertenza, verrà viusalizz
 
 ## Generazione rapporti SLA {#sla-reporting}
 
-È possibile vedere le prestazioni del proprio ambiente di produzione AEM rispetto al livello di servizio previsto dal contratto (SLA). Tali dati sono accessibili da un sottomenu nella schermata **Rapporti**.
+È possibile visualizzare le prestazioni dell&#39;ambiente AEM di produzione relative al contratto del livello di servizio (SLA) stipulato.
 
-Il grafico seguente mostra il traguardo mensile dello SLA per il 2018.
+Il grafico seguente mostra il traguardo mensile dello SLA per il 2019.
 
 ![Grafico SLA 2018](/help/assets/SLA-Reports-one.png)
 

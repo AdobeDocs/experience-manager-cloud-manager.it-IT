@@ -2,10 +2,10 @@
 title: Gestione degli ambienti
 description: Scopri come utilizzare Cloud Manager per gestire i tuoi ambienti.
 exl-id: 700b0b4c-1e1a-4993-b366-426b14a98f8e
-source-git-commit: 80f8707e00357f5a08dd835b846c9ee610f3e573
+source-git-commit: ab527beb706ab73a14cc933a3414873dee6b7a9e
 workflow-type: tm+mt
-source-wordcount: '263'
-ht-degree: 100%
+source-wordcount: '264'
+ht-degree: 89%
 
 ---
 
@@ -37,9 +37,9 @@ Lo stato è lo stato di alimentazione ricalcolato tra i nodi dell’ambiente nel
 
 ## Gestione degli ambienti {#managing-environments-with-cloud-manager}
 
-Nel riquadro **Ambienti**, fai clic su **Gestisci** per visualizzare la schermata **Ambienti**.
+Il giorno **Ambienti** tocca o fai clic sulla riga di qualsiasi ambiente per visualizzare **Ambienti** schermo.
 
-La schermata **Ambienti** visualizza una scheda per ogni ambiente di produzione e di staging (a seconda dei casi) nel programma. Il nome dell&#39;ambiente viene visualizzato sopra ogni scheda. La scheda include una tabella di nodi nell’ambiente insieme alla dimensione della CPU, all’archiviazione, all’area e allo stato.
+Il **Ambienti** Questa schermata mostra tutti gli ambienti di produzione e staging del programma. Il nome dell&#39;ambiente viene visualizzato sopra ogni scheda. La scheda include una tabella di nodi nell’ambiente insieme alla dimensione della CPU, all’archiviazione, all’area e allo stato.
 
 >[!NOTE]
 >

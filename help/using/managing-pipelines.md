@@ -2,10 +2,10 @@
 title: Gestione delle pipeline
 description: Scopri come gestire, modificare, eseguire ed eliminare le pipeline esistenti.
 exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
-source-git-commit: 28ab641ec85335d8330aeb465c07bf0264218fe4
-workflow-type: ht
-source-wordcount: '807'
-ht-degree: 100%
+source-git-commit: ab527beb706ab73a14cc933a3414873dee6b7a9e
+workflow-type: tm+mt
+source-wordcount: '800'
+ht-degree: 96%
 
 ---
 
@@ -44,7 +44,7 @@ La finestra **Pipeline** mostra un elenco completo di tutte le pipeline per il p
 
 1. Qui puoi visualizzare un elenco di tutte le pipeline del programma, nonché avviare e interrompere l’esecuzione della pipeline come faresti nella **Scheda Pipeline**.
 
-Se una pipeline è in esecuzione, passa il cursore sopra la relativa colonna di **Stato** e potrai visualizzare i dettagli relativi all’esecuzione.
+Tocca o fai clic su `i` mostra i dettagli sull’ultima o attuale esecuzione della pipeline.
 
 ![Dettagli di esecuzione della pipeline](/help/assets/configure-pipelines/pipeline-status.png)
 
@@ -60,7 +60,7 @@ La finestra **Attività** mostra un elenco completo di tutte le esecuzioni di pi
 
 1. Qui puoi visualizzare un elenco di tutte le esecuzioni della pipeline del programma, comprese le esecuzioni correnti e quelle precedenti.
 
-Se una pipeline è in esecuzione, passa il cursore sopra la relativa colonna di **Stato** e potrai visualizzare i dettagli relativi all’esecuzione.
+Tocca o fai clic su `i` mostra i dettagli sull’esecuzione della pipeline selezionata.
 
 ![Dettagli di esecuzione della pipeline](/help/assets/configure-pipelines/pipeline-activity.png)
 

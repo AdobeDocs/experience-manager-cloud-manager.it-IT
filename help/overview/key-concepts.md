@@ -2,10 +2,10 @@
 title: Concetti fondamentali
 description: Come tutti gli strumenti potenti, Cloud Manager include molti concetti e termini. Questo documento riepiloga alcuni dei più importanti per iniziare a utilizzare Cloud Manager.
 exl-id: 86dfc976-f3da-479a-9faa-08f40ca909e0
-source-git-commit: 73e322cf93dc7709b7581860974079c8d94034ba
+source-git-commit: 67621fb2dbb0c32371b2ffc16ec45f47daf04e05
 workflow-type: tm+mt
-source-wordcount: '419'
-ht-degree: 100%
+source-wordcount: '413'
+ht-degree: 91%
 
 ---
 
@@ -16,7 +16,7 @@ Come tutti gli strumenti potenti, Cloud Manager include molti concetti e termini
 
 ## Applicazione {#application}
 
-E l’applicazione è il set di personalizzazioni e configurazioni create da un cliente per adattare la [soluzione](#solution) sottostante (ad esempio AEM Sites o AEM Assets) ai casi d’uso e alle esigenze specifiche. Un’applicazione è un’unità logica che può essere composta da più [artefatti.](#artifact)
+Un’applicazione è il set di personalizzazioni e configurazioni create da un cliente per adattare il sottostante [soluzione](#solution) (come AEM Sites o AEM Assets) per i casi d’uso e le esigenze specifiche. Un’applicazione è un’unità logica che può essere composta da più [artefatti.](#artifact)
 
 Un’applicazione di esempio è l’[Applicazione WKND lifestyle](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=it) fittizia.
 
