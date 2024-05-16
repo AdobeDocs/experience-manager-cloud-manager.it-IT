@@ -1,13 +1,13 @@
 ---
 title: Navigazione nell’interfaccia utente di Cloud Manager
 description: Scopri come è organizzata l’interfaccia utente di Cloud Manager e come navigare per gestire i programmi e gli ambienti.
-source-git-commit: 95736be8c38488c3f16164784247e160a967ecb7
+exl-id: 9c1545ce-1c6d-417f-a6f4-fe53caef3433
+source-git-commit: 9d0f4dd29e2d05ab3f6900ee23c536b91c849e65
 workflow-type: tm+mt
-source-wordcount: '1297'
+source-wordcount: '1292'
 ht-degree: 5%
 
 ---
-
 
 # Navigazione nell’interfaccia utente di Cloud Manager {#navigation}
 
@@ -101,7 +101,6 @@ Ogni programma è rappresentato da una scheda (o riga in una tabella) che fornis
 * Immagine del programma (se configurata)
 * Nome del programma
 * Tipo di servizio: **Experience Manager Cloud** per [Programmi as a Cloud Service AEM](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/home) o **Experience Manager** per i programmi AMS
-* [Tipo di programma](/help/getting-started/program-setup.md): sandbox o produzione
 * Stato
 * Soluzioni configurate
 * Data di creazione
