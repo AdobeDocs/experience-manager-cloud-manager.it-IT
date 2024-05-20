@@ -3,9 +3,9 @@ title: Ambienti di monitoraggio
 description: Scopri come monitorare gli ambienti in Cloud Manager.
 exl-id: 32886133-d6c0-4aed-8bb0-81b84f63e825
 source-git-commit: ab527beb706ab73a14cc933a3414873dee6b7a9e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '928'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -26,15 +26,15 @@ Segui questi passaggi per accedere al monitoraggio del sistema.
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) e seleziona l’organizzazione e il programma appropriati.
 
-1. Tocca o fai clic sul pulsante con i puntini di sospensione del programma che desideri monitorare e seleziona il **Mostra monitoraggio** opzione.
+1. Tocca o fai clic sul pulsante con i puntini di sospensione del programma che desideri monitorare e seleziona l’opzione **Mostra monitoraggio**.
 
    ![Impostazioni](/help/assets/first-timea1.png)
 
-Il **Rapporti** viene visualizzata la pagina con le informazioni di monitoraggio del sistema.
+La pagina **Rapporti** viene visualizzata con le informazioni di monitoraggio del sistema.
 
 ## Panoramica di Monitoraggio del sistema {#system-monitoring-overview}
 
-Il **Monitoraggio del sistema** sezione del **Rapporti** In questa pagina sono elencati gli ambienti monitorati nel programma e i rapporti sullo stato di salute di alto livello in quattro categorie separate:
+Nella sezione **Monitoraggio del sistema** della pagina **Rapporti** sono elencati gli ambienti monitorati nel programma e i rapporti sullo stato di integrità di alto livello in quattro categorie diverse:
 
 * Host
 * Archiviazione
@@ -98,7 +98,7 @@ Ad esempio, se fai clic sulla serie delle soglie di avvertenza, verrà viusalizz
 
 ## Generazione rapporti SLA {#sla-reporting}
 
-È possibile visualizzare le prestazioni dell&#39;ambiente AEM di produzione relative al contratto del livello di servizio (SLA) stipulato.
+Scopri come visualizzare le prestazioni dell’ambiente di produzione AEM relative al contratto del livello di servizio (SLA) sottoscritto.
 
 Il grafico seguente mostra il traguardo mensile dello SLA per il 2019.
 

@@ -3,7 +3,7 @@ title: Distribuzione del codice
 description: Scopri come distribuire il codice e cosa accade in Cloud Manager quando lo fai.
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
 source-git-commit: ab527beb706ab73a14cc933a3414873dee6b7a9e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1648'
 ht-degree: 100%
 

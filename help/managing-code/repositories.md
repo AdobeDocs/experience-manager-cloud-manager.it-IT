@@ -3,9 +3,9 @@ title: Archivi di Cloud Manager
 description: Scopri come accedere, creare e modificare gli archivi per i programmi Cloud Manager.
 exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
 source-git-commit: 1d4ab9704fdb743b097e24be335fbf069d1e78bd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '762'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -26,7 +26,7 @@ Per accedere al tuo archivio, utilizza il pulsante **Accedi a dati archivio** di
 
    ![Pulsante Accedi a dati archivio](/help/assets/access-repo1.png)
 
-1. Tocca o fai clic su **Accedi a dati archivio** per aprire una finestra di dialogo che presenta:
+1. Tocca o fai clic sul pulsante **Accedi a dati archivio** per aprire una finestra di dialogo che presenta:
 
    * L’URL dell’archivio Git
    * Nome utente
