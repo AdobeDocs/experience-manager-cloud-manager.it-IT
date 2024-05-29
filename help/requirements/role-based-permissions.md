@@ -3,9 +3,9 @@ title: Autorizzazioni basate sul ruolo
 description: Scopri le autorizzazioni preconfigurate basate sui ruoli di Cloud Manager per gestire l’accesso alle risorse cloud.
 exl-id: b66533fb-db93-40e8-919d-581261fdbf24
 source-git-commit: fc1bc626dc18d25ce8c5bbae71396b234b5676db
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '620'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -35,7 +35,7 @@ In questa tabella sono elencati i ruoli che è possibile assegnare nell’Admin 
 | Responsabile della distribuzione | Questo utente gestisce le operazioni di distribuzione utilizzando [!UICONTROL Cloud Manager] per eseguire le distribuzioni dello staging e della produzione, può approvare errori importanti di terzo livello, quando necessario, e ha accesso all’archivio Git. |
 | Sviluppatore | Questo utente sviluppa ed esegue il test del codice personalizzato dell’applicazione, utilizza principalmente [!UICONTROL Cloud Manager] per visualizzare lo stato di distribuzione e ha l’accesso ai commit dell’archivio Git. |
 | Customer Success Engineer (CSE) | Questo utente in genere supporta il successo dei clienti per i clienti AMS e interagisce con [!UICONTROL Cloud Manager] al fine di eseguire implementazioni che richiedono la supervisione del Customer Success Engineer (CSE). |
-| Autore del contenuto | Questo utente generalmente non interagisce con Cloud Manager, ma può utilizzare il selettore di programma di Cloud Manager (arrivando da Experience Cloud) per accedere a Adobe Experience Manager (AEM). |
+| Autore del contenuto | Questo utente generalmente non interagisce con Cloud Manager, ma può utilizzare il selettore di programma di Cloud Manager (arrivando da Experience Cloud) per accedere ad Adobe Experience Manager (AEM). |
 
 ## Autorizzazioni utente {#user-permissions}
 
