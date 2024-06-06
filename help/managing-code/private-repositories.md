@@ -3,10 +3,10 @@ title: Aggiunta di archivi privati in Cloud Manager
 description: Scopri come configurare Cloud Manager per l’utilizzo di archivi GitHub privati.
 feature: Release Information
 exl-id: e0d103c9-c147-4040-bf53-835e93d78a0b
-source-git-commit: dcb48f6914ff48c6905da40609ca99fe529d9fe3
+source-git-commit: 84a6d8b7a44af124eb227999ad1cbd1fe14ab7ee
 workflow-type: tm+mt
-source-wordcount: '845'
-ht-degree: 80%
+source-wordcount: '884'
+ht-degree: 68%
 
 ---
 
@@ -122,10 +122,12 @@ Gli archivi privati convalidati possono essere associati a [pipeline full stack 
 
 ## Limitazioni {#limitations}
 
-Quando utilizzi archivi GitHub personali con Cloud Manager, tieni presenti le seguenti limitazioni:
+Quando si utilizzano archivi privati con Cloud Manager si applicano alcune limitazioni.
 
-* Non puoi utilizzare gli archivi GitHub come origine di archivio diretta per le pipeline gestite.
-   * Questa funzionalità è pianificata.
-* Non puoi mettere in pausa la convalida della richiesta pull tramite la verifica GitHub di Cloud Manager.
-   * Se l’archivio GitHub viene convalidato in Cloud Manager, Cloud Manager tenterà sempre di convalidare le richieste pull create per quell’archivio.
-Se l’app GitHub di Adobe viene rimossa dall’organizzazione GitHub, la funzione di convalida delle richieste pull verrà rimossa per tutti gli archivi.
+* Non puoi utilizzare archivi privati come origine diretta dell’archivio per le pipeline gestite.
+* Non puoi mettere in pausa la convalida della richiesta di pull utilizzando la verifica GitHub da Cloud Manager.
+   * Se l’archivio GitHub viene convalidato in Cloud Manager, Cloud Manager tenterà sempre di convalidare le richieste pull create per tale archivio.
+* Se l’app GitHub di Adobe viene rimossa dall’organizzazione GitHub, la funzione di convalida delle richieste pull verrà rimossa per tutti gli archivi.
+* Quando si utilizzano archivi privati su pipeline full stack di produzione, non verrà creato e inviato alcun tag Git.
+* Le pipeline che utilizzano archivi privati e il trigger di build on-commit non vengono avviati automaticamente quando viene eseguito il push di un nuovo commit nel ramo selezionato.
+* [Funzionalità di riutilizzo degli artefatti](/help/getting-started/project-setup.md#build-artifact-reuse) non si applica agli archivi privati.
