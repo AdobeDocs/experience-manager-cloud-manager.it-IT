@@ -2,10 +2,10 @@
 title: Gestione delle pipeline
 description: Scopri come gestire, modificare, eseguire ed eliminare le pipeline esistenti.
 exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
-source-git-commit: ab527beb706ab73a14cc933a3414873dee6b7a9e
-workflow-type: ht
-source-wordcount: '800'
-ht-degree: 100%
+source-git-commit: 4ab4bd416658c55d72228b701c57a1845d2d0f41
+workflow-type: tm+mt
+source-wordcount: '901'
+ht-degree: 88%
 
 ---
 
@@ -96,6 +96,10 @@ A seconda del tipo di pipeline, puoi annullare l’esecuzione facendo nuovamente
 >
 >Non è possibile modificare una pipeline in esecuzione.
 
+>[!NOTE]
+>
+>Le pipeline a livello web e di configurazione non sono supportate con archivi privati. Consulta il documento [Aggiunta di archivi privati in Cloud Manager](/help/managing-code/private-repositories.md) per maggiori dettagli e per l’elenco completo delle limitazioni.
+
 ## Eliminazione delle pipeline {#deleting-pipelines}
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione e il programma appropriati.
@@ -127,6 +131,15 @@ Una volta completato un passaggio della pipeline, viene presentato un riepilogo.
 Tocca o fai clic sul collegamento **Visualizza dettagli** per visualizzare la sezione **Durata**. Ciò include la durata media della pipeline in base alla tendenza storica per quel programma.
 
 ![Durata](/help/assets/configure-pipelines/duration.png)
+
+Se la pipeline conteneva un **Scansione del codice** , che ha sollevato dei problemi, puoi toccare o fare clic sul pulsante **Dettagli del download** per visualizzare un elenco di [test qualità codice](/help/using/code-quality-testing.md) quello non passò.
+
+![Problemi di qualità del codice](assets/managing-pipelines-code-quality-issues.png)
+
+A **Percorso file di progetto** è disponibile nel file CSV per indicare la posizione del codice che ha causato l’infrazione. Questa colonna è il percorso relativo al progetto, mentre **Percorso file** è generata da Maven.
+
+![Dettagli problema analisi codice progetto](assets/managing-pipelines-code-quality-details.png)
+
 
 >[!NOTE]
 >

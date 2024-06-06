@@ -2,8 +2,8 @@
 title: Navigazione nell’interfaccia utente di Cloud Manager
 description: Scopri come è organizzata l’interfaccia utente di Cloud Manager e come spostarsi per gestire i programmi e gli ambienti.
 exl-id: 9c1545ce-1c6d-417f-a6f4-fe53caef3433
-source-git-commit: 9d0f4dd29e2d05ab3f6900ee23c536b91c849e65
-workflow-type: ht
+source-git-commit: 85c1e22609dc5646d3de0ccc71e9423d4243e13a
+workflow-type: tm+mt
 source-wordcount: '1292'
 ht-degree: 100%
 
@@ -168,7 +168,7 @@ A ogni programma sono associate molte opzioni e molti dati. Questi dati vengono 
 * Panoramica: la panoramica del programma come descritto nel documento corrente
 * [Attività](/help/using/managing-pipelines.md#activity): la cronologia delle esecuzioni delle pipeline del programma
 * [Pipeline](/help/using/managing-pipelines.md#pipelines): tutte le pipeline configurate per il programma
-* [Archivi](/help/managing-code/repositories.md): tutti gli archivi configurati per il programma
+* [Archivi](/help/managing-code/managing-repositories.md): tutti gli archivi configurati per il programma
 * [Rapporti](/help/using/monitoring-environments.md#system-monitoring-overview): metriche quali i dati SLA
 * [Ambienti](/help/using/managing-environments.md): tutti gli ambienti configurati per il programma
 * [Set di contenuti](/help/using/content-copy.md): set di contenuti creati per scopi di copia
