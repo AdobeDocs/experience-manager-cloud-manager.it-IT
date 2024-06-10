@@ -2,10 +2,10 @@
 title: Pipeline solo di staging e solo di produzione
 description: Scopri come suddividere le distribuzioni di staging e produzione utilizzando pipeline dedicate.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
-source-git-commit: 54da5fd599eced473141ae67242841a8dd833f36
-workflow-type: ht
-source-wordcount: '842'
-ht-degree: 100%
+source-git-commit: c238caa22fdd71ae6aefd098331b626b9b951a0f
+workflow-type: tm+mt
+source-wordcount: '891'
+ht-degree: 92%
 
 ---
 
@@ -32,7 +32,7 @@ Le pipeline solo di staging e solo di produzione offrono soluzioni a questi casi
 * Le **pipeline di distribuzione solo di produzione** distribuiscono esclusivamente in un ambiente di produzione con l’opzione di selezionare un’esecuzione completata e convalidata correttamente in staging e di distribuire gli artefatti in produzione.
    * Le pipeline solo di produzione riutilizzeranno gli artefatti dalle distribuzioni di staging, saltando la fase di creazione.
 
-Né le pipeline solo di staging, né quelle solo di produzione verranno eseguite mentre una pipeline di produzione full-stack è in esecuzione e viceversa.
+Durante l’esecuzione di una pipeline di produzione full stack e viceversa, non verranno eseguite né pipeline di sola fase né pipeline di sola produzione. Se sia la pipeline di produzione di tipo solo stage che quella di tipo full stack hanno **Modifiche su Git** l’attivatore è configurato e punta allo stesso ramo e archivio; viene avviata automaticamente solo la pipeline di sola fase. Le pipeline di sola produzione non sono avviate **Modifiche su Git** in quanto non sono collegati direttamente a un archivio.
 
 Queste pipeline dedicate offrono maggiore flessibilità, ma tieni presente i dettagli dell’operazione e le raccomandazioni seguenti.
 
