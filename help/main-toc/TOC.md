@@ -8,9 +8,9 @@ feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
 source-git-commit: 3beee350dda077c16975ea628bd4c7b80d7d9160
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '530'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -60,11 +60,11 @@ ht-degree: 96%
 + Gestione del codice {#managing-code}
    + [Gestione degli archivi in Cloud Manager](/help/managing-code/managing-repositories.md)
    + [Informazioni di accesso all’archivio](/help/managing-code/accessing-repositories.md)
-   + [Aggiunta di archivi di Adobi](/help/managing-code/adobe-repositories.md)
+   + [Aggiunta di archivi Adobe](/help/managing-code/adobe-repositories.md)
    + [Aggiunta di archivi privati](/help/managing-code/private-repositories.md)
-   + [Supporto per i moduli Git secondari](/help/managing-code/git-submodules.md)
-   + [Configurazione controllo GitHub](/help/managing-code/github-check-config.md)
-   + [Annotazioni di controllo GitHub](/help/managing-code/github-annotations.md)
+   + [Supporto per i sottomoduli Git](/help/managing-code/git-submodules.md)
+   + [Configurazione verifica GitHub](/help/managing-code/github-check-config.md)
+   + [Annotazioni verifica GitHub](/help/managing-code/github-annotations.md)
    + [Gestione delle versioni dei progetti Maven](/help/managing-code/maven-project-version.md)
    + [Integrazione con Git](/help/managing-code/git-integration.md)
    + [Utilizzo di più archivi Git](/help/managing-code/multiple-git-repos.md)

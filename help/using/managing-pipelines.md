@@ -3,9 +3,9 @@ title: Gestione delle pipeline
 description: Scopri come gestire, modificare, eseguire ed eliminare le pipeline esistenti.
 exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
 source-git-commit: 4ab4bd416658c55d72228b701c57a1845d2d0f41
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '901'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -98,7 +98,7 @@ A seconda del tipo di pipeline, puoi annullare l’esecuzione facendo nuovamente
 
 >[!NOTE]
 >
->Le pipeline a livello web e di configurazione non sono supportate con archivi privati. Consulta il documento [Aggiunta di archivi privati in Cloud Manager](/help/managing-code/private-repositories.md) per maggiori dettagli e per l’elenco completo delle limitazioni.
+>Le pipeline a livello web e di configurazione non sono supportate con gli archivi privati. Per dettagli e un elenco completo delle limitazioni, consulta [Aggiunta di archivi privati in Cloud Manager](/help/managing-code/private-repositories.md).
 
 ## Eliminazione delle pipeline {#deleting-pipelines}
 
@@ -132,15 +132,15 @@ Tocca o fai clic sul collegamento **Visualizza dettagli** per visualizzare la se
 
 ![Durata](/help/assets/configure-pipelines/duration.png)
 
-Se la pipeline conteneva un **Scansione del codice** , che ha sollevato dei problemi, puoi toccare o fare clic sul pulsante **Dettagli del download** per visualizzare un elenco di [test qualità codice](/help/using/code-quality-testing.md) quello non passò.
+Se la pipeline conteneva un passaggio **Scansione del codice** durante il quale sono stati rilevati dei problemi, tocca o fai clic sul pulsante **Scarica dettagli** per visualizzare un elenco dei [test di qualità del codice](/help/using/code-quality-testing.md) che non sono stati superati.
 
 ![Problemi di qualità del codice](assets/managing-pipelines-code-quality-issues.png)
 
-A **Percorso file di progetto** è disponibile nel file CSV per indicare la posizione del codice che ha causato l’infrazione. Questa colonna è il percorso relativo al progetto, mentre **Percorso file** è generata da Maven.
+Nel file CSV, una colonna **Project File Location** (Percorso file di progetto) indica dove si trova il codice in cui è stato riscontrato un problema. Questa colonna contiene un percorso relativo al progetto, mentre la colonna **File Location** (Percorso file) è generata da Maven.
 
-![Dettagli problema analisi codice progetto](assets/managing-pipelines-code-quality-details.png)
+![Dettagli di problemi rilevati dalla scansione del codice del progetto](assets/managing-pipelines-code-quality-details.png)
 
 
 >[!NOTE]
 >
->È possibile visualizzare i dettagli solo di una pipeline in esecuzione o eseguita almeno una volta.
+>È possibile visualizzare i dettagli solo per una pipeline in esecuzione o che è stata eseguita almeno una volta.

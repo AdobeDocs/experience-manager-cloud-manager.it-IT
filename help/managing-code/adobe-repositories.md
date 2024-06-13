@@ -1,27 +1,27 @@
 ---
-title: Aggiunta di archivi di Adobi in Cloud Manager
+title: Aggiunta di archivi Adobe in Cloud Manager
 description: Scopri come creare archivi gestiti da Adobe in Cloud Manager.
 source-git-commit: 85c1e22609dc5646d3de0ccc71e9423d4243e13a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '145'
-ht-degree: 20%
+ht-degree: 100%
 
 ---
 
 
-# Aggiunta di archivi di Adobi in Cloud Manager {#adobe-repositories}
+# Aggiunta di archivi Adobe in Cloud Manager {#adobe-repositories}
 
 Scopri come creare archivi gestiti da Adobe in Cloud Manager.
 
 ## Aggiunta di un archivio gestito da Adobe {#add-adobe-repository}
 
-Il **Archivi** consente di aggiungere facilmente altri archivi gestiti da Adobe al programma.
+La finestra **Archivi** consente di aggiungere facilmente al programma altri archivi gestiti da Adobe.
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione e il programma appropriati.
 
-1. Dalla sezione **Panoramica del programma** , seleziona la **Archivi** per passare alla scheda **Archivi** pagina.
+1. Dalla pagina **Panoramica del programma**, seleziona la scheda **Archivi** per passare alla pagina **Archivi**.
 
-1. Clic **Aggiungi archivio** nella barra degli strumenti.
+1. Fai clic su **Aggiungi archivio** nella barra degli strumenti.
 
    ![Pulsante Aggiungi archivio](assets/repositories.png)
 
@@ -29,8 +29,8 @@ Il **Archivi** consente di aggiungere facilmente altri archivi gestiti da Adobe 
 
    ![Finestra di dialogo Aggiungi archivio](assets/add-repository-wizard.png)
 
-Al termine della procedura guidata, il nuovo archivio viene visualizzato nella tabella in **Archivi** finestra. È ora possibile associare una [Pipeline CI/CD](/help/overview/ci-cd-pipelines.md) o gestirla all&#39;interno del [**Archivi** finestra.](managing-repositories.md)
+Al termine della procedura guidata, il nuovo archivio viene visualizzato nella tabella nella finestra **Archivi**. A questo punto puoi associarvi una [Pipeline CI/CD](/help/overview/ci-cd-pipelines.md) o gestirlo nella finestra [**Archivi**.](managing-repositories.md)
 
 >[!TIP]
 >
->Puoi anche aggiungere archivi GitHub che gestisci autonomamente come [archivi privati.](private-repositories.md)
+>Puoi anche aggiungere archivi GitHub da gestire direttamente come [archivi privati.](private-repositories.md)
