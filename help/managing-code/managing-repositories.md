@@ -5,7 +5,7 @@ exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
 source-git-commit: 73add7bee892769d1b3864e3238aff26bf96162d
 workflow-type: tm+mt
 source-wordcount: '660'
-ht-degree: 25%
+ht-degree: 88%
 
 ---
 
@@ -16,64 +16,64 @@ Scopri come creare, visualizzare e modificare gli archivi Git in Cloud Manager.
 
 ## Panoramica {#overview}
 
-Gli archivi vengono utilizzati per archiviare e gestire il codice del progetto utilizzando Git. Ogni programma creato in Cloud Manager dispone di un archivio gestito da Adobe.
+Gli archivi vengono utilizzati per archiviare e gestire il codice del progetto utilizzando Git. Per ogni programma che crei in Cloud Manager viene creato un archivio gestito da Adobe.
 
-Puoi scegliere di creare archivi aggiuntivi per la gestione degli Adobi e aggiungere anche archivi privati. Tutti gli archivi associati al programma possono essere visualizzati nella sezione **Archivi** finestra.
+Puoi creare archivi aggiuntivi gestiti da Adobe e puoi anche aggiungere archivi privati. Tutti gli archivi associati al programma possono essere visualizzati nella finestra **Archivi**.
 
 Gli archivi creati in Cloud Manager sono disponibili per la selezione anche quando aggiungi o modifichi le pipeline. Per ulteriori informazioni, consulta [Pipeline CI-CD](/help/overview/ci-cd-pipelines.md).
 
-Esiste un singolo archivio principale o ramo per ogni pipeline. Con [supporto per i moduli Git secondari,](git-submodules.md) molti rami secondari possono essere inclusi al momento della generazione.
+Esiste un singolo archivio principale o ramo per ogni pipeline. Grazie al [supporto dei sottomoduli Git](git-submodules.md), al momento della creazione è possibile aggiungere molti rami secondari.
 
 ## Finestra Archivi {#repositories-window}
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione e il programma appropriati.
 
-1. Dalla sezione **Panoramica del programma** , seleziona la **Archivi** per passare alla scheda **Archivi** pagina.
+1. Dalla pagina **Panoramica del programma**, seleziona la scheda **Archivi** per passare alla pagina **Archivi**.
 
-1. Il **Archivi** visualizza tutti gli archivi associati al programma.
+1. Nella finestra **Archivi** vengono visualizzati tutti gli archivi associati al programma.
 
    ![Finestra Archivi](assets/repositories.png)
 
-Il **Archivi** fornisce dettagli sugli archivi:
+La finestra **Archivi** fornisce dettagli sugli archivi:
 
 * Tipo di archivio
    * **Adobe** indica archivi gestiti da Adobe
    * **GitHub** indica gli archivi GitHub privati che gestisci
-* Quando è stato creato
+* Data di creazione
 * Pipeline associate all’archivio
 
-Puoi selezionare l’archivio nella finestra e fare clic sul pulsante con i puntini di sospensione per intervenire sull’archivio selezionato.
+In questa finestra puoi selezionare un archivio e fare clic sul pulsante con i puntini di sospensione per intervenire sull’archivio selezionato.
 
-* **[Controlla rami/Crea progetto](#check-branches)** (disponibile solo per archivi di Adobi)
+* **[Controlla rami/Crea progetto](#check-branches)** (disponibile solo per gli archivi Adobe)
 * **[Copia URL archivio](#copy-url)**
 * **[Visualizza e aggiorna](#view-update)**
-* **[Eliminare](#delete)**
+* **[Elimina](#delete)**
 
-![Azioni dell’archivio](assets/repository-actions.png)
+![Azioni per un archivio](assets/repository-actions.png)
 
 ## Aggiunta di archivi {#adding-repositories}
 
-Tocca o fai clic su **Aggiungi archivio** pulsante in **Archivi** finestra per avviare **Aggiungi archivio** procedura guidata.
+Tocca o fai clic sul pulsante **Aggiungi archivio** nella finestra **Archivi** per avviare la procedura guidata **Aggiungi archivio**.
 
-![Aggiunta guidata archivio](assets/add-repository-wizard.png)
+![Procedura guidata Aggiungi archivio](assets/add-repository-wizard.png)
 
-Cloud Manager supporta entrambi gli archivi gestiti da Adobe (**Archivio Adobe**) e i tuoi archivi gestiti autonomamente (**Archivio privato**). I campi obbligatori variano a seconda del tipo di archivio che si sceglie di aggiungere. Per ulteriori informazioni, consulta i seguenti documenti.
+Cloud Manager supporta sia gli archivi gestiti da Adobe (**Archivio Adobe**) sia quelli che puoi gestire direttamente (**Archivio privato**). I campi obbligatori dipendono dal tipo di archivio che scegli di aggiungere. Per ulteriori dettagli, consulta i seguenti documenti.
 
-* [Aggiunta di archivi di Adobi in Cloud Manager](adobe-repositories.md)
+* [Aggiunta di archivi Adobe in Cloud Manager](adobe-repositories.md)
 * [Aggiunta di archivi privati in Cloud Manager](private-repositories.md)
 
 >[!NOTE]
 >
->* Per poter aggiungere un archivio, l’utente deve avere il ruolo **Responsabile dell’implementazione** o **Proprietario business**.
+>* Per poter aggiungere un archivio, l’utente deve avere il ruolo **Manager implementazione** o **Proprietario business**.
 >* Per ogni azienda o organizzazione IMS, vi è un limite di 300 archivi per tutti i programmi.
 
 ## Accedi a dati archivio {#repo-info}
 
-Quando visualizzi gli archivi in **Archivi** , puoi visualizzare i dettagli su come accedere agli archivi gestiti da Adobe a livello di programmazione toccando o facendo clic sul pulsante **Accedi a dati archivio** nella barra degli strumenti.
+Quando visualizzi gli archivi nella finestra **Archivi**, puoi visualizzare i dettagli su come accedere agli archivi gestiti da Adobe a livello di programmazione toccando o facendo clic sul pulsante **Accedi a dati archivio** nella barra degli strumenti.
 
 ![Informazioni sull’archivio](assets/access-repo-info.png)
 
-Il **Informazioni archivio** Viene visualizzata la finestra con i dettagli. Per ulteriori informazioni sull’accesso alle informazioni dell’archivio, consulta il documento [Accesso alle informazioni dell’archivio.](accessing-repositories.md)
+La finestra **Informazioni archivio** si apre con i dettagli. Per ulteriori informazioni sull’accesso alle informazioni dell’archivio, consulta il documento [Accesso alle informazioni sull’archivio.](accessing-repositories.md)
 
 ## Controlla rami {#check-branches}
 
@@ -86,22 +86,22 @@ Il **Controlla rami/Crea progetto** action esegue due funzioni a seconda dello s
 
 ## Copia URL archivio {#copy-url}
 
-Il **Copia URL archivio** copia l’URL dell’archivio selezionato nella **Archivi** negli Appunti da utilizzare altrove.
+L’azione **Copia URL archivio** copia negli Appunti l’URL dell’archivio selezionato nella finestra **Archivi**, per utilizzarlo altrove.
 
 ## Visualizza e aggiorna {#view-update}
 
-Il **Visualizza e aggiorna** azione apre il **Aggiorna archivio** . È possibile visualizzare **Nome** e **Anteprima URL archivio** nonché aggiornare **Descrizione** dell’archivio.
+L’azione **Visualizza e aggiorna** apre la finestra di dialogo **Aggiorna archivio**. Questo permette di visualizzare **Nome** e **Anteprima URL archivio** nonché di aggiornare la **Descrizione** dell’archivio.
 
-![Visualizzare e aggiornare le informazioni del repository](assets/update-repository.png)
+![Visualizzare e aggiornare le informazioni del dell’archivio](assets/update-repository.png)
 
-## Eliminare {#delete}
+## Elimina {#delete}
 
-Il **Elimina** rimuove l’archivio dal progetto. Un archivio non può essere eliminato se è associato a una pipeline.
+L’azione **Elimina** rimuove l’archivio dal progetto. Un archivio non può essere eliminato se è associato a una pipeline.
 
-![Eliminare](assets/delete.png)
+![Elimina](assets/delete.png)
 
 Nota che quando un archivio viene eliminato in Cloud Manager, viene contrassegnato come eliminato e non è più accessibile all’utente, ma viene mantenuto nel sistema a scopo di ripristino.
 
-Se si tenta di creare un nuovo archivio dopo aver eliminato un archivio con lo stesso nome, verrà visualizzato il messaggio di errore `An error has occurred while trying to create repository. Please contact your CSE or Adobe Support.`
+Se tenti di creare un nuovo archivio dopo averne eliminato uno con lo stesso nome, riceverai il messaggio di errore `An error has occurred while trying to create repository. Please contact your CSE or Adobe Support.`
 
-Se ricevi questo messaggio di errore, contatta il supporto Adobe in modo che possano aiutarti a rinominare l’archivio eliminato o scegliere un nome diverso per il tuo nuovo archivio.
+Se ricevi questo messaggio di errore, contatta il supporto Adobe in modo che possa aiutarti a rinominare l’archivio eliminato o scegliere un nome diverso per quello nuovo.

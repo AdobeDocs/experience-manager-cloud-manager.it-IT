@@ -6,7 +6,7 @@ exl-id: e0d103c9-c147-4040-bf53-835e93d78a0b
 source-git-commit: 6f14a8e9ff8e56f9f7b84799733e26b4c0ff8dcb
 workflow-type: tm+mt
 source-wordcount: '868'
-ht-degree: 70%
+ht-degree: 88%
 
 ---
 
@@ -17,7 +17,7 @@ Scopri come configurare Cloud Manager per l’utilizzo di archivi GitHub privati
 
 ## Panoramica {#overview}
 
-Configurando Cloud Manager per l’utilizzo di archivi GitHub privati, puoi convalidare il codice direttamente all’interno dell’archivio GitHub tramite Cloud Manager, eliminando la necessità di sincronizzare in modo coerente il codice con l’archivio di Adobe.
+Con la configurazione di Cloud Manager per l’utilizzo di archivi GitHub privati, puoi convalidare il codice direttamente all’interno dell’archivio GitHub tramite Cloud Manager, eliminando la necessità di sincronizzare in modo coerente il codice con l’archivio Adobe.
 
 >[!NOTE]
 >
@@ -106,19 +106,19 @@ Quando la richiesta pull viene chiusa o unita, la pipeline di qualità del codic
 
 >[!TIP]
 >
->Consulta il documento [Annotazioni di controllo GitHub](github-annotations.md) per informazioni dettagliate sulle informazioni fornite tramite GitHub quando vengono eseguiti i controlli delle richieste di pull.
+>Consulta il documento [Annotazioni di verifica GitHub](github-annotations.md) per informazioni dettagliate sulle informazioni fornite tramite GitHub quando vengono eseguite le verifiche delle richieste pull.
 
 >[!TIP]
 >
->Puoi controllare le pipeline create automaticamente per convalidare ogni richiesta di pull in un archivio privato. Consulta il documento [Configurazione controllo GitHub per archivi privati](github-check-config.md) per ulteriori informazioni.
+>Puoi controllare le pipeline create automaticamente per convalidare ogni richiesta pull in un archivio privato. Per ulteriori informazioni, consulta il documento [Configurazione verifica GitHub per archivi privati](github-check-config.md).
 
 ## Associazione di archivi privati alle pipeline {#pipelines}
 
-Gli archivi privati convalidati possono essere associati a [pipeline full stack e front-end.](/help/overview/ci-cd-pipelines.md)
+Gli archivi privati convalidati possono essere associati a [pipeline full-stack e front-end.](/help/overview/ci-cd-pipelines.md)
 
 >[!NOTE]
 >
->Le pipeline a livello web e di configurazione non sono supportate con archivi privati.
+>Le pipeline a livello web e di configurazione non sono supportate con gli archivi privati.
 
 ## Limitazioni {#limitations}
 
