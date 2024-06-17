@@ -4,9 +4,9 @@ description: Scopri come configurare Cloud Manager per l’utilizzo di archivi G
 feature: Release Information
 exl-id: e0d103c9-c147-4040-bf53-835e93d78a0b
 source-git-commit: 6f14a8e9ff8e56f9f7b84799733e26b4c0ff8dcb
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '868'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -122,11 +122,11 @@ Gli archivi privati convalidati possono essere associati a [pipeline full-stack 
 
 ## Limitazioni {#limitations}
 
-Quando si utilizzano archivi privati con Cloud Manager si applicano alcune limitazioni.
+Quando si utilizzano archivi privati con Cloud Manager si applicano determinate limitazioni.
 
-* Non puoi mettere in pausa la convalida della richiesta di pull utilizzando la verifica GitHub da Cloud Manager.
-   * Se l’archivio GitHub viene convalidato in Cloud Manager, Cloud Manager tenterà sempre di convalidare le richieste pull create per tale archivio.
+* Non puoi mettere in pausa la convalida della richiesta pull tramite la verifica GitHub di Cloud Manager.
+   * Se l’archivio GitHub viene convalidato in Cloud Manager, Cloud Manager tenterà sempre di convalidare le richieste pull create per quell’archivio.
 * Se l’app GitHub di Adobe viene rimossa dall’organizzazione GitHub, la funzione di convalida delle richieste pull verrà rimossa per tutti gli archivi.
-* Quando si utilizzano archivi privati su pipeline full stack di produzione, non verrà creato e inviato alcun tag Git.
-* Le pipeline che utilizzano archivi privati e il trigger di build on-commit non vengono avviati automaticamente quando viene eseguito il push di un nuovo commit nel ramo selezionato.
-* [Funzionalità di riutilizzo degli artefatti](/help/getting-started/project-setup.md#build-artifact-reuse) non si applica agli archivi privati.
+* Quando si utilizzano archivi privati su pipeline di produzione full stack, non verrà creato e inviato alcun tag Git.
+* Le pipeline che utilizzano archivi privati e il trigger di creazione su conferma non vengono avviate automaticamente quando viene eseguito il push di una nuova conferma nel ramo selezionato.
+* La [funzionalità di riutilizzo degli artefatti](/help/getting-started/project-setup.md#build-artifact-reuse) non si applica agli archivi privati.
