@@ -3,10 +3,10 @@ title: Aggiunta di archivi privati in Cloud Manager
 description: Scopri come configurare Cloud Manager per l’utilizzo di archivi GitHub privati.
 feature: Release Information
 exl-id: e0d103c9-c147-4040-bf53-835e93d78a0b
-source-git-commit: 6f14a8e9ff8e56f9f7b84799733e26b4c0ff8dcb
-workflow-type: ht
-source-wordcount: '868'
-ht-degree: 100%
+source-git-commit: 15e733117b4458cc53dec309dad5bde8cb17029f
+workflow-type: tm+mt
+source-wordcount: '855'
+ht-degree: 98%
 
 ---
 
@@ -114,11 +114,7 @@ Quando la richiesta pull viene chiusa o unita, la pipeline di qualità del codic
 
 ## Associazione di archivi privati alle pipeline {#pipelines}
 
-Gli archivi privati convalidati possono essere associati a [pipeline full-stack e front-end.](/help/overview/ci-cd-pipelines.md)
-
->[!NOTE]
->
->Le pipeline a livello web e di configurazione non sono supportate con gli archivi privati.
+Gli archivi privati convalidati possono essere associati a [pipeline full stack.](/help/overview/ci-cd-pipelines.md)
 
 ## Limitazioni {#limitations}
 

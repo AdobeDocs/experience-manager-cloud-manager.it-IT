@@ -2,9 +2,9 @@
 title: Gestione delle pipeline
 description: Scopri come gestire, modificare, eseguire ed eliminare le pipeline esistenti.
 exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
-source-git-commit: 4ab4bd416658c55d72228b701c57a1845d2d0f41
-workflow-type: ht
-source-wordcount: '901'
+source-git-commit: 15e733117b4458cc53dec309dad5bde8cb17029f
+workflow-type: tm+mt
+source-wordcount: '872'
 ht-degree: 100%
 
 ---
@@ -95,10 +95,6 @@ A seconda del tipo di pipeline, puoi annullare l’esecuzione facendo nuovamente
 >[!NOTE]
 >
 >Non è possibile modificare una pipeline in esecuzione.
-
->[!NOTE]
->
->Le pipeline a livello web e di configurazione non sono supportate con gli archivi privati. Per dettagli e un elenco completo delle limitazioni, consulta [Aggiunta di archivi privati in Cloud Manager](/help/managing-code/private-repositories.md).
 
 ## Eliminazione delle pipeline {#deleting-pipelines}
 
