@@ -4,9 +4,9 @@ description: Scopri come configurare Cloud Manager per l’utilizzo di archivi G
 feature: Release Information
 exl-id: e0d103c9-c147-4040-bf53-835e93d78a0b
 source-git-commit: 15e733117b4458cc53dec309dad5bde8cb17029f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '855'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -114,7 +114,7 @@ Quando la richiesta pull viene chiusa o unita, la pipeline di qualità del codic
 
 ## Associazione di archivi privati alle pipeline {#pipelines}
 
-Gli archivi privati convalidati possono essere associati a [pipeline full stack.](/help/overview/ci-cd-pipelines.md)
+Gli archivi privati convalidati possono essere associati a [pipeline full-stack.](/help/overview/ci-cd-pipelines.md)
 
 ## Limitazioni {#limitations}
 

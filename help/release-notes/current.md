@@ -4,9 +4,9 @@ description: Queste sono le note sulla versione 2024.6.0 di Cloud Manager.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: 15e733117b4458cc53dec309dad5bde8cb17029f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '288'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -25,7 +25,7 @@ La data di pubblicazione di [!UICONTROL Cloud Manager] versione 2024.6.0 è il 6
 
 ## Novità {#what-is-new}
 
-* Ora puoi [utilizzare i propri archivi GitHub](/help/managing-code/private-repositories.md) come origini per le pipeline full stack.
+* Ora puoi [utilizzare i tuoi archivi GitHub](/help/managing-code/private-repositories.md) come origini per pipeline full-stack.
    * Inoltre, puoi sfruttare gli archivi GitHub con [sottomoduli Git](/help/managing-code/git-submodules.md), che consentono di gestire meglio le pipeline generate in automatico e utilizzate per la convalida delle richieste pull. Consentono inoltre di definire i comportamenti per le metriche più importanti durante la fase di scansione del codice.
    * [Puoi anche scegliere](/help/managing-code/github-check-config.md) se mantenere la cronologia dei rapporti su GitHub, assegnare un nome alla pipeline e impostare le variabili della pipeline in base alle tue esigenze.
 * Sono state aggiunte nuove regole OakPal all’[Analisi della qualità del codice di Cloud Manager.](/help/using/custom-code-quality-rules.md#oakpal-ui-content-package)
