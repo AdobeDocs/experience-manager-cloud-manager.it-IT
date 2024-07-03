@@ -2,10 +2,10 @@
 title: Gestione degli ambienti
 description: Scopri come utilizzare Cloud Manager per gestire i tuoi ambienti.
 exl-id: 700b0b4c-1e1a-4993-b366-426b14a98f8e
-source-git-commit: ab527beb706ab73a14cc933a3414873dee6b7a9e
-workflow-type: ht
-source-wordcount: '264'
-ht-degree: 100%
+source-git-commit: 116a930eea08b2bb9d288ec153519699754e0374
+workflow-type: tm+mt
+source-wordcount: '277'
+ht-degree: 95%
 
 ---
 
@@ -51,6 +51,10 @@ La schermata **Ambienti** visualizza ogni ambiente di produzione e di staging ne
 * Giallo: non disponibile
 
 ![Scheda Ambienti](/help/assets/Environments-tab.png)
+
+>[!NOTE]
+>
+>Una volta eseguito il provisioning, i dettagli dell’ambiente, come il nome, non possono essere modificati.
 
 >[!NOTE]
 >
