@@ -4,7 +4,7 @@ description: Questo documento fornisce le risposte alle domande più frequenti s
 exl-id: 52c1ca23-5b42-4eae-b63a-4b22ef1a5aee
 source-git-commit: 6be659e02df0657ec7d3dbce8c18c44a327a36f4
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '749'
 ht-degree: 100%
 
 ---

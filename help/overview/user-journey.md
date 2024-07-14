@@ -4,8 +4,8 @@ description: Questo documento illustra i diversi scenari di onboarding e spiega 
 exl-id: deb3429c-dfcf-4e52-9aba-d9368aa240e6
 source-git-commit: b0dbb602253939464ff034941ffbad84b7df77df
 workflow-type: tm+mt
-source-wordcount: '546'
-ht-degree: 100%
+source-wordcount: '539'
+ht-degree: 97%
 
 ---
 
@@ -34,7 +34,7 @@ In qualità di nuovo cliente, inizierai a utilizzare [!UICONTROL Cloud Manager] 
 
 Come parte del processo di onboarding, riceverai un’e-mail di benvenuto che include:
 
-* L’URL di accesso [!UICONTROL Cloud Manager]
+* URL per accedere a [!UICONTROL Cloud Manager]
 * Le istruzioni per l’accesso a [!UICONTROL Experience Cloud]
 * Le istruzioni per utilizzare l’Admin Console per la gestione degli utenti e delle relative autorizzazioni in modo che possano accedere a [!UICONTROL Cloud Manager] se necessario.
 
@@ -48,7 +48,7 @@ Anche un progetto AEM esistente dovrà essere conforme alle best practice consig
 
 Per ulteriori informazioni sui vantaggi dell’aggiornamento a AEM 6.5, consulta il documento [Aggiornamento a AEM 6.5.](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/upgrading/upgrade.html?lang=it)
 
-## Accesso [!UICONTROL Cloud Manager] {#accessing-cloud-manager}
+## Accesso a [!UICONTROL Cloud Manager] {#accessing-cloud-manager}
 
 Effettuerai l’accesso a [!UICONTROL Cloud Manager] e agli ambienti AEM semplicemente registrandoti nella pagina di destinazione di [!UICONTROL Experience Cloud] utilizzando le credenziali di Adobe Identity Management e selezionando AEM dall’interfaccia del selettore della soluzione.
 

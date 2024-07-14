@@ -1,13 +1,13 @@
 ---
 title: Informazioni di accesso all’archivio
 description: Scopri come accedere e gestire gli archivi Git gestiti da Adobe con la gestione self-service dell’account Git da Cloud Manager.
-source-git-commit: b15ef71ae24f51811798d2d25c8f75320e21c01f
-workflow-type: ht
+exl-id: 1cc88c82-67c7-4553-a1b8-d2ab22be466c
+source-git-commit: e93285f7c7495ec9d2f11d289adaf6aaba7e58ea
+workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 100%
 
 ---
-
 
 # Informazioni di accesso all’archivio {#accessing-repos}
 

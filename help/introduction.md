@@ -4,8 +4,8 @@ description: Inizia qui per scoprire Cloud Manager per Adobe Managed Services (A
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
 source-git-commit: a2cea28061304d109a3c9a48650d01255579443c
 workflow-type: tm+mt
-source-wordcount: '1322'
-ht-degree: 100%
+source-wordcount: '1300'
+ht-degree: 99%
 
 ---
 
@@ -45,7 +45,7 @@ L’immagine illustra il flusso di processo CI/CD utilizzato in [!UICONTROL Clou
 
 ![Flusso CI/CD](/help/assets/screen_shot_2018-05-12at73843pm.png)
 
-## Funzioni principali in [!UICONTROL Cloud Manager] {#key-features-in-cloud-manager}
+## Funzioni chiave in [!UICONTROL Cloud Manager] {#key-features-in-cloud-manager}
 
 Di seguito sono riportati approfondimenti su alcune funzioni principali di Cloud Manager.
 
