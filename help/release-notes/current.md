@@ -6,7 +6,7 @@ exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: 87c603a89b99f6984828280cba2041da8c72e839
 workflow-type: tm+mt
 source-wordcount: '238'
-ht-degree: 59%
+ht-degree: 95%
 
 ---
 
@@ -21,13 +21,13 @@ In questa pagina sono documentate le note sulla versione 2024.7.0 di [!UICONTROL
 
 ## Data di pubblicazione {#release-date}
 
-La data di pubblicazione della versione 2024.7.0 di [!UICONTROL Cloud Manager] è il 18 luglio 2024. La prossima versione è pianificata per l’8 agosto 2024.
+La data di pubblicazione di [!UICONTROL Cloud Manager] versione 2024.7.0 è il 18 luglio 2024. La prossima versione è prevista per l’8 agosto 2024.
 
 ## Novità {#what-is-new}
 
-* La [pipeline di produzione](/help/using/production-pipelines.md#adding-production-pipeline) e la [pipeline non di produzione](/help/using/non-production-pipelines.md#adding-non-production-pipeline) attivano **Modifiche Git** per avviare la pipeline in un commit è ora disponibile per [archivi privati.](/help/managing-code/private-repositories.md)
-* Una pipeline di pre-produzione può essere attivata solo manualmente e non può essere configurata come **In caso di modifiche Git**.
-* Per le pipeline di sola produzione, l’elenco delle esecuzioni promozionali include quelle con una versione dell’artefatto maggiore della versione dell’artefatto distribuita nell’ambiente di produzione.
+* Il trigger di [pipeline di produzione](/help/using/production-pipelines.md#adding-production-pipeline) e [pipeline non di produzione](/help/using/non-production-pipelines.md#adding-non-production-pipeline) **Cambiamenti su Git** per avviare la pipeline in un commit è ora disponibile per gli [archivi privati.](/help/managing-code/private-repositories.md)
+* Una pipeline di pre-produzione può essere attivata solo manualmente e non può essere configurata come **Cambiamenti su Git**.
+* Per le pipeline solo di produzione, l’elenco delle esecuzioni promozionali include quelle con una versione dell’artefatto superiore alla versione dell’artefatto distribuita nell’ambiente di produzione.
 * [L&#39;archetipo del progetto AEM](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=it) è stato aggiornato alla [versione 49.](https://github.com/adobe/aem-project-archetype/tree/aem-project-archetype-49)
 
 
