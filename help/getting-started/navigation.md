@@ -2,12 +2,13 @@
 title: Navigazione nell’interfaccia utente di Cloud Manager
 description: Scopri come è organizzata l’interfaccia utente di Cloud Manager e come spostarsi per gestire i programmi e gli ambienti.
 exl-id: 9c1545ce-1c6d-417f-a6f4-fe53caef3433
-source-git-commit: 85c1e22609dc5646d3de0ccc71e9423d4243e13a
+source-git-commit: d4d9a9f38c5a969f276140dca98731c670547a3d
 workflow-type: tm+mt
-source-wordcount: '1292'
-ht-degree: 100%
+source-wordcount: '1439'
+ht-degree: 80%
 
 ---
+
 
 # Navigazione nell’interfaccia utente di Cloud Manager {#navigation}
 
@@ -15,10 +16,10 @@ Scopri come è organizzata l’interfaccia utente di Cloud Manager e come sposta
 
 L’interfaccia utente di Cloud Manager è composta principalmente da due interfacce grafiche:
 
-* [La console Programmi personali](#my-programs) in cui è possibile visualizzare e gestire tutti i programmi.
+* [La console Programmi personali](#my-programs-console) in cui è possibile visualizzare e gestire tutti i programmi.
 * [La finestra Panoramica del programma](#program-overview) dove puoi visualizzare i dettagli di e gestire un singolo programma.
 
-## Console Programmi personali {#my-programs}
+## Console Programmi personali {#my-programs-console}
 
 Quando accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e selezioni l’organizzazione appropriata, vieni indirizzato alla console **Programmi personali**.
 
@@ -27,8 +28,13 @@ Quando accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https:
 La console Programmi personali fornisce una panoramica di tutti i programmi a cui hai accesso nell’organizzazione selezionata. È costituita da diverse elementi.
 
 1. [Barre degli strumenti](#toolbars-my-programs-toolbars) per la selezione di organizzazioni, avvisi e impostazioni account
-1. [Statistiche e invito all’azione](#statistics) per una panoramica dell’attività recente
-1. [Programmi e licenze](#programs-license) per comprendere lo stato attuale della licenza e gestire i programmi
+1. Schede che consentono di attivare/disattivare la visualizzazione corrente dei programmi.
+   * Visualizzazione **Home** (predefinita) che seleziona la visualizzazione **Programmi** con una panoramica di tutti i programmi
+   * **Licenza** che accede alla dashboard delle licenze. La dashboard delle licenze si applica solo ai programmi AEM as a Cloud Service, non ai programmi AMS.
+      * Per determinare il tipo di servizio del programma (AMS o AEMaaCS), consulta la [sezione Schede del programma](#program-cards) di questo documento.
+   * Per impostazione predefinita, le schede sono chiuse e possono essere visualizzate utilizzando il menu hamburger nell&#39;intestazione [Cloud Manager.](#cloud-manager-header)
+1. [Inviti all&#39;azione e statistiche](#cta-statistics) per una panoramica dell&#39;attività recente
+1. [**Programmi** sezione](#my-programs-section) con una panoramica di tutti i programmi
 1. [Collegamenti rapidi](#quick-links) per accedere facilmente alle risorse correlate
 
 >[!TIP]
@@ -45,6 +51,9 @@ La prima è l’intestazione di Cloud Manager, che è persistente quando ti spos
 
 ![Intestazione di Experience Cloud](assets/experience-cloud-header.png)
 
+1. Il menu hamburger che fornisce l&#39;accesso alle schede che possono portare a parti specifiche di un singolo programma o passare dalla dashboard delle licenze alla console **[Programmi personali](#my-programs-console)** a seconda del contesto.
+   * La dashboard delle licenze si applica solo ai programmi AEM as a Cloud Service, non ai programmi AMS.
+   * Per determinare il tipo di servizio del programma (AMS o AEMaaCS), consulta la [sezione Schede del programma](#program-cards) di questo documento.
 1. Il pulsante Cloud Manager ti riporterà alla console Programmi personali di Cloud Manager, indipendentemente dalla tua posizione in Cloud Manager.
 1. Tocca o fai clic sul pulsante Feedback per fornire un feedback ad Adobe su Cloud Manager.
 1. Il selettore organizzazione visualizza l’organizzazione a cui sei attualmente connesso (in questo esempio, Foundation Internal). Tocca o fai clic per passare a un’altra organizzazione se il tuo Adobe ID è associato a più di una.
@@ -64,9 +73,9 @@ La barra degli strumenti del programma fornisce collegamenti per passare da prog
    * Tieni presente che il percorso di onboarding è progettato per AEM as a Cloud Service e non per Cloud Service per AMS, ma molti concetti sono gli stessi.
 1. Il pulsante di azione offre azioni appropriate al contesto, ad esempio la creazione di un nuovo programma.
 
-### Statistiche {#statistics}
+### Inviti all’azione e statistiche {#cta-statistics}
 
-La sezione Statistiche fornisce dati aggregati per l’organizzazione. Ad esempio, se i programmi sono stati configurati correttamente, è possibile che vengano visualizzate le statistiche delle attività degli ultimi 90 giorni, tra cui:
+La sezione invito all’azione e statistiche fornisce dati aggregati per l’organizzazione. Ad esempio, se i programmi sono stati configurati correttamente, è possibile che vengano visualizzate le statistiche delle attività degli ultimi 90 giorni, tra cui:
 
 * Numero di [implementazioni](/help/using/code-deployment.md)
 * Numero di [problemi di qualità del codice](/help/using/code-quality-testing.md) identificati
@@ -74,13 +83,13 @@ La sezione Statistiche fornisce dati aggregati per l’organizzazione. Ad esempi
 
 Oppure, se stai iniziando la configurazione dell’organizzazione, potrebbero essere disponibili suggerimenti sui passaggi successivi o sulle risorse della documentazione.
 
-### Programmi e licenza {#programs-license}
+### Sezione Programmi personali {#my-programs-section}
 
-Il contenuto principale della console Programmi personali è l’elenco dei programmi e lo stato della licenza.
+Il contenuto principale della console Programmi personali è la sezione **Programmi personali** in cui i programmi sono elencati come singole schede. Tocca o fai clic su una scheda per accedere alla pagina **Panoramica del programma** per informazioni dettagliate sul programma.
 
-#### Scheda Programmi {#programs}
-
-La scheda **Programmi** elenca le schede che rappresentano ogni programma a cui hai accesso. Tocca o fai clic su una scheda per accedere alla pagina **Panoramica del programma** per informazioni dettagliate sul programma.
+>[!NOTE]
+>
+>A seconda dei privilegi di cui si dispone, potrebbe non essere possibile selezionare alcuni programmi.
 
 Utilizza le opzioni di ordinamento per trovare meglio il programma necessario.
 
@@ -94,13 +103,17 @@ Utilizza le opzioni di ordinamento per trovare meglio il programma necessario.
 * Vista griglia (predefinito)
 * Vista a elenco
 
+#### Schede programma {#program-cards}
+
 Ogni programma è rappresentato da una scheda (o riga in una tabella) che fornisce una panoramica del programma e collegamenti rapidi per intervenire.
 
 ![Scheda Programma](assets/program-card.png)
 
 * Immagine del programma (se configurata)
 * Nome del programma
-* Tipo di servizio: **Experience Manager Cloud** per [Programmi AEM as a Cloud Service AEM](https://experienceleague.adobe.com/it/docs/experience-manager-cloud-service/content/implementing/home) o **Experience Manager** per i programmi AMS
+* Tipo di servizio:
+   * **Experience Manager** per i programmi AMS
+   * **Experience Manager Cloud** per [programmi AEM as a Cloud Service](https://experienceleague.adobe.com/it/docs/experience-manager-cloud-service/content/implementing/home)
 * Stato
 * Soluzioni configurate
 * Data di creazione
@@ -118,17 +131,13 @@ L’icona con i puntini di sospensione ti permette di accedere alle azioni aggiu
 * [Modifica il programma](/help/getting-started/program-setup.md)
 * Mostra monitoraggio
 
-#### Scheda licenza {#license-tab}
-
-La scheda **Licenza** consente di accedere rapidamente alla dashboard delle licenze.
-
 ### Collegamenti rapidi {#quick-links}
 
 La sezione dei collegamenti rapidi consente di accedere alle risorse correlate di uso comune.
 
 ## Finestra Panoramica del programma {#program-overview}
 
-Dopo aver selezionato un programma nella console Programmi personali, viene visualizzata la Panoramica del programma.
+Dopo aver selezionato un programma nella console [**I miei programmi**,](#my-programs-console) viene visualizzata la panoramica del programma.
 
 ![Panoramica del programma](assets/program-overview.png)
 
