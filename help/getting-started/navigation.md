@@ -3,9 +3,9 @@ title: Navigazione nell’interfaccia utente di Cloud Manager
 description: Scopri come è organizzata l’interfaccia utente di Cloud Manager e come spostarsi per gestire i programmi e gli ambienti.
 exl-id: 9c1545ce-1c6d-417f-a6f4-fe53caef3433
 source-git-commit: d4d9a9f38c5a969f276140dca98731c670547a3d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1439'
-ht-degree: 80%
+ht-degree: 100%
 
 ---
 
@@ -29,12 +29,12 @@ La console Programmi personali fornisce una panoramica di tutti i programmi a cu
 
 1. [Barre degli strumenti](#toolbars-my-programs-toolbars) per la selezione di organizzazioni, avvisi e impostazioni account
 1. Schede che consentono di attivare/disattivare la visualizzazione corrente dei programmi.
-   * Visualizzazione **Home** (predefinita) che seleziona la visualizzazione **Programmi** con una panoramica di tutti i programmi
+   * Visualizzazione **Pagina principale** (predefinita) che seleziona la visualizzazione **Programmi personali** con una panoramica di tutti i programmi
    * **Licenza** che accede alla dashboard delle licenze. La dashboard delle licenze si applica solo ai programmi AEM as a Cloud Service, non ai programmi AMS.
       * Per determinare il tipo di servizio del programma (AMS o AEMaaCS), consulta la [sezione Schede del programma](#program-cards) di questo documento.
-   * Per impostazione predefinita, le schede sono chiuse e possono essere visualizzate utilizzando il menu hamburger nell&#39;intestazione [Cloud Manager.](#cloud-manager-header)
-1. [Inviti all&#39;azione e statistiche](#cta-statistics) per una panoramica dell&#39;attività recente
-1. [**Programmi** sezione](#my-programs-section) con una panoramica di tutti i programmi
+   * Per impostazione predefinita, le schede sono chiuse e possono essere visualizzate utilizzando il menu hamburger nell’[intestazione Cloud Manager.](#cloud-manager-header)
+1. [Statistiche e invito all’azione](#cta-statistics) per una panoramica dell’attività recente
+1. Sezione [**Programmi personali** ](#my-programs-section) con una panoramica di tutti i programmi
 1. [Collegamenti rapidi](#quick-links) per accedere facilmente alle risorse correlate
 
 >[!TIP]
@@ -51,7 +51,7 @@ La prima è l’intestazione di Cloud Manager, che è persistente quando ti spos
 
 ![Intestazione di Experience Cloud](assets/experience-cloud-header.png)
 
-1. Il menu hamburger che fornisce l&#39;accesso alle schede che possono portare a parti specifiche di un singolo programma o passare dalla dashboard delle licenze alla console **[Programmi personali](#my-programs-console)** a seconda del contesto.
+1. Menu hamburger che fornisce l’accesso alle schede che possono portare a parti specifiche di un singolo programma o passare dalla dashboard delle licenze alla console **[Programmi personali](#my-programs-console)** a seconda del contesto.
    * La dashboard delle licenze si applica solo ai programmi AEM as a Cloud Service, non ai programmi AMS.
    * Per determinare il tipo di servizio del programma (AMS o AEMaaCS), consulta la [sezione Schede del programma](#program-cards) di questo documento.
 1. Il pulsante Cloud Manager ti riporterà alla console Programmi personali di Cloud Manager, indipendentemente dalla tua posizione in Cloud Manager.
@@ -73,9 +73,9 @@ La barra degli strumenti del programma fornisce collegamenti per passare da prog
    * Tieni presente che il percorso di onboarding è progettato per AEM as a Cloud Service e non per Cloud Service per AMS, ma molti concetti sono gli stessi.
 1. Il pulsante di azione offre azioni appropriate al contesto, ad esempio la creazione di un nuovo programma.
 
-### Inviti all’azione e statistiche {#cta-statistics}
+### Invito all’azione e statistiche {#cta-statistics}
 
-La sezione invito all’azione e statistiche fornisce dati aggregati per l’organizzazione. Ad esempio, se i programmi sono stati configurati correttamente, è possibile che vengano visualizzate le statistiche delle attività degli ultimi 90 giorni, tra cui:
+La sezione Invito all’azione e statistiche fornisce dati aggregati per l’organizzazione. Ad esempio, se i programmi sono stati configurati correttamente, è possibile che vengano visualizzate le statistiche delle attività degli ultimi 90 giorni, tra cui:
 
 * Numero di [implementazioni](/help/using/code-deployment.md)
 * Numero di [problemi di qualità del codice](/help/using/code-quality-testing.md) identificati
@@ -103,7 +103,7 @@ Utilizza le opzioni di ordinamento per trovare meglio il programma necessario.
 * Vista griglia (predefinito)
 * Vista a elenco
 
-#### Schede programma {#program-cards}
+#### Schede del programma {#program-cards}
 
 Ogni programma è rappresentato da una scheda (o riga in una tabella) che fornisce una panoramica del programma e collegamenti rapidi per intervenire.
 
@@ -137,7 +137,7 @@ La sezione dei collegamenti rapidi consente di accedere alle risorse correlate d
 
 ## Finestra Panoramica del programma {#program-overview}
 
-Dopo aver selezionato un programma nella console [**I miei programmi**,](#my-programs-console) viene visualizzata la panoramica del programma.
+Dopo aver selezionato un programma nella console [**Programmi personali**,](#my-programs-console) viene visualizzata la panoramica del programma.
 
 ![Panoramica del programma](assets/program-overview.png)
 
