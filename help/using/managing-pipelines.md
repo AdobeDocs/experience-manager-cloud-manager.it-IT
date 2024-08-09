@@ -2,10 +2,10 @@
 title: Gestione delle pipeline
 description: Scopri come gestire, modificare, eseguire ed eliminare le pipeline esistenti.
 exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
-source-git-commit: 15e733117b4458cc53dec309dad5bde8cb17029f
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '872'
-ht-degree: 100%
+source-wordcount: '848'
+ht-degree: 67%
 
 ---
 
@@ -36,19 +36,19 @@ Nella parte inferiore dell’elenco delle pipeline sono disponibili le opzioni g
 
 ## Finestra Pipeline {#pipelines}
 
-La finestra **Pipeline** mostra un elenco completo di tutte le pipeline per il programma selezionato. Questa funzione è utile in quanto presenta informazioni più complete rispetto a quelle disponibili nella [Scheda pipeline.](#pipeline-card)
+La finestra **Pipeline** mostra un elenco completo di tutte le pipeline per il programma selezionato. Questo è utile in quanto presenta informazioni più complete rispetto a quelle disponibili nella [scheda pipeline](#pipeline-card).
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione e il programma appropriati.
 
-1. Nella pagina **Panoramica del programma**, tocca o fai clic sulla scheda **Pipeline** per passare alla finestra **Pipeline**.
+1. Dalla pagina **Panoramica del programma**, fai clic sulla scheda **Pipeline** per passare alla finestra **Pipeline**.
 
-1. Qui puoi visualizzare un elenco di tutte le pipeline del programma, nonché avviare e interrompere l’esecuzione della pipeline come faresti nella **Scheda Pipeline**.
+1. Qui puoi visualizzare un elenco di tutte le pipeline per il programma e avviare e arrestare l&#39;esecuzione della pipeline come faresti nella **scheda Pipeline**.
 
-Toccando o facendo clic sull’icona `i` verranno visualizzati i dettagli sull’ultima o attuale esecuzione della pipeline.
+Facendo clic sull&#39;icona `i` vengono visualizzati i dettagli sull&#39;ultima esecuzione o sull&#39;esecuzione corrente della pipeline.
 
 ![Dettagli di esecuzione della pipeline](/help/assets/configure-pipelines/pipeline-status.png)
 
-Se tocchi o fai clic su **Visualizza dettagli**, verrai reindirizzato ai [dettagli dell’esecuzione della pipeline.](#view-details)
+Facendo clic su **Visualizza dettagli** puoi visualizzare [i dettagli dell&#39;esecuzione della pipeline](#view-details).
 
 ## Finestra Attività {#activity}
 
@@ -56,25 +56,25 @@ La finestra **Attività** mostra un elenco completo di tutte le esecuzioni di pi
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione e il programma appropriati.
 
-1. Nella pagina **Panoramica del programma**, tocca o fai clic sulla scheda **Attività** per passare alla finestra **Attività**.
+1. Dalla pagina **Panoramica programma**, fai clic sulla scheda **Attività** per passare alla finestra **Attività**.
 
 1. Qui puoi visualizzare un elenco di tutte le esecuzioni della pipeline del programma, comprese le esecuzioni correnti e quelle precedenti.
 
-Toccando o facendo clic su `i` verranno mostrati i dettagli sull’esecuzione della pipeline selezionata.
+Facendo clic sull&#39;icona `i` vengono visualizzati i dettagli sull&#39;esecuzione della pipeline selezionata.
 
 ![Dettagli di esecuzione della pipeline](/help/assets/configure-pipelines/pipeline-activity.png)
 
-Se tocchi o fai clic su **Visualizza dettagli**, verrai reindirizzato ai [dettagli dell’esecuzione della pipeline.](#view-details)
+Facendo clic su **Visualizza dettagli** puoi visualizzare [i dettagli dell&#39;esecuzione della pipeline](#view-details).
 
 ## Esecuzione delle pipeline {#running-pipelines}
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione e il programma appropriati.
 
-1. Dalla pagina **Panoramica del programma**, accedi alla scheda **Pipeline** e fai clic sul pulsante con i puntini di sospensione a fianco della pipeline eseguita, quindi seleziona **Esegui** dal menu.
+1. Passa alla scheda **Pipeline** dalla pagina **Panoramica del programma** e fai clic sul pulsante con i puntini di sospensione accanto alla pipeline eseguita, quindi seleziona **Esegui** dal menu.
 
 1. L’esecuzione della pipeline viene avviata ed è indicata dalla colonna **Stato**.
 
-Per visualizzare i dettagli dell’esecuzione, fai nuovamente clic sul pulsante con i puntini di sospensione e seleziona **[Visualizza dettagli.](#view-details)**
+Per visualizzare i dettagli dell’esecuzione, fai nuovamente clic sul pulsante con i puntini di sospensione e seleziona **[Visualizza dettagli](#view-details)**.
 
 A seconda del tipo di pipeline, puoi annullare l’esecuzione facendo nuovamente clic sul pulsante con i puntini di sospensione e selezionando **Annulla**.
 
@@ -82,7 +82,7 @@ A seconda del tipo di pipeline, puoi annullare l’esecuzione facendo nuovamente
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione e il programma appropriati.
 
-1. Dalla pagina **Panoramica del programma**, accedi alla scheda **Pipeline** e fai clic sul pulsante con i puntini di sospensione a fianco della pipeline che desideri modificare, quindi seleziona **Modifica** dal menu.
+1. Passa alla scheda **Pipeline** dalla pagina **Panoramica del programma**, fai clic sul pulsante con i puntini di sospensione accanto alla pipeline da modificare e seleziona **Modifica** dal menu.
 
 1. Viene visualizzata la finestra di dialogo **Modifica pipeline di produzione** o **Modifica pipeline non di produzione**, che consente di modificare i dettagli inseriti durante la creazione della pipeline.
 
@@ -100,7 +100,7 @@ A seconda del tipo di pipeline, puoi annullare l’esecuzione facendo nuovamente
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione e il programma appropriati.
 
-1. Dalla pagina **Panoramica del programma**, accedi alla scheda **Pipeline** e fai clic sul pulsante con i puntini di sospensione a fianco della pipeline eseguita, quindi seleziona **Elimina** dal menu.
+1. Passa alla scheda **Pipeline** dalla pagina **Panoramica del programma** e fai clic sul pulsante con i puntini di sospensione accanto alla pipeline eseguita, quindi seleziona **Elimina** dal menu.
 
 >[!NOTE]
 >
@@ -110,7 +110,7 @@ A seconda del tipo di pipeline, puoi annullare l’esecuzione facendo nuovamente
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione e il programma appropriati.
 
-1. Dalla pagina **Panoramica del programma**, accedi alla scheda **Pipeline** e fai clic sul pulsante con i puntini di sospensione a fianco della pipeline eseguita, quindi seleziona **Visualizza dettagli** dal menu.
+1. Passa alla scheda **Pipeline** dalla pagina **Panoramica del programma** e fai clic sul pulsante con i puntini di sospensione accanto alla pipeline eseguita, quindi seleziona **Visualizza dettagli** dal menu.
 
 1. L’opzione reindirizza alla pagina dei dettagli della pipeline in esecuzione.
 
@@ -124,11 +124,11 @@ Una volta completato un passaggio della pipeline, viene presentato un riepilogo.
 
 ![Riepilogo del passaggio](/help/assets/configure-pipelines/pipeline-step.png)
 
-Tocca o fai clic sul collegamento **Visualizza dettagli** per visualizzare la sezione **Durata**. Ciò include la durata media della pipeline in base alla tendenza storica per quel programma.
+Fai clic sul collegamento **Visualizza dettagli** per visualizzare la sezione **Durata**. Ciò include la durata media della pipeline in base alla tendenza storica per quel programma.
 
 ![Durata](/help/assets/configure-pipelines/duration.png)
 
-Se la pipeline conteneva un passaggio **Scansione del codice** durante il quale sono stati rilevati dei problemi, tocca o fai clic sul pulsante **Scarica dettagli** per visualizzare un elenco dei [test di qualità del codice](/help/using/code-quality-testing.md) che non sono stati superati.
+Se la pipeline conteneva un passaggio **Analisi del codice** che ha generato problemi, puoi fare clic sul pulsante **Scarica dettagli** per visualizzare un elenco di [test di qualità del codice](/help/using/code-quality-testing.md) non superati.
 
 ![Problemi di qualità del codice](assets/managing-pipelines-code-quality-issues.png)
 

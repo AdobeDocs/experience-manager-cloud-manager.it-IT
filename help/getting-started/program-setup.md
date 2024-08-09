@@ -2,10 +2,10 @@
 title: Configurazione del programma
 description: Dopo l’onboarding, il proprietario business dovrà effettuare una configurazione iniziale del programma.
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
-source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 99%
+source-wordcount: '584'
+ht-degree: 91%
 
 ---
 
@@ -70,7 +70,7 @@ Il programma verrà creato. Potrebbero essere necessari diversi minuti per il pr
 
 Tieni presente che le modifiche vengono salvate immediatamente in Cloud Manager, ma non verranno applicate negli ambienti fino alla successiva esecuzione della pipeline.
 
-Se non hai ancora creato una pipeline, consulta i documenti [Configurazione delle pipeline di produzione](/help/using/production-pipelines.md) e [Configurazione di pipeline non di produzione.](/help/using/non-production-pipelines.md)
+Se non hai ancora creato una pipeline, consulta i documenti [Configurazione delle pipeline di produzione](/help/using/production-pipelines.md) e [Configurazione delle pipeline non di produzione](/help/using/non-production-pipelines.md).
 
 ## Passaggio tra programmi {#swithing-programs}
 
@@ -86,7 +86,7 @@ I KPI dei siti vengono misurati nei test eseguiti nell’ambiente di pre-produzi
 
 Ad esempio, un utente che si aspetta una media di 1000 visualizzazioni di pagina al minuto nel proprio ambiente di produzione e dispone di quattro server di pubblicazione/dispatcher in produzione dovrebbe ridimensionarla a 250 visualizzazioni di pagina al minuto. Ciò presuppone che il suo ambiente di pre-produzione sia costituito da una sola coppia di server dispatcher/di pubblicazione.
 
-Il test delle prestazioni delle risorse viene eseguito caricando ripetutamente le risorse durante un periodo di test di 30 minuti e misurando il tempo di elaborazione per ciascuna risorsa assieme a varie metriche a livello di sistema.
+Il test delle prestazioni di Assets viene eseguito caricando ripetutamente le risorse durante un periodo di test di 30 minuti e misurando il tempo di elaborazione per ciascuna risorsa e varie metriche a livello di sistema.
 
 È possibile che davanti all’ambiente di produzione sia presente una rete per la distribuzione dei contenuti (CDN, Content Delivery Network) come Akamai o CloudFront. Poiché [!UICONTROL Cloud Manager] esegue direttamente i test nell’ambiente di pre-produzione, l’indicatore KPI deve riflettere solo il traffico che si prevede passi attraverso la rete CDN, ovvero i risconti mancanti nella cache. In genere si tratta di un sottoinsieme relativamente piccolo del traffico di produzione totale.
 

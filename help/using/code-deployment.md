@@ -2,10 +2,10 @@
 title: Distribuzione del codice
 description: Scopri come distribuire il codice e cosa accade in Cloud Manager quando lo fai.
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-source-git-commit: ab527beb706ab73a14cc933a3414873dee6b7a9e
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '1648'
-ht-degree: 100%
+source-wordcount: '1637'
+ht-degree: 94%
 
 ---
 
@@ -109,16 +109,16 @@ Quando Cloud Manager viene implementato in topologie non di produzione, l’obie
 
 1. Ciascun artefatto AEM viene distribuito in ogni istanza di AEM tramite le API della Gestione pacchetti, con le dipendenze dei pacchetti che determinano l’ordine di distribuzione.
 
-   * Per ulteriori informazioni su come utilizzare i pacchetti per installare nuove funzionalità, trasferire contenuti tra le istanze ed eseguire il backup del contenuto dell’archivio, consulta il documento [Gestione pacchetti.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/package-manager.html?lang=it)
+   * Per ulteriori informazioni su come utilizzare i pacchetti per installare nuove funzionalità, trasferire contenuti tra le istanze ed eseguire il backup del contenuto dell&#39;archivio, vedere [Gestione pacchetti](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/package-manager.html?lang=it).
 
    >[!NOTE]
    >
-   >Tutti gli artefatti AEM vengono distribuiti sia all’autore che agli editori. Le modalità di esecuzione devono essere utilizzate quando sono necessarie configurazioni specifiche per il nodo. Per ulteriori informazioni su come le modalità di esecuzione consentono di regolare l’istanza di AEM per uno scopo specifico, fare riferimento a [Eseguire la modalità sezione del documento Distribuzione su AEM as a Cloud Service.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=it#runmodes)
+   >Tutti gli artefatti AEM vengono distribuiti sia all’autore che agli editori. Le modalità di esecuzione devono essere utilizzate quando sono necessarie configurazioni specifiche per il nodo. Per ulteriori informazioni su come le modalità di esecuzione consentono di regolare l&#39;istanza AEM per uno scopo specifico, vedere la sezione [Modalità di esecuzione del documento Distribuzione in AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=it#runmodes).
 
 1. L’artefatto del dispatcher viene distribuito a ciascun dispatcher nel modo seguente:
 
    1. Le configurazioni correnti vengono sottoposte a backup e copiate in un percorso temporaneo.
-   1. Tutte le configurazioni vengono eliminate tranne i file immutabili. Consulta il documento [Configurazioni del Dispatcher](/help/getting-started/dispatcher-configurations.md) per ulteriori dettagli. Questo cancella le directory per garantire che non vengano lasciati indietro i file orfani.
+   1. Tutte le configurazioni vengono eliminate tranne i file immutabili. Consulta [Configurazioni Dispatcher](/help/getting-started/dispatcher-configurations.md) per ulteriori dettagli. Questo cancella le directory per garantire che non vengano lasciati indietro i file orfani.
    1. L’artefatto viene estratto nella directory `httpd`. I file immutabili non vengono sovrascritti. Eventuali modifiche apportate ai file immutabili nell’archivio Git verranno ignorate al momento della distribuzione. Questi file sono fondamentali per il framework del dispatcher di AMS e non possono essere modificati.
    1. Apache esegue un test di configurazione. Se non viene rilevato alcun errore, il servizio viene ricaricato. Se si verifica un errore, le configurazioni vengono ripristinate dal backup, il servizio viene ricaricato e l’errore viene segnalato a Cloud Manager.
    1. Ogni percorso specificato nella configurazione della pipeline viene invalidato o svuotato dalla cache del dispatcher.
@@ -200,7 +200,7 @@ In tali circostanze, in cui è possibile eseguire una riesecuzione, la pagina di
 
 ### Riesecuzione dell’API {#reexecute-api}
 
-Oltre a essere disponibile nell’interfaccia utente, è possibile utilizzare l’[API di Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#tag/Pipeline-Execution) per attivare le riesecuzioni e identificare le esecuzioni attivate come riesecuzioni.
+Oltre a essere disponibile nell&#39;interfaccia utente, puoi utilizzare [l&#39;API di Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#tag/Pipeline-Execution) per attivare le riesecuzioni e identificare le esecuzioni attivate come riesecuzioni.
 
 #### Attivazione di una riesecuzione {#triggering}
 

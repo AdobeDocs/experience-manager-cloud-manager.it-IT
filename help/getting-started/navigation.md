@@ -2,10 +2,10 @@
 title: Navigazione nell’interfaccia utente di Cloud Manager
 description: Scopri come è organizzata l’interfaccia utente di Cloud Manager e come spostarsi per gestire i programmi e gli ambienti.
 exl-id: 9c1545ce-1c6d-417f-a6f4-fe53caef3433
-source-git-commit: d4d9a9f38c5a969f276140dca98731c670547a3d
-workflow-type: ht
-source-wordcount: '1439'
-ht-degree: 100%
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+workflow-type: tm+mt
+source-wordcount: '1410'
+ht-degree: 80%
 
 ---
 
@@ -32,14 +32,14 @@ La console Programmi personali fornisce una panoramica di tutti i programmi a cu
    * Visualizzazione **Pagina principale** (predefinita) che seleziona la visualizzazione **Programmi personali** con una panoramica di tutti i programmi
    * **Licenza** che accede alla dashboard delle licenze. La dashboard delle licenze si applica solo ai programmi AEM as a Cloud Service, non ai programmi AMS.
       * Per determinare il tipo di servizio del programma (AMS o AEMaaCS), consulta la [sezione Schede del programma](#program-cards) di questo documento.
-   * Per impostazione predefinita, le schede sono chiuse e possono essere visualizzate utilizzando il menu hamburger nell’[intestazione Cloud Manager.](#cloud-manager-header)
+   * Per impostazione predefinita, le schede sono chiuse e possono essere visualizzate utilizzando il menu hamburger nell&#39;[intestazione Cloud Manager](#cloud-manager-header).
 1. [Statistiche e invito all’azione](#cta-statistics) per una panoramica dell’attività recente
 1. Sezione [**Programmi personali** ](#my-programs-section) con una panoramica di tutti i programmi
 1. [Collegamenti rapidi](#quick-links) per accedere facilmente alle risorse correlate
 
 >[!TIP]
 >
->Per ulteriori informazioni sui programmi, consulta il documento [Programmi e tipi di programmi](/help/getting-started/program-setup.md).
+>Per informazioni dettagliate sui programmi, vedere [Programmi e tipi di programmi](/help/getting-started/program-setup.md).
 
 ### Barre degli strumenti {#my-programs-toolbars}
 
@@ -55,11 +55,11 @@ La prima è l’intestazione di Cloud Manager, che è persistente quando ti spos
    * La dashboard delle licenze si applica solo ai programmi AEM as a Cloud Service, non ai programmi AMS.
    * Per determinare il tipo di servizio del programma (AMS o AEMaaCS), consulta la [sezione Schede del programma](#program-cards) di questo documento.
 1. Il pulsante Cloud Manager ti riporterà alla console Programmi personali di Cloud Manager, indipendentemente dalla tua posizione in Cloud Manager.
-1. Tocca o fai clic sul pulsante Feedback per fornire un feedback ad Adobe su Cloud Manager.
-1. Il selettore organizzazione visualizza l’organizzazione a cui sei attualmente connesso (in questo esempio, Foundation Internal). Tocca o fai clic per passare a un’altra organizzazione se il tuo Adobe ID è associato a più di una.
-1. Tocca o fai clic sul selettore delle soluzioni per passare rapidamente ad altre soluzioni di Experience Cloud.
+1. Fai clic sul pulsante Feedback per fornire un feedback all’Adobe su Cloud Manager.
+1. Il selettore organizzazione visualizza l’organizzazione a cui sei attualmente connesso (in questo esempio, Foundation Internal). Fai clic su per passare a un’altra organizzazione se l’Adobe ID è associata a più.
+1. Facendo clic sul selettore delle soluzioni è possibile passare rapidamente ad altre soluzioni di Experience Cloud.
 1. L’icona dell’aiuto fornisce un accesso rapido alle risorse di apprendimento e supporto.
-1. Questa icona viene contrassegnata con il numero di [notifiche](/help/using/notifications.md) incomplete attualmente assegnate.
+1. L&#39;icona delle notifiche è contrassegnata con il numero di [notifiche](/help/using/notifications.md) incomplete attualmente assegnate
 1. Seleziona l’icona che rappresenta l’utente per accedere alle impostazioni utente. Se non hai configurato un’immagine utente, viene assegnata un’icona in modo casuale.
 
 #### Barra degli strumenti del programma {#program-toolbar}
@@ -85,7 +85,7 @@ Oppure, se stai iniziando la configurazione dell’organizzazione, potrebbero es
 
 ### Sezione Programmi personali {#my-programs-section}
 
-Il contenuto principale della console Programmi personali è la sezione **Programmi personali** in cui i programmi sono elencati come singole schede. Tocca o fai clic su una scheda per accedere alla pagina **Panoramica del programma** per informazioni dettagliate sul programma.
+Il contenuto principale della console Programmi personali è la sezione **Programmi personali** in cui i programmi sono elencati come singole schede. Fare clic su una scheda per accedere alla pagina **Panoramica del programma** per i dettagli sul programma.
 
 >[!NOTE]
 >
@@ -137,13 +137,13 @@ La sezione dei collegamenti rapidi consente di accedere alle risorse correlate d
 
 ## Finestra Panoramica del programma {#program-overview}
 
-Dopo aver selezionato un programma nella console [**Programmi personali**,](#my-programs-console) viene visualizzata la panoramica del programma.
+Dopo aver selezionato un programma nella console [**I miei programmi**](#my-programs-console), viene visualizzata la panoramica del programma.
 
 ![Panoramica del programma](assets/program-overview.png)
 
 La panoramica del programma consente di accedere a tutti i dettagli di un programma di Cloud Manager. Come la console Programmi personali, è composta da diverse parti.
 
-1. [Barre degli strumenti](#program-overview-toolbar) per tornare rapidamente alla console Programmi personali e passare al programma
+1. [Barre degli strumenti](#program-overview-toolbar) per tornare rapidamente alla console Programmi e passare al programma
 1. [Schede](#program-tabs) per passare da un aspetto all’altro del programma
 1. Un [invito all’azione](#cta) basato sulle ultime azioni del programma
 1. Una [panoramica degli ambienti](#environments) del programma
@@ -152,7 +152,7 @@ La panoramica del programma consente di accedere a tutti i dettagli di un progra
 
 ### Barre degli strumenti {#program-overview-toolbar}
 
-Le barre degli strumenti per la panoramica del programma sono molto simili a quelle della console [Programmi personali.](#my-programs-toolbars) Qui sono illustrate solo le differenze.
+Le barre degli strumenti per la panoramica del programma sono molto simili a quelle della console [Programmi personali](#my-programs-toolbars). Solo le differenze sono illustrate qui.
 
 #### Intestazione di Cloud Manager {#cloud-manager-header-2}
 
@@ -160,7 +160,7 @@ L’intestazione di Cloud Manager dispone di un menu hamburger che si apre autom
 
 ![Menu hamburger di Cloud Manager](assets/cloud-manager-hamburger.png)
 
-Tocca o fai clic sull’icona del menu hamburger per nascondere le schede.
+Fai clic sull’icona del menu hamburger per nascondere le schede.
 
 #### Barra degli strumenti del programma {#program-toolbar-2}
 
@@ -190,7 +190,7 @@ Utilizza il menu hamburger in [Intestazione di Cloud Manager](#cloud-manager-hea
 
 ### Invito all’azione {#cta}
 
-La sezione relativa agli inviti all’azione fornisce informazioni utili in base allo stato del programma. Per un nuovo programma puoi vedere i passaggi successivi offerti e un promemoria della data di pubblicazione, [impostato durante la creazione del programma.](/help/getting-started/program-setup.md)
+La sezione relativa agli inviti all’azione fornisce informazioni utili in base allo stato del programma. Per un nuovo programma è possibile visualizzare i passaggi successivi offerti e un promemoria della data di pubblicazione, [impostata durante la creazione del programma](/help/getting-started/program-setup.md).
 
 Per un programma live, lo stato dell’ultima implementazione con collegamenti per i dettagli e l’avvio di una nuova implementazione.
 
@@ -198,11 +198,11 @@ Per un programma live, lo stato dell’ultima implementazione con collegamenti p
 
 ### Scheda Ambienti {#environments}
 
-La scheda **Ambienti** offre una panoramica degli ambienti e collegamenti per azioni rapide.
+La scheda **Ambienti** offre una panoramica degli ambienti e dei collegamenti per le azioni rapide.
 
 Nella scheda **Ambienti** sono elencati solo tre ambienti. Per visualizzare tutti gli ambienti del programma, fai clic su **Mostra tutto**.
 
-Consulta il documento [Gestione degli ambienti](/help/using/managing-environments.md) per informazioni dettagliate su come gestire gli ambienti.
+Per informazioni dettagliate su come gestire gli ambienti, consulta [Gestione degli ambienti](/help/using/managing-environments.md).
 
 ### Scheda Pipeline {#pipelines}
 
@@ -210,7 +210,7 @@ La scheda **Pipeline** offre una panoramica delle pipeline e dei collegamenti pe
 
 Nella scheda **Pipeline** sono elencate solo tre pipeline. Per visualizzare tutte le pipeline del programma, fai clic su **Mostra tutto**.
 
-Consulta il documento [Gestione delle pipeline](/help/using/managing-pipelines.md) per informazioni dettagliate su come gestirle.
+Consulta [Gestione delle pipeline](/help/using/managing-pipelines.md) per informazioni dettagliate su come gestire le pipeline.
 
 ### Risorse utili {#useful-resources}
 

@@ -2,10 +2,10 @@
 title: Informazioni di accesso all’archivio
 description: Scopri come accedere e gestire gli archivi Git gestiti da Adobe con la gestione self-service dell’account Git da Cloud Manager.
 exl-id: 1cc88c82-67c7-4553-a1b8-d2ab22be466c
-source-git-commit: e93285f7c7495ec9d2f11d289adaf6aaba7e58ea
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '400'
-ht-degree: 100%
+source-wordcount: '394'
+ht-degree: 82%
 
 ---
 
@@ -23,7 +23,7 @@ Cloud Manager consente di recuperare facilmente le informazioni sull’accesso a
 
    ![Pulsante Accedi a dati archivio nella scheda Ambienti](assets/pipelines-card.png)
 
-1. Tocca o fai clic sul pulsante **Accedi a dati archivio** per aprire la finestra di dialogo **Informazioni archivio** e visualizza:
+1. Fai clic sul pulsante **Accedi a dati archivio** per aprire la finestra di dialogo **Informazioni archivio** e visualizzare:
 
    * Il nome utente di Git.
    * La password di Git.
@@ -32,9 +32,9 @@ Cloud Manager consente di recuperare facilmente le informazioni sull’accesso a
 
    ![Finestra dati archivio](assets/access-repo-info.png)
 
-1. Per accedere alla password, è necessario generare una nuova password. Per farlo, tocca o fai clic sul pulsante **Genera password**.
+1. Per accedere alla password, è necessario generare una nuova password. A tale scopo, fare clic sul pulsante **Genera password**.
 
-1. Conferma la generazione password nella finestra di dialogo **Procedere?** toccando o facendo clic su **Genera password**.
+1. Confermare la generazione della password nella finestra di dialogo **Continuare...** facendo clic su **Genera password**.
 
    ![Conferma la generazione della password](assets/confirm-password-generation.png)
 
@@ -55,10 +55,10 @@ Con queste credenziali puoi clonare una copia locale dell’archivio, apportare 
 
 ## Accesso alle informazioni dell’archivio dalla finestra Archivi {#repositories-window}
 
-Un pulsante **Accedi a dati archivio** è disponibile anche nella barra degli strumenti della finestra [**Archivi**.](managing-repositories.md) visualizza le stesse informazioni sull’accesso agli archivi gestiti da Adobe.
+Un pulsante **Accedi a dati archivio** è disponibile anche nella barra degli strumenti della finestra [**Archivi**](managing-repositories.md). Vengono visualizzate le stesse informazioni sull&#39;accesso agli archivi gestiti da Adobe.
 
 ## Revoca di una password di accesso {#revoke-password}
 
-Puoi revocare una password di accesso in qualsiasi momento. Per farlo, [crea un ticket di supporto per questa richiesta.](https://experienceleague.adobe.com/?support-solution=Experience+Manager&amp;support-tab=home?lang=it#support)
+Puoi revocare una password di accesso in qualsiasi momento. Per farlo, [crea un ticket di supporto per questa richiesta](https://experienceleague.adobe.com/?support-solution=Experience+Manager&amp;support-tab=home?lang=it#support).
 
 Il ticket sarà trattato con priorità alta e dovrebbe essere revocato nell’arco della giornata.

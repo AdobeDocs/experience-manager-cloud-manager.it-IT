@@ -2,10 +2,10 @@
 title: Autorizzazioni basate sul ruolo
 description: Scopri le autorizzazioni preconfigurate basate sui ruoli di Cloud Manager per gestire l’accesso alle risorse cloud.
 exl-id: b66533fb-db93-40e8-919d-581261fdbf24
-source-git-commit: fc1bc626dc18d25ce8c5bbae71396b234b5676db
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '620'
-ht-degree: 100%
+source-wordcount: '617'
+ht-degree: 88%
 
 ---
 
@@ -22,9 +22,9 @@ ht-degree: 100%
 
 ## Ruoli utente {#user-roles}
 
-La gestione dei ruoli per [!UICONTROL Cloud Manager] viene eseguita utilizzando [Admin Console.](https://helpx.adobe.com/it/enterprise/using/admin-console.html) Qualsiasi utente di [!UICONTROL Cloud Manager] deve essere membro dell’organizzazione IMS del cliente e disporre del contesto di prodotto di Adobe Managed Services. Le appartenenze a ruoli specifici vengono fornite aggiungendo l’utente a un profilo di prodotto [!UICONTROL Cloud Manager] nell’Admin Console.
+La gestione dei ruoli per [!UICONTROL Cloud Manager] viene eseguita utilizzando [Admin Console](https://helpx.adobe.com/it/enterprise/using/admin-console.html). Qualsiasi utente di [!UICONTROL Cloud Manager] deve essere membro dell&#39;organizzazione IMS del cliente e disporre del contesto di prodotto Managed Services di Adobe. Le appartenenze a ruoli specifici vengono fornite aggiungendo l’utente a un profilo di prodotto [!UICONTROL Cloud Manager] nell’Admin Console.
 
-Per ulteriori informazioni su come configurare i ruoli, consulta il documento [Configurazione di utenti e ruoli.](/help/requirements/users-and-roles.md)
+Per ulteriori informazioni su come impostare i ruoli, consulta il documento [Configurazione di utenti e ruoli](/help/requirements/users-and-roles.md).
 
 In questa tabella sono elencati i ruoli che è possibile assegnare nell’Admin Console.
 
@@ -65,8 +65,8 @@ A ciascuno dei ruoli sono associate autorizzazioni preconfigurate specifiche. In
 | Leggi Passaggio | Consultare i risultati delle metriche di qualità del passaggio | x | x | x | x | x |
 | Generazione del token di accesso personale | Accesso a Git |  | x |  | x |  |
 
-Per ulteriori informazioni su come configurare gli utenti, consulta il documento [Configurazione di utenti e ruoli.](/help/requirements/users-and-roles.md)
+Per ulteriori informazioni su come configurare gli utenti, consulta il documento [Configurazione di utenti e ruoli](/help/requirements/users-and-roles.md).
 
 >[!TIP]
 >
->Sono inoltre disponibili profili di autorizzazione personalizzati con autorizzazioni configurabili. Per maggiori dettagli, consulta il documento [Autorizzazioni personalizzate](/help/using/custom-permissions.md).
+>Sono inoltre disponibili profili di autorizzazione personalizzati con autorizzazioni configurabili. Per ulteriori dettagli, vedi [Autorizzazioni personalizzate](/help/using/custom-permissions.md).

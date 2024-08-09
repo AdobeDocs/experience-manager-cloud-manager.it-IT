@@ -2,10 +2,10 @@
 title: Introduzione a Cloud Manager per AMS
 description: Inizia qui per scoprire Cloud Manager per Adobe Managed Services (AMS) e come consente alle organizzazioni di gestire autonomamente Adobe Experience Manager nel cloud.
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
-source-git-commit: a2cea28061304d109a3c9a48650d01255579443c
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '1300'
-ht-degree: 99%
+source-wordcount: '1295'
+ht-degree: 88%
 
 ---
 
@@ -29,7 +29,7 @@ Inizia qui per scoprire Cloud Manager per Adobe Manage Services (AMS) e come con
 >
 >Questa documentazione descrive in modo specifico le funzioni di Cloud Manager per Adobe Managed Services (AMS).
 >
->La documentazione equivalente per AEM as a Cloud Service si trova nella [documentazione di AEM as a Cloud Service.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/home.html?lang=it)
+>La documentazione equivalente per AEM as a Cloud Service si trova nella [documentazione di AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/home.html?lang=it).
 
 Con Cloud Manager, il team di sviluppo potrà usufruire delle seguenti funzionalità:
 
@@ -55,7 +55,7 @@ L’interfaccia utente di [!UICONTROL Cloud Manager] ti offre un accesso semplif
 
 Potrai definire gli indicatori di prestazioni chiave (KPI, Key Performance Indicators) specifici per l’applicazione, come i picchi di visualizzazioni della pagina al minuto e i tempi di risposta previsti per il caricamento di una pagina, che costituiscono la base per la misurazione di una distribuzione di successo. È possibile definire facilmente ruoli e autorizzazioni per i diversi membri del gruppo. Se da una parte la nuova interfaccia self-service riporta il controllo nelle tue mani, offre anche collegamenti alle best practice e accesso ai consigli degli esperti di Adobe, in grado di fornire il supporto necessario secondo necessità.
 
-Per esplorare e iniziare a utilizzare l’interfaccia utente di [!UICONTROL Cloud Manager], consulta il documento [Primo accesso.](/help/getting-started/first-time-login.md)
+Per esplorare e iniziare a utilizzare l&#39;interfaccia utente di [!UICONTROL Cloud Manager], consulta il documento [Primo accesso](/help/getting-started/first-time-login.md).
 
 ### Pipeline CI/CD {#ci-cd-pipeline}
 
@@ -63,7 +63,7 @@ Una delle funzionalità principali di [!UICONTROL Cloud Manager] è la capacità
 
 Puoi configurare e avviare la pipeline CI/CD attraverso l’interfaccia utente di [!UICONTROL Cloud Manager]. Durante l’esecuzione della pipeline viene eseguita un’analisi approfondita del codice per garantire che solo le applicazioni di qualità elevata passino all’ambiente di produzione.
 
-Per ulteriori informazioni sulla configurazione della pipeline dall’interfaccia utente di [!UICONTROL Cloud Manager], consulta i documenti [Configurazione delle pipeline di produzione](/help/using/production-pipelines.md) e [Configurazione delle pipeline non di produzione.](/help/using/non-production-pipelines.md)
+Per ulteriori informazioni sulla configurazione della pipeline dall&#39;interfaccia utente di [!UICONTROL Cloud Manager], consulta i documenti [Configurazione delle pipeline di produzione](/help/using/production-pipelines.md) e [Configurazione delle pipeline non di produzione](/help/using/non-production-pipelines.md).
 
 ### Modalità di distribuzione flessibili {#flexible-deployment-modes}
 
@@ -73,11 +73,11 @@ Grazie alla modalità di attivazione automatica, il codice viene distribuito aut
 
 Indipendentemente dalla modalità di trigger della distribuzione, ogni volta che ne viene attivata una vengono sempre eseguiti controlli di qualità come parte dell’esecuzione della pipeline CI/CD. I controlli di qualità, che comprendono l’ispezione del codice, i test di sicurezza e i test delle prestazioni, sono integrati nella soluzione e possono essere usati subito, senza complessità, da te o dai tuoi partner.
 
-Per ulteriori informazioni sulla distribuzione del codice e sui controlli di qualità, consulta il documento [Distribuzione del codice.](/help/using/code-deployment.md)
+Per ulteriori informazioni sulla distribuzione del codice e sui controlli di qualità, vedere il documento [Distribuzione del codice](/help/using/code-deployment.md).
 
 ## Funzionalità facoltative in Cloud Manager {#optional-features-in-cloud-manager}
 
-Cloud Manager offre funzionalità avanzate aggiuntive che possono essere utili per il progetto a seconda della configurazione dell’ambiente e delle esigenze specifiche. Se queste funzionalità sono di tuo interesse, contatta il tuo Customer Success Engineer (CSE) o il rappresentante di Adobe per discuterne ulteriormente.
+Cloud Manager offre funzionalità avanzate aggiuntive che possono essere utili per il progetto a seconda della configurazione dell’ambiente e delle esigenze specifiche. Se queste funzioni sono di tuo interesse, contatta il tuo Customer Success Engineer (CSE) o rappresentante di Adobe per discuterne ulteriormente.
 
 ### Scalabilità automatica {#autoscaling}
 
@@ -89,7 +89,7 @@ La funzione di scalabilità automatica si applica solo al livello Dispatcher/pub
 
 >[!NOTE]
 >
->Se sei interessato a verificare se la scalabilità automatica è appropriata per la tua applicazione, contatta il tuo rappresentante CSE o Adobe.
+>Se sei interessato a scoprire se la scalabilità automatica è appropriata per la tua applicazione, contatta il tuo rappresentante CSE o Adobe.
 
 ### Distribuzioni blu/verdi {#blue-green}
 
@@ -123,7 +123,7 @@ Quando la distribuzione blu/verde è abilitata, il flusso di distribuzione è di
 
 Tutti gli utenti AMS che utilizzano Cloud Manager per le distribuzioni di produzione possono utilizzare la distribuzione blu/verde. Tuttavia, l’utilizzo della distribuzione blu/verde richiede una convalida aggiuntiva degli ambienti e della configurazione da parte di un CSE di Adobe.
 
-Se sei interessato alla distribuzione blu/verde, prendi in considerazione i seguenti requisiti e limitazioni e contatta il tuo CSE.
+Se ti interessa la distribuzione blu/verde, prendi in considerazione i seguenti requisiti e limitazioni e contatta il CSE.
 
 #### Requisiti e limitazioni {#limitations}
 
@@ -131,5 +131,5 @@ Se sei interessato alla distribuzione blu/verde, prendi in considerazione i segu
 * Le coppie Dispatcher/pubblicazione di anteprima non fanno parte delle distribuzioni blu/verde.
 * Ogni coppia Dispatcher/pubblicazione è identica a ogni altra coppia Dispatcher/pubblicazione.
 * Blu/verde è disponibile solo nell’ambiente di produzione.
-* Blu/verde è disponibile in AWS e in Azure.
+* Blu/verde è disponibile in AWS e Azure.
 * Blu/verde non è disponibile solo per i clienti Assets.

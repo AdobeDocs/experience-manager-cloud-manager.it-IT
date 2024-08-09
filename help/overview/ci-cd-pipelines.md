@@ -2,10 +2,10 @@
 title: Pipeline CI/CD
 description: Scopri le pipeline CI/CD e come gestiscono le distribuzioni negli ambienti di staging e produzione in Cloud Manager.
 exl-id: 7130e5b7-6986-48c8-900c-90f3e4187f91
-source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
 source-wordcount: '562'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -41,7 +41,7 @@ Questo diagramma illustra cosa accade quando una versione viene attivata in [!UI
 
 ### Come impostare una pipeline CI/CD {#how-to-setup-a-ci-cd-pipeline}
 
-Per ulteriori informazioni sulla configurazione della pipeline, consulta i documenti [Configurazione delle pipeline di produzione](/help/using/production-pipelines.md) e [Configurazione delle pipeline non di produzione.](/help/using/non-production-pipelines.md)
+Per ulteriori informazioni sulla configurazione della pipeline, consulta i documenti [Configurazione delle pipeline di produzione](/help/using/production-pipelines.md) e [Configurazione delle pipeline non di produzione](/help/using/non-production-pipelines.md).
 
 ## Gate di qualità {#quality-gates}
 

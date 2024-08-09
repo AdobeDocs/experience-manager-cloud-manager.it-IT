@@ -2,17 +2,17 @@
 title: Procedura guidata di aggiornamento del prodotto
 description: Scopri in che modo la Procedura guidata di aggiornamento del prodotto semplifica il processo di aggiornamento AEM end-to-end in Cloud Manager.
 exl-id: 8134e956-bfcf-41b8-a408-fa4375058c6a
-source-git-commit: bbee49987e2f80825f5f7f5caf29c841e2b00dfb
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
 source-wordcount: '210'
-ht-degree: 100%
+ht-degree: 82%
 
 ---
 
 
 # Procedura guidata di aggiornamento del prodotto {#product-update-wizard}
 
-La Procedura guidata di aggiornamento del prodotto è un’esperienza di aggiornamento guidata e dettagliata all’ultima versione di Adobe Experience Manager 6.5 utilizzando Cloud Manager. Semplifica il processo end-to-end e garantisce il rispetto delle best practice di AEM utilizzando il framework CI/CD di Cloud Manager e il test automatizzato integrato.
+La Procedura guidata di aggiornamento del prodotto è un’esperienza di aggiornamento guidata e dettagliata all’ultima versione di Adobe Experience Manager 6.5 utilizzando Cloud Manager. Semplifica il processo end-to-end e garantisce il rispetto delle best practice AEM utilizzando il framework CI/CD di Cloud Manager e test automatizzati integrati.
 
 La procedura guidata include cinque fasi che ti guidano durante un aggiornamento del prodotto AEM:
 
@@ -36,4 +36,5 @@ I clienti che utilizzano Cloud Manager e che possono effettuare l’aggiornament
 
 1. La procedura guidata visualizza la prima fase del processo **[!UICONTROL Aggiornamento AEM 6.5]**.
 
-Per ulteriori informazioni sulla prima fase della procedura guidata, consulta il documento [Fase di valutazione.](/help/product-update-wizard/evaluation.md)
+Per ulteriori informazioni sulla prima fase della procedura guidata, vedere il documento [Fase di valutazione](/help/product-update-wizard/evaluation.md).
+

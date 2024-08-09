@@ -2,10 +2,10 @@
 title: Primo accesso
 description: Se hai impostato le configurazioni generali e sei pronto a utilizzare Cloud Manager per la prima volta, segui questa pagina.
 exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
-source-git-commit: 1417d3bfa5a844641e0942d1fe1bd7bf84e41997
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 100%
+source-wordcount: '293'
+ht-degree: 75%
 
 ---
 
@@ -24,15 +24,15 @@ Una volta impostata la configurazione generale per [!UICONTROL Cloud Manager], p
 
    ![Console di Cloud Manager](/help/assets/cloud-manager-console.png)
 
-1. Tocca o fai clic sulla scheda del programma per accedere alla pagina **Panoramica** di Cloud Manager.
+1. Fai clic sulla scheda del programma per passare alla pagina **Panoramica** di Cloud Manager.
 
 1. Cloud Manager si apre nella pagina della **Panoramica**.
 
    ![Pagina panoramica di Cloud Manager](/help/assets/program-overview-page.png)
 
-1. Se il programma non è ancora configurato, tocca o fai clic su **Configura programma** nell’[invito all’azione](/help/getting-started/navigation.md#cta) per impostare la descrizione del programma e definire gli indicatori prestazioni chiave (KPI, Key Performance Indicators). Se il programma è già configurato, il CTA potrebbe offrire ulteriori passaggi successivi.
+1. Se il programma non è ancora stato configurato, fare clic su **Programma di installazione** nell&#39;[invito all&#39;azione](/help/getting-started/navigation.md#cta) per impostare la descrizione del programma e definire gli indicatori prestazioni chiave (KPI). Se il programma è già configurato, il CTA potrebbe offrire ulteriori passaggi successivi.
 
-Passa al documento [Programma di configurazione](/help/getting-started/program-setup.md) per i passaggi successivi nella configurazione del programma.
+Puoi passare al documento [Configurazione del programma](/help/getting-started/program-setup.md) per i passaggi successivi della configurazione del programma.
 
 ## Attività di Cloud Manager {#activity}
 
@@ -40,7 +40,7 @@ Cloud Manager fornisce una visualizzazione consolidata dell’attività di un pr
 
 >[!TIP]
 >
->Per informazioni dettagliate su come utilizzare l’interfaccia utente di Cloud Manager, consulta il documento [Navigazione nell’interfaccia utente di Cloud Manager.](/help/getting-started/navigation.md)
+>Per informazioni dettagliate sull&#39;utilizzo dell&#39;interfaccia utente di Cloud Manager, vedere il documento [Navigazione nell&#39;interfaccia utente di Cloud Manager](/help/getting-started/navigation.md).
 
 >[!NOTE]
 >

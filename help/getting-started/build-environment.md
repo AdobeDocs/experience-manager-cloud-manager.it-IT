@@ -2,10 +2,10 @@
 title: Ambiente di build
 description: Scopri l’ambiente di build specializzato che Cloud Manager usa per creare e testare il codice.
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: dc0b83fa045208fcd333af10f90f9590c2aa96b8
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '1280'
-ht-degree: 100%
+source-wordcount: '1275'
+ht-degree: 89%
 
 ---
 
@@ -20,7 +20,7 @@ Gli ambienti di build di Cloud Manager hanno i seguenti attributi.
 
 * L’ambiente di build è basato su Linux, derivato da Ubuntu 22.04.
 * Apache Maven 3.9.4 è installato.
-   * Adobe consiglia agli utenti di [aggiornare i loro archivi Maven per utilizzare HTTPS invece di HTTP.](#https-maven)
+   * L&#39;Adobe consiglia agli utenti [di aggiornare gli archivi Maven per utilizzare HTTPS anziché HTTP](#https-maven).
 * Le versioni Java installate sono Oracle JDK 8u371 e Oracle JDK 11.0.22.
    * `/usr/lib/jvm/jdk1.8.0_401`
    * `/usr/lib/jvm/jdk-11.0.22`
@@ -31,30 +31,31 @@ Gli ambienti di build di Cloud Manager hanno i seguenti attributi.
    * `libpng`
    * `imagemagick`
    * `graphicsmagick`
-* Altri pacchetti possono essere installati in fase di build come descritto nella sezione [Installazione di pacchetti di sistema aggiuntivi.](#installing-additional-system-packages)
+* Altri pacchetti possono essere installati in fase di compilazione come descritto nella sezione [Installazione di pacchetti di sistema aggiuntivi](#installing-additional-system-packages).
 * Ogni build viene realizzata in un ambiente incontaminato. Il contenitore di build non mantiene alcuno stato da un’esecuzione all’altra.
 * Maven viene sempre eseguito con questi tre comandi:
    * `mvn --batch-mode org.apache.maven.plugins:maven-dependency-plugin:3.1.2:resolve-plugins`
    * `mvn --batch-mode org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean -Dmaven.clean.failOnError=false`
    * `mvn --batch-mode org.jacoco:jacoco-maven-plugin:prepare-agent package`
 * Maven è configurato a livello di sistema con un file `settings.xml` che include automaticamente l’archivio degli artefatti Adobe pubblico utilizzando un profilo denominato `adobe-public`.
-   * Per ulteriori dettagli, consulta l’[archivio Maven pubblico di Adobe](https://repo1.maven.org/).
-* Node.js 18 è disponibile per [pipeline front-end.](/help/overview/ci-cd-pipelines.md)
+   * Per ulteriori dettagli, vedi l&#39;[archivio Maven pubblico di Adobe](https://repo1.maven.org/).
+* Node.js 18 è disponibile per [pipeline front-end](/help/overview/ci-cd-pipelines.md).
 
 >[!NOTE]
 >
->Anche se Cloud Manager non definisce una versione specifica di `jacoco-maven-plugin`, la versione utilizzata deve essere almeno `0.7.5.201505241946`.
+>Sebbene Cloud Manager non definisca una versione specifica del `jacoco-maven-plugin`, la versione utilizzata deve essere `0.7.5.201505241946` o superiore.
 
 >[!TIP]
 >
->Per informazioni sull’utilizzo delle API di Cloud Manager, consulta le seguenti risorse aggiuntive:
+>Consulta le seguenti risorse aggiuntive per scoprire come utilizzare le API di Cloud Manager:
+>
 >* [aio-cli-plugin-cloudmanager](https://github.com/adobe/aio-cli-plugin-cloudmanager)
 >* [Creazione di un’integrazione API](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)
 >* [Autorizzazioni API](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
 
 ## Archivi Maven HTTPS {#https-maven}
 
-Cloud Manager [versione 2023.10.0](/help/release-notes/2023/2023-10-0.md) ha iniziato un aggiornamento continuo dell’ambiente di build (completandolo con la versione 2023.12.0), che includeva un aggiornamento a Maven 3.8.8. Come modifica significativa introdotta in Maven 3.8.1 è stato apportato un miglioramento della sicurezza volto a mitigare potenziali vulnerabilità. In particolare, Maven ora disabilita tutti le corrispondenze `http://*` non sicure per impostazione predefinita, come descritto nelle [note sulla versione di Maven.](http://maven.apache.org/docs/3.8.1/release-notes.html#cve-2021-26291)
+In Cloud Manager [2023.10.0](/help/release-notes/2023/2023-10-0.md) è stato avviato un aggiornamento continuo dell&#39;ambiente di build (completato con la versione 2023.12.0), che include un aggiornamento a Maven 3.8.8. Una modifica significativa introdotta in Maven 3.8.1 è stata un miglioramento della sicurezza volto a mitigare potenziali vulnerabilità. In particolare, Maven ora disabilita tutti i mirror non sicuri di `http://*` per impostazione predefinita, come descritto nelle [Note sulla versione di Maven](http://maven.apache.org/docs/3.8.1/release-notes.html#cve-2021-26291).
 
 Come risultato di questo miglioramento sulla sicurezza, alcuni utenti potrebbero riscontrare problemi durante la fase di build, in particolare durante il download di artefatti dagli archivi Maven che utilizzano connessioni HTTP non sicure.
 
@@ -111,7 +112,7 @@ Le combinazioni fornitore/versione attualmente disponibili sono:
 
 >[!NOTE]
 >
->A partire da aprile 2022, Oracle JDK sarà il JDK predefinito per lo sviluppo e il funzionamento delle applicazioni AEM. Il processo di build di Cloud Manager passerà automaticamente all’utilizzo di Oracle JDK, anche se nella toolchain Maven è selezionata esplicitamente un’opzione alternativa. Per ulteriori dettagli, consulta le [note sulla versione di aprile](/help/release-notes/2022/2022-4-0.md).
+>A partire da aprile 2022, Oracle JDK sarà il JDK predefinito per lo sviluppo e il funzionamento delle applicazioni AEM. Il processo di build di Cloud Manager passa automaticamente all’uso di Oracle JDK, anche se nella toolchain Maven è selezionata esplicitamente un’opzione alternativa. Per ulteriori dettagli, consulta le [note sulla versione di aprile](/help/release-notes/2022/2022-4-0.md).
 
 ### Versione JDK alternativa per l’esecuzione di Maven {#alternate-maven}
 
@@ -149,7 +150,7 @@ Negli ambienti di authoring, anteprima e pubblicazione è possibile utilizzare s
 
 #### Dispatcher {#dispatcher}
 
-Solo le variabili di ambiente normali possono essere utilizzate dal [Dispatcher.](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=it) I segreti non possono essere utilizzati.
+Solo le normali variabili di ambiente possono essere utilizzate con [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=it). I segreti non possono essere utilizzati.
 
 Tuttavia, le variabili di ambiente non possono essere utilizzate nelle direttive `IfDefine`.
 
@@ -159,9 +160,9 @@ Tuttavia, le variabili di ambiente non possono essere utilizzate nelle direttive
 
 #### Configurazioni OSGi {#osgi}
 
-Le normali variabili di ambiente e i segreti possono essere utilizzati nelle [configurazioni OSGi.](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-osgi.html?lang=it)
+Le normali variabili di ambiente e i segreti possono essere utilizzati nelle [configurazioni OSGi](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-osgi.html?lang=it).
 
-### Variabili delle pipeline {#pipeline-variables}
+### Variabili di pipeline {#pipeline-variables}
 
 In alcuni casi, il processo di creazione può dipendere da specifiche variabili di configurazione che non sarebbero appropriate per l’inserimento nell’archivio Git o dovrebbero variare tra le esecuzioni della pipeline che utilizzano lo stesso ramo.
 

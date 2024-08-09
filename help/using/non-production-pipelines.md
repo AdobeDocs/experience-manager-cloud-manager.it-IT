@@ -2,16 +2,16 @@
 title: Configurazione di pipeline non di produzione
 description: Scopri come utilizzare Cloud Manager per creare e configurare pipeline non di produzione per distribuire il codice.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
-source-git-commit: 85c1e22609dc5646d3de0ccc71e9423d4243e13a
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '716'
-ht-degree: 100%
+source-wordcount: '710'
+ht-degree: 94%
 
 ---
 
 # Configurazione di pipeline non di produzione {#configuring-non-production-pipelines}
 
-Scopri come utilizzare Cloud Manager per creare e configurare pipeline non di produzione per distribuire il codice. Per una panoramica delle nozioni di base sul funzionamento delle pipeline in Cloud Manager, consulta il documento [Pipeline CI/CD.](/help/overview/ci-cd-pipelines.md)
+Scopri come utilizzare Cloud Manager per creare e configurare pipeline non di produzione per distribuire il codice. Per una panoramica delle nozioni di base sul funzionamento delle pipeline in Cloud Manager, consulta [Pipeline CI/CD](/help/overview/ci-cd-pipelines.md).
 
 ## Panoramica {#overview}
 
@@ -20,7 +20,7 @@ Utilizzando il riquadro **Pipeline** in [!UICONTROL Cloud Manager], il **Respons
 * **Pipeline di produzione**: una pipeline di produzione è una pipeline appositamente creata composta da una serie di passaggi orchestrati per portare il codice sorgente fino alla produzione.
 * **Pipeline non di produzione**: una pipeline non di produzione serve principalmente per eseguire scansioni di qualità del codice o per distribuire il codice sorgente in un ambiente di sviluppo.
 
-Questo documento si concentra sulle pipeline non di produzione. Per informazioni dettagliate su come configurare le pipeline di produzione, consulta il documento [Configurazione delle pipeline di produzione.](/help/using/production-pipelines.md)
+Questo documento si concentra sulle pipeline non di produzione. Per informazioni dettagliate su come configurare le pipeline di produzione, consulta il documento [Configurazione delle pipeline di produzione](/help/using/production-pipelines.md).
 
 Esistono due tipi di pipeline non di produzione:
 
@@ -80,7 +80,7 @@ Dopo aver configurato il programma e disponi di almeno un ambiente utilizzando l
 
 ## Passaggi successivi {#the-next-steps}
 
-Dopo aver configurato la pipeline, è necessario distribuire il codice. Per ulteriori dettagli, consulta il documento [Distribuzione del codice](/help/using/code-deployment.md).
+Dopo aver configurato la pipeline, è necessario distribuire il codice. Per ulteriori dettagli, vedi [Distribuzione del codice](/help/using/code-deployment.md).
 
 ## Tutorial video {#video-tutorial}
 

@@ -2,10 +2,10 @@
 title: Archivio del codice sorgente
 description: Scopri l’archivio Git fornito per ciascun programma in Cloud Manager.
 exl-id: af551e33-3623-4fcd-8d25-4362d8871411
-source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '265'
-ht-degree: 100%
+source-wordcount: '261'
+ht-degree: 83%
 
 ---
 
@@ -20,9 +20,9 @@ Il tuo abbonamento a [!UICONTROL AEM Managed Services] include un archivio del c
 
 Come best practice, utilizza sempre l’archivio Git di Cloud Manager, che si presenta vuoto senza rami o progetti di esempio configurati. Per utilizzare l’archivio Git di Cloud Manager, riceverai un token di accesso privato che ti consentirà di utilizzare qualsiasi client Git per creare rami, archiviare e recuperare il codice, elencare la cronologia del commit e così via.
 
-Per ulteriori informazioni su come impostare i rami in Git, consulta [Configurazione dei rami di rilascio.](/help/getting-started/configuring-branches.md)
+Per ulteriori informazioni su come impostare i rami in Git, consulta [Configurazione dei rami di rilascio](/help/getting-started/configuring-branches.md).
 
-Per ulteriori informazioni su come utilizzare l’archivio Git di Cloud Manager con la pipeline CI/CD, consulta i documenti [Configura le pipeline di produzione](/help/using/production-pipelines.md) e [Configurazione di pipeline non di produzione](/help/using/non-production-pipelines.md).
+Per ulteriori informazioni su come utilizzare l&#39;archivio Git di Cloud Manager con la pipeline CI/CD, consulta [Configurare le pipeline di produzione](/help/using/production-pipelines.md) e [Configurare le pipeline non di produzione](/help/using/non-production-pipelines.md).
 
 ## Archivio locale {#on-premise-repository}
 

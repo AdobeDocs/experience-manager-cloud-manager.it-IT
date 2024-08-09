@@ -2,10 +2,10 @@
 title: Aggiungere utenti e ruoli
 description: Scopri come utilizzare l’Admin Console per aggiungere utenti e ruoli e creare profili.
 exl-id: 40086cf0-a1c4-4dde-9dbf-84ea5fa53b84
-source-git-commit: dd96d773ea3e6b9c45886fe41b28d3dd70cb8a61
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '774'
-ht-degree: 100%
+source-wordcount: '769'
+ht-degree: 84%
 
 ---
 
@@ -46,7 +46,7 @@ In questa tabella vengono riepilogati i ruoli.
 
 [!UICONTROL I ruoli di Cloud Manager] vengono gestiti dall’Admin Console. Le appartenenze a ruoli specifici vengono fornite aggiungendo l’utente a un profilo di prodotto [!UICONTROL Cloud Manager].
 
-L’Admin Console è una posizione centrale per la gestione delle assegnazioni Adobe in tutta l’organizzazione. Per ulteriori informazioni su Adobe Admin Console, consulta la documentazione di [Admin Console.](https://helpx.adobe.com/it/enterprise/using/admin-console.html)
+L’Admin Console è una posizione centrale per la gestione delle assegnazioni Adobe in tutta l’organizzazione. Per ulteriori informazioni su Adobe Admin Console, consulta la documentazione di [Admin Console](https://helpx.adobe.com/it/enterprise/using/admin-console.html).
 
 Per fornire le autorizzazioni appropriate basate sul ruolo agli utenti di [!UICONTROL Cloud Manager], un amministratore dell’organizzazione del cliente deve creare nuovi profili di prodotto nel contesto del prodotto [!UICONTROL AEM Managed Services] corrispondenti a ciascuno dei quattro ruoli di [!UICONTROL Cloud Manager]:
 
@@ -57,7 +57,7 @@ Per fornire le autorizzazioni appropriate basate sul ruolo agli utenti di [!UICO
 
 Puoi creare o aggiungere utenti/gruppi a questi profili di prodotto con l’Admin Console.
 
-1. Accedi ad Admin Console all’indirizzo [`https://adminconsole.adobe.com`.](https://adminconsole.adobe.com)
+1. Accedi all&#39;Admin Console all&#39;indirizzo [`https://adminconsole.adobe.com`](https://adminconsole.adobe.com).
 
 1. Fai clic sulla scheda **Panoramica**, quindi sul prodotto che desideri modificare nella scheda **Prodotti e servizi**. Se non è presente nell’elenco, utilizza la scheda **Prodotti** per individuare il prodotto e fare clic su di esso.
 
@@ -93,7 +93,7 @@ Puoi creare o aggiungere utenti/gruppi a questi profili di prodotto con l’Admi
 
 Dopo aver creato i profili di prodotto, puoi assegnare loro utenti o gruppi di utenti.
 
-1. Accedi ad Admin Console all’indirizzo [`https://adminconsole.adobe.com`.](https://adminconsole.adobe.com)
+1. Accedi all&#39;Admin Console all&#39;indirizzo [`https://adminconsole.adobe.com`](https://adminconsole.adobe.com).
 
 1. Nell’Admin Console, scegli la scheda **Utenti**.
 
@@ -105,14 +105,14 @@ Dopo aver creato i profili di prodotto, puoi assegnare loro utenti o gruppi di u
 
    ![Modifica utente](/help/assets/admin-console-edit-user.png)
 
-1. Nella finestra di dialogo **Modifica prodotti e gruppi di utenti**, fai clic sul pulsante più e seleziona i profili da assegnare all’utente.
+1. Nella finestra di dialogo **Modifica prodotti e gruppi di utenti**, fai clic sul pulsante più e seleziona i profili da assegnare all&#39;utente.
 
-   * Se l’utente è già assegnato ai ruoli, il pulsante più sarà un pulsante di modifica (a forma di matita), ma funziona allo stesso modo.
+   * Se l’utente è già assegnato ai ruoli, il pulsante più è un pulsante di modifica (una matita), ma funziona allo stesso modo.
 
    ![Modifica prodotti e gruppi di utenti](/help/assets/admin-console-edit-products-and-user-groups.png)
 
 1. Fai clic su **Salva** per salvare i profili dell’utente.
 
-Ripeti gli stessi passaggi per assegnare profili a gruppi di utenti, ma seleziona **Gruppi di utenti** dal pannello di navigazione a sinistra nella scheda **Utenti**. Fai clic su un gruppo di utenti e seleziona la scheda **Profili di prodotto assegnati** e fai clic su **Assegna profilo di prodotto** per assegnare i profili.
+Ripeti gli stessi passaggi per assegnare profili a gruppi di utenti, ma seleziona **Gruppi di utenti** dal pannello di navigazione a sinistra nella scheda **Utenti**. Fai clic su un gruppo di utenti e seleziona la scheda **Profili di prodotto assegnati**, quindi fai clic su **Assegna profilo di prodotto** per assegnare i profili.
 
 ![Assegna profili al gruppo](/help/assets/admin-console-edit-user-groups.png)

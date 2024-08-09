@@ -3,10 +3,10 @@ title: Fase di valutazione
 seo-title: Evaluation Phase
 description: Scopri in che modo la fase di valutazione della procedura guidata di aggiornamento del prodotto valuta la complessità dell’aggiornamento con il rilevatore pattern.
 exl-id: 1ffcbc21-dc36-435d-b83b-0209f81a15e7
-source-git-commit: ce2145da3b9e605e8a41bac28df520f14e255557
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '289'
-ht-degree: 100%
+source-wordcount: '285'
+ht-degree: 85%
 
 ---
 
@@ -25,7 +25,7 @@ Il rapporto serve come valutazione dello sforzo di sviluppo che è coinvolto nel
 
 >[!NOTE]
 >
->Per ulteriori informazioni sul rilevatore pattern, fare riferimento al documento [Valutazione della complessità dell’aggiornamento con il rilevatore pattern.](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/upgrading/pattern-detector.html?lang=it)
+>Per ulteriori informazioni sul rilevatore pattern, vedere [Valutazione della complessità dell&#39;aggiornamento con il rilevatore pattern](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/upgrading/pattern-detector.html?lang=it).
 
 ## Esecuzione della valutazione {#running}
 
@@ -33,7 +33,7 @@ Il rilevatore pattern può essere eseguito in qualsiasi ambiente. Tuttavia, per 
 
 Per generare il rapporto di valutazione, segui i passaggi seguenti.
 
-1. Avvia la procedura guidata come descritto nel documento [Procedura guidata di aggiornamento del prodotto.](/help/product-update-wizard/overview.md)
+1. Avviare la procedura guidata come descritto nel documento [Procedura guidata di aggiornamento del prodotto](/help/product-update-wizard/overview.md).
 
 1. Fai clic su **[!UICONTROL Esegui valutazione]**.
 
@@ -41,7 +41,7 @@ Per generare il rapporto di valutazione, segui i passaggi seguenti.
 
 1. La procedura guidata ti informa sullo stato dell’azione. Al momento della generazione del rapporto di valutazione, noterai la dicitura **in corso** o **completato**, a seconda dei casi.
 
-1. Una volta generato il rapporto, puoi fare clic su **[!UICONTROL Scarica rapporto]** per salvare una copia.
+1. Una volta generato il report, puoi fare clic su **[!UICONTROL Scarica report]** per salvare una copia.
 
    ![Rapporto creato](/help/assets/Evaluation-1.png)
 

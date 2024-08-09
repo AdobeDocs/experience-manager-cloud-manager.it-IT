@@ -2,10 +2,10 @@
 title: Percorso dell’utente
 description: Questo documento illustra i diversi scenari di onboarding e spiega il tuo percorso per iniziare a utilizzare Cloud Manager.
 exl-id: deb3429c-dfcf-4e52-9aba-d9368aa240e6
-source-git-commit: b0dbb602253939464ff034941ffbad84b7df77df
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
 source-wordcount: '539'
-ht-degree: 97%
+ht-degree: 91%
 
 ---
 
@@ -46,7 +46,7 @@ Durante l’aggiornamento, potrai iniziare a utilizzare [!UICONTROL Cloud Manage
 
 Anche un progetto AEM esistente dovrà essere conforme alle best practice consigliate, poiché inizierai a utilizzare [!UICONTROL Cloud Manager] per la distribuzione di nuove modifiche al codice negli ambienti AEM.
 
-Per ulteriori informazioni sui vantaggi dell’aggiornamento a AEM 6.5, consulta il documento [Aggiornamento a AEM 6.5.](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/upgrading/upgrade.html?lang=it)
+Per ulteriori informazioni sui vantaggi dell&#39;aggiornamento a AEM 6.5, vedere il documento [Aggiornamento a AEM 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/upgrading/upgrade.html?lang=it).
 
 ## Accesso a [!UICONTROL Cloud Manager] {#accessing-cloud-manager}
 
@@ -56,7 +56,7 @@ Dopo esserti registrato in [!UICONTROL Cloud Manager] per la prima volta, potrai
 
 Per iniziare a utilizzare [!UICONTROL Cloud Manager], consulta il documento [Primo accesso](/help/getting-started/first-time-login.md).
 
-Per ulteriori informazioni su AEM, consulta il documento [Distribuzione e manutenzione.](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=it)
+Per ulteriori informazioni sull&#39;AEM, vedere il documento [Distribuzione e manutenzione](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=it).
 
 ## Guida introduttiva a [!UICONTROL Cloud Manager] {#getting-started-with-cloud-manager}
 

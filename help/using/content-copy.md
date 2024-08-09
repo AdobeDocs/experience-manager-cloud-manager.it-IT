@@ -2,10 +2,10 @@
 title: Lo strumento Copia contenuto
 description: Lo strumento Copia contenuto di Cloud Manager consente agli utenti di copiare contenuti modificabili su richiesta dagli ambienti di produzione AEM 6.x in hosting AMS in ambienti inferiori a scopo di test.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 655111cdf7327e92e03ac7eedd9eedd87cd4b2f1
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '1120'
-ht-degree: 100%
+source-wordcount: '1096'
+ht-degree: 87%
 
 ---
 
@@ -47,39 +47,39 @@ Prima di poter copiare qualsiasi contenuto, è necessario definire un set di con
 
 1. Dalla schermata **Ambienti**, passa alla pagina **Set di contenuti**.
 
-1. Tocca o fai clic sul pulsante **Aggiungi set di contenuti** in alto a destra dello schermo.
+1. Fai clic sul pulsante **Aggiungi set di contenuti** in alto a destra dello schermo.
 
    ![Set di contenuti](/help/assets/content-sets.png)
 
-1. Nella scheda **Dettagli** della procedura guidata, assegna un nome e una descrizione per il set di contenuti e tocca o fai clic su **Continua**.
+1. Nella scheda **Dettagli** della procedura guidata, fornisci un nome e una descrizione per il set di contenuti e fai clic su **Continua**.
 
    ![Dettagli dei set di contenuti](/help/assets/add-content-set-details.png)
 
 1. Nella scheda **Percorsi del contenuto** della procedura guidata, specifica i percorsi del contenuto modificabile da includere nel set di contenuti.
 
    1. Immetti il percorso nel campo **Aggiungi percorso di inclusione**.
-   1. Tocca o fai clic sul pulsante **Aggiungi percorso** per aggiungere il percorso al set di contenuti.
-   1. Se necessario, tocca o fai clic di nuovo sul pulsante **Aggiungi percorso**.
+   1. Fare clic sul pulsante **Aggiungi percorso** per aggiungere il percorso al set di contenuti.
+   1. Fare di nuovo clic sul pulsante **Aggiungi percorso** in base alle esigenze.
 
    ![Aggiungi percorsi al set di contenuti](/help/assets/add-content-set-paths.png)
 
 1. Se devi perfezionare o limitare il set di contenuti, è possibile escludere i percorsi secondari.
 
-   1. Nell’elenco dei percorsi inclusi, tocca o fai clic sull’icona **Aggiungi percorsi secondari di esclusione** accanto al percorso da limitare.
+   1. Nell&#39;elenco dei percorsi inclusi fare clic sull&#39;icona **Aggiungi percorsi secondari di esclusione** accanto al percorso da limitare.
    1. Inserisci il percorso secondario da escludere sotto il percorso selezionato.
-   1. Tocca o fai clic su **Escludi percorso**.
-   1. Tocca o fai clic di nuovo su **Aggiungi percorsi secondari di esclusione** per aggiungere altri percorsi da escludere, se necessario.
+   1. Fare clic su **Escludi percorso**.
+   1. Fare di nuovo clic su **Aggiungi percorsi secondari di esclusione** per aggiungere percorsi aggiuntivi da escludere in base alle esigenze.
 
    ![Esclusione dei percorsi](/help/assets/add-content-set-paths-excluded.png)
 
 1. Se necessario, è possibile modificare i percorsi specificati.
 
-   1. Tocca o fai clic sulla X accanto ai percorsi secondari esclusi per eliminarli.
-   1. Tocca o fai clic sul pulsante con i puntini di sospensione accanto ai percorsi per visualizzare le opzioni **Modifica** ed **Elimina**.
+   1. Fai clic sulla X accanto ai percorsi secondari esclusi per eliminarli.
+   1. Fai clic sul pulsante con i puntini di sospensione accanto ai percorsi per visualizzare le opzioni **Modifica** e **Elimina**.
 
    ![Modifica dell’elenco dei percorsi](/help/assets/add-content-set-excluded-paths.png)
 
-1. Tocca o fai clic su **Crea** per creare il set di contenuti.
+1. Fai clic su **Crea** per creare il set di contenuti.
 
 Il set di contenuti può ora essere utilizzato per copiare il contenuto tra ambienti diversi.
 
@@ -90,7 +90,7 @@ Il set di contenuti può ora essere utilizzato per copiare il contenuto tra ambi
 
 ## Modifica di un set di contenuti {#edit-content-set}
 
-Segui passaggi simili a quelli impiegati per la creazione del contenuto. Invece di toccare o fare clic su **Aggiungi set di contenuti**, seleziona un set esistente dalla console e quindi **Modifica** dal menu con i puntini di sospensione.
+Segui passaggi simili a quelli impiegati per la creazione del contenuto. Invece di fare clic su **Aggiungi set di contenuti**, selezionare un set esistente dalla console e selezionare **Modifica** dal menu con i puntini di sospensione.
 
 ![Modifica set di contenuti](/help/assets/edit-content-set.png)
 
@@ -125,7 +125,7 @@ Una volta creato un set di contenuti, puoi utilizzarlo per copiare il contenuto.
 
    ![Copia del contenuto](/help/assets/copying-content.png)
 
-1. Tocca o fai clic su **Copia**.
+1. Fai clic su **Copia**.
 
 Viene avviato il processo di copia. Lo stato del processo di copia si riflette nella console del set di contenuti selezionato.
 

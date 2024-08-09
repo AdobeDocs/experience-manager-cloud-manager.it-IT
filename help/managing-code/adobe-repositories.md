@@ -2,10 +2,10 @@
 title: Aggiunta di archivi Adobe in Cloud Manager
 description: Scopri come creare archivi gestiti da Adobe in Cloud Manager.
 exl-id: 24c6ca97-ea70-41b8-b4c7-b8b0f406a57d
-source-git-commit: e93285f7c7495ec9d2f11d289adaf6aaba7e58ea
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 100%
+ht-degree: 79%
 
 ---
 
@@ -29,8 +29,8 @@ La finestra **Archivi** consente di aggiungere facilmente al programma altri arc
 
    ![Finestra di dialogo Aggiungi archivio](assets/add-repository-wizard.png)
 
-Al termine della procedura guidata, il nuovo archivio viene visualizzato nella tabella nella finestra **Archivi**. A questo punto puoi associarvi una [Pipeline CI/CD](/help/overview/ci-cd-pipelines.md) o gestirlo nella finestra [**Archivi**.](managing-repositories.md)
+Al termine della procedura guidata, il nuovo archivio viene visualizzato nella tabella nella finestra **Archivi**. È ora possibile associare una [pipeline CI/CD](/help/overview/ci-cd-pipelines.md) a essa o gestirla all&#39;interno della finestra [**Archivi**](managing-repositories.md).
 
 >[!TIP]
 >
->Puoi anche aggiungere archivi GitHub da gestire direttamente come [archivi privati.](private-repositories.md)
+>Puoi anche aggiungere archivi GitHub che gestisci come [archivi privati](private-repositories.md).

@@ -2,10 +2,10 @@
 title: Utilizzo della procedura guidata Nuovo progetto
 description: Segui questa pagina per scoprire come utilizzare la procedura guidata per creare un progetto di applicazione AEM
 exl-id: 9d7c6f4c-9379-471c-8dad-772a7099da54
-source-git-commit: cb791a4f148ba394687b5e824b75fe1386d83c18
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '326'
-ht-degree: 100%
+source-wordcount: '325'
+ht-degree: 89%
 
 ---
 
@@ -18,7 +18,7 @@ Segui questi passaggi per creare un progetto AEM utilizzando la procedura guidat
 
 1. Accedi a Cloud Manager all’indirizzo [`https://my.cloudmanager.adobe.com`](https://my.cloudmanager.adobe.com) e seleziona l’organizzazione appropriata.
 
-1. Se non lo hai già fatto, [crea il programma.](program-setup.md) Una volta creato il programma, Cloud Manager riconosce che gli archivi non sono ancora configurati e nella sezione **Panoramica** viene visualizzata una speciale scheda di invito all’azione.
+1. Se non lo hai già fatto, [crea il tuo programma](program-setup.md). Al momento della creazione del programma, Cloud Manager riconosce che gli archivi non sono ancora configurati e nella schermata **Panoramica** viene visualizzata una speciale scheda di invito all&#39;azione.
 
    ![Invito all’azione per creare un progetto](/help/assets/image2018-10-3_14-29-44.png)
 

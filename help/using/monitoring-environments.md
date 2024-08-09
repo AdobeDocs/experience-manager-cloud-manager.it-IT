@@ -2,10 +2,10 @@
 title: Ambienti di monitoraggio
 description: Scopri come monitorare gli ambienti in Cloud Manager.
 exl-id: 32886133-d6c0-4aed-8bb0-81b84f63e825
-source-git-commit: ab527beb706ab73a14cc933a3414873dee6b7a9e
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '928'
-ht-degree: 100%
+source-wordcount: '922'
+ht-degree: 93%
 
 ---
 
@@ -26,7 +26,7 @@ Segui questi passaggi per accedere al monitoraggio del sistema.
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) e seleziona l’organizzazione e il programma appropriati.
 
-1. Tocca o fai clic sul pulsante con i puntini di sospensione del programma che desideri monitorare e seleziona l’opzione **Mostra monitoraggio**.
+1. Fare clic sul pulsante con i puntini di sospensione del programma da monitorare e selezionare l&#39;opzione **Mostra monitoraggio**.
 
    ![Impostazioni](/help/assets/first-timea1.png)
 
@@ -51,7 +51,7 @@ Lo stato di ciascuna categoria è un riepilogo delle singole metriche. Se una me
 
 ## Dettagli di Monitoraggio del sistema {#system-monitoring-detail}
 
-Per visualizzare i dettagli di metriche specifiche, tocca o fai clic su una delle colonne di categoria di un’istanza specifica o sul titolo della categoria nel menu di navigazione a sinistra. Ogni pagina di dettagli mostra una serie di grafici per le metriche della categoria in questiione. Puoi visualizzare le metriche per tutte le istanze in un ambiente o per un’istanza specifica. Per passare dall’ambiente alle istanze, utilizza le caselle a discesa in alto a destra.
+Per visualizzare i dettagli di metriche specifiche, fai clic su una delle colonne di categoria di un’istanza specifica o sul titolo della categoria nel menu di navigazione a sinistra. Ogni pagina di dettagli mostra una serie di grafici per le metriche della categoria in questiione. Puoi visualizzare le metriche per tutte le istanze in un ambiente o per un’istanza specifica. Per passare dall’ambiente alle istanze, utilizza le caselle a discesa in alto a destra.
 
 ![Selezionare l’ambiente](/help/assets/System_Monitoring1.png)
 
@@ -62,7 +62,7 @@ Un singolo grafico mostra lo stato, un grafico dei dati nel tempo e le relative 
 ![Grafico delle metriche](/help/assets/Monitoring_Graphs1.png)
 
 Per nascondere una singola serie sul grafico, fai clic sulla serie nella legenda.
-Ad esempio, se fai clic sulla serie delle soglie di avvertenza, verrà viusalizzata solo la soglia critica.
+Se ad esempio si fa clic sulla serie di soglie di avvertenza, verrà visualizzata solo la soglia critica.
 
 ![Modificare il grafico](/help/assets/Monitoring_Graphs2.png)
 

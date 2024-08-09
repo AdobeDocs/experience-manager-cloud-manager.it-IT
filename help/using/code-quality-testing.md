@@ -2,10 +2,10 @@
 title: Test della qualità del codice
 description: Scopri come funziona il test di qualità del codice delle pipeline e come può migliorare la qualità delle distribuzioni.
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-source-git-commit: fadcf560f08bf16d0d18172c620a450d0cb06225
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '2778'
-ht-degree: 61%
+source-wordcount: '2763'
+ht-degree: 57%
 
 ---
 
@@ -46,11 +46,11 @@ Il test di qualità del codice esegue la scansione del codice sorgente per garan
 
 Il software lo implementa utilizzando una combinazione di analisi SonarQube, esame a livello di pacchetto di contenuti con OakPAL e convalida Dispatcher con Dispatcher Optimization Tool.
 
-Esistono più di 100 regole che combinano regole Java generiche e regole specifiche per l’AEM. Alcune delle regole specifiche per AEM vengono create in base alle best practice di AEM Engineering e sono denominate [regole per la qualità del codice personalizzato.](/help/using/custom-code-quality-rules.md)
+Esistono più di 100 regole che combinano regole Java generiche e regole specifiche per l’AEM. Alcune delle regole specifiche per l&#39;AEM vengono create in base alle best practice indicate dal team ingegneristico dell&#39;AEM e sono denominate [Regole per la qualità del codice personalizzato](/help/using/custom-code-quality-rules.md).
 
 >[!TIP]
 >
->È possibile scaricare l’elenco completo delle regole [utilizzando questo collegamento.](/help/assets/CodeQuality-rules-latest-AMS.xlsx)
+>È possibile scaricare l&#39;elenco completo delle regole [utilizzando questo collegamento](/help/assets/CodeQuality-rules-latest-AMS.xlsx).
 
 I risultati dei test di qualità del codice sono forniti come valutazione, come sintetizzato in questa tabella.
 
@@ -62,7 +62,7 @@ I risultati dei test di qualità del codice sono forniti come valutazione, come 
 | Copertura | Definito da una combinazione di copertura di righe e copertura di condizioni dello unit test utilizzando la formula: <br/>`Coverage = (CT + CF + LC) / (2 * B + EL)`  <ul><li>`CT` = condizioni già valutate come `true` almeno una volta durante l’esecuzione degli unit test</li><li>`CF` = condizioni già valutate come `false` almeno una volta durante l’esecuzione degli unit test</li><li>`LC` = righe coperte = lines_to_cover - uncovered_lines</li><li>`B` = numero totale di condizioni</li><li>`EL` = numero totale di righe eseguibili (lines_to_cover)</li></ul> | Importante | &lt; 50% |
 | Unit test ignorati | Numero di unit test ignorati | Info | > 1 |
 | Problemi aperti | Tipi di problemi generali: vulnerabilità, bug e code smell | Info | > 0 |
-| Righe duplicate | Definito come il numero di righe presenti in blocchi duplicati. Un blocco di codice si considera duplicato nelle seguenti condizioni.<br>Progetti non Java:<ul><li>Devono esserci almeno 100 token successivi e duplicati.</li><li>Tali token devono essere distribuiti, per lo meno, come segue: </li><li>30 righe di codice per COBOL </li><li>20 righe di codice per ABAP </li><li>10 righe di codice per altri linguaggi</li></ul>Progetti Java:<ul></li><li> Devono essere presenti almeno 10 istruzioni successive e duplicate indipendentemente dal numero di token e righe.</li></ul>Per il rilevamento dei duplicati, le differenze in termini di rientro e valori letterali della stringa vengono ignorate. | Info | > 1% |
+| Righe duplicate | Definito come il numero di righe presenti in blocchi duplicati. Un blocco di codice si considera duplicato nelle seguenti condizioni.<br>Progetti non Java:<ul><li>Devono esserci almeno 100 token successivi e duplicati.</li><li>Tali token devono essere distribuiti, per lo meno, come segue: </li><li>30 righe di codice per COBOL </li><li>20 righe di codice per ABAP </li><li>10 righe di codice per altri linguaggi</li></ul>Progetti Java:<ul></li><li> Devono essere presenti almeno 10 istruzioni successive e duplicate indipendentemente dal numero di token e righe.</li></ul>Le differenze nel rientro e nelle stringhe letterali vengono ignorate quando si rilevano duplicati. | Info | > 1% |
 | Compatibilità Cloud Service | Numero di problemi di compatibilità Cloud Service identificati | Info | > 0 |
 
 >[!NOTE]
@@ -71,7 +71,7 @@ I risultati dei test di qualità del codice sono forniti come valutazione, come 
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle regole per la qualità del codice personalizzato eseguite da [!UICONTROL Cloud Manager], consulta il documento [Regole per la qualità del codice personalizzato.](custom-code-quality-rules.md)
+>Per ulteriori informazioni sulle regole per la qualità del codice personalizzato eseguite da [!UICONTROL Cloud Manager], vedere [Regole per la qualità del codice personalizzato](custom-code-quality-rules.md).
 
 ### Gestione dei falsi positivi {#dealing-with-false-positives}
 
@@ -172,7 +172,7 @@ Tre set di pagine selezionano le pagine. Cloud Manager utilizza i registri di ac
 
 ##### Distribuzione del traffico tra set di pagine selezionati {#distribution-of-traffic}
 
-Puoi scegliere da uno a tutti e tre i set nella scheda **Test** della [configurazione della pipeline.](/help/using/production-pipelines.md) La distribuzione del traffico si basa sul numero di set selezionati. In altre parole, se sono selezionati tutti e tre, il 33% del totale delle visualizzazioni di pagina viene inserito in ciascun set. Se ne sono selezionati due, il 50% viene indirizzato a ciascun set. Se ne è selezionato uno, il 100% del traffico viene indirizzato a tale set.
+Puoi scegliere da uno a tutti e tre i set nella scheda **Test** della [configurazione pipeline](/help/using/production-pipelines.md). La distribuzione del traffico si basa sul numero di set selezionati. In altre parole, se sono selezionati tutti e tre, il 33% del totale delle visualizzazioni di pagina viene inserito in ciascun set. Se ne sono selezionati due, il 50% viene indirizzato a ciascun set. Se ne è selezionato uno, il 100% del traffico viene indirizzato a tale set.
 
 Consideriamo questo esempio.
 
@@ -188,7 +188,7 @@ Nel periodo di test di 30 minuti:
 
 #### Test e reporting {#testing-reporting}
 
-Cloud Manager esegue un test delle prestazioni per i programmi AEM Sites richiedendo le pagine come utente non autenticato per impostazione predefinita sul server di pubblicazione dello staging per un periodo di test di 30 minuti. Misura le metriche generate dall’utente virtuale (tempo di risposta, tasso di errore, visualizzazioni al minuto e così via) per ogni pagina, nonché varie metriche a livello di sistema (CPU, memoria, dati di rete) per tutte le istanze.
+Cloud Manager esegue un test delle prestazioni per i programmi AEM Sites richiedendo le pagine come utente non autenticato per impostazione predefinita sul server di pubblicazione dello staging per un periodo di test di 30 minuti. Misura le metriche generate dall’utente virtuale (tempo di risposta, tasso di errore, visualizzazioni al minuto e così via) per ogni pagina e varie metriche a livello di sistema (CPU, memoria, dati di rete) per tutte le istanze.
 
 Nella tabella seguente viene riepilogata la matrice dei test di prestazione utilizzando il sistema di verifica a tre livelli.
 
@@ -204,7 +204,7 @@ Nella tabella seguente viene riepilogata la matrice dei test di prestazione util
 | Utilizzo della larghezza di banda di rete | Importante | >= 90% |
 | Richieste al minuto | Info | >= 6000 |
 
-Consulta la sezione [Test delle prestazioni autenticati](#authenticated-performance-testing) per ulteriori informazioni sull’utilizzo dell’autenticazione di base per i test delle prestazioni per Sites e Assets.
+Consulta [Test delle prestazioni autenticati](#authenticated-performance-testing) per ulteriori dettagli sull&#39;utilizzo dell&#39;autenticazione di base per i test delle prestazioni per Sites e Assets.
 
 >[!NOTE]
 >
@@ -250,7 +250,7 @@ Ad esempio, se utilizzi una suddivisione 70/30 e sono presenti 10 risorse carica
 
 #### Test e reporting {#testing-and-reporting}
 
-Cloud Manager crea una cartella sull’istanza di authoring utilizzando il nome utente e la password impostati dal CSE. Le risorse vengono quindi caricate nella cartella utilizzando una libreria open-source. I test eseguiti dal passaggio di test delle risorse vengono scritti utilizzando una [libreria open source.](https://github.com/adobe/toughday2) Il tempo di elaborazione di ciascuna risorsa e di varie metriche a livello di sistema vengono misurati nell’arco della durata del test di 30 minuti. Questa funzione consente di caricare sia immagini che documenti PDF.
+Cloud Manager crea una cartella sull’istanza di authoring utilizzando il nome utente e la password impostati dal CSE. Le risorse vengono quindi caricate nella cartella utilizzando una libreria open-source. I test eseguiti dal passaggio di test di Assets vengono scritti utilizzando una [libreria open source](https://github.com/adobe/toughday2). Il tempo di elaborazione di ciascuna risorsa e di varie metriche a livello di sistema vengono misurati nell’arco della durata del test di 30 minuti. Questa funzione consente di caricare sia immagini che documenti PDF.
 
 >[!TIP]
 >
@@ -298,7 +298,7 @@ Se gli unici elementi all’interno di `myco-all-1.0.0-SNAPSHOT.zip` sono i due 
 
 Per i progetti che producono decine di pacchetti incorporati, è comprovato che questa ottimizzazione consente di risparmiare fino a 10 minuti per ogni esecuzione della pipeline.
 
-Un caso speciale può verificarsi quando il pacchetto di contenuti “all” include una combinazione di pacchetti di contenuti e bundle OSGi ignorati. Ad esempio, se `myco-all-1.0.0-SNAPSHOT.zip` conteneva i due pacchetti incorporati precedentemente menzionati oltre a uno o più bundle OSGi, viene creato un nuovo pacchetto di contenuti minimo con i soli bundle OSGi. Questo pacchetto viene sempre denominato `cloudmanager-synthetic-jar-package` e i bundle contenuti vengono inseriti in `/apps/cloudmanager-synthetic-installer/install`.
+Un caso speciale può verificarsi quando il pacchetto di contenuti “all” include una combinazione di pacchetti di contenuti e bundle OSGi ignorati. Ad esempio, se `myco-all-1.0.0-SNAPSHOT.zip` contiene i due pacchetti incorporati precedentemente menzionati oltre a uno o più bundle OSGi, allora viene creato un nuovo pacchetto di contenuti minimo con i soli bundle OSGi. Questo pacchetto viene sempre denominato `cloudmanager-synthetic-jar-package` e i bundle contenuti vengono inseriti in `/apps/cloudmanager-synthetic-installer/install`.
 
 >[!NOTE]
 >

@@ -2,10 +2,10 @@
 title: Configurazione del progetto
 description: Scopri come configurare il progetto in modo da gestirlo e distribuirlo con Cloud Manager.
 exl-id: ed994daf-0195-485a-a8b1-87796bc013fa
-source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '1428'
-ht-degree: 100%
+source-wordcount: '1426'
+ht-degree: 98%
 
 ---
 
@@ -343,4 +343,4 @@ Se lo desideri, puoi disattivare il comportamento di riutilizzo per specifiche p
 
 ## Sviluppa il tuo codice in base alle best practice {#develop-your-code-based-on-best-practices}
 
-I team tecnici e di consulenza di Adobe hanno sviluppato un [set completo di best practice per sviluppatori AEM.](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/best-practices.html?lang=it)
+I team tecnici e di consulenza Adobi hanno sviluppato un [set completo di best practice per gli sviluppatori AEM](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/best-practices.html?lang=it).

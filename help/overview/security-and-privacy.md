@@ -2,10 +2,10 @@
 title: Sicurezza e privacy
 description: Scopri la sicurezza e la privacy del codice e delle risorse degli artefatti in Cloud Manager.
 exl-id: 67df1987-8db7-40bd-9717-1bf194e957f7
-source-git-commit: d7751757c1d3bda3d60406a1d39cb41c61f5c863
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '205'
-ht-degree: 100%
+source-wordcount: '202'
+ht-degree: 90%
 
 ---
 
@@ -18,7 +18,7 @@ Scopri la sicurezza e la privacy del codice e delle risorse degli artefatti in C
 
 [!UICONTROL Cloud Manager] dispone di ruoli preconfigurati con le autorizzazioni appropriate.
 
-Per informazioni sui possibili ruoli che è possibile assegnare nell’Admin Console e sulle autorizzazioni per i ruoli utente, consulta il documento [Autorizzazioni basate sul ruolo.](/help/requirements/role-based-permissions.md)
+Per informazioni sui possibili ruoli che è possibile assegnare nell&#39;Admin Console e sulle autorizzazioni per i ruoli utente, vedere [Autorizzazioni basate sul ruolo](/help/requirements/role-based-permissions.md).
 
 ## Isolamento risorse {#resource-isolation}
 

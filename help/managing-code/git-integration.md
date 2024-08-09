@@ -2,10 +2,10 @@
 title: Integrazione Git con Adobe Cloud Manager
 description: Questa serie di video illustra la configurazione e l’integrazione di un archivio Git gestito dal cliente (on-premise) con Adobe Cloud Manager.
 exl-id: e517f8a4-23f0-4486-8278-91396dba76ec
-source-git-commit: 91e909273bf2b21d7f6413731923011915079e45
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '340'
-ht-degree: 100%
+source-wordcount: '337'
+ht-degree: 91%
 
 ---
 
@@ -30,7 +30,7 @@ Questa serie di video si rivolge a chi conosce già le basi di Git e del control
 
 I passaggi e le convenzioni di denominazione descritti in questa serie di video rappresentano alcune best practice per l’utilizzo di un archivio Git gestito dal cliente e di Cloud Manager. Le convenzioni e i flussi di lavoro rappresentati dovrranno essere adattati per i singoli team di sviluppo.
 
-Per una panoramica completa di Cloud Manager, consulta il documento [Introduzione a Cloud Manager.](/help/introduction.md)
+Per una panoramica completa di Cloud Manager, vedere [Introduzione a Cloud Manager](/help/introduction.md).
 
 ## Sincronizzazione iniziale {#initial-sync}
 
@@ -40,11 +40,11 @@ Primi passaggi per sincronizzare un archivio Git gestito dal cliente con l’arc
 
 ## Strategia di diramazione di base {#branching-strategy}
 
-Imposta una strategia di diramazione di base per sfruttare i vantaggi offerti dalle pipeline di [produzione](/help/using/production-pipelines.md) e [non di produzione](/help/using/non-production-pipelines.md) di Cloud Manager.
+Imposta una strategia di diramazione di base per sfruttare i vantaggi delle [pipeline di produzione](/help/using/production-pipelines.md) e [pipeline non di produzione](/help/using/non-production-pipelines.md) di Cloud Manager.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28712/?quality=12)
 
-## Sviluppo di rami per caratteristiche {#feature-development}
+## Sviluppo dei rami delle funzioni {#feature-development}
 
 Un ramo della funzione serve per isolare le modifiche apportate al codice in un archivio Git gestito dal cliente e sincronizzarle con l’archivio Git di Cloud Manager per utilizzare una pipeline non di produzione a scopi di test di qualità del codice e di convalida.
 
