@@ -2,10 +2,10 @@
 title: Pipeline solo di staging e solo di produzione
 description: Scopri come suddividere le distribuzioni di staging e produzione utilizzando pipeline dedicate.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
-source-git-commit: 77eb1c824ba766e43dfd8e2b0f6f6edc71f043e5
+source-git-commit: 8e2c57d2594691e7fb18d8a538caa9b54a26b6bb
 workflow-type: tm+mt
-source-wordcount: '943'
-ht-degree: 31%
+source-wordcount: '932'
+ht-degree: 27%
 
 ---
 
@@ -66,31 +66,35 @@ Le pipeline di sola produzione e di sola staging vengono create in modo simile a
 ### Pipeline solo stage {#stage-only}
 
 1. Dopo aver selezionato l&#39;opzione **Aggiungi pipeline non di produzione**, viene visualizzata la finestra di dialogo **Aggiungi pipeline non di produzione**.
-1. Per creare una pipeline solo di staging, seleziona l’ambiente di staging nel campo **Ambienti di implementazione idonei** per la pipeline. Completare i campi rimanenti e fare clic su **Continua**.
+1. Per creare una pipeline per sola fase, seleziona l&#39;ambiente di fase nel campo **Ambienti di distribuzione idonei** per la pipeline.
+1. Compila i campi rimanenti.
+1. Fai clic su **Continua**.
 
    ![Creazione di una pipeline solo di staging](/help/assets/configure-pipelines/stage-only.png)
 
-1. Nella scheda **Test dello staging** è quindi possibile definire i test da eseguire nell&#39;ambiente di staging. Fai clic su **Salva** per salvare la nuova pipeline.
+1. Nella scheda **Test dello staging**, definisci il test da eseguire nell&#39;ambiente di staging.
+1. Fai clic su **Salva**.
 
    ![Parametri di test per una pipeline solo di staging](/help/assets/configure-pipelines/stage-only-test.png)
 
 ### Pipeline di sola produzione {#prod-only}
 
 1. Dopo aver selezionato l&#39;opzione **Aggiungi pipeline solo produzione**, viene visualizzata la finestra di dialogo **Aggiungi pipeline solo produzione**.
-1. Fornisci un **Nome pipeline**. Le altre opzioni e funzionalità della finestra di dialogo funzionano come quelle disponibili nella finestra di dialogo standard per la creazione di tubazioni accoppiate. Fai clic su **Salva** per salvare la pipeline.
+1. Nel campo **Nome pipeline** digitare il nome desiderato. Le altre opzioni e funzionalità della finestra di dialogo funzionano come quelle disponibili nella finestra di dialogo standard per la creazione di tubazioni accoppiate.
+1. Nell&#39;angolo inferiore destro della finestra di dialogo fare clic su **Salva**.
 
    ![Creazione di una pipeline solo di produzione](/help/assets/configure-pipelines/prod-only-pipeline.png)
 
 ## Eseguire pipeline solo produzione e solo staging {#running}
 
-Le pipeline di sola produzione e di sola staging vengono eseguite in gran parte nello stesso modo in cui vengono eseguite [ tutte le altre pipeline.](/help/using/managing-pipelines.md#running-pipelines) Per informazioni dettagliate, consulta la documentazione. Tuttavia, queste pipeline presentano due nuove funzioni.
+Le pipeline di sola produzione e di sola staging vengono eseguite in gran parte nello stesso modo in cui vengono eseguite [tutte le altre pipeline](/help/using/managing-pipelines.md#running-pipelines). Per informazioni dettagliate, consulta la documentazione. Tuttavia, queste pipeline presentano due nuove funzioni.
 
-* Le pipeline di sola fase e di sola produzione offrono una nuova [modalità emergenza](#emergency-mode) per consentire di saltare i test.
-* L&#39;esecuzione della pipeline di sola produzione può essere attivata direttamente dai dettagli di esecuzione di una pipeline di [sola fase.](#stage-only-run)
+* Le pipeline di sola fase e di sola produzione offrono una nuova [modalità emergenza](#emergency-mode) per saltare il test.
+* L&#39;esecuzione della pipeline solo produzione può essere attivata direttamente dai dettagli di esecuzione di una [pipeline solo fase](#stage-only-run).
 
 ### Modalità di emergenza {#emergency-mode}
 
-Ogni volta che avvii le pipeline online di sola produzione e di staging, ti viene richiesto di confermare l’avvio e come verrà avviato.
+All’avvio delle pipeline online di sola produzione e di staging, viene richiesto di confermare l’avvio e la relativa modalità di avvio.
 
 * **La modalità normale** è un&#39;esecuzione standard e include i passaggi del test dell&#39;area di visualizzazione.
 * **Modalità emergenza** ignora i passaggi del test dello staging.
@@ -103,12 +107,12 @@ Una pipeline esclusivamente solo di staging viene eseguita quasi allo stesso mod
 
 ![Esecuzione pipeline solo di staging](/help/assets/configure-pipelines/stage-only-pipeline-run.png)
 
-Facendo clic su **Promuovi build** viene richiesto di confermare l&#39;esecuzione della pipeline correlata solo fase normalmente o in [modalità emergenza.](#emergency-mode)
+Facendo clic su **Promuovi build** viene richiesto di confermare l&#39;esecuzione della pipeline correlata solo fase normalmente o in [modalità emergenza](#emergency-mode).
 
 Se non esiste una pipeline di sola produzione, viene richiesto di crearne una.
 
 ### Pipeline di sola produzione {#prod-only-run}
 
-Per le pipeline di sola produzione, è importante identificare gli artefatti di origine da distribuire in produzione. Questi dettagli sono disponibili nel passaggio **Preparazione degli artefatti**. Puoi passare a tali esecuzioni per ulteriori dettagli e registri.
+Per le pipeline di sola produzione, assicurati di identificare gli artefatti di origine che desideri distribuire in produzione. Questi dettagli si trovano nel passaggio **Preparazione elemento**. Per ulteriori dettagli e registri, puoi passare a tali esecuzioni.
 
 ![Dettagli artefatto](/help/assets/configure-pipelines/prod-only-pipeline-run.png)
