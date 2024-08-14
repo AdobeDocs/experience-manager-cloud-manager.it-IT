@@ -5,7 +5,7 @@ exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
 source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
 source-wordcount: '2763'
-ht-degree: 57%
+ht-degree: 94%
 
 ---
 
@@ -16,9 +16,9 @@ Scopri come funziona il test della qualità del codice delle pipeline e come pu�
 
 ## Introduzione {#introduction}
 
-Durante l’esecuzione della pipeline, il software acquisisce una serie di metriche. Queste metriche vengono quindi confrontate con gli indicatori prestazioni chiave (KPI, Key Performance Indicators) definiti dal proprietario business. Oppure vengono confrontati con gli standard impostati da Adobe Managed Services.
+Durante l’esecuzione della pipeline, il software acquisisce una serie di metriche. Queste metriche vengono quindi confrontate con gli indicatori prestazioni chiave (KPI) definiti dal proprietario dell’azienda. Oppure vengono confrontati con gli standard impostati da Adobe Managed Services.
 
-Questi risultati sono riportati utilizzando un sistema di valutazione a tre livelli.
+I risultati sono riportati mediante l’utilizzo di un sistema di valutazione a tre livelli.
 
 ## Valutazioni a tre livelli {#three-tiered-ratings}
 
@@ -30,9 +30,9 @@ La pipeline è composta da tre gate:
 
 Per ciascuno di questi gate, esiste una struttura a tre livelli per i problemi identificati dal gate.
 
-* **Critico** - Problemi che causano un errore immediato della pipeline.
-* **Importante** - Problemi che causano la sospensione della pipeline. Un Responsabile della distribuzione, un Project Manager o un Proprietario business possono ignorare i problemi. In caso affermativo, la pipeline procede come previsto. In alternativa, possono accettare i problemi, causando l’arresto della pipeline con un errore. L&#39;esclusione di errori importanti è soggetta a [timeout](/help/using/code-deployment.md#timeouts).
-* **Informazioni** - Problemi forniti a scopo puramente informativo e che non hanno alcun impatto sull&#39;esecuzione della pipeline.
+* **Critico**: si tratta di problemi che causano un errore immediato della pipeline.
+* **Importante**: si tratta di problemi che causano la sospensione dell’esecuzione della pipeline. Un Responsabile della distribuzione, un Project Manager o un proprietario dell’azienda possono ignorare questi problemi. In caso affermativo, la pipeline procede come previsto. In alternativa, possono accettare i problemi, causando l’arresto della pipeline con un errore. Se si ignorano errori importanti si innesca un [timeout](/help/using/code-deployment.md#timeouts).
+* **Info**: si tratta di problemi forniti a scopo puramente informativo e che non hanno alcun impatto sull’esecuzione della pipeline.
 
 >[!NOTE]
 >
@@ -40,13 +40,13 @@ Per ciascuno di questi gate, esiste una struttura a tre livelli per i problemi i
 
 ## Test della qualità del codice {#code-quality-testing-step}
 
-Questo passaggio di test valuta la qualità del codice dell’applicazione, che è lo scopo principale di una pipeline di sola qualità del codice. Viene eseguito subito dopo la fase di build in tutte le pipeline non di produzione e di produzione. Per ulteriori informazioni, consulta [Configurazione delle pipeline non di produzione](/help/using/non-production-pipelines.md).
+Questo passaggio di test valuta la qualità del codice dell’applicazione, che è lo scopo principale di una pipeline dedicata esclusivamente alla qualità del codice. Viene eseguito immediatamente dopo la fase di build in tutte le pipeline non di produzione e di produzione. Per ulteriori informazioni, vai alla [Configurazione delle pipeline non di produzione](/help/using/non-production-pipelines.md).
 
 Il test di qualità del codice esegue la scansione del codice sorgente per garantire che soddisfi determinati criteri di qualità.
 
-Il software lo implementa utilizzando una combinazione di analisi SonarQube, esame a livello di pacchetto di contenuti con OakPAL e convalida Dispatcher con Dispatcher Optimization Tool.
+Il software lo implementa tramite una combinazione di analisi SonarQube, un controllo a livello di pacchetto di contenuti con OakPAL e una convalida del Dispatcher tramite il relativo strumento di ottimizzazione.
 
-Esistono più di 100 regole che combinano regole Java generiche e regole specifiche per l’AEM. Alcune delle regole specifiche per l&#39;AEM vengono create in base alle best practice indicate dal team ingegneristico dell&#39;AEM e sono denominate [Regole per la qualità del codice personalizzato](/help/using/custom-code-quality-rules.md).
+Sono presenti più di 100 regole che combinano regole Java generiche e regole specifiche per AEM. Alcune delle regole specifiche per l&#39;AEM vengono create in base alle best practice indicate dal team ingegneristico dell&#39;AEM e sono denominate [Regole per la qualità del codice personalizzato](/help/using/custom-code-quality-rules.md).
 
 >[!TIP]
 >
@@ -67,7 +67,7 @@ I risultati dei test di qualità del codice sono forniti come valutazione, come 
 
 >[!NOTE]
 >
->Per informazioni più dettagliate, [Definizioni delle metriche di SonarQube](https://docs.sonarsource.com/sonarqube/latest/user-guide/code-metrics/metrics-definition/).
+>Per informazioni più dettagliate, consulta le [Definizioni delle metriche di SonarQube](https://docs.sonarsource.com/sonarqube/latest/user-guide/code-metrics/metrics-definition/).
 
 >[!NOTE]
 >
@@ -75,7 +75,7 @@ I risultati dei test di qualità del codice sono forniti come valutazione, come 
 
 ### Gestione dei falsi positivi {#dealing-with-false-positives}
 
-Il processo di controllo qualità non è perfetto e talvolta identifica erroneamente problemi che non sono effettivamente presenti. Questo scenario è noto come falso positivo.
+Il processo di scansione della qualità non è perfetto e talvolta identifica erroneamente problemi che in realtà non sono critici. Questo scenario è noto come falso positivo.
 
 In questi casi, il codice sorgente può essere annotato con l’annotazione Java standard `@SuppressWarnings` che specifica l’ID della regola come attributo dell’annotazione. Tra i falsi positivi comuni si annovera ad esempio il caso in cui la regola SonarQube per rilevare le password hardcoded può essere molto rigida riguardo al modo in cui una password hardcoded viene identificata.
 
@@ -86,7 +86,7 @@ Il codice riportato di seguito è abbastanza comune in un progetto AEM, che pres
 private static final String PROP_SERVICE_PASSWORD = "password";
 ```
 
-SonarQube genera quindi una vulnerabilità di blocco. Ma dopo aver esaminato il codice, riconosci che questo problema non è una vulnerabilità e puoi annotare il codice con l’ID regola appropriato.
+SonarQube genera in questo caso una vulnerabilità bloccante. Dopo aver rivisto il codice, riconosci che tale errore non è una vulnerabilità e puoi annotare il codice con l’ID della regola appropriata.
 
 ```java
 @SuppressWarnings("squid:S2068")
@@ -94,7 +94,7 @@ SonarQube genera quindi una vulnerabilità di blocco. Ma dopo aver esaminato il 
 private static final String PROP_SERVICE_PASSWORD = "password";
 ```
 
-Tuttavia, se il codice era effettivamente il seguente:
+Tuttavia, se in realtà il codice era:
 
 ```java
 @Property(label = "Service Password", value = "mysecretpassword")
@@ -105,7 +105,7 @@ la soluzione corretta è rimuovere la password hardcoded.
 
 >[!NOTE]
 >
->È consigliabile rendere l&#39;annotazione `@SuppressWarnings` il più specifica possibile. In altre parole, annota solo l’istruzione o il blocco specifico causa del problema. Tuttavia, è possibile aggiungere annotazioni a livello di classe. In questo modo è possibile eliminare più ampiamente gli avvisi.
+>È consigliabile rendere l’annotazione `@SuppressWarnings` più specifica possibile. In altre parole, annota solo l’istruzione o il blocco specifico che causa il problema. Tuttavia, è possibile aggiungere annotazioni a livello di classe. Ciò consente un’eliminazione più ampia degli avvisi.
 
 ## Test di sicurezza {#security-testing}
 
@@ -113,28 +113,28 @@ la soluzione corretta è rimuovere la password hardcoded.
 
 Questi stessi controlli di integrità possono essere eseguiti in qualsiasi momento tramite la console web o il dashboard operazioni.
 
-Se una delle istanze segnala un errore per una determinata verifica di integrità, la verifica di integrità dell’intero ambiente non riesce. Come nel caso dei test di qualità e prestazioni del codice, questi controlli di integrità sono organizzati in categorie e segnalati utilizzando il sistema di gating a tre livelli. L’unica distinzione è che non esiste alcuna soglia se è in corso un test di sicurezza. Tutti i controlli di integrità sono superati o falliti.
+Se una delle istanze segnala un errore per una determinata verifica di integrità, la verifica di integrità dell’intero ambiente non riesce. Come nel caso dei test di qualità e prestazioni del codice, questi controlli di integrità sono organizzati in categorie e segnalati utilizzando il sistema di gating a tre livelli. L’unica distinzione è che non esiste alcuna soglia nel caso di test di sicurezza. Tutti i controlli di integrità sono superati o falliti.
 
 Nella tabella seguente sono elencati i controlli di integrità.
 
 | Nome | Implementazione del controllo di integrità | Categoria |
 |---|---|---|
-| La Compatibilità Attach API di firewall deserializzazione è in uno stato accettabile. | [Compatibilità Attach Api di firewall deserializzazione](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/security/mitigating-serialization-issues#security) | Critico |
-| Il firewall deserializzazione è funzionale. | [Firewall deserializzazione funzionale](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/security/mitigating-serialization-issues#security) | Critico |
-| Il firewall deserializzazione è caricato. | [Firewall deserializzazione caricato](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/security/mitigating-serialization-issues#security) | Critico |
+| La Compatibilità Attach API di firewall deserializzazione è in uno stato accettabile. | [Compatibilità Attach Api di firewall deserializzazione](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/security/mitigating-serialization-issues#security) | Critico |
+| Il firewall deserializzazione è funzionale. | [Firewall deserializzazione funzionale](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/security/mitigating-serialization-issues#security) | Critico |
+| Il firewall deserializzazione è caricato. | [Firewall deserializzazione caricato](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/security/mitigating-serialization-issues#security) | Critico |
 | L’implementazione `AuthorizableNodeName` non espone l’ID autorizzabile nel nome/percorso del nodo. | [Generazione nome nodo autorizzabile](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/security/security-checklist#security) | Critico |
-| Le password predefinite sono state modificate. | [Account di accesso predefiniti](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/security/security#users-and-groups-in-aem) | Critico |
+| Le password predefinite sono state modificate. | [Account di accesso predefiniti](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/security/security#users-and-groups-in-aem) | Critico |
 | Il servlet GET predefinito di Sling è protetto dagli attacchi DOS. | Sling Get Servlet | Critico |
-| Il gestore Sling JavaScript è configurato in modo appropriato. | Sling JavaScript Handler | Critico |
+| Il gestore JavaScript di Sling è configurato in modo appropriato. | Gestore JavaScritp di Sling | Critico |
 | Il gestore di script JSP di Sling è configurato in modo appropriato. | Gestore di script Jsp di Sling | Critico |
 | SSL è configurato correttamente. | Configurazione SSL | Critico |
 | Non è stato trovato alcun criterio di profilo utente chiaramente non sicuro. | Accesso predefinito profilo utente | Critico |
-| Il filtro Sling Referrer è configurato per impedire attacchi CSRF. | [Filtro referrer sling](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/security/security-checklist#security) | Importante |
+| Il filtro Sling Referrer è configurato per prevenire attacchi CSRF. | [Filtro referrer sling](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/security/security-checklist#security) | Importante |
 | Il manager libreria HTML Adobe Granite è configurato in modo appropriato. | Configurazione manager libreria CQ HTML | Importante |
 | Il bundle di supporto CRXDE è disabilitato. | Supporto CRXDE | Importante |
 | Il bundle e il servlet Sling DavEx sono disabilitati. | Verifica stato DavEx | Importante |
 | Il contenuto di esempio non è installato. | Pacchetti contenuti di esempio | Importante |
-| Il filtro di richiesta WCM e il filtro di debug WCM sono disabilitati. | [Configurazione filtri WCM](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/configuring/osgi-configuration-settings#configuring) | Importante |
+| Il filtro di richiesta WCM e il filtro di debug WCM sono disabilitati. | [Configurazione filtri WCM](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/implementing/deploying/configuring/osgi-configuration-settings#configuring) | Importante |
 | Il bundle e il servlet Sling WebDAV sono configurati in modo appropriato. | Verifica stato WebDAV | Importante |
 | Il server Web è configurato per impedire il clickjacking. | Configurazione server Web | Importante |
 | La replica non sta utilizzando l’utente `admin`. | Utenti replica e trasporto | Info |
@@ -147,13 +147,13 @@ Cloud Manager esegue il test delle prestazioni per i programmi di AEM Sites. Il 
 
 #### Utenti virtuali {#virtual-users}
 
-In Cloud Manager gli utenti o i contenitori virtuali vengono attivati in base ai KPI (tempo di risposta e visualizzazioni pagina/min) impostati dal ruolo **Proprietario business**. Questi KPI vengono impostati durante la [creazione o modifica del programma](/help/getting-started/program-setup.md).
+In Cloud Manager gli utenti o i contenitori virtuali vengono attivati in base ai KPI (tempo di risposta e visualizzazioni pagina/min) impostati dal ruolo **Proprietario azienda**. Questi KPI vengono impostati durante la [creazione o modifica del programma](/help/getting-started/program-setup.md).
 
-In base ai KPI definiti, vengono attivati fino a dieci contenitori che simulano gli utenti effettivi. Le pagine selezionate per il test vengono suddivise e assegnate a ogni utente virtuale.
+In base ai KPI definiti, verranno attivati fino a 10 contenitori che simulano gli utenti effettivi. Le pagine selezionate per il test vengono suddivise e assegnate a ogni utente virtuale.
 
 #### Crawler {#crawler}
 
-Prima dell’inizio del periodo di test di 30 minuti, Cloud Manager esegue la ricerca per indicizzazione dell’ambiente di staging utilizzando un set di uno o più URL di seed configurati dal Customer Success Engineer. Partendo da questi URL, l’HTML di ogni pagina viene ispezionato e i collegamenti vengono attraversati in modalità di ampiezza.
+Prima dell’inizio della fase di test di 30 minuti, Cloud Manager eseguirà la ricerca per indicizzazione dell’ambiente di staging utilizzando un set di uno o più URL di seed configurati dal Customer Success Engineer. Partendo da questi URL, l’HTML di ogni pagina viene ispezionato e i collegamenti vengono attraversati in modalità di ampiezza.
 
 * Per impostazione predefinita, questo processo di ricerca per indicizzazione è limitato a un massimo di 5000 pagine.
 * Il numero massimo di pagine da sottoporre a test può essere sovrascritto impostando la [variabile di pipeline](/help/getting-started/build-environment.md#pipeline-variables) `CM_PERF_TEST_CRAWLER_MAX_PAGES`.
@@ -164,27 +164,27 @@ Prima dell’inizio del periodo di test di 30 minuti, Cloud Manager esegue la ri
 
 Tre set di pagine selezionano le pagine. Cloud Manager utilizza i registri di accesso dalle istanze AEM in ambienti di produzione e di staging per determinare i seguenti bucket.
 
-* **Pagine live popolari** - Assicura che vengano testate le pagine più popolari a cui accedono i clienti live. Cloud Manager legge il registro di accesso e determina le prime 25 pagine più visitate dai clienti live per generare un elenco dei primi `Popular Live Pages`. L’intersezione di queste pagine, presenti anche nell’ambiente di staging, viene quindi sottoposta a ricerca per indicizzazione nell’ambiente di staging.
+* **Pagine live popolari**: assicura che vengano testate le pagine più popolari a cui la clientela accede in tempo reale. Cloud Manager legge il registro di accesso e determina le prime 25 pagine più visitate dalla clientela in tempo reae per generare un elenco di quelle principali`Popular Live Pages`. L’intersezione di queste pagine che sono presenti anche nell’ambiente di staging vengono quindi sottoposte a ricerca per indicizzazione nell’ambiente di staging.
 
-* **Altre pagine live** - Assicura che vengano testate le pagine che non rientrano nelle prime 25 pagine live più popolari, che potrebbero non essere popolari, ma che sono importanti da testare. Analogamente alle pagine live più popolari, queste vengono estratte dal registro di accesso e devono essere presenti anche nell’ambiente di staging.
+* **Altre pagine live**: assicura che vengano testate le pagine che non rientrano nelle prime 25 pagine live più popolari, che possono non essere popolari, ma che è importante testare. Simili alle pagine live popolari, queste vengono estratte dal registro di accesso e devono essere presenti anche nell’ambiente di staging.
 
-* **Nuove pagine** - Verifica le nuove pagine che possono essere state distribuite solo nell&#39;area di gestione temporanea e non ancora in produzione, ma che è necessario testare.
+* **Nuove pagine**: testa le nuove pagine che possono essere state distribuite solo nell’area di staging e non ancora nella produzione, ma che è necessario testare.
 
 ##### Distribuzione del traffico tra set di pagine selezionati {#distribution-of-traffic}
 
-Puoi scegliere da uno a tutti e tre i set nella scheda **Test** della [configurazione pipeline](/help/using/production-pipelines.md). La distribuzione del traffico si basa sul numero di set selezionati. In altre parole, se sono selezionati tutti e tre, il 33% del totale delle visualizzazioni di pagina viene inserito in ciascun set. Se ne sono selezionati due, il 50% viene indirizzato a ciascun set. Se ne è selezionato uno, il 100% del traffico viene indirizzato a tale set.
+Puoi scegliere da uno a tutti e tre i set nella scheda **Test** della [configurazione pipeline](/help/using/production-pipelines.md). La distribuzione del traffico si basa sul numero di set selezionati. In altre parole, se sono selezionati tutti e tre, il 33% del totale delle visualizzazioni di pagina viene destinato a ogni set. Se ne sono selezionati due, il 50% viene indirizzato a ciascun set. Se ne è selezionato uno, il 100% del traffico viene indirizzato a tale set.
 
 Consideriamo questo esempio.
 
 * Abbiamo una suddivisione 50/50 tra le pagine live più popolari e i nuovi set di pagine.
 * Non vengono utilizzate altre pagine live.
 * Il nuovo set di pagine contiene 3000 pagine.
-* L&#39;indicatore KPI *visualizzazioni pagina al minuto* è impostato su 200.
+* I KPI per le *visualizzazioni di pagina al minuto* sono impostati su 200.
 
 Nel periodo di test di 30 minuti:
 
 * Ognuna delle 25 pagine del set di pagine popolari live viene visitata 120 volte: `((200 * 0.5) / 25) * 30 = 120`
-* Ognuna delle 3000 pagine del nuovo set di pagine viene visualizzata una volta: `((200 * 0.5) / 3000) * 30 = 1`
+* Ognuna delle 3000 pagine del nuovo set di pagine verrà visitata una volta: `((200 * 0.5) / 3000) * 30 = 1`
 
 #### Test e reporting {#testing-reporting}
 
@@ -208,15 +208,15 @@ Consulta [Test delle prestazioni autenticati](#authenticated-performance-testing
 
 >[!NOTE]
 >
->Durante il test vengono monitorate sia le istanze di authoring che quelle di pubblicazione. Se non viene ottenuta alcuna metrica per un’istanza, tale metrica viene segnalata come sconosciuta e il passaggio corrispondente non riesce.
+>Durante il test vengono monitorate sia le istanze di authoring che quelle di pubblicazione. Se non viene ottenuta alcuna metrica per un’istanza, tale metrica viene segnalata come sconosciuta e il passaggio corrispondente non riuscirà.
 
-#### Test delle prestazioni autenticati {#authenticated-performance-testing}
+#### Test delle prestazioni autenticato {#authenticated-performance-testing}
 
-Se necessario, i clienti AMS con siti autenticati possono specificare un nome utente e una password utilizzati da Cloud Manager per accedere al sito web durante il test delle prestazioni dei siti.
+Se necessario,la clientela AMS con siti autenticati può specificare un nome utente e una password che Cloud Manager utilizzerà per accedere al sito web durante il test delle prestazioni dei siti.
 
 Il nome utente e la password sono specificati come variabili della pipeline con i nomi `CM_PERF_TEST_BASIC_USERNAME` e `CM_PERF_TEST_BASIC_PASSWORD`.
 
-Il nome utente è archiviato in una variabile `string` e la password è archiviata in una variabile `secretString`. Se vengono specificate entrambe queste variabili, ogni richiesta del crawler dei test delle prestazioni e degli utenti virtuali del test conterrà queste credenziali come autenticazione HTTP Basic.
+Il nome utente viene archiviato in una variabile `string` e la password viene archiviata in una variabile `secretString`. Se entrambe le variabili vengono specificate, ogni richiesta del crawler dei test delle prestazioni e degli utenti virtuali del test conterrà queste credenziali come autenticazione di base HTTP.
 
 Per impostare queste variabili utilizzando Cloud Manager CLI, esegui:
 
@@ -224,7 +224,7 @@ Per impostare queste variabili utilizzando Cloud Manager CLI, esegui:
 $ aio cloudmanager:set-pipeline-variables <pipeline id> --variable CM_PERF_TEST_BASIC_USERNAME <username> --secret CM_PERF_TEST_BASIC_PASSWORD <password>
 ```
 
-Per informazioni su come utilizzare l&#39;API, consulta la documentazione sulle [variabili della pipeline utente](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/patchPipelineVariables) di patch.
+Consulta la documentazione API [Variabili della pipeline utente di patch](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/patchPipelineVariables) per scoprire come utilizzare l’API.
 
 ### AEM Assets {#aem-assets}
 
@@ -232,29 +232,29 @@ Cloud Manager esegue il test delle prestazioni per i programmi AEM Assets carica
 
 #### Requisiti di onboarding {#onboarding-requirement}
 
-Per il test delle prestazioni di Assets, il CSE (Customer Success Engineer) crea un utente e una password `cloudmanager` durante l&#39;onboarding dell&#39;authoring nell&#39;ambiente di staging. I passaggi del test delle prestazioni richiedono un utente denominato `cloudmanager` e la password associata impostata dal CSE.
+Per il test delle prestazioni di Assets, il Customer Success Engineer crea un utente e una password `cloudmanager` durante l’onboarding dell’authoring nell’ambiente di staging. I passaggi del test delle prestazioni richiedono un utente chiamato `cloudmanager` e la password associata impostata dal CSE.
 
 Questo metodo deve rimanere nell’istanza di authoring senza modificarne le autorizzazioni. Se lo modifichi o lo rimuovi, il test delle prestazioni di Assets potrebbe non riuscire.
 
 #### Immagini e risorse per il test {#assets-for-testing}
 
-I clienti possono caricare le proprie risorse da testare. Questo processo può essere eseguito dalla schermata **Configurazione pipeline** o **Modifica**. Sono supportati formati immagine comuni come JPEG, PNG, GIF e BMP insieme ai file Photoshop, Illustrator e Postscript.
+I clienti possono caricare le proprie risorse da testare. Questo processo può essere eseguito dalla schermata **Configurazione della pipeline** o **Modifica**. Sono supportati formati immagine comuni come JPEG, PNG, GIF e BMP insieme ai file Photoshop, Illustrator e Postscript.
 
-Se non viene caricata alcuna immagine, Cloud Manager utilizza un’immagine e dei documenti PDF predefiniti per il test.
+Se non viene caricata alcuna immagine, Cloud Manager utilizza un’immagine e documenti PDF predefiniti per il test.
 
 #### Distribuzione delle risorse da sottoporre a test {#distribution-of-assets}
 
 La distribuzione del numero di risorse di ciascun tipo caricate al minuto è impostata nella schermata **Configurazione della pipeline** o **Modifica**.
 
-Ad esempio, se utilizzi una suddivisione 70/30 e sono presenti 10 risorse caricate al minuto, vengono caricate 7 immagini e 3 documenti al minuto.
+Ad esempio, se utilizzi una suddivisione 70/30 e sono presenti 10 risorse caricate al minuto, verranno caricate 7 immagini e 3 documenti al minuto.
 
 #### Test e reporting {#testing-and-reporting}
 
-Cloud Manager crea una cartella sull’istanza di authoring utilizzando il nome utente e la password impostati dal CSE. Le risorse vengono quindi caricate nella cartella utilizzando una libreria open-source. I test eseguiti dal passaggio di test di Assets vengono scritti utilizzando una [libreria open source](https://github.com/adobe/toughday2). Il tempo di elaborazione di ciascuna risorsa e di varie metriche a livello di sistema vengono misurati nell’arco della durata del test di 30 minuti. Questa funzione consente di caricare sia immagini che documenti PDF.
+Cloud Manager crea una cartella sull’istanza di authoring utilizzando il nome utente e la password configurati dal CSE. Le risorse vengono quindi caricate nella cartella utilizzando una libreria open-source. I test eseguiti dal passaggio di test di Assets vengono scritti utilizzando una [libreria open source](https://github.com/adobe/toughday2). Il tempo di elaborazione di ciascuna risorsa e di varie metriche a livello di sistema vengono misurati nell’arco della durata del test di 30 minuti. Questa funzione consente di caricare sia immagini che documenti PDF.
 
 >[!TIP]
 >
->Per ulteriori informazioni, consulta [Configurare le pipeline di produzione](/help/using/production-pipelines.md). Consulta [Configurazione del programma](/help/getting-started/program-setup.md) per scoprire come impostare il programma e definire i KPI.
+>Per ulteriori informazioni, consulta [Configura pipeline di produzione](/help/using/production-pipelines.md). Consulta [Configurazione del programma](/help/getting-started/program-setup.md) per scoprire come impostare il programma e definire i KPI.
 
 ### Grafici dei risultati del test delle prestazioni {#performance-testing-results-graphs}
 
@@ -273,7 +273,7 @@ Questa funzionalità è disponibile per le metriche seguenti.
 * **Tempo di attesa I/O del disco**: un grafico del tempo di attesa I/O del disco durante il periodo del test
 
 * **Frequenza errori pagina**: un grafico degli errori di pagina al minuto durante il periodo di test
-   * Un file CSV in cui sono elencate le pagine che hanno prodotto un errore durante il test
+   * File CSV in cui sono elencate le pagine che hanno prodotto un errore durante il test
 
 * **Utilizzo della larghezza di banda del disco**: un grafico dell&#39;utilizzo della larghezza di banda del disco durante il periodo di test
 
@@ -286,9 +286,9 @@ Questa funzionalità è disponibile per le metriche seguenti.
 
 ## Ottimizzazione dell’analisi dei pacchetti di contenuto {#content-package-scanning-optimization}
 
-Come parte del processo di analisi della qualità, Cloud Manager esegue l’analisi dei pacchetti di contenuti prodotti dalla build Maven. Cloud Manager offre ottimizzazioni per accelerare questo processo, che è efficace quando si osservano determinati vincoli relativi ai pacchetti.
+Come parte del processo di analisi della qualità, Cloud Manager esegue l’analisi dei pacchetti di contenuti prodotti dalla build Maven. Per accelerare questo processo, Cloud Manager offre delle ottimizzazioni che risultano efficaci quando si osservano determinati vincoli per la creazione dei pacchetti.
 
-La chiave per l’ottimizzazione è per i progetti che producono un singolo pacchetto &quot;all&quot;, contenente altri pacchetti di contenuti prodotti dalla build e contrassegnati come ignorati. Quando Cloud Manager rileva questo scenario, anziché decomprimere il pacchetto “all”, scansiona i singoli pacchetti di contenuti e li ordina in base alle dipendenze. Consideriamo ad esempio il seguente output di build.
+La chiave per l’ottimizzazione è per i progetti che producono un singolo pacchetto “all”, contenente altri pacchetti di contenuti prodotti dalla build e contrassegnati come ignorati. Quando Cloud Manager rileva questo scenario, anziché decomprimere il pacchetto “all”, scansiona i singoli pacchetti di contenuti e li ordina in base alle dipendenze. Consideriamo ad esempio il seguente output di build.
 
 * `all/myco-all-1.0.0-SNAPSHOT.zip` (pacchetto di contenuti)
 * `ui.apps/myco-ui.apps-1.0.0-SNAPSHOT.zip` (pacchetto di contenuti ignorato)
@@ -302,5 +302,5 @@ Un caso speciale può verificarsi quando il pacchetto di contenuti “all” inc
 
 >[!NOTE]
 >
->* Questa ottimizzazione non influisce sui pacchetti distribuiti a AEM.
->* La corrispondenza tra pacchetti di contenuti incorporati e ignorati si basa sui nomi dei file. Questa ottimizzazione ha esito negativo se più pacchetti di contenuto ignorati condividono lo stesso nome di file o se il nome del file cambia durante l’incorporamento.
+>* Questa ottimizzazione non influisce sui pacchetti distribuiti in AEM.
+>* La corrispondenza tra pacchetti di contenuti incorporati e ignorati si basa sui nomi dei file. Questa ottimizzazione ha esito negativo se più pacchetti di contenuti ignorati condividono lo stesso nome di file o se il nome del file cambia durante l’incorporamento.
