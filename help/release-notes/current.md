@@ -1,41 +1,48 @@
 ---
-title: Note sulla versione 2024.7.0
-description: Scopri le note sulla versione di Cloud Manager 2024.7.0.
+title: Note sulla versione per Cloud Manager 2024.8.0
+description: Scopri le note sulla versione di Cloud Manager 2024.8.0.
 feature: Release Information
-exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: 34f15aff7478a6a0884f88f534a7dff996a8570e
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 4%
+source-wordcount: '265'
+ht-degree: 3%
 
 ---
 
 
-# Note sulla versione per Cloud Manager 2024.7.0 {#release-notes}
+# Note sulla versione per Cloud Manager 2024.8.0 {#release-notes}
 
-In questa pagina sono documentate le note sulla versione di [!UICONTROL Cloud Manager] 2024.7.0.
+In questa pagina sono documentate le note sulla versione di [!UICONTROL Cloud Manager] 2024.8.0.
 
 >[!NOTE]
 >
->Per le ultime note sulla versione di Cloud Manager in AEM as a Cloud Service, vedi [Cloud Manager nelle note sulla versione corrente di AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/cloud-manager/current).
+>Per le ultime note sulla versione di Cloud Manager in AEM as a Cloud Service, fai riferimento a [Cloud Manager nelle note sulla versione corrente di AEM as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/cloud-manager/current).
 
 ## Data di rilascio {#release-date}
 
-La data di rilascio per [!UICONTROL Cloud Manager] 2024.7.0 è il 18 luglio 2024. La prossima versione è pianificata per il 13 agosto 2024.
+La data di rilascio per [!UICONTROL Cloud Manager] 2024.8.0 è il 13 agosto 2024. La prossima versione è pianificata per il 14 settembre 2024.
 
 ## Novità {#what-is-new}
 
-* La [pipeline di produzione](/help/using/production-pipelines.md#adding-production-pipeline) e la [pipeline non di produzione](/help/using/non-production-pipelines.md#adding-non-production-pipeline) attivano **Modifiche Git** per avviare la pipeline in un commit è ora disponibile per [archivi privati](/help/managing-code/private-repositories.md).
-* Una pipeline di pre-produzione può essere attivata solo manualmente e non può essere configurata come **In caso di modifiche Git**.
-* Per le pipeline solo di produzione, l’elenco delle esecuzioni promozionali include le esecuzioni con una versione dell’artefatto maggiore della versione dell’artefatto distribuita nell’ambiente di produzione.
-* [L&#39;archetipo del progetto AEM](https://experienceleague.adobe.com/it/docs/experience-manager-core-components/using/developing/archetype/overview) è stato aggiornato alla [versione 49](https://github.com/adobe/aem-project-archetype/tree/aem-project-archetype-49).
+* Per le pipeline di sola fase e di sola produzione (disponibili come parte del [programma early adopter](#staging-production-only-pipelines)), è ora possibile eseguirle in [modalità emergenza,](/help/using/stage-prod-only.md#emergency-mode) ignorando il test della fase.
 
 ## Programma di adozione anticipata {#early-adoption}
 
-Partecipa al programma di adozione anticipata di Cloud Manager e prova alcune delle prossime funzionalità
+Partecipa al programma di adozione anticipata di Adobe e hai la possibilità di testare alcune delle prossime funzionalità.
 
-### Pipeline di sola staging e sola produzione {#staging-production-only-pipelines}
+### Pipeline di sola staging e di sola produzione {#staging-production-only-pipelines}
 
-È stato introdotto il supporto per [pipeline di sola staging e di sola produzione](/help/using/stage-prod-only.md), che consente di suddividere le pipeline di distribuzione di produzione full stack in implementazioni più piccole e specializzate.
+Adobe è entusiasta di annunciare l&#39;introduzione del supporto per [pipeline solo di staging e solo di produzione](/help/using/stage-prod-only.md). Questa nuova funzione consente di suddividere le pipeline di distribuzione di produzione full stack in implementazioni più piccole e specializzate.
 
-Se ti interessa testare questa nuova funzionalità e condividere i tuoi commenti, invia un&#39;e-mail a `Grp-cloudmanager_splitpipelines@adobe.com` dal tuo indirizzo e-mail associato al tuo Adobe ID.
+Se desideri testare questa funzione e fornire un feedback, invia un&#39;e-mail a `Grp-cloudmanager_splitpipelines@adobe.com` utilizzando l&#39;indirizzo e-mail associato al tuo Adobe ID.
+
+## Correzioni di bug
+
+* È stato risolto un raro problema a causa del quale i passaggi della pipeline venivano trovati in esecuzione dopo l’eliminazione della pipeline.
+* La riesecuzione della pipeline ora funziona al primo tentativo, correggendo un raro problema in cui era necessario avviare una nuova esecuzione più volte.
+* I passaggi di distribuzione pianificati per le pipeline full stack ora rispettano la data pianificata selezionata e non tornano a **Ora**.
+* Gli stati delle attività di copia del contenuto non riuscite ora vengono rispecchiati correttamente e in rare circostanze non viene più visualizzato in modo errato lo stato `In Progress`.
+
+## Problemi noti {#known-issues}
+
+{{content-copy-known-issues}}

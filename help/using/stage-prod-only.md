@@ -2,10 +2,10 @@
 title: Pipeline solo di staging e solo di produzione
 description: Scopri come suddividere le distribuzioni di staging e produzione utilizzando pipeline dedicate.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
-source-git-commit: 70b7994435f7f0f587c134fab1fb66c6576386d9
+source-git-commit: 77eb1c824ba766e43dfd8e2b0f6f6edc71f043e5
 workflow-type: tm+mt
-source-wordcount: '887'
-ht-degree: 37%
+source-wordcount: '943'
+ht-degree: 31%
 
 ---
 
@@ -83,9 +83,19 @@ Le pipeline di sola produzione e di sola staging vengono create in modo simile a
 
 ## Eseguire pipeline solo produzione e solo staging {#running}
 
-Le pipeline di sola produzione e di sola staging vengono eseguite nello stesso modo in cui vengono eseguite [tutte le altre pipeline](/help/using/managing-pipelines.md#running-pipelines). Per informazioni dettagliate, consulta la documentazione.
+Le pipeline di sola produzione e di sola staging vengono eseguite in gran parte nello stesso modo in cui vengono eseguite [ tutte le altre pipeline.](/help/using/managing-pipelines.md#running-pipelines) Per informazioni dettagliate, consulta la documentazione. Tuttavia, queste pipeline presentano due nuove funzioni.
 
-Inoltre, un’esecuzione della pipeline solo di produzione può essere attivata direttamente dai dettagli di esecuzione di una pipeline solo di staging.
+* Le pipeline di sola fase e di sola produzione offrono una nuova [modalità emergenza](#emergency-mode) per consentire di saltare i test.
+* L&#39;esecuzione della pipeline di sola produzione può essere attivata direttamente dai dettagli di esecuzione di una pipeline di [sola fase.](#stage-only-run)
+
+### Modalità di emergenza {#emergency-mode}
+
+Ogni volta che avvii le pipeline online di sola produzione e di staging, ti viene richiesto di confermare l’avvio e come verrà avviato.
+
+* **La modalità normale** è un&#39;esecuzione standard e include i passaggi del test dell&#39;area di visualizzazione.
+* **Modalità emergenza** ignora i passaggi del test dello staging.
+
+![Modalità emergenza](/help/assets/configure-pipelines/emergency-mode.png)
 
 ### Pipeline solo stage {#stage-only-run}
 
@@ -93,7 +103,9 @@ Una pipeline esclusivamente solo di staging viene eseguita quasi allo stesso mod
 
 ![Esecuzione pipeline solo di staging](/help/assets/configure-pipelines/stage-only-pipeline-run.png)
 
-Il pulsante **Promuovi versione** viene visualizzato solo se ti trovi nell’ultima esecuzione riuscita della pipeline solo di staging. Dopo aver fatto clic su, viene richiesto di confermare l’esecuzione della pipeline di sola produzione o di crearne una, se non esiste già.
+Facendo clic su **Promuovi build** viene richiesto di confermare l&#39;esecuzione della pipeline correlata solo fase normalmente o in [modalità emergenza.](#emergency-mode)
+
+Se non esiste una pipeline di sola produzione, viene richiesto di crearne una.
 
 ### Pipeline di sola produzione {#prod-only-run}
 
