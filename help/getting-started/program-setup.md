@@ -2,10 +2,10 @@
 title: Configurazione del programma
 description: Dopo l’onboarding, il proprietario business dovrà effettuare una configurazione iniziale del programma.
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
 workflow-type: tm+mt
-source-wordcount: '584'
-ht-degree: 91%
+source-wordcount: '582'
+ht-degree: 86%
 
 ---
 
@@ -50,7 +50,7 @@ Segui questi passaggi per configurare il programma e definire i KPI.
 
 Il programma verrà creato. Potrebbero essere necessari diversi minuti per il provisioning delle risorse prima che il programma sia pronto per l’uso.
 
-## Modifica di un programma {#editing-program}
+## Modificare un programma {#editing-program}
 
 È possibile modificare i programmi dopo averli impostati. Per modificare un programma, effettua le seguenti operazioni.
 
@@ -72,7 +72,7 @@ Tieni presente che le modifiche vengono salvate immediatamente in Cloud Manager,
 
 Se non hai ancora creato una pipeline, consulta i documenti [Configurazione delle pipeline di produzione](/help/using/production-pipelines.md) e [Configurazione delle pipeline non di produzione](/help/using/non-production-pipelines.md).
 
-## Passaggio tra programmi {#swithing-programs}
+## Passa da un programma all&#39;altro {#swithing-programs}
 
 Quando lavori a un programma, puoi passare rapidamente a un altro senza tornare alla pagina della panoramica di Cloud Manager.
 

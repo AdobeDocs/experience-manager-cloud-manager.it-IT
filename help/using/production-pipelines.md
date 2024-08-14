@@ -1,16 +1,16 @@
 ---
-title: Configurazione delle pipeline di produzione
+title: Configurare le pipeline di produzione
 description: Scopri come utilizzare Cloud Manager per creare e configurare pipeline di produzione per distribuire il codice.
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
 workflow-type: tm+mt
-source-wordcount: '1286'
-ht-degree: 91%
+source-wordcount: '1285'
+ht-degree: 87%
 
 ---
 
 
-# Configurazione delle pipeline di produzione {#configuring-production-pipelines}
+# Configurare le pipeline di produzione {#configuring-production-pipelines}
 
 Scopri come utilizzare Cloud Manager per creare e configurare pipeline di produzione per distribuire il codice. per una panoramica delle nozioni di base sul funzionamento delle pipeline in Cloud Manager, consulta [Pipeline CI/CD](/help/overview/ci-cd-pipelines.md).
 
@@ -33,7 +33,7 @@ Il ruolo di **Responsabile della distribuzione** è responsabile della configura
 >
 >Non è possibile impostare una pipeline finché il relativo archivio Git associato non dispone di almeno un ramo e la [Configurazione del programma](/help/getting-started/program-setup.md) non è stata completata.
 
-## Aggiunta di una nuova pipeline di produzione {#adding-production-pipeline}
+## Aggiungi una nuova pipeline di produzione {#adding-production-pipeline}
 
 Una volta utilizzata l’interfaccia utente di [!UICONTROL Cloud Manager] per configurare il programma e disporre di almeno un ambiente, è possibile aggiungere una pipeline di produzione.
 
@@ -124,7 +124,7 @@ Una volta utilizzata l’interfaccia utente di [!UICONTROL Cloud Manager] per co
 
          * **Configurazione del Dispatcher**: definisce la configurazione del dispatcher per l’ambiente di produzione. Le opzioni sono le stesse dell’ambiente di staging.
 
-1. Fai clic su **Continua** per passare alla scheda **Test dello staging**, in cui puoi configurare il test di prestazione di AEM Sites e AEM Assets, a seconda dei prodotti per i quali hai concesso la licenza.
+1. Fai clic su **Continua** per passare alla scheda **Test dello staging** in cui puoi configurare il test delle prestazioni di AEM Sites e AEM Assets, a seconda dei prodotti per i quali hai concesso la licenza.
 
    >[!TIP]
    >
@@ -157,7 +157,7 @@ Una volta utilizzata l’interfaccia utente di [!UICONTROL Cloud Manager] per co
 
 Dopo aver configurato la pipeline, è necessario distribuire il codice. Per ulteriori dettagli, vedi [Distribuzione del codice](/help/using/code-deployment.md).
 
-## Tutorial video {#video-tutorial-one}
+## Esercitazione video {#video-tutorial-one}
 
 Questo video fornisce una panoramica del processo di creazione della pipeline, descritto in questo documento.
 

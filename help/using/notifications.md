@@ -2,10 +2,10 @@
 title: Notifiche
 description: Scopri in che modo Cloud Manager notifica gli eventi importanti.
 exl-id: cfd5655f-2d2c-4304-b25c-6cdffe7ff64c
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
 workflow-type: tm+mt
-source-wordcount: '571'
-ht-degree: 94%
+source-wordcount: '564'
+ht-degree: 79%
 
 ---
 
@@ -38,9 +38,9 @@ La scheda **Annunci** include annunci di prodotti Adobe. Gli annunci riguardano 
 
 Fai clic su una notifica o un annuncio per visualizzarne i dettagli. Le notifiche collegate ad attività come le distribuzioni di pipeline ti portano ai dettagli di quell’attività, ad esempio la finestra di esecuzione della pipeline.
 
-Fai clic sull’opzione **Visualizza tutto** nella parte inferiore del pannello per visualizzare tutti gli annunci presenti nella casella in entrata.
+Fai clic sull&#39;opzione **Visualizza tutto** nella parte inferiore del pannello per visualizzare tutti gli annunci presenti nella casella in entrata.
 
-Fai clic sull’opzione **Contrassegna tutto come letto** nella parte inferiore del pannello per contrassegnare tutte le notifiche non lette come lette e cancellare il contrassegno dell’icona della campana.
+Fai clic su **Contrassegna tutto come letto** nella parte inferiore del pannello per contrassegnare tutte le notifiche non lette come lette e cancellare il contrassegno dell&#39;icona della campana.
 
 ## Configurazione delle notifiche {#configuration}
 
@@ -58,7 +58,7 @@ Le iscrizioni definiscono per quali prodotti ricevi le notifiche e quali notific
 
 ![Iscrizioni alle notifiche](/help/assets/notifications-subscriptions.png)
 
-Per impostazione predefinita, riceverai tutte le notifiche per tutti i prodotti. Fai clic su **Personalizza** accanto a un prodotto per definire i tipi di notifiche ricevute per quel prodotto.
+Per impostazione predefinita, riceverai tutte le notifiche per tutti i prodotti. Fai clic su **Personalizza** accanto a un prodotto per definire i tipi di notifiche che ricevi per quel prodotto.
 
 ![Personalizzazione dell’iscrizione alle notifiche](/help/assets/notifications-subscriptions-customize.png)
 

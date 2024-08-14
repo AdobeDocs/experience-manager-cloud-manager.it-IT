@@ -1,11 +1,11 @@
 ---
-title: Ambienti di monitoraggio
+title: Monitorare gli ambienti
 description: Scopri come monitorare gli ambienti in Cloud Manager.
 exl-id: 32886133-d6c0-4aed-8bb0-81b84f63e825
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
 workflow-type: tm+mt
-source-wordcount: '922'
-ht-degree: 93%
+source-wordcount: '903'
+ht-degree: 79%
 
 ---
 
@@ -20,9 +20,7 @@ Il monitoraggio del sistema in [!UICONTROL Cloud Manager] viene eseguito osserva
 
 Se una metrica supera la soglia critica, viene considerata in uno stato critico. Se una metrica supera la soglia di avvertenza (ma non la soglia critica), viene considerata in uno stato di avvertenza. Le soglie sono impostate da Adobe Managed Services e possono essere visualizzate in [!UICONTROL Cloud Manager]. Nella maggior parte dei casi, le soglie sono uguali per tutti i clienti, ma in alcuni casi Adobe Managed Services potrà modificarle in base a esigenze specifiche. Per eventuali domande sulle soglie, rivolgiti al tuo Customer Success Engineer (CSE).
 
-## Accesso al monitoraggio del sistema {#accessing-system-monitoring}
-
-Segui questi passaggi per accedere al monitoraggio del sistema.
+## Monitoraggio del sistema di accesso {#accessing-system-monitoring}
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) e seleziona l’organizzazione e il programma appropriati.
 
@@ -32,7 +30,7 @@ Segui questi passaggi per accedere al monitoraggio del sistema.
 
 La pagina **Rapporti** viene visualizzata con le informazioni di monitoraggio del sistema.
 
-## Panoramica di Monitoraggio del sistema {#system-monitoring-overview}
+## Panoramica sul monitoraggio del sistema {#system-monitoring-overview}
 
 Nella sezione **Monitoraggio del sistema** della pagina **Rapporti** sono elencati gli ambienti monitorati nel programma e i rapporti sullo stato di integrità di alto livello in quattro categorie diverse:
 
@@ -49,7 +47,7 @@ Lo stato di ciascuna categoria è un riepilogo delle singole metriche. Se una me
 >
 >Per impostazione predefinita, quando si passa a questa pagina, sono visibili le istanze dell’ambiente di produzione, ma è possibile visualizzare anche altri ambienti.
 
-## Dettagli di Monitoraggio del sistema {#system-monitoring-detail}
+## Dettagli di monitoraggio del sistema {#system-monitoring-detail}
 
 Per visualizzare i dettagli di metriche specifiche, fai clic su una delle colonne di categoria di un’istanza specifica o sul titolo della categoria nel menu di navigazione a sinistra. Ogni pagina di dettagli mostra una serie di grafici per le metriche della categoria in questiione. Puoi visualizzare le metriche per tutte le istanze in un ambiente o per un’istanza specifica. Per passare dall’ambiente alle istanze, utilizza le caselle a discesa in alto a destra.
 
@@ -96,7 +94,7 @@ Se ad esempio si fa clic sulla serie di soglie di avvertenza, verrà visualizzat
    * Esistono metriche separate per ogni agente di replica.
 * **Svuotamento del Dispatcher**: numero di elementi attualmente nella coda di svuotamento del dispatcher
 
-## Generazione rapporti SLA {#sla-reporting}
+## Reportistica di SLA {#sla-reporting}
 
 Scopri come visualizzare le prestazioni dell’ambiente di produzione AEM relative al contratto del livello di servizio (SLA) sottoscritto.
 
@@ -112,16 +110,16 @@ La sezione **Analisi degli eventi** sotto questo grafico mostra l’insieme di i
 
 ![Analisi degli eventi](/help/assets/sla-reporting3.png)
 
-## Metriche SLA {#sla-metrics}
+## Metriche di SLA {#sla-metrics}
 
 * **Contratto autore**: SLA definito nel contratto con Adobe Managed Services per il livello di authoring.
-* **SLA autore AMS**: tempo di attività misurato per gli incidenti di factoring del livello di authoring in produzione causati da Adobe o dai nostri fornitori.
-* **SLA autore**: tempo di attività misurato per il livello di authoring, esclusi i periodi di inattività pianificati, ad esempio le finestre di manutenzione.
+* **AMS Author SLA**: tempo di attività misurato per gli incidenti di factoring del livello di authoring in produzione causati da Adobe o dai nostri fornitori.
+* **Autore SLA**: tempo di attività misurato per il livello di authoring, esclusi i periodi di inattività pianificati, ad esempio le finestre di manutenzione.
 * **Contratto utente finale**: SLA definito nel contratto con Adobe Managed Services per il livello di pubblicazione.
-* **AMS SLA utente finale**: tempo di attività misurato per gli incidenti di factoring del livello di pubblicazione in produzione causati da Adobe o dai nostri fornitori.
-* **SLA utente finale**: tempo di attività misurato per il livello di pubblicazione, esclusi i periodi di inattività pianificati, ad esempio le finestre di manutenzione.
+* **AMS Utente finale SLA**: tempo di attività misurato per gli incidenti di factoring del livello di pubblicazione in produzione causati da Adobe o dai nostri fornitori.
+* **Utente finale SLA**: tempo di attività misurato per il livello di pubblicazione, esclusi i periodi di inattività pianificati, ad esempio le finestre di manutenzione.
 
-## Tutorial video {#video-tutorial}
+## Esercitazione video {#video-tutorial}
 
 Questo video descrive a grandi linee come utilizzare i grafici prodotti dai rapporti di Cloud Manager per ottenere informazioni sugli ambienti dei programmi.
 

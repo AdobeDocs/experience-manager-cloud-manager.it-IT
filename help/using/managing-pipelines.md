@@ -1,20 +1,20 @@
 ---
-title: Gestione delle pipeline
+title: Gestire le pipeline
 description: Scopri come gestire, modificare, eseguire ed eliminare le pipeline esistenti.
 exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
 workflow-type: tm+mt
-source-wordcount: '848'
-ht-degree: 67%
+source-wordcount: '847'
+ht-degree: 63%
 
 ---
 
 
-# Gestione delle pipeline {#managing-pipelines}
+# Gestire le pipeline {#managing-pipelines}
 
 Scopri come gestire, modificare, eseguire ed eliminare le pipeline esistenti.
 
-## Scheda Pipeline {#pipeline-card}
+## Scheda pipeline {#pipeline-card}
 
 La scheda **Pipeline** della pagina **Panoramica del programma** in Cloud Manager offre una panoramica di tutte le pipeline e del relativo stato corrente.
 
@@ -66,7 +66,7 @@ Facendo clic sull&#39;icona `i` vengono visualizzati i dettagli sull&#39;esecuzi
 
 Facendo clic su **Visualizza dettagli** puoi visualizzare [i dettagli dell&#39;esecuzione della pipeline](#view-details).
 
-## Esecuzione delle pipeline {#running-pipelines}
+## Pipeline ruu {#running-pipelines}
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione e il programma appropriati.
 
@@ -78,7 +78,7 @@ Per visualizzare i dettagli dell’esecuzione, fai nuovamente clic sul pulsante 
 
 A seconda del tipo di pipeline, puoi annullare l’esecuzione facendo nuovamente clic sul pulsante con i puntini di sospensione e selezionando **Annulla**.
 
-## Modifica delle pipeline {#editing-pipelines}
+## Modificare le pipeline {#editing-pipelines}
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione e il programma appropriati.
 
@@ -90,13 +90,13 @@ A seconda del tipo di pipeline, puoi annullare l’esecuzione facendo nuovamente
       * [Configurazione delle pipeline di produzione](/help/using/production-pipelines.md)
       * [Configurazione delle pipeline non di produzione](/help/using/non-production-pipelines.md)
 
-1. Dopo aver ultimato la modifica della pipeline, fai clic su **Aggiorna**.
+1. Una volta completata la modifica della pipeline, fai clic su **Aggiorna**.
 
 >[!NOTE]
 >
 >Non è possibile modificare una pipeline in esecuzione.
 
-## Eliminazione delle pipeline {#deleting-pipelines}
+## Elimina pipeline {#deleting-pipelines}
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione e il programma appropriati.
 
@@ -120,7 +120,7 @@ Da qui puoi vedere lo stato dei vari passaggi della pipeline e recuperare i regi
 
 Tutti i passaggi dell’esecuzione di una pipeline vengono visualizzati con quelli non ancora avviati non selezionabili. I passaggi completati mostrano la loro durata.
 
-Una volta completato un passaggio della pipeline, viene presentato un riepilogo.
+Al termine di un passaggio della pipeline viene visualizzato un riepilogo.
 
 ![Riepilogo del passaggio](/help/assets/configure-pipelines/pipeline-step.png)
 

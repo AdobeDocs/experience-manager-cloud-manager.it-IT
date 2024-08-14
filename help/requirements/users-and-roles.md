@@ -2,10 +2,10 @@
 title: Aggiungere utenti e ruoli
 description: Scopri come utilizzare l’Admin Console per aggiungere utenti e ruoli e creare profili.
 exl-id: 40086cf0-a1c4-4dde-9dbf-84ea5fa53b84
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
 workflow-type: tm+mt
-source-wordcount: '769'
-ht-degree: 84%
+source-wordcount: '768'
+ht-degree: 81%
 
 ---
 
@@ -59,7 +59,7 @@ Puoi creare o aggiungere utenti/gruppi a questi profili di prodotto con l’Admi
 
 1. Accedi all&#39;Admin Console all&#39;indirizzo [`https://adminconsole.adobe.com`](https://adminconsole.adobe.com).
 
-1. Fai clic sulla scheda **Panoramica**, quindi sul prodotto che desideri modificare nella scheda **Prodotti e servizi**. Se non è presente nell’elenco, utilizza la scheda **Prodotti** per individuare il prodotto e fare clic su di esso.
+1. Fare clic sulla scheda **Panoramica**, quindi sul prodotto che si desidera modificare nella scheda **Prodotti e servizi**. Se non è presente nell’elenco, utilizza la scheda **Prodotti** per individuare il prodotto e fare clic su di esso.
 
    ![Scheda panoramica di Admin Console](/help/assets/admin-console-overview.png)
 
@@ -89,7 +89,7 @@ Puoi creare o aggiungere utenti/gruppi a questi profili di prodotto con l’Admi
 
 1. Fai clic su **Fine** per salvare il nuovo profilo.
 
-## Assegna profili a Utenti o Gruppi di utenti {#assign-profiles}
+## Assegnare profili a utenti o gruppi di utenti {#assign-profiles}
 
 Dopo aver creato i profili di prodotto, puoi assegnare loro utenti o gruppi di utenti.
 

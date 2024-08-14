@@ -1,15 +1,15 @@
 ---
-title: Configurazione di pipeline non di produzione
+title: Configurare le pipeline non di produzione
 description: Scopri come utilizzare Cloud Manager per creare e configurare pipeline non di produzione per distribuire il codice.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
 workflow-type: tm+mt
-source-wordcount: '710'
-ht-degree: 94%
+source-wordcount: '709'
+ht-degree: 91%
 
 ---
 
-# Configurazione di pipeline non di produzione {#configuring-non-production-pipelines}
+# Configurare le pipeline non di produzione {#configuring-non-production-pipelines}
 
 Scopri come utilizzare Cloud Manager per creare e configurare pipeline non di produzione per distribuire il codice. Per una panoramica delle nozioni di base sul funzionamento delle pipeline in Cloud Manager, consulta [Pipeline CI/CD](/help/overview/ci-cd-pipelines.md).
 
@@ -31,13 +31,13 @@ Esistono due tipi di pipeline non di produzione:
 >
 >Non è possibile configurare una pipeline finché il relativo archivio Git associato non dispone di almeno un ramo e la [Configurazione del programma](/help/getting-started/program-setup.md) non è stata completata. Consultare il documento [Archivi di Cloud Manager](/help/managing-code/managing-repositories.md) per scoprire come aggiungere e gestire gli archivi in Cloud Manager.
 
-## Aggiunta di una pipeline non di produzione {#add-non-production-pipeline}
+## Aggiungere una pipeline non di produzione {#add-non-production-pipeline}
 
-Dopo aver configurato il programma e disponi di almeno un ambiente utilizzando l’interfaccia utente di Cloud Manager, puoi aggiungere una pipeline non di produzione seguendo questi passaggi.
+Dopo aver configurato il programma e disporre di almeno un ambiente che utilizza l’interfaccia utente di Cloud Manager, puoi aggiungere una pipeline non di produzione seguendo la procedura riportata di seguito.
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) e seleziona l’organizzazione e il programma appropriati.
 
-1. Accedi alla scheda Pipeline dalla schermata principale di Cloud Manager. Fai clic su **Aggiungi** e seleziona **Aggiungi pipeline non di produzione**.
+1. Accedi alla scheda Pipeline dalla schermata principale di Cloud Manager. Fai clic su **Aggiungi**, quindi seleziona **Aggiungi pipeline non di produzione**.
 
    ![Aggiungi pipeline non di produzione](/help/assets/configure-pipelines/nonprod-pipeline-add1.png)
 
@@ -76,13 +76,13 @@ Dopo aver configurato il programma e disponi di almeno un ambiente utilizzando l
          * **Invalida**: esegui un’invalidazione della cache, simile a quando il contenuto viene attivato da un’istanza di authoring a un’istanza di pubblicazione.
       1. Fai clic su **Aggiungi percorso** per aggiungere il percorso specificato. Puoi aggiungere fino a 100 percorsi per ambiente.
 
-1. Fai clic su **Salva** per salvare la pipeline.
+1. Per salvare la pipeline, fai clic su **Salva**.
 
 ## Passaggi successivi {#the-next-steps}
 
 Dopo aver configurato la pipeline, è necessario distribuire il codice. Per ulteriori dettagli, vedi [Distribuzione del codice](/help/using/code-deployment.md).
 
-## Tutorial video {#video-tutorial}
+## Esercitazione video {#video-tutorial}
 
 Questo video fornisce una panoramica del processo di creazione della pipeline, descritto in questo documento.
 

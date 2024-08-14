@@ -2,19 +2,19 @@
 title: Configurazioni di Dispatcher
 description: Scopri come distribuire i file di configurazione del Dispatcher utilizzando Cloud Manager.
 exl-id: ffc2b60e-bde7-48ca-b268-dea0f8fd4e30
-source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
+source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
 workflow-type: tm+mt
 source-wordcount: '586'
-ht-degree: 100%
+ht-degree: 91%
 
 ---
 
 
-# Configurazioni di Dispatcher {#manage-your-dispatcher-configurations}
+# Configurazioni Dispatcher {#manage-your-dispatcher-configurations}
 
 Scopri come distribuire i file di configurazione del Dispatcher utilizzando Cloud Manager
 
-## Distribuzione delle configurazioni del Dispatcher con Cloud Manager {#deploying-dispatcher-configurations}
+## Distribuzione di configurazioni Dispatcher con Cloud Manager {#deploying-dispatcher-configurations}
 
 Cloud Manager è in grado di distribuire i file di configurazione del server web e del Dispatcher presupponendo che siano archiviati nell’archivio Git insieme ai normali pacchetti di contenuti AEM.
 
@@ -24,7 +24,7 @@ I progetti generati da Cloud Manager utilizzando [la procedura guidata per la cr
 
 Una volta implementato in un’istanza del Dispatcher, il contenuto di queste directory sull’istanza del Dispatcher viene sovrascritto da quello nell’archivio Git. Poiché i file di configurazione del server web e del Dispatcher richiedono spesso informazioni specifiche per l’ambiente per poter utilizzare correttamente questa funzionalità, devi prima collaborare con il Customer Success Engineer (CSE) per impostare queste variabili di ambiente in `/etc/sysconfig/httpd`.
 
-## Configurazione del Dispatcher per i clienti di Managed Service esistenti {#steps-for-configuring-dispatcher}
+## Configurazione Dispatcher per i clienti di servizi gestiti esistenti {#steps-for-configuring-dispatcher}
 
 Segui i passaggi seguenti per completare la configurazione iniziale del Dispatcher.
 
@@ -48,7 +48,7 @@ La struttura specifica del file e della directory può variare in base alle spec
 
    È possibile utilizzare un nome qualsiasi, ma il nome della directory creato in questo passaggio deve essere lo stesso del nome utilizzato nel passaggio 6.
 
-1. Questa sottodirectory conterrà un modulo Maven che crea il file .zip del Dispatcher utilizzando il plug-in Maven Assembly. Per iniziare, nella directory `dispatcher`, crea un file `pom.xml` con questo contenuto, modifica il riferimento `parent`, `artifactId` e `name` secondo necessità.
+1. Questa sottodirectory conterrà un modulo Maven che crea il file Dispatcher .zip utilizzando il plug-in Maven Assembly. Per iniziare, nella directory `dispatcher`, crea un file `pom.xml` con questo contenuto, modifica il riferimento `parent`, `artifactId` e `name` secondo necessità.
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
