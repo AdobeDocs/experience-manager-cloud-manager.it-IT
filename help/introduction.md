@@ -2,10 +2,10 @@
 title: Introduzione a Cloud Manager per AMS
 description: Inizia qui per scoprire Cloud Manager per Adobe Managed Services (AMS) e come consente alle organizzazioni di gestire autonomamente Adobe Experience Manager nel cloud.
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
-source-git-commit: 8e2c57d2594691e7fb18d8a538caa9b54a26b6bb
+source-git-commit: 4c4a2688cab8e5c81efa4b7b5e26f3c7b5dc30d6
 workflow-type: tm+mt
-source-wordcount: '1259'
-ht-degree: 56%
+source-wordcount: '1256'
+ht-degree: 48%
 
 ---
 
@@ -41,9 +41,7 @@ Con Cloud Manager, il team di sviluppo potrà usufruire delle seguenti funzional
 
 * Funzione di scalabilità automatica che rileva in modo intelligente la necessità di capacità aggiuntive e porta automaticamente online altri segmenti Dispatcher/pubblicazione.
 
-L’immagine illustra il flusso di processo CI/CD utilizzato in [!UICONTROL Cloud Manager]:
-
-![Flusso CI/CD](/help/assets/screen_shot_2018-05-12at73843pm.png)
+![Flusso CI/CD](/help/assets/screen_shot_2018-05-12at73843pm.png)Flusso di processo CI/CD utilizzato in [!UICONTROL Cloud Manager].
 
 ## Funzioni chiave in [!UICONTROL Cloud Manager] {#key-features-in-cloud-manager}
 
@@ -75,7 +73,7 @@ Indipendentemente dalla modalità di trigger della distribuzione, ogni volta che
 
 Per ulteriori informazioni sulla distribuzione del codice e sui controlli di qualità, vedere [Distribuzione del codice](/help/using/code-deployment.md).
 
-## Funzionalità facoltative in Cloud Manager {#optional-features-in-cloud-manager}
+## Funzioni facoltative in Cloud Manager {#optional-features-in-cloud-manager}
 
 Cloud Manager offre funzioni avanzate aggiuntive, che possono essere utili per il progetto a seconda della configurazione dell’ambiente e delle esigenze specifiche. Se queste funzioni sono di tuo interesse, contatta il tuo Customer Success Engineer (CSE) o rappresentante di Adobe per discuterne ulteriormente.
 
