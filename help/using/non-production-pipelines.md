@@ -2,10 +2,10 @@
 title: Configurare le pipeline non di produzione
 description: Scopri come utilizzare Cloud Manager per creare e configurare pipeline non di produzione per distribuire il codice.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
-source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
+source-git-commit: ba08da1b25a1f9ba8bc954b2fbd27b60d4ddf1a0
 workflow-type: tm+mt
-source-wordcount: '709'
-ht-degree: 91%
+source-wordcount: '685'
+ht-degree: 55%
 
 ---
 
@@ -25,11 +25,11 @@ Questo documento si concentra sulle pipeline non di produzione. Per informazioni
 Esistono due tipi di pipeline non di produzione:
 
 * **Pipeline di qualità del codice**: eseguono controlli di qualità del codice in un ramo Git ed eseguono i passaggi di generazione e qualità del codice.
-* **Pipeline di implementazione**: oltre a eseguire la generazione e i passaggi di qualità del codice come le pipeline di qualità del codice, queste pipeline distribuiscono il codice in un ambiente non di produzione.
+* **Pipeline di distribuzione** - Oltre a eseguire i passaggi di generazione e qualità del codice come le pipeline di qualità del codice, queste pipeline distribuiscono il codice anche in un ambiente non di produzione.
 
 >[!NOTE]
 >
->Non è possibile configurare una pipeline finché il relativo archivio Git associato non dispone di almeno un ramo e la [Configurazione del programma](/help/getting-started/program-setup.md) non è stata completata. Consultare il documento [Archivi di Cloud Manager](/help/managing-code/managing-repositories.md) per scoprire come aggiungere e gestire gli archivi in Cloud Manager.
+>Impossibile configurare una pipeline finché il relativo archivio Git associato non dispone di almeno un ramo e [la configurazione del programma](/help/getting-started/program-setup.md) non è stata completata. Consulta [Archivi Cloud Manager](/help/managing-code/managing-repositories.md) per scoprire come aggiungere e gestire archivi in Cloud Manager.
 
 ## Aggiungere una pipeline non di produzione {#add-non-production-pipeline}
 
@@ -51,36 +51,37 @@ Dopo aver configurato il programma e disporre di almeno un ambiente che utilizza
 
 1. Fornisci l’archivio in cui la pipeline deve recuperare il codice.
 
-   * **Archivio**: questa opzione definisce da quale archivio Git la pipeline deve recuperare il codice.
-   * **Ramo Git**: questa opzione definisce da quale ramo della pipeline selezionata deve essere recuperato il codice.
+   * **Archivio**: definisce l&#39;archivio Git dal quale la pipeline deve recuperare il codice.
+   * **Ramo Git**: definisce da quale ramo in Git deve essere recuperato il codice dalla pipeline selezionata.
 
 1. Definisci le opzioni di implementazione.
 
    1. In **Trigger di implementazione**, definisci l’evento che attiva la pipeline.
 
-      * **Manuale**: utilizza questa opzione per avviare manualmente la pipeline.
-      * **Cambiamenti su Git**: questa opzione avvia la pipeline ogni volta che vengono aggiunti dei commit al ramo git configurato. Con questa opzione, puoi comunque avviare la pipeline manualmente, in base alle esigenze.
+      * **Manuale** - Consente di avviare manualmente la pipeline.
+      * **Su modifiche Git** - Avvia la pipeline quando vengono aggiunti commit al ramo Git configurato. Con questa opzione è comunque possibile avviare la pipeline manualmente, in base alle esigenze.
 
    1. Per le pipeline di implementazione, in **Comportamento in caso di errori di metriche importanti**, definisci il comportamento della pipeline quando si verifica un errore importante in uno qualsiasi dei gate di qualità.
 
-      * **Chiedi ogni volta**: questa è l’impostazione predefinita e richiede l’intervento manuale su qualsiasi errore importante.
-      * **Interrompi subito**: selezionando questa opzione, la pipeline viene annullata ogni volta che si verifica un errore importante. In sostanza, quest’opzione simula un utente che rifiuta manualmente ogni errore.
-      * **Continua immediatamente**: selezionando questa opzione, la pipeline avanza automaticamente ogni volta che si verifica un errore importante. In sostanza, quest’opzione simula un utente che approva manualmente ogni errore.
+      * **Chiedi ogni volta** - Impostazione predefinita che richiede l&#39;intervento manuale per tutti gli errori importanti.
+      * **Interrompi subito** - La pipeline viene annullata ogni volta che si verifica un errore importante. In sostanza, questa opzione simula il rifiuto manuale di ogni errore da parte dell’utente.
+      * **Continua immediatamente** - La pipeline procede automaticamente ogni volta che si verifica un errore importante. In sostanza, quest’opzione simula l’approvazione manuale di ogni errore da parte dell’utente.
 
-   1. **Configurazione del Dispatcher**: il ruolo di **Responsabile della distribuzione** può configurare un set di percorsi di contenuto che verranno invalidati o svuotati dalla cache del dispatcher AEM quando viene eseguita una pipeline. Queste azioni della cache verranno eseguite come parte del passaggio della pipeline di implementazione, subito dopo la distribuzione di eventuali pacchetti di contenuto. Queste impostazioni utilizzano il comportamento standard del Dispatcher AEM. Per configurare:
+   1. **Configurazione Dispatcher** - Il ruolo **Responsabile della distribuzione** può configurare un set di percorsi di contenuto invalidati o svuotati dalla cache del Dispatcher AEM quando viene eseguita una pipeline. Queste azioni della cache vengono eseguite come parte del passaggio della pipeline di distribuzione, subito dopo la distribuzione di eventuali pacchetti di contenuto. Queste impostazioni utilizzano il comportamento standard del Dispatcher AEM. Per configurare:
 
       1. Nel **PERCORSO** fornisci un percorso di contenuto.
       1. In **TIPO**, seleziona l’azione da intraprendere su quel percorso.
 
          * **Scaricamento**: esegui un’eliminazione della cache.
          * **Invalida**: esegui un’invalidazione della cache, simile a quando il contenuto viene attivato da un’istanza di authoring a un’istanza di pubblicazione.
+
       1. Fai clic su **Aggiungi percorso** per aggiungere il percorso specificato. Puoi aggiungere fino a 100 percorsi per ambiente.
 
-1. Per salvare la pipeline, fai clic su **Salva**.
+1. Fai clic su **Salva**.
 
 ## Passaggi successivi {#the-next-steps}
 
-Dopo aver configurato la pipeline, è necessario distribuire il codice. Per ulteriori dettagli, vedi [Distribuzione del codice](/help/using/code-deployment.md).
+Dopo aver configurato la pipeline, puoi distribuire il codice. Per ulteriori dettagli, vedi [Distribuzione del codice](/help/using/code-deployment.md).
 
 ## Esercitazione video {#video-tutorial}
 
