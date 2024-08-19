@@ -1,18 +1,18 @@
 ---
 title: Configurazione del programma
-description: Dopo l’onboarding, il proprietario business dovrà effettuare una configurazione iniziale del programma.
+description: Dopo l’onboarding, il proprietario business deve effettuare una configurazione iniziale del programma.
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
-source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
+source-git-commit: 11a6a53d8cbfb689810a9a8e7d82293a49863084
 workflow-type: tm+mt
-source-wordcount: '582'
-ht-degree: 86%
+source-wordcount: '567'
+ht-degree: 53%
 
 ---
 
 
 # Configurazione del programma {#program-setup}
 
-Dopo l’onboarding, il proprietario business completa la configurazione iniziale del programma, inclusa l’impostazione della descrizione del programma e la definizione degli indicatori prestazioni chiave (KPI, Key Performance Indicators) utilizzati per il test delle prestazioni.
+Dopo l’onboarding, il proprietario business imposta il programma aggiungendo una descrizione e definendo gli indicatori prestazioni chiave (KPI, Key Performance Indicator). Questi KPI vengono quindi utilizzati per il test delle prestazioni.
 
 ## Configurazione del programma con [!UICONTROL Cloud Manager] {#program-setup-cloud-manager}
 
@@ -24,7 +24,7 @@ Segui questi passaggi per configurare il programma e definire i KPI.
 
    ![Configurare il programma](/help/assets/set-up-program/setup1.png)
 
-1. Nella finestra di dialogo **Programma di configurazione** è possibile inserire informazioni sul programma in tre schede:
+1. Nella finestra di dialogo **Programma di installazione** è possibile immettere informazioni sul programma in tre schede:
 
    * **Generale**
    * **KPI**
@@ -34,21 +34,21 @@ Segui questi passaggi per configurare il programma e definire i KPI.
 
    ![Scheda Generale](/help/assets/Setup_Program-General.png)
 
-1. Nella scheda **KPI**, definisci i KPI. In questo esempio, vengono definiti KPI separati per **AEM Sites** e **AEM Assets**. Potrai specificare i KPI per i prodotti per i quali hai concesso la licenza.
+1. Nella scheda **KPI**, definisci i KPI. In questo esempio, vengono definiti KPI separati per **AEM Sites** e **AEM Assets**. Specifica i KPI per i prodotti per i quali hai concesso la licenza.
 
-   * Consulta la sezione [KPI](#kpis) per ulteriori dettagli sulla misurazione dei KPI in Cloud Manager.
+   Consulta la sezione [KPI](#kpis) per ulteriori dettagli sulla misurazione dei KPI in Cloud Manager.
 
    ![Definizione dei KPI](/help/assets/Setup_Program-KPIs.png)
 
 1. Nella scheda **Provisioning**, se per il programma è abilitata la scalabilità automatica, è possibile definire le opzioni di ridimensionamento on-demand per i tuoi ambienti.
 
-   * La scalabilità automatica è applicabile solo all’ambiente di produzione e potrebbe non essere disponibile per tutti i programmi dei clienti.
+   La scalabilità automatica è applicabile solo all’ambiente di produzione e potrebbe non essere disponibile per tutti i programmi dei clienti.
 
    ![Opzioni di provisioning](/help/assets/Setup_Program-Provisioning.png)
 
-1. Fai clic su **Salva** per completare la procedura guidata di configurazione.
+1. Fai clic su **Salva**.
 
-Il programma verrà creato. Potrebbero essere necessari diversi minuti per il provisioning delle risorse prima che il programma sia pronto per l’uso.
+Il programma viene creato. Potrebbero essere necessari diversi minuti per il provisioning delle risorse prima che il programma sia pronto per l’uso.
 
 ## Modificare un programma {#editing-program}
 
@@ -70,7 +70,7 @@ Il programma verrà creato. Potrebbero essere necessari diversi minuti per il pr
 
 Tieni presente che le modifiche vengono salvate immediatamente in Cloud Manager, ma non verranno applicate negli ambienti fino alla successiva esecuzione della pipeline.
 
-Se non hai ancora creato una pipeline, consulta i documenti [Configurazione delle pipeline di produzione](/help/using/production-pipelines.md) e [Configurazione delle pipeline non di produzione](/help/using/non-production-pipelines.md).
+Se non hai ancora creato una pipeline, consulta [Configurazione delle pipeline di produzione](/help/using/production-pipelines.md) e [Configurazione delle pipeline non di produzione](/help/using/non-production-pipelines.md).
 
 ## Passa da un programma all&#39;altro {#swithing-programs}
 
@@ -82,13 +82,13 @@ Utilizza la barra delle azioni per passare a un altro programma, modificare il p
 
 ## KPI {#kpis}
 
-I KPI dei siti vengono misurati nei test eseguiti nell’ambiente di pre-produzione. In genere, questi KPI vengono ridimensionati per adattarsi alle funzionalità dell’ambiente di pre-produzione.
+I KPI dei siti vengono misurati nei test eseguiti nell’ambiente di staging. In genere, questi KPI vengono ridimensionati per adattarsi alle funzionalità dell’ambiente di pre-produzione.
 
-Ad esempio, un utente che si aspetta una media di 1000 visualizzazioni di pagina al minuto nel proprio ambiente di produzione e dispone di quattro server di pubblicazione/dispatcher in produzione dovrebbe ridimensionarla a 250 visualizzazioni di pagina al minuto. Ciò presuppone che il suo ambiente di pre-produzione sia costituito da una sola coppia di server dispatcher/di pubblicazione.
+Ad esempio, un utente che si aspetta una media di 1000 visualizzazioni di pagina al minuto nel proprio ambiente di produzione e dispone di quattro server di pubblicazione/Dispatcher in produzione, dovrebbe ridimensionare questo scenario a 250 visualizzazioni di pagina al minuto. Questo scenario presuppone che il loro ambiente di staging sia costituito da una sola coppia di server dispatcher/di pubblicazione.
 
-Il test delle prestazioni di Assets viene eseguito caricando ripetutamente le risorse durante un periodo di test di 30 minuti e misurando il tempo di elaborazione per ciascuna risorsa e varie metriche a livello di sistema.
+Il test delle prestazioni di Assets prevede il caricamento ripetuto delle risorse in un periodo di 30 minuti. Il tempo di elaborazione di ciascuna risorsa e di varie metriche a livello di sistema vengono misurati durante l’intero test.
 
-È possibile che davanti all’ambiente di produzione sia presente una rete per la distribuzione dei contenuti (CDN, Content Delivery Network) come Akamai o CloudFront. Poiché [!UICONTROL Cloud Manager] esegue direttamente i test nell’ambiente di pre-produzione, l’indicatore KPI deve riflettere solo il traffico che si prevede passi attraverso la rete CDN, ovvero i risconti mancanti nella cache. In genere si tratta di un sottoinsieme relativamente piccolo del traffico di produzione totale.
+È possibile che davanti all’ambiente di produzione sia presente una rete per la distribuzione dei contenuti (CDN, Content Delivery Network) come Akamai o CloudFront. Poiché [!UICONTROL Cloud Manager] esegue direttamente i test nell&#39;ambiente di gestione temporanea, l&#39;indicatore KPI deve riflettere solo il traffico che si prevede passi attraverso la rete CDN. In altre parole, la cache non funziona. In genere, questa esperienza è un sottoinsieme relativamente piccolo del traffico di produzione totale.
 
 ## Panoramica video {#video}
 

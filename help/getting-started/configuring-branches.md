@@ -2,23 +2,23 @@
 title: Configurazione dei rami
 description: Scopri come configurare il primo ramo in Git e come viene utilizzato dalla pipeline CI/CD per distribuire il codice dell’applicazione.
 exl-id: ff2ae28f-902e-4fb2-aeb1-3636cb5cd9bb
-source-git-commit: 4c051cd1696f8a00d0278131c9521ad4dcb956a3
+source-git-commit: 11a6a53d8cbfb689810a9a8e7d82293a49863084
 workflow-type: tm+mt
-source-wordcount: '325'
-ht-degree: 100%
+source-wordcount: '324'
+ht-degree: 14%
 
 ---
 
 
-# Configurazione dei rami {#configuring-branches}
+# Configurare i rami {#configuring-branches}
 
 Scopri come configurare il primo ramo in Git e come viene utilizzato dalla pipeline CI/CD per distribuire il codice dell’applicazione.
 
-## Configurazione del primo ramo in Git {#setting-up-your-first-branch-in-git}
+## Configurare il primo ramo in Git {#setting-up-your-first-branch-in-git}
 
-Inizialmente viene [eseguito il provisioning](/help/requirements/environment-provisioning.md) di un singolo archivio Git vuoto per ogni programma integrato in Cloud Manager. Questo archivio può contenere tutti i rami necessari per il processo di sviluppo, ma deve esserci almeno un ramo utilizzato dalla pipeline CI/CD per distribuire il codice dell’applicazione nell’area di staging e produzione. La best practice è quella di utilizzare `main` come nome di questo ramo. Si tratta opportunamente del comportamento predefinito dei client Git durante la configurazione di nuovi progetti.
+Inizialmente viene [eseguito il provisioning](/help/requirements/environment-provisioning.md) di un singolo archivio Git vuoto per ogni programma integrato in Cloud Manager. Questo archivio può contenere tutti i rami necessari per il processo di sviluppo, ma deve esserci almeno un ramo utilizzato dalla pipeline CI/CD per distribuire il codice dell’applicazione nell’area di staging e produzione. La best practice è quella di utilizzare `main` come nome di questo ramo. Questo approccio è il comportamento predefinito dei client Git durante la configurazione di nuovi progetti.
 
-Ad esempio, quando configuri un nuovo progetto, eseguirai un set di comandi simili a quelli riportati di seguito.
+Ad esempio, quando configuri un nuovo progetto, esegui un set di comandi simili a quelli riportati di seguito.
 
 ```shell
 $ git init
@@ -50,11 +50,11 @@ $ git commit -m "initial commit"
 
 >[!NOTE]
 >
->Non è necessario utilizzare il client della riga di comando. Sono disponibili diversi client Git grafici come applicazioni standalone o come parte di un ambiente di sviluppo integrato (IDE, Integrated Development Environment) come Eclipse o IntelliJ. Se l’applicazione client supporta i Git che utilizzano HTTPS, deve essere compatibile con [!UICONTROL Cloud Manager].
+>Non è necessario utilizzare il client della riga di comando. Esistono diversi client Git grafici disponibili come applicazioni standalone o come parte di un ambiente di sviluppo integrato (IDE) come Eclipse o IntelliJ. Se l’applicazione client supporta i Git che utilizzano HTTPS, deve essere compatibile con [!UICONTROL Cloud Manager].
 
-## Invio del primo ramo {#pushing-your-first-branch}
+## Invia il primo ramo {#pushing-your-first-branch}
 
-Dopo aver eseguito il commit di almeno una revisione, puoi aggiungere l’archivio di [!UICONTROL Cloud Manager] in modalità remota e quindi eseguire l’invio dei commit.
+Dopo aver eseguito il commit di almeno una revisione, è possibile aggiungere l&#39;archivio [!UICONTROL Cloud Manager] in modalità remota e quindi eseguire l&#39;invio dei commit.
 
 ```shell
 $ git remote add adobe <url>
@@ -70,12 +70,12 @@ To <url>
 
 >[!NOTE]
 >
->L’URL specifico, insieme alle tue credenziali, verrà fornito dal Customer Success Engineering durante l’onboarding di [!UICONTROL Cloud Manager].
+>L&#39;URL specifico, insieme alle tue credenziali, viene fornito dall&#39;Adobe CSE (Customer Success Engineer) durante l&#39;onboarding di [!UICONTROL Cloud Manager].
 
 ## Rami aggiuntivi {#additional-branches}
 
-Un singolo ramo `main` può essere sufficiente per progetti molto semplici, ma nella maggior parte dei casi sarà necessaria una strategia di ramificazione più complessa. Molti clienti seguono un processo in cui le attività di sviluppo quotidiane vengono eseguite su un ramo denominato `develop` e il ramo di sviluppo viene unito nel ramo `main` quando è il momento di una distribuzione.
+Un singolo ramo `main` può essere sufficiente per progetti molto semplici, ma nella maggior parte dei casi è necessaria una strategia di ramificazione più complessa. Molti clienti seguono un processo in cui le attività di sviluppo quotidiane vengono eseguite su un ramo denominato `develop`. Il ramo di sviluppo viene quindi unito al ramo `main` quando è il momento di una distribuzione.
 
 >[!TIP]
 >
->Per visualizzare i comandi Git comuni, consulta la sezione [Scheda di riferimento Git](https://github.github.com/training-kit/downloads/github-git-cheat-sheet).
+>Per visualizzare i comandi Git comuni, vedere [Scheda di riferimento Git](https://training.github.com/downloads/github-git-cheat-sheet).

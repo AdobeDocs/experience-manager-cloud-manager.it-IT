@@ -3,33 +3,33 @@ title: Fase di valutazione
 seo-title: Evaluation Phase
 description: Scopri in che modo la fase di valutazione della procedura guidata di aggiornamento del prodotto valuta la complessità dell’aggiornamento con il rilevatore pattern.
 exl-id: 1ffcbc21-dc36-435d-b83b-0209f81a15e7
-source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
+source-git-commit: 11a6a53d8cbfb689810a9a8e7d82293a49863084
 workflow-type: tm+mt
-source-wordcount: '280'
-ht-degree: 75%
+source-wordcount: '279'
+ht-degree: 17%
 
 ---
 
 
 # Fase di valutazione {#evaluation}
 
-La prima fase della procedura guidata di aggiornamento del prodotto è quella di **[!UICONTROL valutazione]** che valuta la complessità dell’aggiornamento con il rilevatore pattern direttamente all’interno della procedura guidata. Al termine di questa fase, potrai accedere a un rapporto di valutazione.
+La prima fase della procedura guidata di aggiornamento del prodotto è la fase **[!UICONTROL Valutazione]**, che valuta la complessità dell&#39;aggiornamento con il rilevatore pattern direttamente all&#39;interno della procedura guidata. Al termine di questo passaggio, puoi accedere al rapporto di valutazione.
 
-Il rapporto generato ti consente di verificare l’istanza di authoring per l’idoneità all’aggiornamento rilevando pattern che:
+Il rapporto generato consente di verificare l’istanza di authoring per l’idoneità all’aggiornamento rilevando i seguenti pattern che:
 
-* Violano alcune regole relative alle aree che saranno interessate o sovrascritte dall’aggiornamento.
+* Interrompi alcune regole relative alle aree interessate o sovrascritte dall’aggiornamento.
 
-* Utilizzano una funzione AEM 6.x o un’API che non è compatibile con le versioni precedenti della nuova versione di AEM e può potenzialmente interrompersi dopo l’aggiornamento.
+* Utilizza una funzione AEM 6.x o un’API che non è compatibile con le versioni precedenti della nuova versione dell’AEM e può potenzialmente interrompersi dopo un aggiornamento.
 
 Il rapporto serve come valutazione dello sforzo di sviluppo che è coinvolto nell’aggiornamento ad Adobe Experience Manager (AEM) 6.5.
 
 >[!NOTE]
 >
->Per ulteriori informazioni sul rilevatore pattern, vedere [Valutazione della complessità dell&#39;aggiornamento con il rilevatore pattern](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/upgrading/pattern-detector.html?lang=it).
+>Per ulteriori informazioni sul rilevatore pattern, vedere [Valutazione della complessità dell&#39;aggiornamento con il rilevatore pattern](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/upgrading/pattern-detector).
 
 ## Eseguire il rapporto di valutazione {#running}
 
-Il rilevatore pattern può essere eseguito in qualsiasi ambiente. Tuttavia, per aumentare il tasso di rilevamento ed evitare rallentamenti nelle istanze aziendali critiche, Cloud Manager lo eseguirà nell’ambiente di staging dell’istanza di authoring.
+Il rilevatore pattern può essere eseguito in qualsiasi ambiente. Tuttavia, per aumentare il tasso di rilevamento ed evitare rallentamenti nelle istanze business critical, Cloud Manager lo esegue nell’ambiente di staging dell’istanza di authoring.
 
 **Per eseguire il rapporto di valutazione:**
 
@@ -41,7 +41,7 @@ Il rilevatore pattern può essere eseguito in qualsiasi ambiente. Tuttavia, per 
 
 1. La procedura guidata ti informa sullo stato dell’azione. Avviso **In corso** o **completato**, a seconda dei casi, durante la generazione del rapporto di valutazione.
 
-1. Una volta generato il report, puoi fare clic su **[!UICONTROL Scarica report]** per salvare una copia.
+1. Dopo aver generato il report, puoi fare clic su **[!UICONTROL Scarica report]** per salvare una copia.
 
    ![Rapporto creato](/help/assets/Evaluation-1.png)
 
