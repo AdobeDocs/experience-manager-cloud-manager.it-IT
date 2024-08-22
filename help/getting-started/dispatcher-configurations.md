@@ -2,7 +2,7 @@
 title: Configurazioni di Dispatcher
 description: Scopri come distribuire i file di configurazione di Dispatcher utilizzando Cloud Manager.
 exl-id: ffc2b60e-bde7-48ca-b268-dea0f8fd4e30
-source-git-commit: ba08da1b25a1f9ba8bc954b2fbd27b60d4ddf1a0
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '575'
 ht-degree: 48%
@@ -14,7 +14,7 @@ ht-degree: 48%
 
 Scopri come distribuire i file di configurazione di Dispatcher utilizzando Cloud Manager
 
-## Distribuzione di configurazioni Dispatcher con Cloud Manager {#deploying-dispatcher-configurations}
+## Distribuire le configurazioni di Dispatcher con Cloud Manager {#deploying-dispatcher-configurations}
 
 Cloud Manager è in grado di distribuire i file di configurazione del server web e del Dispatcher presupponendo che siano memorizzati nell’archivio Git insieme ai normali pacchetti di contenuti AEM.
 

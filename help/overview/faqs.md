@@ -2,10 +2,10 @@
 title: Domande frequenti su Cloud Manager
 description: Scopri le risposte alle domande più frequenti su Cloud Manager per i clienti AMS.
 exl-id: 52c1ca23-5b42-4eae-b63a-4b22ef1a5aee
-source-git-commit: 4c4a2688cab8e5c81efa4b7b5e26f3c7b5dc30d6
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '748'
-ht-degree: 57%
+ht-degree: 50%
 
 ---
 
@@ -62,11 +62,11 @@ Per ulteriori informazioni sui controlli di qualità, vedere [Informazioni sui r
 
 ## Posso usare SNAPSHOT per la versione del progetto Maven? {#snapshot}
 
-Sì. Per le distribuzioni nell’ambiente di sviluppo, i file `pom.xml` del ramo Git devono contenere `-SNAPSHOT` dopo il valore `<version>`.
+Sì. Per le distribuzioni per gli sviluppatori, i file del ramo Git `pom.xml` devono contenere `-SNAPSHOT` alla fine del valore `<version>`.
 
 In questo modo è possibile installare le distribuzioni successive anche se la versione non è stata modificata. Per le distribuzioni nell’ambiente di sviluppo, non viene aggiunta né generata una versione automatica della build Maven.
 
-È possibile impostare la versione su `-SNAPSHOT` per le build o le implementazioni negli ambienti di staging e produzione. Cloud Manager imposta automaticamente un numero di versione corretto e crea un tag in Git per l’utente. Se necessario, puoi fare riferimento a questo tag in un secondo momento.
+È possibile impostare la versione su `-SNAPSHOT` per le build o le implementazioni negli ambienti di staging e produzione. Cloud Manager imposta automaticamente un numero di versione corretto e crea un tag in Git. Se necessario, puoi fare riferimento a questo tag in un secondo momento.
 
 Ulteriori dettagli sulla gestione delle versioni sono [documentati qui](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/managing-code/project-version-handling).
 
@@ -76,13 +76,13 @@ Nelle distribuzioni di staging e produzione, viene generata una versione automat
 
 Per il controllo delle versioni personalizzato per le distribuzioni negli ambienti di staging e produzione, imposta una versione Maven in tre parti appropriata, come ad esempio `1.0.0`. Aumenta il numero della versione per ogni esecuzione della distribuzione nell’ambiente di produzione.
 
-Cloud Manager aggiunge automaticamente la versione alle build di staging e produzione e crea un ramo Git. Non è richiesta alcuna configurazione speciale. Se non si imposta una versione maven come descritto in precedenza, la distribuzione avviene comunque e viene impostata una versione automaticamente.
+Cloud Manager aggiunge automaticamente la propria versione alle build per gli ambienti di staging e produzione e crea un ramo Git. Non è richiesta alcuna configurazione speciale. Se non si imposta una versione maven come descritto in precedenza, la distribuzione avviene comunque e viene impostata una versione automaticamente.
 
 ## L’esecuzione della build Maven non riesce per le distribuzioni di Cloud Manager, ma a livello locale non genera errori. Qual è il problema? {#maven-build-fail}
 
-Consulta questa [risorsa Git](https://github.com/cqsupport/cloud-manager/blob/main/cm-build-step-fails.md) per ulteriori dettagli.
+Per ulteriori dettagli, vedi questa [risorsa Git](https://github.com/cqsupport/cloud-manager/blob/main/cm-build-step-fails.md).
 
-## Impossibile impostare una variabile utilizzando un comando aio. Cosa si può fare? {#set-variable}
+## Non riesco a impostare una variabile con un comando aio. Cosa si può fare? {#set-variable}
 
 Quando si tenta di elencare o impostare le variabili della pipeline tramite comandi `aio`, è possibile che venga visualizzato un errore 403 come il seguente.
 

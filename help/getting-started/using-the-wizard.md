@@ -2,10 +2,10 @@
 title: Utilizzare la Creazione guidata nuovo progetto
 description: Segui questa pagina per scoprire come utilizzare la procedura guidata per creare un progetto di applicazione AEM
 exl-id: 9d7c6f4c-9379-471c-8dad-772a7099da54
-source-git-commit: 11a6a53d8cbfb689810a9a8e7d82293a49863084
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '321'
-ht-degree: 33%
+ht-degree: 28%
 
 ---
 
@@ -33,7 +33,7 @@ Segui questi passaggi per creare un progetto AEM utilizzando la procedura guidat
 
    ![Parametri dettagliati dell’archetipo](/help/assets/screen_shot_2018-10-08at60032am.png)
 
-1. Fai clic su **Crea** per creare il progetto iniziale utilizzando l’archetipo e confermare il ramo Git denominato.
+1. Fai clic su **Crea** per creare il progetto iniziale utilizzando l&#39;archetipo e confermare il ramo Git denominato.
 
 Ora hai un progetto di base. È ora di configurare le pipeline.
 

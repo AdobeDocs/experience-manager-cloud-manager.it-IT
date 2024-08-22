@@ -2,10 +2,10 @@
 title: Pipeline CI/CD
 description: Scopri le pipeline CI/CD e come gestiscono le distribuzioni negli ambienti di staging e produzione in Cloud Manager.
 exl-id: 7130e5b7-6986-48c8-900c-90f3e4187f91
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '562'
-ht-degree: 97%
+ht-degree: 56%
 
 ---
 
@@ -16,23 +16,23 @@ Scopri le pipeline CI/CD e come gestiscono le distribuzioni negli ambienti di st
 
 ## Panoramica {#overview}
 
-[!UICONTROL Cloud Manager] include un framework di integrazione continua/distribuzione continua (CI/CD) che consente ai team di implementazione di testare e consegnare rapidamente il codice nuovo o aggiornato. Ad esempio, i team di implementazione possono impostare, configurare e avviare una pipeline CI/CD automatizzata che sfrutta le best practice di codifica di Adobe per eseguire un’analisi approfondita del codice e garantirne la massima qualità.
+[!UICONTROL Cloud Manager] include un framework di integrazione continua/distribuzione continua (CI/CD) che consente ai team di implementazione di testare rapidamente e consegnare il codice nuovo o aggiornato. I team di implementazione possono impostare, configurare e avviare una pipeline CI/CD automatizzata. Questa pipeline segue alcune best practice di codifica di Adobe per eseguire un’analisi completa del codice e garantire la massima qualità del codice.
 
 La pipeline CI/CD automatizza inoltre i processi di test delle unità e delle prestazioni per aumentare l’efficienza della distribuzione e per identificare in modo proattivo i problemi critici, costosi da risolvere dopo la distribuzione. I team di implementazione possono accedere a un rapporto completo sulle prestazioni del codice in modo tale da ottenere visibilità sul potenziale impatto sui KPI e sulle convalide di sicurezza critiche se il codice venisse distribuito in produzione.
 
-## Il processo della pipeline {#pipeline-process}
+## Informazioni sul processo della pipeline {#pipeline-process}
 
-Questo diagramma illustra cosa accade quando una versione viene attivata in [!UICONTROL Cloud Manager] mediante una pipeline.
+Il diagramma seguente illustra cosa accade quando una versione viene attivata in [!UICONTROL Cloud Manager] utilizzando una pipeline.
 
 ![Il processo della pipeline](/help/assets/screen_shot_2018-05-30at82457pm.png)
 
 | Passaggio della pipeline | Descrizione |
-|---|---|
-| 1. Avviare una versione | Un gestore della distribuzione attiva una versione manualmente, con un commit Git o in base a una pianificazione ricorrente. |
-| 2. Creare il tag della versione | [!UICONTROL Cloud Manager] crea un tag Git per contrassegnare la versione utilizzando un numero di versione generato automaticamente, ad esempio `2018.531.245527.0000001222`. |
-| 3. Creare la versione con versione generata automaticamente | [!UICONTROL Cloud Manager] crea l’applicazione con il numero di versione appena assegnato. |
-| 4. Valutare la qualità del codice | [!UICONTROL Cloud Manager] analizza il codice sorgente e fornisce un riepilogo prima che il codice possa essere distribuito nell’ambiente di staging. |
-| 5. Artefatti con versione archiviata | Gli artefatti della versione vengono archiviati per un utilizzo successivo nei passaggi di distribuzione. |
+| --- | --- |
+| 1. Avviare una versione | Un Responsabile dell’implementazione attiva una versione manualmente, con un commit Git o in base a una pianificazione ricorrente. |
+| 2. Creare un tag di rilascio | [!UICONTROL Cloud Manager] crea un tag Git per contrassegnare la versione utilizzando un numero di versione generato automaticamente, ad esempio `2018.531.245527.0000001222`. |
+| 3. Creare la versione con versione generata automaticamente | [!UICONTROL Cloud Manager] crea l&#39;applicazione con il numero di versione appena assegnato. |
+| 4. Valutare la qualità del codice | [!UICONTROL Cloud Manager] analizza il codice sorgente e fornisce un riepilogo prima che il codice possa essere distribuito nell&#39;ambiente di staging. |
+| 5. Artefatti con versione archiviati | Gli artefatti della versione vengono archiviati per un utilizzo successivo nei passaggi di distribuzione. |
 | 6. Distribuzione automatica degli artefatti nello staging AMS AEM | L’artefatto della versione viene distribuito nell’ambiente di staging. |
 | 7. Attivare i test automatizzati | [!UICONTROL Cloud Manager] esegue test di prestazioni e sicurezza sull’artefatto. |
 | 8. Distribuzione dell’attivatore di produzione | Una volta completati i test automatizzati, [!UICONTROL Cloud Manager] avvia la distribuzione in produzione. |
@@ -54,10 +54,10 @@ La pipeline CI/CD fornisce gate di qualità, o criteri di accettazione, che devo
 Per ciascuno di questi gate, è possibile identificare tre livelli di problemi:
 
 * **Critico**: i problemi critici individuati dal gate causano un errore immediato della pipeline.
-* **Importante**: i problemi importanti identificati dal gate fanno sì che la pipeline entri in uno stato di pausa. Un Responsabile della distribuzione, un Project Manager o un Proprietario business possono ignorare i problemi, nel qual caso la pipeline procede, oppure possono accettare i problemi, nel qual caso la pipeline si interrompe con un errore.
+* **Importante**: i problemi importanti identificati dal gate fanno sì che la pipeline entri in uno stato di pausa. Un Responsabile della distribuzione, un Project Manager o un Proprietario business può ignorare i problemi, consentendo alla pipeline di procedere. In alternativa, possono accettare i problemi, causando l’arresto della pipeline con un errore.
 * **Informazioni**: le problematiche di tipo informazione individuate dal gate sono fornite a scopo puramente informativo e non hanno alcun impatto sull’esecuzione della pipeline.
 
-Questo è un esempio di analisi del codice con problemi identificati.
+Di seguito è riportato un esempio di analisi del codice con problemi identificati.
 
 ![Esempio di analisi del codice](/help/assets/quality-gate-failed.png)
 

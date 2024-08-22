@@ -2,10 +2,10 @@
 title: Configurazione dei rami
 description: Scopri come configurare il primo ramo in Git e come viene utilizzato dalla pipeline CI/CD per distribuire il codice dell’applicazione.
 exl-id: ff2ae28f-902e-4fb2-aeb1-3636cb5cd9bb
-source-git-commit: 11a6a53d8cbfb689810a9a8e7d82293a49863084
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '324'
-ht-degree: 14%
+ht-degree: 4%
 
 ---
 
@@ -16,7 +16,7 @@ Scopri come configurare il primo ramo in Git e come viene utilizzato dalla pipel
 
 ## Configurare il primo ramo in Git {#setting-up-your-first-branch-in-git}
 
-Inizialmente viene [eseguito il provisioning](/help/requirements/environment-provisioning.md) di un singolo archivio Git vuoto per ogni programma integrato in Cloud Manager. Questo archivio può contenere tutti i rami necessari per il processo di sviluppo, ma deve esserci almeno un ramo utilizzato dalla pipeline CI/CD per distribuire il codice dell’applicazione nell’area di staging e produzione. La best practice è quella di utilizzare `main` come nome di questo ramo. Questo approccio è il comportamento predefinito dei client Git durante la configurazione di nuovi progetti.
+È stato eseguito il provisioning di un singolo archivio Git [, inizialmente vuoto](/help/requirements/environment-provisioning.md) per ogni programma integrato in Cloud Manager. Questo archivio può contenere tutti i rami necessari per il processo di sviluppo, ma deve esserci almeno un ramo utilizzato dalla pipeline CI/CD per distribuire il codice dell’applicazione nell’area di staging e produzione. La best practice è quella di utilizzare `main` come nome di questo ramo. Questo approccio è il comportamento predefinito dei client Git durante la configurazione di nuovi progetti.
 
 Ad esempio, quando configuri un nuovo progetto, esegui un set di comandi simili a quelli riportati di seguito.
 
@@ -50,7 +50,7 @@ $ git commit -m "initial commit"
 
 >[!NOTE]
 >
->Non è necessario utilizzare il client della riga di comando. Esistono diversi client Git grafici disponibili come applicazioni standalone o come parte di un ambiente di sviluppo integrato (IDE) come Eclipse o IntelliJ. Se l’applicazione client supporta i Git che utilizzano HTTPS, deve essere compatibile con [!UICONTROL Cloud Manager].
+>Non è necessario utilizzare il client della riga di comando. Esistono diversi client Git grafici disponibili come applicazioni standalone o come parte di un ambiente di sviluppo integrato (IDE) come Eclipse o IntelliJ. Se l&#39;applicazione client supporta Git che utilizza HTTPS, deve essere compatibile con [!UICONTROL Cloud Manager].
 
 ## Invia il primo ramo {#pushing-your-first-branch}
 

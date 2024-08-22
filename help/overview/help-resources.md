@@ -2,18 +2,18 @@
 title: Risorse per assistenza
 description: Scopri le risorse disponibili per utilizzare Cloud Manager.
 exl-id: 6a4573a6-d9f0-41bc-8ce2-289ba9cc9f47
-source-git-commit: dcdb9aca03a905e875fbf8f805d7a7ae7b5b594b
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
-source-wordcount: '92'
-ht-degree: 100%
+source-wordcount: '79'
+ht-degree: 18%
 
 ---
 
 
-# Risorse per assistenza {#help-resources}
+# Risorse di aiuto {#help-resources}
 
-Devi prima contattare il tuo [!UICONTROL Customer Success Engineer (CSE) di Adobe Managed Services] per il supporto relativo a [!UICONTROL Cloud Manager]. Il CSE ti dirà se può aiutarti a risolvere il problema oppure se è necessario creare un ticket di supporto con il Supporto clienti di Adobe.
+Contatta il tuo Adobe Managed Services Customer Success Engineer (CSE) per assistenza con [!UICONTROL Cloud Manager]. Possono comunicarti se è in grado di risolvere il problema o se devi inviare un ticket di supporto con l’Assistenza clienti di Adobe.
 
-Per creare il ticket di supporto, puoi accedere al [Supporto Enterprise](https://experienceleague.adobe.com/?support-tab=home&amp;lang=it#support).
+Accedi a [Supporto Enterprise](https://experienceleague.adobe.com/?support-tab=home&amp;lang=it#support) per creare i ticket di supporto.
 
-Per ulteriori informazioni sulla creazione di ticket di supporto con il Servizio clienti di Adobe, consulta il documento [Accesso al portale di supporto AEM](https://helpx.adobe.com/it/enterprise/using/support-and-expert-services.html).
+Per ulteriori informazioni sulla creazione di ticket di supporto con Adobe Customer Care, consulta [Accesso al portale di supporto AEM](https://helpx.adobe.com/it/enterprise/using/support-and-expert-services.html).

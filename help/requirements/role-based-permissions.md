@@ -2,7 +2,7 @@
 title: Autorizzazioni basate sul ruolo
 description: Scopri le autorizzazioni preconfigurate basate sui ruoli di Cloud Manager per gestire l’accesso alle risorse cloud.
 exl-id: b66533fb-db93-40e8-919d-581261fdbf24
-source-git-commit: 11a6a53d8cbfb689810a9a8e7d82293a49863084
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '616'
 ht-degree: 51%
@@ -62,7 +62,7 @@ A ciascuno dei ruoli sono associate autorizzazioni preconfigurate specifiche. Ne
 | Distribuzione gestita della pipeline modificata | Consente la modifica dell’opzione di supervisione del CSE | | x | | | |
 | Elimina pipeline | Consente l’eliminazione della pipeline | | x | | | |
 | Leggi Passaggio | Consultare i risultati delle metriche di qualità del passaggio | x | x | x | x | x |
-| Generazione del token di accesso personale | Accesso a Git | | x | | x | |
+| Generazione del token di accesso personale | Accedi a Git | | x | | x | |
 
 Per ulteriori informazioni sulla configurazione degli utenti, vedere [Configurazione di utenti e ruoli](/help/requirements/users-and-roles.md).
 

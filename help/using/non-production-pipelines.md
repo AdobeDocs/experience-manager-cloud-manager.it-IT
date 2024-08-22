@@ -2,7 +2,7 @@
 title: Configurare le pipeline non di produzione
 description: Scopri come utilizzare Cloud Manager per creare e configurare pipeline non di produzione per distribuire il codice.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
-source-git-commit: ba08da1b25a1f9ba8bc954b2fbd27b60d4ddf1a0
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '685'
 ht-degree: 55%
@@ -29,7 +29,7 @@ Esistono due tipi di pipeline non di produzione:
 
 >[!NOTE]
 >
->Impossibile configurare una pipeline finché il relativo archivio Git associato non dispone di almeno un ramo e [la configurazione del programma](/help/getting-started/program-setup.md) non è stata completata. Consulta [Archivi Cloud Manager](/help/managing-code/managing-repositories.md) per scoprire come aggiungere e gestire archivi in Cloud Manager.
+>Impossibile configurare una pipeline finché il relativo archivio Git associato non dispone di almeno un ramo e non è stata completata la [configurazione del programma](/help/getting-started/program-setup.md). Consulta [Archivi Cloud Manager](/help/managing-code/managing-repositories.md) per scoprire come aggiungere e gestire archivi in Cloud Manager.
 
 ## Aggiungere una pipeline non di produzione {#add-non-production-pipeline}
 

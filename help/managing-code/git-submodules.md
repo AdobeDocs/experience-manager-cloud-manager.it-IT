@@ -2,10 +2,10 @@
 title: Supporto per i sottomoduli Git
 description: Scopri come utilizzare i sottomoduli Git per unire il contenuto di più rami tra archivi Git in fase di creazione.
 exl-id: f946d7e7-114a-4e33-bb82-2625d37bba2f
-source-git-commit: 11a6a53d8cbfb689810a9a8e7d82293a49863084
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '412'
-ht-degree: 28%
+ht-degree: 20%
 
 ---
 
@@ -66,7 +66,7 @@ Per ulteriori informazioni sui sottomoduli Git, consultare il [Manuale di riferi
 
 ## Limitazioni {#limitations}
 
-Quando utilizzi i moduli Git secondari, tieni presente quanto segue:
+Quando utilizzi i sottomoduli Git, tieni presente quanto segue:
 
 * L’URL Git deve avere esattamente la sintassi descritta sopra.
 * Per motivi di sicurezza, non incorporare le credenziali in questi URL.
@@ -87,8 +87,8 @@ Tuttavia, dopo aver configurato il file `pom.xml` e aver eseguito i comandi `git
 
 ### Limitazioni e raccomandazioni {#limitations-recommendations-private-repos}
 
-Quando utilizzi dei sottomoduli Git con archivi privati, tieni presente le seguenti limitazioni.
+Quando utilizzi i sottomoduli Git con archivi privati, tieni presente le seguenti limitazioni.
 
 * Gli URL Git per i sottomoduli possono essere in formato HTTPS o SSH, ma devono essere collegati a un archivio Github.com. L’aggiunta di un sottomodulo dell’archivio Adobe a un archivio di aggregazione GitHub o viceversa non funziona.
 * I sottomoduli GitHub devono essere accessibili all’app GitHub Adobe.
-* Si applicabili anche le [limitazioni dell’utilizzo dei sottomoduli Git con archivi gestiti da Adobe](#limitations-recommendations).
+* [Si applicano anche le limitazioni dell&#39;utilizzo dei sottomoduli Git con archivi gestiti da Adobe](#limitations-recommendations).

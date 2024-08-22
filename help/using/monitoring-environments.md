@@ -2,10 +2,10 @@
 title: Monitorare gli ambienti
 description: Scopri come monitorare gli ambienti in Cloud Manager.
 exl-id: 32886133-d6c0-4aed-8bb0-81b84f63e825
-source-git-commit: 4c4a2688cab8e5c81efa4b7b5e26f3c7b5dc30d6
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
-source-wordcount: '911'
-ht-degree: 34%
+source-wordcount: '910'
+ht-degree: 32%
 
 ---
 

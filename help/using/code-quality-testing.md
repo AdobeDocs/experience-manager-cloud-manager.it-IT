@@ -2,10 +2,10 @@
 title: Test della qualità del codice
 description: Scopri come funziona il test di qualità del codice delle pipeline e come può migliorare la qualità delle distribuzioni.
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
-source-wordcount: '2763'
-ht-degree: 94%
+source-wordcount: '2764'
+ht-degree: 90%
 
 ---
 
@@ -38,7 +38,7 @@ Per ciascuno di questi gate, esiste una struttura a tre livelli per i problemi i
 >
 >In una pipeline di sola qualità del codice, non è possibile ignorare importanti errori nel gate di qualità del codice, poiché il passaggio del test della qualità del codice è l’ultimo passaggio della pipeline.
 
-## Test della qualità del codice {#code-quality-testing-step}
+## Test di qualità del codice {#code-quality-testing-step}
 
 Questo passaggio di test valuta la qualità del codice dell’applicazione, che è lo scopo principale di una pipeline dedicata esclusivamente alla qualità del codice. Viene eseguito immediatamente dopo la fase di build in tutte le pipeline non di produzione e di produzione. Per ulteriori informazioni, vai alla [Configurazione delle pipeline non di produzione](/help/using/non-production-pipelines.md).
 
@@ -170,7 +170,7 @@ Tre set di pagine selezionano le pagine. Cloud Manager utilizza i registri di ac
 
 * **Nuove pagine**: testa le nuove pagine che possono essere state distribuite solo nell’area di staging e non ancora nella produzione, ma che è necessario testare.
 
-##### Distribuzione del traffico tra set di pagine selezionati {#distribution-of-traffic}
+##### Distribuzione del traffico tra i set di pagine selezionati {#distribution-of-traffic}
 
 Puoi scegliere da uno a tutti e tre i set nella scheda **Test** della [configurazione pipeline](/help/using/production-pipelines.md). La distribuzione del traffico si basa sul numero di set selezionati. In altre parole, se sono selezionati tutti e tre, il 33% del totale delle visualizzazioni di pagina viene destinato a ogni set. Se ne sono selezionati due, il 50% viene indirizzato a ciascun set. Se ne è selezionato uno, il 100% del traffico viene indirizzato a tale set.
 
@@ -186,7 +186,7 @@ Nel periodo di test di 30 minuti:
 * Ognuna delle 25 pagine del set di pagine popolari live viene visitata 120 volte: `((200 * 0.5) / 25) * 30 = 120`
 * Ognuna delle 3000 pagine del nuovo set di pagine verrà visitata una volta: `((200 * 0.5) / 3000) * 30 = 1`
 
-#### Test e reporting {#testing-reporting}
+#### Test e report {#testing-reporting}
 
 Cloud Manager esegue un test delle prestazioni per i programmi AEM Sites richiedendo le pagine come utente non autenticato per impostazione predefinita sul server di pubblicazione dello staging per un periodo di test di 30 minuti. Misura le metriche generate dall’utente virtuale (tempo di risposta, tasso di errore, visualizzazioni al minuto e così via) per ogni pagina e varie metriche a livello di sistema (CPU, memoria, dati di rete) per tutte le istanze.
 
@@ -210,7 +210,7 @@ Consulta [Test delle prestazioni autenticati](#authenticated-performance-testing
 >
 >Durante il test vengono monitorate sia le istanze di authoring che quelle di pubblicazione. Se non viene ottenuta alcuna metrica per un’istanza, tale metrica viene segnalata come sconosciuta e il passaggio corrispondente non riuscirà.
 
-#### Test delle prestazioni autenticato {#authenticated-performance-testing}
+#### Test delle prestazioni autenticati {#authenticated-performance-testing}
 
 Se necessario,la clientela AMS con siti autenticati può specificare un nome utente e una password che Cloud Manager utilizzerà per accedere al sito web durante il test delle prestazioni dei siti.
 
@@ -224,41 +224,41 @@ Per impostare queste variabili utilizzando Cloud Manager CLI, esegui:
 $ aio cloudmanager:set-pipeline-variables <pipeline id> --variable CM_PERF_TEST_BASIC_USERNAME <username> --secret CM_PERF_TEST_BASIC_PASSWORD <password>
 ```
 
-Consulta la documentazione API [Variabili della pipeline utente di patch](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/patchPipelineVariables) per scoprire come utilizzare l’API.
+Per informazioni su come utilizzare l&#39;API, consulta la documentazione sulle [variabili della pipeline utente](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/patchPipelineVariables).
 
 ### AEM Assets {#aem-assets}
 
 Cloud Manager esegue il test delle prestazioni per i programmi AEM Assets caricando ripetutamente le risorse per 30 minuti.
 
-#### Requisiti di onboarding {#onboarding-requirement}
+#### Requisito di onboarding {#onboarding-requirement}
 
 Per il test delle prestazioni di Assets, il Customer Success Engineer crea un utente e una password `cloudmanager` durante l’onboarding dell’authoring nell’ambiente di staging. I passaggi del test delle prestazioni richiedono un utente chiamato `cloudmanager` e la password associata impostata dal CSE.
 
 Questo metodo deve rimanere nell’istanza di authoring senza modificarne le autorizzazioni. Se lo modifichi o lo rimuovi, il test delle prestazioni di Assets potrebbe non riuscire.
 
-#### Immagini e risorse per il test {#assets-for-testing}
+#### Immagini e Assets per il test {#assets-for-testing}
 
 I clienti possono caricare le proprie risorse da testare. Questo processo può essere eseguito dalla schermata **Configurazione della pipeline** o **Modifica**. Sono supportati formati immagine comuni come JPEG, PNG, GIF e BMP insieme ai file Photoshop, Illustrator e Postscript.
 
 Se non viene caricata alcuna immagine, Cloud Manager utilizza un’immagine e documenti PDF predefiniti per il test.
 
-#### Distribuzione delle risorse da sottoporre a test {#distribution-of-assets}
+#### Distribuzione di Assets per il test {#distribution-of-assets}
 
 La distribuzione del numero di risorse di ciascun tipo caricate al minuto è impostata nella schermata **Configurazione della pipeline** o **Modifica**.
 
 Ad esempio, se utilizzi una suddivisione 70/30 e sono presenti 10 risorse caricate al minuto, verranno caricate 7 immagini e 3 documenti al minuto.
 
-#### Test e reporting {#testing-and-reporting}
+#### Test e report {#testing-and-reporting}
 
 Cloud Manager crea una cartella sull’istanza di authoring utilizzando il nome utente e la password configurati dal CSE. Le risorse vengono quindi caricate nella cartella utilizzando una libreria open-source. I test eseguiti dal passaggio di test di Assets vengono scritti utilizzando una [libreria open source](https://github.com/adobe/toughday2). Il tempo di elaborazione di ciascuna risorsa e di varie metriche a livello di sistema vengono misurati nell’arco della durata del test di 30 minuti. Questa funzione consente di caricare sia immagini che documenti PDF.
 
 >[!TIP]
 >
->Per ulteriori informazioni, consulta [Configura pipeline di produzione](/help/using/production-pipelines.md). Consulta [Configurazione del programma](/help/getting-started/program-setup.md) per scoprire come impostare il programma e definire i KPI.
+>Per ulteriori informazioni, consulta [Configurare le pipeline di produzione](/help/using/production-pipelines.md). Consulta [Configurazione del programma](/help/getting-started/program-setup.md) per scoprire come impostare il programma e definire i KPI.
 
-### Grafici dei risultati del test delle prestazioni {#performance-testing-results-graphs}
+### Grafici dei risultati dei test delle prestazioni {#performance-testing-results-graphs}
 
-Sono disponibili diverse metriche nella **Finestra di dialogo Test delle prestazioni**
+Nella finestra di dialogo **Test delle prestazioni** sono disponibili diverse metriche.
 
 ![Elenco delle metriche](/help/assets/understand_test-results-screen1.png)
 
@@ -284,7 +284,7 @@ Questa funzionalità è disponibile per le metriche seguenti.
 * **Tempo di risposta del 95° percentile**: un grafico del tempo di risposta del 95° percentile al minuto durante il periodo di test
    * Un file CSV che elenca le pagine il cui il tempo di risposta del 95° percentile ha superato l’indicatore KPI definito
 
-## Ottimizzazione dell’analisi dei pacchetti di contenuto {#content-package-scanning-optimization}
+## Ottimizzazione dell’analisi dei pacchetti di contenuti {#content-package-scanning-optimization}
 
 Come parte del processo di analisi della qualità, Cloud Manager esegue l’analisi dei pacchetti di contenuti prodotti dalla build Maven. Per accelerare questo processo, Cloud Manager offre delle ottimizzazioni che risultano efficaci quando si osservano determinati vincoli per la creazione dei pacchetti.
 

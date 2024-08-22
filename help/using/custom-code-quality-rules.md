@@ -2,7 +2,7 @@
 title: Regole per la qualità del codice personalizzato
 description: Scopri le specifiche delle regole di qualità del codice personalizzato eseguite da Cloud Manager durante il test di qualità del codice. Queste regole si basano sulle best practice dei tecnici di AEM.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '3482'
 ht-degree: 93%
@@ -24,7 +24,7 @@ Scopri i dettagli sulle regole per la qualità del codice personalizzato eseguit
 
 ## Regole di SonarQube {#sonarqube-rules}
 
-Nella sezione seguente sono descritte le regole di SonarQube eseguite da Cloud Manager.
+La sezione seguente descrive le regole di SonarQube eseguite da Cloud Manager.
 
 ### Non utilizzare funzioni potenzialmente pericolose {#do-not-use-potentially-dangerous-functions}
 

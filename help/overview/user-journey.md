@@ -2,9 +2,9 @@
 title: Percorso dell’utente
 description: Scopri i diversi scenari di onboarding e come iniziare a utilizzare Cloud Manager.
 exl-id: deb3429c-dfcf-4e52-9aba-d9368aa240e6
-source-git-commit: 6a5615c0db91c62fc8858b967021b46c7b383aa0
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '532'
 ht-degree: 21%
 
 ---
@@ -52,7 +52,7 @@ Per ulteriori informazioni sui vantaggi dell&#39;aggiornamento a AEM 6.5, vedere
 
 Accedi alla pagina di destinazione [!UICONTROL Experience Cloud] utilizzando le credenziali Identity Management dell&#39;Adobe. Da qui, seleziona AEM dal commutatore della soluzione per accedere a [!UICONTROL Cloud Manager] e agli ambienti AEM.
 
-Dopo il primo accesso a [!UICONTROL Cloud Manager], potrai accedere agli ambienti AEM direttamente dall&#39;interfaccia utente di [!UICONTROL Cloud Manager]. A questo punto, sei pronto per esplorare tutte le opportunità di [!UICONTROL Cloud Manager] e preparare il tuo primo ramo di codice da distribuire negli ambienti di staging e produzione.
+Dopo aver effettuato l&#39;accesso a [!UICONTROL Cloud Manager] per la prima volta, potrai accedere agli ambienti AEM direttamente dall&#39;interfaccia utente di [!UICONTROL Cloud Manager]. A questo punto, sei pronto per esplorare tutte le opportunità di [!UICONTROL Cloud Manager] e preparare il tuo primo ramo di codice da distribuire negli ambienti di staging e produzione.
 
 Per iniziare a utilizzare [!UICONTROL Cloud Manager], vedi [Primo accesso](/help/getting-started/first-time-login.md).
 

@@ -2,10 +2,10 @@
 title: Distribuzione del codice
 description: Scopri come distribuire il codice e cosa accade in Cloud Manager quando lo fai.
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-source-git-commit: a7dc30ed31e87ab486f0b279b70c850a33a903eb
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '1637'
-ht-degree: 54%
+ht-degree: 51%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 54%
 
 Scopri come distribuire il codice e cosa accade in Cloud Manager quando lo fai.
 
-## Distribuzione del codice con Cloud Manager {#deploying-code-with-cloud-manager}
+## Distribuire il codice con Cloud Manager {#deploying-code-with-cloud-manager}
 
 Dopo aver configurato la pipeline di produzione, inclusi l’archivio e gli ambienti necessari, puoi distribuire il codice.
 
@@ -38,7 +38,7 @@ Puoi rivedere i passaggi da vari processi di distribuzione visualizzando i regis
 
 Durante ogni passaggio della distribuzione si verificano diverse azioni, descritte in questa sezione. Per informazioni tecniche su come il codice stesso viene distribuito dietro le quinte, vedere [Dettagli processo di distribuzione](#deployment-process).
 
-### Passaggio della distribuzione dello staging {#stage-deployment}
+### Passaggio di distribuzione dello staging {#stage-deployment}
 
 Il passaggio **Distribuzione dello staging** include le seguenti azioni:
 
@@ -147,9 +147,9 @@ Le distribuzioni di produzione seguono generalmente gli stessi passaggi indicati
 1. Distribuisci pacchetti AEM a publish2 e il pacchetto Dispatcher a dispatcher2 in parallelo, svuota la cache di Dispatcher.
 1. Ripristinare dispatcher2 nel load balancer.
 
-Questo processo continua fino a quando la distribuzione non raggiunge tutti gli editori e i dispatcher nella topologia.
+Questo processo continua fino al completamento della distribuzione in tutti gli elementi Publish e Dispatcher nella topologia.
 
-## Esecuzione di una pipeline in modalità emergenza {#emergency-pipeline}
+## Modalità di esecuzione di una pipeline di emergenza {#emergency-pipeline}
 
 In situazioni critiche, i clienti Adobe Managed Services potrebbero dover implementare immediatamente modifiche al codice nei propri ambienti di staging e produzione. Questa funzionalità consente di ignorare l’intero ciclo di test di Cloud Manager.
 
@@ -159,7 +159,7 @@ Per risolvere queste situazioni, la pipeline di produzione di Cloud Manager può
 >
 >La funzione di esecuzione di una pipeline in modalità emergenza viene attivata ogni singolo programma. L’attivazione viene eseguita dai Customer Success Engineer.
 
-### Utilizzo dell’esecuzione di una pipeline in modalità emergenza {#using-emergency-pipeline}
+### Utilizzare la modalità di esecuzione di una pipeline di emergenza {#using-emergency-pipeline}
 
 Quando avvii l’esecuzione di una pipeline di produzione, puoi scegliere tra la modalità normale o di emergenza da una finestra di dialogo. Questa opzione è disponibile se per il programma è attivata la funzione di esecuzione di emergenza della pipeline. Questa opzione è disponibile dopo l’abilitazione della funzione.
 
@@ -175,7 +175,7 @@ L’esecuzione di una pipeline in modalità emergenza può essere eseguita anche
 $ aio cloudmanager:pipeline:create-execution PIPELINE_ID --emergency
 ```
 
-## Eseguire nuovamente una distribuzione di produzione {#reexecute-deployment}
+## Riesecuzione di una distribuzione di produzione {#reexecute-deployment}
 
 In rari casi, i passaggi di distribuzione nell’ambiente di produzione possono non riuscire per motivi transitori. In questi casi, puoi rieseguire il passaggio di distribuzione di produzione fino a quando è stato completato, indipendentemente dal fatto che sia riuscito, annullato o non riuscito. La riesecuzione è supportata utilizzando la stessa pipeline costituita dai tre passaggi seguenti:
 
@@ -198,11 +198,11 @@ In tali circostanze, in cui è possibile eseguire una riesecuzione, la pagina di
 * Se l’ultima esecuzione non è riuscita in un qualsiasi punto precedente al passaggio di distribuzione nell’ambiente di produzione, non è possibile eseguirla nuovamente.
 
 
-### Riesecuzione dell’API {#reexecute-api}
+### Esegui nuovamente API {#reexecute-api}
 
 Oltre a essere disponibile nell&#39;interfaccia utente, puoi utilizzare [l&#39;API di Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#tag/Pipeline-Execution) per attivare le riesecuzioni e identificare le esecuzioni attivate come riesecuzioni.
 
-#### Attivazione di una riesecuzione {#triggering}
+#### Attivare una riesecuzione {#triggering}
 
 Per attivare una riesecuzione, è necessario effettuare una richiesta `PUT` al collegamento HAL `http://ns.adobe.com/adobecloud/rel/pipeline/reExecute` sullo stato del passaggio di distribuzione di produzione.
 
@@ -250,6 +250,6 @@ Il valore di sintassi del collegamento HAL `href` è solo un esempio, mentre il 
 
 L&#39;invio di una richiesta `PUT` a questo endpoint genera una risposta `201` in caso di esito positivo. Il corpo della risposta è la rappresentazione della nuova esecuzione. Questa funzionalità è simile all’avvio di un’esecuzione regolare tramite l’API.
 
-#### Identificazione di una riesecuzione {#identifying}
+#### Identificare un’esecuzione rieseguita {#identifying}
 
 Il sistema identifica le esecuzioni rieseguite in base al valore `RE_EXECUTE` nel campo trigger.

@@ -2,10 +2,10 @@
 title: Configura il progetto
 description: Scopri come configurare il progetto in modo da gestirlo e distribuirlo con Cloud Manager.
 exl-id: ed994daf-0195-485a-a8b1-87796bc013fa
-source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '1395'
-ht-degree: 54%
+ht-degree: 53%
 
 ---
 
@@ -19,7 +19,7 @@ Scopri come configurare il progetto in modo da gestirlo e distribuirlo con Cloud
 I progetti AEM esistenti devono rispettare alcune regole di base in modo che possano essere generati e distribuiti correttamente con Cloud Manager.
 
 * I progetti devono essere generati utilizzando Apache Maven.
-* Nella directory principale dell’archivio Git deve essere presente un file `pom.xml`.
+* Nella radice dell&#39;archivio Git deve essere presente un file `pom.xml`.
    * Il file `pom.xml` può fare riferimento a tutti i sottomoduli (che a loro volta possono avere altri sottomoduli), a seconda delle necessità.
    * Puoi aggiungere riferimenti ad altri archivi di artefatti Maven nei tuoi file `pom.xml`.
    * Quando configurato, l’accesso agli [archivi di artefatti protetti da password](#password-protected-maven-repositories) è supportato. Tuttavia, l’accesso agli archivi di artefatti protetti dalla rete non è supportato.

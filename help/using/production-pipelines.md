@@ -2,10 +2,10 @@
 title: Configurare le pipeline di produzione
 description: Scopri come utilizzare Cloud Manager per creare e configurare pipeline di produzione per distribuire il codice.
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 8e2c57d2594691e7fb18d8a538caa9b54a26b6bb
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
-source-wordcount: '1248'
-ht-degree: 48%
+source-wordcount: '1247'
+ht-degree: 46%
 
 ---
 
@@ -108,7 +108,7 @@ Dopo aver utilizzato l&#39;interfaccia utente di [!UICONTROL Cloud Manager] per 
          * **Opzioni di implementazione**: puoi definire i parametri che controllano la distribuzione di produzione.
 
             * **Utilizza l&#39;approvazione lancio** - Un utente con il ruolo **Proprietario business**, **Project Manager** o **Responsabile della distribuzione** tramite l&#39;interfaccia utente [!UICONTROL Cloud Manager] deve approvare manualmente una distribuzione.
-            * **Pianificato** - Arresta la pipeline prima della distribuzione di produzione per consentirne la pianificazione. Se questa opzione è selezionata, la pipeline si arresta dopo la distribuzione nell’ambiente di staging e richiede all’utente di eseguire l’azione.
+            * **Pianificato** - Arresta la pipeline prima della distribuzione di produzione per consentirne la pianificazione. Se questa opzione è selezionata, la pipeline si interrompe dopo la distribuzione nell’ambiente di staging e richiede all’utente di eseguire l’azione.
                * **`Now`** - Distribuisce immediatamente in produzione, completando in modo efficace la pipeline.
                * **Data** - Consente all&#39;utente di pianificare un&#39;ora in cui la distribuzione deve essere completata.
                * **Interrompi esecuzione** - Interrompe la distribuzione in produzione.

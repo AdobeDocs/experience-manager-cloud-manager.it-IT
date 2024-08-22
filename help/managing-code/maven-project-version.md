@@ -2,10 +2,10 @@
 title: Gestione delle versioni dei progetti Maven
 description: Scopri come Maven gestisce il controllo delle versioni dei progetti in Cloud Manager.
 exl-id: a1d676e0-27cc-4b0d-8799-527c0520946a
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
-source-wordcount: '258'
-ht-degree: 94%
+source-wordcount: '249'
+ht-degree: 37%
 
 ---
 
@@ -18,22 +18,22 @@ Scopri come Maven gestisce il controllo delle versioni dei progetti in Cloud Man
 
 Per le distribuzioni di staging e produzione, Cloud Manager genera una versione univoca e incrementale.
 
-Questa versione viene visualizzata nella pagina dei dettagli di esecuzione della pipeline e nella pagina dell’attività. Quando viene eseguita una build, il progetto Maven viene aggiornato per utilizzare questa versione e viene creato un tag nell’archivio Git con tale versione come nome.
+Questa versione viene visualizzata nella pagina dei dettagli di esecuzione della pipeline e nella pagina dell’attività. Quando viene eseguita una build, il progetto Maven viene aggiornato per utilizzare questa versione. Nell’archivio Git viene creato un tag con tale versione come nome.
 
-Se la versione del progetto originale soddisfa determinati criteri, la versione del progetto Maven aggiornata unirà la versione del progetto originale e quella generata da Cloud Manager. Tuttavia, il tag utilizza sempre la versione generata. Affinché tale unione si verifichi, la versione originale del progetto deve essere formata da esattamente tre segmenti di versione, ad esempio `1.0.0` o `1.2.3`, ma non `1.0` o `1`, mentre la versione originale non deve terminare con `-SNAPSHOT`.
+Se la versione del progetto originale soddisfa determinati criteri, la versione del progetto Maven aggiornata unisce sia la versione del progetto originale che la versione generata da Cloud Manager. Tuttavia, il tag utilizza sempre la versione generata. Affinché tale unione si verifichi, la versione originale del progetto deve essere formata da esattamente tre segmenti di versione, ad esempio `1.0.0` o `1.2.3`, ma non `1.0` o `1`, mentre la versione originale non deve terminare con `-SNAPSHOT`.
 
 >[!NOTE]
 >
->Il valore della versione del progetto originale deve essere impostato in modo statico nell’elemento `<version>` del livello superiore `pom.xml` nel ramo dell’archivio Git.
+>Il valore della versione del progetto originale deve essere impostato in modo statico nell&#39;elemento `<version>` del file `pom.xml` di primo livello nel ramo dell&#39;archivio Git.
 
-Se la versione originale soddisfa questi criteri, la versione generata verrà aggiunta alla versione originale come segmento di nuova versione. Anche la versione generata verrà leggermente modificata per includere l’ordinamento e la gestione delle versioni corrette. Ad esempio, supponendo una versione generata di `2019.926.121356.0000020490`:
+Se la versione originale soddisfa questi criteri, la versione generata viene aggiunta alla versione originale come segmento di nuova versione. Anche la versione generata viene leggermente modificata per includere l’ordinamento e la gestione delle versioni corrette. Ad esempio, supponendo una versione generata di `2019.926.121356.0000020490`:
 
 | Versione | Versione in `pom.xml` | Commenti |
-|---|---|---|
+| --- | --- | --- |
 | `1.0.0` | `1.0.0.2019_0926_121356_0000020490` | Versione originale formata correttamente |
 | `1.0.0-SNAPSHOT` | `2019.926.121356.0000020490` | Versione snapshot, sovrascritta |
 | `1` | `2019.926.121356.0000020490` | Versione incompleta, sovrascritta |
 
 >[!NOTE]
 >
->Indipendentemente dal fatto che la versione originale fosse incorporata nella versione inizializzata da Cloud Manager, la versione originale è disponibile come proprietà Maven con il nome `cloudManagerOriginalVersion`.
+>Indipendentemente dal fatto che la versione originale sia stata integrata o meno nella versione inizializzata da Cloud Manager, è ancora accessibile come proprietà Maven denominata `cloudManagerOriginalVersion`.

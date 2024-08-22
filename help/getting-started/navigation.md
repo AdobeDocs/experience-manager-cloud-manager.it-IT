@@ -2,15 +2,15 @@
 title: Navigazione nell’interfaccia utente di Cloud Manager
 description: Scopri come è organizzata l’interfaccia utente di Cloud Manager e come spostarsi per gestire i programmi e gli ambienti.
 exl-id: 9c1545ce-1c6d-417f-a6f4-fe53caef3433
-source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '1435'
-ht-degree: 41%
+ht-degree: 40%
 
 ---
 
 
-# Navigazione nell’interfaccia utente di Cloud Manager {#navigation}
+# Navigare nell’interfaccia utente di Cloud Manager {#navigation}
 
 Scopri come è organizzata l’interfaccia utente di Cloud Manager e come spostarsi per gestire i programmi e gli ambienti.
 

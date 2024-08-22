@@ -2,7 +2,7 @@
 title: Lo strumento Copia contenuto
 description: Lo strumento di copia dei contenuti di Cloud Manager consente agli utenti di copiare contenuti mutabili on-demand dagli ambienti di produzione AEM 6.x ospitati da AMS agli ambienti più bassi per i test.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 8e2c57d2594691e7fb18d8a538caa9b54a26b6bb
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '1144'
 ht-degree: 34%
@@ -98,7 +98,7 @@ Segui passaggi simili a quelli impiegati per la creazione del contenuto. Invece 
 
 Quando modifichi il set di contenuti, potrebbe essere necessario espandere i percorsi configurati per visualizzare i percorsi secondari esclusi.
 
-## Copia del contenuto {#copy-content}
+## Copia contenuto {#copy-content}
 
 Una volta creato un set di contenuti, puoi utilizzarlo per copiare il contenuto. Per copiare il contenuto, effettua le seguenti operazioni.
 

@@ -2,10 +2,10 @@
 title: Configurazione del programma
 description: Dopo l’onboarding, il proprietario business deve effettuare una configurazione iniziale del programma.
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
-source-git-commit: 11a6a53d8cbfb689810a9a8e7d82293a49863084
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 53%
+source-wordcount: '564'
+ht-degree: 49%
 
 ---
 
@@ -68,7 +68,7 @@ Il programma viene creato. Potrebbero essere necessari diversi minuti per il pro
 
 1. Fai clic su **Aggiorna** per salvare le modifiche.
 
-Tieni presente che le modifiche vengono salvate immediatamente in Cloud Manager, ma non verranno applicate negli ambienti fino alla successiva esecuzione della pipeline.
+Le modifiche vengono salvate immediatamente in Cloud Manager, ma non vengono applicate negli ambienti fino alla successiva esecuzione della pipeline.
 
 Se non hai ancora creato una pipeline, consulta [Configurazione delle pipeline di produzione](/help/using/production-pipelines.md) e [Configurazione delle pipeline non di produzione](/help/using/non-production-pipelines.md).
 

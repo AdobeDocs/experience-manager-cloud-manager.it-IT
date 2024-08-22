@@ -1,16 +1,16 @@
 ---
-title: Gestione degli ambienti
+title: Gestisci ambienti
 description: Scopri come utilizzare Cloud Manager per gestire i tuoi ambienti.
 exl-id: 700b0b4c-1e1a-4993-b366-426b14a98f8e
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 94%
+source-wordcount: '281'
+ht-degree: 78%
 
 ---
 
 
-# Gestione degli ambienti {#managing-environments}
+# Gestisci ambienti {#managing-environments}
 
 Scopri come utilizzare Cloud Manager per gestire i tuoi ambienti.
 
@@ -35,7 +35,7 @@ Lo stato è lo stato di alimentazione ricalcolato tra i nodi dell’ambiente nel
 
 ![Riquadro Ambienti](/help/assets/Environments-card-new.png)
 
-## Gestione degli ambienti {#managing-environments-with-cloud-manager}
+## Gestire gli ambienti {#managing-environments-with-cloud-manager}
 
 Nel riquadro **Ambienti**, fare clic sulla riga di qualsiasi ambiente per visualizzare la schermata **Ambienti**.
 
@@ -54,14 +54,14 @@ La schermata **Ambienti** visualizza ogni ambiente di produzione e di staging ne
 
 >[!NOTE]
 >
->Una volta eseguito il provisioning, i dettagli dell’ambiente, come il nome, non possono essere modificati.
+>Una volta eseguito il provisioning, i dettagli dell’ambiente, come un nome, non possono essere modificati.
 
 >[!NOTE]
 >
 >Se hai bisogno dei registri dell’ambiente, puoi richiederli tramite il Customer Success Engineer.
 
-## Tutorial video {#video-tutorial}
+## Esercitazione video {#video-tutorial}
 
 Questo video fornisce una panoramica degli ambienti di Cloud Manager composti da istanze di authoring, pubblicazione e Dispatcher AEM.
 
->[!VIDEO](https://video.tv.adobe.com/v/26318/)
+>[!VIDEO](https://video.tv.adobe.com/v/26318/) (3 minuti, 1 secondo)
