@@ -5,7 +5,7 @@ exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '641'
-ht-degree: 50%
+ht-degree: 68%
 
 ---
 
@@ -53,11 +53,11 @@ In questa finestra puoi selezionare un archivio e fare clic sul pulsante con i p
 
 ## Aggiungere archivi {#adding-repositories}
 
-Fare clic sul pulsante **Aggiungi archivio** nella finestra **Archivi** per avviare la procedura guidata **Aggiungi archivio**.
+Fai clic sul pulsante **Aggiungi archivio** nella finestra **Archivi** per avviare la procedura guidata **Aggiungi archivio**.
 
 ![Procedura guidata Aggiungi archivio](assets/add-repository-wizard.png)
 
-Cloud Manager supporta sia gli archivi gestiti da Adobe (**Archivio Adobe**) che quelli gestiti autonomamente (**Archivio privato**). I campi obbligatori variano a seconda del tipo di archivio che si sceglie di aggiungere.
+Cloud Manager supporta sia gli archivi gestiti da Adobe (**Archivio Adobe**) sia quelli che puoi gestire direttamente (**Archivio privato**). I campi obbligatori variano a seconda del tipo di archivio che si sceglie di aggiungere.
 
 Vedi [Aggiunta di archivi di Adobi in Cloud Manager](adobe-repositories.md).
 Vedi [Aggiunta di archivi privati in Cloud Manager](private-repositories.md).
@@ -70,11 +70,11 @@ Vedi [Aggiunta di archivi privati in Cloud Manager](private-repositories.md).
 
 ## Accedere alle informazioni sull’archivio {#repo-info}
 
-Quando visualizzi i tuoi archivi nella finestra **Archivi**, puoi visualizzare i dettagli su come accedere agli archivi gestiti da Adobe a livello di programmazione facendo clic sul pulsante **Accedi a dati archivio** sulla barra degli strumenti.
+Quando visualizzi gli archivi nella finestra **Archivi**, puoi visualizzare i dettagli su come accedere agli archivi gestiti da Adobe a livello di programmazione facendo clic sul pulsante **Accedi a dati archivio** nella barra degli strumenti.
 
 ![Informazioni sull’archivio](assets/access-repo-info.png)
 
-La finestra **Informazioni archivio** si apre con i dettagli. Per ulteriori informazioni sull&#39;accesso alle informazioni del repository, vedere [Accesso alle informazioni del repository](accessing-repositories.md).
+La finestra **Informazioni archivio** si apre con i dettagli. Per ulteriori informazioni sull’accesso alle informazioni dell’archivio, consulta [Accesso alle informazioni sull’archivio](accessing-repositories.md).
 
 ## Controlla rami {#check-branches}
 
@@ -92,7 +92,7 @@ L’azione **Copia URL archivio** copia negli Appunti l’URL dell’archivio se
 
 ## Menu Visualizza e aggiorna {#view-update}
 
-L’azione **Visualizza e aggiorna** apre la finestra di dialogo **Aggiorna archivio**. È possibile visualizzare l&#39;**Nome** e l&#39;**anteprima URL archivio** e aggiornare la **Descrizione** dell&#39;archivio.
+L’azione **Visualizza e aggiorna** apre la finestra di dialogo **Aggiorna archivio**. Questo permette di visualizzare il **Nome** e l’**Anteprima URL archivio**, nonché di aggiornare la **Descrizione** dell’archivio.
 
 ![Visualizzare e aggiornare le informazioni del dell’archivio](assets/update-repository.png)
 

@@ -5,14 +5,14 @@ exl-id: 8134e956-bfcf-41b8-a408-fa4375058c6a
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '208'
-ht-degree: 38%
+ht-degree: 49%
 
 ---
 
 
 # Procedura guidata di aggiornamento del prodotto {#product-update-wizard}
 
-La Procedura guidata di aggiornamento del prodotto è un’esperienza di aggiornamento guidata e dettagliata all’ultima versione di Adobe Experience Manager 6.5 utilizzando Cloud Manager. Semplifica il processo end-to-end e garantisce il rispetto delle best practice AEM utilizzando il framework CI/CD di Cloud Manager e test automatizzati integrati.
+La Procedura guidata di aggiornamento del prodotto è un’esperienza di aggiornamento guidata e dettagliata all’ultima versione di Adobe Experience Manager 6.5 utilizzando Cloud Manager. Semplifica il processo end-to-end e garantisce il rispetto delle best practice di AEM utilizzando il framework CI/CD di Cloud Manager e il test automatizzato integrato.
 
 La procedura guidata include cinque fasi che ti guidano durante un aggiornamento del prodotto AEM:
 

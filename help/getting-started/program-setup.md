@@ -5,7 +5,7 @@ exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '564'
-ht-degree: 49%
+ht-degree: 55%
 
 ---
 
@@ -72,7 +72,7 @@ Le modifiche vengono salvate immediatamente in Cloud Manager, ma non vengono app
 
 Se non hai ancora creato una pipeline, consulta [Configurazione delle pipeline di produzione](/help/using/production-pipelines.md) e [Configurazione delle pipeline non di produzione](/help/using/non-production-pipelines.md).
 
-## Passa da un programma all&#39;altro {#swithing-programs}
+## Passaggio tra programmi {#swithing-programs}
 
 Quando lavori a un programma, puoi passare rapidamente a un altro senza tornare alla pagina della panoramica di Cloud Manager.
 

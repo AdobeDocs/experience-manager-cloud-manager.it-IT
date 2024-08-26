@@ -5,7 +5,7 @@ exl-id: 700b0b4c-1e1a-4993-b366-426b14a98f8e
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '281'
-ht-degree: 78%
+ht-degree: 84%
 
 ---
 
@@ -37,7 +37,7 @@ Lo stato è lo stato di alimentazione ricalcolato tra i nodi dell’ambiente nel
 
 ## Gestire gli ambienti {#managing-environments-with-cloud-manager}
 
-Nel riquadro **Ambienti**, fare clic sulla riga di qualsiasi ambiente per visualizzare la schermata **Ambienti**.
+Nel riquadro **Ambienti**, fai clic sulla riga di qualsiasi ambiente per visualizzare la schermata **Ambienti**.
 
 La schermata **Ambienti** visualizza ogni ambiente di produzione e di staging nel programma. Il nome dell&#39;ambiente viene visualizzato sopra ogni scheda. La scheda include una tabella di nodi nell’ambiente insieme alla dimensione della CPU, all’archiviazione, all’area e allo stato.
 
@@ -60,7 +60,7 @@ La schermata **Ambienti** visualizza ogni ambiente di produzione e di staging ne
 >
 >Se hai bisogno dei registri dell’ambiente, puoi richiederli tramite il Customer Success Engineer.
 
-## Esercitazione video {#video-tutorial}
+## Tutorial video {#video-tutorial}
 
 Questo video fornisce una panoramica degli ambienti di Cloud Manager composti da istanze di authoring, pubblicazione e Dispatcher AEM.
 

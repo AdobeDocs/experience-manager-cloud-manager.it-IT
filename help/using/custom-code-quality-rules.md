@@ -5,14 +5,14 @@ exl-id: 7d118225-5826-434e-8869-01ee186e0754
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '3482'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
 
 # Regole per la qualità del codice personalizzato {#custom-code-quality-rules}
 
-Scopri i dettagli sulle regole per la qualità del codice personalizzato eseguite da Cloud Manager nell’ambito del [test di qualità del codice](/help/using/code-quality-testing.md), in base alle best practice indicate dal team ingegneristico dell’AEM.
+Scopri i dettagli sulle regole della qualità del codice personalizzato eseguite da Cloud Manager come parte del [test della qualità del codice](/help/using/code-quality-testing.md), in base alle best practice dei tecnici di AEM.
 
 >[!NOTE]
 >
@@ -500,7 +500,7 @@ public void doThis(Resource resource) {
 
 Non utilizzare lo Sling Scheduler per le attività che richiedono un’esecuzione garantita. I processi pianificati Sling garantiscono l’esecuzione e sono più adatti per gli ambienti cluster che per quelli non cluster.
 
-Per ulteriori informazioni sulla gestione dei processi Sling negli ambienti cluster, consulta la [documentazione sull&#39;evento Sling di Apache e sulla gestione dei processi](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html).
+Consulta [Documentazione sull’evento Sling di Apache e sulla gestione dei processi](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html) per ulteriori informazioni sulla gestione dei processi Sling in ambienti cluster.
 
 ### Non utilizzare le API AEM obsolete {#sonarqube-aem-deprecated}
 
@@ -655,7 +655,7 @@ La documentazione sugli strumenti di modernizzazione AEM fornisce dettagli e str
 * **Gravità**: minore
 * **Da**: versione 2020.5.0
 
-La replica inversa non è supportata nelle distribuzioni di Cloud Service, come descritto in [Note sulla versione: rimozione degli agenti di replica](https://experienceleague.adobe.com/it/docs/experience-manager-cloud-service/content/release-notes/aem-cloud-changes#replication-agents).
+La replica inversa non è supportata nelle implementazioni di Cloud Service, come descritto nelle [Note sulla versione: rimozione degli agenti di replica.](https://experienceleague.adobe.com/it/docs/experience-manager-cloud-service/content/release-notes/aem-cloud-changes#replication-agents)
 
 Se utilizzi la replica inversa, contatta Adobe per scoprire le soluzioni alternative.
 
@@ -666,7 +666,7 @@ Se utilizzi la replica inversa, contatta Adobe per scoprire le soluzioni alterna
 * **Gravità**: minore
 * **Da**: versione 2021.2.0
 
-Le librerie client AEM possono contenere risorse statiche come immagini e font. Come descritto nella [documentazione sull&#39;utilizzo di librerie lato client](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/implementing/developing/introduction/clientlibs#using-preprocessors), quando si utilizzano librerie client con proxy le risorse statiche devono essere contenute in una cartella secondaria denominata `resources` affinché sia possibile farvi riferimento nelle istanze di pubblicazione.
+Le librerie client AEM possono contenere risorse statiche come immagini e font. Come descritto nella [documentazione sull’utilizzo di librerie lato client](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/implementing/developing/introduction/clientlibs#using-preprocessors), quando si utilizzano librerie client con proxy, le risorse statiche devono essere contenute all’interno di una cartella secondaria denominata `resources` affinché sia possibile farvi riferimento correttamente nelle istanze di pubblicazione.
 
 #### Codice non conforme {#non-compliant-proxy-enabled}
 
@@ -708,9 +708,9 @@ Lo strumento di migrazione nell’[archivio GitHub di AEM Assets as a Cloud Serv
 * **Gravità**: minore
 * **Da**: versione 2021.2.0
 
-Anche se l’utilizzo di modelli statici è sempre stato comune nei progetti AEM, i modelli modificabili sono altamente consigliati, in quanto offrono la massima flessibilità e supportano funzioni aggiuntive non presenti nei modelli statici. Ulteriori informazioni sono disponibili in [Modelli di pagina - Documentazione modificabile](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/implementing/developing/platform/templates/page-templates-editable).
+Anche se l’utilizzo di modelli statici è sempre stato comune nei progetti AEM, i modelli modificabili sono altamente consigliati, in quanto offrono la massima flessibilità e supportano funzioni aggiuntive non presenti nei modelli statici. Per ulteriori informazioni consulta la sezione [Modelli di pagina: documentazione modificabile](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/implementing/developing/platform/templates/page-templates-editable).
 
-La migrazione da modelli statici a modificabili può essere in gran parte automatizzata utilizzando gli [strumenti di modernizzazione AEM](https://opensource.adobe.com/aem-modernize-tools/).
+La migrazione da modelli statici a modificabili può essere in gran parte automatizzata utilizzando gli [Strumenti di modernizzazione AEM](https://opensource.adobe.com/aem-modernize-tools/).
 
 ### L’utilizzo dei componenti di base precedenti è sconsigliato {#oakpal-usage-legacy}
 
@@ -719,7 +719,7 @@ La migrazione da modelli statici a modificabili può essere in gran parte automa
 * **Gravità**: minore
 * **Da**: versione 2021.2.0
 
-I componenti Foundation legacy (ovvero i componenti in `/libs/foundation`) sono stati dichiarati obsoleti per diverse versioni AEM a favore dei [componenti core](https://experienceleague.adobe.com/it/docs/experience-manager-core-components/using/introduction). L’utilizzo dei componenti di base precedenti come base per i componenti personalizzati, tramite sovrapposizione o ereditarietà, è sconsigliato e deve essere convertito nel componente di base corrispondente.
+I componenti di base precedenti (ad esempio, i componenti in `/libs/foundation`) sono stati dichiarati obsoleti per diverse versioni AEM a favore dei [Componenti core](https://experienceleague.adobe.com/it/docs/experience-manager-core-components/using/introduction). L’utilizzo dei componenti di base precedenti come base per i componenti personalizzati, tramite sovrapposizione o ereditarietà, è sconsigliato e deve essere convertito nel componente core corrispondente.
 
 Gli [strumenti di modernizzazione AEM](https://opensource.adobe.com/aem-modernize-tools/) possono facilitare questa conversione.
 
@@ -730,7 +730,7 @@ Gli [strumenti di modernizzazione AEM](https://opensource.adobe.com/aem-moderniz
 * **Gravità**: minore
 * **Da**: versione 2021.2.0
 
-AEM Cloud Service richiede che le definizioni dell’indice di ricerca personalizzato (ad esempio, nodi di tipo `oak:QueryIndexDefinition`) siano nodi secondari diretti di `/oak:index`. Gli indici in altre posizioni devono essere spostati per essere compatibili con AEM Cloud Service. Ulteriori informazioni sugli indici di ricerca sono disponibili nella [documentazione sulla ricerca e l&#39;indicizzazione dei contenuti](https://experienceleague.adobe.com/it/docs/experience-manager-cloud-service/content/operations/indexing).
+AEM Cloud Service richiede che le definizioni dell’indice di ricerca personalizzato (ad esempio, nodi di tipo `oak:QueryIndexDefinition`) siano nodi secondari diretti di `/oak:index`. Gli indici in altre posizioni devono essere spostati per essere compatibili con AEM Cloud Service. Ulteriori informazioni sugli indici di ricerca sono disponibili nella sezione [Documentazione sulla ricerca e l’indicizzazione dei contenuti](https://experienceleague.adobe.com/it/docs/experience-manager-cloud-service/content/operations/indexing).
 
 ### I nodi di definizione dell’indice di ricerca personalizzato devono avere una compatVersion di 2 {#oakpal-custom-search-compatVersion}
 
@@ -739,7 +739,7 @@ AEM Cloud Service richiede che le definizioni dell’indice di ricerca personali
 * **Gravità**: minore
 * **Da**: versione 2021.2.0
 
-AEM Cloud Service richiede che le definizioni di indici di ricerca personalizzati (ovvero nodi di tipo `oak:QueryIndexDefinition`) abbiano la proprietà `compatVersion` impostata su `2`. AEM Cloud Service non supporta altri valori. Ulteriori informazioni sugli indici di ricerca sono disponibili nella [documentazione sulla ricerca e l&#39;indicizzazione dei contenuti](https://experienceleague.adobe.com/it/docs/experience-manager-cloud-service/content/operations/indexing).
+AEM Cloud Service richiede che le definizioni di indici di ricerca personalizzati (ovvero nodi di tipo `oak:QueryIndexDefinition`) abbiano la proprietà `compatVersion` impostata su `2`. AEM Cloud Service non supporta altri valori. Ulteriori informazioni sugli indici di ricerca sono disponibili nella sezione [Documentazione sulla ricerca e l’indicizzazione dei contenuti](https://experienceleague.adobe.com/it/docs/experience-manager-cloud-service/content/operations/indexing).
 
 ### I nodi discendenti dei nodi di definizione dell’indice di ricerca personalizzato devono essere di tipo `nt:unstructured` {#oakpal-descendent-nodes}
 
@@ -757,7 +757,7 @@ AEM Cloud Service richiede che le definizioni di indici di ricerca personalizzat
 * **Gravità**: minore
 * **Da**: versione 2021.2.0
 
-Un nodo di definizione dell’indice di ricerca personalizzato definito correttamente deve contenere un nodo secondario denominato `indexRules` che, a sua volta, deve avere almeno un elemento secondario. Ulteriori informazioni sono disponibili nella [documentazione di Oak](https://jackrabbit.apache.org/oak/docs/query/lucene.html).
+Un nodo di definizione dell’indice di ricerca personalizzato definito correttamente deve contenere un nodo secondario denominato `indexRules` che, a sua volta, deve avere almeno un elemento secondario. Ulteriori informazioni sono disponibili nella sezione [Documentazione Oak.](https://jackrabbit.apache.org/oak/docs/query/lucene.html)
 
 ### I nodi di definizione dell’indice di ricerca personalizzato devono rispettare le convenzioni di denominazione {#oakpal-custom-search-definitions}
 

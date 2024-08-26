@@ -5,7 +5,7 @@ exl-id: cfd5655f-2d2c-4304-b25c-6cdffe7ff64c
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '561'
-ht-degree: 67%
+ht-degree: 81%
 
 ---
 
@@ -38,9 +38,9 @@ La scheda **Annunci** include annunci di prodotti Adobe. Gli annunci riguardano 
 
 Fai clic su una notifica o un annuncio per visualizzarne i dettagli. Le notifiche collegate ad attività come le distribuzioni di pipeline ti portano ai dettagli di quell’attività, ad esempio la finestra di esecuzione della pipeline.
 
-Fai clic sull&#39;opzione **Visualizza tutto** nella parte inferiore del pannello per visualizzare tutti gli annunci presenti nella casella in entrata.
+Fai clic sull’opzione **Visualizza tutto** nella parte inferiore del pannello per visualizzare tutti gli annunci presenti nella casella in entrata.
 
-Fai clic su **Contrassegna tutto come letto** nella parte inferiore del pannello per contrassegnare tutte le notifiche non lette come lette e cancellare il contrassegno dell&#39;icona della campana.
+Fai clic sul pulsante **Contrassegna tutto come letto** nella parte inferiore del pannello per contrassegnare tutte le notifiche non lette come lette e cancellare il contrassegno dell’icona a forma di campana.
 
 ## Configurazione delle notifiche {#configuration}
 

@@ -5,7 +5,7 @@ exl-id: 67df1987-8db7-40bd-9717-1bf194e957f7
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '202'
-ht-degree: 60%
+ht-degree: 70%
 
 ---
 
@@ -18,7 +18,7 @@ Scopri la sicurezza e la privacy del codice e delle risorse degli artefatti in C
 
 [!UICONTROL Cloud Manager] dispone di ruoli preconfigurati con le autorizzazioni appropriate.
 
-Per informazioni sui possibili ruoli che è possibile assegnare nell&#39;Admin Console e sulle autorizzazioni per i ruoli utente, vedere [Autorizzazioni basate sul ruolo](/help/requirements/role-based-permissions.md).
+Per informazioni sui possibili ruoli che è possibile assegnare in Admin Console e sulle autorizzazioni per i ruoli utente, consulta [Autorizzazioni basate sul ruolo](/help/requirements/role-based-permissions.md).
 
 ## Isolamento delle risorse {#resource-isolation}
 

@@ -5,7 +5,7 @@ exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '2764'
-ht-degree: 90%
+ht-degree: 96%
 
 ---
 
@@ -46,11 +46,11 @@ Il test di qualità del codice esegue la scansione del codice sorgente per garan
 
 Il software lo implementa tramite una combinazione di analisi SonarQube, un controllo a livello di pacchetto di contenuti con OakPAL e una convalida del Dispatcher tramite il relativo strumento di ottimizzazione.
 
-Sono presenti più di 100 regole che combinano regole Java generiche e regole specifiche per AEM. Alcune delle regole specifiche per l&#39;AEM vengono create in base alle best practice indicate dal team ingegneristico dell&#39;AEM e sono denominate [Regole per la qualità del codice personalizzato](/help/using/custom-code-quality-rules.md).
+Sono presenti più di 100 regole che combinano regole Java generiche e regole specifiche per AEM. Alcune delle regole specifiche per AEM vengono create in base alle best practice indicate dai tecnici di AEM e sono denominate [regole per la qualità del codice personalizzato](/help/using/custom-code-quality-rules.md).
 
 >[!TIP]
 >
->È possibile scaricare l&#39;elenco completo delle regole [utilizzando questo collegamento](/help/assets/CodeQuality-rules-latest-AMS.xlsx).
+>È possibile scaricare l’elenco completo delle regole [utilizzando questo collegamento](/help/assets/CodeQuality-rules-latest-AMS.xlsx).
 
 I risultati dei test di qualità del codice sono forniti come valutazione, come sintetizzato in questa tabella.
 
@@ -71,7 +71,7 @@ I risultati dei test di qualità del codice sono forniti come valutazione, come 
 
 >[!NOTE]
 >
->Per ulteriori informazioni sulle regole per la qualità del codice personalizzato eseguite da [!UICONTROL Cloud Manager], vedere [Regole per la qualità del codice personalizzato](custom-code-quality-rules.md).
+>Per ulteriori informazioni sulle regole per la qualità del codice personalizzato eseguite da [!UICONTROL Cloud Manager], consulta [Regole per la qualità del codice personalizzato](custom-code-quality-rules.md).
 
 ### Gestione dei falsi positivi {#dealing-with-false-positives}
 
@@ -172,7 +172,7 @@ Tre set di pagine selezionano le pagine. Cloud Manager utilizza i registri di ac
 
 ##### Distribuzione del traffico tra i set di pagine selezionati {#distribution-of-traffic}
 
-Puoi scegliere da uno a tutti e tre i set nella scheda **Test** della [configurazione pipeline](/help/using/production-pipelines.md). La distribuzione del traffico si basa sul numero di set selezionati. In altre parole, se sono selezionati tutti e tre, il 33% del totale delle visualizzazioni di pagina viene destinato a ogni set. Se ne sono selezionati due, il 50% viene indirizzato a ciascun set. Se ne è selezionato uno, il 100% del traffico viene indirizzato a tale set.
+Puoi scegliere da uno a tutti e tre i set nella scheda **Test** della [configurazione della pipeline](/help/using/production-pipelines.md). La distribuzione del traffico si basa sul numero di set selezionati. In altre parole, se sono selezionati tutti e tre, il 33% del totale delle visualizzazioni di pagina viene destinato a ogni set. Se ne sono selezionati due, il 50% viene indirizzato a ciascun set. Se ne è selezionato uno, il 100% del traffico viene indirizzato a tale set.
 
 Consideriamo questo esempio.
 
@@ -188,7 +188,7 @@ Nel periodo di test di 30 minuti:
 
 #### Test e report {#testing-reporting}
 
-Cloud Manager esegue un test delle prestazioni per i programmi AEM Sites richiedendo le pagine come utente non autenticato per impostazione predefinita sul server di pubblicazione dello staging per un periodo di test di 30 minuti. Misura le metriche generate dall’utente virtuale (tempo di risposta, tasso di errore, visualizzazioni al minuto e così via) per ogni pagina e varie metriche a livello di sistema (CPU, memoria, dati di rete) per tutte le istanze.
+Cloud Manager esegue un test delle prestazioni per i programmi AEM Sites richiedendo le pagine come utente non autenticato per impostazione predefinita sul server di pubblicazione dello staging per un periodo di test di 30 minuti. Misura le metriche generate dall’utente virtuale (tempo di risposta, tasso di errore, visualizzazioni al minuto e così via) per ogni pagina, nonché varie metriche a livello di sistema (CPU, memoria, dati di rete) per tutte le istanze.
 
 Nella tabella seguente viene riepilogata la matrice dei test di prestazione utilizzando il sistema di verifica a tre livelli.
 
@@ -250,7 +250,7 @@ Ad esempio, se utilizzi una suddivisione 70/30 e sono presenti 10 risorse carica
 
 #### Test e report {#testing-and-reporting}
 
-Cloud Manager crea una cartella sull’istanza di authoring utilizzando il nome utente e la password configurati dal CSE. Le risorse vengono quindi caricate nella cartella utilizzando una libreria open-source. I test eseguiti dal passaggio di test di Assets vengono scritti utilizzando una [libreria open source](https://github.com/adobe/toughday2). Il tempo di elaborazione di ciascuna risorsa e di varie metriche a livello di sistema vengono misurati nell’arco della durata del test di 30 minuti. Questa funzione consente di caricare sia immagini che documenti PDF.
+Cloud Manager crea una cartella sull’istanza di authoring utilizzando il nome utente e la password configurati dal CSE. Le risorse vengono quindi caricate nella cartella utilizzando una libreria open-source. I test eseguiti dal passaggio di test delle risorse vengono scritti utilizzando una [libreria open source](https://github.com/adobe/toughday2). Il tempo di elaborazione di ciascuna risorsa e di varie metriche a livello di sistema vengono misurati durante la durata del test di 30 minuti. Questa funzione consente di caricare sia immagini che documenti PDF.
 
 >[!TIP]
 >
@@ -298,7 +298,7 @@ Se gli unici elementi all’interno di `myco-all-1.0.0-SNAPSHOT.zip` sono i due 
 
 Per i progetti che producono decine di pacchetti incorporati, è comprovato che questa ottimizzazione consente di risparmiare fino a 10 minuti per ogni esecuzione della pipeline.
 
-Un caso speciale può verificarsi quando il pacchetto di contenuti “all” include una combinazione di pacchetti di contenuti e bundle OSGi ignorati. Ad esempio, se `myco-all-1.0.0-SNAPSHOT.zip` contiene i due pacchetti incorporati precedentemente menzionati oltre a uno o più bundle OSGi, allora viene creato un nuovo pacchetto di contenuti minimo con i soli bundle OSGi. Questo pacchetto viene sempre denominato `cloudmanager-synthetic-jar-package` e i bundle contenuti vengono inseriti in `/apps/cloudmanager-synthetic-installer/install`.
+Un caso speciale può verificarsi quando il pacchetto di contenuti “all” include una combinazione di pacchetti di contenuti e bundle OSGi ignorati. Ad esempio, se `myco-all-1.0.0-SNAPSHOT.zip` contiene i due pacchetti incorporati precedentemente menzionati oltre a uno o più bundle OSGi, allora viene creato un nuovo pacchetto di contenuti minimo con i soli bundle OSGi. Questo pacchetto viene sempre denominato `cloudmanager-synthetic-jar-package` e i bundle contenuti sono inseriti in `/apps/cloudmanager-synthetic-installer/install`.
 
 >[!NOTE]
 >

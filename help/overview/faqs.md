@@ -5,7 +5,7 @@ exl-id: 52c1ca23-5b42-4eae-b63a-4b22ef1a5aee
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '748'
-ht-degree: 50%
+ht-degree: 54%
 
 ---
 
@@ -18,7 +18,7 @@ Questo documento fornisce le risposte alle domande più frequenti su Cloud Manag
 
 Sì. Aggiungere `maven-toolchains-plugin` con le impostazioni corrette per Java 11.
 
-* Questo processo è documentato [qui](/help/getting-started/using-the-wizard.md).
+* Questo processo è documentato [qui.](/help/getting-started/using-the-wizard.md)
 * Ad esempio, vedi [Codice progetto di esempio WKND](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75).
 
 ## Dopo il passaggio da Java 8 a Java 11, l’esecuzione della build non riesce e genera un errore relativo a maven-scr-plugin. Cosa posso fare? {#maven-src-plugin}

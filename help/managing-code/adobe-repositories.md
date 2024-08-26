@@ -5,7 +5,7 @@ exl-id: 24c6ca97-ea70-41b8-b4c7-b8b0f406a57d
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 72%
+ht-degree: 93%
 
 ---
 
@@ -29,8 +29,8 @@ La finestra **Archivi** consente di aggiungere facilmente al programma altri arc
 
    ![Finestra di dialogo Aggiungi archivio](assets/add-repository-wizard.png)
 
-Al termine della procedura guidata, il nuovo archivio viene visualizzato nella tabella nella finestra **Archivi**. È ora possibile associare una [pipeline CI/CD](/help/overview/ci-cd-pipelines.md) a essa o gestirla all&#39;interno della finestra [**Archivi**](managing-repositories.md).
+Al termine della procedura guidata, il nuovo archivio viene visualizzato nella tabella nella finestra **Archivi**. A questo punto puoi associarvi una [pipeline CI/CD](/help/overview/ci-cd-pipelines.md) o gestirlo nella finestra [**Archivi**.](managing-repositories.md)
 
 >[!TIP]
 >
->Puoi anche aggiungere archivi GitHub che gestisci come [archivi privati](private-repositories.md).
+>Puoi anche aggiungere archivi GitHub da gestire direttamente come [archivi privati.](private-repositories.md)

@@ -1,16 +1,16 @@
 ---
-title: Configurare le pipeline di produzione
+title: Configurazione delle pipeline di produzione
 description: Scopri come utilizzare Cloud Manager per creare e configurare pipeline di produzione per distribuire il codice.
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '1247'
-ht-degree: 46%
+ht-degree: 57%
 
 ---
 
 
-# Configurare le pipeline di produzione {#configuring-production-pipelines}
+# Configurazione delle pipeline di produzione {#configuring-production-pipelines}
 
 Scopri come utilizzare Cloud Manager per creare e configurare pipeline di produzione per distribuire il codice. Per una panoramica delle nozioni di base sul funzionamento delle pipeline in Cloud Manager, consulta [Pipeline CI/CD](/help/overview/ci-cd-pipelines.md).
 
@@ -21,7 +21,7 @@ Utilizzando il riquadro **Impostazioni della pipeline** in [!UICONTROL Cloud Man
 * **Pipeline di produzione**: una pipeline di produzione è una pipeline appositamente creata composta da una serie di passaggi orchestrati per portare il codice sorgente dall&#39;archivio Git fino alla fase di produzione.
 * **Pipeline non di produzione**: una pipeline non di produzione serve principalmente per eseguire scansioni di qualità del codice o per distribuire il codice sorgente in un ambiente di sviluppo.
 
-Questo documento si concentra sulle pipeline di produzione. Per informazioni dettagliate su come configurare le pipeline non di produzione, consulta il documento [Configurazione delle pipeline non di produzione](/help/using/non-production-pipelines.md).
+Questo documento si concentra sulle pipeline di produzione. Per informazioni dettagliate su come configurare le pipeline non di produzione, consulta il documento [Configurazione delle pipeline non di produzione.](/help/using/non-production-pipelines.md)
 
 Il ruolo di **Responsabile della distribuzione** è responsabile della configurazione della pipeline. La configurazione della pipeline è costituita da:
 
@@ -33,7 +33,7 @@ Il ruolo di **Responsabile della distribuzione** è responsabile della configura
 >
 >Impossibile configurare una pipeline finché il relativo archivio Git associato non dispone di almeno un ramo e non è stata completata la [configurazione del programma](/help/getting-started/program-setup.md).
 
-## Aggiungi una nuova pipeline di produzione {#adding-production-pipeline}
+## Aggiungere una nuova pipeline di produzione {#adding-production-pipeline}
 
 Dopo aver utilizzato l&#39;interfaccia utente di [!UICONTROL Cloud Manager] per configurare il programma e disporre di almeno un ambiente, è possibile aggiungere una pipeline di produzione.
 
@@ -115,7 +115,7 @@ Dopo aver utilizzato l&#39;interfaccia utente di [!UICONTROL Cloud Manager] per 
 
            >[!TIP]
            >
-           >Consulta [Distribuzione del codice](/help/using/code-deployment.md) per scoprire come impostare la pianificazione della distribuzione o eseguire immediatamente la pipeline.
+           >Fai riferimento a [Distribuzione del codice](/help/using/code-deployment.md) per scoprire come impostare la pianificazione della distribuzione o eseguire immediatamente la pipeline.
 
             * **Utilizza CSE Oversight** - Se questa opzione è selezionata, viene attivato un CSE (Customer Success Engineer) per avviare la distribuzione effettiva. Se questa opzione è abilitata durante la creazione o la modifica di una pipeline, il ruolo **Responsabile della distribuzione** dispone delle seguenti opzioni.
 
@@ -126,11 +126,11 @@ Dopo aver utilizzato l&#39;interfaccia utente di [!UICONTROL Cloud Manager] per 
 
          * **Configurazione Dispatcher** - Definisci la configurazione Dispatcher per l&#39;ambiente di produzione. Le opzioni sono le stesse dell’ambiente di staging.
 
-1. Fai clic su **Continua** per passare alla scheda **Test dello staging** in cui puoi configurare il test delle prestazioni di AEM Sites e AEM Assets, a seconda dei prodotti per i quali hai concesso la licenza.
+1. Fai clic su **Continua** per passare alla scheda **Test della fase**, in cui puoi configurare il test di prestazione di AEM Sites e AEM Assets, a seconda dei prodotti per i quali disponi della licenza.
 
    >[!TIP]
    >
-   >Consulta [Test di qualità del codice](/help/using/code-quality-testing.md#performance-testing) per ulteriori dettagli sulle opzioni disponibili nella scheda **Test dello staging**.
+   >Consulta [Test della qualità del codice](/help/using/code-quality-testing.md#performance-testing) per maggiori dettagli sulle opzioni disponibili nella scheda **Test della fase**.
 
    1. Nella sezione **Consegna dei contenuti dei siti/Peso del carico distribuito** è possibile configurare il test delle prestazioni del sito in base alla ponderazione delle richieste di pagina tra tre set di pagine. Puoi abilitare o disabilitare i set di pagine in base alle esigenze.
 
@@ -140,7 +140,7 @@ Dopo aver utilizzato l&#39;interfaccia utente di [!UICONTROL Cloud Manager] per 
 
       ![Peso di caricamento dei siti](/help/assets/configure-pipelines/add-prod5.png)
 
-   1. Nella sezione **Distribuzione dei test delle prestazioni di Assets**, puoi definire la distribuzione di test di immagini e PDF e le tue risorse di test.
+   1. Nella sezione **Distribuzione dei test delle prestazioni delle risorse**, puoi definire la distribuzione di test di immagini e PDF e le risorse di test.
 
       * **Immagini**: regola il cursore per adeguare la suddivisione del test tra immagini e PDF.
       * **PDF**: regola il cursore per adeguare la suddivisione del test tra immagini e PDF.
@@ -157,9 +157,9 @@ Dopo aver utilizzato l&#39;interfaccia utente di [!UICONTROL Cloud Manager] per 
 
 ## Passaggi successivi {#the-next-steps}
 
-Dopo aver configurato la pipeline, distribuisci il codice. Per ulteriori dettagli, vedi [Distribuzione del codice](/help/using/code-deployment.md).
+Dopo aver configurato la pipeline, distribuisci il codice. Per ulteriori dettagli, consulta la sezione [Distribuzione del codice](/help/using/code-deployment.md).
 
-## Esercitazione video {#video-tutorial-one}
+## Tutorial video {#video-tutorial-one}
 
 Questo video fornisce una panoramica del processo di creazione della pipeline, descritto in questo documento.
 

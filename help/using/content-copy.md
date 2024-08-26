@@ -1,26 +1,26 @@
 ---
-title: Lo strumento Copia contenuto
-description: Lo strumento di copia dei contenuti di Cloud Manager consente agli utenti di copiare contenuti mutabili on-demand dagli ambienti di produzione AEM 6.x ospitati da AMS agli ambienti più bassi per i test.
+title: Strumento Copia contenuto
+description: Lo strumento Copia contenuto di Cloud Manager consente agli utenti di copiare contenuti modificabili su richiesta dagli ambienti di produzione AEM 6.x in hosting AMS in ambienti inferiori per test.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '1144'
-ht-degree: 34%
+ht-degree: 90%
 
 ---
 
 
-# Strumento di copia del contenuto {#content-copy}
+# Strumento Copia contenuto {#content-copy}
 
-Lo strumento di copia dei contenuti di Cloud Manager consente agli utenti di copiare contenuti mutabili on-demand dagli ambienti di produzione AEM 6.x ospitati da AMS agli ambienti più bassi per i test.
+Lo strumento Copia contenuto di Cloud Manager consente agli utenti di copiare contenuti modificabili su richiesta dagli ambienti di produzione AEM 6.x in hosting AMS in ambienti inferiori per test.
 
 ## Introduzione {#introduction}
 
-I dati attuali e reali sono utili a scopo di test, convalida e accettazione da parte degli utenti. Lo strumento Content Copy consente di copiare il contenuto dall’ambiente AEM 6.x ospitato da AMS di produzione agli ambienti di staging o sviluppo. Questo flusso di lavoro supporta vari scenari di test.
+I dati attuali e reali sono utili a scopo di test, convalida e accettazione da parte degli utenti. Lo strumento Copia contenuto consente di copiare contenuti dall’ambiente di produzione AEM 6.x in hosting AMS a un ambiente di staging o sviluppo. Questo flusso di lavoro supporta vari scenari di test.
 
-Un set di contenuti definisce il contenuto da copiare. Un set di contenuti include un elenco di percorsi JCR con il contenuto mutabile da copiare. Il contenuto si sposta da un ambiente di origine a un ambiente di destinazione. Tutte queste operazioni vengono eseguite all&#39;interno dello stesso programma Cloud Manager.
+Un set di contenuti definisce il contenuto da copiare. Un set di contenuti include un elenco di percorsi JCR con il contenuto mutabile da copiare. Il contenuto si sposta da un ambiente di origine a un ambiente di destinazione. Tutte queste operazioni vengono eseguite all’interno dello stesso programma Cloud Manager.
 
-In un set di contenuti sono consentiti i seguenti percorsi:
+I percorsi seguenti sono consentiti in un set di contenuti:
 
 ```text
 /content/**
@@ -30,14 +30,14 @@ In un set di contenuti sono consentiti i seguenti percorsi:
 /var/commerce/**
 ```
 
-Durante la copia del contenuto, l’ambiente sorgente è l’origine di riferimento.
+Durante la copia del contenuto, l’ambiente di origine è l’origine di riferimento.
 
-* Se modifichi il contenuto nell’ambiente di destinazione, il contenuto sorgente lo sovrascrive se i percorsi corrispondono.
+* Se modifichi il contenuto nell’ambiente di destinazione e i percorsi corrispondono, viene sovrascritto dal contenuto di origine.
 * Se i percorsi sono diversi, il contenuto dell’origine viene unito al contenuto della destinazione.
 
 ## Autorizzazioni {#permissions}
 
-Per utilizzare lo strumento di copia del contenuto, l&#39;utente deve essere assegnato al ruolo **Responsabile dell&#39;implementazione** negli ambienti di origine e di destinazione.
+Per utilizzare lo strumento di copia del contenuto, all’utente deve essere assegnato il ruolo di **Responsabile della distribuzione** negli ambienti di origine e di destinazione.
 
 ## Creazione di un set di contenuti {#create-content-set}
 
@@ -49,35 +49,35 @@ Prima di poter copiare qualsiasi contenuto, è necessario definire un set di con
 
 1. Dalla schermata **Ambienti**, passa alla pagina **Set di contenuti**.
 
-1. Nella parte superiore destra dello schermo, fai clic su **Aggiungi set di contenuti**.
+1. Vicino alla parte in alto a destra della schermata, fai clic su **Aggiungi set di contenuti**.
 
    ![Set di contenuti](/help/assets/content-sets.png)
 
-1. Nella scheda **Dettagli** della procedura guidata, fornisci un nome e una descrizione per il set di contenuti e fai clic su **Continua**.
+1. Nella scheda **Dettagli** della procedura guidata, assegna un nome e una descrizione per il set di contenuti quindi fai clic su **Continua**.
 
    ![Dettagli dei set di contenuti](/help/assets/add-content-set-details.png)
 
 1. Nella scheda **Percorsi del contenuto** della procedura guidata, specifica i percorsi del contenuto modificabile da includere nel set di contenuti.
 
    1. Immetti il percorso nel campo **Aggiungi percorso di inclusione**.
-   1. Fare clic su **Aggiungi percorso** per aggiungere il percorso al set di contenuti.
-   1. Fare di nuovo clic su **Aggiungi percorso** in base alle esigenze.
+   1. Fai clic su **Aggiungi percorso** per aggiungere il percorso al set di contenuti.
+   1. Se necessario, fai di nuovo clic su **Aggiungi percorso**.
 
    ![Aggiungi percorsi al set di contenuti](/help/assets/add-content-set-paths.png)
 
 1. Se devi perfezionare o limitare il set di contenuti, è possibile escludere i percorsi secondari.
 
-   1. Nell&#39;elenco dei percorsi inclusi fare clic sull&#39;icona **Aggiungi percorsi secondari di esclusione** accanto al percorso da limitare.
-   1. Immetti il percorso secondario da escludere dal percorso selezionato.
-   1. Fare clic su **Escludi percorso**.
-   1. Di nuovo, fai clic su **Aggiungi percorsi secondari di esclusione** per aggiungere percorsi aggiuntivi da escludere, in base alle esigenze.
+   1. Nell’elenco dei percorsi inclusi, fai clic sull’icona **Aggiungi percorsi secondari di esclusione** accanto al percorso da limitare.
+   1. Inserisci il percorso secondario da escludere dal percorso selezionato.
+   1. Fai clic su **Escludi percorso**.
+   1. Fai clic di nuovo su **Aggiungi percorsi secondari di esclusione** per aggiungere altri percorsi da escludere, in base alle esigenze.
 
    ![Esclusione dei percorsi](/help/assets/add-content-set-paths-excluded.png)
 
 1. Se necessario, è possibile modificare i percorsi specificati.
 
    1. Fai clic su `X` accanto ai percorsi secondari esclusi per eliminarli.
-   1. Fai clic sul pulsante con i puntini di sospensione accanto ai percorsi per visualizzare le opzioni **Modifica** e **Elimina**.
+   1. Fai clic sul pulsante con i puntini di sospensione accanto ai percorsi per visualizzare le opzioni **Modifica** ed **Elimina**.
 
    ![Modifica dell’elenco dei percorsi](/help/assets/add-content-set-excluded-paths.png)
 
@@ -92,7 +92,7 @@ Il set di contenuti può ora essere utilizzato per copiare il contenuto tra ambi
 
 ## Modifica di un set di contenuti {#edit-content-set}
 
-Segui passaggi simili a quelli impiegati per la creazione del contenuto. Invece di fare clic su **Aggiungi set di contenuti**, selezionare un set esistente dalla console e selezionare **Modifica** dal menu con i puntini di sospensione.
+Segui passaggi simili a quelli effettuati per la creazione del contenuto. Invece di fare clic su **Aggiungi set di contenuti**, seleziona un set esistente dalla console e quindi seleziona **Modifica** dal menu con i puntini di sospensione.
 
 ![Modifica set di contenuti](/help/assets/edit-content-set.png)
 
@@ -122,9 +122,9 @@ Una volta creato un set di contenuti, puoi utilizzarlo per copiare il contenuto.
 1. Nella finestra di dialogo **Copia contenuto**, specifica gli ambienti di origine e di destinazione per l&#39;azione di copia del contenuto.
    * Le aree dell’ambiente di destinazione devono essere uguali o un sottoinsieme delle aree dell’ambiente di origine.
 
-1. Puoi scegliere di eliminare o mantenere i percorsi di esclusione nell’ambiente di destinazione. Selezionare la casella di controllo `Do not delete exclude paths from destination` per mantenere `exclude paths` specificati nel set di contenuti. Se la casella di controllo è deselezionata, i percorsi di esclusione vengono eliminati nell’ambiente di destinazione.
+1. Puoi scegliere di eliminare o mantenere i percorsi di esclusione nell’ambiente di destinazione. Seleziona la casella di controllo `Do not delete exclude paths from destination` per mantenere `exclude paths` specificati nel set di contenuti. Se la casella di controllo è deselezionata, i percorsi di esclusione vengono eliminati nell’ambiente di destinazione.
 
-1. Puoi scegliere di copiare la cronologia delle versioni dei percorsi copiati dall’ambiente di origine a quello di destinazione. Selezionare la casella di controllo `Copy Versions` per copiare tutte le cronologie delle versioni.
+1. Puoi scegliere di copiare la cronologia delle versioni dei percorsi copiati dall’ambiente di origine a quello di destinazione. Seleziona la casella di controllo `Copy Versions` se desideri copiare tutte le cronologie delle versioni.
 
    ![Copia del contenuto](/help/assets/copying-content.png)
 
@@ -136,7 +136,7 @@ Viene avviato il processo di copia. Lo stato del processo di copia si riflette n
 
 Puoi monitorare lo stato dei processi di copia nella pagina **Attività copia contenuto**.
 
-1. Accedi a Cloud Manager all&#39;indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/), quindi seleziona l&#39;organizzazione e il programma appropriati.
+1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/), quindi seleziona l’organizzazione e il programma appropriati.
 
 1. Dalla pagina **Panoramica**, passa alla schermata **Ambienti**.
 
@@ -144,7 +144,7 @@ Puoi monitorare lo stato dei processi di copia nella pagina **Attività copia co
 
 ![Attività copia contenuto](/help/assets/copy-content-activity.png)
 
-### Stati di copia contenuto {#statuses}
+### Stati della copia del contenuto {#statuses}
 
 Una volta iniziata la copia del contenuto, il processo può trovarsi in uno dei seguenti stati.
 
@@ -161,13 +161,13 @@ Lo strumento Copia contenuto presenta le seguenti limitazioni.
 * Non è possibile eseguire una copia del contenuto da un ambiente inferiore a un ambiente superiore.
 * La copia del contenuto può essere eseguita solo all’interno dello stesso livello. Vale a dire, autore-autore o pubblicazione-pubblicazione.
 * Non è possibile copiare il contenuto tra più programmi o aree geografiche diverse.
-* È possibile eseguire la copia del contenuto per la topologia basata sull&#39;archivio dati cloud solo quando l&#39;ambiente di origine e quello di destinazione si trovano nello stesso provider cloud e nella stessa area.
-* Non è possibile eseguire operazioni di copia simultanee del contenuto nello stesso ambiente.
+* La copia del contenuto per la topologia di archivio dati basata su cloud può essere eseguita solo quando l’ambiente di origine e di destinazione si trovano sullo stesso provider cloud e nella stessa area geografica.
+* Non è possibile eseguire operazioni simultanee di copia del contenuto nello stesso ambiente.
 * Non è possibile eseguire la copia del contenuto se è in esecuzione un’operazione attiva nell’ambiente di destinazione o di origine, ad esempio una pipeline CI/CD.
 * È possibile specificare fino a cinquanta percorsi per set di contenuti. Non ci sono limitazioni per i percorsi esclusi.
-* Lo strumento di copia del contenuto non deve essere utilizzato come strumento di duplicazione o mirroring perché non può tenere traccia del contenuto spostato o eliminato nell’origine.
+* Lo strumento Copia contenuto non deve essere utilizzato come strumento di duplicazione o mirroring perché non può tenere traccia del contenuto spostato o eliminato nell’origine.
 * Una volta avviata, una copia del contenuto non può essere sospesa o annullata.
-* Lo strumento di copia del contenuto copia le risorse e i metadati Dynamic Medie dall’ambiente superiore a quello inferiore selezionato. Le risorse copiate devono quindi essere rielaborate utilizzando il flusso di lavoro [Elabora risorse DAM](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/assets/using/assets-workflow) nell&#39;ambiente inferiore per utilizzare la rispettiva configurazione di Dynamic Medie.
+* Lo strumento di copia del contenuto copia le risorse e i metadati Dynamic Medie dall’ambiente superiore a quello inferiore selezionato. Le risorse copiate devono quindi essere rielaborate utilizzando il [Flusso di lavoro di risorse di processo DAM](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/assets/using/assets-workflow) nell’ambiente inferiore per utilizzare la rispettiva configurazione di Dynamic Media.
 * Il processo di copia del contenuto è notevolmente più veloce quando la cronologia delle versioni non viene copiata.
 * [Le configurazioni Dynamic Medie con dimensioni delle risorse superiori a 2 GB abilitate](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/assets/dynamic/config-dms7#optional-config-dms7-assets-larger-than-2gb) non sono supportate.
 * Quando la cronologia delle versioni non viene copiata, il processo di copia del contenuto risulta notevolmente più veloce.

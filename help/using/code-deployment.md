@@ -5,7 +5,7 @@ exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '1637'
-ht-degree: 51%
+ht-degree: 97%
 
 ---
 
@@ -16,7 +16,7 @@ Scopri come distribuire il codice e cosa accade in Cloud Manager quando lo fai.
 
 ## Distribuire il codice con Cloud Manager {#deploying-code-with-cloud-manager}
 
-Dopo aver configurato la pipeline di produzione, inclusi l’archivio e gli ambienti necessari, puoi distribuire il codice.
+Una volta configurata la pipeline di produzione, inclusi l’archivio e gli ambienti necessari, puoi distribuire il codice.
 
 1. Da Cloud Manager, fai clic su **Distribuzione** per avviare il processo di distribuzione.
 
@@ -36,15 +36,15 @@ Puoi rivedere i passaggi da vari processi di distribuzione visualizzando i regis
 
 ## Passaggi della distribuzione {#deployment-steps}
 
-Durante ogni passaggio della distribuzione si verificano diverse azioni, descritte in questa sezione. Per informazioni tecniche su come il codice stesso viene distribuito dietro le quinte, vedere [Dettagli processo di distribuzione](#deployment-process).
+In questa sezione sono descritte le diverse azioni che si verificano durante ogni passaggio della distribuzione. Consulta la sezione [Dettagli del processo di distribuzione](#deployment-process) per informazioni tecniche su come il codice stesso viene distribuito dietro le quinte.
 
 ### Passaggio di distribuzione dello staging {#stage-deployment}
 
 Il passaggio **Distribuzione dello staging** include le seguenti azioni:
 
-* **Convalida**: questo passaggio garantisce che la pipeline sia configurata per utilizzare le risorse attualmente disponibili. Ad esempio, che il ramo configurato esista e che gli ambienti siano disponibili.
-* **Test di compilazione e dell’unità**: questo passaggio esegue un processo di compilazione containerizzato. Per informazioni dettagliate, vedere [Ambiente di compilazione](/help/getting-started/build-environment.md).
-* **Scansione del codice**: questo passaggio valuta la qualità del codice dell’applicazione. Per informazioni dettagliate sulla procedura di test, vedere [Informazioni sui risultati dei test](/help/using/code-quality-testing.md).
+* **Convalida**: questo passaggio garantisce che la pipeline sia configurata per utilizzare le risorse disponibili al momento. Ad esempio, per verificare che il ramo configurato esista e che gli ambienti siano disponibili.
+* **Test di compilazione e dell’unità**: questo passaggio esegue un processo di compilazione containerizzato. Per dettagli, consulta [Ambiente di creazione](/help/getting-started/build-environment.md).
+* **Scansione del codice**: questo passaggio valuta la qualità del codice dell’applicazione. Per informazioni dettagliate sulla proceduta di test, consulta [Informazioni sui risultati dei test](/help/using/code-quality-testing.md).
 * **Distribuzione allo staging**
 
 ![Distribuzione dello staging](/help/assets/Stage_Deployment1.png)
@@ -54,11 +54,11 @@ Il passaggio **Distribuzione dello staging** include le seguenti azioni:
 Il passaggio del **test dello staging** include le azioni seguenti:
 
 * **Test di sicurezza**: questo passaggio valuta l’impatto sulla sicurezza del codice nell’ambiente AEM. Per informazioni dettagliate sulla procedura di test, consulta il documento [Informazioni sui risultati dei test](/help/using/code-quality-testing.md).
-   * **Test delle prestazioni**: questo passaggio valuta le prestazioni del codice. Per informazioni dettagliate sulla procedura di test, vedere [Informazioni sui risultati dei test](/help/using/code-quality-testing.md).
+   * **Test delle prestazioni**: questo passaggio valuta le prestazioni del codice. Per informazioni dettagliate sulla proceduta di test, consulta [Informazioni sui risultati dei test](/help/using/code-quality-testing.md).
 
 ### Passaggio della distribuzione di produzione {#production-deployment}
 
-Il passaggio **Distribuzione di produzione** include le azioni seguenti:
+Il passaggio della **Distribuzione di produzione**, include le azioni seguenti:
 
 * **Domanda di approvazione**
    * Questa opzione è abilitata durante la configurazione della pipeline.
@@ -78,7 +78,7 @@ Una volta completata la distribuzione, il codice si trova nel relativo ambiente 
 
 ## Interruzioni {#timeouts}
 
-I seguenti passaggi si interrompono se vengono lasciati in attesa del feedback dell’utente:
+I seguenti passaggi si interrompono se vengono lasciati in attesa del feedback degli utenti:
 
 | Passaggio | Timeout |
 |--- |--- |
@@ -96,38 +96,38 @@ Cloud Manager carica tutti i file target/*.zip prodotti dal processo di compilaz
 
 Quando Cloud Manager viene implementato in topologie non di produzione, l’obiettivo è quello di completare la distribuzione il più rapidamente possibile e, pertanto, gli artefatti vengono distribuiti simultaneamente su tutti i nodi nel modo seguente:
 
-1. Cloud Manager determina se ogni artefatto è un pacchetto AEM o Dispatcher.
+1. Cloud Manager determina se ogni artefatto è un pacchetto AEM o dispatcher.
 1. Cloud Manager rimuove tutti i dispatcher dal load balancer per isolare l’ambiente durante la distribuzione.
 
-   * Se non è configurato diversamente, è possibile ignorare le modifiche del load balancer nelle distribuzioni di sviluppo e staging. In altre parole, per l’ambiente di sviluppo, scollega e allega i passaggi sia nelle pipeline non di produzione che nell’ambiente di staging nella pipeline di produzione.
+   * Se non diversamente configurato, puoi ignorare le modifiche del load balancer nelle distribuzioni di sviluppo e staging. In altre parole, per l’ambiente di sviluppo, scollegare e allegare i passaggi in entrambe le pipeline non di produzione, mentre per l’ambiente di staging nella pipeline di produzione.
 
    ![Ignora il load balancer](/help/assets/load_balancer.png)
 
    >[!NOTE]
    >
-   >I clienti 1-1-1 utilizzeranno probabilmente questa funzione.
+   >È previsto che i clienti 1-1-1 utilizzeranno questa funzione.
 
 1. Ciascun artefatto AEM viene distribuito in ogni istanza di AEM tramite le API della Gestione pacchetti, con le dipendenze dei pacchetti che determinano l’ordine di distribuzione.
 
-   * Per ulteriori informazioni su come utilizzare i pacchetti per installare nuove funzionalità, trasferire contenuti tra le istanze ed eseguire il backup del contenuto dell’archivio. Consulta [Gestione pacchetti](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developer-tools/package-manager).
+   * Per ulteriori informazioni su come utilizzare i pacchetti per installare nuove funzionalità, trasferire contenuti tra le istanze ed eseguire il backup del contenuto dell’archivio. Consulta [Gestione pacchetti](https://experienceleague.adobe.com/it/docs/experience-manager-cloud-service/content/implementing/developer-tools/package-manager).
 
    >[!NOTE]
    >
-   >Tutti gli artefatti AEM vengono distribuiti sia all’autore che agli editori. Le modalità di esecuzione devono essere utilizzate quando sono necessarie configurazioni specifiche per il nodo. Per ulteriori informazioni su come le modalità di esecuzione consentono di regolare l&#39;istanza AEM per uno scopo specifico, vedere la sezione [Modalità di esecuzione del documento Distribuzione in AEM as a Cloud Service](https://experienceleague.adobe.com/it/docs/experience-manager-cloud-service/content/implementing/deploying/overview#runmodes).
+   >Tutti gli artefatti AEM vengono distribuiti sia all’autore che agli editori. Le modalità di esecuzione devono essere utilizzate quando sono necessarie configurazioni specifiche per il nodo. Per ulteriori informazioni su come le modalità di esecuzione consentono di regolare l’istanza di AEM per uno scopo specifico, consulta la [sezione Modalità di esecuzione del documento Distribuzione su AEM as a Cloud Service](https://experienceleague.adobe.com/it/docs/experience-manager-cloud-service/content/implementing/deploying/overview#runmodes).
 
-1. L’artefatto Dispatcher viene distribuito a ogni Dispatcher come segue:
+1. L’artefatto del dispatcher viene distribuito a ciascun dispatcher nel modo seguente:
 
    1. Le configurazioni correnti vengono sottoposte a backup e copiate in un percorso temporaneo.
-   1. Tutte le configurazioni vengono eliminate tranne i file immutabili. Consulta [Configurazioni Dispatcher](/help/getting-started/dispatcher-configurations.md) per ulteriori dettagli. Questo approccio cancella le directory per garantire che nessun file orfano venga lasciato indietro.
-   1. L’artefatto viene estratto nella directory `httpd`. I file immutabili non vengono sovrascritti. Eventuali modifiche apportate ai file immutabili nell’archivio Git vengono ignorate al momento della distribuzione. Questi file sono fondamentali per il framework AMS Dispatcher e non possono essere modificati.
+   1. Tutte le configurazioni vengono eliminate tranne i file immutabili. Per ulteriori dettagli, consulta le [Configurazioni del dispatcher](/help/getting-started/dispatcher-configurations.md). Questo approccio cancella le directory per garantire che non vengano lasciati indietro i file orfani.
+   1. L’artefatto viene estratto nella directory `httpd`. I file immutabili non vengono sovrascritti. Eventuali modifiche apportate ai file immutabili nell’archivio Git verranno ignorate al momento della distribuzione. Questi file sono fondamentali per il framework del dispatcher di AMS e non possono essere modificati.
    1. Apache esegue un test di configurazione. Se non viene rilevato alcun errore, il servizio viene ricaricato. Se si verifica un errore, le configurazioni vengono ripristinate dal backup, il servizio viene ricaricato e l’errore viene segnalato a Cloud Manager.
-   1. Ogni percorso specificato nella configurazione della pipeline viene invalidato o scaricato dalla cache di Dispatcher.
+   1. Ogni percorso specificato nella configurazione della pipeline viene invalidato o svuotato dalla cache del dispatcher.
 
    >[!NOTE]
    >
-   >Cloud Manager prevede che l’artefatto Dispatcher contenga l’intero set di file. Tutti i file di configurazione di Dispatcher devono essere presenti nell’archivio Git. I file o le cartelle mancanti causano un errore di distribuzione.
+   >Cloud Manager prevede che l’artefatto del dispatcher contenga l’intero set di file. Tutti i file di configurazione del Dispatcher devono essere presenti nell’archivio Git. I file o le cartelle mancanti causeranno un errore di distribuzione.
 
-1. In seguito alla corretta distribuzione di tutti i pacchetti AEM e Dispatcher a tutti i nodi, i dispatcher vengono aggiunti nuovamente al load balancer e la distribuzione è completa.
+1. In seguito alla corretta distribuzione di tutti i pacchetti AEM e dispatcher a tutti i nodi, i dispatcher vengono aggiunti nuovamente al load balancer e la distribuzione è completa.
 
    >[!NOTE]
    >
@@ -141,27 +141,27 @@ Le distribuzioni di produzione seguono generalmente gli stessi passaggi indicati
 
 1. Distribuisci pacchetti AEM per l’authoring.
 1. Scollegare dispatcher1 dal load balancer.
-1. Distribuisci pacchetti AEM a publish1 e il pacchetto Dispatcher a dispatcher1 in parallelo, svuota la cache di Dispatcher.
+1. Distribuisci pacchetti AEM a publish1 e il pacchetto dispatcher a dispatcher1 in parallelo, svuota la cache del dispatcher.
 1. Ripristinare dispatcher1 nel load balancer.
 1. Dopo aver ripristinato il servizio di dispatcher1, scollegare dispatcher2 dal load balancer.
-1. Distribuisci pacchetti AEM a publish2 e il pacchetto Dispatcher a dispatcher2 in parallelo, svuota la cache di Dispatcher.
+1. Distribuisci pacchetti AEM a publish2 e il pacchetto dispatcher a dispatcher2 in parallelo, svuota la cache del dispatcher.
 1. Ripristinare dispatcher2 nel load balancer.
 
 Questo processo continua fino al completamento della distribuzione in tutti gli elementi Publish e Dispatcher nella topologia.
 
 ## Modalità di esecuzione di una pipeline di emergenza {#emergency-pipeline}
 
-In situazioni critiche, i clienti Adobe Managed Services potrebbero dover implementare immediatamente modifiche al codice nei propri ambienti di staging e produzione. Questa funzionalità consente di ignorare l’intero ciclo di test di Cloud Manager.
+In situazioni critiche, i clienti di Adobe Managed Services potrebbero dover implementare immediatamente modifiche al codice nei propri ambienti di staging e produzione. Questa funzionalità consente di ignorare l’intero ciclo di test di Cloud Manager.
 
 Per risolvere queste situazioni, la pipeline di produzione di Cloud Manager può essere eseguita in modalità emergenza. Quando si utilizza questa modalità, i passaggi del test di sicurezza e prestazioni non vengono eseguiti. Tutti gli altri passaggi, compresi eventuali passaggi di approvazione configurati, vengono eseguiti come nella normale modalità di esecuzione della pipeline.
 
 >[!NOTE]
 >
->La funzione di esecuzione di una pipeline in modalità emergenza viene attivata ogni singolo programma. L’attivazione viene eseguita dai Customer Success Engineer.
+>La funzione di esecuzione di una pipeline in modalità emergenza viene attivata a livello di programma. L’attivazione viene eseguita dai Customer Success Engineer.
 
 ### Utilizzare la modalità di esecuzione di una pipeline di emergenza {#using-emergency-pipeline}
 
-Quando avvii l’esecuzione di una pipeline di produzione, puoi scegliere tra la modalità normale o di emergenza da una finestra di dialogo. Questa opzione è disponibile se per il programma è attivata la funzione di esecuzione di emergenza della pipeline. Questa opzione è disponibile dopo l’abilitazione della funzione.
+Quando avvii un’esecuzione della pipeline di produzione, una finestra di dialogo ti consente di scegliere tra modalità normale o di emergenza. Questa opzione è disponibile se per il programma è attivata la funzione modalità di esecuzione di emergenza della pipeline. Questa opzione è disponibile dopo l’abilitazione della funzione.
 
 ![Eseguire le opzioni della pipeline](/help/assets/execution-emergency1.png)
 
@@ -179,9 +179,9 @@ $ aio cloudmanager:pipeline:create-execution PIPELINE_ID --emergency
 
 In rari casi, i passaggi di distribuzione nell’ambiente di produzione possono non riuscire per motivi transitori. In questi casi, puoi rieseguire il passaggio di distribuzione di produzione fino a quando è stato completato, indipendentemente dal fatto che sia riuscito, annullato o non riuscito. La riesecuzione è supportata utilizzando la stessa pipeline costituita dai tre passaggi seguenti:
 
-1. **Passaggio di convalida**: la stessa convalida che si verifica durante una normale esecuzione della pipeline.
+1. **Passaggio di convalida**: si tratta essenzialmente della stessa convalida che si verifica durante una normale esecuzione della pipeline.
 1. **Passaggio di compilazione**: nel contesto di una riesecuzione, il passaggio di compilazione copia gli artefatti e non esegue effettivamente un nuovo processo di compilazione.
-1. **Passaggio della distribuzione di produzione** - Utilizza la stessa configurazione e le stesse opzioni del passaggio della distribuzione di produzione in una normale esecuzione della pipeline.
+1. **Passaggio di distribuzione della produzione**: questo passaggio utilizza la stessa configurazione e le stesse opzioni della distribuzione di produzione in una normale esecuzione della pipeline.
 
 In tali circostanze, in cui è possibile eseguire una riesecuzione, la pagina di stato della pipeline di produzione fornisce l’opzione **Riesegui** accanto a quella consueta di **Scarica registro build**.
 
@@ -194,13 +194,13 @@ In tali circostanze, in cui è possibile eseguire una riesecuzione, la pagina di
 ### Limitazioni {#limitations}
 
 * La riesecuzione del passaggio di distribuzione di produzione è disponibile solo per l’ultima esecuzione.
-* La riesecuzione non è disponibile per le esecuzioni di rollback o per le esecuzioni di &quot;aggiornamenti push&quot;.
+* La riesecuzione non è disponibile per le esecuzioni di ripristino o le esecuzioni di “aggiornamenti push”.
 * Se l’ultima esecuzione non è riuscita in un qualsiasi punto precedente al passaggio di distribuzione nell’ambiente di produzione, non è possibile eseguirla nuovamente.
 
 
 ### Esegui nuovamente API {#reexecute-api}
 
-Oltre a essere disponibile nell&#39;interfaccia utente, puoi utilizzare [l&#39;API di Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#tag/Pipeline-Execution) per attivare le riesecuzioni e identificare le esecuzioni attivate come riesecuzioni.
+Oltre a essere disponibile nell’interfaccia utente, è possibile utilizzare l’[API di Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#tag/Pipeline-Execution) per attivare le riesecuzioni e identificare le esecuzioni attivate come riesecuzioni.
 
 #### Attivare una riesecuzione {#triggering}
 
@@ -248,7 +248,7 @@ Questo collegamento è sempre disponibile solo per il passaggio di distribuzione
 
 Il valore di sintassi del collegamento HAL `href` è solo un esempio, mentre il valore effettivo deve essere sempre letto dal collegamento HAL e non generato.
 
-L&#39;invio di una richiesta `PUT` a questo endpoint genera una risposta `201` in caso di esito positivo. Il corpo della risposta è la rappresentazione della nuova esecuzione. Questa funzionalità è simile all’avvio di un’esecuzione regolare tramite l’API.
+L’invio di una richiesta `PUT` a questo endpoint determina una risposta `201` in caso di esito positivo. Il corpo della risposta è la rappresentazione della nuova esecuzione. Questa funzionalità è simile all’avvio di un’esecuzione normale tramite l’API.
 
 #### Identificare un’esecuzione rieseguita {#identifying}
 

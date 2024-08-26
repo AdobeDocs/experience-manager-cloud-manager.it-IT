@@ -5,7 +5,7 @@ exl-id: 9d7c6f4c-9379-471c-8dad-772a7099da54
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '321'
-ht-degree: 28%
+ht-degree: 30%
 
 ---
 
@@ -18,7 +18,7 @@ Segui questi passaggi per creare un progetto AEM utilizzando la procedura guidat
 
 1. Accedi a Cloud Manager all’indirizzo [`https://my.cloudmanager.adobe.com`](https://my.cloudmanager.adobe.com) e seleziona l’organizzazione appropriata.
 
-1. Se non lo hai già fatto, [crea il tuo programma](program-setup.md). Al momento della creazione del programma, Cloud Manager rileva che gli archivi non sono ancora configurati. Nella schermata **Panoramica** viene quindi visualizzata una speciale scheda di invito all&#39;azione.
+1. Se non lo hai già fatto, [crea il programma](program-setup.md). Al momento della creazione del programma, Cloud Manager rileva che gli archivi non sono ancora configurati. Nella schermata **Panoramica** viene quindi visualizzata una speciale scheda di invito all&#39;azione.
 
    ![Invito all’azione per creare un progetto](/help/assets/image2018-10-3_14-29-44.png)
 

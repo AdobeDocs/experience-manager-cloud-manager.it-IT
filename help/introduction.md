@@ -5,7 +5,7 @@ exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
 source-git-commit: 4c4a2688cab8e5c81efa4b7b5e26f3c7b5dc30d6
 workflow-type: tm+mt
 source-wordcount: '1256'
-ht-degree: 48%
+ht-degree: 55%
 
 ---
 
@@ -75,7 +75,7 @@ Per ulteriori informazioni sulla distribuzione del codice e sui controlli di qua
 
 ## Funzioni facoltative in Cloud Manager {#optional-features-in-cloud-manager}
 
-Cloud Manager offre funzioni avanzate aggiuntive, che possono essere utili per il progetto a seconda della configurazione dell’ambiente e delle esigenze specifiche. Se queste funzioni sono di tuo interesse, contatta il tuo Customer Success Engineer (CSE) o rappresentante di Adobe per discuterne ulteriormente.
+Cloud Manager offre funzioni avanzate aggiuntive, che possono essere utili per il progetto a seconda della configurazione dell’ambiente e delle esigenze specifiche. Se queste funzionalità sono di tuo interesse, contatta il tuo Customer Success Engineer (CSE) o il rappresentante Adobe per discuterne ulteriormente.
 
 ### Scalabilità automatica {#autoscaling}
 
@@ -87,7 +87,7 @@ La funzione di scalabilità automatica si applica al livello Dispatcher/pubblica
 
 >[!NOTE]
 >
->Se sei interessato a scoprire se la scalabilità automatica è appropriata per la tua applicazione, contatta il tuo rappresentante CSE o Adobe.
+>Se hai interesse a verificare se la scalabilità automatica sia appropriata per la tua applicazione, contatta il tuo rappresentante CSE o Adobe.
 
 ### Distribuzioni blu/verdi {#blue-green}
 
@@ -129,5 +129,5 @@ Se ti interessa la distribuzione blu/verde, prendi in considerazione i seguenti 
 * Le coppie Dispatcher/pubblicazione di anteprima non fanno parte delle distribuzioni blu/verde.
 * Ogni coppia Dispatcher/pubblicazione è identica a ogni altra coppia Dispatcher/pubblicazione.
 * Blu/verde è disponibile solo nell’ambiente di produzione.
-* Blu/verde è disponibile in AWS e Azure.
+* Blu/verde è disponibile in AWS e in Azure.
 * Blu/verde non è disponibile per i clienti solo Assets.

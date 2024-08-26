@@ -5,7 +5,7 @@ exl-id: 15178de8-8a8a-4300-8510-88875ad0fc8c
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '251'
-ht-degree: 39%
+ht-degree: 47%
 
 ---
 
@@ -24,7 +24,7 @@ I problemi di [Qualità del codice](/help/using/code-quality-testing.md) rilevat
 
 ![Esempio di annotazione del problema del codice](assets/github-check-annotations-example.png)
 
-Viene fornita la riga di codice esatta con il problema e puoi fare clic su di essa per mostrare il codice pertinente. Queste annotazioni vengono fornite per tutti i problemi di codice, non solo per quelli modificati nella richiesta di pull.
+Viene fornita la riga di codice esatta con il problema sulla quale è possibile fare clic per mostrare il codice pertinente. Queste annotazioni vengono fornite per tutti i problemi di codice, non solo per quelli modificati nella richiesta di pull.
 
 ![Esempio di annotazione del problema del codice](assets/github-check-annotations-example-code.png)
 

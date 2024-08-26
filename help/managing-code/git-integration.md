@@ -5,7 +5,7 @@ exl-id: e517f8a4-23f0-4486-8278-91396dba76ec
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '351'
-ht-degree: 14%
+ht-degree: 17%
 
 ---
 
@@ -30,7 +30,7 @@ Questa serie di video presuppone una conoscenza di base di Git e della gestione 
 
 I passaggi e le convenzioni di denominazione descritti in questa serie di video rappresentano alcune best practice per l’utilizzo di un archivio Git gestito dal cliente e di Cloud Manager. Le convenzioni e i flussi di lavoro rappresentati dovrranno essere adattati per i singoli team di sviluppo.
 
-Per una panoramica completa di Cloud Manager, vedere [Introduzione a Cloud Manager](/help/introduction.md).
+Per una panoramica completa di Cloud Manager, consulta [Introduzione a Cloud Manager](/help/introduction.md).
 
 ## Sincronizzazione iniziale {#initial-sync}
 

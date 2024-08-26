@@ -5,7 +5,7 @@ exl-id: eade4255-89b5-4c65-a498-1c6d4e8c73ff
 source-git-commit: 4c977cdfbef438fdabd90ee104d98887f2467b49
 workflow-type: tm+mt
 source-wordcount: '297'
-ht-degree: 27%
+ht-degree: 36%
 
 ---
 
@@ -20,7 +20,7 @@ Durante il processo di onboarding, Adobe esegue automaticamente il provisioning 
 
 ## E-mail di benvenuto {#welcome-email}
 
-Al termine del processo di provisioning dell&#39;ambiente, l&#39;amministratore del cliente designato riceve un messaggio e-mail di benvenuto con la conferma di accesso all&#39;Adobe [!UICONTROL Experience Cloud]. L&#39;e-mail di benvenuto contiene informazioni dettagliate su come iniziare a utilizzare i servizi [!UICONTROL Experience Cloud], gli ambienti cloud [!UICONTROL AEM Managed Services] e il portale self-service [!UICONTROL Cloud Manager]. Inoltre, l’e-mail contiene informazioni importanti come le informazioni di contatto del Customer Success Engineer (CSE), dove sono disponibili risorse di supporto, forum, domande frequenti e molto altro. Nell&#39;elenco delle risorse fornite nell&#39;e-mail vengono inoltre fornite informazioni su come accedere a [!UICONTROL Cloud Manager] per gli ambienti cloud AEM.
+Al termine del processo di provisioning dell&#39;ambiente, l&#39;amministratore del cliente designato riceve un messaggio e-mail di benvenuto con la conferma di accesso all&#39;Adobe [!UICONTROL Experience Cloud]. L’e-mail di benvenuto contiene informazioni dettagliate su come iniziare a utilizzare i servizi di [!UICONTROL Experience Cloud], gli ambienti cloud di [!UICONTROL AEM Managed Services], nonché il portale self-service di [!UICONTROL Cloud Manager]. Inoltre, l’e-mail contiene informazioni importanti come le informazioni di contatto del Customer Success Engineer (CSE), dove sono disponibili risorse di supporto, forum, domande frequenti e molto altro. Nell&#39;elenco delle risorse fornite nell&#39;e-mail vengono inoltre fornite informazioni su come accedere a [!UICONTROL Cloud Manager] per gli ambienti cloud AEM.
 
 ## Passaggi successivi {#next-steps}
 
