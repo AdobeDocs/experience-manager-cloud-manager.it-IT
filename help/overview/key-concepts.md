@@ -3,22 +3,22 @@ title: Concetti fondamentali
 description: Come tutti gli strumenti potenti, Cloud Manager include molti concetti e termini. Questo documento riepiloga alcuni dei più importanti per iniziare a utilizzare Cloud Manager.
 exl-id: 86dfc976-f3da-479a-9faa-08f40ca909e0
 source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '414'
-ht-degree: 49%
+ht-degree: 100%
 
 ---
 
 
-# Concetti chiave {#key-concepts}
+# Concetti fondamentali {#key-concepts}
 
 Come tutti gli strumenti potenti, Cloud Manager include molti concetti e termini. Questo documento riepiloga alcuni dei più importanti per iniziare a utilizzare Cloud Manager.
 
 ## Applicazione {#application}
 
-Un&#39;applicazione è il set di personalizzazioni e configurazioni create da un cliente per adattare la [soluzione](#solution) sottostante (ad esempio AEM Sites o AEM Assets) ai casi d&#39;uso e alle esigenze specifiche. Un&#39;applicazione è un&#39;unità logica che può essere composta da più [artefatti](#artifact).
+Un’applicazione è il set di personalizzazioni e configurazioni create da un cliente per adattare la [soluzione](#solution) sottostante (ad esempio AEM Sites o AEM Assets) ai casi d’uso e alle esigenze specifiche. Un’applicazione è un’unità logica che può essere composta da più [artefatti](#artifact).
 
-Un&#39;applicazione di esempio è l&#39;applicazione [WKND lifestyle fittizia](https://experienceleague.adobe.com/it/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview).
+Un’applicazione di esempio è l’[Applicazione WKND lifestyle](https://experienceleague.adobe.com/it/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview) fittizia.
 
 ## Artefatto {#artifact}
 
@@ -30,15 +30,15 @@ Un archivio di artefatti è un percorso di archiviazione in cui gli [artefatti](
 
 ## Ambiente {#environment}
 
-Un ambiente è un singolo cluster di macchine virtuali in un [programma](#program). Per l’AEM, questo ambiente è composto da un’istanza di authoring (facoltativamente con un’ulteriore istanza di authoring in standby a freddo), da zero o più istanze di pubblicazione, da una o più istanze di Dispatcher e da un load balancer.
+Un ambiente è un singolo cluster di macchine virtuali all’interno di un [programma](#program). Per AEM, questo ambiente è composto da un’istanza di authoring (facoltativamente con un’ulteriore istanza di authoring in standby a freddo), da zero o più istanze di pubblicazione, da una o più istanze del Dispatcher e da un load balancer.
 
 ## Archivio Git {#git-repository}
 
-Un archivio Git è un percorso in cui viene archiviato il codice sorgente specifico del cliente ed è accessibile [tramite Git](https://git-scm.com).
+Un archivio Git è un percorso in cui viene archiviato il codice sorgente specifico del cliente ed è accessibile [utilizzando Git](https://git-scm.com).
 
 ## Istanza {#instance}
 
-Un&#39;istanza è un server virtuale specifico che esegue la [soluzione](#solution) AEM. Le istanze rappresentano una singola unità logica dal punto di vista della distribuzione.
+Un’istanza è un server virtuale specifico che esegue la [soluzione](#solution) AEM. Le istanze rappresentano una singola unità logica dal punto di vista della distribuzione.
 
 ## Organizzazione {#organization}
 
@@ -46,7 +46,7 @@ Un’organizzazione è un costrutto di Adobe che rappresenta un cliente aziendal
 
 ## Pipeline  {#pipeline}
 
-Una pipeline è un set di passaggi di distribuzione eseguiti o &quot;eseguiti&quot; in sequenza.
+Una pipeline è un insieme di passaggi di distribuzione eseguiti in sequenza.
 
 ## Prodotto {#product}
 
