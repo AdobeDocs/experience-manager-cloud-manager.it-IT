@@ -2,10 +2,10 @@
 title: Gestisci ambienti
 description: Scopri come utilizzare Cloud Manager per gestire i tuoi ambienti.
 exl-id: 700b0b4c-1e1a-4993-b366-426b14a98f8e
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
+source-git-commit: 6f5d51ef59aef831574bd55cee6b12a29e3d70d2
 workflow-type: tm+mt
-source-wordcount: '281'
-ht-degree: 84%
+source-wordcount: '273'
+ht-degree: 86%
 
 ---
 
@@ -58,7 +58,7 @@ La schermata **Ambienti** visualizza ogni ambiente di produzione e di staging ne
 
 >[!NOTE]
 >
->Se hai bisogno dei registri dell’ambiente, puoi richiederli tramite il Customer Success Engineer.
+>Richiedi i registri dell’ambiente tramite il Customer Success Engineer.
 
 ## Tutorial video {#video-tutorial}
 
