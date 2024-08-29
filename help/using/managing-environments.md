@@ -2,7 +2,7 @@
 title: Gestisci ambienti
 description: Scopri come utilizzare Cloud Manager per gestire i tuoi ambienti.
 exl-id: 700b0b4c-1e1a-4993-b366-426b14a98f8e
-source-git-commit: 6f5d51ef59aef831574bd55cee6b12a29e3d70d2
+source-git-commit: 0b7c926120798e2fdb635752192f4ab2e12c1e24
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 86%
@@ -64,4 +64,6 @@ La schermata **Ambienti** visualizza ogni ambiente di produzione e di staging ne
 
 Questo video fornisce una panoramica degli ambienti di Cloud Manager composti da istanze di authoring, pubblicazione e Dispatcher AEM.
 
->[!VIDEO](https://video.tv.adobe.com/v/26318/) (3 minuti, 1 secondo)
+>[!VIDEO](https://video.tv.adobe.com/v/26318/)
+
+*(3 minuti, 1 secondo)*
