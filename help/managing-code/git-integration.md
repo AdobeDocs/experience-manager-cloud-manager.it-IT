@@ -2,10 +2,10 @@
 title: Integrazione Git con Adobe Cloud Manager
 description: Questa serie di video illustra la configurazione e l’integrazione di un archivio Git gestito dal cliente (on-premise) con Adobe Cloud Manager.
 exl-id: e517f8a4-23f0-4486-8278-91396dba76ec
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
+source-git-commit: 51bd685a17eb9d68b1ec8245e6167cab02101fc1
 workflow-type: tm+mt
-source-wordcount: '351'
-ht-degree: 17%
+source-wordcount: '331'
+ht-degree: 18%
 
 ---
 
@@ -16,7 +16,7 @@ Adobe Cloud Manager viene fornito con un singolo archivio Git utilizzato per dis
 
 ## Panoramica dell’integrazione Git
 
->[!VIDEO](https://video.tv.adobe.com/v/28710/) (3 minuti, 11 secondi)
+>[!VIDEO](https://video.tv.adobe.com/v/28710/)
 
 Questa serie di video esplora diversi casi d’uso relativi all’integrazione di un archivio Git gestito dal cliente con Cloud Manager.
 
@@ -36,31 +36,31 @@ Per una panoramica completa di Cloud Manager, consulta [Introduzione a Cloud Man
 
 Primi passaggi per sincronizzare un archivio Git gestito dal cliente con l’archivio Git di Cloud Manager.
 
->[!VIDEO](https://video.tv.adobe.com/v/28711/?quality=12) (8 minuti)
+>[!VIDEO](https://video.tv.adobe.com/v/28711/?quality=12)
 
 ## Strategia di diramazione di base {#branching-strategy}
 
 Imposta una strategia di diramazione di base per sfruttare le [pipeline di produzione](/help/using/production-pipelines.md) e le [pipeline non di produzione](/help/using/non-production-pipelines.md) di Cloud Manager.
 
->[!VIDEO](https://video.tv.adobe.com/v/28712/?quality=12) (3 minuti, 48 secondi)
+>[!VIDEO](https://video.tv.adobe.com/v/28712/?quality=12)
 
 ## Sviluppo di rami di funzioni {#feature-development}
 
 Utilizza un ramo della funzione per isolare le modifiche al codice in un archivio Git gestito dal cliente e sincronizzalo con l’archivio Git di Cloud Manager per utilizzare una pipeline non di produzione per testare la qualità del codice e la convalida.
 
->[!VIDEO](https://video.tv.adobe.com/v/28723/?quality=12) (9 minuti)
+>[!VIDEO](https://video.tv.adobe.com/v/28723/?quality=12)
 
 ## Distribuzione di produzione {#production-deployment}
 
 Prepara il codice per una versione di produzione in un archivio Git gestito dal cliente e sincronizzalo con l’archivio Git di Cloud Manager per la distribuzione in ambienti di staging e produzione.
 
->[!VIDEO](https://video.tv.adobe.com/v/28724/?quality=12) (6 minuti, 6 secondi)
+>[!VIDEO](https://video.tv.adobe.com/v/28724/?quality=12)
 
-## Sincronizzazione dei tag della versione {#sync-tags}
+## Sincronizzare i tag della versione {#sync-tags}
 
 Puoi sincronizzare i tag della versione da un archivio Git di Cloud Manager a un archivio Git gestito dal cliente. Questa funzionalità fornisce visibilità sul codice distribuito negli ambienti di staging e produzione.
 
->[!VIDEO](https://video.tv.adobe.com/v/28725/?quality=12) (2 minuti, 57 secondi)
+>[!VIDEO](https://video.tv.adobe.com/v/28725/?quality=12)
 
 ## Risorse aggiuntive {#additional-resources}
 
