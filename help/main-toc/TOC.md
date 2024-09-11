@@ -10,7 +10,7 @@ role: Admin
 source-git-commit: 45bb148f3e4927feb2e07c723e31fe3204a41387
 workflow-type: tm+mt
 source-wordcount: '545'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -64,7 +64,7 @@ ht-degree: 99%
    + [Aggiunta di archivi privati](/help/managing-code/private-repositories.md)
    + [Supporto per i sottomoduli Git](/help/managing-code/git-submodules.md)
    + [Configurazione verifica GitHub](/help/managing-code/github-check-config.md)
-   + [Annotazioni verifica GitHub](/help/managing-code/github-annotations.md)
+   + [Annotazioni di verifica GitHub](/help/managing-code/github-annotations.md)
    + [Gestione delle versioni dei progetti Maven](/help/managing-code/maven-project-version.md)
    + [Integrazione con Git](/help/managing-code/git-integration.md)
    + [Utilizzo di più archivi Git](/help/managing-code/multiple-git-repos.md)

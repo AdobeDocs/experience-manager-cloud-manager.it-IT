@@ -5,11 +5,11 @@ feature: Release Information
 source-git-commit: 3671772a1369273d89fde101ba084a6e2f8ce8dc
 workflow-type: tm+mt
 source-wordcount: '184'
-ht-degree: 37%
+ht-degree: 80%
 
 ---
 
-# Note sulla versione per Cloud Manager 2024.9.0 {#release-notes}
+# Note sulla versione 2024.9.0 di Cloud Manager {#release-notes}
 
 In questa pagina sono documentate le note sulla versione 2024.9.0 di [!UICONTROL Cloud Manager].
 
@@ -30,14 +30,14 @@ La prossima versione è pianificata per il venerdì 3 ottobre 2024.
 
 ## Programma per i primi utilizzatori {#early-adoption}
 
-Partecipa al programma di adozione anticipata di Cloud Manager e prova alcune delle prossime funzionalità.
+Partecipa al programma per i primi utilizzatori di Cloud Manger e concediti la possibilità di testare alcune delle funzionalità previste.
 
 
-### Pipeline di sola staging e di sola produzione {#staging-production-only-pipelines}
+### Pipeline solo di staging e solo di produzione {#staging-production-only-pipelines}
 
-Adobe è entusiasta di annunciare l&#39;introduzione del supporto per [pipeline solo di staging e solo di produzione](/help/using/stage-prod-only.md). Questa nuova funzione consente di suddividere le pipeline di distribuzione di produzione full stack in implementazioni più piccole e specializzate.
+Adobe è entusiasta di annunciare l’introduzione del supporto per [pipeline solo di staging e solo di produzione](/help/using/stage-prod-only.md). Questa nuova funzione consente di suddividere le pipeline di distribuzione in produzione full stack in implementazioni più piccole e specializzate.
 
-Se desideri testare questa funzione e fornire un feedback, invia un&#39;e-mail a `Grp-cloudmanager_splitpipelines@adobe.com` utilizzando l&#39;indirizzo e-mail associato al tuo Adobe ID.
+Se ti interessa testare questa nuova funzione e fornire un feedback, invia un’e-mail a `Grp-cloudmanager_splitpipelines@adobe.com` utilizzando l’indirizzo e-mail associato al tuo Adobe ID.
 
 <!-- ## Bug fixes
 
