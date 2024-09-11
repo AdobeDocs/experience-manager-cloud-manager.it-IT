@@ -3,9 +3,9 @@ title: Autorizzazioni basate sul ruolo
 description: Scopri le autorizzazioni preconfigurate basate sui ruoli di Cloud Manager per gestire l’accesso alle risorse cloud.
 exl-id: b66533fb-db93-40e8-919d-581261fdbf24
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '616'
-ht-degree: 57%
+ht-degree: 100%
 
 ---
 
@@ -18,32 +18,32 @@ ht-degree: 57%
 >
 >Questa documentazione descrive le autorizzazioni basate sui ruoli per Cloud Manager per Adobe Managed Services (AMS).
 >
->La documentazione equivalente per AEM as a Cloud Service si trova nel documento [introduzione a Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/onboarding/concepts/cloud-manager-introduction#role-based-permissions) nella documentazione di AEM as a Cloud Service.
+>La documentazione equivalente per AEM as a Cloud Service si trova nel documento [introduzione a Cloud Manager](https://experienceleague.adobe.com/it/docs/experience-manager-cloud-service/content/onboarding/concepts/cloud-manager-introduction#role-based-permissions) nella documentazione di AEM as a Cloud Service.
 
 ## Ruoli utente {#user-roles}
 
 La gestione dei ruoli per [!UICONTROL Cloud Manager] viene eseguita utilizzando [Admin Console](https://helpx.adobe.com/it/enterprise/using/admin-console.html). Qualsiasi utente di [!UICONTROL Cloud Manager] deve essere un membro dell’organizzazione IMS del cliente e disporre del contesto di prodotto di Adobe Managed Services. Le appartenenze a ruoli specifici vengono fornite aggiungendo l’utente a un profilo di prodotto [!UICONTROL Cloud Manager] in Admin Console.
 
-Per ulteriori informazioni sulla configurazione dei ruoli, vedere [Configurazione di utenti e ruoli](/help/requirements/users-and-roles.md).
+Per ulteriori informazioni su come configurare gli utenti, consulta [Configurazione di utenti e ruoli](/help/requirements/users-and-roles.md).
 
-Nella tabella seguente sono elencati i ruoli che è possibile assegnare nell&#39;Admin Console.
+In questa tabella sono elencati i ruoli che è possibile assegnare in Admin Console.
 
-| [!UICONTROL Ruolo Cloud Manager] | Descrizione |
+| Ruolo di [!UICONTROL Cloud Manager] | Descrizione |
 |---|---|
-| Proprietario business | Utente principale che completa la configurazione iniziale di [!UICONTROL Cloud Manager] ed è responsabile della definizione dei KPI, dell&#39;approvazione delle distribuzioni di produzione e della sostituzione di errori importanti di terzo livello quando necessario. |
-| Autore del contenuto | L’utente generalmente non interagisce con Cloud Manager, ma può utilizzare il selettore di programma Cloud Manager (arrivando da Experience Cloud) per accedere a Adobe Experience Manager (AEM). |
-| Customer Success Engineer (CSE) | L&#39;utente supporta principalmente il successo del cliente AMS e interagisce con [!UICONTROL Cloud Manager] per eseguire le distribuzioni. Queste implementazioni richiedono la supervisione di un Adobe Customer Success Engineer (CSE). |
-| Responsabile della distribuzione | L&#39;utente gestisce le operazioni di distribuzione utilizzando [!UICONTROL Cloud Manager] per eseguire le distribuzioni dello staging e della produzione, può approvare errori importanti di terzo livello quando necessario e ha accesso all&#39;archivio Git. |
-| Sviluppatore | L&#39;utente sviluppa ed esegue il test del codice personalizzato dell&#39;applicazione, utilizza principalmente [!UICONTROL Cloud Manager] per visualizzare lo stato di distribuzione e ha l&#39;accesso ai commit dell&#39;archivio Git. |
-| Responsabile del programma | L&#39;utente utilizza [!UICONTROL Cloud Manager] per eseguire la configurazione del team, esaminare lo stato, visualizzare i KPI e, se necessario, approvare errori importanti di terzo livello. |
+| Proprietario business | Utente principale che completa la configurazione iniziale di [!UICONTROL Cloud Manager] ed è responsabile della definizione dei KPI, dell’approvazione delle implementazioni di produzione e della sostituzione di errori importanti di terzo livello, quando necessario. |
+| Autore del contenuto | Utente che generalmente non interagisce con Cloud Manager, ma può utilizzare il selettore di programma di Cloud Manager (arrivando da Experience Cloud) per accedere ad Adobe Experience Manager (AEM). |
+| Customer Success Engineer (CSE) | Utente che supporta principalmente il successo del cliente AMS e interagisce con [!UICONTROL Cloud Manager] per eseguire le distribuzioni. Queste distribuzioni richiedono la supervisione di un Adobe Customer Success Engineer (CSE). |
+| Responsabile della distribuzione | Utente che gestisce le operazioni di distribuzione utilizzando [!UICONTROL Cloud Manager] per eseguire le distribuzioni di staging e di produzione, può approvare errori importanti di terzo livello, quando necessario, e ha accesso all’archivio Git. |
+| Sviluppatore | L’utente sviluppa ed esegue il test del codice personalizzato dell’applicazione, utilizza principalmente [!UICONTROL Cloud Manager] per visualizzare lo stato di distribuzione e dispone dell’accesso ai commit dell’archivio Git. |
+| Responsabile del programma | L’utente utilizza [!UICONTROL Cloud Manager] per eseguire la configurazione del team, esaminare lo stato, visualizzare i KPI e, quando necessario, approvare errori importanti di terzo livello. |
 
 ## Autorizzazioni utente {#user-permissions}
 
-A ciascuno dei ruoli sono associate autorizzazioni preconfigurate specifiche. Nella tabella seguente sono elencate le autorizzazioni disponibili e i ruoli autorizzati ad eseguirle.
+A ogni ruolo sono associate specifiche autorizzazioni preconfigurate. In questa tabella sono elencate le autorizzazioni disponibili e i ruoli che possono eseguirle.
 
-| Autorizzazione | Descrizione | Proprietario business | Responsabile dell’implementazione | Program Manager (Responsabile programma) | Sviluppatore | CSE |
+| Autorizzazione | Descrizione | Proprietario business | Responsabile della distribuzione | Responsabile del programma | Sviluppatore | CSE |
 | --- | --- | --- | --- | --- | --- | --- |
-| Leggi l&#39;applicazione | KPI del programma di lettura | x | x | x | x | x |
+| Leggi la domanda | KPI del programma di lettura | x | x | x | x | x |
 | Applicazione di scrittura | Configurazione o modifica del programma | x | | | | |
 | Aggiungere programma | Aggiungere nuovo programma | x | | | | |
 | Ambiente di lettura | Consultare dettagli dell’ambiente | x | x | x | x | x |
@@ -62,9 +62,9 @@ A ciascuno dei ruoli sono associate autorizzazioni preconfigurate specifiche. Ne
 | Distribuzione gestita della pipeline modificata | Consente la modifica dell’opzione di supervisione del CSE | | x | | | |
 | Elimina pipeline | Consente l’eliminazione della pipeline | | x | | | |
 | Leggi Passaggio | Consultare i risultati delle metriche di qualità del passaggio | x | x | x | x | x |
-| Generazione del token di accesso personale | Accedi a Git | | x | | x | |
+| Generazione del token di accesso personale | Accesso a Git | | x | | x | |
 
-Per ulteriori informazioni sulla configurazione degli utenti, vedere [Configurazione di utenti e ruoli](/help/requirements/users-and-roles.md).
+Per ulteriori informazioni su come configurare gli utenti, consulta [Configurazione di utenti e ruoli](/help/requirements/users-and-roles.md).
 
 >[!TIP]
 >

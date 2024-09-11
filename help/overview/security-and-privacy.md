@@ -3,9 +3,9 @@ title: Sicurezza e privacy
 description: Scopri la sicurezza e la privacy del codice e delle risorse degli artefatti in Cloud Manager.
 exl-id: 67df1987-8db7-40bd-9717-1bf194e957f7
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '202'
-ht-degree: 70%
+ht-degree: 100%
 
 ---
 
@@ -16,11 +16,11 @@ Scopri la sicurezza e la privacy del codice e delle risorse degli artefatti in C
 
 ## Ruoli e autorizzazioni {#roles}
 
-[!UICONTROL Cloud Manager] dispone di ruoli preconfigurati con le autorizzazioni appropriate.
+[!UICONTROL Cloud Manager] dispone di ruoli preconfigurati con autorizzazioni appropriate.
 
 Per informazioni sui possibili ruoli che è possibile assegnare in Admin Console e sulle autorizzazioni per i ruoli utente, consulta [Autorizzazioni basate sul ruolo](/help/requirements/role-based-permissions.md).
 
-## Isolamento delle risorse {#resource-isolation}
+## Isolamento risorse {#resource-isolation}
 
 I clienti di [!UICONTROL Cloud Manager] hanno bisogno delle credenziali IMS per autenticarsi in quanto tutte le autorizzazioni associate a [!UICONTROL Cloud Manager] sono collegate alle loro organizzazioni IMS. Durante il processo di onboarding, il team di provisioning assicura che l’isolamento delle risorse sia applicato in [!UICONTROL Cloud Manager].
 
@@ -28,10 +28,10 @@ I clienti di [!UICONTROL Cloud Manager] hanno bisogno delle credenziali IMS per 
 
 Il codice in [!UICONTROL Cloud Manager] è crittografato in transito. Anche i file binari generati da Cloud Manager vengono crittografati in transito e al momento dell’archiviazione.
 
-Ogni cliente ottiene il proprio archivio Git e il codice è protetto e non condiviso con altre organizzazioni.
+Ogni cliente ottiene il proprio archivio Git: il codice è sicuro e non condiviso con altre organizzazioni.
 
 ## Privacy dei dati {#data-privacy}
 
-[!UICONTROL Cloud Manager] rispetta i principi sulla privacy definiti da Adobe. Gli sviluppatori inviano il codice in modo sicuro negli archivi Git tramite HTTPS.
+[!UICONTROL Cloud Manager] rispetta i principi sulla privacy definiti da Adobe. Gli sviluppatori inviano il codice negli archivi Git in modo sicuro tramite HTTPS.
 
-L&#39;interfaccia utente di [!UICONTROL Cloud Manager] è basata su servizi conformi a un Adobe di framework di controllo comune. L’interfaccia utente di [!UICONTROL Cloud Manager] utilizza servizi sicuri di diversi provider cloud.
+L’interfaccia utente di [!UICONTROL Cloud Manager] è basata su servizi conformi a un’infrastruttura di controllo comune di Adobe. L’interfaccia utente di [!UICONTROL Cloud Manager] utilizza servizi sicuri di diversi provider cloud.

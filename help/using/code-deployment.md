@@ -3,9 +3,9 @@ title: Distribuzione del codice
 description: Scopri come distribuire il codice e cosa accade in Cloud Manager quando lo fai.
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1637'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -30,7 +30,7 @@ Il processo di compilazione avvia il processo di distribuzione del codice, inclu
 
 * Distribuzione dello staging
 * Test dello staging
-* Distribuzione di produzione
+* Distribuzione in produzione
 
 Puoi rivedere i passaggi da vari processi di distribuzione visualizzando i registri o rivedendo i risultati per i criteri di test.
 
@@ -38,7 +38,7 @@ Puoi rivedere i passaggi da vari processi di distribuzione visualizzando i regis
 
 In questa sezione sono descritte le diverse azioni che si verificano durante ogni passaggio della distribuzione. Consulta la sezione [Dettagli del processo di distribuzione](#deployment-process) per informazioni tecniche su come il codice stesso viene distribuito dietro le quinte.
 
-### Passaggio di distribuzione dello staging {#stage-deployment}
+### Passaggio della distribuzione dello staging {#stage-deployment}
 
 Il passaggio **Distribuzione dello staging** include le seguenti azioni:
 
@@ -149,7 +149,7 @@ Le distribuzioni di produzione seguono generalmente gli stessi passaggi indicati
 
 Questo processo continua fino al completamento della distribuzione in tutti gli elementi Publish e Dispatcher nella topologia.
 
-## Modalità di esecuzione di una pipeline di emergenza {#emergency-pipeline}
+## Esecuzione di una pipeline in modalità emergenza {#emergency-pipeline}
 
 In situazioni critiche, i clienti di Adobe Managed Services potrebbero dover implementare immediatamente modifiche al codice nei propri ambienti di staging e produzione. Questa funzionalità consente di ignorare l’intero ciclo di test di Cloud Manager.
 
@@ -159,7 +159,7 @@ Per risolvere queste situazioni, la pipeline di produzione di Cloud Manager può
 >
 >La funzione di esecuzione di una pipeline in modalità emergenza viene attivata a livello di programma. L’attivazione viene eseguita dai Customer Success Engineer.
 
-### Utilizzare la modalità di esecuzione di una pipeline di emergenza {#using-emergency-pipeline}
+### Utilizzo dell’esecuzione di una pipeline in modalità emergenza {#using-emergency-pipeline}
 
 Quando avvii un’esecuzione della pipeline di produzione, una finestra di dialogo ti consente di scegliere tra modalità normale o di emergenza. Questa opzione è disponibile se per il programma è attivata la funzione modalità di esecuzione di emergenza della pipeline. Questa opzione è disponibile dopo l’abilitazione della funzione.
 
@@ -175,7 +175,7 @@ L’esecuzione di una pipeline in modalità emergenza può essere eseguita anche
 $ aio cloudmanager:pipeline:create-execution PIPELINE_ID --emergency
 ```
 
-## Riesecuzione di una distribuzione di produzione {#reexecute-deployment}
+## Eseguire nuovamente una distribuzione di produzione {#reexecute-deployment}
 
 In rari casi, i passaggi di distribuzione nell’ambiente di produzione possono non riuscire per motivi transitori. In questi casi, puoi rieseguire il passaggio di distribuzione di produzione fino a quando è stato completato, indipendentemente dal fatto che sia riuscito, annullato o non riuscito. La riesecuzione è supportata utilizzando la stessa pipeline costituita dai tre passaggi seguenti:
 
@@ -198,7 +198,7 @@ In tali circostanze, in cui è possibile eseguire una riesecuzione, la pagina di
 * Se l’ultima esecuzione non è riuscita in un qualsiasi punto precedente al passaggio di distribuzione nell’ambiente di produzione, non è possibile eseguirla nuovamente.
 
 
-### Esegui nuovamente API {#reexecute-api}
+### Riesecuzione dell’API {#reexecute-api}
 
 Oltre a essere disponibile nell’interfaccia utente, è possibile utilizzare l’[API di Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#tag/Pipeline-Execution) per attivare le riesecuzioni e identificare le esecuzioni attivate come riesecuzioni.
 

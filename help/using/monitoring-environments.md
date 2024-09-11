@@ -3,9 +3,9 @@ title: Monitorare gli ambienti
 description: Scopri come monitorare gli ambienti in Cloud Manager.
 exl-id: 32886133-d6c0-4aed-8bb0-81b84f63e825
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '910'
-ht-degree: 44%
+ht-degree: 100%
 
 ---
 
@@ -16,28 +16,28 @@ Scopri come monitorare gli ambienti in Cloud Manager.
 
 ## Soglie delle metriche {#thresholds}
 
-Il monitoraggio del sistema in [!UICONTROL Cloud Manager] viene eseguito osservando le singole istanze all’interno di un ambiente e tenendo traccia di varie metriche per ogni istanza. Ogni metrica ha due soglie definite: una soglia di *avviso* e una soglia di *critico*.
+Il monitoraggio del sistema in [!UICONTROL Cloud Manager] viene eseguito osservando le singole istanze all’interno di un ambiente e tenendo traccia di varie metriche per ogni istanza. Ogni metrica dispone di due soglie definite: una soglia di *avvertenza* e una soglia *critica*.
 
 Se una metrica supera la soglia di avvertenza (ma non la soglia critica), viene considerata in uno stato di avvertenza.
 
 Se una metrica supera la soglia critica, viene considerata in uno stato critico.
 
-Adobe Managed Services imposta le soglie, che è possibile visualizzare in [!UICONTROL Cloud Manager]. Nella maggior parte dei casi, le soglie sono coerenti tra i clienti, ma in alcuni casi Adobe Managed Services le modifica per soddisfare requisiti specifici. Per eventuali domande sulle soglie, rivolgiti al tuo Customer Success Engineer (CSE).
+Adobe Managed Services imposta le soglie, che è possibile visualizzare in [!UICONTROL Cloud Manager]. Nella maggior parte dei casi, le soglie sono uguali per tutti, ma in alcuni casi Adobe Managed Services può modificarle in base a esigenze specifiche. Per eventuali domande relative alle soglie, rivolgiti al tuo Customer Success Engineer (CSE).
 
 ## Accedere al monitoraggio del sistema {#accessing-system-monitoring}
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) e seleziona l’organizzazione e il programma appropriati.
 
-1. Fare clic sul pulsante con i puntini di sospensione del programma che si desidera monitorare.
-1. Nel menu, sotto l&#39;intestazione **Gestisci**, fai clic su **Mostra monitoraggio** per aprire la pagina **Rapporti** che mostra le informazioni di monitoraggio del sistema.
+1. Fai clic sul pulsante con i puntini di sospensione del programma che desideri monitorare.
+1. Nel menu, sotto l’intestazione **Gestisci**, fai clic su **Mostra monitoraggio** per aprire la pagina **Rapporti** che mostra le informazioni di monitoraggio del sistema.
 
    ![Impostazioni](/help/assets/first-timea1.png)
 
 .
 
-## Panoramica di Monitoraggio del sistema {#system-monitoring-overview}
+## Panoramica del Monitoraggio del sistema {#system-monitoring-overview}
 
-Nella sezione **Monitoraggio del sistema** della pagina **Report** sono elencati gli ambienti monitorati nel programma. Riporta il loro stato di salute di alto livello nelle seguenti quattro categorie separate:
+Nella sezione **Monitoraggio del sistema** della pagina **Rapporti** sono elencati gli ambienti monitorati nel programma. Riporta lo stato di integrità di alto livello nelle seguenti quattro categorie separate:
 
 * Host
 * Archiviazione
@@ -58,14 +58,14 @@ Per visualizzare i dettagli di metriche specifiche, fai clic su una delle colonn
 
 ![Selezionare l’ambiente](/help/assets/System_Monitoring1.png)
 
-La barra di navigazione a sinistra mostra le metriche disponibili all’interno della categoria attualmente selezionata per le quali sono presenti dati per l’ambiente e le istanze attualmente selezionati.
+Nella barra di navigazione a sinistra vengono visualizzate le metriche disponibili nella categoria attualmente selezionata per la quale sono presenti dati relativi all’ambiente e alle istanze attualmente selezionati.
 
-Un singolo grafico mostra lo stato, un grafico dei dati nel tempo e le relative soglie. Se vengono visualizzate più istanze, i dati di ciascuna istanza si trovano in una serie separata.
+Un singolo grafico mostra lo stato e un grafico dei dati nel tempo con le relative soglie. Se vengono visualizzate più istanze, i dati di ciascuna istanza sono in una serie separata.
 
 ![Grafico delle metriche](/help/assets/Monitoring_Graphs1.png)
 
 Per nascondere una singola serie sul grafico, fai clic sulla serie nella legenda.
-Se ad esempio si fa clic sulla serie di soglie di avvertenza, verrà visualizzata solo la soglia critica.
+Ad esempio, se fai clic sulla serie delle soglie di avvertenza, verrà visualizzata solo la soglia critica.
 
 ![Modificare il grafico](/help/assets/Monitoring_Graphs2.png)
 
@@ -73,28 +73,28 @@ Se ad esempio si fa clic sulla serie di soglie di avvertenza, verrà visualizzat
 
 #### Host {#host}
 
-* **Caricamento per core**: numero di processi in esecuzione nella CPU. In alternativa, il numero di processi in coda che si trovano in uno stato di attesa medio su un periodo di uno (load1), cinque (load5) e quindici (load15) minuti.
+* **Cario per core**: numero di processi in esecuzione nella CPU. In alternativa, il numero di processi messi in coda che si trovano in uno stato di attesa medio su un periodo di uno (load1), cinque (load5) e quindici (load15) minuti.
 * **Conteggio processi**: numero di processi attualmente aperti.
 * **Conteggio utenti**: numero di utenti con una sessione shell attiva.
-* **Utilizzo memoria**: percentuale di memoria di sistema attualmente allocata.
-* **Memoria JVM**: dimensione (in megabyte) dell&#39;heap Java allocato.
-* **Spazio di vecchia generazione**: percentuale della memoria JVM di vecchia generazione attualmente allocata.
+* **Utilizzo memoria**: percentuale di memoria di sistema attualmente allocata
+* **Memoria JVM**: dimensione (in megabyte) dell’heap Java allocato
+* **Spazio di vecchia generazione**: percentuale di memoria JVM di vecchia generazione attualmente allocata
 
 #### Rete {#network}
 
-* **Controllo porta CQ**: tempo di risposta in secondi per accedere alla porta AEM o Dispatcher. Esistono metriche diverse per authoring, pubblicazione e Dispatcher.
+* **Controllo porta CQ**: tempo di risposta in secondi per accedere a AEM o alla porta Dispatcher Esistono metriche diverse per authoring, pubblicazione e Dispatcher.
 
 #### Archiviazione {#storage}
 
-* **Spazio su disco**: spazio su disco utilizzato (in megabyte) per ogni punto di montaggio sull&#39;host. Esistono metriche diverse per ogni punto di montaggio. Sono presenti metriche almeno per `/` e `/mnt`, ma potrebbero essere disponibili metriche di montaggio aggiuntive relative ai punti di montaggio a seconda della configurazione specifica dell&#39;istanza.
+* **Spazio su disco**: spazio su disco utilizzato (in megabyte) per ogni punto di montaggio sull’host. Esistono metriche diverse per ogni punto di montaggio. Vi sono metriche almeno per `/` e `/mnt`, ma potrebbero essere disponibili metriche di montaggio aggiuntive relative ai punti di montaggio a seconda della configurazione specifica dell’istanza.
 * **Dimensione cartella**
-* **Archivio segmenti AEM**: spazio su disco (in gigabyte) utilizzato per l&#39;archivio segmenti AEM.
+* **Archivio segmenti AEM**: spazio su disco (in gigabyte) utilizzato per l’archivio segmenti AEM.
 
 #### Applicazione {#application}
 
 * **Agente di replica**: tempo (in secondi) per un evento di replica di prova
    * Esistono metriche separate per ogni agente di replica.
-* **Svuotamento del Dispatcher**: numero di elementi attualmente nella coda di svuotamento del Dispatcher
+* **Eliminazione dispatcher**: numero di elementi attualmente nella coda di eliminazione dispatcher
 
 ## Generazione rapporti SLA {#sla-reporting}
 
@@ -108,17 +108,17 @@ Come per i grafici di monitoraggio del sistema, quando si passa il pultatore su 
 
 ![Passaggio del puntatore su un punto dati](/help/assets/SLA-Reports-two.png)
 
-La sezione **Analisi degli eventi** sotto questo grafico mostra il set di incidenti che si sono verificati per il programma durante l&#39;anno attualmente selezionato. Per ogni incidente sono riportati intervallo di tempo, causa e commenti.
+La sezione **Analisi degli eventi** sotto questo grafico mostra l’insieme di incidenti verificatisi per il programma durante l’anno attualmente selezionato. Per ogni incidente sono riportati intervallo di tempo, causa e commenti.
 
 ![Analisi degli eventi](/help/assets/sla-reporting3.png)
 
 ## Metriche SLA {#sla-metrics}
 
 * **Contratto autore**: SLA definito nel contratto con Adobe Managed Services per il livello di authoring.
-* **AMS Author SLA**: tempo di attività misurato per il livello di authoring di produzione, tenendo conto degli incidenti causati da fornitori o da Adobi.
+* **SLA di authoring AMS**: disponibilità misurata per gli incidenti di factoring del livello di authoring in produzione causati da Adobe o dai nostri fornitori.
 * **SLA autore**: tempo di attività misurato per il livello di authoring, esclusi i periodi di inattività pianificati, ad esempio le finestre di manutenzione.
 * **Contratto utente finale**: SLA definito nel contratto con Adobe Managed Services per il livello di pubblicazione.
-* **AMS Utente finale SLA**: i tempi di attività misurati del livello di pubblicazione di produzione, tenendo conto degli incidenti causati da fornitori o da Adobi.
+* **AMS SLA utente finale**: disponibilità misurate per gli incidenti di factoring del livello di pubblicazione in produzione causati da Adobe o dai nostri fornitori.
 * **SLA utente finale**: tempo di attività misurato per il livello di pubblicazione, esclusi i periodi di inattività pianificati, ad esempio le finestre di manutenzione.
 
 ## Tutorial video {#video-tutorial}

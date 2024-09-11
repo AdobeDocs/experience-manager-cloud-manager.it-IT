@@ -3,13 +3,13 @@ title: Aggiunta di archivi Adobe in Cloud Manager
 description: Scopri come creare archivi gestiti da Adobe in Cloud Manager.
 exl-id: 24c6ca97-ea70-41b8-b4c7-b8b0f406a57d
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '145'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
-# Aggiungere archivi di Adobi in Cloud Manager {#adobe-repositories}
+# Aggiungere archivi Adobe in Cloud Manager {#adobe-repositories}
 
 Scopri come creare archivi gestiti da Adobe in Cloud Manager.
 

@@ -1,25 +1,25 @@
 ---
 title: Domande frequenti su Cloud Manager
-description: Scopri le risposte alle domande più frequenti su Cloud Manager per i clienti AMS.
+description: Scopri le risposte alle domande più frequenti su Cloud Manager per clienti AMS.
 exl-id: 52c1ca23-5b42-4eae-b63a-4b22ef1a5aee
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '748'
-ht-degree: 54%
+ht-degree: 100%
 
 ---
 
 
 # Domande frequenti su Cloud Manager {#cloud-manager-faqs}
 
-Questo documento fornisce le risposte alle domande più frequenti su Cloud Manager per i clienti AMS.
+Questo documento fornisce le risposte alle domande più frequenti su Cloud Manager per clienti AMS.
 
 ## È possibile utilizzare Java 11 con le build di Cloud Manager? {#java-11}
 
-Sì. Aggiungere `maven-toolchains-plugin` con le impostazioni corrette per Java 11.
+Sì. È necessario aggiungere il `maven-toolchains-plugin` con le impostazioni corrette per Java 11.
 
-* Questo processo è documentato [qui.](/help/getting-started/using-the-wizard.md)
-* Ad esempio, vedi [Codice progetto di esempio WKND](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75).
+* Questo processo è documentato [qui](/help/getting-started/using-the-wizard.md).
+* Ad esempio, consulta il [codice del progetto di esempio WKND](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75).
 
 ## Dopo il passaggio da Java 8 a Java 11, l’esecuzione della build non riesce e genera un errore relativo a maven-scr-plugin. Cosa posso fare? {#maven-src-plugin}
 
@@ -39,36 +39,36 @@ Per le build di Cloud Manager, il `maven-enforcer-plugin` potrebbe restituire qu
 [main] [WARNING] Rule 1: org.apache.maven.plugins.enforcer.RequireJavaVersion
 ```
 
-Questo problema noto è dovuto al fatto che Cloud Manager utilizza una versione diversa di Java per eseguire il comando Maven anziché compilare il codice. Ometti `requireJavaVersion` dalle configurazioni di `maven-enforcer-plugin`.
+Si tratta di un problema noto dovuto al fatto che Cloud Manager utilizza una versione diversa di Java per eseguire il comando Maven anziché compilare il codice. Ometti `requireJavaVersion` dalle configurazioni `maven-enforcer-plugin`.
 
-## Il controllo della qualità del codice non è riuscito e ora la distribuzione è bloccata. C’è un modo per aggirare questo controllo? {#deployment-stuck}
+## Impossibile eseguire il controllo di qualità del codice e ora l’implementazione è bloccata. C’è un modo per aggirare questo controllo? {#deployment-stuck}
 
-Sì. Tutti gli errori di qualità del codice, ad eccezione delle valutazioni di sicurezza, sono metriche non critiche. Di conseguenza, possono essere ignorati come parte di una pipeline di distribuzione espandendo gli elementi nell’interfaccia utente dei risultati.
+Sì. Tutti gli errori di qualità del codice, ad eccezione delle valutazioni di sicurezza, sono metriche non critiche. Di conseguenza, possono essere ignorati come parte di una pipeline di implementazione espandendo gli elementi nell’interfaccia utente dei risultati.
 
-Un utente con il ruolo [Responsabile dell&#39;implementazione, Project Manager o Proprietario business](/help/requirements/users-and-roles.md#role-definitions) può ignorare i problemi. In tal caso, la conduttura procede. In alternativa, possono accettare i problemi, nel qual caso la pipeline si arresta con un errore.
+Un utente con il ruolo di [Responsabile della distribuzione, Project Manager o Proprietario business](/help/requirements/users-and-roles.md#role-definitions) può ignorare i problemi. In tale caso, la pipeline procede. In alternativa, può accettare i problemi, nel qual caso la pipeline si arresta con un errore.
 
 Consulta i documenti [Gate a tre livelli durante l’esecuzione di una pipeline](/help/using/code-quality-testing.md#three-tier-gates-while-running-a-pipeline) e [Configurazione di pipeline non di produzione](/help/using/non-production-pipelines.md#understanding-the-flow) per ulteriori dettagli.
 
-## Le distribuzioni di Cloud Manager non superano il test delle prestazioni negli ambienti di Adobe Managed Services. Come si può eseguire il debug di questo problema per passare le metriche critiche? {#debug-critical-metrics}
+## Le distribuzioni di Cloud Manager non superano il test delle prestazioni negli ambienti di Adobe Managed Services. Come si può eseguire il debug di questo problema per superare le metriche critiche? {#debug-critical-metrics}
 
-La risposta a questa domanda non è univoca. Tuttavia, i seguenti punti sul passaggio del test delle prestazioni potrebbero essere utili:
+La risposta a questa domanda non è univoca. Tuttavia, potrebbero essere utili i seguenti punti sul passaggio del test delle prestazioni:
 
 * Questo passaggio rappresenta un passaggio delle prestazioni web. In altre parole, si tratta del momento in cui si carica la pagina utilizzando un browser web.
 * Gli URL elencati nel file .csv risultante durante il test vengono caricati in un browser Chrome nell’infrastruttura di Cloud Manager.
-* Una metrica comune che non riesce è il tasso di errore. Pertanto, affinché un URL possa passare, l&#39;URL principale deve essere caricato con lo stato `200` e in meno di `20` secondi. Se il caricamento di una pagina supera i `20` secondi, viene contrassegnato come errore `504`.
-* Se il sito richiede l&#39;autenticazione dell&#39;utente, vedere [Comprendere i risultati del test](/help/using/code-quality-testing.md#authenticated-performance-testing) per configurare il test in modo da poter eseguire l&#39;autenticazione sul sito.
+* Una metrica comune che non riesce costituisce il tasso di errore. Pertanto, affinché un URL possa passare, l’URL principale deve essere caricato con uno stato `200` e in meno di `20` secondi. Se il caricamento di una pagina supera i `20` secondi, viene contrassegnato come errore `504`.
+* Se il sito richiede l’autenticazione dell’utente, consulta il documento [Comprendere i risultati del test](/help/using/code-quality-testing.md#authenticated-performance-testing) per configurare il test, per l’autenticazione sul sito.
 
-Per ulteriori informazioni sui controlli di qualità, vedere [Informazioni sui risultati dei test](/help/using/code-quality-testing.md).
+Consulta il documento [Comprendere i risultati del test](/help/using/code-quality-testing.md) per ulteriori informazioni sui controlli di qualità.
 
 ## Posso usare SNAPSHOT per la versione del progetto Maven? {#snapshot}
 
-Sì. Per le distribuzioni per gli sviluppatori, i file del ramo Git `pom.xml` devono contenere `-SNAPSHOT` alla fine del valore `<version>`.
+Sì. Nelle implementazioni per gli sviluppatori, i file `pom.xml` del ramo Git devono contenere `-SNAPSHOT` alla fine del valore `<version>`.
 
-In questo modo è possibile installare le distribuzioni successive anche se la versione non è stata modificata. Per le distribuzioni nell’ambiente di sviluppo, non viene aggiunta né generata una versione automatica della build Maven.
+Questo consente di installare le implementazioni successive anche se la versione non è stata modificata. Per le distribuzioni nell’ambiente di sviluppo, non viene aggiunta né generata una versione automatica della build Maven.
 
 È possibile impostare la versione su `-SNAPSHOT` per le build o le implementazioni negli ambienti di staging e produzione. Cloud Manager imposta automaticamente un numero di versione corretto e crea un tag in Git. Se necessario, puoi fare riferimento a questo tag in un secondo momento.
 
-Ulteriori dettagli sulla gestione delle versioni sono [documentati qui](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/managing-code/project-version-handling).
+Ulteriori dettagli sulla gestione delle versioni sono [documentati qui](https://experienceleague.adobe.com/it/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/managing-code/project-version-handling).
 
 ## Come funziona il controllo delle versioni di pacchetti e bundle per le distribuzioni di staging e produzione? {#staging-production}
 
@@ -76,11 +76,11 @@ Nelle distribuzioni di staging e produzione, viene generata una versione automat
 
 Per il controllo delle versioni personalizzato per le distribuzioni negli ambienti di staging e produzione, imposta una versione Maven in tre parti appropriata, come ad esempio `1.0.0`. Aumenta il numero della versione per ogni esecuzione della distribuzione nell’ambiente di produzione.
 
-Cloud Manager aggiunge automaticamente la propria versione alle build per gli ambienti di staging e produzione e crea un ramo Git. Non è richiesta alcuna configurazione speciale. Se non si imposta una versione maven come descritto in precedenza, la distribuzione avviene comunque e viene impostata una versione automaticamente.
+Cloud Manager aggiunge automaticamente la versione alle build di staging e produzione e crea un ramo Git. Non è richiesta alcuna configurazione speciale. Se non si imposta una versione maven come descritto in precedenza, la distribuzione avviene comunque e viene impostata una versione automaticamente.
 
 ## L’esecuzione della build Maven non riesce per le distribuzioni di Cloud Manager, ma a livello locale non genera errori. Qual è il problema? {#maven-build-fail}
 
-Per ulteriori dettagli, vedi questa [risorsa Git](https://github.com/cqsupport/cloud-manager/blob/main/cm-build-step-fails.md).
+Per ulteriori dettagli, consulta questa [risorsa Git](https://github.com/cqsupport/cloud-manager/blob/main/cm-build-step-fails.md).
 
 ## Non riesco a impostare una variabile con un comando aio. Cosa si può fare? {#set-variable}
 

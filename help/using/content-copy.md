@@ -3,9 +3,9 @@ title: Strumento Copia contenuto
 description: Lo strumento Copia contenuto di Cloud Manager consente agli utenti di copiare contenuti modificabili su richiesta dagli ambienti di produzione AEM 6.x in hosting AMS in ambienti inferiori per test.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1144'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -119,8 +119,8 @@ Una volta creato un set di contenuti, puoi utilizzarlo per copiare il contenuto.
    >* L’utente non dispone delle autorizzazioni appropriate.
    >* L’ambiente dispone di una pipeline in esecuzione o di un’operazione di copia del contenuto in corso.
 
-1. Nella finestra di dialogo **Copia contenuto**, specifica gli ambienti di origine e di destinazione per l&#39;azione di copia del contenuto.
-   * Le aree dell’ambiente di destinazione devono essere uguali o un sottoinsieme delle aree dell’ambiente di origine.
+1. Nella finestra di dialogo **Copia contenuto**, specifica l’ambiente di origine e di destinazione dell’azione di copia del contenuto.
+   * Le aree dell’ambiente di destinazione devono essere simili a un sottoinsieme delle aree dell’ambiente di origine.
 
 1. Puoi scegliere di eliminare o mantenere i percorsi di esclusione nell’ambiente di destinazione. Seleziona la casella di controllo `Do not delete exclude paths from destination` per mantenere `exclude paths` specificati nel set di contenuti. Se la casella di controllo è deselezionata, i percorsi di esclusione vengono eliminati nell’ambiente di destinazione.
 
@@ -166,12 +166,12 @@ Lo strumento Copia contenuto presenta le seguenti limitazioni.
 * Non è possibile eseguire la copia del contenuto se è in esecuzione un’operazione attiva nell’ambiente di destinazione o di origine, ad esempio una pipeline CI/CD.
 * È possibile specificare fino a cinquanta percorsi per set di contenuti. Non ci sono limitazioni per i percorsi esclusi.
 * Lo strumento Copia contenuto non deve essere utilizzato come strumento di duplicazione o mirroring perché non può tenere traccia del contenuto spostato o eliminato nell’origine.
-* Una volta avviata, una copia del contenuto non può essere sospesa o annullata.
-* Lo strumento di copia del contenuto copia le risorse e i metadati Dynamic Medie dall’ambiente superiore a quello inferiore selezionato. Le risorse copiate devono quindi essere rielaborate utilizzando il [Flusso di lavoro di risorse di processo DAM](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/assets/using/assets-workflow) nell’ambiente inferiore per utilizzare la rispettiva configurazione di Dynamic Media.
+* Una volta avviata, una copia del contenuto non può essere messa in pausa o annullata.
+* Lo strumento Copia contenuto copia le risorse e i metadati di Dynamic Media, dall’ambiente superiore all’ambiente inferiore selezionato. Le risorse copiate devono quindi essere rielaborate utilizzando il [Flusso di lavoro di risorse di processo DAM](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/assets/using/assets-workflow) nell’ambiente inferiore per utilizzare la rispettiva configurazione di Dynamic Media.
 * Il processo di copia del contenuto è notevolmente più veloce quando la cronologia delle versioni non viene copiata.
-* [Le configurazioni Dynamic Medie con dimensioni delle risorse superiori a 2 GB abilitate](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/assets/dynamic/config-dms7#optional-config-dms7-assets-larger-than-2gb) non sono supportate.
+* [Le configurazioni Dynamic Media con dimensioni delle risorse superiori a 2 GB abilitate](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/assets/dynamic/config-dms7#optional-config-dms7-assets-larger-than-2gb) non sono supportate.
 * Quando la cronologia delle versioni non viene copiata, il processo di copia del contenuto risulta notevolmente più veloce.
-* Le aree dell’ambiente di destinazione devono essere uguali o un sottoinsieme delle aree dell’ambiente di origine.
+* Le aree dell’ambiente di destinazione devono essere simili a un sottoinsieme delle aree dell’ambiente di origine.
 
 ## Problemi noti {#known-issues}
 

@@ -1,28 +1,28 @@
 ---
 title: Configurazioni di Dispatcher
-description: Scopri come distribuire i file di configurazione di Dispatcher utilizzando Cloud Manager.
+description: Scopri come distribuire i file di configurazione di Dispatcher utilizzando Cloud Manager
 exl-id: ffc2b60e-bde7-48ca-b268-dea0f8fd4e30
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '575'
-ht-degree: 52%
+ht-degree: 100%
 
 ---
 
 
-# Configurazioni del Dispatcher {#manage-your-dispatcher-configurations}
+# Configurazioni di Dispatcher {#manage-your-dispatcher-configurations}
 
 Scopri come distribuire i file di configurazione di Dispatcher utilizzando Cloud Manager
 
 ## Distribuire le configurazioni di Dispatcher con Cloud Manager {#deploying-dispatcher-configurations}
 
-Cloud Manager è in grado di distribuire i file di configurazione del server web e del Dispatcher presupponendo che siano memorizzati nell’archivio Git insieme ai normali pacchetti di contenuti AEM.
+Cloud Manager è in grado di distribuire i file di configurazione del server web e di Dispatcher presupponendo che siano archiviati nell’archivio Git insieme ai normali pacchetti di contenuti AEM.
 
-Per sfruttare questa funzionalità, la build Maven deve produrre un file .zip contenente almeno due directory: `conf` e `conf.d`. Questo file .zip può essere prodotto utilizzando `maven-assembly-plugin`.
+Per sfruttare questa funzionalità, la build Maven deve generare un file .zip contenente almeno due directory: `conf` e `conf.d`. Questo file .zip può essere prodotto utilizzando `maven-assembly-plugin`.
 
-I progetti generati da Cloud Manager utilizzando [la procedura guidata per la creazione di progetti](/help/getting-started/using-the-wizard.md) integrata hanno la struttura di progetto Maven corretta, che viene creata automaticamente. Questo percorso è consigliato se hai poca esperienza con Adobe Managed Services (AMS).
+I progetti generati da Cloud Manager utilizzando [la procedura guidata per la creazione di progetti](/help/getting-started/using-the-wizard.md) integrata hanno la struttura di progetto Maven corretta, che viene creata automaticamente. Questo percorso è consigliato ai nuovi utenti di Adobe Managed Services (AMS).
 
-Quando esegui la distribuzione a un’istanza di Dispatcher, le directory sull’istanza vengono sostituite da quelle presenti nell’archivio Git. Poiché i file di configurazione del server Web e del Dispatcher richiedono spesso dettagli specifici dell&#39;ambiente, è necessario collaborare con il Customer Success Engineer (CSE) per impostare le variabili di ambiente appropriate in `/etc/sysconfig/httpd` prima di utilizzare correttamente questa funzione.
+Quando esegui l’implementazione in un’istanza di Dispatcher, le directory sull’istanza vengono sostituite da quelle presenti nell’archivio Git. Poiché i file di configurazione del server Web e di Dispatcher richiedono spesso dettagli specifici dell’ambiente, è necessario collaborare con il Customer Success Engineer (CSE) per impostare le variabili di ambiente appropriate in `/etc/sysconfig/httpd` prima di utilizzare correttamente questa funzione.
 
 ## Configurazione del Dispatcher per la clientela di Managed Service esistente {#steps-for-configuring-dispatcher}
 
@@ -32,13 +32,13 @@ Segui i passaggi seguenti per completare la configurazione iniziale del Dispatch
 1. Rimuovi i dati specifici dell’ambiente codificati, ad esempio l’IP del modulo di rendering di pubblicazione, e sostituiscili con delle variabili.
 1. Definisci le variabili richieste in coppie di valore chiave per ogni Dispatcher di destinazione e richiedi al tuo CSE di aggiungerle a `/etc/sysconfig/httpd` in ogni istanza.
 1. Verifica le configurazioni aggiornate nell’ambiente di staging.
-1. Una volta testate, richiedi al tuo CSE di implementarle nella produzione.
-1. Esegui il commit dei file nell’archivio Git.
+1. Una volta testate, richiedi al tuo CSE di implementarle in produzione.
+1. Invia i file al tuo archivio Git.
 1. Distribuisci tramite Cloud Manager.
 
 >[!NOTE]
 >
->La migrazione delle configurazioni di Dispatcher e server web all’archivio Git può essere eseguita durante l’onboarding di Cloud Manager, ma può anche essere eseguita in un secondo momento.
+>La migrazione dalle configurazioni di Dispatcher e del server web all’archivio Git può essere eseguita durante l’onboarding di Cloud Manager, o anche in un secondo momento.
 
 ### Esempio {#example}
 
@@ -48,7 +48,7 @@ La struttura specifica del file e della directory può variare in base alle spec
 
    È possibile utilizzare un nome qualsiasi, ma il nome della directory creato in questo passaggio deve essere lo stesso del nome utilizzato nel passaggio 6.
 
-1. Questa sottodirectory contiene un modulo Maven che crea il file Dispatcher .zip utilizzando il plug-in Maven Assembly. Nella directory `dispatcher`, creare un file `pom.xml` con questo contenuto, modificando il riferimento `parent`, `artifactId` e `name` come necessario.
+1. Questa sottodirectory contiene un modulo Maven che crea il file .zip di Dispatcher utilizzando il plug-in Maven Assembly. Nella directory `dispatcher`, crea un file `pom.xml` con questo contenuto, modificando il riferimento `parent`, `artifactId` e `name` in base alle esigenze.
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -113,7 +113,7 @@ La struttura specifica del file e della directory può variare in base alle spec
    </assembly>
    ```
 
-1. Creare una sottodirectory denominata `src` (come indicato nel descrittore dell&#39;assembly precedente nella riga 11) all&#39;interno della sottodirectory Dispatcher per archiviare le configurazioni effettive di Apache e Dispatcher. All’interno di questa directory `src`, crea directory denominate `conf`, `conf.d`, `conf.dispatcher.d` e `conf.modules.d`.
+1. Crea una sottodirectory denominata `src` (come indicato nel descrittore dell’assemblaggio precedente nella riga 11) all’interno della sottodirectory di Dispatcher per archiviare le configurazioni effettive di Apache e Dispatcher. All’interno di questa directory `src`, crea directory denominate `conf`, `conf.d`, `conf.dispatcher.d` e `conf.modules.d`.
 
 1. Popola le directory `conf`, `conf.d`, `conf.dispatcher.d` e `conf.modules.d` con i file di configurazione. Per esempio, la configurazione predefinita è costituita da questi file e collegamenti simbolici.
 
@@ -190,9 +190,9 @@ La struttura specifica del file e della directory può variare in base alle spec
            └── 02-dispatcher.conf
    ```
 
-1. Infine, nel file `pom.xml` nella directory principale del progetto, aggiungere un elemento `<module>` per includere il modulo Dispatcher.
+1. Infine, nel file `pom.xml` nella directory principale del progetto, aggiungi un elemento `<module>` per includere il modulo Dispatcher.
 
-   Ad esempio, se l’elenco dei moduli esistenti è il seguente:
+   Per esempio, se l’elenco dei moduli esistenti è il seguente:
 
    ```xml
        <modules>
@@ -202,7 +202,7 @@ La struttura specifica del file e della directory può variare in base alle spec
        </modules>
    ```
 
-   Modificalo come segue:
+   Modificalo nel modo seguente:
 
    ```xml
        <modules>

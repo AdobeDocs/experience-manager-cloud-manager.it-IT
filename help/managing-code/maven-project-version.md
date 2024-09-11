@@ -3,9 +3,9 @@ title: Gestione delle versioni dei progetti Maven
 description: Scopri come Maven gestisce il controllo delle versioni dei progetti in Cloud Manager.
 exl-id: a1d676e0-27cc-4b0d-8799-527c0520946a
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '249'
-ht-degree: 43%
+ht-degree: 100%
 
 ---
 
@@ -16,17 +16,17 @@ Scopri come Maven gestisce il controllo delle versioni dei progetti in Cloud Man
 
 ## Gestione delle versioni dei progetti in Maven {#how-maven}
 
-Per le distribuzioni di staging e produzione, Cloud Manager genera una versione univoca e incrementale.
+Per le distribuzioni di staging e di produzione, Cloud Manager genera una versione univoca e incrementale.
 
 Questa versione viene visualizzata nella pagina dei dettagli di esecuzione della pipeline e nella pagina dell’attività. Quando viene eseguita una build, il progetto Maven viene aggiornato per utilizzare questa versione. Nell’archivio Git viene creato un tag con tale versione come nome.
 
-Se la versione del progetto originale soddisfa determinati criteri, la versione del progetto Maven aggiornata unisce sia la versione del progetto originale che la versione generata da Cloud Manager. Tuttavia, il tag utilizza sempre la versione generata. Affinché tale unione si verifichi, la versione originale del progetto deve essere formata da esattamente tre segmenti di versione, ad esempio `1.0.0` o `1.2.3`, ma non `1.0` o `1`, mentre la versione originale non deve terminare con `-SNAPSHOT`.
+Se la versione del progetto originale soddisfa determinati criteri, la versione del progetto Maven aggiornata unirà sia la versione del progetto originale che la versione generata da Cloud Manager. Tuttavia, il tag utilizza sempre la versione generata. Affinché tale unione si verifichi, la versione originale del progetto deve essere formata da esattamente tre segmenti di versione, ad esempio `1.0.0` o `1.2.3`, ma non `1.0` o `1`, mentre la versione originale non deve terminare con `-SNAPSHOT`.
 
 >[!NOTE]
 >
->Il valore della versione del progetto originale deve essere impostato in modo statico nell&#39;elemento `<version>` del file `pom.xml` di primo livello nel ramo dell&#39;archivio Git.
+>Il valore della versione originale di questo progetto deve essere impostato in modo statico nell’elemento `<version>` del file `pom.xml` di livello superiore nel ramo dell’archivio Git.
 
-Se la versione originale soddisfa questi criteri, la versione generata viene aggiunta alla versione originale come segmento di nuova versione. Anche la versione generata viene leggermente modificata per includere l’ordinamento e la gestione delle versioni corrette. Ad esempio, supponendo una versione generata di `2019.926.121356.0000020490`:
+Se la versione originale soddisfa questi criteri, la versione generata viene aggiunta alla versione originale come segmento di nuova versione. Anche la versione generata verrà leggermente modificata per includere l’ordinamento e la gestione delle versioni corrette. Ad esempio, supponendo una versione generata di `2019.926.121356.0000020490`:
 
 | Versione | Versione in `pom.xml` | Commenti |
 | --- | --- | --- |

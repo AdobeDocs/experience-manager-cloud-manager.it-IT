@@ -3,9 +3,9 @@ title: Configurare il progetto
 description: Scopri come configurare il progetto in modo da gestirlo e distribuirlo con Cloud Manager.
 exl-id: ed994daf-0195-485a-a8b1-87796bc013fa
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1395'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ Scopri come configurare il progetto in modo da gestirlo e distribuirlo con Cloud
 Per poter essere generati e distribuiti correttamente con Cloud Manager, i progetti AEM esistenti devono rispettare alcune regole di base.
 
 * I progetti devono essere generati utilizzando Apache Maven.
-* Nella radice dell&#39;archivio Git deve essere presente un file `pom.xml`.
+* Nella directory principale dell’archivio Git deve essere presente un file `pom.xml`.
    * Il file `pom.xml` può fare riferimento a tutti i sottomoduli (che a loro volta possono avere altri sottomoduli), a seconda delle necessità.
    * Puoi aggiungere riferimenti ad altri archivi di artefatti Maven nei tuoi file `pom.xml`.
    * Quando configurato, l’accesso agli [archivi di artefatti protetti da password](#password-protected-maven-repositories) è supportato. Tuttavia, l’accesso agli archivi di artefatti protetti dalla rete non è supportato.
@@ -116,7 +116,7 @@ Gli artefatti provenienti da un archivio Maven protetto da password devono esser
 >
 >Gli artefatti degli archivi Maven protetti da password devono essere utilizzati solo in rari casi e per il codice non legato ad AEM.
 
-Per utilizzare un archivio Maven protetto da password da Cloud Manager, specifica la password (e facoltativamente il nome utente) come [Variabile pipeline](/help/getting-started/build-environment.md#pipeline-variables) segreta e quindi fai riferimento a tale segreto all&#39;interno di un file denominato `.cloudmanager/maven/settings.xml` nell&#39;archivio Git. Questo file segue lo schema del [File impostazioni di Maven](https://maven.apache.org/settings.html).
+Per utilizzare un archivio Maven protetto da password da Cloud Manager, specifica la password (e, facoltativamente, il nome utente) come [Variabile pipeline](/help/getting-started/build-environment.md#pipeline-variables) segreta e poi fai riferimento a tale segreto all’interno di un file denominato `.cloudmanager/maven/settings.xml` nell’archivio Git. Questo file segue lo schema del [File impostazioni di Maven](https://maven.apache.org/settings.html).
 
 All’avvio del processo di creazione di Cloud Manager, l’elemento `<servers>` in questo file verrà unito al file predefinito `settings.xml` fornito da Cloud Manager. I server personalizzati non devono utilizzare ID server che iniziano con `adobe` e `cloud-manager`. Tali ID sono considerati riservati. Cloud Manager esegue il mirroring solo degli ID server corrispondenti a uno dei prefissi specificati o all’ID predefinito `central`.
 
@@ -275,7 +275,7 @@ Con il `content-package-maven-plugin`, è simile:
 
 ## Riutilizzo di artefatto di build {#build-artifact-reuse}
 
-In molti casi, lo stesso codice viene distribuito in più ambienti AEM. Laddove possibile, Cloud Manager evita di ricostruire la base di codice quando rileva che viene utilizzato lo stesso commit Git in più esecuzioni di pipeline full-stack.
+In molti casi, lo stesso codice viene distribuito in più ambienti AEM. Quando possibile, Cloud Manager evita di ricostruire la base di codice quando rileva che lo stesso commit Git viene utilizzato in più esecuzioni di pipeline full-stack.
 
 All’avvio di un’esecuzione, viene estratto il commit HEAD corrente per la pipeline del ramo. L’hash del commit è visibile nell’interfaccia utente e tramite l’API. Al termine della fase di build, gli artefatti risultanti vengono archiviati in base a tale hash di commit e possono essere riutilizzati nelle esecuzioni successive della pipeline.
 
