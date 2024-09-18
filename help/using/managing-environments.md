@@ -3,9 +3,9 @@ title: Gestire gli ambienti
 description: Scopri come utilizzare Cloud Manager per gestire i tuoi ambienti.
 exl-id: 700b0b4c-1e1a-4993-b366-426b14a98f8e
 source-git-commit: 0b7c926120798e2fdb635752192f4ab2e12c1e24
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '273'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 

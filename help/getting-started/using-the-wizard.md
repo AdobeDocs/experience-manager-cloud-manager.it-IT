@@ -3,9 +3,9 @@ title: Utilizzo della procedura guidata Nuovo progetto
 description: Segui questa pagina per scoprire come utilizzare la procedura guidata per creare un progetto di applicazione AEM.
 exl-id: 9d7c6f4c-9379-471c-8dad-772a7099da54
 source-git-commit: 7bc874a8dd14544c22201ef2c470faab84d31f8b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '321'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 

@@ -3,9 +3,9 @@ title: Pipeline solo di staging e solo di produzione
 description: Scopri come suddividere le distribuzioni di staging e di produzione utilizzando pipeline dedicate.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
 source-git-commit: 03f7429fd2c4a6dd4c8ae3228eff9c8cdab1ded8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '932'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -28,7 +28,7 @@ Gli ambienti di staging e produzione sono strettamente associati. Per impostazio
 Le pipeline solo di staging e solo di produzione offrono soluzioni a questi casi d’uso fornendo opzioni di distribuzione dedicate.
 
 * **Pipeline di distribuzione solo di staging:** vengono distribuite solo in un ambiente di staging con l’esecuzione che termina una volta completati la distribuzione e i test. Una pipeline solo di staging si comporta in modo identico alla pipeline di produzione full stack standard associata, ma senza i passaggi di distribuzione di produzione (approvazione, pianificazione, distribuzione).
-* **Pipeline di distribuzione solo produzione:** distribuite solo in produzione selezionando l&#39;esecuzione della fase più recente con esito positivo. Quindi distribuendo i relativi artefatti in produzione. Le pipeline di sola produzione riutilizzano gli artefatti di distribuzione della fase, ignorando la fase di build.
+* **Pipeline di distribuzione per solo produzione:** vengono distribuite solo in produzione selezionando l’esecuzione della fase più recente completata correttamente. Quindi distribuendo i relativi artefatti in produzione. Le pipeline di sola produzione riutilizzano gli artefatti di distribuzione della fase, ignorando la fase di build.
 
 Le pipeline solo di staging e solo di produzione non vengono eseguite mentre è in corso una pipeline di produzione full stack e viceversa. Se sia la pipeline di produzione solo di staging che quella full stack dispongono del trigger **Cambiamenti su Git** configurato e indicano lo stesso ramo e archivio, viene avviata automaticamente la pipeline solo di staging. Le pipeline solo di produzione non avviano i **`On Git Changes`** perché non sono collegate direttamente a un archivio.
 
