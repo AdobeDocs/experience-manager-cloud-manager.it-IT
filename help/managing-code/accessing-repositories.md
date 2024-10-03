@@ -2,7 +2,7 @@
 title: Informazioni di accesso all’archivio
 description: Scopri come accedere e gestire gli archivi Git gestiti da Adobe utilizzando la gestione account Git self-service da Cloud Manager.
 exl-id: 1cc88c82-67c7-4553-a1b8-d2ab22be466c
-source-git-commit: b66eb29ab86b2a6acf3a1d92c217154d07b9cc1e
+source-git-commit: 04fbc4a3fdba8b108055d66a4fdb1a31994cb18e
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 47%
@@ -24,7 +24,7 @@ La finestra di dialogo **Informazioni archivio** consente di visualizzare le seg
 * L’URL dell’archivio Git di Cloud Manager.
 * Comandi Git predefiniti per aggiungere rapidamente un remoto all’archivio Git e inviare il codice.
 
-![Finestra dati archivio](assets/repository-info.png)
+  ![Finestra dati archivio](assets/repository-info.png)
 
 L’accesso alle informazioni degli [archivi privati](/help/managing-code/private-repositories.md) non è disponibile in Cloud Manager.
 

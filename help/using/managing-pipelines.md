@@ -1,18 +1,18 @@
 ---
 title: Gestire le pipeline
-description: Scopri come gestire, modificare, eseguire ed eliminare le pipeline esistenti.
+description: Scopri come gestire, eseguire, modificare ed eliminare le pipeline esistenti.
 exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
-source-git-commit: 8e2c57d2594691e7fb18d8a538caa9b54a26b6bb
-workflow-type: ht
+source-git-commit: 9d910e1b1a4aad000a8389ddc22ce380bbccd4ef
+workflow-type: tm+mt
 source-wordcount: '840'
-ht-degree: 100%
+ht-degree: 89%
 
 ---
 
 
 # Gestire le pipeline {#managing-pipelines}
 
-Scopri come gestire, modificare, eseguire ed eliminare le pipeline esistenti.
+Scopri come gestire, eseguire, modificare ed eliminare le pipeline esistenti.
 
 ## Scheda pipeline {#pipeline-card}
 
@@ -34,13 +34,13 @@ Nella parte inferiore dell’elenco delle pipeline sono disponibili le opzioni g
 * **Accesso a dati archivio**: consente di visualizzare le informazioni necessarie per accedere all’archivio Git di Cloud Manager.
 * **Ulteriori informazioni**: consente di accedere alle risorse della documentazione sulla pipeline CI/CD.
 
-## Finestra Pipeline {#pipelines}
+## Pagina Pipeline {#pipelines}
 
-La finestra **Pipeline** mostra un elenco completo di tutte le pipeline per il programma selezionato. Questo elenco è utile in quanto presenta informazioni più complete rispetto a quelle disponibili nella [Scheda pipeline](#pipeline-card).
+La pagina **Pipeline** mostra un elenco completo di tutte le pipeline per il programma selezionato. Questo elenco è utile in quanto presenta informazioni più complete rispetto a quelle disponibili nella [Scheda pipeline](#pipeline-card).
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione e il programma appropriati.
 
-1. Nella pagina **Panoramica del programma**, fai clic sulla scheda **Pipeline** per passare alla finestra **Pipeline**.
+1. Dalla pagina **Panoramica del programma**, fai clic sulla scheda **Pipeline** per passare alla pagina **Pipeline**.
 
 1. Qui puoi visualizzare un elenco di tutte le pipeline del programma, nonché avviare e interrompere l’esecuzione della pipeline come faresti nella **Scheda Pipeline**.
 
@@ -50,13 +50,13 @@ Facendo clic sull’icona `i` vengono visualizzati i dettagli sull’ultima o at
 
 Facendo clic su **Visualizza dettagli**, vieni reindirizzato ai [dettagli dell’esecuzione della pipeline](#view-details).
 
-## Finestra Attività {#activity}
+## Pagina attività {#activity}
 
-La finestra **Attività** mostra un elenco completo di tutte le esecuzioni di pipeline per il programma selezionato.
+La pagina **Attività** mostra un elenco completo di tutte le esecuzioni di pipeline per il programma selezionato.
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione e il programma appropriati.
 
-1. Nella pagina **Panoramica del programma**, fai clic sulla scheda **Attività** per passare alla finestra **Attività**.
+1. Dalla pagina **Panoramica programma**, fai clic sulla scheda **Attività** per passare alla pagina **Attività**.
 
 1. Qui puoi visualizzare un elenco di tutte le esecuzioni della pipeline del programma, comprese le esecuzioni correnti e quelle precedenti.
 
