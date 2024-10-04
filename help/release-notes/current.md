@@ -2,10 +2,10 @@
 title: Note sulla versione 2024.10.0 di Cloud Manager
 description: Queste sono le note sulla versione 2024.10.0 di Cloud Manager.
 feature: Release Information
-source-git-commit: 94d5f3487408f9d8908bb15221c48ef768390527
+source-git-commit: 74e8f7c0f3896e0e33a02b62c003db322c0d50d8
 workflow-type: tm+mt
-source-wordcount: '371'
-ht-degree: 26%
+source-wordcount: '369'
+ht-degree: 27%
 
 ---
 
@@ -67,6 +67,6 @@ Se desideri testare questa funzione e fornire un feedback, invia un&#39;e-mail a
 * text
 -->
 
-## Problemi noti {#known-issues}
+<!-- Known Issues {#known-issues}
 
-{{content-copy-known-issues}}
+ -->
