@@ -8,9 +8,9 @@ feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
 source-git-commit: 1209faf71edbd74cd87acfe24ec438b98ddd4a3a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '342'
-ht-degree: 71%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 71%
    + [Diritti di accesso](/help/requirements/access-rights.md)
    + [Archivio del codice sorgente](/help/requirements/source-code-repository.md)
    + [Autorizzazioni basate sul ruolo](/help/requirements/role-based-permissions.md)
-   + [Configurazione di utenti e ruoli](/help/requirements/users-and-roles.md)
+   + [Configurare utenti e ruoli](/help/requirements/users-and-roles.md)
    + [Autorizzazioni personalizzate](/help/using/custom-permissions.md)
    + [Provisioning dell’ambiente](/help/requirements/environment-provisioning.md)
 + Introduzione {#getting-started}
@@ -46,7 +46,7 @@ ht-degree: 71%
    + Pipeline CI/CD {#pipelines}
       + [Configurare una pipeline di produzione](/help/using/production-pipelines.md)
       + [Configurare una pipeline non di produzione](/help/using/non-production-pipelines.md)
-      + [Pipeline per la suddivisione dello stage e solo produzione (precoce adozione)](/help/using/stage-prod-only.md)
+      + [Suddivisione in pipeline di staging e pipeline solo di produzione (primi utilizzatori)](/help/using/stage-prod-only.md)
       + [Gestire le pipeline](/help/using/managing-pipelines.md)
    + [Distribuzione del codice](/help/using/code-deployment.md)
    + [Test della qualità del codice](/help/using/code-quality-testing.md)
@@ -57,12 +57,12 @@ ht-degree: 71%
    + [Notifiche](/help/using/notifications.md)
    + [Regole per la qualità del codice personalizzato](/help/using/custom-code-quality-rules.md)
    + [Copia contenuto](/help/using/content-copy.md)
-+ Gestisci codice {#managing-code}
++ Gestione del codice {#managing-code}
    + [Gestione degli archivi in Cloud Manager](/help/managing-code/managing-repositories.md)
    + [Informazioni di accesso all’archivio](/help/managing-code/accessing-repositories.md)
-   + [Aggiungere un archivio di Adobi](/help/managing-code/adobe-repositories.md)
+   + [Aggiungere un archivio di Adobe](/help/managing-code/adobe-repositories.md)
    + [Aggiungere un archivio privato](/help/managing-code/private-repositories.md)
-   + [Aggiungere un archivio esterno (Early Adopter)](/help/managing-code/external-repositories.md)
+   + [Aggiungere un archivio esterno (primi utilizzatori)](/help/managing-code/external-repositories.md)
    + [Supporto per i sottomoduli Git](/help/managing-code/git-submodules.md)
    + [Configurazione verifica GitHub](/help/managing-code/github-check-config.md)
    + [Annotazioni di verifica GitHub](/help/managing-code/github-annotations.md)

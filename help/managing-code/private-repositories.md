@@ -4,9 +4,9 @@ description: Scopri come configurare Cloud Manager per l’utilizzo di archivi G
 feature: Release Information
 exl-id: e0d103c9-c147-4040-bf53-835e93d78a0b
 source-git-commit: 5090d7ee9a6742d71122acda9901d074bc254305
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '818'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -98,7 +98,7 @@ Per tornare all’archivio in un secondo momento e completare la convalida, pass
 
 Dopo la convalida dell’archivio GitHub in Cloud Manager, l’integrazione è completata e puoi utilizzare l’archivio con Cloud Manager.
 
-**Per utilizzare archivi privati con Cloud Manager:**
+**Per utilizzare gli archivi privati con Cloud Manager:**
 
 1. Quando crei una richiesta pull, viene avviata automaticamente una verifica GitHub.
 

@@ -1,18 +1,18 @@
 ---
 title: Gestire le pipeline
-description: Scopri come gestire, eseguire, modificare ed eliminare le pipeline esistenti.
+description: Scopri come gestire, modificare, eseguire ed eliminare le pipeline esistenti.
 exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
 source-git-commit: 9d910e1b1a4aad000a8389ddc22ce380bbccd4ef
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '840'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
 
 # Gestire le pipeline {#managing-pipelines}
 
-Scopri come gestire, eseguire, modificare ed eliminare le pipeline esistenti.
+Scopri come gestire, modificare, eseguire ed eliminare le pipeline esistenti.
 
 ## Scheda pipeline {#pipeline-card}
 
@@ -40,7 +40,7 @@ La pagina **Pipeline** mostra un elenco completo di tutte le pipeline per il pro
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione e il programma appropriati.
 
-1. Dalla pagina **Panoramica del programma**, fai clic sulla scheda **Pipeline** per passare alla pagina **Pipeline**.
+1. Nella pagina **Panoramica del programma**, fai clic sulla scheda **Pipeline** per passare alla pagina **Pipeline**.
 
 1. Qui puoi visualizzare un elenco di tutte le pipeline del programma, nonché avviare e interrompere l’esecuzione della pipeline come faresti nella **Scheda Pipeline**.
 
@@ -50,13 +50,13 @@ Facendo clic sull’icona `i` vengono visualizzati i dettagli sull’ultima o at
 
 Facendo clic su **Visualizza dettagli**, vieni reindirizzato ai [dettagli dell’esecuzione della pipeline](#view-details).
 
-## Pagina attività {#activity}
+## Pagina Attività {#activity}
 
 La pagina **Attività** mostra un elenco completo di tutte le esecuzioni di pipeline per il programma selezionato.
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione e il programma appropriati.
 
-1. Dalla pagina **Panoramica programma**, fai clic sulla scheda **Attività** per passare alla pagina **Attività**.
+1. Nella pagina **Panoramica del programma**, fai clic sulla scheda **Attività** per passare alla pagina **Attività**.
 
 1. Qui puoi visualizzare un elenco di tutte le esecuzioni della pipeline del programma, comprese le esecuzioni correnti e quelle precedenti.
 
