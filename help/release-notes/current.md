@@ -1,27 +1,28 @@
 ---
 title: Note sulla versione 2024.11.0 di Cloud Manager
-description: Scopri la versione di Cloud Manager 2024.11.0.
+description: Ulteriori informazioni sulla versione di Cloud Manager 2024.11.0.
 feature: Release Information
-source-git-commit: 4c22de9fa675edcd743d7acce6c7a1def8efa414
-workflow-type: tm+mt
+exl-id: 811567af-66c9-4c1f-ae9e-60603b70ef80
+source-git-commit: bea7f2e6e7cab764312a800883d0785ff23fd8bf
+workflow-type: ht
 source-wordcount: '457'
-ht-degree: 65%
+ht-degree: 100%
 
 ---
 
 # Note sulla versione 2024.11.0 di Cloud Manager {#release-notes}
 
-Scopri la versione di [!UICONTROL Cloud Manager] 2024.11.0.
+Ulteriori informazioni sulla versione di [!UICONTROL Cloud Manager] 2024.11.0.
 
 >[!NOTE]
 >
->Consulta le [note sulla versione corrente di Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/home).
+>Consulta le [note sulla versione corrente di Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/it/docs/experience-manager-cloud-service/content/release-notes/home).
 
-## Date di rilascio {#release-date}
+## Date di pubblicazione {#release-date}
 
 <!-- SAVE FOR FUTURE POSSIBLE USE No notable bugs or features for the September release of Cloud Manager. -->
 
-La data di rilascio per [!UICONTROL Cloud Manager] 2024.11.0 è il 7 novembre 2024.
+Data di rilascio della versione 2024.11.0 di [!UICONTROL Cloud Manager] è il 7 novembre 2024.
 
 La prossima versione pianificata è il 5 dicembre 2024.
 
@@ -57,8 +58,8 @@ Se ti interessa testare questa nuova funzione e fornire un feedback, invia un’
 
 ## Correzioni di bug
 
-* Ora viene risolto un bug in AEM Cloud Manager che causava un errore &quot;403&quot; durante gli aggiornamenti dello stato per le operazioni di copia del contenuto. Questo problema, attribuito a un indirizzo IP di ingresso non configurato correttamente, impediva la propagazione dello stato e causava la visualizzazione indefinita di alcune attività di copia dei contenuti, che richiedevano l’annullamento manuale. La correzione ora garantisce la corretta generazione di rapporti sullo stato e un’esecuzione più fluida delle attività di copia del contenuto. <!-- (CMGR-62739) -->
-* Un aggiornamento recente ha risolto un problema in SonarQube a causa del quale in alcuni casi non venivano rilevate password hardcoded. La correzione ora include un controllo pattern espanso e si allinea agli standard di rilevamento predefiniti in SonarQube. <!-- CMGR-62682 -->
+* È stato risolto un bug in AEM Cloud Manager che causava un errore &quot;403&quot; durante gli aggiornamenti dello stato per le operazioni di copia del contenuto. Questo problema, attribuito a un indirizzo IP di ingresso non configurato correttamente, impediva la propagazione dello stato e mostrava l’esecuzione di alcune attività di copia dei contenuti indefinitamente intermittente, richiedendo l’annullamento manuale. Con questa correzione, i rapporti sullo stato verranno generati correttamente e le attività di copia dei contenuti verranno eseguiti in modo più fluido. <!-- (CMGR-62739) -->
+* Un aggiornamento recente ha risolto un problema in SonarQube a causa del quale in alcuni casi non venivano rilevate le password hardcoded. La correzione ora include un controllo pattern espanso e si allinea agli standard di rilevamento predefiniti in SonarQube. <!-- CMGR-62682 -->
 
 <!-- Known Issues {#known-issues}
 
