@@ -1,13 +1,13 @@
 ---
 title: Aggiungere archivi esterni in Cloud Manager (primi utilizzatori)
 description: Scopri come aggiungere un archivio esterno in Cloud Manager. Cloud Manager supporta l’integrazione con gli archivi GitHub, GitLab e Bitbucket.
-source-git-commit: 054c214be3c8c6e8a8bd4691b70ae2098263ef5b
-workflow-type: ht
-source-wordcount: '740'
-ht-degree: 100%
+exl-id: 4500cacc-5e27-4bbb-b8f6-5144dac7e6da
+source-git-commit: e7e2268f866105970e02d4bc54c46613749e5ac0
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
-
 
 # Aggiungere archivi esterni in Cloud Manager {#external-repositories}
 
@@ -98,5 +98,9 @@ Dopo la convalida, l’archivio esterno è pronto per essere utilizzato e colleg
 
 ## Limitazioni
 
-* Gli archivi esterni non possono essere collegati alle pipeline di configurazione.
-* Con le pipeline che utilizzano archivi esterni (esclusi gli archivi ospitati da GitHub) e l&#39;opzione **Trigger di implementazione** impostata su [!UICONTROL **Cambiamenti su Git**], i trigger non vengono avviati automaticamente. Devono essere avviati manualmente.
+Gli archivi esterni non possono essere collegati alle pipeline di configurazione.
+
+<!-- THIS BULLET REMOVED AS PER https://wiki.corp.adobe.com/display/DMSArchitecture/Cloud+Manager+2024.12.0+Release. THEY CAN NOW START AUTOMATICALLY
+
+* Pipelines using external repositories (excluding GitHub-hosted repositories) and the **Deployment Trigger** option [!UICONTROL **On Git Changes**], triggers are not automatically started. They must be manually started. -->
+

@@ -1,18 +1,19 @@
 ---
-title: Note sulla versione 2024.11.0 di Cloud Manager
-description: Ulteriori informazioni sulla versione di Cloud Manager 2024.11.0.
+title: Note sulla versione 2024.12.0 di Cloud Manager
+description: Scopri la versione di Cloud Manager Adobe 2024.12.0 su Managed Services.
 feature: Release Information
-exl-id: 811567af-66c9-4c1f-ae9e-60603b70ef80
-source-git-commit: bea7f2e6e7cab764312a800883d0785ff23fd8bf
-workflow-type: ht
-source-wordcount: '457'
-ht-degree: 100%
+source-git-commit: e7e2268f866105970e02d4bc54c46613749e5ac0
+workflow-type: tm+mt
+source-wordcount: '349'
+ht-degree: 66%
 
 ---
 
-# Note sulla versione 2024.11.0 di Cloud Manager {#release-notes}
+# Note sulla versione per Cloud Manager Adobe 2024.12.0 su Managed Services {#release-notes}
 
-Ulteriori informazioni sulla versione di [!UICONTROL Cloud Manager] 2024.11.0.
+<!-- RELEASE WIKI  https://wiki.corp.adobe.com/display/DMSArchitecture/Cloud+Manager+2024.12.0+Release -->
+
+Scopri la versione di [!UICONTROL Cloud Manager] 2024.12.0 su Adobe Managed Services.
 
 >[!NOTE]
 >
@@ -22,13 +23,13 @@ Ulteriori informazioni sulla versione di [!UICONTROL Cloud Manager] 2024.11.0.
 
 <!-- SAVE FOR FUTURE POSSIBLE USE No notable bugs or features for the September release of Cloud Manager. -->
 
-Data di rilascio della versione 2024.11.0 di [!UICONTROL Cloud Manager] è il 7 novembre 2024.
+La data di pubblicazione della versione 2024.12.0 di [!UICONTROL Cloud Manager] è il venerdì 5 dicembre 2024.
 
-La prossima versione pianificata è il 5 dicembre 2024.
+La prossima versione pianificata è gennaio 2024.
 
 ## Novità {#what-is-new}
 
-* Quando le pagine vengono reindirizzate a un altro dominio durante il test delle prestazioni, i risultati del test per tali pagine vengono esclusi, in quanto non rappresentano con precisione le prestazioni effettive. <!-- (CMGR-5637) -->
+* Il passaggio per la qualità del codice AEM ora utilizza SonarQube 9.9 Server, sostituendo la precedente versione 7.4. Questo aggiornamento offre sicurezza, prestazioni e controlli di qualità del codice aggiuntivi, oltre a un’analisi e una copertura più complete per i progetti. <!-- CMGR-45683 -->
 
 ## Programma per i primi utilizzatori {#early-adoption}
 
@@ -38,7 +39,9 @@ Partecipa al programma per i primi utilizzatori di Cloud Manger e concediti la p
 
 <!-- BOTH CS & AMS -->
 
-La funzionalità **Bring Your Own Git** è stata estesa in modo da includere il supporto per archivi esterni come GitLab e Bitbucket. Questo nuovo supporto si aggiunge a quello già esistente per archivi GitHub privati ed aziendali. Quando aggiungi questi nuovi archivi, puoi anche collegarli direttamente alle pipeline. Puoi inoltre ospitare questi archivi sia su piattaforme cloud pubbliche sia all’interno della tua infrastruttura o del tuo cloud privato. Questa integrazione elimina anche la necessità di sincronizzare continuamente il codice con l’archivio Adobe e offre la possibilità di convalidare le richieste pull prima di unirle in un ramo principale.
+La funzionalità **Porta il tuo Git** è stata espansa per includere il supporto per archivi esterni, come GitLab e Bitbucket. Questo nuovo supporto si aggiunge a quello già esistente per archivi GitHub privati ed aziendali. Quando aggiungi questi nuovi archivi, puoi anche collegarli direttamente alle pipeline. Puoi inoltre ospitare questi archivi sia su piattaforme cloud pubbliche sia all’interno della tua infrastruttura o del tuo cloud privato. Questa integrazione elimina anche la necessità di sincronizzare continuamente il codice con l’archivio Adobe e offre la possibilità di convalidare le richieste pull prima di unirle in un ramo principale.
+
+Le pipeline che utilizzano archivi esterni (esclusi quelli ospitati da GitHub) e il **Trigger di distribuzione** impostato su **Su modifiche Git** ora vengono avviate automaticamente.
 
 Consulta [Aggiungere archivi esterni in Cloud Manager](/help/managing-code/external-repositories.md).
 
@@ -50,17 +53,11 @@ Consulta [Aggiungere archivi esterni in Cloud Manager](/help/managing-code/exter
 
 Se ti interessa testare questa nuova funzione e condividere il tuo feedback, invia un’e-mail a [Grp-CloudManager_BYOG@adobe.com](mailto:Grp-CloudManager_BYOG@adobe.com) dall’indirizzo e-mail associato al tuo Adobe ID. Se ti trovi in una struttura di archivio privata/pubblica o aziendale, assicurati di specificare la piattaforma Git che desideri utilizzare.
 
-### Pipeline solo di staging e solo di produzione {#staging-production-only-pipelines}
 
-Adobe annuncia l’introduzione del supporto per [pipeline solo di staging e solo di produzione](/help/using/stage-prod-only.md). Questa nuova funzione consente di suddividere le pipeline di distribuzione in produzione full stack in implementazioni più piccole e specializzate.
+<!-- ## Bug fixes {#bug-fixes}
 
-Se ti interessa testare questa nuova funzione e fornire un feedback, invia un’e-mail a [Grp-cloudmanager_splitpipelines@adobe.com](mailto:Grp-cloudmanager_splitpipelines@adobe.com) utilizzando l’indirizzo e-mail associato al tuo Adobe ID.
+* A
 
-## Correzioni di bug
-
-* È stato risolto un bug in AEM Cloud Manager che causava un errore &quot;403&quot; durante gli aggiornamenti dello stato per le operazioni di copia del contenuto. Questo problema, attribuito a un indirizzo IP di ingresso non configurato correttamente, impediva la propagazione dello stato e mostrava l’esecuzione di alcune attività di copia dei contenuti indefinitamente intermittente, richiedendo l’annullamento manuale. Con questa correzione, i rapporti sullo stato verranno generati correttamente e le attività di copia dei contenuti verranno eseguiti in modo più fluido. <!-- (CMGR-62739) -->
-* Un aggiornamento recente ha risolto un problema in SonarQube a causa del quale in alcuni casi non venivano rilevate le password hardcoded. La correzione ora include un controllo pattern espanso e si allinea agli standard di rilevamento predefiniti in SonarQube. <!-- CMGR-62682 -->
-
-<!-- Known Issues {#known-issues}
+Known Issues {#known-issues}
 
 * A -->
