@@ -1,20 +1,20 @@
 ---
 title: Strumento Copia contenuto
-description: Lo strumento Copia contenuto di Cloud Manager consente agli utenti di copiare contenuti modificabili su richiesta dagli ambienti di produzione AEM 6.x in hosting AMS in ambienti inferiori per test.
+description: Lo strumento di copia dei contenuti di Cloud Manager Adobe consente agli utenti di copiare contenuti mutabili On-demand dagli ambienti di produzione Adobe Experience Manager 6.x ospitati da Managed Services in ambienti più bassi per i test.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
-source-wordcount: '1144'
-ht-degree: 100%
+source-git-commit: de9cfaa07dc9ff4a6d1cb200d14c5e776d27767d
+workflow-type: tm+mt
+source-wordcount: '1363'
+ht-degree: 42%
 
 ---
 
 
 # Strumento Copia contenuto {#content-copy}
 
-Lo strumento Copia contenuto di Cloud Manager consente agli utenti di copiare contenuti modificabili su richiesta dagli ambienti di produzione AEM 6.x in hosting AMS in ambienti inferiori per test.
+Lo strumento di copia dei contenuti di Cloud Manager Adobe consente agli utenti di copiare contenuti mutabili On-demand dagli ambienti di produzione Adobe Experience Manager 6.x ospitati da Managed Services in ambienti più bassi per i test.
 
-## Introduzione {#introduction}
+## Informazioni sullo strumento Copia contenuto{#introduction}
 
 I dati attuali e reali sono utili a scopo di test, convalida e accettazione da parte degli utenti. Lo strumento Copia contenuto consente di copiare contenuti dall’ambiente di produzione AEM 6.x in hosting AMS a un ambiente di staging o sviluppo. Questo flusso di lavoro supporta vari scenari di test.
 
@@ -39,124 +39,135 @@ Durante la copia del contenuto, l’ambiente di origine è l’origine di riferi
 
 Per utilizzare lo strumento di copia del contenuto, all’utente deve essere assegnato il ruolo di **Responsabile della distribuzione** negli ambienti di origine e di destinazione.
 
-## Creazione di un set di contenuti {#create-content-set}
+## Creare un set di contenuti {#create-content-set}
 
 Prima di poter copiare qualsiasi contenuto, è necessario definire un set di contenuti. Una volta definiti, i set di contenuti possono essere riutilizzati per copiare il contenuto. Per creare un set di contenuti, effettua le seguenti operazioni.
 
+**Per creare un set di contenuti:**
+
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione e il programma appropriati.
 
-1. Dalla pagina **Panoramica**, passa alla schermata **Ambienti**.
+1. Nell&#39;angolo superiore sinistro della pagina fare clic su ![Mostra icona menu](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) per aprire il menu sul lato sinistro.
 
-1. Dalla schermata **Ambienti**, passa alla pagina **Set di contenuti**.
+1. Dal menu a sinistra, nella pagina **Servizi**, fare clic sull&#39;icona ![Casella ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Box_18_N.svg) **Set di contenuti**.
 
-1. Vicino alla parte in alto a destra della schermata, fai clic su **Aggiungi set di contenuti**.
+1. Fare clic su **Aggiungi set di contenuti** nell&#39;angolo superiore destro della pagina.
 
    ![Set di contenuti](/help/assets/content-sets.png)
 
-1. Nella scheda **Dettagli** della procedura guidata, assegna un nome e una descrizione per il set di contenuti quindi fai clic su **Continua**.
+1. Nella finestra di dialogo **Aggiungi set di contenuti**, nella scheda **Dettagli**, nei campi **Nome** e **Descrizione**, digitare un nome e una descrizione facoltativa per il set di contenuti, quindi fare clic su **Continua**.
 
    ![Dettagli dei set di contenuti](/help/assets/add-content-set-details.png)
 
-1. Nella scheda **Percorsi del contenuto** della procedura guidata, specifica i percorsi del contenuto modificabile da includere nel set di contenuti.
+1. Nella scheda **Percorsi contenuto**, nel campo di testo **Percorso**, specificare il percorso del contenuto che può essere modificato e che deve essere incluso nel set di contenuti.
 
-   1. Immetti il percorso nel campo **Aggiungi percorso di inclusione**.
-   1. Fai clic su **Aggiungi percorso** per aggiungere il percorso al set di contenuti.
-   1. Se necessario, fai di nuovo clic su **Aggiungi percorso**.
+   Solo i percorsi che iniziano con `/content`, `/conf`, `/etc`, `/var/workflow/models` o `/var/commerce` possono essere inclusi.
+
+1. Fai clic sull&#39;icona **![Aggiungi cartella](https://spectrum.adobe.com/static/icons/workflow_18/Smock_FolderAdd_18_N.svg) Aggiungi percorso** per aggiungere (o includere) il percorso al set di contenuti.
+
+1. (Facoltativo) Se necessario, aggiungi percorsi aggiuntivi (fino a 50) ripetendo i due passaggi precedenti. In caso contrario, procedere al passaggio successivo.
 
    ![Aggiungi percorsi al set di contenuti](/help/assets/add-content-set-paths.png)
 
-1. Se devi perfezionare o limitare il set di contenuti, è possibile escludere i percorsi secondari.
+1. (Facoltativo) Per limitare il set di contenuti, puoi facoltativamente specificare percorsi secondari all’interno di un percorso di contenuto incluso che deve essere escluso.
 
-   1. Nell’elenco dei percorsi inclusi, fai clic sull’icona **Aggiungi percorsi secondari di esclusione** accanto al percorso da limitare.
-   1. Inserisci il percorso secondario da escludere dal percorso selezionato.
-   1. Fai clic su **Escludi percorso**.
-   1. Fai clic di nuovo su **Aggiungi percorsi secondari di esclusione** per aggiungere altri percorsi da escludere, in base alle esigenze.
+   1. A destra di un percorso di contenuto incluso che si desidera limitare, fare clic su ![Icona eliminazione cartella](https://spectrum.adobe.com/static/icons/workflow_18/Smock_FolderDelete_18_N.svg).
+   1. Nel campo di testo, digitate un percorso relativo al percorso principale visualizzato nella finestra di dialogo.
+   1. Fai clic sull&#39;icona ![Elimina cartella](https://spectrum.adobe.com/static/icons/workflow_18/Smock_FolderDelete_18_N.svg) **Escludi percorso**.
+   1. Se necessario, ripetere i punti da i. a iii. qui sopra per aggiungere altri percorsi di esclusione; non vi sono limitazioni. In caso contrario, procedere al passaggio successivo.
 
    ![Esclusione dei percorsi](/help/assets/add-content-set-paths-excluded.png)
 
-1. Se necessario, è possibile modificare i percorsi specificati.
+1. (Facoltativo) Effettuate una delle seguenti operazioni:
 
-   1. Fai clic su `X` accanto ai percorsi secondari esclusi per eliminarli.
-   1. Fai clic sul pulsante con i puntini di sospensione accanto ai percorsi per visualizzare le opzioni **Modifica** ed **Elimina**.
+   1. Fai clic sull&#39;icona ![Dimensioni incrociate 500](https://spectrum.adobe.com/static/icons/ui_18/CrossSize500.svg) a destra di un percorso secondario escluso per eliminarlo.
+   1. Fai clic sull&#39;icona ![Altro](https://spectrum.adobe.com/static/icons/ui_18/More.svg) a destra di un percorso di contenuto incluso, quindi fai clic su **Modifica** o **Elimina**.
 
    ![Modifica dell’elenco dei percorsi](/help/assets/add-content-set-excluded-paths.png)
 
-1. Fai clic su **Crea** per creare il set di contenuti.
+1. Fai clic su **Crea**.
 
-Il set di contenuti può ora essere utilizzato per copiare il contenuto tra ambienti diversi.
+Ora puoi utilizzare il set di contenuti per copiare i contenuti da un ambiente all’altro.
 
->[!NOTE]
->
->Puoi aggiungere fino a 50 percorsi in un set di contenuti.
->Non ci sono limitazioni per i percorsi esclusi.
+## Modificare o eliminare un set di contenuti {#edit-content-set}
 
-## Modifica di un set di contenuti {#edit-content-set}
+Quando modifichi un set di contenuti, potrebbe essere necessario espandere i percorsi configurati per visualizzare i percorsi secondari esclusi.
 
-Segui passaggi simili a quelli effettuati per la creazione del contenuto. Invece di fare clic su **Aggiungi set di contenuti**, seleziona un set esistente dalla console e quindi seleziona **Modifica** dal menu con i puntini di sospensione.
-
-![Modifica set di contenuti](/help/assets/edit-content-set.png)
-
-Quando modifichi il set di contenuti, potrebbe essere necessario espandere i percorsi configurati per visualizzare i percorsi secondari esclusi.
-
-## Copia contenuto {#copy-content}
-
-Una volta creato un set di contenuti, puoi utilizzarlo per copiare il contenuto. Per copiare il contenuto, effettua le seguenti operazioni.
+**Per modificare o eliminare un set di contenuti:**
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione e il programma appropriati.
 
-1. Dalla pagina **Panoramica**, passa alla schermata **Ambienti**.
+1. Nell&#39;angolo superiore sinistro della pagina fare clic su ![Mostra icona menu](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) per aprire il menu sul lato sinistro.
 
-1. Dalla schermata **Ambienti**, passa alla pagina **Set di contenuti**.
+1. Dal menu a sinistra, in **Servizi**, fare clic sull&#39;icona ![Casella ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Box_18_N.svg) **Set di contenuti**.
 
-1. Seleziona un set di contenuti dalla console e seleziona **Copia contenuto** dal menu con i puntini di sospensione.
+1. Nella tabella della pagina **Set di contenuti**, fai clic sull&#39;icona ![Altro](https://spectrum.adobe.com/static/icons/ui_18/More.svg) a destra di un percorso di contenuto incluso, quindi fai clic su **Modifica** o **Elimina**.
+
+![Modifica set di contenuti](/help/assets/edit-content-set.png)
+
+
+## Copia contenuto {#copy-content}
+
+Dopo aver creato un set di contenuti, puoi utilizzarlo per copiare il contenuto.
+
+Un ambiente potrebbe non essere disponibile per la selezione se si verifica una delle seguenti condizioni:
+
+* L’utente non dispone delle autorizzazioni necessarie.
+* Nell’ambiente è attualmente in esecuzione una pipeline o un’operazione di copia del contenuto.
+
+**Per copiare il contenuto:**
+
+1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione e il programma appropriati.
+
+1. Nell&#39;angolo superiore sinistro della pagina fare clic su ![Mostra icona menu](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) per aprire il menu sul lato sinistro.
+
+1. Dal menu a sinistra, in **Servizi**, fare clic sull&#39;icona ![Casella ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Box_18_N.svg) **Set di contenuti**.
+
+1. Nella tabella della pagina **Set di contenuti**, a destra di un percorso di contenuto incluso che si desidera copiare, fare clic sull&#39;icona ![Altro](https://spectrum.adobe.com/static/icons/ui_18/More.svg), quindi su **Copia contenuto**.
 
    ![Copia contenuto](/help/assets/copy-content.png)
 
-   >[!NOTE]
-   >
-   >Un ambiente può non essere selezionabile se:
-   >
-   >* L’utente non dispone delle autorizzazioni appropriate.
-   >* L’ambiente dispone di una pipeline in esecuzione o di un’operazione di copia del contenuto in corso.
+1. Nella finestra di dialogo **Copia contenuto**, seleziona l&#39;ambiente **Source** e l&#39;ambiente **Destinazione** per l&#39;azione di copia del contenuto.
 
-1. Nella finestra di dialogo **Copia contenuto**, specifica l’ambiente di origine e di destinazione dell’azione di copia del contenuto.
-   * Le aree dell’ambiente di destinazione devono essere simili a un sottoinsieme delle aree dell’ambiente di origine.
+   * Le aree in un ambiente di destinazione devono essere un sottoinsieme di aree in un ambiente di origine.
+   * I problemi di compatibilità vengono verificati prima di eseguire un’azione di copia del contenuto. Quando si seleziona l&#39;ambiente **Destination**, il sistema convalida automaticamente gli ambienti di origine e di destinazione. Se la convalida non riesce, il processo viene interrotto e nella finestra di dialogo viene visualizzato un messaggio di errore che spiega il motivo dell&#39;errore.
 
-1. Puoi scegliere di eliminare o mantenere i percorsi di esclusione nell’ambiente di destinazione. Seleziona la casella di controllo `Do not delete exclude paths from destination` per mantenere `exclude paths` specificati nel set di contenuti. Se la casella di controllo è deselezionata, i percorsi di esclusione vengono eliminati nell’ambiente di destinazione.
+1. (Facoltativo) Effettuate una delle seguenti operazioni:
 
-1. Puoi scegliere di copiare la cronologia delle versioni dei percorsi copiati dall’ambiente di origine a quello di destinazione. Seleziona la casella di controllo `Copy Versions` se desideri copiare tutte le cronologie delle versioni.
+   1. Per *mantenere* i percorsi esclusi nell&#39;ambiente di destinazione, selezionare **`Do not delete exclude paths from destination`**. Questa impostazione mantiene intatti i percorsi esclusi specificati nel set di contenuti.
+   1. Per *rimuovere* i percorsi esclusi nell&#39;ambiente di destinazione, deselezionare **`Do not delete exclude paths from destination`**. Questa impostazione elimina i percorsi esclusi specificati nel set di contenuti.
+   1. Per copiare la cronologia delle versioni dei percorsi dall&#39;ambiente di origine all&#39;ambiente di destinazione, selezionare **Copia versioni**.
 
-   ![Copia del contenuto](/help/assets/copying-content.png)
+      ![Copia del contenuto](/help/assets/copying-content.png)
 
-1. Fai clic su **Copia**.
+1. Fai clic su **Copia**. Lo stato del processo di copia si riflette nella console del set di contenuti selezionato.
 
-Viene avviato il processo di copia. Lo stato del processo di copia si riflette nella console del set di contenuti selezionato.
-
-## Attività copia contenuto {#copy-activity}
+## Monitorare lo stato dell’attività di copia del contenuto {#copy-activity}
 
 Puoi monitorare lo stato dei processi di copia nella pagina **Attività copia contenuto**.
 
-1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/), quindi seleziona l’organizzazione e il programma appropriati.
+**Monitoraggio dello stato dell&#39;attività di copia del contenuto:**
 
-1. Dalla pagina **Panoramica**, passa alla schermata **Ambienti**.
+1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione e il programma appropriati.
 
-1. Dalla schermata **Ambienti**, passa alla pagina **Attività copia contenuto**.
+1. Nell&#39;angolo superiore sinistro della pagina fare clic su ![Mostra icona menu](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) per aprire il menu sul lato sinistro.
 
-![Attività copia contenuto](/help/assets/copy-content-activity.png)
+1. Dal menu a sinistra, in **Servizi**, fare clic sull&#39;icona ![Cronologia ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_History_18_N.svg) **Copia attività contenuto**.
 
-### Stati della copia del contenuto {#statuses}
+   ![Attività copia contenuto](/help/assets/copy-content-activity.png)
 
-Una volta iniziata la copia del contenuto, il processo può trovarsi in uno dei seguenti stati.
+   Un processo di copia del contenuto può avere uno dei seguenti stati:
 
-| Stato | Descrizione |
-|---|---|
-| In corso | Operazione di copia del contenuto in corso |
-| Non riuscito | Operazione di copia del contenuto non riuscita |
-| Completato | Operazione di copia del contenuto completata |
+   | Stato | Descrizione |
+   | --- | --- |
+   | In corso | L’operazione di copia del contenuto è in corso. |
+   | Completato | Operazione di copia del contenuto completata. |
+   | Non riuscito | Copia del contenuto non riuscita. |
+
 
 ## Limitazioni {#limitations}
 
-Lo strumento Copia contenuto presenta le seguenti limitazioni.
+Lo strumento di copia del contenuto presenta le seguenti limitazioni:
 
 * Non è possibile eseguire una copia del contenuto da un ambiente inferiore a un ambiente superiore.
 * La copia del contenuto può essere eseguita solo all’interno dello stesso livello. Vale a dire, autore-autore o pubblicazione-pubblicazione.
