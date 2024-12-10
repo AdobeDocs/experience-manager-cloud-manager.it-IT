@@ -2,9 +2,9 @@
 title: Copia dei contenuti per coerenza ambiente
 description: La funzione di copia dei contenuti in Cloud Manager Adobe consente agli utenti di copiare contenuti mutabili on-demand dagli ambienti di produzione Adobe Experience Manager 6.x ospitati da Managed Services in ambienti più bassi per eseguire test.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 228006b424504306e916014bbe8543dc41ba43b5
+source-git-commit: 16cc1aa0ff45126df9100f337b6259a3f248038f
 workflow-type: tm+mt
-source-wordcount: '1312'
+source-wordcount: '1321'
 ht-degree: 33%
 
 ---
@@ -35,7 +35,7 @@ Durante la copia del contenuto, l’ambiente di origine è l’origine di riferi
 * Se modifichi il contenuto nell’ambiente di destinazione e i percorsi corrispondono, viene sovrascritto dal contenuto di origine.
 * Se i percorsi sono diversi, il contenuto dell’origine viene unito al contenuto della destinazione.
 
-## Autorizzazioni {#permissions}
+### Autorizzazioni {#permissions}
 
 Per utilizzare la funzione Copia contenuto, l&#39;utente deve essere assegnato al ruolo **Responsabile della distribuzione** negli ambienti di origine e di destinazione.
 
@@ -142,11 +142,11 @@ Un ambiente potrebbe non essere disponibile per la selezione se si verifica una 
 
 1. Fai clic su **Copia**. Lo stato del processo di copia si riflette nella console del set di contenuti selezionato.
 
-## Monitorare lo stato della copia del contenuto {#copy-activity}
+## Controllare lo stato di una copia del contenuto {#copy-activity}
 
 Puoi monitorare lo stato dei processi di copia nella pagina **Attività copia contenuto**.
 
-**Monitoraggio dello stato della copia del contenuto:**
+**Per controllare lo stato di una copia del contenuto:**
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione e il programma appropriati.
 
@@ -179,6 +179,6 @@ Puoi monitorare lo stato dei processi di copia nella pagina **Attività copia co
 * [Le configurazioni Dynamic Media con dimensioni delle risorse superiori a 2 GB abilitate](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/assets/dynamic/config-dms7#optional-config-dms7-assets-larger-than-2gb) non sono supportate.
 * Le aree dell’ambiente di destinazione devono essere simili a un sottoinsieme delle aree dell’ambiente di origine.
 
-## Problemi noti {#known-issues}
+## Problemi noti della copia del contenuto {#known-issues}
 
 {{content-copy-known-issues}}
