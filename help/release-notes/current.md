@@ -1,20 +1,20 @@
 ---
 title: Note sulla versione 2024.12.0 di Cloud Manager
-description: Scopri la versione di Cloud Manager Adobe 2024.12.0 su Managed Services.
+description: Ulteriori informazioni sulla versione 2024.12.0 di Cloud Manager su Adobe Managed Services.
 feature: Release Information
 exl-id: 811567af-66c9-4c1f-ae9e-60603b70ef80
 source-git-commit: e266a4192e2a897f142a6c83ae5766483946320d
 workflow-type: tm+mt
 source-wordcount: '312'
-ht-degree: 75%
+ht-degree: 100%
 
 ---
 
-# Note sulla versione per Cloud Manager Adobe 2024.12.0 su Managed Services {#release-notes}
+# Note sulla versione di Cloud Manager 2024.12.0 su Adobe Managed Services {#release-notes}
 
 <!-- RELEASE WIKI  https://wiki.corp.adobe.com/display/DMSArchitecture/Cloud+Manager+2024.12.0+Release -->
 
-Scopri la versione di [!UICONTROL Cloud Manager] 2024.12.0 su Adobe Managed Services.
+Ulteriori informazioni sulla versione di [!UICONTROL Cloud Manager] 2024.12.0 su Adobe Managed Services.
 
 >[!NOTE]
 >
@@ -24,7 +24,7 @@ Scopri la versione di [!UICONTROL Cloud Manager] 2024.12.0 su Adobe Managed Serv
 
 <!-- SAVE FOR FUTURE POSSIBLE USE No notable bugs or features for the September release of Cloud Manager. -->
 
-La data di pubblicazione della versione 2024.12.0 di [!UICONTROL Cloud Manager] è il venerdì 5 dicembre 2024.
+La data di pubblicazione della versione 2024.12.0 di [!UICONTROL Cloud Manager] è il 5 dicembre 2024.
 
 La prossima versione pianificata è il venerdì 23 gennaio 2025.
 
@@ -40,9 +40,9 @@ Partecipa al programma per i primi utilizzatori di Cloud Manger e concediti la p
 
 <!-- BOTH CS & AMS -->
 
-La funzionalità **Porta il tuo Git** è stata espansa per includere il supporto per archivi esterni, come GitLab e Bitbucket. Questo nuovo supporto si aggiunge a quello già esistente per archivi GitHub privati ed aziendali. Quando aggiungi questi nuovi archivi, puoi anche collegarli direttamente alle pipeline. Puoi inoltre ospitare questi archivi sia su piattaforme cloud pubbliche sia all’interno della tua infrastruttura o del tuo cloud privato. Questa integrazione elimina anche la necessità di sincronizzare continuamente il codice con l’archivio Adobe e offre la possibilità di convalidare le richieste pull prima di unirle in un ramo principale.
+La funzione **Bring Your Own Git** è stata estesa in modo da includere il supporto per archivi esterni come GitLab e Bitbucket. Questo nuovo supporto si aggiunge a quello già esistente per archivi GitHub privati ed aziendali. Quando aggiungi questi nuovi archivi, puoi anche collegarli direttamente alle pipeline. Puoi inoltre ospitare questi archivi sia su piattaforme cloud pubbliche sia all’interno della tua infrastruttura o del tuo cloud privato. Questa integrazione elimina anche la necessità di sincronizzare continuamente il codice con l’archivio Adobe e offre la possibilità di convalidare le richieste pull prima di unirle in un ramo principale.
 
-Le pipeline che utilizzano archivi esterni (esclusi quelli ospitati da GitHub) e il **Trigger di distribuzione** impostato su **Su modifiche Git** ora vengono avviate automaticamente.
+Le pipeline che utilizzano archivi esterni (esclusi quelli ospitati da GitHub) e il **Trigger di implementazione** impostato su **Cambiamenti su Git** ora vengono avviate automaticamente.
 
 Consulta [Aggiungere archivi esterni in Cloud Manager](/help/managing-code/external-repositories.md).
 
