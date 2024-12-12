@@ -2,7 +2,7 @@
 title: Copia dei contenuti per coerenza ambiente
 description: La funzione di copia dei contenuti in Cloud Manager Adobe consente agli utenti di copiare contenuti mutabili on-demand dagli ambienti di produzione Adobe Experience Manager 6.x ospitati da Managed Services in ambienti più bassi per eseguire test.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 16cc1aa0ff45126df9100f337b6259a3f248038f
+source-git-commit: e3a656605ac59ca1f95985426932fddf2b53b7c9
 workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 33%
@@ -32,8 +32,9 @@ I percorsi seguenti sono consentiti in un set di contenuti:
 
 Durante la copia del contenuto, l’ambiente di origine è l’origine di riferimento.
 
-* Se modifichi il contenuto nell’ambiente di destinazione e i percorsi corrispondono, viene sovrascritto dal contenuto di origine.
-* Se i percorsi sono diversi, il contenuto dell’origine viene unito al contenuto della destinazione.
+Se modifichi il contenuto nell’ambiente di destinazione e i percorsi corrispondono, viene sovrascritto dal contenuto di origine.
+
+Se i percorsi sono diversi, il contenuto dell’origine viene unito al contenuto della destinazione.
 
 ### Autorizzazioni {#permissions}
 
@@ -103,7 +104,6 @@ Quando modifichi un set di contenuti, potrebbe essere necessario espandere i per
 
 ![Modifica set di contenuti](/help/assets/edit-content-set.png)
 
-
 ## Copia contenuto {#copy-content}
 
 Dopo aver creato un set di contenuti, puoi utilizzarlo per copiare il contenuto.
@@ -138,8 +138,6 @@ Un ambiente potrebbe non essere disponibile per la selezione se si verifica una 
    1. Per *rimuovere* i percorsi esclusi nell&#39;ambiente di destinazione, deselezionare **`Do not delete exclude paths from destination`**. Questa impostazione elimina i percorsi esclusi specificati nel set di contenuti.
    1. Per copiare la cronologia delle versioni dei percorsi dall&#39;ambiente di origine all&#39;ambiente di destinazione, selezionare **Copia versioni**. Il processo di copia del contenuto è notevolmente più veloce quando la cronologia delle versioni è *non* copiata.
 
-
-
 1. Fai clic su **Copia**. Lo stato del processo di copia si riflette nella console del set di contenuti selezionato.
 
 ## Controllare lo stato di una copia del contenuto {#copy-activity}
@@ -160,10 +158,9 @@ Puoi monitorare lo stato dei processi di copia nella pagina **Attività copia co
 
    | Stato | Descrizione |
    | --- | --- |
-   | In corso | L’operazione di copia del contenuto è in corso. |
-   | Completato | Operazione di copia del contenuto completata. |
-   | Non riuscito | Copia del contenuto non riuscita. |
-
+   | In corso | Il processo di copia del contenuto è in corso. |
+   | Completato | Processo di copia del contenuto completato correttamente. |
+   | Non riuscito | Processo di copia del contenuto non riuscito. |
 
 ## Limitazioni della copia del contenuto {#limitations}
 
