@@ -4,7 +4,7 @@ description: Ulteriori informazioni sulla versione 2024.12.0 di Cloud Manager su
 feature: Release Information
 exl-id: 811567af-66c9-4c1f-ae9e-60603b70ef80
 source-git-commit: e266a4192e2a897f142a6c83ae5766483946320d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '312'
 ht-degree: 100%
 
@@ -26,7 +26,7 @@ Ulteriori informazioni sulla versione di [!UICONTROL Cloud Manager] 2024.12.0 su
 
 La data di pubblicazione della versione 2024.12.0 di [!UICONTROL Cloud Manager] è il 5 dicembre 2024.
 
-La prossima versione pianificata è il venerdì 23 gennaio 2025.
+La prossima versione è pianificata per il 23 gennaio 2025.
 
 <!-- ## What's new {#what-is-new} -->
 
