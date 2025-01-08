@@ -2,10 +2,10 @@
 title: Test della qualità del codice
 description: Scopri come funziona il test di qualità del codice delle pipeline e come può migliorare la qualità delle distribuzioni.
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
-source-wordcount: '2764'
-ht-degree: 100%
+source-git-commit: dcf2a4727b800f4364fcc7d757d281bde2738a55
+workflow-type: tm+mt
+source-wordcount: '2793'
+ht-degree: 98%
 
 ---
 
@@ -48,14 +48,16 @@ Il software lo implementa tramite una combinazione di analisi SonarQube, un cont
 
 Sono presenti più di 100 regole che combinano regole Java generiche e regole specifiche per AEM. Alcune delle regole specifiche per AEM vengono create in base alle best practice indicate dai tecnici di AEM e sono denominate [regole per la qualità del codice personalizzato](/help/using/custom-code-quality-rules.md).
 
->[!TIP]
+>[!IMPORTANT]
 >
->È possibile scaricare l’elenco completo delle regole [utilizzando questo collegamento](/help/assets/CodeQuality-rules-latest-AMS.xlsx).
+>È possibile scaricare l&#39;elenco completo corrente delle regole [utilizzando questo collegamento](/help/assets/CodeQuality-rules-latest-AMS.xlsx).
+>
+>A partire da giovedì 13 febbraio 2025 (Cloud Manager 2025.2.0), Cloud Manager Code Quality utilizza una versione aggiornata di SonarQube 9.9 e un elenco aggiornato di regole che puoi [scaricare qui](/help/assets/CodeQuality-rules-latest-AMS-2024-12-0.xlsx).
 
 I risultati dei test di qualità del codice sono forniti come valutazione, come sintetizzato in questa tabella.
 
 | Nome | Definizione | Categoria | Soglia di errore |
-|--- |--- |--- |--- |
+| --- | --- | --- | --- |
 | Valutazione della sicurezza | A = Nessuna vulnerabilità<br/>B = Almeno 1 vulnerabilità minore<br/>C = Almeno 1 vulnerabilità grave<br/>D = Almeno 1 vulnerabilità critica<br/>E = Almeno 1 vulnerabilità bloccante | Critico | &lt; B |
 | Valutazione dell’affidabilità | A = Nessun bug<br/>B = Almeno 1 bug minore <br/>C = Almeno 1 bug grave<br/>D = Almeno 1 bug critico<br/>E = Almeno 1 bug bloccante | Importante | &lt; C |
 | Valutazione della manutenzione | Definito dal costo residuo della correzione dei code smell come percentuale del tempo già trascorso nell’applicazione<br/><ul><li>A = &lt;= 5%</li><li>B = 6-10%</li><li>C = 11-20%</li><li>D = 21-50%</li><li>E = > 50%</li></ul> | Importante | &lt; A |
@@ -67,7 +69,7 @@ I risultati dei test di qualità del codice sono forniti come valutazione, come 
 
 >[!NOTE]
 >
->Per informazioni più dettagliate, consulta le [Definizioni delle metriche di SonarQube](https://docs.sonarsource.com/sonarqube/latest/user-guide/code-metrics/metrics-definition/).
+>Per informazioni più dettagliate, consulta le [Definizioni delle metriche di SonarQube](https://docs.sonarsource.com/sonarqube-server/latest/user-guide/code-metrics/metrics-definition/).
 
 >[!NOTE]
 >
