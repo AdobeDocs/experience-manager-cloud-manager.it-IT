@@ -6,7 +6,7 @@ exl-id: 811567af-66c9-4c1f-ae9e-60603b70ef80
 source-git-commit: 60db60be95318ebf6f2af91a94a9475604a15003
 workflow-type: tm+mt
 source-wordcount: '359'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -32,7 +32,7 @@ La prossima versione è pianificata per il 23 gennaio 2025.
 
 <!-- * The AEM Code Quality step now uses SonarQube 9.9 Server, replacing the older 7.4 version. This upgrade brings additional security, performance, and code quality checks, offering more comprehensive analysis and coverage for your projects. --> <!-- CMGR-45683 -->
 
-* A partire da giovedì 13 febbraio 2025, il passaggio per la qualità del codice di Cloud Manager utilizza ora una versione aggiornata di SonarQube 9.9.5.90363.
+* A partire da giovedì 13 febbraio 2025, il passaggio di qualità del codice di Cloud Manager utilizzerà una versione aggiornata di SonarQube 9.9.5.90363.
 
   Le regole aggiornate, disponibili per AMS in [questo collegamento](/help/using/code-quality-testing.md#code-quality-testing-step), determinano i punteggi di sicurezza e la qualità del codice per le pipeline di Cloud Manager. Questo aggiornamento può influire sui gate di qualità, bloccando potenzialmente le distribuzioni.
 
