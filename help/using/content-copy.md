@@ -3,9 +3,9 @@ title: Copia dei contenuti per coerenza in ambienti diversi
 description: La copia dei contenuti in Cloud Manager consente agli utenti di copiare contenuti mutabili su richiesta dagli ambienti di produzione Adobe Experience Manager 6.x in hosting da Adobe Managed Services ad ambienti inferiori a scopo di testing.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
 source-git-commit: 84b3366481c2efd497583627eac67046452f6c38
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1321'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -64,7 +64,7 @@ Prima di poter copiare qualsiasi contenuto, è necessario definire un set di con
 
    È possibile includere solo contenuti da percorsi che iniziano con `/content`, `/conf`, `/etc`, `/var/workflow/models` o `/var/commerce`.
 
-1. Fai clic sull&#39;icona ![Aggiungi cartella](https://spectrum.adobe.com/static/icons/workflow_18/Smock_FolderAdd_18_N.svg) **Aggiungi percorso** per aggiungere (o includere) il percorso al set di contenuti.
+1. Fai clic su ![icona di aggiunta cartella](https://spectrum.adobe.com/static/icons/workflow_18/Smock_FolderAdd_18_N.svg) **Aggiungi percorso** per aggiungere (o includere) il percorso al set di contenuti.
 
 1. (Facoltativo) Se necessario, ripeti i due passaggi precedenti per aggiungere altri percorsi (fino a un massimo di 50). In caso contrario, procedi al passaggio successivo.
 
