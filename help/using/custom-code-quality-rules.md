@@ -3,9 +3,9 @@ title: Regole per la qualità del codice personalizzato
 description: Scopri le specifiche delle regole di qualità del codice personalizzato eseguite da Cloud Manager durante il test di qualità del codice. Queste regole si basano sulle best practice dei tecnici di AEM.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
 source-git-commit: 1b7b703f7cba69878bd98aa971844741ebea7dba
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3490'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -773,7 +773,7 @@ AEM Cloud Service richiede che le definizioni dell’indice di ricerca personali
 ### I nodi di definizione dell’indice di ricerca personalizzato devono utilizzare il tipo di indice Lucene {#oakpal-index-type-lucene}
 
 * **Chiave**: IndexType
-* **Tipo**: `Code Smell`
+* **Tipo:**: `Code Smell`
 * **Gravità**: minore
 * **Da**: versione 2021.2.0
 
@@ -782,7 +782,7 @@ AEM Cloud Service richiede che le definizioni dell’indice di ricerca personali
 ### I nodi di definizione dell’indice di ricerca personalizzato non devono contenere una proprietà denominata `seed` {#oakpal-property-name-seed}
 
 * **Chiave**: IndexSeedProperty
-* **Tipo**: `Code Smell`
+* **Tipo:**: `Code Smell`
 * **Gravità**: minore
 * **Da**: versione 2021.2.0
 
@@ -791,7 +791,7 @@ AEM Cloud Service non consente che le definizioni dell’indice di ricerca perso
 ### I nodi di definizione dell’indice di ricerca personalizzato non devono contenere una proprietà denominata `reindex` {#oakpal-reindex-property}
 
 * **Chiave**: IndexReindexProperty
-* **Tipo**: `Code Smell`
+* **Tipo:**: `Code Smell`
 * **Gravità**: minore
 * **Da**: versione 2021.2.0
 
