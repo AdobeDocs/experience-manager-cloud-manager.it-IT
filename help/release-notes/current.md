@@ -1,57 +1,61 @@
 ---
-title: Note sulla versione 2025.1.0 di Cloud Manager
-description: Ulteriori informazioni sulla versione 2025.1.0 di Cloud Manager su Adobe Managed Services.
+title: Note sulla versione 2025.2.0 di Cloud Manager
+description: Ulteriori informazioni sulla versione 2025.2.0 di Cloud Manager su Adobe Managed Services.
 feature: Release Information
 exlid: 669b1f2d8fc68526eb091e0f93f70ab93033d193
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: ca9a07354ff8316f531840a42d6ecdda5c072b9b
-workflow-type: ht
-source-wordcount: '196'
-ht-degree: 100%
+source-git-commit: 9d9bf7d689c0ace41bce3f31febe8ba78636c01f
+workflow-type: tm+mt
+source-wordcount: '372'
+ht-degree: 93%
 
 ---
 
-# Note sulla versione di Cloud Manager 2025.1.0 su Adobe Managed Services {#release-notes}
+# Note sulla versione di Cloud Manager 2025.2.0 su Adobe Managed Services {#release-notes}
 
-<!-- RELEASE WIKI  https://wiki.corp.adobe.com/display/DMSArchitecture/Cloud+Manager+2024.12.0+Release -->
+<!-- RELEASE WIKI  https://wiki.corp.adobe.com/display/DMSArchitecture/Cloud+Manager+2025.02.0+Release -->
 
-Ulteriori informazioni sulla versione di [!UICONTROL Cloud Manager] 2025.1.0 su Adobe Managed Services.
+Ulteriori informazioni sulla versione di [!UICONTROL Cloud Manager] 2025.2.0 su Adobe Managed Services.
 
->[!NOTE]
->
->Consulta le [note sulla versione corrente di Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/it/docs/experience-manager-cloud-service/content/release-notes/home).
+Consulta anche le [note sulla versione corrente di Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/it/docs/experience-manager-cloud-service/content/release-notes/home).
 
 ## Date di pubblicazione {#release-date}
 
-<!-- SAVE FOR FUTURE POSSIBLE USE No notable bugs or features for the September release of Cloud Manager. -->
+*Nessun bug o funzionalità di rilievo per la versione di febbraio di Cloud Manager.*
 
-La data di pubblicazione della versione 2025.1.0 di [!UICONTROL Cloud Manager] è il 22 gennaio 2024.
+La data di pubblicazione della versione 2025.2.0 di [!UICONTROL Cloud Manager] è il venerdì 13 febbraio 2025.
 
-La prossima pubblicazione è pianificata per il 13 febbraio 2025.
+La prossima pubblicazione è pianificata per il venerdì 13 marzo 2025.
 
 ## Novità {#what-is-new}
 
-**Regole di qualità del codice - Aggiornamento di SonarQube:** la qualità del codice di Cloud Manager inizierà a utilizzare SonarQube Server 9.9 con la versione 2025.2.0 di Cloud Manager, pianificata per il 13 febbraio 2025.
+<!-- * The AEM Code Quality step now uses SonarQube 9.9 Server, replacing the older 7.4 version. This upgrade brings additional security, performance, and code quality checks, offering more comprehensive analysis and coverage for your projects. --> <!-- CMGR-45683 -->
 
-Per prepararti, le regole SonarQube aggiornate sono ora disponibili in [Regole per la qualità del codice](/help/using/code-quality-testing.md#code-quality-testing-step).
+* A partire da giovedì 13 febbraio 2025, il passaggio di qualità del codice di Cloud Manager utilizzerà una versione aggiornata di SonarQube 9.9.5.90363.
 
-Puoi “verificare in anticipo” le nuove regole impostando la seguente variabile di testo della pipeline (vedi la schermata seguente):
+  Le regole aggiornate, disponibili per AMS in [questo collegamento](/help/using/code-quality-testing.md#code-quality-testing-step), determinano i punteggi di sicurezza e la qualità del codice per le pipeline di Cloud Manager. Questo aggiornamento può influire sui gate di qualità, bloccando potenzialmente le distribuzioni.
 
-`CM_BUILD_IMAGE_OVERRIDE` = `self-service-build:sonar-99-upgrade-java17or21`
+## Programma per i primi utilizzatori {#early-adoption}
 
-Inoltre, imposta la variabile seguente per garantire che il passaggio di qualità del codice venga eseguito per lo stesso commit (normalmente ignorato per lo stesso `commitId`):
+Partecipa al programma per i primi utilizzatori di Cloud Manger e concediti la possibilità di testare le prossime funzionalità.
 
-`CM_DISABLE_BUILD_REUSE` = `true`
+### Bring Your Own Git: ora con supporto per GitLab e Bitbucket {#gitlab-bitbucket}
 
-![Pagina Configurazione variabili](/help/release-notes/assets/variables-config.png)
+<!-- BOTH CS & AMS -->
+
+La funzione **Bring Your Own Git** è stata estesa in modo da includere il supporto per archivi esterni come GitLab e Bitbucket. Questo nuovo supporto si aggiunge a quello già esistente per archivi GitHub privati ed aziendali. Quando aggiungi questi nuovi archivi, puoi anche collegarli direttamente alle pipeline. Puoi inoltre ospitare questi archivi sia su piattaforme cloud pubbliche sia all’interno della tua infrastruttura o del tuo cloud privato. Questa integrazione elimina anche la necessità di sincronizzare continuamente il codice con l’archivio Adobe e offre la possibilità di convalidare le richieste pull prima di unirle in un ramo principale.
+
+Le pipeline che utilizzano archivi esterni (esclusi quelli ospitati da GitHub) e il **Trigger di implementazione** impostato su **Cambiamenti su Git** ora vengono avviate automaticamente.
+
+Consulta [Aggiungere archivi esterni in Cloud Manager](/help/managing-code/external-repositories.md).
+
+![Finestra di dialogo Aggiungi archivio](/help/release-notes/assets/repositories-add-release-notes.png)
 
 >[!NOTE]
 >
->Adobe consiglia di creare una nuova pipeline CI/CD per la qualità del codice, configurata sullo stesso ramo della pipeline di produzione principale. Imposta le variabili appropriate *prima* della versione del 13 febbraio 2025 per convalidare che le nuove regole applicate non introducano blocchi.
+>Attualmente, i controlli di qualità predefiniti per il codice di richiesta pull sono esclusivi degli archivi ospitati in GitHub, ma è in preparazione un aggiornamento per estendere questa funzionalità anche ad altri fornitori Git.
 
-<!-- ## Early adoption program {#early-adoption}
-
-Be a part of Cloud Manager's early adoption program and have a chance to test upcoming features. -->
+Se ti interessa testare questa nuova funzione e condividere il tuo feedback, invia un’e-mail a [Grp-CloudManager_BYOG@adobe.com](mailto:Grp-CloudManager_BYOG@adobe.com) dall’indirizzo e-mail associato al tuo Adobe ID. Se ti trovi in una struttura di archivio privata/pubblica o aziendale, assicurati di specificare la piattaforma Git che desideri utilizzare.
 
 
 <!-- ## Bug fixes {#bug-fixes}
