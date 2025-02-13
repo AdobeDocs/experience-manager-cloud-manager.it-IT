@@ -2,10 +2,10 @@
 title: Regole per la qualità del codice personalizzato
 description: Scopri le specifiche delle regole di qualità del codice personalizzato eseguite da Cloud Manager durante il test di qualità del codice. Queste regole si basano sulle best practice dei tecnici di AEM.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: 1b7b703f7cba69878bd98aa971844741ebea7dba
-workflow-type: ht
-source-wordcount: '3490'
-ht-degree: 100%
+source-git-commit: c50eb54b5603b4370f2d7907a2194477dcc3ba21
+workflow-type: tm+mt
+source-wordcount: '3523'
+ht-degree: 99%
 
 ---
 
@@ -882,6 +882,15 @@ AEM Cloud Service non consente la creazione di definizioni di indicizzazione che
 * **Da**: versione 2024.12.0
 
 AEM Cloud Service non consente la creazione di definizioni di indicizzazione che contengono proprietà haystack.
+
+### La configurazione delle definizioni di indicizzazione non deve contenere la proprietà: async-previous {#oakpal-indexing-async-previous-property}
+
+* **Chiave**: IndexAsyncPreviousCheck
+* **Tipo**: miglioramento
+* **Gravità**: minore
+* **Da**: versione 2025.2.0
+
+AEM Cloud Service non consente la creazione di definizioni di indicizzazione che contengono una proprietà precedente asincrona.
 
 ## Strumento di ottimizzazione del Dispatcher {#dispatcher-optimization-tool-rules}
 
