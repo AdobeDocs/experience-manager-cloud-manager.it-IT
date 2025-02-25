@@ -5,9 +5,9 @@ feature: Release Information
 exlid: 669b1f2d8fc68526eb091e0f93f70ab93033d193
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
 source-git-commit: 51dd060ec9b922ace9ce537cac669c61154284e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '241'
-ht-degree: 26%
+ht-degree: 100%
 
 ---
 
@@ -21,32 +21,32 @@ Consulta anche le [note sulla versione corrente di Adobe Experience Manager as a
 
 ## Date di pubblicazione {#release-date}
 
-La data di pubblicazione della versione 2025.2.0 di [!UICONTROL Cloud Manager] è il venerdì 13 febbraio 2025.
+La data di pubblicazione della versione 2025.2.0 di [!UICONTROL Cloud Manager] è il 13 febbraio 2025.
 
-La prossima pubblicazione è pianificata per il venerdì 13 marzo 2025.
+La prossima pubblicazione è pianificata per il 13 marzo 2025.
 
 ## Novità {#what-is-new}
 
 <!-- * The AEM Code Quality step now uses SonarQube 9.9 Server, replacing the older 7.4 version. This upgrade brings additional security, performance, and code quality checks, offering more comprehensive analysis and coverage for your projects. --> <!-- CMGR-45683 -->
 
-* **SonarQube aggiornato**
+* **Aggiornamento di SonarQube**
 
-  A partire da giovedì 13 febbraio 2025, il passaggio della qualità del codice di Cloud Manager utilizza ora SonarQube 9.9.5.90363.
+  A partire dal 13 febbraio 2025, il passaggio di qualità del codice di Cloud Manager utilizzerà SonarQube 9.9.5.90363.
 
   Le regole aggiornate, disponibili per AMS in [questo collegamento](/help/using/code-quality-testing.md#code-quality-testing-step), determinano i punteggi di sicurezza e la qualità del codice per le pipeline di Cloud Manager.
 
-* SonarQube 9.9 è ora il motore di scansione della qualità del codice predefinito per tutti i clienti.
+* SonarQube 9.9 è ora il motore di analisi della qualità del codice predefinito per tutta la clientela.
 
-* Supporto dell&#39;ambiente di build **Java 17 e Java 21**
+* **Supporto per l’ambiente di build di Java 17 e Java 21**
 
-  I clienti possono ora opzionalmente creare con Java 17 o Java 21, beneficiando di miglioramenti delle prestazioni e di nuove funzioni del linguaggio. Consulta [Ambiente di build](/help/getting-started/build-environment.md) per i passaggi di configurazione, incluso l&#39;aggiornamento della descrizione del progetto Maven e di alcune versioni della libreria.
+  La clientela adesso può generare con Java 17 o Java 21, traendo vantaggio da miglioramenti delle prestazioni e da nuove funzioni del linguaggio. Per i passaggi di configurazione, incluso l’aggiornamento della descrizione del progetto Maven e di alcune versioni della libreria, consulta [Ambiente di build](/help/getting-started/build-environment.md).
 
   >[!NOTE]
-  >Per gli ambienti Cloud Service, quando la versione della build è impostata su Java 17 o Java 21, il runtime utilizza per impostazione predefinita Java 21.
+  >In ambienti Cloud Service, quando la versione della build è impostata su Java 17 o Java 21, per impostazione predefinita il runtime è Java 21.
 
-* **Convalide della copia del contenuto estese**
+* **Convalide della copie di contenuti estese**
 
-  Le regole di convalida della copia del contenuto sono state aggiornate. Con questa versione, gli utenti non possono più attivare una copia del contenuto se sono presenti esecuzioni di pipeline attive nell’ambiente di origine o di destinazione. Prima di avviare una copia del contenuto, gli utenti devono attendere il completamento di tutte le esecuzioni della pipeline in corso.
+  Le regole di convalida delle copie di contenuti sono state aggiornate. Con questa versione, gli utenti non possono più attivare una copia del contenuto se sono presenti esecuzioni di pipeline attive nell’ambiente di origine o di destinazione. Prima di avviare una copia del contenuto, infatti, gli utenti devono attendere il completamento di tutte le esecuzioni della pipeline in corso.
 
 <!-- 
 ## Early adoption program {#early-adoption}
