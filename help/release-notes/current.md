@@ -3,10 +3,10 @@ title: Note sulla versione 2025.3.0 di Cloud Manager
 description: Ulteriori informazioni sulla versione 2025.3.0 di Cloud Manager su Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: 31ae069c9e121963b4609af3f10ac08ab5539fb8
+source-git-commit: 58cdebf819f2737be5d8e129ff5b9783888f3c21
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 33%
+source-wordcount: '307'
+ht-degree: 32%
 
 ---
 
@@ -46,7 +46,6 @@ I clienti possono verificare la presenza di aggiornamenti del service pack nella
 
 ![Controlla aggiornamenti, opzione di menu](/help/release-notes/assets/check-for-updates-1.png)
 
-
 ![Finestra di dialogo Aggiorna Service Pack](/help/release-notes/assets/check-for-updates-2.png)
 
 È possibile tenere traccia del processo di installazione e aggiornamento nella pagina **Attività**.
@@ -56,6 +55,8 @@ Al termine del processo, i clienti devono **approvare l&#39;esecuzione** per l&#
 ![Approva aggiornamento pagina servizio](/help/release-notes/assets/check-for-updates-3.png)
 
 Se ti interessa testare questa nuova funzione e condividere i tuoi commenti, contatta il tuo Customer Success Engineer di Adobe.
+
+Consulta anche [Service Pack Updates for Development Environments - Early Adopter](/help/using/service-packs-environments.md).
 
 
 <!-- ## Bug fixes {#bug-fixes}

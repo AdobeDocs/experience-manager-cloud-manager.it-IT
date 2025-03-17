@@ -2,10 +2,10 @@
 title: Aggiungere utenti e ruoli
 description: Scopri come utilizzare Admin Console per aggiungere utenti e ruoli e per creare profili.
 exl-id: 40086cf0-a1c4-4dde-9dbf-84ea5fa53b84
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
-source-wordcount: '758'
-ht-degree: 100%
+source-git-commit: 53fb666ab6caff7a697d7f1942ce25f2bf27a2ce
+workflow-type: tm+mt
+source-wordcount: '762'
+ht-degree: 89%
 
 ---
 
@@ -101,18 +101,18 @@ Dopo aver creato i profili di prodotto, puoi assegnare loro utenti o gruppi di u
 
 1. Fai clic su **Utenti** nel pannello di navigazione a sinistra, quindi fai clic su un utente per modificarlo.
 
-1. Fai clic sul pulsante con i puntini di sospensione nella sezione **Prodotti** e seleziona **Modifica**.
+1. Fai clic sull&#39;icona ![Altro, puntini di sospensione](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) nella sezione **Prodotti** e fai clic su **Modifica**.
 
    ![Modifica utente](/help/assets/admin-console-edit-user.png)
 
-1. Nella finestra di dialogo **Modifica prodotti e gruppi di utenti**, fai clic sul pulsante a forma di più e seleziona i profili da assegnare all’utente.
+1. Nella finestra di dialogo **Modifica prodotti e gruppi di utenti**, fai clic su ![Aggiungi icona, segno più](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Add_18_N.svg) e seleziona i profili da assegnare all&#39;utente.
 
-   * Se l’utente è già assegnato ai ruoli, il pulsante a forma di più sarà un pulsante di modifica (a forma di matita), ma funziona allo stesso modo.
+   * Se l&#39;utente è già assegnato ai ruoli, l&#39;icona ![Aggiungi, pulsante più](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Add_18_N.svg) è un pulsante di modifica (una matita), ma funziona allo stesso modo.
 
    ![Modifica prodotti e gruppi di utenti](/help/assets/admin-console-edit-products-and-user-groups.png)
 
 1. Fai clic su **Salva** per salvare i profili dell’utente.
 
-Ripeti gli stessi passaggi per assegnare profili a gruppi di utenti, ma seleziona **Gruppi di utenti** dal pannello di navigazione a sinistra nella scheda **Utenti**. Fai clic su un gruppo di utenti e seleziona la scheda **Profili di prodotto assegnati**, quindi fai clic su **Assegna profilo di prodotto** per assegnare i profili.
+Ripeti gli stessi passaggi per assegnare profili a gruppi di utenti, ma seleziona **Gruppi di utenti** dal pannello di navigazione a sinistra nella scheda **Utenti**. Fai clic su un gruppo di utenti e seleziona i **Profili di prodotto assegnati** fai clic su **Assegna profilo di prodotto** per assegnare i profili.
 
 ![Assegna profili al gruppo](/help/assets/admin-console-edit-user-groups.png)

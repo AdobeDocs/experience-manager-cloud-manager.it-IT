@@ -2,10 +2,10 @@
 title: Gestire le pipeline
 description: Scopri come gestire, modificare, eseguire ed eliminare le pipeline esistenti.
 exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
-source-git-commit: 9d910e1b1a4aad000a8389ddc22ce380bbccd4ef
-workflow-type: ht
-source-wordcount: '840'
-ht-degree: 100%
+source-git-commit: 58cdebf819f2737be5d8e129ff5b9783888f3c21
+workflow-type: tm+mt
+source-wordcount: '845'
+ht-degree: 73%
 
 ---
 
@@ -20,7 +20,7 @@ La scheda **Pipeline** della pagina **Panoramica del programma** in Cloud Manage
 
 ![Scheda Pipeline in Cloud Manager](/help/assets/configure-pipelines/pipelines-card.png)
 
-Facendo clic sul pulsante con i puntini di sospensione accanto a ogni pipeline, puoi effettuare le seguenti operazioni:
+Facendo clic sull&#39;icona ![Altro, con i puntini di sospensione](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) accanto a ciascuna pipeline, è possibile eseguire le azioni seguenti:
 
 * [Eseguire la pipeline](#running-pipelines).
 * [Modificare la pipeline](#editing-pipelines).
@@ -70,45 +70,56 @@ Fai clic su **Visualizza dettagli**, per rivedere i [dettagli dell’esecuzione 
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione e il programma appropriati.
 1. Passa alla scheda **Pipeline** dalla pagina **Panoramica del programma**.
-1. Fai clic sul pulsante con i puntini di sospensione accanto alla pipeline eseguita, quindi seleziona **Esegui** dal menu.
+1. Fai clic sull&#39;icona ![Altro, puntini di sospensione](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) accanto alla pipeline eseguita, quindi fai clic su **Esegui**.
 
    La colonna Stato indica quando inizia l’esecuzione della pipeline.
 
-   Per visualizzare i dettagli dell’esecuzione, fai nuovamente clic sul pulsante con i puntini di sospensione e seleziona **[Visualizza i dettagli](#view-details)**.
+   Per visualizzare i dettagli dell&#39;esecuzione, fare clic di nuovo sull&#39;icona ![Altro, con i puntini di sospensione](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) e fare clic su **[Visualizza dettagli](#view-details)**.
 
-   A seconda del tipo di pipeline, può essere possibile annullare l’esecuzione facendo nuovamente clic sul pulsante con i puntini di sospensione e selezionando **Annulla**.
+   A seconda del tipo di pipeline, è possibile annullare l&#39;esecuzione facendo nuovamente clic sull&#39;icona ![Altro, puntini di sospensione](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) e scegliendo **Annulla**.
 
 ## Modificare pipeline {#editing-pipelines}
 
+Non è possibile modificare una pipeline in esecuzione.
+
+**Per modificare le pipeline:**
+
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione e il programma appropriati.
 
-1. Passa alla scheda **Pipeline** dalla pagina **Panoramica del programma**, fai clic sul pulsante con i puntini di sospensione accanto alla pipeline da modificare e seleziona **Modifica** dal menu.
+1. Dalla pagina **Panoramica del programma**, accedi alla scheda **Pipeline**.
 
-1. Viene visualizzata la finestra di dialogo **Modifica pipeline di produzione** o **Modifica pipeline di non produzione**. Puoi modificare gli stessi dettagli immessi durante la creazione della pipeline.
+1. Fai clic sull&#39;icona ![Altro, puntini di sospensione](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) accanto alla pipeline da modificare, quindi fai clic su **Modifica**.
+
+1. Nella finestra di dialogo **Modifica pipeline di produzione** o **Modifica pipeline non di produzione** puoi modificare gli stessi dettagli immessi durante la creazione della pipeline.
 
    Consulta [Configurazione delle pipeline di produzione](/help/using/production-pipelines.md) e [Configurazione delle pipeline di non produzione](/help/using/non-production-pipelines.md) per informazioni dettagliate sui campi e sulle opzioni di configurazione disponibili per le pipeline.
 
-1. Al termine, fai clic su **Aggiorna**.
-
->[!NOTE]
->
->Non è possibile modificare una pipeline in esecuzione.
+1. Al termine, fare clic su **Aggiorna**.
 
 ## Eliminare pipeline {#deleting-pipelines}
 
-1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione e il programma appropriati.
+Non è possibile eliminare una pipeline in esecuzione.
 
-1. Passa alla scheda **Pipeline** dalla pagina **Panoramica del programma** e fai clic sul pulsante con i puntini di sospensione accanto alla pipeline eseguita, quindi seleziona **Esegui** dal menu.
-
->[!NOTE]
->
->Non è possibile eliminare una pipeline in esecuzione.
-
-## Visualizzare dettagli {#view-details}
+**Per eliminare le pipeline:**
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione e il programma appropriati.
 
-1. Passa alla scheda **Pipeline** dalla pagina **Panoramica del programma** e fai clic sul pulsante con i puntini di sospensione accanto alla pipeline eseguita, quindi seleziona **Visualizza i dettagli**.
+1. Dalla pagina **Panoramica del programma**, accedi alla scheda **Pipeline**.
+
+1. Fai clic sull&#39;icona ![Altro, puntini di sospensione](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) accanto alla pipeline eseguita, quindi fai clic su **Elimina**.
+
+
+## Visualizzare i dettagli della pipeline {#view-details}
+
+È possibile visualizzare i dettagli solo per una pipeline in esecuzione o che è stata eseguita almeno una volta.
+
+**Per visualizzare i dettagli della pipeline:**
+
+1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione e il programma appropriati.
+
+1. Dalla pagina **Panoramica del programma**, accedi alla scheda **Pipeline**.
+
+1. Fai clic sull&#39;icona ![Altro, puntini di sospensione](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) accanto alla pipeline eseguita, quindi fai clic su **Visualizza dettagli**.
 
 1. L’opzione reindirizza alla pagina dei dettagli della pipeline in esecuzione.
 
@@ -126,15 +137,10 @@ Fai clic sul collegamento **Visualizza dettagli** per visualizzare la sezione **
 
 ![Durata](/help/assets/configure-pipelines/duration.png)
 
-Se la pipeline conteneva un passaggio **Scansione del codice** durante il quale sono stati rilevati dei problemi, puoi fare clic sul pulsante **Scarica dettagli** per visualizzare un elenco dei [test di qualità del codice](/help/using/code-quality-testing.md) che non sono stati superati.
+Se la pipeline conteneva un passaggio **Analisi del codice** che ha generato problemi, puoi fare clic su **Dettagli download** per visualizzare un elenco di [test di qualità del codice](/help/using/code-quality-testing.md) non superati.
 
 ![Problemi di qualità del codice](assets/managing-pipelines-code-quality-issues.png)
 
 Nel file CSV, una colonna **Project File Location** (Percorso file di progetto) indica dove si trova il codice in cui è stato riscontrato un problema. Questa colonna contiene un percorso relativo al progetto, mentre la colonna **File Location** (Percorso file) è generata da Maven.
 
 ![Dettagli di problemi rilevati dalla scansione del codice del progetto](assets/managing-pipelines-code-quality-details.png)
-
-
->[!NOTE]
->
->È possibile visualizzare i dettagli solo per una pipeline in esecuzione o che è stata eseguita almeno una volta.

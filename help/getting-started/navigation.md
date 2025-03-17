@@ -2,10 +2,10 @@
 title: Navigazione nell’interfaccia utente di Cloud Manager
 description: Scopri come è organizzata l’interfaccia utente di Cloud Manager e come spostarsi per gestire i programmi e gli ambienti.
 exl-id: 9c1545ce-1c6d-417f-a6f4-fe53caef3433
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
-source-wordcount: '1435'
-ht-degree: 100%
+source-git-commit: 53fb666ab6caff7a697d7f1942ce25f2bf27a2ce
+workflow-type: tm+mt
+source-wordcount: '1439'
+ht-degree: 96%
 
 ---
 
@@ -52,11 +52,11 @@ La prima è l’intestazione Cloud Manager. L’intestazione diventa persistente
 
 ![Intestazione di Experience Cloud](assets/experience-cloud-header.png)
 
-1. L’icona hamburger a sinistra dell’intestazione è un menu a discesa che fornisce accesso alle schede di parti specifiche di un singolo programma. A seconda del contesto, consente inoltre di passare dalla dashboard delle licenze alla console **[I miei programmi](#my-programs-console)**.
+1. L&#39;icona del menu ![Mostra, hamburger](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) sul lato sinistro dell&#39;intestazione è un menu a discesa che fornisce l&#39;accesso alle schede per parti specifiche di un singolo programma. A seconda del contesto, consente inoltre di passare dalla dashboard delle licenze alla console **[I miei programmi](#my-programs-console)**.
    * La dashboard delle licenze si applica solo ai programmi AEM as a Cloud Service, non ai programmi AMS.
    * Per determinare il tipo di servizio del programma (AMS o AEMaaCS), consulta la [sezione Schede del programma](#program-cards) di questo documento.
 1. Il pulsante Cloud Manager ti riporterà alla console Programmi personali al suo interno, indipendentemente dalla tua posizione in Cloud Manager.
-1. Fai clic sul pulsante Feedback per fornire un feedback ad Adobe su Cloud Manager.
+1. Fai clic su **Feedback** per fornire ad Adobe un feedback su Cloud Manager.
 1. Il selettore organizzazione visualizza l’organizzazione a cui appartieni al momento (in questo esempio, Foundation Internal). Fai clic per passare a un’altra organizzazione se il tuo Adobe ID è associato a più di una.
 1. Fai clic sul selettore delle soluzioni per passare rapidamente ad altre soluzioni di Experience Cloud.
 1. L’icona dell’aiuto fornisce un accesso rapido alle risorse di apprendimento e supporto.
@@ -123,7 +123,7 @@ L’icona delle informazioni consente inoltre di accedere rapidamente a informaz
 
 ![Informazioni](assets/information-view.png)
 
-L’icona con i puntini di sospensione ti permette di accedere alle azioni aggiuntive che puoi intraprendere sul programma.
+L&#39;icona ![Ulteriori puntini di sospensione](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) consente di accedere alle azioni aggiuntive che è possibile eseguire sul programma.
 
 ![Pulsante con i puntini di sospensione per i programmi](assets/program-ellipsis.png)
 

@@ -1,11 +1,11 @@
 ---
-title: Aggiungere archivi esterni in Cloud Manager (primi utilizzatori)
+title: Aggiungere archivi esterni in Cloud Manager - Utenti che adottano in anticipo
 description: Scopri come aggiungere un archivio esterno in Cloud Manager. Cloud Manager supporta l’integrazione con gli archivi GitHub, GitLab e Bitbucket.
 exl-id: 4500cacc-5e27-4bbb-b8f6-5144dac7e6da
-source-git-commit: e7e2268f866105970e02d4bc54c46613749e5ac0
-workflow-type: ht
-source-wordcount: '0'
-ht-degree: 100%
+source-git-commit: 58cdebf819f2737be5d8e129ff5b9783888f3c21
+workflow-type: tm+mt
+source-wordcount: '715'
+ht-degree: 98%
 
 ---
 
@@ -63,7 +63,7 @@ La configurazione di un archivio esterno in Cloud Manager avviene in tre passagg
    | --- | --- |
    | **Usa token di accesso esistente** | Se hai già fornito un token di accesso all’archivio per la tua organizzazione e hai accesso a più archivi, puoi selezionare un token esistente. Utilizza l’elenco a discesa **Nome token** per scegliere il token da applicare all’archivio. In caso contrario, aggiungi un nuovo token di accesso. |
    | **Aggiungere un nuovo token di accesso** | **Tipo di archivio: GitHub**<br>• Nel campo di testo **Nome token**, digita il nome da assegnare al token di accesso che vuoi creare.<br>• Crea un token di accesso personale seguendo le istruzioni riportate nella [documentazione GitHub](https://docs.github.com/en/enterprise-server@3.14/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).<br>• Autorizzazioni richieste:<br> • `Read access to metadata`.<br> • `Read and write access to code and pull requests`.<br>• Incolla il token appena creato nel campo **Token di accesso**. |
-   |  | **Tipo di archivio: GitLab**<br>• Nel campo di testo **Nome token**, digita il nome da assegnare al token di accesso che vuoi creare.<br>• Crea un token di accesso personale seguendo le istruzioni riportate nella [documentazione GitLab](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html).<br>• Autorizzazioni richieste:<br> • `api`<br> • `read_api`<br> • `read_repository`<br> • `write_repository`<br>• Incolla il token appena creato nel campo **Token di accesso**. |
+   |  | **Tipo di archivio: GitLab**<br>• Nel campo di testo **Nome token**, digita il nome da assegnare al token di accesso che vuoi creare.<br>• Crea un token di accesso personale seguendo le istruzioni riportate nella [documentazione GitLab](https://docs.gitlab.com/user/profile/personal_access_tokens/).<br>• Autorizzazioni richieste:<br> • `api`<br> • `read_api`<br> • `read_repository`<br> • `write_repository`<br>• Incolla il token appena creato nel campo **Token di accesso**. |
    |  | **Tipo di archivio: Bitbucket**<br> • Nel campo di testo **Nome token**, digita il nome da assegnare al token di accesso che vuoi creare.<br>• Crea un token di accesso all&#39;archivio utilizzando la [documentazione Bitbucket](https://support.atlassian.com/bitbucket-cloud/docs/create-a-repository-access-token/).<br>• Autorizzazioni richieste:<br> • `Read and write access to code and pull requests`. |
 
    >[!NOTE]

@@ -3,10 +3,10 @@ title: Aggiungere archivi privati in Cloud Manager
 description: Scopri come configurare Cloud Manager per l’utilizzo di archivi GitHub privati.
 feature: Release Information
 exl-id: e0d103c9-c147-4040-bf53-835e93d78a0b
-source-git-commit: 5090d7ee9a6742d71122acda9901d074bc254305
-workflow-type: ht
-source-wordcount: '818'
-ht-degree: 100%
+source-git-commit: 58cdebf819f2737be5d8e129ff5b9783888f3c21
+workflow-type: tm+mt
+source-wordcount: '815'
+ht-degree: 96%
 
 ---
 
@@ -90,8 +90,7 @@ Fino alla convalida, l’archivio viene elencato con un’icona rossa, che indic
 
 Tieni presente che la colonna **Tipo** identifica facilmente gli archivi forniti da Adobe (**Adobe**) e i tuoi archivi GitHub (**GitHub**).
 
-Per tornare all’archivio in un secondo momento e completare la convalida, passa alla pagina **Archivi**. Fai clic sul pulsante con i puntini di sospensione accanto all’archivio GitHub aggiunto e seleziona **Convalida proprietà** dal menu a discesa.
-
+Per tornare all’archivio in un secondo momento e completare la convalida, passa alla pagina **Archivi**. Fai clic sull&#39;icona ![Altro, puntini di sospensione](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) accanto all&#39;archivio GitHub aggiunto, quindi fai clic su **Convalida proprietà**.
 
 
 ## Utilizzo di archivi privati con Cloud Manager {#using}
@@ -106,7 +105,7 @@ Dopo la convalida dell’archivio GitHub in Cloud Manager, l’integrazione è c
 
 1. Per ogni richiesta pull, verrà creata automaticamente una [pipeline di qualità del codice full stack](/help/using/managing-pipelines.md). Tale pipeline viene avviata ogni volta che la richiesta pull viene aggiornata.
 
-1. La verifica GitHub rimane in esecuzione fino al completamento dei controlli di qualità del codice. I risultati di qualità del codice sono propagati quindi alla verifica GitHub.
+1. Il controllo GitHub rimane in esecuzione fino al completamento dei controlli di qualità del codice. I risultati di qualità del codice sono propagati quindi alla verifica GitHub.
 
    ![Controlli di qualità del codice GitHub](/help/assets/repositories/github-code-quality.png)
 

@@ -1,21 +1,21 @@
 ---
-title: Pipeline solo di staging e solo di produzione
+title: Pipeline solo stage e solo produzione - Early Adopter
 description: Scopri come suddividere le distribuzioni di staging e di produzione utilizzando pipeline dedicate.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
-source-git-commit: 03f7429fd2c4a6dd4c8ae3228eff9c8cdab1ded8
-workflow-type: ht
-source-wordcount: '932'
-ht-degree: 100%
+source-git-commit: 2c6f5692ffa31e02d7338e68063d0c1c03a0c73b
+workflow-type: tm+mt
+source-wordcount: '936'
+ht-degree: 98%
 
 ---
 
-# Pipeline solo di staging e solo di produzione {#stage-prod-only}
+# Pipeline solo per lo staging e solo per la produzione (Early Adopter) {#stage-prod-only}
 
 Scopri come suddividere le distribuzioni di staging e di produzione utilizzando pipeline dedicate.
 
 >[!NOTE]
 >
->Questa funzione è disponibile solo per [il programma per i primi utilizzatori](/help/release-notes/current.md#early-adoption).
+>Questa funzione è disponibile solo per [il programma per i primi utilizzatori](/help/release-notes/2024/2024-8-0.md).
 
 ## Panoramica {#overview}
 
@@ -116,3 +116,4 @@ Se non esiste una pipeline solo di produzione, viene richiesto di crearne una.
 Per le pipeline solo di produzione, assicurati di identificare gli artefatti di origine che desideri implementare in produzione. Questi dettagli sono disponibili nel passaggio **Preparazione degli artefatti**. Per ulteriori dettagli e registri, puoi passare a tali esecuzioni.
 
 ![Dettagli artefatto](/help/assets/configure-pipelines/prod-only-pipeline-run.png)
+
