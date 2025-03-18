@@ -3,7 +3,7 @@ title: Note sulla versione 2025.3.0 di Cloud Manager
 description: Ulteriori informazioni sulla versione 2025.3.0 di Cloud Manager su Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: 58cdebf819f2737be5d8e129ff5b9783888f3c21
+source-git-commit: bb57be6d2cbab8ff47b368bab59cb3072f78b235
 workflow-type: tm+mt
 source-wordcount: '307'
 ht-degree: 32%
@@ -57,6 +57,7 @@ Al termine del processo, i clienti devono **approvare l&#39;esecuzione** per l&#
 Se ti interessa testare questa nuova funzione e condividere i tuoi commenti, contatta il tuo Customer Success Engineer di Adobe.
 
 Consulta anche [Service Pack Updates for Development Environments - Early Adopter](/help/using/service-packs-environments.md).
+
 
 
 <!-- ## Bug fixes {#bug-fixes}
