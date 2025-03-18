@@ -1,7 +1,8 @@
 ---
 title: Aggiornamenti del Service Pack per gli ambienti di sviluppo - Early Adopter
 description: Scopri come avviare gli aggiornamenti del service pack per gli ambienti di sviluppo tramite l’interfaccia utente di Cloud Manager.
-source-git-commit: 8da0e6cb4587bc7dfc79bec415ff3aeef2d12e3e
+exl-id: 996a8eee-843f-45a6-8f7a-31ea405c2b32
+source-git-commit: 91691878a2c135cc9fe123c06afcf775a962a2e0
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 3%
@@ -14,7 +15,7 @@ Scopri come avviare gli aggiornamenti del service pack per gli ambienti di svilu
 
 >[!NOTE]
 >
->Questa funzione è disponibile solo per [il programma per i primi utilizzatori](/help/release-notes/current.md).
+>Questa funzione è disponibile solo per [il programma per i primi utilizzatori](/help/release-notes/current.md#early-adoption).
 
 ## Panoramica {#service-pack-updates-overview}
 
@@ -91,5 +92,3 @@ Al termine dell&#39;installazione, per completare l&#39;aggiornamento è necessa
 L&#39;installazione del service pack è stata annullata e non sono state applicate modifiche.
 
    ![Rifiuto del service pack](/help/using/assets/service-pack-reject.png)
-
-

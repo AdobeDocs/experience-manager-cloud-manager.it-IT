@@ -2,10 +2,10 @@
 title: Gestire le pipeline
 description: Scopri come gestire, modificare, eseguire ed eliminare le pipeline esistenti.
 exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
-source-git-commit: 58cdebf819f2737be5d8e129ff5b9783888f3c21
+source-git-commit: 91691878a2c135cc9fe123c06afcf775a962a2e0
 workflow-type: tm+mt
-source-wordcount: '845'
-ht-degree: 73%
+source-wordcount: '1054'
+ht-degree: 60%
 
 ---
 
@@ -66,7 +66,7 @@ Facendo clic sull’icona `i` vengono mostrati i dettagli sull’esecuzione dell
 
 Fai clic su **Visualizza dettagli**, per rivedere i [dettagli dell’esecuzione della pipeline](#view-details).
 
-## Eseguire le pipeline {#running-pipelines}
+## Eseguire una pipeline {#run-one-pipeline}
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione e il programma appropriati.
 1. Passa alla scheda **Pipeline** dalla pagina **Panoramica del programma**.
@@ -77,6 +77,23 @@ Fai clic su **Visualizza dettagli**, per rivedere i [dettagli dell’esecuzione 
    Per visualizzare i dettagli dell&#39;esecuzione, fare clic di nuovo sull&#39;icona ![Altro, con i puntini di sospensione](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) e fare clic su **[Visualizza dettagli](#view-details)**.
 
    A seconda del tipo di pipeline, è possibile annullare l&#39;esecuzione facendo nuovamente clic sull&#39;icona ![Altro, puntini di sospensione](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) e scegliendo **Annulla**.
+
+## Eseguire più pipeline {#run-multiple-pipelines}
+
+Con Cloud Manager è possibile eseguire più pipeline contemporaneamente, migliorando l’efficienza della distribuzione per i clienti Adobe Managed Services (AMS). La funzionalità **Esegui selezionati** consente di selezionare più pipeline e attivarle per l&#39;esecuzione simultanea. Semplifica l’esecuzione manuale delle pipeline singolarmente e ottimizza i flussi di lavoro di build e distribuzione.
+
+**Per eseguire più pipeline:**
+
+1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione e il programma appropriati.
+1. Dal menu a sinistra, fare clic sull&#39;icona ![Flusso di lavoro ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Workflow_18_N.svg) **Pipeline**.
+1. Nella tabella della pagina **Pipeline**, seleziona le caselle di controllo accanto alle pipeline da eseguire.
+Se necessario, fai clic sull&#39;icona ![Filtro, funnel](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Filter_18_N.svg) **Filtri** per ordinare le pipeline in base all&#39;ambiente, al tipo di codice distribuito o a entrambi.
+1. Nell&#39;angolo superiore destro della pagina fare clic su **Esegui selezionato (x)**.
+1. Nella finestra di dialogo **Esegui pipeline selezionate (x)**, fai clic su **Esegui (x)**.
+
+   Il pulsante **Esegui** riflette il numero di pipeline che possono continuare. Ad esempio, potresti aver selezionato quattro pipeline, ma una è già in esecuzione. In alternativa, un ambiente collegato a una pipeline selezionata non esiste più. In tali casi, il sistema si adegua di conseguenza. Il pulsante si aggiorna a &quot;Esegui (3)&quot; per indicare che tre pipeline possono procedere.
+
+1. Le pipeline iniziano a essere in esecuzione e il loro stato viene aggiornato nell&#39;elenco **Pipeline**.
 
 ## Modificare pipeline {#editing-pipelines}
 
