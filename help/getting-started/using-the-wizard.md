@@ -2,17 +2,17 @@
 title: Utilizzo della procedura guidata Nuovo progetto
 description: Segui questa pagina per scoprire come utilizzare la procedura guidata per creare un progetto di applicazione AEM.
 exl-id: 9d7c6f4c-9379-471c-8dad-772a7099da54
-source-git-commit: 7bc874a8dd14544c22201ef2c470faab84d31f8b
-workflow-type: ht
-source-wordcount: '321'
-ht-degree: 100%
+source-git-commit: f3617eb50147f5af33282cb0f25ada7dc423d434
+workflow-type: tm+mt
+source-wordcount: '320'
+ht-degree: 92%
 
 ---
 
 
-# Utilizzo della procedura guidata Nuovo progetto {#using-the-wizard}
+# Utilizza la procedura guidata per un nuovo progetto {#using-the-wizard}
 
-Quando hai effettuato l’accesso a Cloud Manager come nuovo cliente, ti è stato fornito un archivio Git vuoto. Per aiutarti a iniziare, Cloud Manager offre una procedura guidata per creare un progetto AEM minimo utilizzando come punto di partenza l’[archetipo di progetto AEM](https://github.com/adobe/aem-project-archetype).
+Al momento dell’onboarding in Cloud Manager come nuovo cliente, ti veniva fornito un archivio Git vuoto. Per aiutarti a iniziare, Cloud Manager offre una procedura guidata per creare un progetto AEM minimo utilizzando come punto di partenza l’[archetipo di progetto AEM](https://github.com/adobe/aem-project-archetype).
 
 Segui questi passaggi per creare un progetto AEM utilizzando la procedura guidata.
 
