@@ -2,10 +2,10 @@
 title: Regole per la qualità del codice personalizzato
 description: Scopri le specifiche delle regole di qualità del codice personalizzato eseguite da Cloud Manager durante il test di qualità del codice. Queste regole si basano sulle best practice dei tecnici di AEM.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: c50eb54b5603b4370f2d7907a2194477dcc3ba21
-workflow-type: ht
-source-wordcount: '3523'
-ht-degree: 100%
+source-git-commit: 8388edb5510ed4583a7bc703f3781af03d976948
+workflow-type: tm+mt
+source-wordcount: '3644'
+ht-degree: 96%
 
 ---
 
@@ -883,14 +883,33 @@ AEM Cloud Service non consente la creazione di definizioni di indicizzazione che
 
 AEM Cloud Service non consente la creazione di definizioni di indicizzazione che contengono proprietà haystack.
 
-### La configurazione delle definizioni di indicizzazione non deve contenere la proprietà: async-previous {#oakpal-indexing-async-previous-property}
+### La configurazione delle definizioni di indicizzazione non deve contenere la proprietà: async-previous {#oakpal-indexing-unsupported-async-properties}
 
-* **Chiave**: IndexAsyncPreviousCheck
+* **Chiave**: IndexUnsupportedAsyncPropertiesCheck
 * **Tipo**: miglioramento
 * **Gravità**: minore
-* **Da**: versione 2025.2.0
+* **Da**: versione 2025.3.0
 
-AEM Cloud Service non consente la creazione di definizioni di indicizzazione che contengono proprietà async-previous.
+AEM Cloud Service non consente la creazione di definizioni di indicizzazione con proprietà asincrone non supportate.
+
+### La configurazione delle definizioni di indicizzazione non deve avere lo stesso tag in più indici {#oakpal-indexing-same-tag-multiple-indexes}
+
+* **Chiave**: SameTagInMultipleIndexes
+* **Tipo**: miglioramento
+* **Gravità**: minore
+* **Da**: versione 2025.3.0
+
+AEM Cloud Service non consente la creazione di definizioni di indicizzazione che contengono lo stesso tag in più indici.
+
+### La configurazione delle definizioni di indicizzazione non deve contenere la sostituzione della modalità per i percorsi non consentiti {#oakpal-xml-mode-analysis}
+
+* **Chiave**: FilterXmlModeAnalysis
+* **Tipo**: miglioramento
+* **Gravità**: importante
+* **Da**: versione 2025.4.0
+
+L&#39;utilizzo della modalità &quot;sostituzione&quot; nell&#39;archivio file non è consentito per i percorsi al di sotto di /content; non deve essere utilizzato per i percorsi al di sotto di /etc e /var.
+La modalità &quot;replace&quot; sostituirà tutti i contenuti già esistenti nell’archivio con quella fornita nel pacchetto di contenuti e i pacchetti che attivano questa azione non devono far parte di pacchetti distribuiti tramite Cloud Manager.
 
 ## Strumento di ottimizzazione del Dispatcher {#dispatcher-optimization-tool-rules}
 
