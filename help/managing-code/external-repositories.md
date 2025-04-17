@@ -2,7 +2,7 @@
 title: Aggiungere archivi esterni in Cloud Manager - Utenti che adottano in anticipo
 description: Scopri come aggiungere un archivio esterno in Cloud Manager. Cloud Manager supporta l’integrazione con gli archivi GitHub Enterprise, GitLab e Bitbucket.
 exl-id: 4500cacc-5e27-4bbb-b8f6-5144dac7e6da
-source-git-commit: a63d996b283396efa139bf567c40a51e6f46d9bc
+source-git-commit: 5ba12cdfa4a0d790561fd2f3da738bf697133bee
 workflow-type: tm+mt
 source-wordcount: '1866'
 ht-degree: 27%
@@ -39,7 +39,7 @@ La configurazione di un archivio esterno in Cloud Manager avviene in tre passagg
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione appropriata.
 
-1. Nella console **Programmi personali** selezionare il programma a cui si desidera collegare un repository esterno.
+1. Nella console **[Programmi personali](/help/getting-started/navigation.md#my-programs-console)** selezionare il programma a cui si desidera collegare un repository esterno.
 
 1. Nel menu laterale, in **Programma**, fare clic su ![Icona struttura cartella](https://spectrum.adobe.com/static/icons/workflow_18/Smock_FolderOutline_18_N.svg) **Archivi**.
 
@@ -121,7 +121,7 @@ Per tutti gli altri archivi esterni per i quali è stato eseguito l’onboarding
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione appropriata.
 
-1. Nella console **Programmi personali** selezionare il programma in cui si desidera configurare un webhook per un archivio Git esterno.
+1. Nella console **[Programmi personali](/help/getting-started/navigation.md#my-programs-console)** selezionare il programma in cui si desidera configurare un webhook per un archivio Git esterno.
 
 1. Nell’angolo in alto a sinistra della pagina, fai clic sull’![icona Mostra menu](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) per visualizzare il menu a sinistra.
 
