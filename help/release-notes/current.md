@@ -3,10 +3,10 @@ title: Note sulla versione 2025.4.0 di Cloud Manager
 description: Ulteriori informazioni sulla versione 2025.4.0 di Cloud Manager su Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: 8c99baba6fb41dd702c338ba727efc237a0f1a8d
+source-git-commit: b46cb7fb178fc0e63fdc0c04239f461cb206802b
 workflow-type: tm+mt
 source-wordcount: '374'
-ht-degree: 93%
+ht-degree: 97%
 
 ---
 
@@ -22,7 +22,7 @@ Consulta anche le [note sulla versione corrente di Adobe Experience Manager as a
 
 La data di rilascio della versione 2025.4.0 di [!UICONTROL Cloud Manager] è il venerdì 10 aprile 2025.
 
-La prossima versione è pianificata per il venerdì 8 maggio 2025.
+La prossima versione è pianificata per l’8 maggio 2025.
 
 <!--
 ## What's new {#what-is-new}
@@ -33,9 +33,9 @@ La prossima versione è pianificata per il venerdì 8 maggio 2025.
 
 ## Programma per i primi utilizzatori {#early-adoption}
 
-Partecipa al programma Early Adoption di Cloud Manager per ottenere accesso esclusivo alle prossime funzionalità prima del rilascio generale.
+Partecipa al programma per i primi utilizzatori di Cloud Manager per ottenere un accesso esclusivo alle prossime funzioni prima del rilascio generale.
 
-Sono attualmente disponibili le seguenti opportunità di adozione anticipata:
+È attualmente disponibile la seguente opportunità di adozione anticipata:
 
 ### Bring Your Own Git: ora con supporto per GitLab e Bitbucket {#gitlab-bitbucket}
 
