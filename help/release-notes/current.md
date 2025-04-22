@@ -3,10 +3,10 @@ title: Note sulla versione 2025.4.0 di Cloud Manager
 description: Ulteriori informazioni sulla versione 2025.4.0 di Cloud Manager su Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: b46cb7fb178fc0e63fdc0c04239f461cb206802b
+source-git-commit: 54c03955e66f4b893829d4e8186babc30d4dbdb3
 workflow-type: tm+mt
 source-wordcount: '374'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -35,7 +35,7 @@ La prossima versione è pianificata per l’8 maggio 2025.
 
 Partecipa al programma per i primi utilizzatori di Cloud Manager per ottenere un accesso esclusivo alle prossime funzioni prima del rilascio generale.
 
-È attualmente disponibile la seguente opportunità di adozione anticipata:
+Le seguenti opportunità sono attualmente disponibili per i primi utilizzatori:
 
 ### Bring Your Own Git: ora con supporto per GitLab e Bitbucket {#gitlab-bitbucket}
 
