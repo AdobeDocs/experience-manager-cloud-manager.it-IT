@@ -1,21 +1,22 @@
 ---
-title: Pipeline solo stage e solo produzione - Early Adopter
+title: Pipeline solo di staging e solo di produzione
 description: Scopri come suddividere le distribuzioni di staging e di produzione utilizzando pipeline dedicate.
+badge: label="Adottatore anticipato" type="Positive" url="/help/release-notes/current.md#staging-production-only-pipelines"
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
-source-git-commit: 2c6f5692ffa31e02d7338e68063d0c1c03a0c73b
+source-git-commit: b830c30bb6b2b99ef442577325a30de6b9953ec8
 workflow-type: tm+mt
-source-wordcount: '936'
-ht-degree: 98%
+source-wordcount: '937'
+ht-degree: 99%
 
 ---
 
-# Pipeline solo per lo staging e solo per la produzione (Early Adopter) {#stage-prod-only}
+# Pipeline solo di staging e solo di produzione {#stage-prod-only}
 
 Scopri come suddividere le distribuzioni di staging e di produzione utilizzando pipeline dedicate.
 
 >[!NOTE]
 >
->Questa funzione è disponibile solo per [il programma per i primi utilizzatori](/help/release-notes/2024/2024-8-0.md).
+>Questa funzione è disponibile solo per [il programma per i primi utilizzatori](/help/release-notes/current.md#staging-production-only-pipelines).
 
 ## Panoramica {#overview}
 
