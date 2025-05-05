@@ -163,4 +163,4 @@ Dopo aver configurato la pipeline, puoi distribuire il codice. Per ulteriori det
 
 Questo video fornisce una panoramica del processo di creazione della pipeline, descritto in questo documento.
 
->[!VIDEO](https://video.tv.adobe.com/v/26314/)
+>[!VIDEO](https://video.tv.adobe.com/v/328575?captions=ita)

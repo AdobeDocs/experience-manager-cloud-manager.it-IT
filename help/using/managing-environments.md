@@ -64,6 +64,6 @@ La schermata **Ambienti** visualizza ogni ambiente di produzione e di staging ne
 
 Questo video fornisce una panoramica degli ambienti di Cloud Manager composti da istanze di authoring, pubblicazione e Dispatcher AEM.
 
->[!VIDEO](https://video.tv.adobe.com/v/26318/)
+>[!VIDEO](https://video.tv.adobe.com/v/328127?captions=ita)
 
 *(3 minuti, 1 secondo)*
