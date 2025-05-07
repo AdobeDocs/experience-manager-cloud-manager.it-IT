@@ -2,7 +2,7 @@
 title: Regole per la qualità del codice personalizzato
 description: Scopri le specifiche delle regole di qualità del codice personalizzato eseguite da Cloud Manager durante il test di qualità del codice. Queste regole si basano sulle best practice dei tecnici di AEM.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: 8388edb5510ed4583a7bc703f3781af03d976948
+source-git-commit: 54987d6ccd8c31dab677d90b40466c458743f936
 workflow-type: tm+mt
 source-wordcount: '3644'
 ht-degree: 96%
@@ -644,7 +644,7 @@ La configurazione OSGi `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` def
 
 I componenti AEM con una finestra di dialogo per l’interfaccia classica devono avere anche una finestra di dialogo per l’interfaccia touch, in modo da fornire un’authoring ottimale e per compatibilità con il modello di distribuzione di Cloud Service, che supporta l’interfaccia classica. Questa regola verifica i seguenti scenari:
 
-* Un componente con una finestra di dialogo dell’interfaccia classica (ovvero un nodo figlio `dialog`) deve avere una finestra di dialogo corrispondente dell’interfaccia Touch (ovvero un nodo figlio `cq:dialog`).
+* Un componente con una finestra di dialogo dell’interfaccia classica (ovvero un nodo figlio `dialog`) deve avere una finestra di dialogo corrispondente dell’interfaccia Touch (ovvero un nodo secondario `cq:dialog`).
 * Un componente che ha una finestra di dialogo di progettazione per l’interfaccia utente classica (ad es. un nodo `design_dialog`) deve avere anche una finestra di dialogo di progettazione corrispondente per l’interfaccia utente touch (cioè un nodo `cq:design_dialog` secondario).
 * Un componente con una finestra di dialogo Interfaccia classica e una finestra di dialogo di progettazione Interfaccia classica deve avere una finestra di dialogo Interfaccia Touch corrispondente così come una finestra di dialogo di progettazione Interfaccia Touch corrispondente.
 
@@ -801,7 +801,7 @@ AEM Cloud Service non consente che le definizioni dell’indice di ricerca perso
 
 * **Chiave**: IndexNotUnderUIContent
 * **Tipo**: miglioramento
-* **Gravità**: minore
+* **Gravità**: importante
 * **Da**: versione 2024.6.0
 
 AEM Cloud Service non consente di distribuire nel pacchetto di contenuti dell’interfaccia utente le definizioni di indici di ricerca personalizzati (nodi di tipo `oak:QueryIndexDefinition`).
@@ -814,7 +814,7 @@ AEM Cloud Service non consente di distribuire nel pacchetto di contenuti dell’
 
 * **Chiave**: CustomFulltextIndexesOfTheDamAssetCheck
 * **Tipo**: miglioramento
-* **Gravità**: minore
+* **Gravità**: importante
 * **Da**: versione 2024.6.0
 
 AEM Cloud Service non consente che la definizione di indici testuali personalizzati di tipo `damAssetLucene` sia preceduta da un prefisso diverso da `damAssetLucene`.
@@ -827,7 +827,7 @@ AEM Cloud Service non consente che la definizione di indici testuali personalizz
 
 * **Chiave**: DuplicateNameProperty
 * **Tipo**: miglioramento
-* **Gravità**: minore
+* **Gravità**: importante
 * **Da**: versione 2024.6.0
 
 AEM Cloud Service non consente che le definizioni dell’indice di ricerca personalizzato (ovvero, i nodi di tipo `oak:QueryIndexDefinition`) contengano una proprietà denominata con lo stesso nome.
@@ -840,7 +840,7 @@ AEM Cloud Service non consente che le definizioni dell’indice di ricerca perso
 
 * **Chiave**: RestrictIndexCustomization
 * **Tipo**: miglioramento
-* **Gravità**: minore
+* **Gravità**: importante
 * **Da**: versione 2024.6.0
 
 AEM Cloud Service non consente modifiche non autorizzate ai seguenti indici integrati:
