@@ -7,10 +7,10 @@ user-guide-description: Scopri come utilizzare Cloud Manager per gestire autonom
 feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
-source-git-commit: 4c4ffeb689117620bd810f35d277f5ab20bda8d3
+source-git-commit: ecee095cfdf929e38823ace77f184db3108cab92
 workflow-type: tm+mt
-source-wordcount: '366'
-ht-degree: 97%
+source-wordcount: '368'
+ht-degree: 96%
 
 ---
 
@@ -42,7 +42,7 @@ ht-degree: 97%
       + [Ambiente di build](/help/getting-started/build-environment.md)
    + [Configurare i rami](/help/getting-started/configuring-branches.md)
    + [Configurazioni di Dispatcher](/help/getting-started/dispatcher-configurations.md)
-+ Utilizzo {#using}
++ Utilizzare {#using}
    + Pipeline CI/CD {#pipelines}
       + [Configurare una pipeline di produzione](/help/using/production-pipelines.md)
       + [Configurare una pipeline non di produzione](/help/using/non-production-pipelines.md)
@@ -58,7 +58,7 @@ ht-degree: 97%
    + [Notifiche](/help/using/notifications.md)
    + [Regole per la qualità del codice personalizzato](/help/using/custom-code-quality-rules.md)
    + [Copia dei contenuti per coerenza in ambienti diversi](/help/using/content-copy.md)
-+ Gestione del codice {#managing-code}
++ Gestisci codice {#managing-code}
    + [Gestione degli archivi in Cloud Manager](/help/managing-code/managing-repositories.md)
    + [Informazioni di accesso all’archivio](/help/managing-code/accessing-repositories.md)
    + [Aggiungere un archivio di Adobe](/help/managing-code/adobe-repositories.md)
@@ -76,6 +76,7 @@ ht-degree: 97%
 + Note sulla versione {#release-notes}
    + [Corrente](/help/release-notes/current.md)
    + 2025 {#rn-2025}
+      + [2025.4.0](/help/release-notes/2025/2025-4-0.md)
       + [2025.3.0](/help/release-notes/2025/2025-3-0.md)
       + [2025.2.0](/help/release-notes/2025/2025-2-0.md)
       + [2025.1.0](/help/release-notes/2025/2025-1-0.md)
