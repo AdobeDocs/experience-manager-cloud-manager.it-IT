@@ -1,38 +1,51 @@
 ---
-title: Note sulla versione 2025.5.0 di Cloud Manager
+title: Note sulla versione 2025.6.0 di Cloud Manager
 description: Ulteriori informazioni sulla versione 2025.5.0 di Cloud Manager su Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: 802844e15dc2b610e658e9fac4f0304f0ec878c6
+source-git-commit: 13e6f33e7ef92f4a27ae30c7550351b20d3e86ed
 workflow-type: tm+mt
-source-wordcount: '389'
-ht-degree: 96%
+source-wordcount: '560'
+ht-degree: 67%
 
 ---
 
-# Note sulla versione di Cloud Manager 2025.5.0 su Adobe Managed Services {#release-notes}
+# Note sulla versione di Cloud Manager 2025.6.0 su Adobe Managed Services {#release-notes}
 
 <!-- RELEASE WIKI  https://wiki.corp.adobe.com/display/DMSArchitecture/Cloud+Manager+2025.04.0+Release -->
 
-Ulteriori informazioni sulla versione di [!UICONTROL Cloud Manager] 2025.5.0 su Adobe Managed Services.
+Ulteriori informazioni sulla versione di [!UICONTROL Cloud Manager] 2025.6.0 su Adobe Managed Services.
 
 Consulta anche le [note sulla versione corrente di Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/it/docs/experience-manager-cloud-service/content/release-notes/home).
 
 ## Date di pubblicazione {#release-date}
 
-La data di rilascio della versione 2025.5.0 di [!UICONTROL Cloud Manager] è il venerdì 8 maggio 2025.
+La data di rilascio della versione 2025.6.0 di [!UICONTROL Cloud Manager] è il venerdì 5 giugno 2025.
 
-Nella versione di maggio di Cloud Manager non sono presenti nuove funzioni o correzioni di bug significativi.
+<!-- There are no significant new features or bug fixes in the May Cloud Manager release. -->
 
-La prossima versione è pianificata per l’venerdì 5 giugno 2025.
+La prossima versione è pianificata per il venerdì 10 luglio 2025.
 
 <!-- SAVE FOR FUTURE POSSIBLE USE There are no significant new features or bug fixes in the May Cloud Manager release. -->
 
-<!--
-## What's new {#what-is-new}
 
-* 
--->
+## Novità {#what-is-new}
+
+* **(UI) Pipeline di sola gestione temporanea e sola produzione**
+
+  Cloud Manager ora supporta le pipeline di sola staging e di sola produzione. Questa funzione consente di suddividere le distribuzioni di produzione full stack in pipeline più piccole e specifiche per uno scopo. <!-- This feature went into GA from Early Adopter in the June 5, 2025 CM release -->
+
+  ![Finestra di dialogo Aggiungi pipeline non di produzione con il pulsante di opzione Codice full stack selezionato e l&#39;ambiente di staging selezionato](/help/release-notes/assets/add-non-production-pipeline.png)
+
+  Consulta [Pipeline di sola fase e sola produzione](/help/using/stage-prod-only.md).
+
+* **(UI) Preferiti pipeline**
+
+  In questa versione, Cloud Manager introduce la possibilità di fissare le pipeline preferite, consentendoti di contrassegnare specifiche pipeline come preferite in modo che vengano visualizzate nella parte superiore dell&#39;elenco nella pagina **Pipeline**. Questo miglioramento semplifica la ricerca e l’esecuzione delle pipeline a cui si accede di frequente. <!-- CMGR-68293 -->
+
+  ![Pipeline contrassegnate come preferite](/help/release-notes/assets/pipeline-favorites.png) *Due pipeline contrassegnate come preferite.*
+
+  Consulta [Contrassegnare i preferiti della pipeline](/help/using/managing-pipelines.md#pipeline-favorites).
 
 
 ## Programma per i primi utilizzatori {#early-adoption}
@@ -40,6 +53,16 @@ La prossima versione è pianificata per l’venerdì 5 giugno 2025.
 Partecipa al programma per i primi utilizzatori di Cloud Manager per ottenere un accesso esclusivo alle prossime funzioni prima del rilascio generale.
 
 Le seguenti opportunità sono attualmente disponibili per i primi utilizzatori:
+
+
+### Gestisci token di accesso{#access-tokens}
+
+Utilizza la funzionalità **Gestisci token di accesso** in Cloud Manager per visualizzare, rinominare ed eliminare i token di accesso associati agli archivi Git esterni, quali GitHub Enterprise, GitLab, Bitbucket e Azure DevOps.
+
+Consulta [Gestione token di accesso](/help/managing-code/manage-access-tokens.md).
+
+Se ti interessa testare questa nuova funzione e condividere il tuo feedback, invia un’e-mail a [Grp-CloudManager_BYOG@adobe.com](mailto:Grp-CloudManager_BYOG@adobe.com) dall’indirizzo e-mail associato al tuo Adobe ID. Se ti trovi in una struttura di archivio privata/pubblica o aziendale, assicurati di specificare la piattaforma Git che desideri utilizzare.
+
 
 ### Bring Your Own Git: ora con supporto per GitLab e Bitbucket {#gitlab-bitbucket}
 
@@ -57,18 +80,12 @@ Consulta [Aggiungere archivi esterni in Cloud Manager](/help/managing-code/exter
 
 Se ti interessa testare questa nuova funzione e condividere il tuo feedback, invia un’e-mail a [Grp-CloudManager_BYOG@adobe.com](mailto:Grp-CloudManager_BYOG@adobe.com) dall’indirizzo e-mail associato al tuo Adobe ID. Se ti trovi in una struttura di archivio privata/pubblica o aziendale, assicurati di specificare la piattaforma Git che desideri utilizzare.
 
-### Pipeline solo di staging e solo di produzione {#staging-production-only-pipelines}
 
-Adobe annuncia l’introduzione del supporto per [pipeline solo di staging e solo di produzione](/help/using/stage-prod-only.md). Questa nuova funzione consente di suddividere le pipeline di distribuzione in produzione full stack in implementazioni più piccole e specializzate.
+## Correzione di bug {#bug-fixes}
 
-Se ti interessa testare questa nuova funzione e fornire un feedback, invia un’e-mail a [Grp-cloudmanager_splitpipelines@adobe.com](mailto:Grp-cloudmanager_splitpipelines@adobe.com) utilizzando l’indirizzo e-mail associato al tuo Adobe ID.
-
+* AEM Cloud Manager ora mappa correttamente gli errori di build Maven causati da errori 409 (conflitti) durante il recupero degli artefatti del cliente su un errore causato dal cliente. Questa modifica migliora la messaggistica di errore distinguendo tra errori interni e problemi relativi alla configurazione dell’ambiente del cliente. <!-- CMGR-66673 -->
 
 <!--
-## Bug fixes {#bug-fixes}
-
-* A
-
 Known Issues {#known-issues}
 
 * A -->

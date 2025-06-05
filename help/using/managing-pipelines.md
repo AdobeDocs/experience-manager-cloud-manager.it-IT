@@ -2,10 +2,10 @@
 title: Gestire le pipeline
 description: Scopri come gestire, modificare, eseguire ed eliminare le pipeline esistenti.
 exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
-source-git-commit: d4a7d9ab72947b97b0dabb2f822ef268e4972685
+source-git-commit: 91eda02d55134fba167f30830a142a80717e9083
 workflow-type: tm+mt
-source-wordcount: '1060'
-ht-degree: 59%
+source-wordcount: '1170'
+ht-degree: 55%
 
 ---
 
@@ -49,6 +49,18 @@ Facendo clic sull’icona `i` vengono visualizzati i dettagli sull’ultima o at
 ![Dettagli di esecuzione della pipeline](/help/assets/configure-pipelines/pipeline-status.png)
 
 Facendo clic su **Visualizza dettagli**, vieni reindirizzato ai [dettagli dell’esecuzione della pipeline](#view-details).
+
+### Contrassegnare i preferiti della pipeline{#pipeline-favorites}
+
+Puoi contrassegnare specifiche pipeline come preferite in modo che vengano visualizzate nella parte superiore dell&#39;elenco nella pagina **Pipeline**. Questa funzionalità semplifica la ricerca e l’esecuzione delle pipeline a cui si accede di frequente.
+
+**Per contrassegnare i preferiti della pipeline:**
+
+1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione e il programma appropriati.
+1. Dalla pagina **Panoramica programma**, fai clic sulla scheda ![Pipeline - Icona flusso di lavoro](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Workflow_18_N.svg) **Pipeline**.
+1. Nella pagina **Pipeline**, a sinistra del nome e del tipo di una pipeline, fai clic su ![Icona a forma di stella per la pipeline non preferita](https://spectrum.adobe.com/static/icons/workflow_18/Smock_StarOutline_18_N.svg) per aggiungerla all&#39;elenco dei preferiti.
+In alternativa, fai clic sull&#39;icona ![Stella per una pipeline preferita](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Star_18_N.svg) per rimuovere la pipeline dall&#39;elenco dei preferiti.
+
 
 ## Pagina Attività {#activity}
 
