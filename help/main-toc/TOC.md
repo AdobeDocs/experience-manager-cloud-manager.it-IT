@@ -7,10 +7,10 @@ user-guide-description: Scopri come utilizzare Cloud Manager per gestire autonom
 feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
-source-git-commit: 35845e827b0a3fadfe2a55a2171b5e02100cf3eb
+source-git-commit: b2a14280e84bb934053968b0e93e33d30fb6086a
 workflow-type: tm+mt
 source-wordcount: '373'
-ht-degree: 92%
+ht-degree: 91%
 
 ---
 
@@ -52,7 +52,7 @@ ht-degree: 92%
    + [Test della qualità del codice](/help/using/code-quality-testing.md)
    + [Gestire gli ambienti](/help/using/managing-environments.md)
    + [Monitorare gli ambienti](/help/using/monitoring-environments.md)
-   + [Aggiornamenti del Service Pack per gli ambienti di sviluppo (Early Adopter)](/help/using/service-packs-environments.md)
+   + [Aggiornamenti del Service Pack per gli ambienti di sviluppo (versione beta privata)](/help/using/service-packs-environments.md)
    + [API di Cloud Manager](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)
    + [CLI di Cloud Manager](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/main/README.md)
    + [Notifiche](/help/using/notifications.md)
@@ -63,8 +63,8 @@ ht-degree: 92%
    + [Informazioni di accesso all’archivio](/help/managing-code/accessing-repositories.md)
    + [Aggiungere un archivio di Adobe](/help/managing-code/adobe-repositories.md)
    + [Aggiungere un archivio privato](/help/managing-code/private-repositories.md)
-   + [Aggiungere un archivio esterno (primi utilizzatori)](/help/managing-code/external-repositories.md)
-   + [Gestire i token di accesso (Early Adopter)](/help/managing-code/manage-access-tokens.md)
+   + [Aggiungere un archivio esterno (versione beta privata)](/help/managing-code/external-repositories.md)
+   + [Gestisci token di accesso (versione beta privata)](/help/managing-code/manage-access-tokens.md)
    + [Supporto per i sottomoduli Git](/help/managing-code/git-submodules.md)
    + [Configurazione verifica GitHub](/help/managing-code/github-check-config.md)
    + [Annotazioni di verifica GitHub](/help/managing-code/github-annotations.md)

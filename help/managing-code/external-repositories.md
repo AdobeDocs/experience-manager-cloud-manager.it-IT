@@ -1,12 +1,12 @@
 ---
 title: Aggiungere archivi esterni in Cloud Manager
 description: Scopri come aggiungere un archivio esterno in Cloud Manager. Cloud Manager supporta l’integrazione con gli archivi GitHub Enterprise, GitLab e Bitbucket.
-badge: label="Adottatore anticipato" type="Positive" url="/help/release-notes/current.md#gitlab-bitbucket"
+badge: label="Beta privata" type="Positive" url="/help/release-notes/current.md#gitlab-bitbucket"
 exl-id: 4500cacc-5e27-4bbb-b8f6-5144dac7e6da
-source-git-commit: 83ba61364d5a492bd7236d7fcaeabf8cf904627a
+source-git-commit: b2a14280e84bb934053968b0e93e33d30fb6086a
 workflow-type: tm+mt
 source-wordcount: '1871'
-ht-degree: 28%
+ht-degree: 27%
 
 ---
 
@@ -16,7 +16,7 @@ Scopri come aggiungere un archivio esterno in Cloud Manager. Cloud Manager suppo
 
 >[!NOTE]
 >
->Le funzioni descritte in questo articolo sono disponibili solo attraverso il programma di adozione anticipata. Per ulteriori dettagli e per iscriverti come utente iniziale, consulta [Bring Your Own Git](/help/release-notes/current.md#gitlab-bitbucket).
+>Le funzioni descritte in questo articolo sono disponibili solo tramite il programma beta privato. Per ulteriori dettagli e per iscriverti alla versione beta privata, consulta [Bring Your Own Git](/help/release-notes/current.md#gitlab-bitbucket).
 
 ## Configurare un archivio esterno
 
@@ -79,7 +79,7 @@ La configurazione di un archivio esterno in Cloud Manager avviene in tre passagg
 
    >[!NOTE]
    >
-   >La funzionalità **Aggiungi nuovo token di accesso** è attualmente in fase di adozione anticipata. Ulteriori funzionalità sono in fase di pianificazione. Di conseguenza, le autorizzazioni necessarie per i token di accesso potrebbero cambiare. Inoltre, è possibile che l’interfaccia utente per la gestione dei token venga aggiornata, includendo eventuali funzionalità quali le date di scadenza dei token. Inoltre, potrebbero essere aggiunti controlli automatici per garantire che i token collegati agli archivi rimangano validi.
+   >La funzionalità **Aggiungi nuovo token di accesso** è attualmente in fase beta privata. Ulteriori funzionalità sono in fase di pianificazione. Di conseguenza, le autorizzazioni necessarie per i token di accesso potrebbero cambiare. Inoltre, è possibile che l’interfaccia utente per la gestione dei token venga aggiornata, includendo eventuali funzionalità quali le date di scadenza dei token. Inoltre, potrebbero essere aggiunti controlli automatici per garantire che i token collegati agli archivi rimangano validi.
 
 1. Fai clic su **Convalida**.
 

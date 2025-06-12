@@ -1,9 +1,9 @@
 ---
 title: Gestire i token di accesso in Cloud Manager
 description: Scopri come visualizzare, modificare ed eliminare i token di accesso utilizzati per Bring Your Own Git in Cloud Manager su Adobe Managed Services.
-badge: label="Adottatore anticipato" type="Positive" url="/help/release-notes/current.md#access-tokens"
+badge: label="Beta privata" type="Positive" url="/help/release-notes/current.md#access-tokens"
 exl-id: 873aad0b-d7c6-4bc3-a70d-bbfdc1e02193
-source-git-commit: 4d95981d14004bde4931bf59846f9be7e10e3083
+source-git-commit: b2a14280e84bb934053968b0e93e33d30fb6086a
 workflow-type: tm+mt
 source-wordcount: '415'
 ht-degree: 3%
@@ -20,7 +20,7 @@ Vedi anche [Aggiungere archivi esterni in Cloud Manager](/help/managing-code/ext
 
 >[!NOTE]
 >
->Le funzioni descritte in questo articolo sono disponibili solo attraverso il programma di adozione anticipata. Per ulteriori dettagli e per iscriverti come utente iniziale, vedi [Gestione token di accesso](/help/release-notes/current.md#access-tokens).
+>Le funzioni descritte in questo articolo sono disponibili solo tramite il programma beta privato. Per ulteriori dettagli e per iscriverti alla versione beta privata, consulta [Gestione token di accesso](/help/release-notes/current.md#access-tokens).
 
 ## Visualizza token di accesso {#view-access-tokens}
 

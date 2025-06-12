@@ -1,23 +1,23 @@
 ---
-title: Aggiornamenti del Service Pack per gli ambienti di sviluppo - Early Adopter
+title: Aggiornamenti del Service Pack per gli ambienti di sviluppo - versione beta privata
 description: Scopri come avviare gli aggiornamenti del service pack per gli ambienti di sviluppo tramite l’interfaccia utente di Cloud Manager.
 hide: true
 hidefromtoc: true
 exl-id: 996a8eee-843f-45a6-8f7a-31ea405c2b32
-source-git-commit: 55b33db1bf80f066b1a66bc87c0abeefa4771871
+source-git-commit: b2a14280e84bb934053968b0e93e33d30fb6086a
 workflow-type: tm+mt
 source-wordcount: '453'
-ht-degree: 3%
+ht-degree: 1%
 
 ---
 
-# Aggiornamenti dei Service Pack per gli ambienti di sviluppo (Early Adopter) {#stage-prod-only}
+# Aggiornamenti dei Service Pack per gli ambienti di sviluppo (versione beta privata) {#stage-prod-only}
 
 Scopri come avviare gli aggiornamenti del service pack per gli ambienti di sviluppo tramite l’interfaccia utente di Cloud Manager.
 
 >[!NOTE]
 >
->Questa funzione è disponibile solo per [il programma per i primi utilizzatori](/help/release-notes/current.md#early-adoption).
+>Questa funzionalità è disponibile solo per [il programma beta privato](/help/release-notes/current.md#beta-program).
 
 ## Panoramica {#service-pack-updates-overview}
 

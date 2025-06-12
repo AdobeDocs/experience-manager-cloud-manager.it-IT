@@ -3,10 +3,10 @@ title: Note sulla versione 2025.6.0 di Cloud Manager
 description: Ulteriori informazioni sulla versione 2025.5.0 di Cloud Manager su Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: d0acd47ea6011dc5896d20d76ab0fcaa970df6ac
+source-git-commit: b2a14280e84bb934053968b0e93e33d30fb6086a
 workflow-type: tm+mt
 source-wordcount: '558'
-ht-degree: 67%
+ht-degree: 62%
 
 ---
 
@@ -33,7 +33,7 @@ La prossima versione è pianificata per il venerdì 10 luglio 2025.
 
 * **Pipeline di sola gestione temporanea e di sola produzione**
 
-  Cloud Manager ora supporta le pipeline di sola staging e di sola produzione. Questa funzione consente di suddividere le distribuzioni di produzione full stack in pipeline più piccole e specifiche per uno scopo. <!-- This feature went into GA from Early Adopter in the June 5, 2025 CM release -->
+  Cloud Manager ora supporta le pipeline di sola staging e di sola produzione. Questa funzione consente di suddividere le distribuzioni di produzione full stack in pipeline più piccole e specifiche per uno scopo. <!-- This feature went into GA from Private beta in the June 5, 2025 CM release -->
 
   ![Finestra di dialogo Aggiungi pipeline non di produzione con il pulsante di opzione Codice full stack selezionato e l&#39;ambiente di staging selezionato](/help/release-notes/assets/add-non-production-pipeline.png)
 
@@ -48,11 +48,11 @@ La prossima versione è pianificata per il venerdì 10 luglio 2025.
   Consulta [Contrassegnare i preferiti della pipeline](/help/using/managing-pipelines.md#pipeline-favorites).
 
 
-## Programma per i primi utilizzatori {#early-adoption}
+## Programma beta privato {#beta-program}
 
-Partecipa al programma per i primi utilizzatori di Cloud Manager per ottenere un accesso esclusivo alle prossime funzioni prima del rilascio generale.
+Partecipa al programma beta privato di Cloud Manager per ottenere l’accesso esclusivo alle prossime funzionalità prima del rilascio generale.
 
-Le seguenti opportunità sono attualmente disponibili per i primi utilizzatori:
+Sono attualmente disponibili le seguenti opportunità beta private:
 
 
 ### Gestisci token di accesso{#access-tokens}
