@@ -3,10 +3,10 @@ title: Aggiungere archivi esterni in Cloud Manager
 description: Scopri come aggiungere un archivio esterno in Cloud Manager. Cloud Manager supporta l’integrazione con gli archivi GitHub Enterprise, GitLab e Bitbucket.
 badge: label="Beta privata" type="Positive" url="/help/release-notes/current.md#gitlab-bitbucket"
 exl-id: 4500cacc-5e27-4bbb-b8f6-5144dac7e6da
-source-git-commit: 3958e36391eaca3450ef765676fcbbd485766318
+source-git-commit: 073f1024891e1a1d4298c5c593df011f5572e820
 workflow-type: tm+mt
-source-wordcount: '2050'
-ht-degree: 24%
+source-wordcount: '2295'
+ht-degree: 30%
 
 ---
 
@@ -51,7 +51,7 @@ La configurazione di un archivio esterno in Cloud Manager avviene in tre passagg
 
 1. Nella finestra di dialogo **Aggiungi archivio**, seleziona **Archivio privato** per collegare un archivio Git esterno al programma in uso.
 
-   ![Aggiungi un archivio personale](/help/managing-code/assets/repositories-private-repo-type.png)
+   ![Aggiungi un archivio personale](/help/managing-code/assets/repository-add-private-dialogbox2.png)
 
 1. In ciascun campo, fornisci i seguenti dettagli sull’archivio:
 
@@ -67,20 +67,56 @@ La configurazione di un archivio esterno in Cloud Manager avviene in tre passagg
 1. Nella finestra di dialogo **Convalida della proprietà dell’archivio privato**, fornisci un token di accesso per convalidare la proprietà dell’archivio esterno in modo da potervi accedere.
 
    ![Selezione di un token di accesso esistente per un archivio](/help/managing-code/assets/repositories-exisiting-access-token.png)
-   *Selezione di un token di accesso esistente per un archivio Bitbucket.*
+   *Selezione di un token di accesso esistente per un archivio Bitbucket (solo a scopo illustrativo).*
 
-   | Tipo di token | Descrizione |
-   | --- | --- |
-   | **Usa token di accesso esistente** | Se hai già fornito un token di accesso all’archivio per la tua organizzazione e hai accesso a più archivi, puoi selezionare un token esistente. Utilizza l’elenco a discesa **Nome token** per scegliere il token da applicare all’archivio. In caso contrario, aggiungi un nuovo token di accesso. |
-   | **Aggiungere un nuovo token di accesso** | **Tipo di archivio: GitHub Enterprise**<br><ul><li> Nel campo di testo **Nome token**, digita un nome per il token di accesso che stai creando.<li>Crea un token di accesso personale seguendo le istruzioni riportate nella [documentazione GitHub](https://docs.github.com/en/enterprise-server@3.14/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).<li>Autorizzazioni necessarie per il token di accesso personale GitHub Enterprise (PAT)<br>Queste autorizzazioni garantiscono che Cloud Manager possa convalidare le richieste di pull, gestire i controlli dello stato del commit e accedere ai dettagli dell&#39;archivio necessari.<br>Quando generi il PAT in GitHub Enterprise, accertati che includa le seguenti autorizzazioni dell&#39;archivio:<ul><li>Richiesta pull (lettura e scrittura)<li>Stati commit (lettura e scrittura)<li>Metadati archivio (sola lettura)</li></li></ul></li></ul></ul></ul><ul><li>Nel campo **Token di accesso**, incolla il token appena creato. |
-   | | **Tipo di archivio: GitLab**<ul><li>Nel campo di testo **Nome token**, digita un nome per il token di accesso che stai creando.<li>Crea un token di accesso personale seguendo le istruzioni riportate nella [documentazione GitLab](https://docs.gitlab.com/user/profile/personal_access_tokens/).<li>Autorizzazioni richieste per il token di accesso personale GitLab (PAT)<br>Questi ambiti consentono a Cloud Manager di accedere ai dati dell&#39;archivio e alle informazioni utente necessarie per la convalida e l&#39;integrazione del webhook.<br>Quando si genera il PAT in GitLab, assicurarsi che includa i seguenti ambiti token:<ul><li>api<li>read_user</li></li></ul></li></li></ul></ul></ul><ul><li>Nel campo **Token di accesso**, incolla il token appena creato. |
-   | | **Tipo di archivio: Bitbucket**<ul><li>Nel campo di testo **Nome token**, digita un nome per il token di accesso che stai creando.<li>Crea un token di accesso all&#39;archivio utilizzando la [documentazione Bitbucket](https://support.atlassian.com/bitbucket-cloud/docs/create-a-repository-access-token/).<li>Autorizzazioni necessarie per il token di accesso personale (PAT) Bitbucket<br>Queste autorizzazioni consentono a Cloud Manager di accedere al contenuto dell&#39;archivio, gestire le richieste di pull e configurare eventi webhook o reagire ad essi.<br>Quando crei la password dell&#39;app in Bitbucket, accertati che includa le seguenti autorizzazioni di password dell&#39;app richieste:<ul><li>Archivio (sola lettura)<li>Richieste pull (lettura e scrittura)<li>Webhook (lettura e scrittura)</li></li></ul></li></li></ul></ul></ul><ul><li>Nel campo **Token di accesso**, incolla il token appena creato. |
+>[!BEGINTABS]
 
-   Consulta [Gestione token di accesso](/help/managing-code/manage-access-tokens.md).
+>[!TAB GitHub Enterprise]
 
-   >[!NOTE]
-   >
-   >La funzionalità **Aggiungi nuovo token di accesso** è attualmente in fase beta privata. Ulteriori funzionalità sono in fase di pianificazione. Di conseguenza, le autorizzazioni necessarie per i token di accesso potrebbero cambiare. Inoltre, è possibile che l’interfaccia utente per la gestione dei token venga aggiornata, includendo eventuali funzionalità quali le date di scadenza dei token. Inoltre, potrebbero essere aggiunti controlli automatici per garantire che i token collegati agli archivi rimangano validi.
+**GitHub Enterprise**
+
+| Tipo di token | Descrizione |
+| --- | --- |
+| **Usa token di accesso esistente** | Se hai già fornito un token di accesso all’archivio per la tua organizzazione e hai accesso a più archivi, puoi selezionare un token esistente. Utilizza l’elenco a discesa **Nome token** per scegliere il token da applicare all’archivio. In caso contrario, aggiungi un nuovo token di accesso. |
+| **Aggiungere un nuovo token di accesso** | <ul><li> Nel campo di testo **Nome token**, digita un nome per il token di accesso che stai creando.<li>Crea un token di accesso personale seguendo le istruzioni riportate nella [documentazione GitHub](https://docs.github.com/en/enterprise-server@3.14/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).<li>Autorizzazioni necessarie per il token di accesso personale GitHub Enterprise (PAT)<br>Queste autorizzazioni garantiscono che Cloud Manager possa convalidare le richieste di pull, gestire i controlli dello stato del commit e accedere ai dettagli dell&#39;archivio necessari.<br>Quando generi il PAT in GitHub Enterprise, accertati che includa le seguenti autorizzazioni dell&#39;archivio:<ul><li>Richiesta pull (lettura e scrittura)<li>Stati commit (lettura e scrittura)<li>Metadati archivio (sola lettura)</li></li></ul></li></ul></ul></ul><ul><li>Nel campo **Token di accesso**, incolla il token appena creato. |
+
+Consulta [Gestione token di accesso](/help/managing-code/manage-access-tokens.md).
+
+>[!NOTE]
+>
+>La funzionalità **Aggiungi nuovo token di accesso** è attualmente in fase beta privata. Ulteriori funzionalità sono in fase di pianificazione. Di conseguenza, le autorizzazioni necessarie per i token di accesso potrebbero cambiare. Inoltre, è possibile che l’interfaccia utente per la gestione dei token venga aggiornata, includendo eventuali funzionalità quali le date di scadenza dei token. Inoltre, potrebbero essere aggiunti controlli automatici per garantire che i token collegati agli archivi rimangano validi.
+
+>[!TAB GitLab]
+
+**GitLab**
+
+| Tipo di token | Descrizione |
+| --- | --- |
+| **Usa token di accesso esistente** | Se hai già fornito un token di accesso all’archivio per la tua organizzazione e hai accesso a più archivi, puoi selezionare un token esistente. Utilizza l’elenco a discesa **Nome token** per scegliere il token da applicare all’archivio. In caso contrario, aggiungi un nuovo token di accesso. |
+| **Aggiungere un nuovo token di accesso** | <ul><li>Nel campo di testo **Nome token**, digita un nome per il token di accesso che stai creando.<li>Crea un token di accesso personale seguendo le istruzioni riportate nella [documentazione GitLab](https://docs.gitlab.com/user/profile/personal_access_tokens/).<li>Autorizzazioni richieste per il token di accesso personale GitLab (PAT)<br>Questi ambiti consentono a Cloud Manager di accedere ai dati dell&#39;archivio e alle informazioni utente necessarie per la convalida e l&#39;integrazione del webhook.<br>Quando si genera il PAT in GitLab, assicurarsi che includa i seguenti ambiti token:<ul><li>api<li>read_user</li></li></ul></li></li></ul></ul></ul><ul><li>Nel campo **Token di accesso**, incolla il token appena creato. |
+
+Consulta [Gestione token di accesso](/help/managing-code/manage-access-tokens.md).
+
+>[!NOTE]
+>
+>La funzionalità **Aggiungi nuovo token di accesso** è attualmente in fase beta privata. Ulteriori funzionalità sono in fase di pianificazione. Di conseguenza, le autorizzazioni necessarie per i token di accesso potrebbero cambiare. Inoltre, è possibile che l’interfaccia utente per la gestione dei token venga aggiornata, includendo eventuali funzionalità quali le date di scadenza dei token. Inoltre, potrebbero essere aggiunti controlli automatici per garantire che i token collegati agli archivi rimangano validi.
+
+>[!TAB Bitbucket]
+
+**Bitbucket**
+
+| Tipo di token | Descrizione |
+| --- | --- |
+| **Usa token di accesso esistente** | Se hai già fornito un token di accesso all’archivio per la tua organizzazione e hai accesso a più archivi, puoi selezionare un token esistente. Utilizza l’elenco a discesa **Nome token** per scegliere il token da applicare all’archivio. In caso contrario, aggiungi un nuovo token di accesso. |
+| **Aggiungere un nuovo token di accesso** | <ul><li>Nel campo di testo **Nome token**, digita un nome per il token di accesso che stai creando.<li>Crea un token di accesso all&#39;archivio utilizzando la [documentazione Bitbucket](https://support.atlassian.com/bitbucket-cloud/docs/create-a-repository-access-token/).<li>Autorizzazioni necessarie per il token di accesso personale (PAT) Bitbucket<br>Queste autorizzazioni consentono a Cloud Manager di accedere al contenuto dell&#39;archivio, gestire le richieste di pull e configurare eventi webhook o reagire ad essi.<br>Quando crei la password dell&#39;app in Bitbucket, accertati che includa le seguenti autorizzazioni di password dell&#39;app richieste:<ul><li>Archivio (sola lettura)<li>Richieste pull (lettura e scrittura)<li>Webhook (lettura e scrittura)</li></li></ul></li></li></ul></ul></ul><ul><li>Nel campo **Token di accesso**, incolla il token appena creato. |
+
+Consulta [Gestione token di accesso](/help/managing-code/manage-access-tokens.md).
+
+>[!NOTE]
+>
+>La funzionalità **Aggiungi nuovo token di accesso** è attualmente in fase beta privata. Ulteriori funzionalità sono in fase di pianificazione. Di conseguenza, le autorizzazioni necessarie per i token di accesso potrebbero cambiare. Inoltre, è possibile che l’interfaccia utente per la gestione dei token venga aggiornata, includendo eventuali funzionalità quali le date di scadenza dei token. Inoltre, potrebbero essere aggiunti controlli automatici per garantire che i token collegati agli archivi rimangano validi.
+
+>[!ENDTABS]
 
 1. Fai clic su **Convalida**.
 
@@ -154,7 +190,7 @@ Incolla il segreto in un file di testo normale. Il segreto copiato è necessario
 
 >[!TAB GitHub Enterprise]
 
-### GitHub Enterprise
+**GitHub Enterprise**
 
 1. Individua la sezione **Impostazioni webhook** della soluzione.
 1. Incolla l’URL del webhook copiato in precedenza nel campo di testo dell’URL.
@@ -171,6 +207,8 @@ Incolla il segreto in un file di testo normale. Il segreto copiato è necessario
 
 >[!TAB GitLab]
 
+**GitLab**
+
 1. Individua la sezione **Impostazioni webhook** della soluzione.
 1. Incolla l’URL del webhook copiato in precedenza nel campo di testo dell’URL.
    1. Sostituisci il parametro di query `api_key` nell&#39;URL del webhook con la tua vera chiave API.
@@ -186,7 +224,7 @@ Incolla il segreto in un file di testo normale. Il segreto copiato è necessario
 
 >[!TAB Bitbucket]
 
-### Bitbucket
+**Bitbucket**
 
 1. Individua la sezione **Impostazioni webhook** della soluzione.
 1. Incolla l’URL del webhook copiato in precedenza nel campo di testo dell’URL.
@@ -209,42 +247,51 @@ Una volta configurati correttamente i webhook, Cloud Manager attiva automaticame
 
 Si applicano i seguenti comportamenti:
 
-* **GitHub Enterprise**
+>[!BEGINTABS]
 
-  Una volta creato, il controllo viene visualizzato come nella schermata seguente. La differenza chiave rispetto a `GitHub.com` è che `GitHub.com` utilizza un&#39;esecuzione di controllo, mentre GitHub Enterprise (utilizzando token di accesso personali) genera uno stato di commit:
+>[!TAB GitHub Enterprise]
 
-  ![Conferma stato per indicare il processo di convalida PR su GitHub Enterprise](/help/managing-code/assets/repository-webhook-github-pr-validation.png)
+**GitHub Enterprise**
 
-* **Bitbucket**
+Una volta creato, il controllo viene visualizzato come nella schermata seguente. La differenza chiave rispetto a `GitHub.com` è che `GitHub.com` utilizza un&#39;esecuzione di controllo, mentre GitHub Enterprise (utilizzando token di accesso personali) genera uno stato di commit:
 
-  Quando la convalida della qualità del codice è in esecuzione:
+![Conferma stato per indicare il processo di convalida PR su GitHub Enterprise](/help/managing-code/assets/repository-webhook-github-pr-validation.png)
 
-  ![Stato durante l&#39;esecuzione della convalida della qualità del codice](/help/managing-code/assets/repository-webhook-bitbucket1.png)
+>[!TAB GitLab]
 
-  Utilizza lo stato del commit per tenere traccia dell&#39;avanzamento della convalida PR. Nel caso seguente, la schermata mostra cosa accade quando una convalida della qualità del codice non riesce a causa di un problema del cliente. Viene aggiunto un commento con informazioni dettagliate sull’errore e viene creato un controllo del commit che mostra l’errore (visibile a destra):
+**GitLab**
 
-  ![Stato di convalida della richiesta pull per Bitbucket](/help/managing-code/assets/repository-webhook-bitbucket2.png)
+Le interazioni GitLab si basano esclusivamente sui commenti. Quando inizia la convalida, viene aggiunto un commento. Al termine della convalida (riuscita o non riuscita), il commento iniziale viene rimosso e sostituito con un nuovo commento contenente i risultati della convalida o i dettagli dell’errore.
 
-* **GitLab**
+Quando la convalida della qualità del codice è in esecuzione:
 
-  Le interazioni GitLab si basano esclusivamente sui commenti. Quando inizia la convalida, viene aggiunto un commento. Al termine della convalida (riuscita o non riuscita), il commento iniziale viene rimosso e sostituito con un nuovo commento contenente i risultati della convalida o i dettagli dell’errore.
+![Quando è in esecuzione la convalida della qualità del codice](/help/managing-code/assets/repository-webhook-gitlab1.png)
 
-  Quando la convalida della qualità del codice è in esecuzione:
+Al termine della convalida della qualità a freddo:
 
-  ![Quando è in esecuzione la convalida della qualità del codice](/help/managing-code/assets/repository-webhook-gitlab1.png)
+![Al termine della convalida della qualità a freddo](/help/managing-code/assets/repository-webhook-gitlab2.png)
 
-  Al termine della convalida della qualità a freddo:
+Quando la convalida della qualità del codice non riesce e viene restituito un errore:
 
-  ![Al termine della convalida della qualità a freddo](/help/managing-code/assets/repository-webhook-gitlab2.png)
+![Quando la convalida della qualità del codice non riesce e viene restituito un errore](/help/managing-code/assets/repository-webhook-gitlab3.png)
 
-  Quando la convalida della qualità del codice non riesce e viene restituito un errore:
+Quando la convalida della qualità del codice non riesce a causa di problemi del cliente:
 
-  ![Quando la convalida della qualità del codice non riesce e viene restituito un errore](/help/managing-code/assets/repository-webhook-gitlab3.png)
+![Quando la convalida della qualità del codice non riesce a causa di problemi del cliente](/help/managing-code/assets/repository-webhook-gitlab4.png)
 
-  Quando la convalida della qualità del codice non riesce a causa di problemi del cliente:
+>[!TAB Bitbucket]
 
-  ![Quando la convalida della qualità del codice non riesce a causa di problemi del cliente](/help/managing-code/assets/repository-webhook-gitlab4.png)
+**Bitbucket**
 
+Quando la convalida della qualità del codice è in esecuzione:
+
+![Stato durante l&#39;esecuzione della convalida della qualità del codice](/help/managing-code/assets/repository-webhook-bitbucket1.png)
+
+Utilizza lo stato del commit per tenere traccia dell&#39;avanzamento della convalida PR. Nel caso seguente, la schermata mostra cosa accade quando una convalida della qualità del codice non riesce a causa di un problema del cliente. Viene aggiunto un commento con informazioni dettagliate sull’errore e viene creato un controllo del commit che mostra l’errore (visibile a destra):
+
+![Stato di convalida della richiesta pull per Bitbucket](/help/managing-code/assets/repository-webhook-bitbucket2.png)
+
+>[!ENDTABS]
 
 ## Risoluzione dei problemi del webhook
 
