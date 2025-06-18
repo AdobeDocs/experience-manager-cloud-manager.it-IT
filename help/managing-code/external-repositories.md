@@ -3,10 +3,10 @@ title: Aggiungere archivi esterni in Cloud Manager
 description: Scopri come aggiungere un archivio esterno in Cloud Manager. Cloud Manager supporta l’integrazione con gli archivi GitHub Enterprise, GitLab e Bitbucket.
 badge: label="Beta privata" type="Positive" url="/help/release-notes/current.md#gitlab-bitbucket"
 exl-id: 4500cacc-5e27-4bbb-b8f6-5144dac7e6da
-source-git-commit: 06fa04f8a459885a20f2b626ccf5d648ccc5fb57
+source-git-commit: bacb4b6e79519e4fef4cf01e04154d492cc888e2
 workflow-type: tm+mt
-source-wordcount: '2150'
-ht-degree: 26%
+source-wordcount: '2035'
+ht-degree: 27%
 
 ---
 
@@ -63,6 +63,8 @@ La configurazione di un archivio esterno in Cloud Manager avviene in tre passagg
    | **Descrizione** | Facoltativo. Descrizione dettagliata dell’archivio. |
 
 1. Seleziona **Salva** per aggiungere l’archivio.
+
+   Ora, fornisci un token di accesso per convalidare la proprietà dell’archivio esterno.
 
 1. Nella finestra di dialogo **Convalida proprietà archivio privato**, fornisci un token di accesso per convalidare la proprietà dell&#39;archivio esterno in modo da potervi accedere, quindi fai clic su **Convalida**.
 
@@ -129,6 +131,7 @@ Vedi anche [Gestione token di accesso](/help/managing-code/manage-access-tokens.
 >
 >Per informazioni dettagliate sulla gestione degli archivi in Cloud Manager, consulta [Archivi di Cloud Manager](/help/managing-code/managing-repositories.md).
 
+
 ## Configurare un webhook per un archivio esterno {#configure-webhook}
 
 Cloud Manager consente di configurare i webhook per gli archivi Git esterni aggiunti. Vedi [Aggiungere un archivio esterno](#add-ext-repo). Questi webhook consentono a Cloud Manager di ricevere eventi correlati a diverse azioni all’interno della soluzione del fornitore Git.
@@ -172,60 +175,44 @@ Incolla il segreto in un file di testo normale. Il segreto copiato è necessario
 
    Tutti i dettagli sulla configurazione del webhook e gli eventi necessari per ogni fornitore sono disponibili in [Aggiungi un repository esterno](#add-ext-repo). Nel passaggio 8, vedere la tabella a schede.
 
+1. Individua la sezione **Impostazioni webhook** della soluzione.
+1. Incolla l’URL del webhook copiato in precedenza nel campo di testo dell’URL.
+   1. Sostituisci il parametro di query `api_key` nell&#39;URL del webhook con la tua vera chiave API.
+
+      Per generare una chiave API, devi creare un progetto di integrazione in Adobe Developer Console. Per informazioni dettagliate, consulta [Creazione di un progetto di integrazione API](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/).
+
+1. Incolla il segreto del webhook copiato in precedenza nel campo di testo **Segreto** (o **Chiave segreta**, o **Token segreto**).
+1. Configura il webhook per inviare gli eventi richiesti da Cloud Manager. Utilizza la tabella seguente per determinare gli eventi corretti per il provider Git.
+
 >[!BEGINTABS]
 
 >[!TAB GitHub Enterprise]
 
-1. Individua la sezione **Impostazioni webhook** della soluzione.
-1. Incolla l’URL del webhook copiato in precedenza nel campo di testo dell’URL.
-   1. Sostituisci il parametro di query `api_key` nell&#39;URL del webhook con la tua vera chiave API.
-
-      Per generare una chiave API, devi creare un progetto di integrazione in Adobe Developer Console. Per informazioni dettagliate, consulta [Creazione di un progetto di integrazione API](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/).
-
-1. Incolla il segreto del webhook copiato in precedenza nel campo di testo **Segreto** (o **Chiave segreta**, o **Token segreto**).
-1. Configura il webhook per inviare gli eventi richiesti da Cloud Manager.
-
-   | Eventi webhook richiesti |
-   | --- |
-   | Questi eventi consentono a Cloud Manager di rispondere all’attività GitHub, ad esempio la convalida di richieste pull, trigger basati su push per le pipeline o la sincronizzazione del codice Edge Delivery Services.<br>Verificare che il webhook sia configurato per l&#39;attivazione dei seguenti eventi del webhook richiesti:<ul><li>Richieste pull<li>Push<li>Commenti problema</li></li></li></ul></ul></ul> |
+    | Eventi webhook richiesti |
+    | — |
+    | Questi eventi consentono a Cloud Manager di rispondere all’attività GitHub, ad esempio la convalida di richieste pull, trigger basati su push per le pipeline o la sincronizzazione del codice Edge Delivery Services.&lt;br>Assicurati che il webhook sia configurato per attivarsi sui seguenti eventi richiesti del webhook:&lt;ul>&lt;li>Richieste pull&lt;li>Push&lt;li>Commenti sul problema&lt;/li>&lt;/li>&lt;/ul>&lt;/ul>&lt;/ul>&lt;/ul> |
 
 >[!TAB GitLab]
 
-1. Individua la sezione **Impostazioni webhook** della soluzione.
-1. Incolla l’URL del webhook copiato in precedenza nel campo di testo dell’URL.
-   1. Sostituisci il parametro di query `api_key` nell&#39;URL del webhook con la tua vera chiave API.
-
-      Per generare una chiave API, devi creare un progetto di integrazione in Adobe Developer Console. Per informazioni dettagliate, consulta [Creazione di un progetto di integrazione API](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/).
-
-1. Incolla il segreto del webhook copiato in precedenza nel campo di testo **Segreto** (o **Chiave segreta**, o **Token segreto**).
-1. Configura il webhook per inviare gli eventi richiesti da Cloud Manager.
-
-   | Eventi webhook richiesti |
-   | --- |
-   | Questi eventi webhook consentono a Cloud Manager di attivare le pipeline quando il codice viene inviato o viene inviata una richiesta di unione. Tiene inoltre traccia dei commenti relativi alla convalida delle richieste pull (tramite eventi nota).<br>Verificare che il webhook sia configurato per l&#39;attivazione dei seguenti eventi del webhook richiesti<ul><li>Eventi push<li>Unisci eventi di richiesta<li>Eventi nota</li></li></li></ul></ul></ul> |
+    | Eventi webhook richiesti |
+    | — |
+    | Questi eventi webhook consentono a Cloud Manager di attivare le pipeline quando il codice viene inviato o viene inviata una richiesta di unione. Tiene inoltre traccia dei commenti relativi alla convalida delle richieste pull (tramite eventi nota).&lt;br>Assicurati che il webhook sia configurato per attivarsi sui seguenti eventi del webhook richiesti&lt;ul>&lt;li>Eventi push&lt;li>Richiedi unione eventi&lt;li>Nota eventi&lt;/li>&lt;/li>&lt;/ul>&lt;/ul>&lt;/ul>&lt;/ul> |
 
 >[!TAB Bitbucket]
 
-1. Individua la sezione **Impostazioni webhook** della soluzione.
-1. Incolla l’URL del webhook copiato in precedenza nel campo di testo dell’URL.
-   1. Sostituisci il parametro di query `api_key` nell&#39;URL del webhook con la tua vera chiave API.
-
-      Per generare una chiave API, devi creare un progetto di integrazione in Adobe Developer Console. Per informazioni dettagliate, consulta [Creazione di un progetto di integrazione API](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/).
-
-1. Incolla il segreto del webhook copiato in precedenza nel campo di testo **Segreto** (o **Chiave segreta**, o **Token segreto**).
-1. Configura il webhook per inviare gli eventi richiesti da Cloud Manager.
-
-   | Eventi webhook richiesti |
-   | --- |
-   | Questi eventi garantiscono che Cloud Manager possa convalidare le richieste pull, rispondere ai push del codice e interagire con i commenti per il coordinamento della pipeline.<br>Verificare che il webhook sia configurato per l&#39;attivazione dei seguenti eventi del webhook richiesti<ul><li>Richiesta pull: creata<li>Richiesta pull: aggiornata<li>Richieste pull: unite<li>Richiesta pull: commento<li>Archivio: push</li></li></li></ul></ul></ul> |
+    | Eventi webhook richiesti |
+    | — |
+    | Questi eventi garantiscono che Cloud Manager possa convalidare le richieste pull, rispondere ai push del codice e interagire con i commenti per il coordinamento della pipeline.&lt;br>Assicurati che il webhook sia configurato per attivarsi sui seguenti eventi del webhook richiesti&lt;ul>&lt;li>Richiesta di pull: creata&lt;li>Richiesta di pull: aggiornata&lt;li>Richieste di pull: unita&lt;li>Richiesta di pull: commento&lt;li>Archivio: push&lt;/li>&lt;/li>&lt;/li>&lt;/ul>&lt;/ul>&lt;/ul> |
 
 >[!ENDTABS]
 
+
 ### Convalida delle richieste pull con webhook
 
-Una volta configurati correttamente i webhook, Cloud Manager attiva automaticamente le esecuzioni della pipeline o i controlli di convalida PR per l’archivio.
+Una volta configurati correttamente i webhook, Cloud Manager attiva automaticamente le esecuzioni della pipeline o i controlli di convalida della richiesta di pull (PR) per l’archivio.
 
-In base all’archivio esterno che stai utilizzando, si applicano i seguenti comportamenti:
+Il comportamento varia a seconda del provider Git utilizzato, come descritto di seguito.
+
 
 >[!BEGINTABS]
 
