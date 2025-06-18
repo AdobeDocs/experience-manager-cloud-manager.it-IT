@@ -3,9 +3,9 @@ title: Aggiungere archivi esterni in Cloud Manager
 description: Scopri come aggiungere un archivio esterno in Cloud Manager. Cloud Manager supporta l’integrazione con gli archivi GitHub Enterprise, GitLab e Bitbucket.
 badge: label="Beta privata" type="Positive" url="/help/release-notes/current.md#gitlab-bitbucket"
 exl-id: 4500cacc-5e27-4bbb-b8f6-5144dac7e6da
-source-git-commit: 5bef5a1b8f54a245e1354b1b77c775a06b9b3faa
+source-git-commit: 06fa04f8a459885a20f2b626ccf5d648ccc5fb57
 workflow-type: tm+mt
-source-wordcount: '2141'
+source-wordcount: '2150'
 ht-degree: 26%
 
 ---
@@ -170,7 +170,7 @@ Incolla il segreto in un file di testo normale. Il segreto copiato è necessario
 1. Fai clic su **Chiudi**.
 1. Passa alla soluzione del fornitore Git (GitHub Enterprise, GitLab o Bitbucket).
 
-   Tutti i dettagli sulla configurazione del webhook e gli eventi necessari per ogni fornitore sono disponibili in [Aggiungi un repository esterno](#add-ext-repo). Al punto 8, vedere la tabella.
+   Tutti i dettagli sulla configurazione del webhook e gli eventi necessari per ogni fornitore sono disponibili in [Aggiungi un repository esterno](#add-ext-repo). Nel passaggio 8, vedere la tabella a schede.
 
 >[!BEGINTABS]
 
@@ -225,7 +225,7 @@ Incolla il segreto in un file di testo normale. Il segreto copiato è necessario
 
 Una volta configurati correttamente i webhook, Cloud Manager attiva automaticamente le esecuzioni della pipeline o i controlli di convalida PR per l’archivio.
 
-Si applicano i seguenti comportamenti:
+In base all’archivio esterno che stai utilizzando, si applicano i seguenti comportamenti:
 
 >[!BEGINTABS]
 
