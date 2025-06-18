@@ -3,10 +3,10 @@ title: Aggiungere archivi esterni in Cloud Manager
 description: Scopri come aggiungere un archivio esterno in Cloud Manager. Cloud Manager supporta l’integrazione con gli archivi GitHub Enterprise, GitLab e Bitbucket.
 badge: label="Beta privata" type="Positive" url="/help/release-notes/current.md#gitlab-bitbucket"
 exl-id: 4500cacc-5e27-4bbb-b8f6-5144dac7e6da
-source-git-commit: a0836dd24dd3b711c9d1b78f28755e2db98b051c
+source-git-commit: 5bef5a1b8f54a245e1354b1b77c775a06b9b3faa
 workflow-type: tm+mt
-source-wordcount: '2210'
-ht-degree: 17%
+source-wordcount: '2141'
+ht-degree: 26%
 
 ---
 
@@ -64,7 +64,7 @@ La configurazione di un archivio esterno in Cloud Manager avviene in tre passagg
 
 1. Seleziona **Salva** per aggiungere l’archivio.
 
-1. Nella finestra di dialogo **Convalida della proprietà dell’archivio privato**, fornisci un token di accesso per convalidare la proprietà dell’archivio esterno in modo da potervi accedere.
+1. Nella finestra di dialogo **Convalida proprietà archivio privato**, fornisci un token di accesso per convalidare la proprietà dell&#39;archivio esterno in modo da potervi accedere, quindi fai clic su **Convalida**.
 
    ![Selezione di un token di accesso esistente per un archivio](/help/managing-code/assets/repositories-exisiting-access-token.png)
    *Selezione di un token di accesso esistente per un archivio Bitbucket (solo a scopo illustrativo).*
@@ -73,43 +73,37 @@ La configurazione di un archivio esterno in Cloud Manager avviene in tre passagg
 
 >[!TAB GitHub Enterprise]
 
-    | Tipo di token | Descrizione |
-    | — | — |
-    | **Usa token di accesso esistente** | Se hai già fornito un token di accesso all’archivio per la tua organizzazione e hai accesso a più archivi, puoi selezionare un token esistente. Utilizza l’elenco a discesa **Nome token** per scegliere il token da applicare all’archivio. In caso contrario, aggiungi un nuovo token di accesso. |
-    | **Aggiungi nuovo token di accesso** |&lt;ul>&lt;li> Nel campo di testo **Token Name** (Nome token), digita un nome per il token di accesso che stai creando.&lt;li>Crea un token di accesso personale seguendo le istruzioni riportate nella [documentazione di GitHub](https://docs.github.com/en/enterprise-server@3.14/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).&lt;li>Autorizzazioni richieste per il token di accesso personale GitHub Enterprise&lt;br>Queste autorizzazioni garantiscono che Cloud Manager possa convalidare le richieste di pull, gestire i controlli dello stato del commit e accedere ai dettagli dell&#39;archivio necessari.&lt;br>Quando generi il PAT in GitHub Enterprise, accertati che includa le seguenti autorizzazioni dell’archivio:&lt;ul>&lt;li>Richiesta pull (lettura e scrittura)&lt;li>Stati commit (lettura e scrittura)&lt;li>Metadati dell’archivio (sola lettura)&lt;/li>&lt;/li>&lt;/ul>&lt;/ul>&lt;/ul>&lt;/ul>&lt;ul>&lt;li>Nel campo **Token di accesso**, incolla il token appena creato. |
-    
-    1. Fare clic su **Convalida**.
-    
-    Dopo la convalida, l&#39;archivio esterno è pronto per l&#39;utilizzo e il collegamento a una pipeline.
-    
-    Vedere anche [Gestisci token di accesso](/help/managing-code/manage-access-tokens.md).
+| Tipo di token | Descrizione |
+| --- | --- |
+| **Usa token di accesso esistente** | Se hai già fornito un token di accesso all’archivio per la tua organizzazione e hai accesso a più archivi, puoi selezionare un token esistente. Utilizza l’elenco a discesa **Nome token** per scegliere il token da applicare all’archivio. In caso contrario, aggiungi un nuovo token di accesso. |
+| **Aggiungere un nuovo token di accesso** | <ul><li> Nel campo di testo **Nome token**, digita un nome per il token di accesso che stai creando.<li>Crea un token di accesso personale seguendo le istruzioni riportate nella [documentazione GitHub](https://docs.github.com/en/enterprise-server@3.14/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens).<li>Autorizzazioni necessarie per il token di accesso personale GitHub Enterprise (PAT)<br>Queste autorizzazioni garantiscono che Cloud Manager possa convalidare le richieste di pull, gestire i controlli dello stato del commit e accedere ai dettagli dell&#39;archivio necessari.<br>Quando generi il PAT in GitHub Enterprise, accertati che includa le seguenti autorizzazioni dell&#39;archivio:<ul><li>Richiesta pull (lettura e scrittura)<li>Stati commit (lettura e scrittura)<li>Metadati archivio (sola lettura)</li></li></ul></li></ul></ul></ul><ul><li>Nel campo **Token di accesso**, incolla il token appena creato. |
+
+Dopo la convalida, l’archivio esterno è pronto per essere utilizzato e collegato a una pipeline.
+
+Vedi anche [Gestione token di accesso](/help/managing-code/manage-access-tokens.md).
 
 >[!TAB GitLab]
 
-    | Tipo di token | Descrizione |
-    | — | — |
-    | **Usa token di accesso esistente** | Se hai già fornito un token di accesso all’archivio per la tua organizzazione e hai accesso a più archivi, puoi selezionare un token esistente. Utilizza l’elenco a discesa **Nome token** per scegliere il token da applicare all’archivio. In caso contrario, aggiungi un nuovo token di accesso. |
-    | **Aggiungi nuovo token di accesso** |&lt;ul>&lt;li>Nel campo di testo **Nome token**, digita un nome per il token di accesso che stai creando.&lt;li>Creare un token di accesso personale seguendo le istruzioni riportate nella [documentazione di GitLab](https://docs.gitlab.com/user/profile/personal_access_tokens/).&lt;li>Autorizzazioni richieste per il token di accesso personale GitLab (PAT)&lt;br>Questi ambiti consentono a Cloud Manager di accedere ai dati dell’archivio e alle informazioni utente in base alle esigenze per la convalida e l’integrazione del webhook.&lt;br>Quando generi il PAT in GitLab, accertati che includa i seguenti ambiti del token:&lt;ul>&lt;li>api&lt;li>read_user&lt;/li>&lt;/li>&lt;/li>&lt;/li>&lt;/li>&lt;/ul>&lt;/ul>&lt;/ul>&lt;ul>&lt;li>Nel campo **Access Token**, incolla il token appena creato. |
+| Tipo di token | Descrizione |
+| --- | --- |
+| **Usa token di accesso esistente** | Se hai già fornito un token di accesso all’archivio per la tua organizzazione e hai accesso a più archivi, puoi selezionare un token esistente. Utilizza l’elenco a discesa **Nome token** per scegliere il token da applicare all’archivio. In caso contrario, aggiungi un nuovo token di accesso. |
+| **Aggiungere un nuovo token di accesso** | <ul><li>Nel campo di testo **Nome token**, digita un nome per il token di accesso che stai creando.<li>Crea un token di accesso personale seguendo le istruzioni riportate nella [documentazione GitLab](https://docs.gitlab.com/user/profile/personal_access_tokens/).<li>Autorizzazioni richieste per il token di accesso personale GitLab (PAT)<br>Questi ambiti consentono a Cloud Manager di accedere ai dati dell&#39;archivio e alle informazioni utente necessarie per la convalida e l&#39;integrazione del webhook.<br>Quando si genera il PAT in GitLab, assicurarsi che includa i seguenti ambiti token:<ul><li>api<li>read_user</li></li></ul></li></li></ul></ul></ul><ul><li>Nel campo **Token di accesso**, incolla il token appena creato. |
 
-1. Fai clic su **Convalida**.
+Dopo la convalida, l’archivio esterno è pronto per essere utilizzato e collegato a una pipeline.
 
-   Dopo la convalida, l’archivio esterno è pronto per essere utilizzato e collegato a una pipeline.
-
-   Vedi anche [Gestione token di accesso](/help/managing-code/manage-access-tokens.md).
+Vedi anche [Gestione token di accesso](/help/managing-code/manage-access-tokens.md).
 
 
 >[!TAB Bitbucket]
 
-    | Tipo di token | Descrizione |
-    | — | — |
-    | **Usa token di accesso esistente** | Se hai già fornito un token di accesso all’archivio per la tua organizzazione e hai accesso a più archivi, puoi selezionare un token esistente. Utilizza l’elenco a discesa **Nome token** per scegliere il token da applicare all’archivio. In caso contrario, aggiungi un nuovo token di accesso. |
-    | **Aggiungi nuovo token di accesso** |&lt;ul>&lt;li>Nel campo di testo **Nome token**, digita un nome per il token di accesso che stai creando.&lt;li>Creare un token di accesso all’archivio utilizzando la [documentazione Bitbucket](https://support.atlassian.com/bitbucket-cloud/docs/create-a-repository-access-token/).&lt;li>Autorizzazioni richieste per il token di accesso personale (PAT) Bitbucket&lt;br>Queste autorizzazioni consentono a Cloud Manager di accedere al contenuto dell’archivio, gestire le richieste di pull e configurare gli eventi webhook o di reagire ad essi.&lt;br>Quando crei la password dell’app in Bitbucket, accertati che includa le seguenti autorizzazioni obbligatorie per la password dell’app:&lt;ul>&lt;li>Archivio (sola lettura)&lt;li>Richieste pull (lettura e scrittura)&lt;li>Webhook (lettura e scrittura)&lt;/li>&lt;/ul>&lt;/li>&lt;/li>&lt;/ul>&lt;/ul>&lt;/ul>&lt;ul>&lt;li>Nel campo **Token di accesso**, incolla il token appena creato. |
-    
-    1. Fare clic su **Convalida**.
-    
-    Dopo la convalida, l&#39;archivio esterno è pronto per l&#39;utilizzo e il collegamento a una pipeline.
-    
-    Vedere anche [Gestisci token di accesso](/help/managing-code/manage-access-tokens.md).
+| Tipo di token | Descrizione |
+| --- | --- |
+| **Usa token di accesso esistente** | Se hai già fornito un token di accesso all’archivio per la tua organizzazione e hai accesso a più archivi, puoi selezionare un token esistente. Utilizza l’elenco a discesa **Nome token** per scegliere il token da applicare all’archivio. In caso contrario, aggiungi un nuovo token di accesso. |
+| **Aggiungere un nuovo token di accesso** | <ul><li>Nel campo di testo **Nome token**, digita un nome per il token di accesso che stai creando.<li>Crea un token di accesso all&#39;archivio utilizzando la [documentazione Bitbucket](https://support.atlassian.com/bitbucket-cloud/docs/create-a-repository-access-token/).<li>Autorizzazioni necessarie per il token di accesso personale (PAT) Bitbucket<br>Queste autorizzazioni consentono a Cloud Manager di accedere al contenuto dell&#39;archivio, gestire le richieste di pull e configurare eventi webhook o reagire ad essi.<br>Quando crei la password dell&#39;app in Bitbucket, accertati che includa le seguenti autorizzazioni di password dell&#39;app richieste:<ul><li>Archivio (sola lettura)<li>Richieste pull (lettura e scrittura)<li>Webhook (lettura e scrittura)</li></li></ul></li></li></ul></ul></ul><ul><li>Nel campo **Token di accesso**, incolla il token appena creato. |
+
+Dopo la convalida, l’archivio esterno è pronto per essere utilizzato e collegato a una pipeline.
+
+Vedi anche [Gestione token di accesso](/help/managing-code/manage-access-tokens.md).
 
 >[!ENDTABS]
 
