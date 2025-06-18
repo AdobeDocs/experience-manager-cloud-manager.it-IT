@@ -3,9 +3,9 @@ title: Aggiungere archivi esterni in Cloud Manager
 description: Scopri come aggiungere un archivio esterno in Cloud Manager. Cloud Manager supporta l’integrazione con gli archivi GitHub Enterprise, GitLab e Bitbucket.
 badge: label="Beta privata" type="Positive" url="/help/release-notes/current.md#gitlab-bitbucket"
 exl-id: 4500cacc-5e27-4bbb-b8f6-5144dac7e6da
-source-git-commit: 073f1024891e1a1d4298c5c593df011f5572e820
+source-git-commit: 523e8ef1c90bf88aa846e067aa1cca9e6ed5d8ce
 workflow-type: tm+mt
-source-wordcount: '2295'
+source-wordcount: '2283'
 ht-degree: 30%
 
 ---
@@ -73,8 +73,6 @@ La configurazione di un archivio esterno in Cloud Manager avviene in tre passagg
 
 >[!TAB GitHub Enterprise]
 
-**GitHub Enterprise**
-
 | Tipo di token | Descrizione |
 | --- | --- |
 | **Usa token di accesso esistente** | Se hai già fornito un token di accesso all’archivio per la tua organizzazione e hai accesso a più archivi, puoi selezionare un token esistente. Utilizza l’elenco a discesa **Nome token** per scegliere il token da applicare all’archivio. In caso contrario, aggiungi un nuovo token di accesso. |
@@ -88,8 +86,6 @@ Consulta [Gestione token di accesso](/help/managing-code/manage-access-tokens.md
 
 >[!TAB GitLab]
 
-**GitLab**
-
 | Tipo di token | Descrizione |
 | --- | --- |
 | **Usa token di accesso esistente** | Se hai già fornito un token di accesso all’archivio per la tua organizzazione e hai accesso a più archivi, puoi selezionare un token esistente. Utilizza l’elenco a discesa **Nome token** per scegliere il token da applicare all’archivio. In caso contrario, aggiungi un nuovo token di accesso. |
@@ -102,8 +98,6 @@ Consulta [Gestione token di accesso](/help/managing-code/manage-access-tokens.md
 >La funzionalità **Aggiungi nuovo token di accesso** è attualmente in fase beta privata. Ulteriori funzionalità sono in fase di pianificazione. Di conseguenza, le autorizzazioni necessarie per i token di accesso potrebbero cambiare. Inoltre, è possibile che l’interfaccia utente per la gestione dei token venga aggiornata, includendo eventuali funzionalità quali le date di scadenza dei token. Inoltre, potrebbero essere aggiunti controlli automatici per garantire che i token collegati agli archivi rimangano validi.
 
 >[!TAB Bitbucket]
-
-**Bitbucket**
 
 | Tipo di token | Descrizione |
 | --- | --- |
@@ -190,8 +184,6 @@ Incolla il segreto in un file di testo normale. Il segreto copiato è necessario
 
 >[!TAB GitHub Enterprise]
 
-**GitHub Enterprise**
-
 1. Individua la sezione **Impostazioni webhook** della soluzione.
 1. Incolla l’URL del webhook copiato in precedenza nel campo di testo dell’URL.
    1. Sostituisci il parametro di query `api_key` nell&#39;URL del webhook con la tua vera chiave API.
@@ -207,8 +199,6 @@ Incolla il segreto in un file di testo normale. Il segreto copiato è necessario
 
 >[!TAB GitLab]
 
-**GitLab**
-
 1. Individua la sezione **Impostazioni webhook** della soluzione.
 1. Incolla l’URL del webhook copiato in precedenza nel campo di testo dell’URL.
    1. Sostituisci il parametro di query `api_key` nell&#39;URL del webhook con la tua vera chiave API.
@@ -223,8 +213,6 @@ Incolla il segreto in un file di testo normale. Il segreto copiato è necessario
    | Questi eventi webhook consentono a Cloud Manager di attivare le pipeline quando il codice viene inviato o viene inviata una richiesta di unione. Tiene inoltre traccia dei commenti relativi alla convalida delle richieste pull (tramite eventi nota).<br>Verificare che il webhook sia configurato per l&#39;attivazione dei seguenti eventi del webhook richiesti<ul><li>Eventi push<li>Unisci eventi di richiesta<li>Eventi nota</li></li></li></ul></ul></ul> |
 
 >[!TAB Bitbucket]
-
-**Bitbucket**
 
 1. Individua la sezione **Impostazioni webhook** della soluzione.
 1. Incolla l’URL del webhook copiato in precedenza nel campo di testo dell’URL.
@@ -251,15 +239,11 @@ Si applicano i seguenti comportamenti:
 
 >[!TAB GitHub Enterprise]
 
-**GitHub Enterprise**
-
 Una volta creato, il controllo viene visualizzato come nella schermata seguente. La differenza chiave rispetto a `GitHub.com` è che `GitHub.com` utilizza un&#39;esecuzione di controllo, mentre GitHub Enterprise (utilizzando token di accesso personali) genera uno stato di commit:
 
 ![Conferma stato per indicare il processo di convalida PR su GitHub Enterprise](/help/managing-code/assets/repository-webhook-github-pr-validation.png)
 
 >[!TAB GitLab]
-
-**GitLab**
 
 Le interazioni GitLab si basano esclusivamente sui commenti. Quando inizia la convalida, viene aggiunto un commento. Al termine della convalida (riuscita o non riuscita), il commento iniziale viene rimosso e sostituito con un nuovo commento contenente i risultati della convalida o i dettagli dell’errore.
 
@@ -280,8 +264,6 @@ Quando la convalida della qualità del codice non riesce a causa di problemi del
 ![Quando la convalida della qualità del codice non riesce a causa di problemi del cliente](/help/managing-code/assets/repository-webhook-gitlab4.png)
 
 >[!TAB Bitbucket]
-
-**Bitbucket**
 
 Quando la convalida della qualità del codice è in esecuzione:
 
