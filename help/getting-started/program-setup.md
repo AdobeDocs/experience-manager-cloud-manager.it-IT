@@ -92,4 +92,4 @@ Il test delle prestazioni delle risorse prevede il caricamento ripetuto delle st
 
 ## Panoramica video {#video}
 
->[!VIDEO](https://video.tv.adobe.com/v/26313/)
+>[!VIDEO](https://video.tv.adobe.com/v/328126?captions=ita)
