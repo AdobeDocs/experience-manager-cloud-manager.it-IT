@@ -7,9 +7,9 @@ user-guide-description: Scopri come utilizzare Cloud Manager per gestire autonom
 feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
-source-git-commit: b2a14280e84bb934053968b0e93e33d30fb6086a
+source-git-commit: 012359b4ecf872ece036b27b48fededf150493d2
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '372'
 ht-degree: 91%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 91%
    + [Diritti di accesso](/help/requirements/access-rights.md)
    + [Archivio del codice sorgente](/help/requirements/source-code-repository.md)
    + [Autorizzazioni basate sul ruolo](/help/requirements/role-based-permissions.md)
-   + [Configurare utenti e ruoli](/help/requirements/users-and-roles.md)
+   + [Aggiungere utenti e ruoli](/help/requirements/users-and-roles.md)
    + [Autorizzazioni personalizzate](/help/using/custom-permissions.md)
    + [Provisioning dell’ambiente](/help/requirements/environment-provisioning.md)
 + Introduzione {#getting-started}
