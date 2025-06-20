@@ -3,25 +3,24 @@ title: Fase di valutazione
 seo-title: Evaluation Phase
 description: Scopri in che modo la fase di valutazione della procedura guidata di aggiornamento del prodotto valuta la complessità dell’aggiornamento con il rilevatore pattern.
 exl-id: 1ffcbc21-dc36-435d-b83b-0209f81a15e7
-source-git-commit: 11a6a53d8cbfb689810a9a8e7d82293a49863084
-workflow-type: ht
-source-wordcount: '279'
-ht-degree: 100%
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
+workflow-type: tm+mt
+source-wordcount: '257'
+ht-degree: 57%
 
 ---
 
 
 # Fase di valutazione {#evaluation}
 
-La prima fase della procedura guidata di aggiornamento del prodotto è quella di **[!UICONTROL valutazione]** della complessità dell’aggiornamento con il rilevatore pattern, direttamente all’interno della procedura guidata. Al termine di questa fase, puoi accedere a un rapporto di valutazione.
+La prima fase della procedura guidata di aggiornamento del prodotto è la fase **[!UICONTROL Valutazione]**. Esegue il rilevatore pattern all’interno della procedura guidata per valutare la complessità dell’aggiornamento. Al termine di questo passaggio, puoi visualizzare il rapporto di valutazione.
 
-Il rapporto generato ti consente di verificare l’istanza di authoring per l’idoneità all’aggiornamento rilevando i seguenti pattern che:
+Il rapporto controlla l’istanza di authoring per verificare la fattibilità dell’aggiornamento rilevando i pattern per i seguenti elementi:
 
-* Interrompono alcune regole relative alle aree interessate o sovrascritte dall’aggiornamento.
+* Violazioni delle regole nelle aree interessate o sovrascritte dall’aggiornamento.
+* Utilizza funzioni o API di AEM 6.x che non sono compatibili con le versioni precedenti e potrebbero interrompersi dopo l’aggiornamento.
 
-* Utilizzano una funzione AEM 6.x o un’API che non è compatibile con le versioni precedenti della nuova versione di AEM e può potenzialmente interrompersi dopo l’aggiornamento.
-
-Il rapporto serve come valutazione delle attività di sviluppo che sono coinvolte nell’aggiornamento ad Adobe Experience Manager (AEM) 6.5.
+Questo rapporto consente di stimare lo sforzo di sviluppo necessario per effettuare l’aggiornamento a Adobe Experience Manager (AEM) 6.5.
 
 >[!NOTE]
 >
@@ -45,4 +44,4 @@ Il rilevatore pattern può essere eseguito in qualsiasi ambiente. Tuttavia, per 
 
    ![Rapporto creato](/help/assets/Evaluation-1.png)
 
-La versione corrente della procedura guidata di aggiornamento del prodotto in Cloud Manager supporta solo la fase di **valutazione**. Le altre quattro fasi **Rimedio**, **Esecuzione**, **Convalida** e **Completamento** saranno presto disponibili.
+L&#39;attuale procedura guidata di aggiornamento del prodotto in Cloud Manager supporta solo la fase **Valutazione**. Le altre quattro fasi **Rimedio**, **Esecuzione**, **Convalida** e **Completamento** saranno presto disponibili.

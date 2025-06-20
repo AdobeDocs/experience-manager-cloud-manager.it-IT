@@ -2,10 +2,10 @@
 title: Autorizzazioni basate sul ruolo
 description: Scopri le autorizzazioni preconfigurate basate sui ruoli di Cloud Manager per gestire l’accesso alle risorse cloud.
 exl-id: b66533fb-db93-40e8-919d-581261fdbf24
-source-git-commit: 682b142f35bc233bad82b0ddfa69bc0f2d5b5fdb
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 100%
+source-wordcount: '560'
+ht-degree: 99%
 
 ---
 
@@ -43,26 +43,26 @@ A ogni ruolo sono associate specifiche autorizzazioni preconfigurate. In questa 
 
 | Autorizzazione | Descrizione | Proprietario business | Responsabile della distribuzione | Responsabile del programma | Sviluppatore | CSE |
 | --- | --- | --- | --- | --- | --- | --- |
-| Leggi la domanda | KPI del programma di lettura | x | x | x | x | x |
-| Applicazione di scrittura | Configurazione o modifica del programma | x | | | | |
-| Aggiungere programma | Aggiungere nuovo programma | x |  |  |  |  |
-| Ambiente di lettura | Consultare dettagli dell’ambiente | x | x | x | x | x |
-| Creare esecuzione | Avviare pipeline | x | x | x | | |
-| Esecuzione di lettura | Consultare lo stato di esecuzione | x | x | x | x | x |
-| Riprendere esecuzione | Possibilità di riprendere l’esecuzione quando è in pausa | x | x | x | | x |
-| Approvare l’esecuzione della distribuzione alla produzione | Fornire l’approvazione Go-Live | x | x | x | | |
-| Esecuzione della pianificazione della distribuzione alla produzione | Pianificazione della distribuzione di produzione | x | x | x | | x |
-| Esecuzione della distribuzione alla produzione | Distribuire l’applicazione in produzione quando viene messa in pausa per la supervisione del CSE |  |  |  |  | x |
-| Annullamento dell’esecuzione | Annullamento dell’esecuzione corrente |  |  | x |  |  |
-| Esecuzione sostituzione errori gate di qualità | Approvare importanti errori gate di qualità | x | x | x |  |  |
-| Creare pipeline | Configurare/modificare la pipeline |  | x |  |  |  |
-| Lettura pipeline | Consultare dettagli della pipeline | x | x | x | x | x |
-| Scrittura della pipeline | Configurare/modificare la pipeline |  | x |  |  |  |
-| Modificare approvazione pipeline | Consente di modificare l&#39;opzione Proprietario business |  | x |  |  |  |
-| Distribuzione gestita della pipeline modificata | Consente la modifica dell’opzione di supervisione del CSE |  | x |  |  |  |
-| Elimina pipeline | Consente l’eliminazione della pipeline |  | x |  |  |  |
-| Leggi Passaggio | Consultare i risultati delle metriche di qualità del passaggio | x | x | x | x | x |
-| Generazione del token di accesso personale | Accesso a Git |  | x |  | x |  |
+| `Read the Application` | KPI del programma di lettura | x | x | x | x | x |
+| `Write Application` | Configurazione o modifica del programma | x | | | | |
+| `Add Program` | Aggiungere nuovo programma | x |  |  |  |  |
+| `Read Environment` | Consultare dettagli dell’ambiente | x | x | x | x | x |
+| `Create Execution` | Avviare pipeline | x | x | x | | |
+| `Read Execution` | Consultare lo stato di esecuzione | x | x | x | x | x |
+| `Resume Execution` | Possibilità di riprendere l’esecuzione quando è in pausa | x | x | x | | x |
+| `Execution Approve Deploy to Production` | Fornire l’approvazione Go-Live | x | x | x | | |
+| `Execution Schedule Deploy to Production` | Pianificazione della distribuzione di produzione | x | x | x | | x |
+| `Execution Deploy to Production` | Distribuire l’applicazione in produzione quando viene messa in pausa per la supervisione del CSE |  |  |  |  | x |
+| `Execution Cancel` | Annullamento dell’esecuzione corrente |  |  | x |  |  |
+| `Execution Override Quality Gate Failures` | Approvare importanti errori gate di qualità | x | x | x |  |  |
+| `Pipeline Create` | Configurare/modificare la pipeline |  | x |  |  |  |
+| `Pipeline Read` | Consultare dettagli della pipeline | x | x | x | x | x |
+| `Pipeline Write` | Configurare/modificare la pipeline |  | x |  |  |  |
+| P`ipeline Modify Approval` | Consente di modificare l&#39;opzione Proprietario business |  | x |  |  |  |
+| `Pipeline Modify Managed Deployment` | Consente la modifica dell’opzione di supervisione del CSE |  | x |  |  |  |
+| `Pipeline Delete` | Consente l’eliminazione della pipeline |  | x |  |  |  |
+| `Step Read` | Consultare i risultati delle metriche di qualità del passaggio | x | x | x | x | x |
+| `Generate Personal Access Token` | Accesso a Git |  | x |  | x |  |
 
 <!-- CQDOC-22080 | Download log files  |  |  | x |  | x |  | -->
 

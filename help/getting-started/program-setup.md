@@ -2,10 +2,10 @@
 title: Configurazione del programma
 description: Dopo l’onboarding, il proprietario business dovrà effettuare una configurazione iniziale del programma.
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
+workflow-type: tm+mt
 source-wordcount: '564'
-ht-degree: 100%
+ht-degree: 93%
 
 ---
 
@@ -84,12 +84,12 @@ Utilizza la barra delle azioni per passare a un altro programma, modificare il p
 
 I KPI dei siti vengono misurati nei test eseguiti nell’ambiente di staging. In genere, questi KPI vengono ridimensionati per adattarsi alle funzionalità dell’ambiente di pre-produzione.
 
-Ad esempio, un utente che si aspetta una media di 1000 visualizzazioni di pagina al minuto nel proprio ambiente di produzione e dispone di quattro server di pubblicazione/dispatcher in produzione, dovrebbe ridimensionare questo scenario a 250 visualizzazioni di pagina al minuto. Questo scenario presuppone che il suo ambiente di pre-produzione sia costituito da una sola coppia di server dispatcher/di pubblicazione.
+Ad esempio, un utente che si aspetta una media di 1000 visualizzazioni di pagina al minuto nel proprio ambiente di produzione e dispone di quattro server di pubblicazione/dispatcher in produzione, dovrebbe ridimensionare questo scenario a 250 visualizzazioni di pagina al minuto. Questo scenario presuppone che il loro ambiente di staging sia costituito da una sola coppia di server Dispatcher/pubblicazione.
 
 Il test delle prestazioni delle risorse prevede il caricamento ripetuto delle stesse in un periodo di 30 minuti. Il tempo di elaborazione di ciascuna risorsa e di varie metriche a livello di sistema viene misurato durante il test.
 
-È possibile che davanti all’ambiente di produzione sia presente una rete per la distribuzione dei contenuti (CDN, Content Delivery Network) come Akamai o CloudFront. Poiché [!UICONTROL Cloud Manager] esegue direttamente i test nell’ambiente di staging, l’indicatore KPI deve riflettere solo il traffico che si prevede passi attraverso la rete CDN. Ovvero, i riscontri mancanti nella cache. In genere, questa esperienza è un sottoinsieme relativamente piccolo del traffico di produzione totale.
+È possibile che davanti all’ambiente di produzione sia presente una rete per la consegna dei contenuti (CDN) come Akamai o CloudFront. Poiché [!UICONTROL Cloud Manager] esegue direttamente i test nell’ambiente di staging, l’indicatore KPI deve riflettere solo il traffico che si prevede passi attraverso la rete CDN. Ovvero, i riscontri mancanti nella cache. In genere, questa esperienza è un sottoinsieme relativamente piccolo del traffico di produzione totale.
 
 ## Panoramica video {#video}
 
->[!VIDEO](https://video.tv.adobe.com/v/328126?captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/26313/)

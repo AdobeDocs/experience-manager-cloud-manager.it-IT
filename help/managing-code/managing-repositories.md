@@ -2,10 +2,10 @@
 title: Gestione degli archivi in Cloud Manager
 description: Scopri come visualizzare, aggiungere ed eliminare gli archivi Git in Cloud Manager.
 exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
-source-git-commit: ee84c682b6bd2b9144b3f75d544dea33a5ad944b
-workflow-type: ht
-source-wordcount: '732'
-ht-degree: 100%
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
+workflow-type: tm+mt
+source-wordcount: '730'
+ht-degree: 97%
 
 ---
 
@@ -73,7 +73,7 @@ La finestra **Informazioni archivio** si apre con i dettagli. Per ulteriori info
 
 ## Controlla rami/Crea progetto {#check-branches}
 
-In **AEM Cloud Manager**, l’azione **Controlla rami / Crea progetto** ha due scopi, a seconda dello stato corrente dell’archivio.
+In **AEM Cloud Manager**, **Controlla rami/Crea progetto** ha due scopi, a seconda dello stato corrente dell&#39;archivio.
 
 * Se l’archivio è stato appena creato, questa azione genera un progetto di esempio basato sull’[Archetipo progetto AEM](https://experienceleague.adobe.com/it/docs/experience-manager-core-components/using/developing/archetype/overview).
 * Se il progetto di esempio è già stato creato nell’archivio, l’azione verifica lo stato dell’archivio e dei relativi rami, fornendo feedback sull’esistenza o meno del progetto di esempio.

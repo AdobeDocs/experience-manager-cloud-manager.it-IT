@@ -2,10 +2,10 @@
 title: Regole per la qualità del codice personalizzato
 description: Scopri le specifiche delle regole di qualità del codice personalizzato eseguite da Cloud Manager durante il test di qualità del codice. Queste regole si basano sulle best practice dei tecnici di AEM.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: 54987d6ccd8c31dab677d90b40466c458743f936
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
 workflow-type: tm+mt
-source-wordcount: '3644'
-ht-degree: 96%
+source-wordcount: '3636'
+ht-degree: 95%
 
 ---
 
@@ -227,7 +227,7 @@ public void orDoThis(Session session) throws Exception {
 * **Gravità**: importante
 * **Da**: versione 2018.4.0
 
-Come descritto nella [documentazione di Sling](https://sling.apache.org/documentation/the-sling-engine/servlets.html), i servlet di associazione da percorsi sono sconsigliati. I servlet associati ai percorsi non possono utilizzare controlli dell’accesso JCR standard e, di conseguenza, richiedono un’ulteriore misura di sicurezza. Anziché utilizzare i servlet associati ai percorsi, si consiglia di creare nodi nell’archivio e di registrare i servlet in base al tipo di risorsa.
+Come descritto nella [documentazione di Sling](https://sling.apache.org/documentation/the-sling-engine/servlets.html), si sconsiglia di associare i servlet ai percorsi. I servlet associati ai percorsi non possono utilizzare controlli dell’accesso JCR standard e, di conseguenza, richiedono un’ulteriore misura di sicurezza. Anziché utilizzare i servlet associati ai percorsi, si consiglia di creare nodi nell’archivio e di registrare i servlet in base al tipo di risorsa.
 
 #### Codice non conforme {#non-compliant-code-5}
 
@@ -475,7 +475,7 @@ public void doThis() {
 * **Gravità**: minore
 * **Da**: versione 2018.4.0
 
-I percorsi che iniziano con `/libs` e `/apps` in genere non devono essere hardcoded. Questi percorsi vengono generalmente archiviati rispetto al percorso di ricerca Sling, che ha come impostazione predefinita `/libs,/apps`. L’utilizzo del percorso assoluto può presentare difetti minimi che appariranno solo successivamente nel ciclo di vita del progetto.
+I percorsi che iniziano con `/libs` e `/apps` in genere non devono essere hardcoded. Questi percorsi vengono in genere archiviati rispetto al percorso di ricerca `Sling`, che ha come impostazione predefinita `/libs,/apps`. L’utilizzo del percorso assoluto può presentare difetti minimi che appariranno solo successivamente nel ciclo di vita del progetto.
 
 #### Codice non conforme {#non-compliant-code-13}
 
@@ -500,7 +500,7 @@ public void doThis(Resource resource) {
 * **Gravità**: minore
 * **Da**: versione 2020.5.0
 
-Non utilizzare lo Sling Scheduler per le attività che richiedono un’esecuzione garantita. I processi pianificati Sling garantiscono l’esecuzione e sono più adatti per gli ambienti cluster che per quelli non cluster.
+Non utilizzare Sling Scheduler per attività che richiedono un’esecuzione garantita. I processi pianificati Sling garantiscono l’esecuzione e sono più adatti per gli ambienti cluster che per quelli non cluster.
 
 Consulta [Documentazione sull’evento Sling di Apache e sulla gestione dei processi](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html) per ulteriori informazioni sulla gestione dei processi Sling in ambienti cluster.
 
@@ -908,8 +908,7 @@ AEM Cloud Service non consente la creazione di definizioni di indicizzazione che
 * **Gravità**: importante
 * **Da**: versione 2025.4.0
 
-L&#39;utilizzo della modalità &quot;sostituzione&quot; nell&#39;archivio file non è consentito per i percorsi al di sotto di /content; non deve essere utilizzato per i percorsi al di sotto di /etc e /var.
-La modalità &quot;replace&quot; sostituirà tutti i contenuti già esistenti nell’archivio con quella fornita nel pacchetto di contenuti e i pacchetti che attivano questa azione non devono far parte di pacchetti distribuiti tramite Cloud Manager.
+L&#39;utilizzo della modalità &quot;sostituzione&quot; nell&#39;insieme di file non è consentito per i percorsi al di sotto di `/content`. Non deve essere utilizzato per i percorsi al di sotto di `/etc` e `/var.`. La modalità &quot;replace&quot; (sostituzione) sovrascrive il contenuto dell’archivio esistente con il contenuto proveniente dal pacchetto. I pacchetti che attivano questa azione non devono essere inclusi nei pacchetti distribuiti tramite Cloud Manager.
 
 ## Strumento di ottimizzazione del Dispatcher {#dispatcher-optimization-tool-rules}
 

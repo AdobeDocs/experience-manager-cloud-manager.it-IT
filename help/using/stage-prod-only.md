@@ -2,16 +2,16 @@
 title: Pipeline suddivise solo per staging e solo produzione
 description: Scopri come suddividere le distribuzioni di staging e di produzione utilizzando pipeline dedicate.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
-source-git-commit: 35845e827b0a3fadfe2a55a2171b5e02100cf3eb
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
 workflow-type: tm+mt
-source-wordcount: '924'
-ht-degree: 98%
+source-wordcount: '917'
+ht-degree: 96%
 
 ---
 
 # Dividere le pipeline solo stadio e solo produzione {#stage-prod-only}
 
-Scopri come suddividere le distribuzioni di staging e di produzione utilizzando pipeline dedicate.
+Puoi suddividere le distribuzioni di staging e produzione utilizzando pipeline dedicate.
 
 ## Panoramica {#overview}
 
@@ -75,7 +75,7 @@ Le pipeline solo di produzione e solo di staging vengono create in modo simile a
 
 ### Pipeline solo di produzione {#prod-only}
 
-1. Dopo aver selezionato l’opzione **Aggiungi pipeline solo di produzione**, viene aperta la finestra di dialogo **Aggiungi pipeline solo di produzione**.
+1. Dopo aver fatto clic su **Aggiungi pipeline di sola produzione**, viene visualizzata la relativa finestra di dialogo associata.
 1. Nel campo **Nome pipeline**, digita il nome desiderato. Le opzioni e le funzionalità rimanenti della finestra di dialogo funzionano come quelle della finestra di dialogo per la creazione di pipeline standard associate.
 1. Nell’angolo inferiore a destra della finestra di dialogo, fai clic su **Salva**.
 

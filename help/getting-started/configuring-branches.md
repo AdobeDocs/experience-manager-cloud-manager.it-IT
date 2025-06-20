@@ -2,10 +2,10 @@
 title: Configurazione dei rami
 description: Scopri come configurare il primo ramo in Git e come viene utilizzato dalla pipeline CI/CD per distribuire il codice dell’applicazione.
 exl-id: ff2ae28f-902e-4fb2-aeb1-3636cb5cd9bb
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
-source-wordcount: '324'
-ht-degree: 100%
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
+workflow-type: tm+mt
+source-wordcount: '323'
+ht-degree: 95%
 
 ---
 
@@ -74,7 +74,7 @@ To <url>
 
 ## Rami aggiuntivi {#additional-branches}
 
-Un singolo ramo `main` può essere sufficiente per progetti molto semplici, ma nella maggior parte dei casi sarà necessaria una strategia di ramificazione più complessa. Molti clienti seguono un processo in cui le attività di sviluppo quotidiane vengono eseguite su un ramo denominato `develop`. Il ramo di sviluppo viene quindi unito al ramo `main` quando è il momento di un deployment.
+Un singolo ramo `main` può essere sufficiente per progetti molto semplici, ma nella maggior parte dei casi sarà necessaria una strategia di ramificazione più complessa. Molti clienti seguono un processo in cui le attività di sviluppo quotidiane vengono eseguite su un ramo denominato `develop`. Il ramo `develop` viene quindi unito al ramo `main` quando è il momento di una distribuzione.
 
 >[!TIP]
 >

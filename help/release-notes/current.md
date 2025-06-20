@@ -3,10 +3,10 @@ title: Note sulla versione 2025.6.0 di Cloud Manager
 description: Ulteriori informazioni sulla versione 2025.5.0 di Cloud Manager su Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: 38d398caf2323b603afd293aa9152308fefd323f
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
 workflow-type: tm+mt
-source-wordcount: '560'
-ht-degree: 58%
+source-wordcount: '556'
+ht-degree: 71%
 
 ---
 
@@ -24,7 +24,7 @@ La data di rilascio della versione 2025.6.0 di [!UICONTROL Cloud Manager] è il 
 
 <!-- There are no significant new features or bug fixes in the May Cloud Manager release. -->
 
-La prossima versione è pianificata per il venerdì 10 luglio 2025.
+La prossima versione è pianificata per il 10 luglio 2025.
 
 <!-- SAVE FOR FUTURE POSSIBLE USE There are no significant new features or bug fixes in the May Cloud Manager release. -->
 
@@ -39,13 +39,13 @@ La prossima versione è pianificata per il venerdì 10 luglio 2025.
 
   Consulta [Pipeline di sola fase e sola produzione](/help/using/stage-prod-only.md).
 
-* **Preferiti pipeline**
+* **Pipeline preferite**
 
   In questa versione, Cloud Manager introduce la possibilità di fissare le pipeline preferite, consentendoti di contrassegnare specifiche pipeline come preferite in modo che vengano visualizzate nella parte superiore dell&#39;elenco nella pagina **Pipeline**. Questo miglioramento semplifica la ricerca e l’esecuzione delle pipeline a cui si accede di frequente. <!-- CMGR-68293 -->
 
   ![Pipeline contrassegnate come preferite](/help/release-notes/assets/pipeline-favorites.png) *Due pipeline contrassegnate come preferite.*
 
-  Consulta [Contrassegnare i preferiti della pipeline](/help/using/managing-pipelines.md#pipeline-favorites).
+  Consulta [Contrassegnare le pipeline come preferite](/help/using/managing-pipelines.md#pipeline-favorites).
 
 
 ## Programma beta privato {#beta-program}
@@ -73,16 +73,16 @@ Se ti interessa testare questa nuova funzione e condividere il tuo feedback, inv
 
 #### Gestisci token di accesso{#access-tokens}
 
-Utilizza la funzionalità **Gestisci token di accesso** insieme a BYOG per visualizzare, rinominare ed eliminare i token di accesso associati agli archivi esterni Git, come GitHub Enterprise, GitLab, Bitbucket e Azure DevOps.
+Utilizza **Gestisci token di accesso** con BYOG per visualizzare, rinominare ed eliminare i token di accesso associati agli archivi Git esterni, quali GitHub Enterprise, GitLab, Bitbucket e Azure DevOps.
 
-Consulta [Gestione token di accesso](/help/managing-code/manage-access-tokens.md).
+Consulta [Gestisci token di accesso](/help/managing-code/manage-access-tokens.md).
 
 Se ti interessa testare questa nuova funzione e condividere il tuo feedback, invia un’e-mail a [Grp-CloudManager_BYOG@adobe.com](mailto:Grp-CloudManager_BYOG@adobe.com) dall’indirizzo e-mail associato al tuo Adobe ID. Se ti trovi in una struttura di archivio privata/pubblica o aziendale, assicurati di specificare la piattaforma Git che desideri utilizzare.
 
 
 ## Correzione di bug {#bug-fixes}
 
-* AEM Cloud Manager ora mappa correttamente gli errori di build Maven causati da errori 409 (conflitti) durante il recupero degli artefatti del cliente su un errore causato dal cliente. Questa modifica migliora la messaggistica di errore distinguendo tra errori interni e problemi relativi alla configurazione dell’ambiente del cliente. <!-- CMGR-66673 -->
+* AEM Cloud Manager ora mappa correttamente gli errori di build Maven causati da errori 409 (conflitti) durante il recupero degli artefatti del cliente su un errore causato dal cliente. Questa modifica migliora la messaggistica di errore consentendo la distinzione tra errori interni e problemi relativi alla configurazione dell’ambiente del cliente. <!-- CMGR-66673 -->
 
 <!--
 Known Issues {#known-issues}

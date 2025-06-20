@@ -2,10 +2,10 @@
 title: Autorizzazioni personalizzate
 description: Scopri come utilizzare le autorizzazioni personalizzate per creare nuovi profili con autorizzazioni personalizzate e configurabili per limitare l’accesso a programmi, pipeline e ambienti per gli utenti di Cloud Manager.
 exl-id: a81eda9f-aa89-40ea-8e4c-52367a0a6aba
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
-source-wordcount: '1416'
-ht-degree: 100%
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
+workflow-type: tm+mt
+source-wordcount: '1373'
+ht-degree: 98%
 
 ---
 
@@ -111,23 +111,23 @@ Consulta **Aggiungere utenti e gruppi di utenti a un profilo di prodotto** nel d
 Per creare profili personalizzati sono disponibili le seguenti autorizzazioni.
 
 | Autorizzazione | Descrizione |
-|---|---|
-| Accesso al programma | Consenti agli utenti di accedere ai programmi |
-| Modifica programma | Consenti agli utenti di modificare i programmi |
-| Crea pipeline | Consenti agli utenti di creare nuove pipeline |
-| Elimina pipeline | Consenti agli utenti di eliminare le pipeline |
-| Modifica pipeline | Consenti agli utenti di modificare le pipeline |
-| Approvazione/rifiuto delle distribuzioni in produzione | Consenti agli utenti di approvare o rifiutare un passaggio di distribuzione di produzione |
-| Annullamento delle esecuzioni della pipeline | Consenti agli utenti di annullare le esecuzioni della pipeline |
-| Avvio delle esecuzioni della pipeline | Consenti agli utenti di avviare nuove esecuzioni della pipeline |
-| Sostituzione/Rifiuto degli errori importanti della metrica | Consenti agli utenti di ignorare/rifiutare errori importanti di metrica |
-| Pianificazione delle distribuzioni in produzione | Consenti agli utenti di pianificare un passaggio di distribuzione in produzione |
-| Accesso alle informazioni dell’archivio | Consenti agli utenti di accedere alle informazioni dell’archivio e generare una password di accesso |
-| Creazione di un archivio | Consenti agli utenti di creare nuovi archivi Git |
-| Eliminazione di un archivio | Consenti agli utenti di eliminare gli archivi Git |
-| Modifica di un archivio | Consenti agli utenti di modificare gli archivi Git |
-| Generazione del codice di un archivio | Consenti agli utenti di generare progetti da un archetipo |
-| Gestione della copia dei contenuti | Consenti agli utenti di gestire le operazioni di copia dei contenuti |
+| --- | --- |
+| `Program Access` | Consenti agli utenti di accedere ai programmi |
+| `Program Edit` | Consenti agli utenti di modificare i programmi |
+| `Pipeline Create` | Consenti agli utenti di creare nuove pipeline |
+| `Pipeline Delete` | Consenti agli utenti di eliminare le pipeline |
+| `Pipeline Edit` | Consenti agli utenti di modificare le pipeline |
+| `Production Deployments Approve/Reject` | Consenti agli utenti di approvare o rifiutare un passaggio di distribuzione di produzione |
+| `Pipeline Executions Cancel` | Consenti agli utenti di annullare le esecuzioni della pipeline |
+| `Pipeline Executions Start` | Consenti agli utenti di avviare nuove esecuzioni della pipeline |
+| `Override/Reject Important Metric Failures` | Consenti agli utenti di ignorare/rifiutare errori importanti di metrica |
+| `Production Deployments Schedule` | Consenti agli utenti di pianificare un passaggio di distribuzione in produzione |
+| `Repository Info Access` | Consenti agli utenti di accedere alle informazioni dell’archivio e generare una password di accesso |
+| `Repository Create` | Consenti agli utenti di creare nuovi archivi Git |
+| `Repository Delete` | Consenti agli utenti di eliminare gli archivi Git |
+| `Repository Edit` | Consenti agli utenti di modificare gli archivi Git |
+| `Repository Code Generate` | Consenti agli utenti di generare progetti da un archetipo |
+| `Content Copy Manage` | Consenti agli utenti di gestire le operazioni di copia dei contenuti |
 
 ### Autorizzazioni a livello di organizzazione {#organization-level}
 
@@ -142,7 +142,7 @@ Per ulteriori informazioni, consulta [Archivio del codice sorgente](/help/requir
 I seguenti termini vengono utilizzati per creare e gestire autorizzazioni personalizzate e ruoli predefiniti.
 
 | Termine | Descrizione |
-|---|---|
+| --- | --- |
 | Autorizzazioni predefinite | Ruoli predefiniti come **Proprietario business**, **Manager implementazione**, ecc. per gestire diverse funzioni di Cloud Manager. Per informazioni dettagliate sui ruoli predefiniti, consulta [Autorizzazioni basate sul ruolo](/help/requirements/role-based-permissions.md). |
 | Autorizzazioni personalizzate | Funzioni di Cloud Manager che consentono agli utenti di creare profili di autorizzazione per definire i ruoli che gestiscono le funzionalità supportate di Cloud Manager |
 | Profilo di autorizzazione | Creato in Admin Console per gestire le autorizzazioni configurabili che saranno applicabili agli utenti che fanno parte del profilo di autorizzazione |
@@ -152,11 +152,11 @@ I seguenti termini vengono utilizzati per creare e gestire autorizzazioni person
 Gli elementi di autorizzazione si riferiscono all’ambito in cui verranno applicate le autorizzazioni. In genere, si tratta di uno dei seguenti.
 
 | Tipo di elemento di autorizzazione | Esempio | Descrizione |
-|---|---|---|
+| --- | --- | --- |
 | Organizzazione | organization:companyA | Tutte le risorse applicabili di un’organizzazione. Una risorsa può essere un programma, un ambiente o una pipeline. Se l’utente aggiunge un’organizzazione per qualsiasi autorizzazione, anche tutte le nuove risorse in tale organizzazione disporranno di tale autorizzazione. |
-| Programma | Programma A | Tutte le risorse applicabili di un programma |
-| Ambiente | Programma A: ambiente | Applicabile a un ambiente specifico |
-| Pipeline | Programma A: pipeline | Applicabile a una pipeline specifica |
+| Programma | Programma A | Tutte le risorse applicabili di un programma. |
+| Ambiente | Programma A: ambiente | Applicabile in un ambiente specifico. |
+| Pipeline | Programma A: pipeline | Applicabile su una pipeline specifica. |
 
 ## Limitazioni {#limitations}
 

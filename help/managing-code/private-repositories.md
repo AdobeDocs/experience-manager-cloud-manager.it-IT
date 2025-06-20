@@ -3,10 +3,10 @@ title: Aggiungere archivi privati in Cloud Manager
 description: Scopri come configurare Cloud Manager per l’utilizzo di archivi GitHub privati.
 feature: Release Information
 exl-id: e0d103c9-c147-4040-bf53-835e93d78a0b
-source-git-commit: 58cdebf819f2737be5d8e129ff5b9783888f3c21
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
 workflow-type: tm+mt
 source-wordcount: '815'
-ht-degree: 96%
+ht-degree: 93%
 
 ---
 
@@ -134,6 +134,6 @@ Quando si utilizzano archivi privati con Cloud Manager si applicano determinate 
 * Le pipeline a livello web e di configurazione non sono supportate con gli archivi privati.
 * Quando si utilizzano archivi privati su pipeline di produzione full stack, non viene creato e né inviato alcun tag Git.
 * Se l’app GitHub di Adobe viene rimossa dall’organizzazione GitHub, la funzione di convalida delle richieste pull verrà rimossa per tutti gli archivi.
-* Le pipeline che utilizzano archivi privati e il trigger di creazione su conferma non vengono avviate automaticamente quando viene eseguito il push di una nuova conferma nel ramo selezionato.
+* Le pipeline che utilizzano archivi privati e il trigger di build on-commit non vengono avviati automaticamente quando un nuovo commit viene inviato al ramo selezionato.
 * La [funzionalità di riutilizzo degli artefatti](/help/getting-started/project-setup.md#build-artifact-reuse) non si applica agli archivi privati.
 * Non puoi mettere in pausa la convalida della richiesta pull tramite la verifica GitHub di Cloud Manager. Se l’archivio GitHub viene convalidato in Cloud Manager, Cloud Manager tenta di convalidare le richieste pull create per quell’archivio.

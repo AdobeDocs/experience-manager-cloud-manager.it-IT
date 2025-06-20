@@ -2,10 +2,10 @@
 title: Monitorare gli ambienti
 description: Scopri come monitorare gli ambienti in Cloud Manager.
 exl-id: 32886133-d6c0-4aed-8bb0-81b84f63e825
-source-git-commit: 53fb666ab6caff7a697d7f1942ce25f2bf27a2ce
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
 workflow-type: tm+mt
-source-wordcount: '911'
-ht-degree: 98%
+source-wordcount: '865'
+ht-degree: 74%
 
 ---
 
@@ -29,7 +29,7 @@ Adobe Managed Services imposta le soglie, che è possibile visualizzare in [!UIC
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) e seleziona l’organizzazione e il programma appropriati.
 
 1. Fai clic sull&#39;icona ![Altro, puntini di sospensione](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) del programma che desideri monitorare.
-1. Nel menu, sotto l’intestazione **Gestisci**, fai clic su **Mostra monitoraggio** per aprire la pagina **Rapporti** che mostra le informazioni di monitoraggio del sistema.
+1. Nel menu, in **Gestisci**, fai clic su **Mostra monitoraggio** per aprire la pagina **Rapporti** che mostra le informazioni di monitoraggio del sistema.
 
    ![Impostazioni](/help/assets/first-timea1.png)
 
@@ -73,28 +73,28 @@ Ad esempio, se fai clic sulla serie delle soglie di avvertenza, verrà visualizz
 
 #### Host {#host}
 
-* **Cario per core**: numero di processi in esecuzione nella CPU. In alternativa, il numero di processi messi in coda che si trovano in uno stato di attesa medio su un periodo di uno (load1), cinque (load5) e quindici (load15) minuti.
-* **Conteggio processi**: numero di processi attualmente aperti.
-* **Conteggio utenti**: numero di utenti con una sessione shell attiva.
-* **Utilizzo memoria**: percentuale di memoria di sistema attualmente allocata
-* **Memoria JVM**: dimensione (in megabyte) dell’heap Java allocato
-* **Spazio di vecchia generazione**: percentuale di memoria JVM di vecchia generazione attualmente allocata
+* **`Load Per Core`**: numero di processi in esecuzione in CPU. In alternativa, il numero di processi messi in coda che si trovano in uno stato di attesa medio su un periodo di uno (load1), cinque (load5) e quindici (load15) minuti.
+* **P`rocess Count`**: numero di processi attualmente aperti.
+* **`User Count`**: numero di utenti con una sessione shell attiva.
+* **`Memory Usage`**: percentuale di memoria di sistema attualmente allocata.
+* **`JVM Memory`**: dimensione (in megabyte) dell&#39;heap Java allocato.
+* **`Old Generation Space`**: percentuale della memoria JVM di vecchia generazione attualmente allocata.
 
 #### Rete {#network}
 
-* **Controllo porta CQ**: tempo di risposta in secondi per accedere a AEM o alla porta Dispatcher Esistono metriche diverse per authoring, pubblicazione e Dispatcher.
+* **`CQ Port Check`**: tempo di risposta in secondi per accedere alla porta di AEM o Dispatcher. Esistono metriche diverse per authoring, pubblicazione e Dispatcher.
 
 #### Archiviazione {#storage}
 
-* **Spazio su disco**: spazio su disco utilizzato (in megabyte) per ogni punto di montaggio sull’host. Esistono metriche diverse per ogni punto di montaggio. Vi sono metriche almeno per `/` e `/mnt`, ma potrebbero essere disponibili metriche di montaggio aggiuntive relative ai punti di montaggio a seconda della configurazione specifica dell’istanza.
-* **Dimensione cartella**
-* **Archivio segmenti AEM**: spazio su disco (in gigabyte) utilizzato per l’archivio segmenti AEM.
+* **`Disk Space`**: spazio su disco utilizzato (in megabyte) per ogni punto di montaggio sull&#39;host. Esistono metriche diverse per ogni punto di montaggio. Vi sono metriche almeno per `/` e `/mnt`, ma potrebbero essere disponibili metriche di montaggio aggiuntive relative ai punti di montaggio a seconda della configurazione specifica dell’istanza.
+* **`Folder Size`**
+* **`AEM Segment Store`**: spazio su disco (in gigabyte) utilizzato per l&#39;archivio segmenti di AEM.
 
 #### Applicazione {#application}
 
-* **Agente di replica**: tempo (in secondi) per un evento di replica di prova
+* **`Replication Agent`**: tempo (in secondi) per un evento di replica di prova
    * Esistono metriche separate per ogni agente di replica.
-* **Eliminazione dispatcher**: numero di elementi attualmente nella coda di eliminazione dispatcher
+* **`Dispatcher Flush`**: numero di elementi attualmente nella coda di svuotamento del Dispatcher
 
 ## Generazione rapporti SLA {#sla-reporting}
 
@@ -114,15 +114,15 @@ La sezione **Analisi degli eventi** sotto questo grafico mostra l’insieme di i
 
 ## Metriche SLA {#sla-metrics}
 
-* **Contratto autore**: SLA definito nel contratto con Adobe Managed Services per il livello di authoring.
-* **SLA di authoring AMS**: disponibilità misurata per gli incidenti di factoring del livello di authoring in produzione causati da Adobe o dai nostri fornitori.
-* **SLA autore**: tempo di attività misurato per il livello di authoring, esclusi i periodi di inattività pianificati, ad esempio le finestre di manutenzione.
-* **Contratto utente finale**: SLA definito nel contratto con Adobe Managed Services per il livello di pubblicazione.
-* **AMS SLA utente finale**: disponibilità misurate per gli incidenti di factoring del livello di pubblicazione in produzione causati da Adobe o dai nostri fornitori.
-* **SLA utente finale**: tempo di attività misurato per il livello di pubblicazione, esclusi i periodi di inattività pianificati, ad esempio le finestre di manutenzione.
+* **`Author Contract`**: SLA definito nel contratto con Adobe Managed Services per il livello di authoring.
+* **`AMS Author SLA`**: tempo di attività misurato per il livello di authoring di produzione, factoring di incidenti causati da fornitori o da Adobe.
+* **`Author SLA`**: tempo di attività misurato per il livello di authoring, esclusi i periodi di inattività pianificati, ad esempio le finestre di manutenzione.
+* **`End User Contract`**: SLA definito nel contratto con Adobe Managed Services per il livello di pubblicazione.
+* **`AMS End User SLA`**: i tempi di attività misurati del livello di pubblicazione di produzione, tenendo conto degli incidenti causati da fornitori o da Adobe.
+* **`End User SLA`**: tempo di attività misurato per il livello di pubblicazione, esclusi i periodi di inattività pianificati, ad esempio le finestre di manutenzione.
 
 ## Tutorial video {#video-tutorial}
 
 Questo video descrive a grandi linee come utilizzare i grafici prodotti dai rapporti di Cloud Manager per ottenere informazioni sugli ambienti dei programmi.
 
->[!VIDEO](https://video.tv.adobe.com/v/328128?captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/26315/)

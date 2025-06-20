@@ -2,10 +2,10 @@
 title: Test della qualità del codice
 description: Scopri come funziona il test della qualità del codice delle pipeline e come può migliorare la qualità delle distribuzioni.
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-source-git-commit: f5e6ac81c6454730850bb7e884d82be48d2f8525
-workflow-type: ht
-source-wordcount: '2793'
-ht-degree: 100%
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
+workflow-type: tm+mt
+source-wordcount: '2783'
+ht-degree: 98%
 
 ---
 
@@ -126,18 +126,18 @@ Nella tabella seguente sono elencati i controlli di integrità.
 | Il firewall deserializzazione è caricato. | [Firewall deserializzazione caricato](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/security/mitigating-serialization-issues#security) | Critico |
 | L’implementazione `AuthorizableNodeName` non espone l’ID autorizzabile nel nome/percorso del nodo. | [Generazione nome nodo autorizzabile](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/security/security-checklist#security) | Critico |
 | Le password predefinite sono state modificate. | [Account di accesso predefiniti](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/security/security#users-and-groups-in-aem) | Critico |
-| Il servlet GET predefinito di Sling è protetto dagli attacchi DOS. | Sling Get Servlet | Critico |
-| Il gestore JavaScript di Sling è configurato in modo appropriato. | Gestore JavaScritp di Sling | Critico |
-| Il gestore di script JSP di Sling è configurato in modo appropriato. | Gestore di script Jsp di Sling | Critico |
+| Il servlet GET predefinito `Sling` è protetto dagli attacchi DOS. | Servlet `Sling Get` | Critico |
+| Il gestore JavaScript `Sling` è configurato in modo appropriato. | Gestore JavaScript `Sling` | Critico |
+| Il gestore di script JSP `Sling` è configurato in modo appropriato. | `Sling` gestore script JSP | Critico |
 | SSL è configurato correttamente. | Configurazione SSL | Critico |
 | Non è stato trovato alcun criterio di profilo utente chiaramente non sicuro. | Accesso predefinito profilo utente | Critico |
-| Il filtro Sling Referrer è configurato per prevenire attacchi CSRF. | [Filtro referrer sling](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/security/security-checklist#security) | Importante |
+| Il filtro Referrer `Sling` è configurato per impedire attacchi CSRF. | [Filtro referrer sling](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/security/security-checklist#security) | Importante |
 | Il manager libreria HTML Adobe Granite è configurato in modo appropriato. | Configurazione manager libreria CQ HTML | Importante |
 | Il bundle di supporto CRXDE è disabilitato. | Supporto CRXDE | Importante |
-| Il bundle e il servlet Sling DavEx sono disabilitati. | Verifica stato DavEx | Importante |
+| Il bundle e il servlet DavEx `Sling` sono disabilitati. | Verifica stato DavEx | Importante |
 | Il contenuto di esempio non è installato. | Pacchetti contenuti di esempio | Importante |
 | Il filtro di richiesta WCM e il filtro di debug WCM sono disabilitati. | [Configurazione filtri WCM](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/implementing/deploying/configuring/osgi-configuration-settings#configuring) | Importante |
-| Il bundle e il servlet Sling WebDAV sono configurati in modo appropriato. | Verifica stato WebDAV | Importante |
+| Il bundle e il servlet WebDAV `Sling` sono configurati in modo appropriato. | Verifica stato WebDAV | Importante |
 | Il server Web è configurato per impedire il clickjacking. | Configurazione server Web | Importante |
 | La replica non sta utilizzando l’utente `admin`. | Utenti replica e trasporto | Info |
 
