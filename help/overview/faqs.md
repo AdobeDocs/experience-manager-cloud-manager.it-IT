@@ -2,9 +2,9 @@
 title: Domande frequenti su Cloud Manager
 description: Scopri le risposte alle domande più frequenti su Cloud Manager per clienti AMS.
 exl-id: 52c1ca23-5b42-4eae-b63a-4b22ef1a5aee
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
-source-wordcount: '748'
+source-git-commit: e7e9844b5f06552fc2104584c63935dee7a9fa89
+workflow-type: tm+mt
+source-wordcount: '709'
 ht-degree: 100%
 
 ---
@@ -14,12 +14,13 @@ ht-degree: 100%
 
 Questo documento fornisce le risposte alle domande più frequenti su Cloud Manager per clienti AMS.
 
-## È possibile utilizzare Java 11 con le build di Cloud Manager? {#java-11}
+<!-- 
+## Is it possible to use Java 11 with Cloud Manager builds? {#java-11}
 
-Sì. È necessario aggiungere il `maven-toolchains-plugin` con le impostazioni corrette per Java 11.
+Yes. You need to add the `maven-toolchains-plugin` with the correct settings for Java 11.
 
-* Questo processo è documentato [qui](/help/getting-started/using-the-wizard.md).
-* Ad esempio, consulta il [codice del progetto di esempio WKND](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75).
+* This process is documented [here](/help/getting-started/using-the-wizard.md).
+* For an example, see the [WKND sample project code](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75). -->
 
 ## Dopo il passaggio da Java 8 a Java 11, l’esecuzione della build non riesce e genera un errore relativo a maven-scr-plugin. Cosa posso fare? {#maven-src-plugin}
 
@@ -45,7 +46,7 @@ Si tratta di un problema noto dovuto al fatto che Cloud Manager utilizza una ver
 
 Sì. Tutti gli errori di qualità del codice, ad eccezione delle valutazioni di sicurezza, sono metriche non critiche. Di conseguenza, possono essere ignorati come parte di una pipeline di implementazione espandendo gli elementi nell’interfaccia utente dei risultati.
 
-Un utente con il ruolo di [Responsabile della distribuzione, Project Manager o Proprietario business](/help/requirements/users-and-roles.md#role-definitions) può ignorare i problemi. In tale caso, la pipeline procede. In alternativa, può accettare i problemi, nel qual caso la pipeline si arresta con un errore.
+Un utente con il ruolo di [Responsabile della distribuzione, Project Manager o Proprietario business](/help/requirements/users-and-roles.md#role-definitions) può ignorare i problemi. In tale caso, la pipeline procede. In alternativa, può accettare i problemi, nel qual caso la pipeline si interrompe con un errore.
 
 Consulta i documenti [Gate a tre livelli durante l’esecuzione di una pipeline](/help/using/code-quality-testing.md#three-tier-gates-while-running-a-pipeline) e [Configurazione di pipeline non di produzione](/help/using/non-production-pipelines.md#understanding-the-flow) per ulteriori dettagli.
 
