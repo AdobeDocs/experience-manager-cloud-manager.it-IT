@@ -3,10 +3,10 @@ title: Note sulla versione 2025.8.0 di Cloud Manager
 description: Ulteriori informazioni sulla versione 2025.8.0 di Cloud Manager su Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: 73a094f47f518e2782ac96357e1adc4e923a0b63
+source-git-commit: cba5f331d2b4093822dce4470147966e2cac15b7
 workflow-type: tm+mt
-source-wordcount: '625'
-ht-degree: 73%
+source-wordcount: '469'
+ht-degree: 69%
 
 ---
 
@@ -81,27 +81,6 @@ Utilizza **Gestisci token di accesso** in Cloud Manager per visualizzare, rinomi
 Consulta [Gestisci token di accesso](/help/managing-code/manage-access-tokens.md).
 
 Se ti interessa testare questa nuova funzione e condividere il tuo feedback, invia un’e-mail a [Grp-CloudManager_BYOG@adobe.com](mailto:grp-cloudmanager_byog@adobe.com) dall’indirizzo e-mail associato al tuo Adobe ID.
-
-
-
-
-
-
-
-
-La funzionalità **Bring Your Own Git** (BYOG) è stata espansa per includere il supporto per archivi esterni, come GitLab e Bitbucket. Questo nuovo supporto si aggiunge a quello già esistente per archivi GitHub privati ed aziendali. Quando aggiungi questi nuovi archivi, puoi anche collegarli direttamente alle pipeline. Puoi inoltre ospitare questi archivi sia su piattaforme cloud pubbliche sia all’interno della tua infrastruttura o del tuo cloud privato. Questa integrazione elimina anche la necessità di sincronizzare continuamente il codice con l’archivio Adobe e offre la possibilità di convalidare le richieste pull prima di unirle in un ramo principale.
-
-Le pipeline che utilizzano archivi esterni (esclusi quelli ospitati da GitHub) e il **Trigger di implementazione** impostato su **Cambiamenti su Git** ora vengono avviate automaticamente.
-
-Consulta [Aggiungere archivi esterni in Cloud Manager](/help/managing-code/external-repositories.md).
-
-![Finestra di dialogo Aggiungi archivio](/help/release-notes/assets/repositories-add-release-notes.png)
-
->[!NOTE]
->
->Attualmente, i controlli di qualità predefiniti per il codice di richiesta pull sono esclusivi degli archivi ospitati in GitHub, ma è in preparazione un aggiornamento per estendere questa funzionalità anche ad altri fornitori Git.
-
-<!-- If you are interested in testing this new feature and sharing your feedback, send an email to [Grp-CloudManager_BYOG@adobe.com](mailto:Grp-CloudManager_BYOG@adobe.com) from your email address associated with your Adobe ID. Be sure to include which Git platform you want to use and whether you are on a private/public or enterprise repository structure. -->
 
 #### Gestisci token di accesso{#access-tokens}
 
