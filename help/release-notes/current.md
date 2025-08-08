@@ -3,10 +3,10 @@ title: Note sulla versione 2025.8.0 di Cloud Manager
 description: Ulteriori informazioni sulla versione 2025.8.0 di Cloud Manager su Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: a96bc45242ee6c6b06b4354756a67562150f385c
+source-git-commit: 03e2a9b8cd1ad0a9446fc59a430895302fba21a3
 workflow-type: tm+mt
-source-wordcount: '432'
-ht-degree: 73%
+source-wordcount: '405'
+ht-degree: 72%
 
 ---
 
@@ -80,10 +80,7 @@ Utilizza **Gestisci token di accesso** in Cloud Manager per visualizzare, rinomi
 
 Consulta [Gestisci token di accesso](/help/managing-code/manage-access-tokens.md).
 
-Se ti interessa testare questa nuova funzione e condividere il tuo feedback, invia un’e-mail a [Grp-CloudManager_BYOG@adobe.com](mailto:grp-cloudmanager_byog@adobe.com) dall’indirizzo e-mail associato al tuo Adobe ID.
-
-<!-- If you are interested in testing this new feature and sharing your feedback, send an email to [Grp-CloudManager_BYOG@adobe.com](mailto:Grp-CloudManager_BYOG@adobe.com) from your email address associated with your Adobe ID. Be sure to include which Git platform you want to use and whether you are on a private/public or enterprise repository structure. -->
-
+<!-- If you are interested in testing this new feature and sharing your feedback, send an email to [Grp-CloudManager_BYOG@adobe.com](mailto:grp-cloudmanager_byog@adobe.com) from your email address associated with your Adobe ID. -->
 
 ## Correzioni di bug {#bug-fixes}
 
