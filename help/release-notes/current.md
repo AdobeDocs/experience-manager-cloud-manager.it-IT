@@ -3,10 +3,10 @@ title: Note sulla versione 2025.8.0 di Cloud Manager
 description: Ulteriori informazioni sulla versione 2025.8.0 di Cloud Manager su Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: b64b8529e4c6072c9bcb7438dc2d89098d29115d
+source-git-commit: b34fe26f8c9a2d59a7df3d03717f302fe4456352
 workflow-type: tm+mt
 source-wordcount: '474'
-ht-degree: 61%
+ht-degree: 63%
 
 ---
 
@@ -24,7 +24,7 @@ La data di rilascio della versione 2025.8.0 di [!UICONTROL Cloud Manager] è il 
 
 <!-- There are no significant new features or bug fixes in the May Cloud Manager release. -->
 
-La prossima versione è pianificata per il venerdì 4 settembre 2025.
+La prossima versione è pianificata per il 4 settembre 2025.
 
 <!-- SAVE FOR FUTURE POSSIBLE USE There are no significant new features or bug fixes in the May Cloud Manager release. -->
 
@@ -61,7 +61,7 @@ Partecipa ai programmi Beta di Cloud Manager per ottenere accesso esclusivo alle
 Sono attualmente disponibili le seguenti opportunità:
 
 
-### Porta il tuo Git (BYOG) {#gitlab-bitbucket-azure-vsts}
+### Integra il tuo Git personale (BYOG) {#gitlab-bitbucket-azure-vsts}
 
 <!-- BOTH CS & AMS -->
 
@@ -88,7 +88,7 @@ Consulta [Gestisci token di accesso](/help/managing-code/manage-access-tokens.md
 
 ## Correzioni di bug {#bug-fixes}
 
-Non sono state apportate correzioni di bug significativi nella versione di luglio di Cloud Manager.
+Non sono state apportate correzioni di bug significativi nella versione di agosto di Cloud Manager.
 
 <!--
 Known Issues {#known-issues}
