@@ -52,7 +52,7 @@ La prima è l’intestazione Cloud Manager. L’intestazione diventa persistente
 | 2 | Adobe Cloud Manager | Fare clic per aprire la console **I miei programmi** di Cloud Manager, indipendentemente dalla posizione in cui ci si trova in Cloud Manager. |
 | 3 | Organizzazione selezionata | Il selettore organizzazione visualizza l’organizzazione a cui appartieni al momento (in questo esempio, Foundation Internal). Fai clic su per passare a un’altra organizzazione se l’Adobe ID è associata a più organizzazioni. |
 | 4 | Icona Feedback | Fai clic su per fornire ad Adobe un feedback su Cloud Manager. |
-| 5 | Icona Assistente AI | Offre un’interfaccia di conversazione progettata per semplificare la ricerca delle risposte alle query relative ad AEM. Vedi [Assistente IA](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/ai-assistant/ai-assistant-in-aem) |
+| 5 | Icona Assistente AI | Offre un’interfaccia di conversazione progettata per semplificare la ricerca delle risposte alle query relative ad AEM. Vedi [Assistente IA](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/ai-assistant/ai-assistant-in-aem) |
 | 6 | ![Icona Aiuto](https://spectrum.adobe.com/static/icons/workflow_18/Smock_HelpOutline_18_N.svg) | Fai clic su per fornire un accesso rapido alle risorse di apprendimento e supporto. |
 | 7 | ![Icona campana](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Bell_18_N.svg) | Fai clic per visualizzare il numero di [notifiche](/help/using/notifications.md) incomplete attualmente assegnate |
 | 8 | ![Icona app](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Apps_18_N.svg) | Fai clic per passare rapidamente dalla pagina Home di AEM alle soluzioni AEM |
