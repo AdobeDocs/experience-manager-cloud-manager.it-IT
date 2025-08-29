@@ -2,10 +2,10 @@
 title: Primo accesso
 description: Se hai impostato le configurazioni generali e sei pronto a utilizzare Cloud Manager per la prima volta, segui questa pagina.
 exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
-source-wordcount: '293'
-ht-degree: 100%
+source-git-commit: 89fa72fb3950f6040f42066fdcbca3a61bb76f5b
+workflow-type: tm+mt
+source-wordcount: '288'
+ht-degree: 88%
 
 ---
 
@@ -20,15 +20,22 @@ Una volta impostata la configurazione generale per [!UICONTROL Cloud Manager], p
 
 ## Accedere per la prima volta {#logging-in-for-the-first-time}
 
-1. Accedi a Cloud Manager all’indirizzo [`my.cloudmanager.adobe.com`](https://my.cloudmanager.adobe.com/) per visualizzare l’elenco di programmi.
+1. Accedi a Cloud Manager all&#39;indirizzo [experiece.adobe.com](https://experience.adobe.com/experiencemanager). Per ulteriori informazioni, consulta [Informazioni su Adobe Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/experience-hub/experience-hub)
+1. Nel pannello laterale sinistro fare clic su **Cloud Manager**.
 
-   ![Console di Cloud Manager](/help/assets/cloud-manager-console.png)
+   ![Cloud Manager nel pannello a sinistra in Experience Manager](/help/getting-started/assets/cloud-manager-experiencemanager.png)
 
-1. Fai clic sulla scheda del programma per accedere alla pagina **Panoramica** di Cloud Manager.
+<!-- 
+1. Log into Cloud Manager at [`my.cloudmanager.adobe.com`](https://my.cloudmanager.adobe.com/) and you see your list of programs.
 
-1. Cloud Manager si apre nella pagina della **Panoramica**.
+   ![Cloud Manager console](/help/assets/cloud-manager-console.png)
 
-   ![Pagina panoramica di Cloud Manager](/help/assets/program-overview-page.png)
+1. Click your program's card to navigate to Cloud Manager's **Overview** page. 
+
+1. Cloud Manager opens to the **Overview** page.
+
+   ![Cloud Manager overview page](/help/assets/program-overview-page.png) -->
+
 
 1. Se il programma non è ancora configurato, fai clic su **Configura programma** nell’[invito all’azione](/help/getting-started/navigation.md#cta) per impostare la descrizione del programma e definire gli indicatori prestazioni chiave (KPI, Key Performance Indicators). Se il programma è già configurato, il CTA potrebbe offrire ulteriori passaggi successivi.
 
