@@ -7,10 +7,10 @@ user-guide-description: Scopri come utilizzare Cloud Manager per gestire autonom
 feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
-source-git-commit: 5df4852716a608c7497e93eef030b4b5bd27d42b
+source-git-commit: 1ae6792f8bc628c3530a63004c3d38f215c72778
 workflow-type: tm+mt
-source-wordcount: '379'
-ht-degree: 91%
+source-wordcount: '384'
+ht-degree: 89%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 91%
 # Documentazione di Cloud Manager {#content}
 
 + [Cloud Manager per AMS](/help/introduction.md)
-+ [Experience Hub](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/experience-hub/experience-hub)
++ [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/experience-hub/experience-hub)
 + Panoramica {#overview}
    + [Concetti fondamentali](/help/overview/key-concepts.md)
    + [Percorso dell’utente](/help/overview/user-journey.md)
@@ -67,7 +67,7 @@ ht-degree: 91%
    + [Aggiungere un archivio esterno (versione beta privata)](/help/managing-code/external-repositories.md)
    + [Gestisci token di accesso (versione beta privata)](/help/managing-code/manage-access-tokens.md)
    + [Supporto per i sottomoduli Git](/help/managing-code/git-submodules.md)
-   + [Configurazione verifica GitHub](/help/managing-code/github-check-config.md)
+   + [Controlli delle richieste di pull per archivi privati](/help/managing-code/github-check-config.md)
    + [Annotazioni di verifica GitHub](/help/managing-code/github-annotations.md)
    + [Gestione delle versioni dei progetti Maven](/help/managing-code/maven-project-version.md)
    + [Integrare con Git](/help/managing-code/git-integration.md)
@@ -78,6 +78,7 @@ ht-degree: 91%
 + Note sulla versione {#release-notes}
    + [Corrente](/help/release-notes/current.md)
    + 2025 {#rn-2025}
+      + [2025.8.0](/help/release-notes/2025/2025-8-0.md)
       + [2025.7.0](/help/release-notes/2025/2025-7-0.md)
       + [2025.6.0](/help/release-notes/2025/2025-6-0.md)
       + [2025.5.0](/help/release-notes/2025/2025-5-0.md)

@@ -2,7 +2,7 @@
 title: Pipeline suddivise solo per staging e solo produzione
 description: Scopri come suddividere le distribuzioni di staging e di produzione utilizzando pipeline dedicate.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
-source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
+source-git-commit: 34c0b39d50dd4998cb75cc032d71d24798dee729
 workflow-type: tm+mt
 source-wordcount: '917'
 ht-degree: 96%
@@ -36,9 +36,9 @@ Queste pipeline dedicate offrono maggiore flessibilità, ma tieni presente i det
 >
 >Le pipeline solo per produzione utilizzano sempre gli artefatti della pipeline solo per staging. Questo processo rimane valido anche se nel frattempo la pipeline di produzione standard associata ha implementato qualcos’altro per lo staging.
 >
->* Tale scenario potrebbe causare ripristini del codice indesiderati.
+>* Tale scenario potrebbe causare rollback del codice indesiderati.
 >* Adobe consiglia di interrompere l’utilizzo della pipeline di produzione standard associate dopo aver iniziato a utilizzare le pipeline solo di produzione e solo di staging.
->* Se decidi comunque di eseguire sia le pipeline standard associate che le pipeline solo per staging/produzione, considera di riutilizzare gli artefatti per evitare ripristini del codice.
+>* Se decidi comunque di eseguire sia le pipeline standard associate che le pipeline solo per staging o produzione, considera di riutilizzare gli artefatti per evitare rollback del codice.
 
 ## Creazione di pipeline {#pipeline-creation}
 

@@ -1,33 +1,35 @@
 ---
-title: Configurazione verifica GitHub per archivi privati
+title: Controlli delle richieste di pull per archivi privati
 description: Scopri come controllare le pipeline create automaticamente per convalidare ogni richiesta pull in un archivio privato.
 exl-id: 29c9e487-e196-411a-8cda-6751b0a56066
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
-source-wordcount: '236'
-ht-degree: 100%
+source-git-commit: 1ae6792f8bc628c3530a63004c3d38f215c72778
+workflow-type: tm+mt
+source-wordcount: '237'
+ht-degree: 92%
 
 ---
 
-# Configurazione verifica GitHub per archivi privati {#github-check-config}
+# Controlli delle richieste di pull per archivi privati {#github-check-config}
+
+<!--OLD TITLE THAT I THOUGHT WAS BETTER Check configuration for private repositories -->
 
 Scopri come controllare le pipeline create automaticamente per convalidare ogni richiesta pull in un archivio privato.
 
-## Configurazione delle verifiche GitHub {#configuration}
+## Configurazione dei controlli dell’archivio privato {#configuration}
 
 Quando si utilizzano gli [archivi privati,](private-repositories.md#using) viene creata automaticamente una [pipeline di qualità del codice full-stack](/help/overview/ci-cd-pipelines.md). Tale pipeline viene avviata ogni volta che la richiesta pull viene aggiornata.
 
 È possibile verificare questi controlli creando un file `.cloudmanager/pr_pipelines.yml` nel ramo predefinito dell’archivio privato.
 
 ```yaml
-github:
+pullRequest:
   shouldDeletePreviousComment: false
 pipelines:
   - type: CI_CD
     template:
       programId: 1234
       pipelineId: 456
-    namePrefix: Full Stack Code Quality Pipeline for PR 
+    namePrefix: Full Stack Code Quality Pipeline for PR
     importantMetricsFailureBehavior: CONTINUE
 ```
 
