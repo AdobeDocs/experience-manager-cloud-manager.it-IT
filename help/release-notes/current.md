@@ -3,10 +3,10 @@ title: Note sulla versione 2025.9.0 di Cloud Manager
 description: Ulteriori informazioni sulla versione 2025.9.0 di Cloud Manager su Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: 68e546c1337122f823d63529ebd68d6966bb132a
+source-git-commit: 24ec1d82f9a700b57cd74c2c83c8d9d00b8bece1
 workflow-type: tm+mt
-source-wordcount: '363'
-ht-degree: 75%
+source-wordcount: '376'
+ht-degree: 72%
 
 ---
 
@@ -31,13 +31,13 @@ La prossima versione è pianificata per il venerdì 2 ottobre 2025.
 
 ## Novità {#what-is-new}
 
-* **È stato aggiunto il supporto per gli archivi privati DevOps di Azure**
+* **È stato aggiunto il supporto per Azure DevOps (archivi privati)**
 
   Gli aggiornamenti della documentazione includono passaggi di configurazione per acquisire un Git personalizzato con Azure DevOps e la convalida delle richieste di pull. Vedi [Aggiungere archivi esterni in Cloud Manager](/help/managing-code/external-repositories.md).
 
-* **Controlli delle richieste di pull per archivi privati**
+* **Estensione del supporto Git personalizzato (BYOG) alle pipeline di configurazione (archivi privati)**
 
-  Cloud Manager ora supporta le pipeline di configurazione con archivi privati su GitHub, Bitbucket, Azure DevOps e GitLab. Consulta ![Controlli della richiesta di pull per archivi privati](/help/managing-code/github-check-config.md).
+  Cloud Manager ora supporta le pipeline di configurazione con archivi privati su GitHub, Bitbucket, Azure DevOps e GitLab. Questo sostegno accelera ulteriormente il ciclo di sviluppo. Consulta ![Controlli della richiesta di pull per archivi privati](/help/managing-code/github-check-config.md).
 
 ## Programmi Beta {#beta-program}
 
