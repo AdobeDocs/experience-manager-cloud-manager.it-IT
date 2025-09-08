@@ -2,10 +2,10 @@
 title: Introduzione a Cloud Manager per AMS
 description: Inizia qui per scoprire Cloud Manager per Adobe Managed Services (AMS) e come consente alle organizzazioni di gestire autonomamente Adobe Experience Manager nel cloud.
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
-source-git-commit: 4c4a2688cab8e5c81efa4b7b5e26f3c7b5dc30d6
-workflow-type: ht
-source-wordcount: '1256'
-ht-degree: 100%
+source-git-commit: 8f29a06f63b8dc10cb3d28e2f38da1ead84f32f5
+workflow-type: tm+mt
+source-wordcount: '1250'
+ht-degree: 95%
 
 ---
 
@@ -34,26 +34,23 @@ Inizia qui per scoprire Cloud Manager per Adobe Managed Services (AMS) e come co
 Con Cloud Manager, il team di sviluppo potrà usufruire delle seguenti funzionalità:
 
 * CI/CD (Continuous integration/continuous delivery) del codice per ridurre i tempi di realizzazione da mesi/settimane a giorni/ore.
-
 * Ispezione del codice, test delle prestazioni e convalida di sicurezza basati sulle best practice ed effettuati prima del passaggio alla fase produttiva, al fine di ridurre al minimo le interruzioni di produzione.
-
 * Connettività API per integrare i processi DevOps esistenti.
-
 * Funzione di scalabilità automatica che rileva in modo intelligente la necessità di capacità aggiuntive e porta automaticamente online altri segmenti Dispatcher/pubblicazione.
 
 ![Flusso CI/CD](/help/assets/screen_shot_2018-05-12at73843pm.png)Il flusso di processo CI/CD utilizzato in [!UICONTROL Cloud Manager].
 
 ## Funzioni principali in [!UICONTROL Cloud Manager] {#key-features-in-cloud-manager}
 
-Di seguito sono riportati approfondimenti su alcune funzioni principali di Cloud Manager.
+Le sezioni seguenti evidenziano le funzioni chiave di Cloud Manager.
 
 ### Interfaccia self-service {#self-service-interface}
 
-L’interfaccia utente di [!UICONTROL Cloud Manager] ti consente di accedere e gestire facilmente l’ambiente cloud e la pipeline CI/CD per le applicazioni di Adobe Experience Manager.
+Per esplorare e iniziare a utilizzare l’interfaccia utente di [!UICONTROL Cloud Manager], consulta il documento [Primo accesso](/help/getting-started/first-time-login.md).
+
+L&#39;interfaccia utente di [!UICONTROL Cloud Manager] consente di accedere e gestire facilmente l&#39;ambiente cloud e la pipeline CI/CD per le applicazioni Adobe Experience Manager.
 
 Puoi definire indicatori di prestazioni chiave (KPI, Key Performance Indicators) specifici per l’applicazione, come i picchi di visualizzazioni della pagina al minuto o i tempi di risposta previsti per il caricamento della pagina. Questi KPI fungono da base per misurare il successo dell’implementazione. È possibile definire facilmente ruoli e autorizzazioni per i diversi membri del gruppo. L’interfaccia self-service fornisce il controllo completo. Fornisce inoltre collegamenti alle risorse sulle best practice e accesso a esperti di Adobe per indicazioni, se necessario.
-
-Per esplorare e iniziare a utilizzare l’interfaccia utente di [!UICONTROL Cloud Manager], consulta il documento [Primo accesso](/help/getting-started/first-time-login.md).
 
 ### Pipeline CI/CD {#ci-cd-pipeline}
 
@@ -105,16 +102,16 @@ In qualsiasi momento, solo uno degli ambienti è live, con l’ambiente live che
 Quando la distribuzione blu/verde è abilitata, il flusso di distribuzione è diverso dal flusso di distribuzione standard di Cloud Service.
 
 | Passaggio | Distribuzione blu/verde | Distribuzione standard |
-|---|---|---|
+| --- | --- | --- |
 | 1 | Distribuzione all’authoring | Distribuzione all’authoring |
 | 2 | Pausa per test | - |
 | 3 | Viene creata l’infrastruttura verde | - |
-| 4 | Distribuzione ai livelli di pubblicazione/dispatcher verdi | Distribuzione all&#39;editore |
+| 4 | Distribuzione ai livelli Publish/Dispatcher verdi | Distribuzione all&#39;editore |
 | 5 | Pausa per test (fino a 24 ore) | - |
 | 6 | L&#39;infrastruttura verde viene aggiunta al load balancer di produzione | - |
-| 7 | L&#39;infrastruttura blu viene rimossa dal load balancer di produzione |
+| 7 | L’infrastruttura blu viene rimossa dal load balancer di produzione | - |
 | 8 | Pausa per approvazione finale (fino a 24 ore) | - |
-| 9 | L&#39;infrastruttura blu viene terminata automaticamente | - |
+| 9 | L’infrastruttura blu viene terminata automaticamente | - |
 | 10 | Completamenti pipeline | - |
 
 #### Implementazione blu/verde {#implementing}
