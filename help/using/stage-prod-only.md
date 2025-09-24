@@ -2,10 +2,10 @@
 title: Pipeline suddivise solo per staging e solo produzione
 description: Scopri come suddividere le distribuzioni di staging e di produzione utilizzando pipeline dedicate.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
-source-git-commit: 34c0b39d50dd4998cb75cc032d71d24798dee729
+source-git-commit: 92237ea156e3921b5dc55cea3abdecee9d26b14b
 workflow-type: tm+mt
 source-wordcount: '917'
-ht-degree: 96%
+ht-degree: 94%
 
 ---
 
@@ -103,7 +103,7 @@ Una pipeline esclusivamente solo di staging viene eseguita quasi allo stesso mod
 
 ![Esecuzione pipeline solo di staging](/help/assets/configure-pipelines/stage-only-pipeline-run.png)
 
-Facendo clic su **Promuovi versione** viene richiesto di confermare l’esecuzione della pipeline solo di staging correlata normalmente o in [modalità di emergenza](#emergency-mode).
+Facendo clic su **Promuovi build** viene richiesto di confermare l&#39;esecuzione della pipeline di sola produzione correlata normalmente o in [modalità emergenza](#emergency-mode).
 
 Se non esiste una pipeline solo di produzione, viene richiesto di crearne una.
 
