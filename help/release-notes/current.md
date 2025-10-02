@@ -1,49 +1,64 @@
 ---
-title: Note sulla versione 2025.9.0 di Cloud Manager
-description: Ulteriori informazioni sulla versione 2025.9.0 di Cloud Manager su Adobe Managed Services.
+title: Note sulla versione 2025.10.0 di Cloud Manager
+description: Ulteriori informazioni sulla versione 2025.10.0 di Cloud Manager su Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: 24ec1d82f9a700b57cd74c2c83c8d9d00b8bece1
+source-git-commit: 03fc811a1a617263efd0f1d5667bba6975826a0e
 workflow-type: tm+mt
-source-wordcount: '376'
-ht-degree: 72%
+source-wordcount: '462'
+ht-degree: 59%
 
 ---
 
-# Note sulla versione di Cloud Manager 2025.9.0 su Adobe Managed Services {#release-notes}
+# Note sulla versione di Cloud Manager 2025.10.0 su Adobe Managed Services {#release-notes}
 
 <!-- RELEASE WIKI  https://wiki.corp.adobe.com/display/DMSArchitecture/Cloud+Manager+2025.04.0+Release -->
 
-Ulteriori informazioni sulla versione di [!UICONTROL Cloud Manager] 2025.9.0 su Adobe Managed Services.
+Ulteriori informazioni sulla versione di [!UICONTROL Cloud Manager] 2025.10.0 su Adobe Managed Services.
 
 Consulta anche le [note sulla versione corrente di Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/it/docs/experience-manager-cloud-service/content/release-notes/home).
 
 ## Date di pubblicazione {#release-date}
 
-La data di rilascio della versione 2025.9.0 di [!UICONTROL Cloud Manager] è il venerdì 4 settembre 2025.
+La data di rilascio della versione 2025.10.0 di [!UICONTROL Cloud Manager] è il venerdì 2 ottobre 2025.
 
 <!-- There are no significant new features or bug fixes in the May Cloud Manager release. -->
 
-La prossima versione è pianificata per il venerdì 2 ottobre 2025.
+La prossima versione è pianificata per il venerdì 6 novembre 2025.
 
 <!-- SAVE FOR FUTURE POSSIBLE USE There are no significant new features or bug fixes in the May Cloud Manager release. -->
 
-
 ## Novità {#what-is-new}
 
-* **È stato aggiunto il supporto per Azure DevOps (archivi privati)**
 
-  Gli aggiornamenti della documentazione includono passaggi di configurazione per acquisire un Git personalizzato con Azure DevOps e la convalida delle richieste di pull. Vedi [Aggiungere archivi esterni in Cloud Manager](/help/managing-code/external-repositories.md).
 
-* **Estensione del supporto Git personalizzato (BYOG) alle pipeline di configurazione (archivi privati)**
 
-  Cloud Manager ora supporta le pipeline di configurazione con archivi privati su GitHub, Bitbucket, Azure DevOps e GitLab. Questo sostegno accelera ulteriormente il ciclo di sviluppo. Consulta ![Controlli della richiesta di pull per archivi privati](/help/managing-code/github-check-config.md).
+
+
 
 ## Programmi Beta {#beta-program}
 
 Partecipa ai programmi Beta di Cloud Manager per ottenere accesso esclusivo alle prossime funzionalità prima del rilascio generale.
 
 Sono attualmente disponibili le seguenti opportunità:
+
+### Estensibilità e personalizzazione di Experience Hub {#exp-hub-extensibility}
+
+[Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/experience-hub/experience-hub) funge da punto di ingresso ad AEM, personalizzato in base alle esigenze della tua organizzazione. Comunica ad Adobe le tue estensioni dell’interfaccia utente di AEM esistenti in modo che possano aiutarti ad abilitarle in Experience Hub con il minimo sforzo.
+
+![Diagramma del flusso di lavoro di estensibilità e personalizzazione di Experience Hub](/help/release-notes/assets/experience-hub-extensibility-customization.png)
+
+Incorpora esperienze personalizzate in Experience Hub per estendere e personalizzare il dashboard della tua organizzazione. Oltre ai widget incorporati di Adobe, aggiungi quelli personalizzati utilizzando il framework [UI Extensibility](https://developer.adobe.com/uix/docs/). Crea app dell’interfaccia utente basate su JavaScript e mostrale agli utenti per soddisfare requisiti e flussi di lavoro specifici per le aziende.
+
+Ti interessa la versione beta? Invia un&#39;e-mail a [beta_exphubextensibility@adobe.com](mailto:beta_exphubextensibility@adobe.com) con il tuo OrgID Adobe e una breve descrizione della personalizzazione che intendi creare.
+
+### Build più veloci con il caching dei moduli {#quick-build-cm-pipelines}
+
+Un nuovo modello di build compila solo i moduli modificati (anziché l’intero archivio) utilizzando la memorizzazione nella cache a livello di modulo per ridurre i tempi di build. Si applica alle pipeline di qualità del codice, full stack e solo stage.
+
+Ti interessa la versione beta? Invia un&#39;e-mail a [beta_quickbuild_cmpipelines@adobe.com](mailto:beta_quickbuild_cmpipelines@adobe.com) con il tuo ID organizzazione e l&#39;ID programma di Adobe.
+
+<!-- You can deactivate incremental builds at the pipeline level by setting the property `CM_BUILD_DISABLE_MODULE_CACHING` to `true` (effective during the `BUILD` step). For how to add pipeline variables, see [Pipeline variables](/help/getting-started/build-environment.md#pipeline-variables). -->
 
 
 ### Integra il tuo Git personale (BYOG) {#gitlab-bitbucket-azure-vsts}
@@ -73,7 +88,7 @@ Consulta [Gestisci token di accesso](/help/managing-code/manage-access-tokens.md
 
 ## Correzioni di bug {#bug-fixes}
 
-Non sono state apportate correzioni di bug significativi nella versione di agosto di Cloud Manager.
+Non vi sono correzioni di bug significativi nella versione di ottobre di Cloud Manager.
 
 <!--
 Known Issues {#known-issues}
