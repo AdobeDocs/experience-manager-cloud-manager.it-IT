@@ -3,7 +3,7 @@ title: Note sulla versione 2025.10.0 di Cloud Manager
 description: Ulteriori informazioni sulla versione 2025.10.0 di Cloud Manager su Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: 8477b55292be4591b679200ff11b976a2da3a7be
+source-git-commit: f62191a1b9dd67ea1e999e2db0bb05de66bf73f2
 workflow-type: tm+mt
 source-wordcount: '581'
 ht-degree: 47%
@@ -41,7 +41,7 @@ Sono attualmente disponibili le seguenti opportunità:
 
 ### Estensibilità e personalizzazione di Experience Hub {#exp-hub-extensibility}
 
-[Experience Hub](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/experience-hub/experience-hub) funge da punto di ingresso ad AEM, personalizzato in base alle esigenze della tua organizzazione. Comunica ad Adobe le tue estensioni dell’interfaccia utente di AEM esistenti in modo che possano aiutarti ad abilitarle in Experience Hub con il minimo sforzo.
+[Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/experience-hub/experience-hub) funge da punto di ingresso ad AEM, personalizzato in base alle esigenze della tua organizzazione. Comunica ad Adobe le tue estensioni dell’interfaccia utente di AEM esistenti in modo che possano aiutarti ad abilitarle in Experience Hub con il minimo sforzo.
 
 ![Diagramma del flusso di lavoro di estensibilità e personalizzazione di Experience Hub](/help/release-notes/assets/experience-hub-extensibility-customization.png)
 
@@ -53,7 +53,8 @@ Ti interessa la versione beta? Invia un&#39;e-mail a [beta_exphubextensibility@a
 
 Un nuovo modello di build compila solo i moduli modificati (anziché l’intero archivio) utilizzando la memorizzazione nella cache a livello di modulo per ridurre i tempi di build. Si applica alle pipeline di qualità del codice, full stack e solo stage.
 
-![Finestra di dialogo Modifica pipeline non di produzione che mostra le due opzioni della strategia di compilazione, ovvero Build completa e Build avanzata](/help/release-notes/assets/non-production-pipeline-edit.png) *Finestra di dialogo Modifica pipeline non di produzione che mostra le due opzioni della strategia di compilazione, ovvero Build completa e Build avanzata.*
+![Finestra di dialogo Modifica pipeline non di produzione con le due opzioni Strategia di compilazione Full Build e Smart Build](/help/release-notes/assets/non-production-pipeline-edit.png)
+*Finestra di dialogo Modifica pipeline non di produzione che mostra le due opzioni Strategia di compilazione, Build completa e Build avanzata.*
 
 Nella finestra di dialogo **Aggiungi/Modifica pipeline**, nella scheda **Codice Source**, una nuova sezione **Strategia di compilazione** consente di scegliere una delle seguenti opzioni di compilazione:
 
