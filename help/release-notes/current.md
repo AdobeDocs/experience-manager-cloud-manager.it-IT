@@ -3,7 +3,7 @@ title: Note sulla versione 2025.10.0 di Cloud Manager
 description: Ulteriori informazioni sulla versione 2025.10.0 di Cloud Manager su Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: f62191a1b9dd67ea1e999e2db0bb05de66bf73f2
+source-git-commit: 696fae5ea39bd33a92e5e066338e129aee432cb1
 workflow-type: tm+mt
 source-wordcount: '581'
 ht-degree: 47%
@@ -41,7 +41,7 @@ Sono attualmente disponibili le seguenti opportunità:
 
 ### Estensibilità e personalizzazione di Experience Hub {#exp-hub-extensibility}
 
-[Experience Hub](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/experience-hub/experience-hub) funge da punto di ingresso ad AEM, personalizzato in base alle esigenze della tua organizzazione. Comunica ad Adobe le tue estensioni dell’interfaccia utente di AEM esistenti in modo che possano aiutarti ad abilitarle in Experience Hub con il minimo sforzo.
+[Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/experience-hub/experience-hub) funge da punto di ingresso ad AEM, personalizzato in base alle esigenze della tua organizzazione. Comunica ad Adobe le tue estensioni dell’interfaccia utente di AEM esistenti in modo che possano aiutarti ad abilitarle in Experience Hub con il minimo sforzo.
 
 ![Diagramma del flusso di lavoro di estensibilità e personalizzazione di Experience Hub](/help/release-notes/assets/experience-hub-extensibility-customization.png)
 
