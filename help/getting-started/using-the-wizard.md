@@ -2,17 +2,17 @@
 title: Utilizzo della procedura guidata Nuovo progetto
 description: Segui questa pagina per scoprire come utilizzare la procedura guidata per creare un progetto di applicazione AEM.
 exl-id: 9d7c6f4c-9379-471c-8dad-772a7099da54
-source-git-commit: f3617eb50147f5af33282cb0f25ada7dc423d434
+source-git-commit: b98e1711f1f98f52977dd6cb4cd2bc834d81a360
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 92%
+source-wordcount: '322'
+ht-degree: 82%
 
 ---
 
 
 # Utilizza la procedura guidata per un nuovo progetto {#using-the-wizard}
 
-Al momento dell’onboarding in Cloud Manager come nuovo cliente, ti veniva fornito un archivio Git vuoto. Per aiutarti a iniziare, Cloud Manager offre una procedura guidata per creare un progetto AEM minimo utilizzando come punto di partenza l’[archetipo di progetto AEM](https://github.com/adobe/aem-project-archetype).
+Quando effettui l’onboarding in Cloud Manager come nuovo cliente, ti viene fornito un archivio Git vuoto. Per aiutarti a iniziare, Cloud Manager offre una procedura guidata per creare un progetto AEM minimo utilizzando come punto di partenza l’[archetipo di progetto AEM](https://github.com/adobe/aem-project-archetype).
 
 Segui questi passaggi per creare un progetto AEM utilizzando la procedura guidata.
 
@@ -39,6 +39,6 @@ Ora hai un progetto di base. È il momento di configurare le pipeline.
 
 ## Clientela esistente o in fase di migrazione {#existing-migrating}
 
-Se sei cliente attuale di Adobe Managed Services (AMS) oppure di AEM on-premise in procinto di migrare ad AMS, probabilmente hai già un codice progetto in Git o in un altro sistema di controllo della versione.
+Se sei un cliente Adobe Managed Services (AMS) corrente o un cliente AEM on-premise che sta eseguendo la migrazione, è probabile che il codice del progetto sia già presente in Git o in un altro sistema di controllo della versione.
 
 In questi casi, puoi importare il progetto nell’archivio Git di Cloud Manager.

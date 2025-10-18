@@ -2,9 +2,9 @@
 title: Navigazione nell’interfaccia utente di Cloud Manager
 description: Scopri come è organizzata l’interfaccia utente di Cloud Manager e come spostarsi per gestire i programmi e gli ambienti.
 exl-id: 9c1545ce-1c6d-417f-a6f4-fe53caef3433
-source-git-commit: cc41d4716aa3c3683010b6dd392b5355b129d1ef
+source-git-commit: b98e1711f1f98f52977dd6cb4cd2bc834d81a360
 workflow-type: tm+mt
-source-wordcount: '1530'
+source-wordcount: '1532'
 ht-degree: 52%
 
 ---
@@ -30,7 +30,7 @@ La console **Programmi personali** fornisce una panoramica di tutti i programmi 
 |   | Area | Descrizione |
 | --- | --- | --- |
 | 1 | [Barre degli strumenti](#toolbars-my-programs-toolbars) | Utilizza per la selezione dell’organizzazione, gli avvisi e le impostazioni dell’account. |
-| 2 | Scheda del pannello laterale sinistro | Varie schede che consentono di attivare/disattivare la visualizzazione corrente dei programmi, tra cui:<br><ul><li>**Experience Manager** apre la home page delle varie soluzioni AEM</li><li>**Tutti i programmi** che visualizza tutti i programmi disponibili.</li><li>**License** apre la dashboard delle licenze. La Dashboard delle licenze si applica solo ai *programmi AEM as a Cloud Service* (AEMaaCS) e non ai programmi Adobe Managed Services come AEM 6.5 e AEM 6.5 LTS. Per determinare il tipo di servizio del programma (AEMaaCS o AMS), consulta la [sezione Schede del programma](#program-cards) di questo articolo. Per impostazione predefinita, le schede sono chiuse e possono essere visualizzate utilizzando l&#39;icona del menu ![Mostra, hamburger](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg), disponibile sul lato sinistro dell&#39;[intestazione Cloud Manager](#cloud-manager-header).</li></ol> |
+| 2 | Scheda del pannello laterale sinistro | Varie schede che consentono di attivare/disattivare la visualizzazione corrente dei programmi, tra cui:<br><ul><li>**Experience Manager** apre la home page delle varie soluzioni AEM</li><li>**Tutti i programmi** che visualizzano tutti i programmi disponibili.</li><li>**License** apre la dashboard delle licenze. La Dashboard delle licenze si applica solo ai *programmi AEM as a Cloud Service* (AEMaaCS) e non ai programmi Adobe Managed Services come AEM 6.5 e AEM 6.5 LTS. Per determinare il tipo di servizio del programma (AEMaaCS o AMS), consulta la [sezione Schede del programma](#program-cards) di questo articolo. Per impostazione predefinita, le schede sono chiuse e possono essere visualizzate utilizzando l&#39;icona del menu ![Mostra, hamburger](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg), disponibile sul lato sinistro dell&#39;[intestazione Cloud Manager](#cloud-manager-header).</li></ol> |
 | 3 | [I miei programmi](#my-programs-section) | Elenca tutti i programmi disponibili selezionabili.<br>Per informazioni dettagliate sui programmi, vedere [Programmi e tipi di programmi](/help/getting-started/program-setup.md). |
 | 4 | [Inviti all&#39;azione e statistiche](#cta-statistics) | Offre una panoramica delle attività recenti. |
 | 5 | [Collegamenti rapidi](#quick-links) | Accesso rapido alle risorse correlate. |
@@ -52,7 +52,7 @@ La prima è l’intestazione Cloud Manager. L’intestazione diventa persistente
 | ![Icona rosso e bianco di Adobe](/help/getting-started/assets/AdobeLogoWhiteOnRed.svg) Cloud Manager | Fare clic per aprire la console **I miei programmi** di Cloud Manager, indipendentemente dalla posizione in cui ci si trova in Cloud Manager. |
 | *`Name of selected organization`* | Il selettore organizzazione visualizza l&#39;organizzazione a cui si è attualmente connessi (in questo esempio, *Foundation Internal*). Fai clic su per passare a un’altra organizzazione se l’Adobe ID è associata a più organizzazioni. |
 | ![Icona Feedback](/help/getting-started/assets/AppComment.svg) Feedback | Fai clic su per fornire ad Adobe un feedback su Cloud Manager. |
-| ![Icona Assistente IA](/help/getting-started/assets/AIChat.svg) | L’Assistente per l’intelligenza artificiale offre un’interfaccia di conversazione progettata per semplificare la ricerca delle risposte alle query relative ad AEM. Vedi [Assistente IA](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/ai-assistant/ai-assistant-in-aem) |
+| ![Icona Assistente IA](/help/getting-started/assets/AIChat.svg) | L’Assistente per l’intelligenza artificiale offre un’interfaccia di conversazione progettata per semplificare la ricerca delle risposte alle query relative ad AEM. Vedi [Assistente IA](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/ai-in-aem/ai-assistant/ai-assistant-in-aem#) |
 | ![Icona Aiuto](https://spectrum.adobe.com/static/icons/workflow_18/Smock_HelpOutline_18_N.svg) | Fai clic su per fornire un accesso rapido alle risorse di apprendimento e supporto. |
 | ![Icona campana bianca](/help/getting-started/assets/Bell.svg) | Fai clic per visualizzare il numero di [notifiche](/help/using/notifications.md) incomplete attualmente assegnate |
 | ![Icona app](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Apps_18_N.svg) | Fai clic per passare rapidamente dalla pagina Home di AEM alle soluzioni AEM |
