@@ -1,8 +1,8 @@
 ---
-source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
+source-git-commit: d8380bf56891af7ce3fe833e209ae8663e4bc6fe
 workflow-type: tm+mt
 source-wordcount: '713'
-ht-degree: 96%
+ht-degree: 93%
 
 ---
 # Linee guida per contribuire alla documentazione di Adobe Experience Manager
@@ -23,17 +23,17 @@ Pur accogliendo con favore i contributi alla documentazione, qualsiasi contribut
 
 I contributi che non soddisfano tali standard possono essere rifiutati.
 
-### I casi d’uso standard sono documentati in Adobe.
+### I casi di utilizzo standard sono documentati in Adobe
 
 La documentazione di AEM riguarda i casi d’uso standard. I casi di utilizzo che esulano dall’ambito di installazione e utilizzo standard del prodotto non rientrano nella documentazione di AEM.
 
-### In genere Adobe non documenta i bug o le relative soluzioni.
+### Adobe in genere non documenta i bug o le relative soluzioni
 
 La documentazione di AEM riguarda i casi d’uso standard. Per questo motivo, i bug, gli effetti causati dai bug e le soluzioni per ovviare ai bug non sono documentati.
 
 Fanno eccezione le note sulla versione, in cui possono essere elencati i problemi noti con possibili soluzioni approvate dal team di gestione del prodotto.
 
-### I contributi alla documentazione non devono essere usati per rispondere a domande tecniche.
+### I contributi alla documentazione non devono essere usati per rispondere a domande tecniche
 
 È gradita come contributo qualsiasi idea che punti al miglioramento della documentazione di AEM. Tuttavia, commenti, problemi e richieste pull sono intesi solo come *contributi*. Non hanno l’obiettivo di rispondere a domande su come usare AEM, su come implementare un progetto AEM o risolvere problemi tecnici.
 
@@ -41,7 +41,7 @@ Puoi porre qualsiasi domanda relativa all’utilizzo di AEM o agli errori tecnic
 
 ***I contributi alla documentazione di AEM non sostituiscono l’Assistenza clienti di Adobe***. Pertanto, verranno rifiutati tutti i contributi che richiedono risposte a domande correlate al supporto.
 
-### I contributi devono fare riferimento in modo chiaro alle pagine della documentazione interessate.
+### I contributi devono fare riferimento in modo chiaro alle pagine della documentazione interessate
 
 Se apri una segnalazione per suggerire miglioramenti alla documentazione, devi includere i collegamenti alle pagine interessate. Se apri una segnalazione di un problema utilizzando il collegamento **Modifica questa pagina** di una pagina della documentazione, il problema verrà creato automaticamente con un collegamento alla pagina in questione.
 

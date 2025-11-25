@@ -1,17 +1,17 @@
 ---
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
-workflow-type: ht
-source-wordcount: '498'
-ht-degree: 100%
+source-git-commit: 23930ee54667561b5f3983056af4406301f28da2
+workflow-type: tm+mt
+source-wordcount: '500'
+ht-degree: 92%
 
 ---
-# Contribuire alla documentazione di Adobe Experience Manager Screens
+# Contribuire alla documentazione di Adobe Experience Manager Cloud Manager
 
-Grazie per aver scelto di contribuire alla documentazione di Adobe Experience Manager Screens. Adobe accoglie con favore i contributi offerti dalla nostra intera comunità di lettori e dai colleghi in Adobe.
+Grazie per aver scelto di contribuire alla documentazione di Adobe Experience Manager Cloud Manager. Adobe accoglie con favore i contributi offerti dalla nostra intera comunità di lettori e dai colleghi in Adobe.
 
 Questo file descrive le modalità con cui è possibile apportare il proprio contributo e specifica le linee guida da seguire.
 
-## Codice di condotta per open source Adobe
+## Codice di condotta open source di Adobe
 
 Questo progetto ha adottato il [Codice di condotta per open source Adobe](code-of-conduct.md). Contribuendo alla documentazione di AEM si accetta implicitamente di aderire a questo codice di condotta. Segnala eventuali comportamenti inaccettabili all’indirizzo e-mail [Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com).
 
@@ -44,7 +44,7 @@ Se noti un problema e sai esattamente come correggerlo, puoi creare una richiest
 
 Tutte le richieste pull devono avere un [Contratto di licenza per collaboratori (CLA)](https://opensource.adobe.com/cla.html) firmato. Tramite l’accordo CLA viene concesso ad Adobe il permesso di ridistribuire i contributi come parte del progetto. È sufficiente inviare un CLA di Adobe una sola volta; se lo hai già inviato in passato, non è necessario ripetere questa operazione.
 
-### Breve video introduttivo
+### Video introduttivo
 
 Nel video seguente viene brevemente illustrato come segnalare un problema e creare una richiesta.
 
