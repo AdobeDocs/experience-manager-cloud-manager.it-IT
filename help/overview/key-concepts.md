@@ -2,10 +2,10 @@
 title: Concetti fondamentali
 description: Come tutti gli strumenti potenti, Cloud Manager include molti concetti e termini. Questo documento riepiloga alcuni dei più importanti per iniziare a utilizzare Cloud Manager.
 exl-id: 86dfc976-f3da-479a-9faa-08f40ca909e0
-source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
-workflow-type: ht
+source-git-commit: 75baacd1fd6f36ca1d6ea5c1993516569ab6ef47
+workflow-type: tm+mt
 source-wordcount: '414'
-ht-degree: 100%
+ht-degree: 95%
 
 ---
 
@@ -42,9 +42,9 @@ Un’istanza è un server virtuale specifico che esegue la [soluzione](#solution
 
 ## Organizzazione {#organization}
 
-Un’organizzazione è un costrutto di Adobe che rappresenta un cliente aziendale. Un’azienda può avere più organizzazioni a seconda di come sono state fornite in Adobe Identity Management (IMS).
+Un’organizzazione è un costrutto di Adobe che rappresenta un cliente aziendale. Un’azienda può avere più organizzazioni a seconda di come vengono fornite in Adobe Identity Management System (IMS).
 
-## Pipeline  {#pipeline}
+## Pipeline {#pipeline}
 
 Una pipeline è un insieme di passaggi di distribuzione eseguiti in sequenza.
 

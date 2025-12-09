@@ -2,10 +2,10 @@
 title: Annotazioni di verifica GitHub
 description: Scopri in che modo le verifiche GitHub annotano le PR negli archivi privati per fornire un feedback utile.
 exl-id: 15178de8-8a8a-4300-8510-88875ad0fc8c
-source-git-commit: 6f5d51ef59aef831574bd55cee6b12a29e3d70d2
-workflow-type: ht
-source-wordcount: '251'
-ht-degree: 100%
+source-git-commit: 75baacd1fd6f36ca1d6ea5c1993516569ab6ef47
+workflow-type: tm+mt
+source-wordcount: '250'
+ht-degree: 92%
 
 ---
 
@@ -16,7 +16,7 @@ Scopri in che modo le verifiche GitHub annotano le PR negli archivi privati per 
 
 ## Panoramica {#overview}
 
-Se stai usando [archivi privati](private-repositories.md) per il programma Cloud Manager, le verifiche in GitHub vengono eseguite automaticamente per ogni richiesta pull. Queste verifiche vengono annotate con informazioni utili, per comprendere il prima possibile eventuali problemi riscontrati con il codice.
+Se utilizzi [archivi privati](private-repositories.md) per il tuo programma Cloud Manager, i controlli in GitHub vengono eseguiti automaticamente per ogni richiesta pull. Queste verifiche vengono annotate con informazioni utili, per comprendere il prima possibile eventuali problemi riscontrati con il codice.
 
 ![Esempio di annotazioni di controllo GitHub](assets/github-check-annotations.png)
 
