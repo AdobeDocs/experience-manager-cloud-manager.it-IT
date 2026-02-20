@@ -2,7 +2,7 @@
 title: Aggiungere archivi esterni in Cloud Manager
 description: Scopri come aggiungere un archivio esterno in Cloud Manager. Cloud Manager supporta l’integrazione con gli archivi GitHub Enterprise, GitLab, Bitbucket e Azure DevOps.
 exl-id: 4500cacc-5e27-4bbb-b8f6-5144dac7e6da
-source-git-commit: 76a5cb04514bc1961c8f9008e9bea5d1d6fe1c19
+source-git-commit: 651d9fc9964d599cb51556f7b6ba255fe8092d7f
 workflow-type: tm+mt
 source-wordcount: '2453'
 ht-degree: 27%
@@ -15,15 +15,12 @@ ht-degree: 27%
 
 Scopri come aggiungere un archivio esterno in Cloud Manager. Cloud Manager supporta l’integrazione con gli archivi GitHub Enterprise, GitLab e Bitbucket.
 
-È ora possibile anche integrare gli archivi Git di Azure DevOps in Cloud Manager, con il supporto per gli archivi moderni di Azure DevOps e gli archivi VSTS (Visual Studio Team Services) legacy.
+I clienti possono ora integrare i propri archivi Git Azure DevOps in Cloud Manager, con supporto sia per i moderni archivi Azure DevOps che per gli archivi VSTS (Visual Studio Team Services) precedenti.
 
 * Per chi usa Edge Delivery Services, l’archivio di cui è stato eseguito l’onboarding può essere utilizzato per sincronizzare e distribuire il codice del sito.
 * Per chi usa AEM as a Cloud Service e Adobe Managed Services (AMS), l’archivio può essere collegato sia a pipeline full stack che front-end.
 
-<!--
->[!NOTE]
->
->The support added for Azure DevOps described in this article is available only through the private beta program. For more details and to sign up for the beta, see [Bring Your Own Git](/help/release-notes/current.md). -->
+
 
 ## Configurare un archivio esterno
 
@@ -127,7 +124,7 @@ Vedi anche [Gestione token di accesso](/help/managing-code/manage-access-tokens.
 | Opzione token di accesso | Descrizione |
 | --- | --- |
 | **Usa token di accesso esistente** | Se hai già fornito un token di accesso all’archivio per la tua organizzazione e hai accesso a più archivi, puoi selezionare un token esistente. Utilizza l’elenco a discesa **Nome token** per scegliere il token da applicare all’archivio. In caso contrario, aggiungi un nuovo token di accesso. |
-| **Aggiungere un nuovo token di accesso** | <ul><li>Nel campo di testo **Nome token**, digita un nome per il token di accesso che stai creando.<li>Creare un token di accesso all&#39;archivio utilizzando la [documentazione di Azure DevOps](https://learn.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows).<li>Autorizzazioni richieste per il token di accesso personale (PAT) di Azure DevOps.<br>Queste autorizzazioni consentono a Cloud Manager di accedere al contenuto dell&#39;archivio, gestire le richieste pull e configurare eventi webhook o di reagire a tali eventi.<br>Quando crei la password dell&#39;app in Azure DevOps, accertati che includa le seguenti autorizzazioni obbligatorie per la password dell&#39;app:<ul><li>Codice (lettura)</li><li>Codice (stato)</li><li>Richiedi Threads (lettura e scrittura)</li></ul></li></li></ul></ul></ul><ul><li>Nel campo **Token di accesso**, incolla il token appena creato. |
+| **Aggiungere un nuovo token di accesso** | <ul><li>Nel campo di testo **Nome token**, digita un nome per il token di accesso che stai creando.<li>Creare un token di accesso all&#39;archivio utilizzando la [documentazione Azure DevOps](https://learn.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows).<li>Autorizzazioni richieste per il token di accesso personale (PAT) di Azure DevOps.<br>Queste autorizzazioni consentono a Cloud Manager di accedere al contenuto dell&#39;archivio, gestire le richieste pull e configurare eventi webhook o di reagire a tali eventi.<br>Quando crei la password dell&#39;app in Azure DevOps, accertati che includa le seguenti autorizzazioni obbligatorie per la password dell&#39;app:<ul><li>Codice (lettura)</li><li>Codice (stato)</li><li>Richiedi Threads (lettura e scrittura)</li></ul></li></li></ul></ul></ul><ul><li>Nel campo **Token di accesso**, incolla il token appena creato. |
 
 Dopo la convalida, l’archivio esterno è pronto per essere utilizzato e collegato a una pipeline.
 
@@ -170,7 +167,7 @@ I webhook consentono ad esempio a Cloud Manager di attivare azioni basate su eve
 
 La configurazione del webhook non è necessaria per gli archivi ospitati su `GitHub.com` perché Cloud Manager si integra direttamente tramite l&#39;app GitHub.
 
-Per tutti gli altri archivi esterni per i quali è stato eseguito l’onboarding con un token di accesso, ad esempio GitHub Enterprise, GitLab, Bitbucket e Azure DevOps, la configurazione del webhook è disponibile e deve essere impostata manualmente.
+Per tutti gli altri archivi esterni per i quali è stato effettuato l’onboarding con un token di accesso, come GitHub Enterprise, GitLab, Bitbucket e Azure DevOps, la configurazione del webhook è disponibile e deve essere impostata manualmente.
 
 **Per configurare un webhook per un repository esterno:**
 
@@ -300,23 +297,23 @@ Utilizza lo stato del commit per tenere traccia dell&#39;avanzamento della conva
 
 >[!TAB DevOps di Azure]
 
-Azure DevOps tiene traccia della convalida delle richieste di pull tramite controlli dello stato. Quando Cloud Manager esegue la convalida della richiesta di pull, aggiunge controlli dello stato visualizzati nell&#39;interfaccia della richiesta di pull di Azure DevOps.
+Azure DevOps tiene traccia della convalida delle richieste di pull tramite controlli dello stato. Quando Cloud Manager esegue la convalida della richiesta di pull, aggiunge i controlli di stato visualizzati nell’interfaccia della richiesta di pull Azure DevOps.
 
 Durante la convalida della qualità del codice, un controllo dello stato indica che il processo è in corso:
 
-![Convalida delle richieste pull da parte di Azure DevOps con webhooks-1](/help/managing-code/assets/azure-devops-validation-of-pull-requests-with-webhooks-1.png)
+![Convalida Azure DevOps delle richieste pull con webhooks-1](/help/managing-code/assets/azure-devops-validation-of-pull-requests-with-webhooks-1.png)
 
 Al termine della convalida della qualità del codice, il controllo dello stato viene aggiornato in modo da riflettere i risultati:
 
-![Convalida delle richieste pull da parte di Azure DevOps con webhooks-2](/help/managing-code/assets/azure-devops-validation-of-pull-requests-with-webhooks-2.png)
+![Convalida Azure DevOps delle richieste pull con webhooks-2](/help/managing-code/assets/azure-devops-validation-of-pull-requests-with-webhooks-2.png)
 
 Se la convalida non riesce, vengono fornite informazioni dettagliate sull’errore nei dettagli del controllo dello stato. Puoi fare clic sul controllo dello stato per visualizzare i risultati della convalida completa in Cloud Manager.
 
-![Convalida delle richieste pull da parte di Azure DevOps con webhooks-3](/help/managing-code/assets/azure-devops-validation-of-pull-requests-with-webhooks-3.png)
+![Convalida Azure DevOps delle richieste pull con webhooks-3](/help/managing-code/assets/azure-devops-validation-of-pull-requests-with-webhooks-3.png)
 
 Per i commenti e i feedback delle richieste di pull, Cloud Manager aggiunge commenti direttamente alla richiesta di pull in Azure DevOps con i dettagli di convalida e tutte le azioni necessarie richieste.
 
-![Convalida delle richieste pull da parte di Azure DevOps con webhooks-4](/help/managing-code/assets/azure-devops-validation-of-pull-requests-with-webhooks-4.png)
+![Convalida Azure DevOps delle richieste pull con webhooks-4](/help/managing-code/assets/azure-devops-validation-of-pull-requests-with-webhooks-4.png)
 
 
 >[!ENDTABS]
