@@ -3,10 +3,10 @@ title: Note sulla versione 2026.1.0 di Cloud Manager
 description: Ulteriori informazioni sulla versione 2026.1.0 di Cloud Manager su Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: 6279792f05ec04c82634d255dad7264f6d0cef64
+source-git-commit: 28841719e820e47577b411a4034ebc7a8e1bb556
 workflow-type: tm+mt
-source-wordcount: '660'
-ht-degree: 64%
+source-wordcount: '476'
+ht-degree: 51%
 
 ---
 
@@ -37,7 +37,7 @@ La prossima pubblicazione è pianificata per il venerdì 5 febbraio 2026.
   ![Opzione Visualizza/Modifica variabili nel menu a discesa per una pipeline selezionata](/help/release-notes/assets/view-edit-variables-option.png)
   *Opzione Visualizza/Modifica variabili nel menu a discesa per una pipeline selezionata.*
 
-  ![Finestra di dialogo Configurazione variabili &#x200B;](/help/release-notes/assets/view-edit-variables-variablesconfig-dialogbox.png)*Finestra di dialogo Configurazione variabili.*
+  ![Finestra di dialogo Configurazione variabili ](/help/release-notes/assets/view-edit-variables-variablesconfig-dialogbox.png)*Finestra di dialogo Configurazione variabili.*
 
 * **Stabilità, prestazioni e affidabilità migliorate**
 
@@ -52,7 +52,7 @@ Sono attualmente disponibili le seguenti opportunità:
 
 ### Estensibilità e personalizzazione di Experience Hub {#exp-hub-extensibility}
 
-[Experience Hub](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/experience-hub/experience-hub) funge da punto di accesso ad AEM, personalizzato in base alle esigenze della tua organizzazione. Comunica ad Adobe le tue estensioni dell’interfaccia utente di AEM esistenti, in modo che possano aiutarti ad abilitarle in Experience Hub con il minimo sforzo.
+[Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/experience-hub/experience-hub) funge da punto di accesso ad AEM, personalizzato in base alle esigenze della tua organizzazione. Comunica ad Adobe le tue estensioni dell’interfaccia utente di AEM esistenti, in modo che possano aiutarti ad abilitarle in Experience Hub con il minimo sforzo.
 
 ![Diagramma del workflow di estensibilità e personalizzazione di Experience Hub](/help/release-notes/assets/experience-hub-extensibility-customization.png)
 
@@ -77,32 +77,6 @@ Puoi controllare quali pipeline utilizzano **Smart build**. Durante la versione 
 Ti interessa? Invia un’e-mail a [beta_quickbuild_cmpipelines@adobe.com](mailto:beta_quickbuild_cmpipelines@adobe.com) indicando il tuo OrgID Adobe e l’ID programma.
 
 <!-- You can deactivate incremental builds at the pipeline level by setting the property `CM_BUILD_DISABLE_MODULE_CACHING` to `true` (effective during the `BUILD` step). For how to add pipeline variables, see [Pipeline variables](/help/getting-started/build-environment.md#pipeline-variables). -->
-
-
-### Integra il tuo Git personale (BYOG) {#gitlab-bitbucket-azure-vsts}
-
-<!-- BOTH CS & AMS -->
-
-Ora è possibile portare in Cloud Manager i propri archivi Git Azure DevOps, con supporto per i nuovi archivi Azure DevOps e gli archivi legacy VSTS (Visual Studio Team Services).
-
-* Per chi usa Edge Delivery Services, l’archivio di cui è stato eseguito l’onboarding può essere utilizzato per sincronizzare e distribuire il codice del sito.
-* Per chi usa AEM as a Cloud Service e Adobe Managed Services (AMS), l’archivio può essere collegato sia a pipeline full stack che front-end.
-
-Verranno presto introdotti anche il supporto di ulteriori tipi di pipeline e la convalida di richieste pull tramite pipeline per la qualità del codice.
-
-Consulta [Aggiungere archivi esterni in Cloud Manager](/help/managing-code/external-repositories.md).
-
-![Finestra di dialogo Aggiungi archivio](/help/release-notes/assets/azure-repo.png)
-
-Se ti interessa testare questa nuova funzione e condividere il tuo feedback, invia un’e-mail a [Grp-CloudManager_BYOG@adobe.com](mailto:grp-cloudmanager_byog@adobe.com) dall’indirizzo e-mail associato al tuo Adobe ID. Se ti trovi in una struttura di archivio privata/pubblica o aziendale, assicurati di specificare la piattaforma Git che desideri utilizzare.
-
-#### Gestire i token di accesso{#manage-access-tokens}
-
-Utilizza **Gestisci token di accesso** in Cloud Manager per visualizzare, rinominare ed eliminare i token di accesso associati agli archivi BYOG esterni, ad esempio GitHub Enterprise, GitLab, Bitbucket e Azure DevOps.
-
-Consulta [Gestisci token di accesso](/help/managing-code/manage-access-tokens.md).
-
-<!-- If you are interested in testing this new feature and sharing your feedback, send an email to [Grp-CloudManager_BYOG@adobe.com](mailto:grp-cloudmanager_byog@adobe.com) from your email address associated with your Adobe ID. -->
 
 ## Correzioni di bug {#bug-fixes}
 
