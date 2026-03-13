@@ -2,9 +2,9 @@
 title: Aggiungere utenti e ruoli
 description: Scopri come utilizzare Admin Console per aggiungere utenti e ruoli e per creare profili.
 exl-id: 40086cf0-a1c4-4dde-9dbf-84ea5fa53b84
-source-git-commit: 9ad9af206fafea45f8bbf61b02950de0776b5a9f
+source-git-commit: ee49b0732fdb870c4f768764aa75b240fd101b59
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '796'
 ht-degree: 85%
 
 ---
@@ -44,23 +44,25 @@ Nella tabella seguente sono riepilogati i ruoli in Cloud Manager.
 
 ## Creare un profilo di prodotto utilizzando Admin Console {#using-admin-console-to-create-a-profile}
 
-[!UICONTROL I ruoli di Cloud Manager] vengono gestiti dall’Admin Console. Le appartenenze a ruoli specifici vengono fornite aggiungendo l’utente a un profilo di prodotto [!UICONTROL Cloud Manager].
+[!UICONTROL I ruoli di Cloud Manager] vengono gestiti dall’Admin Console. L’iscrizione a ruoli specifici viene fornita aggiungendo l’utente a un profilo di prodotto [!UICONTROL Cloud Manager].
 
 Admin Console è una posizione centrale per la gestione delle assegnazioni Adobe in tutta l’organizzazione. Per ulteriori informazioni su Adobe Admin Console, consulta [Admin Console](https://helpx.adobe.com/it/enterprise/using/admin-console.html).
 
 Un amministratore deve creare nuovi profili di prodotto nel contesto di prodotto [!UICONTROL AEM Managed Services] per assegnare autorizzazioni basate sul ruolo a utenti [!UICONTROL Cloud Manager], corrispondenti a ciascuno dei quattro ruoli [!UICONTROL Cloud Manager].
 
-* Business Owner (Proprietario)
+* Proprietario business
 * Responsabile della distribuzione
 * Sviluppatore
 * Responsabile del programma
 
 Crea o aggiungi utenti o gruppi a questi profili di prodotto con Admin Console.
 
-<!-- CQDOC-22790
+<!-- 
+CQDOC-22790
 >[!IMPORTANT]
 >
->Due to a current limitation in the Admin Console and Cloud Manager, profiles cannot be saved with **No permissions** selected. Attempting to do so results in a backend error. This behavior affects the creation of Deployment Manager profiles. As a workaround, select at least one permission when creating a new profile. -->
+>Due to a current limitation in the Admin Console and Cloud Manager, profiles cannot be saved with **No permissions** selected. Attempting to do so results in a backend error. This behavior affects the creation of Deployment Manager profiles. As a workaround, select at least one permission when creating a new profile. 
+-->
 
 **Per creare un profilo di prodotto utilizzando Admin Console:**
 
@@ -84,10 +86,13 @@ Crea o aggiungi utenti o gruppi a questi profili di prodotto con Admin Console.
    * **Nome visualizzato**: il **Nome visualizzato** deve essere il valore tecnico definito da [!UICONTROL Cloud Manager] (vedi la tabella seguente).
    * **Gruppo di autorizzazione**: puoi scegliere un gruppo di autorizzazione per il profilo (non sempre disponibile).
 
-<!-- CQDOC-22790
-      >[!IMPORTANT]
-      >
-      >Due to a current limitation in the Admin Console and Cloud Manager, profiles cannot be saved with **No permissions** selected. Attempting to do so results in a backend error. This behavior affects the creation of Deployment Manager profiles. As a workaround, select at least one permission when creating a new profile. -->
+<!-- 
+CQDOC-22790
+
+>[!IMPORTANT]
+>
+>Due to a current limitation in the Admin Console and Cloud Manager, profiles cannot be saved with **No permissions** selected. Attempting to do so results in a backend error. This behavior affects the creation of Deployment Manager profiles. As a workaround, select at least one permission when creating a new profile.
+-->
 
 ![Crea un nuovo profilo](/help/assets/screen_shot_2018-05-04at171819.png)
 

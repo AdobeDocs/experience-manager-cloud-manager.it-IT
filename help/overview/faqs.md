@@ -2,9 +2,9 @@
 title: Domande frequenti su Cloud Manager
 description: Scopri le risposte alle domande più frequenti su Cloud Manager per clienti AMS.
 exl-id: 52c1ca23-5b42-4eae-b63a-4b22ef1a5aee
-source-git-commit: e7e9844b5f06552fc2104584c63935dee7a9fa89
+source-git-commit: ee49b0732fdb870c4f768764aa75b240fd101b59
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '762'
 ht-degree: 100%
 
 ---
@@ -20,7 +20,8 @@ Questo documento fornisce le risposte alle domande più frequenti su Cloud Manag
 Yes. You need to add the `maven-toolchains-plugin` with the correct settings for Java 11.
 
 * This process is documented [here](/help/getting-started/using-the-wizard.md).
-* For an example, see the [WKND sample project code](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75). -->
+* For an example, see the [WKND sample project code](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75). 
+-->
 
 ## Dopo il passaggio da Java 8 a Java 11, l’esecuzione della build non riesce e genera un errore relativo a maven-scr-plugin. Cosa posso fare? {#maven-src-plugin}
 
@@ -83,7 +84,7 @@ Cloud Manager aggiunge automaticamente la versione alle build di staging e produ
 
 Per ulteriori dettagli, consulta questa [risorsa Git](https://github.com/cqsupport/cloud-manager/blob/main/cm-build-step-fails.md).
 
-## Non riesco a impostare una variabile con un comando aio. Cosa si può fare? {#set-variable}
+## Non riesco a impostare una variabile con un comando aio. Cosa posso fare? {#set-variable}
 
 Quando si tenta di elencare o impostare le variabili della pipeline tramite comandi `aio`, è possibile che venga visualizzato un errore 403 come il seguente.
 

@@ -2,10 +2,10 @@
 title: Autorizzazioni personalizzate
 description: Scopri come utilizzare le autorizzazioni personalizzate per creare nuovi profili con autorizzazioni personalizzate e configurabili per limitare l’accesso a programmi, pipeline e ambienti per gli utenti di Cloud Manager.
 exl-id: a81eda9f-aa89-40ea-8e4c-52367a0a6aba
-source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
+source-git-commit: ee49b0732fdb870c4f768764aa75b240fd101b59
 workflow-type: tm+mt
-source-wordcount: '1373'
-ht-degree: 98%
+source-wordcount: '1391'
+ht-degree: 97%
 
 ---
 
@@ -153,7 +153,7 @@ Gli elementi di autorizzazione si riferiscono all’ambito in cui verranno appli
 
 | Tipo di elemento di autorizzazione | Esempio | Descrizione |
 | --- | --- | --- |
-| Organizzazione | organization:companyA | Tutte le risorse applicabili di un’organizzazione. Una risorsa può essere un programma, un ambiente o una pipeline. Se l’utente aggiunge un’organizzazione per qualsiasi autorizzazione, anche tutte le nuove risorse in tale organizzazione disporranno di tale autorizzazione. |
+| Organizzazione | organizzazione:companyA | Tutte le risorse applicabili di un’organizzazione. Una risorsa può essere un programma, un ambiente o una pipeline. Se l’utente aggiunge un’organizzazione per qualsiasi autorizzazione, anche tutte le nuove risorse in tale organizzazione disporranno di tale autorizzazione. |
 | Programma | Programma A | Tutte le risorse applicabili di un programma. |
 | Ambiente | Programma A: ambiente | Applicabile in un ambiente specifico. |
 | Pipeline | Programma A: pipeline | Applicabile su una pipeline specifica. |
@@ -163,7 +163,7 @@ Gli elementi di autorizzazione si riferiscono all’ambito in cui verranno appli
 Quando utilizzi autorizzazioni personalizzate, tieni presente le seguenti limitazioni:
 
 * [È disponibile un set limitato di autorizzazioni](#configurable-permissions) per creare profili personalizzati.
-* Risorse come programma, ambiente, pipeline, ecc. create in Cloud Manager potrebbero richiedere fino a due minuti per essere visualizzate in Admin Console e configurare le autorizzazioni.
+* Le risorse come programma, ambiente, pipeline, ecc. create in Cloud Manager potrebbero richiedere due minuti per essere visualizzate in Admin Console per la configurazione delle autorizzazioni.
 * In rari scenari in cui il servizio di autorizzazioni personalizzate non risponde, i profili predefiniti restano ancora disponibili e gli utenti nei profili predefiniti dispongono ancora dell’accesso appropriato.
 
 ## Domande frequenti {#faq}

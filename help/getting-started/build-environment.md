@@ -2,10 +2,10 @@
 title: Ambiente di build
 description: Scopri l’ambiente di build specializzato che Cloud Manager usa per creare e testare il codice.
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: e9f3ac70735a95a15b1f63cf40496672162de777
+source-git-commit: ee49b0732fdb870c4f768764aa75b240fd101b59
 workflow-type: tm+mt
-source-wordcount: '1161'
-ht-degree: 83%
+source-wordcount: '1243'
+ht-degree: 81%
 
 ---
 
@@ -41,7 +41,7 @@ Gli ambienti di build di Cloud Manager dispongono degli attributi seguenti.
 * Node.js 18 è disponibile per [pipeline front-end](/help/overview/ci-cd-pipelines.md).
 
 >[!IMPORTANT]
->Il supporto delle toolchain Maven è stato rimosso a partire da Cloud Manager 2025.06.0. La selezione JDK è ora supportata solo tramite `.cloudmanager/java-version`. Per ulteriori informazioni, vedere [Utilizzo di una versione Java specifica](#using-java-version).
+>Il supporto per le catene di strumenti Maven è stato rimosso a partire da Cloud Manager 2025.06.0. La selezione JDK è ora supportata solo fino a `.cloudmanager/java-version`. Per ulteriori informazioni, vedere [Utilizzo di una versione Java specifica](#using-java-version).
 
 >[!NOTE]
 >
@@ -57,7 +57,7 @@ Gli ambienti di build di Cloud Manager dispongono degli attributi seguenti.
 
 ## Archivi Maven HTTPS {#https-maven}
 
-Cloud Manager [2023.10.0](/help/release-notes/2023/2023-10-0.md) ha iniziato un aggiornamento continuo dell’ambiente di build (completandolo con la versione 2023.12.0), che includeva un aggiornamento a Maven 3.8.8. Come modifica significativa introdotta in Maven 3.8.1 è stato apportato un miglioramento della sicurezza volto a mitigare potenziali vulnerabilità. In particolare, Maven ora disabilita tutte le corrispondenze `http://*` non sicure per impostazione predefinita, come descritto nelle [note sulla versione di Maven](https://maven.apache.org/docs/3.8.1/release-notes.html#cve-2021-26291).
+Cloud Manager [2023.10.0](/help/release-notes/2023/2023-10-0.md) ha avviato un aggiornamento progressivo dell&#39;ambiente di compilazione (completato con la versione 2023.12.0), che include un aggiornamento a Maven 3.8.8. Un cambiamento significativo introdotto in Maven 3.8.1 è stato un miglioramento della sicurezza volto a mitigare le potenziali vulnerabilità. In particolare, Maven ora disabilita tutte le corrispondenze `http://*` non sicure per impostazione predefinita, come descritto nelle [note sulla versione di Maven](https://maven.apache.org/docs/3.8.1/release-notes.html#cve-2021-26291).
 
 Come risultato di questo miglioramento sulla sicurezza, alcuni utenti potrebbero riscontrare problemi durante la fase di build, in particolare durante il download di artefatti dagli archivi Maven che utilizzano connessioni HTTP non sicure.
 
@@ -65,20 +65,21 @@ Per garantire un’esperienza fluida con la versione aggiornata, Adobe consiglia
 
 ## Utilizzo di una versione Java specifica {#using-java-version}
 
-Per impostazione predefinita, i progetti generati dal processo di build di Cloud Manager utilizzano il JDK di Oracle 8. I clienti che desiderano utilizzare un JDK alternativo possono selezionare una versione JDK alternativa per l’intero processo di esecuzione Maven.
+Per impostazione predefinita, i progetti generati dal processo di build di Cloud Manager utilizzano il JDK di Oracle 8. I clienti che desiderano utilizzare un JDK alternativo possono selezionare una versione JDK alternativa per l’intero processo di esecuzione di Maven.
 
 >[!IMPORTANT]
 >
->Le toolchain Maven non sono più supportate in Cloud Manager 2025.06.0. Tieni presente che le pipeline contenenti una configurazione maven-toolchains-plugin avranno esito negativo con `Cannot find matching toolchain definitions.` Utilizza il file `.cloudmanager/java-version` per selezionare JDK 11, 17 o 21.
+>Maven Toolchains non è più supportato in Cloud Manager 2025.06.0. Tieni presente che le pipeline contenenti una configurazione maven-toolchains-plugin avranno esito negativo con `Cannot find matching toolchain definitions.` Utilizza il file `.cloudmanager/java-version` per selezionare invece JDK 11, 17 o 21.
 >
 >**Guida alla migrazione:**
 >
->1. Rimuovere le toolchain eliminando qualsiasi voce `org.apache.maven.plugins:maven-toolchains-plugin` e qualsiasi elemento `toolchains.xml` di cui è stato eseguito il commit nel controllo del codice sorgente.
->1. Selezionare un JDK con `.cloudmanager/java-version`(21, 17 o 11) come descritto in [Versione JDK alternativa per l&#39;esecuzione Maven](#alternate-maven).
->1. Adobe consiglia di cancellare la cache di build di Cloud Manager o di attivare una nuova esecuzione della pipeline.
+>1. Rimuovere le catene di strumenti eliminando qualsiasi voce `org.apache.maven.plugins:maven-toolchains-plugin` e qualsiasi elemento `toolchains.xml` salvato nel controllo del codice sorgente.
+>1. Scegliere un JDK con `.cloudmanager/java-version`(21, 17 o 11) come descritto in [Versione JDK di esecuzione alternativa di Maven](#alternate-maven).
+>1. Adobe consiglia di cancellare la cache di compilazione di Cloud Manager o di attivare una nuova esecuzione della pipeline.
 >
 
-<!--DEPRECATED 
+<!--
+DEPRECATED 
 ### Maven Toolchains {#maven-toolchains}
 
 The [Maven Toolchains plug-in](https://maven.apache.org/plugins/maven-toolchains-plugin/) lets projects select a specific JDK (or toolchain) to use in the context of toolchains-aware Maven plug-ins. This process is done in the project's `pom.xml` file by specifying a vendor and version value. A sample section in the `pom.xml` file is the following:
@@ -124,13 +125,14 @@ The currently available vendor/version combinations are:
 
 >[!NOTE]
 >
->Starting April 2022, Oracle JDK is going to be the default JDK for the development and operation of AEM applications. Cloud Manager's build process automatically switches to using Oracle JDK, even if an alternative option is explicitly selected in the Maven toolchain. See the [April release notes](/help/release-notes/2022/2022-4-0.md) for more details. -->
+>Starting April 2022, Oracle JDK is going to be the default JDK for the development and operation of AEM applications. Cloud Manager's build process automatically switches to using Oracle JDK, even if an alternative option is explicitly selected in the Maven toolchain. See the [April release notes](/help/release-notes/2022/2022-4-0.md) for more details.
+-->
 
 ### Versione JDK alternativa per l’esecuzione di Maven {#alternate-maven}
 
-È possibile selezionare Oracle 8 o Oracle 11 come JDK per l’intera esecuzione Maven. Questo approccio cambia il JDK utilizzato per tutti i plug-in. È quindi possibile verificare e applicare la versione Java utilizzando il [plug-in Apache Maven Enforcer](https://maven.apache.org/enforcer/maven-enforcer-plugin/).
+È possibile selezionare Oracle 8 o Oracle 11 come JDK per l&#39;intera esecuzione di Maven. Questo approccio cambia il JDK utilizzato per tutti i plug-in. È quindi possibile verificare e applicare la versione Java utilizzando il [plug-in Apache Maven Enforcer](https://maven.apache.org/enforcer/maven-enforcer-plugin/).
 
-A questo scopo, crea un file denominato `.cloudmanager/java-version` nel ramo dell’archivio Git utilizzato dalla pipeline. Questo file può avere come contenuto `11` o `8`. Qualsiasi altro valore viene ignorato. Se si specifica `11`, verrà utilizzato Oracle 11 e la variabile di ambiente `JAVA_HOME` verrà impostata su `/usr/lib/jvm/jdk-11.0.22`. Se si specifica `8`, verrà utilizzato Oracle 8 e la variabile di ambiente `JAVA_HOME` verrà impostata su `/usr/lib/jvm/jdk1.8.0_401`.
+A questo scopo, crea un file denominato `.cloudmanager/java-version` nel ramo dell’archivio Git utilizzato dalla pipeline. Questo file può avere come contenuto `11` o `8`. Qualsiasi altro valore viene ignorato. Se si specifica `11`, verrà utilizzato l&#39;Oracle 11 e la variabile di ambiente `JAVA_HOME` verrà impostata su `/usr/lib/jvm/jdk-11.0.22`. Se si specifica `8`, verrà utilizzato l&#39;Oracle 8 e la variabile di ambiente `JAVA_HOME` verrà impostata su `/usr/lib/jvm/jdk1.8.0_401`.
 
 ## Variabili di ambiente {#environment-variables}
 
@@ -138,7 +140,7 @@ A questo scopo, crea un file denominato `.cloudmanager/java-version` nel ramo de
 
 In alcuni casi, potrebbe essere necessario variare il processo di creazione in base alle informazioni relative al programma o alla pipeline.
 
-Ad esempio, quando utilizzi uno strumento come “gulp” per la minimizzazione di JavaScript, potresti preferire livelli di minimizzazione diversi per gli ambienti di sviluppo rispetto agli ambienti di staging e produzione.
+Ad esempio, quando utilizzi uno strumento come “gulp” per la minimizzazione di JavaScript, potresti preferire livelli di minimizzazione diversi per gli ambienti di sviluppo rispetto agli ambienti di staging e di produzione.
 
 Per supportare questa funzione, Cloud Manager aggiunge al contenitore di creazione le variabili di ambiente standard per ogni esecuzione.
 
@@ -149,7 +151,7 @@ Per supportare questa funzione, Cloud Manager aggiunge al contenitore di creazio
 | `CM_PIPELINE_ID` | Identificatore numerico della pipeline |
 | `CM_PIPELINE_NAME` | Nome della pipeline |
 | `CM_PROGRAM_ID` | Identificatore numerico del programma |
-| `CM_PROGRAM_NAME` | Il nome del programma |
+| `CM_PROGRAM_NAME` | Nome del programma |
 | `ARTIFACTS_VERSION` | Per una pipeline di staging o produzione, la versione sintetica generata da Cloud Manager |
 
 ### Disponibilità di variabili di ambiente standard {#availability}
