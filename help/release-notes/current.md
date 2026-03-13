@@ -30,7 +30,7 @@ La prossima versione pianificata è giovedì 2 aprile 2026.
 ## Novità {#what-is-new}
 
 * **Supporto per l&#39;estensibilità dell&#39;interfaccia utente in AEM Experience Hub**
-Il supporto per le estensioni dell&#39;interfaccia utente in [AEM Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/experience-hub/experience-hub) è ora abilitato e consente agli sviluppatori di estendere l&#39;interfaccia con funzionalità personalizzate e widget generati con Adobe App Builder.
+Il supporto per le estensioni dell&#39;interfaccia utente in [AEM Experience Hub](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/experience-hub/experience-hub) è ora abilitato e consente agli sviluppatori di estendere l&#39;interfaccia con funzionalità personalizzate e widget generati con Adobe App Builder.
 
   Per ulteriori informazioni, consulta [AEM Experience Hub](https://developer.adobe.com/uix/docs/services/aem-experience-hub/).
 
@@ -57,7 +57,7 @@ Sono attualmente disponibili le seguenti opportunità:
 <!--
 ### Experience Hub Extensibility and Customization {#exp-hub-extensibility}
 
-[Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/experience-hub/experience-hub) serves as your entry point to AEM, customized for your organization's needs. Tell Adobe about your existing AEM UI extensions so they can help you enable them in Experience Hub with minimal effort.
+[Experience Hub](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/experience-hub/experience-hub) serves as your entry point to AEM, customized for your organization's needs. Tell Adobe about your existing AEM UI extensions so they can help you enable them in Experience Hub with minimal effort.
 
 ![Diagram of Experience Hub extensibility and customization workflow](/help/release-notes/assets/experience-hub-extensibility-customization.png)
 
