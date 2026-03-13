@@ -41,7 +41,7 @@ Il supporto per le estensioni dell&#39;interfaccia utente in [AEM Experience Hub
   ![Opzione Visualizza/Modifica variabili nel menu a discesa per una pipeline selezionata](/help/release-notes/assets/view-edit-variables-option.png)
   *Opzione Visualizza/Modifica variabili nel menu a discesa per una pipeline selezionata.*
 
-  ![Finestra di dialogo Configurazione variabili ](/help/release-notes/assets/view-edit-variables-variablesconfig-dialogbox.png)*Finestra di dialogo Configurazione variabili.*
+  ![Finestra di dialogo Configurazione variabili &#x200B;](/help/release-notes/assets/view-edit-variables-variablesconfig-dialogbox.png)*Finestra di dialogo Configurazione variabili.*
 
 * **Stabilità, prestazioni e affidabilità migliorate**
 
