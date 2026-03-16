@@ -2,10 +2,10 @@
 title: Configurazioni di Dispatcher
 description: Scopri come distribuire i file di configurazione di Dispatcher utilizzando Cloud Manager
 exl-id: ffc2b60e-bde7-48ca-b268-dea0f8fd4e30
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
-source-wordcount: '575'
-ht-degree: 100%
+source-git-commit: 037a296c21adde6f7fa731c71ee4a75cea042780
+workflow-type: tm+mt
+source-wordcount: '595'
+ht-degree: 89%
 
 ---
 
@@ -16,11 +16,11 @@ Scopri come distribuire i file di configurazione di Dispatcher utilizzando Cloud
 
 ## Distribuire le configurazioni di Dispatcher con Cloud Manager {#deploying-dispatcher-configurations}
 
-Cloud Manager è in grado di distribuire i file di configurazione del server web e di Dispatcher presupponendo che siano archiviati nell’archivio Git insieme ai normali pacchetti di contenuti AEM.
+Cloud Manager è in grado di implementare i file di configurazione del server web e di Dispatcher presupponendo che siano archiviati nell’archivio Git insieme ai normali pacchetti di contenuti AEM.
 
 Per sfruttare questa funzionalità, la build Maven deve generare un file .zip contenente almeno due directory: `conf` e `conf.d`. Questo file .zip può essere prodotto utilizzando `maven-assembly-plugin`.
 
-I progetti generati da Cloud Manager utilizzando [la procedura guidata per la creazione di progetti](/help/getting-started/using-the-wizard.md) integrata hanno la struttura di progetto Maven corretta, che viene creata automaticamente. Questo percorso è consigliato ai nuovi utenti di Adobe Managed Services (AMS).
+Nei progetti generati da Cloud Manager utilizzando la [procedura guidata per la creazione di progetti](/help/getting-started/using-the-wizard.md) incorporata viene creata automaticamente la struttura di progetto Maven corretta. Questo percorso è consigliato ai nuovi utenti di Adobe Managed Services (AMS).
 
 Quando esegui l’implementazione in un’istanza di Dispatcher, le directory sull’istanza vengono sostituite da quelle presenti nell’archivio Git. Poiché i file di configurazione del server Web e di Dispatcher richiedono spesso dettagli specifici dell’ambiente, è necessario collaborare con il Customer Success Engineer (CSE) per impostare le variabili di ambiente appropriate in `/etc/sysconfig/httpd` prima di utilizzare correttamente questa funzione.
 
@@ -30,7 +30,7 @@ Segui i passaggi seguenti per completare la configurazione iniziale del Dispatch
 
 1. Ottieni i file di configurazione di produzione correnti dal tuo CSE.
 1. Rimuovi i dati specifici dell’ambiente codificati, ad esempio l’IP del modulo di rendering di pubblicazione, e sostituiscili con delle variabili.
-1. Definisci le variabili richieste in coppie di valore chiave per ogni Dispatcher di destinazione e richiedi al tuo CSE di aggiungerle a `/etc/sysconfig/httpd` in ogni istanza.
+1. Definisci le variabili richieste in coppie chiave-valore per ogni Dispatcher di destinazione e aggiungili alla cartella [variabili](https://experienceleague.adobe.com/docs/experience-manager-learn/ams/dispatcher/variables.html?lang=en#variables-files-(.vars)) in ogni istanza.
 1. Verifica le configurazioni aggiornate nell’ambiente di staging.
 1. Una volta testate, richiedi al tuo CSE di implementarle in produzione.
 1. Invia i file al tuo archivio Git.
