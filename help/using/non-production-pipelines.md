@@ -2,10 +2,10 @@
 title: Aggiungere una pipeline non di produzione
 description: Scopri come utilizzare Cloud Manager per creare e configurare pipeline non di produzione per distribuire il codice.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
-source-git-commit: ee409c97269a70aa9cf4ee4a39c425e62bc156e0
+source-git-commit: ddbffd1310e0af646c071c81d560fb50abeb01c1
 workflow-type: tm+mt
-source-wordcount: '1992'
-ht-degree: 27%
+source-wordcount: '1994'
+ht-degree: 23%
 
 ---
 
@@ -29,7 +29,7 @@ Esistono due tipi di pipeline non di produzione:
 
 >[!NOTE]
 >
->Non è possibile configurare una pipeline finché il relativo archivio Git associato non dispone di almeno un ramo e la [Configurazione del programma](/help/getting-started/program-setup.md) non è stata completata. Consulta il documento [Archivi di Cloud Manager](/help/managing-code/managing-repositories.md) per scoprire come aggiungere e gestire gli archivi in Cloud Manager.
+>Non puoi impostare una pipeline finché il relativo archivio Git associato non dispone di almeno un ramo e la [configurazione del programma](/help/getting-started/program-setup.md) non è stata completata. Consulta il documento [Archivi di Cloud Manager](/help/managing-code/managing-repositories.md) per scoprire come aggiungere e gestire gli archivi in Cloud Manager.
 
 ## Aggiungere una nuova pipeline non di produzione {#add-non-production-pipeline}
 
@@ -37,7 +37,7 @@ Dopo aver configurato un programma e almeno un ambiente nell’interfaccia utent
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) e seleziona l’organizzazione e il programma appropriati.
 
-1. Accedi alla scheda Pipeline dalla schermata principale di Cloud Manager. Fai clic su **Aggiungi**, quindi seleziona **Aggiungi pipeline non di produzione**.
+1. Dalla schermata iniziale di Cloud Manager, apri la scheda Pipeline e fai clic su **Aggiungi**, quindi seleziona **Aggiungi pipeline non di produzione**.
 
    ![Aggiungi pipeline non di produzione](/help/assets/configure-pipelines/nonprod-pipeline-add1.png)
 
@@ -54,7 +54,7 @@ Dopo aver configurato un programma e almeno un ambiente nell’interfaccia utent
 
 | Sezione | Opzione | Descrizione |
 | --- | --- | --- |
-| **Configurazione pipeline** | **Nome pipeline non di produzione** | Fornisci una descrizione della pipeline nel campo **Nome della pipeline non di produzione**. |
+| **Configurazione pipeline** | **Nome pipeline non di produzione** | Immetti una descrizione per la pipeline nel campo **Nome pipeline non di produzione**. |
 |  | **Test** | Visibile solo quando si modifica una pipeline non di produzione.<br>L&#39;interfaccia utente mostra le categorie di test eseguite dalla pipeline nell&#39;ambito della convalida della qualità del codice.<ul><li>**Test del codice statico** - Analizza il codice per individuare eventuali problemi di qualità e correttezza.<li>**Test di carico/prestazioni** - Valuta il comportamento relativo alle prestazioni come parte del test della pipeline.<li>**Test di sicurezza** - Controlla il codice e l&#39;output della pipeline per individuare eventuali problemi relativi alla sicurezza. |
 | **Opzioni di distribuzione** | **Trigger distribuzione** | <ul><li>**Manuale**: ti consente di avviare manualmente la pipeline.<li>**Cambiamenti su Git**: avvia la pipeline ogni volta che vengono aggiunti dei commit al ramo Git configurato. Con questa opzione, puoi comunque avviare la pipeline manualmente in base alle esigenze. |
 |  | **Comportamento in caso di errori di metriche importanti** | <ul><li>**Chiedi ogni volta**: questo comportamento è l’impostazione predefinita che richiede l’intervento manuale per tutti gli errori importanti.<li>**Interrompi subito** - Selezionando questa opzione, la pipeline viene annullata ogni volta che si verifica un errore importante. In sostanza, emula un utente che rifiuta manualmente ogni errore.<li>**Continua immediatamente** - Se selezionata, la pipeline procede automaticamente ogni volta che si verifica un errore importante. In sostanza, emula un utente che approva manualmente ogni errore.</li></ul> |
@@ -64,14 +64,14 @@ Dopo aver configurato un programma e almeno un ambiente nell’interfaccia utent
 
 | Sezione | Opzione | Descrizione |
 | --- | --- | --- |
-| **Configurazione pipeline** | **Nome pipeline non di produzione** | Fornisci una descrizione della pipeline nel campo **Nome della pipeline non di produzione**. |
+| **Configurazione pipeline** | **Nome pipeline non di produzione** | Immetti una descrizione per la pipeline nel campo **Nome pipeline non di produzione**. |
 |   | **Ambiente di distribuzione idoneo** | Se la pipeline è di distribuzione, seleziona gli ambienti in cui Cloud Manager distribuisce il codice. |
 |   | **Test** | Visibile solo quando si modifica una pipeline non di produzione.<br>L&#39;interfaccia utente mostra le categorie di test eseguite dalla pipeline nell&#39;ambito della convalida della qualità del codice.<ul><li>**Test del codice statico** - Analizza il codice per individuare eventuali problemi di qualità e correttezza.<li>**Test di carico/prestazioni** - Valuta il comportamento relativo alle prestazioni come parte del test della pipeline.<li>**Test di sicurezza** - Controlla il codice e l&#39;output della pipeline per individuare eventuali problemi relativi alla sicurezza.</li></ul> |
 | **Opzioni di distribuzione** | **Trigger distribuzione** | <ul><li>**Manuale**: ti consente di avviare manualmente la pipeline.<li>**Cambiamenti su Git**: avvia la pipeline ogni volta che vengono aggiunti dei commit al ramo Git configurato. Con questa opzione, puoi comunque avviare la pipeline manualmente in base alle esigenze. |
 |   | **Comportamento in caso di errori di metriche importanti** | <ul><li>**Chiedi ogni volta** - Impostazione predefinita che richiede all&#39;utente di decidere come procedere quando una metrica importante non riesce.<li>**Genera errore immediatamente** - La pipeline viene annullata ogni volta che si verifica un errore in una metrica importante. In sostanza, questa opzione simula il rifiuto manuale di ogni errore da parte dell’utente.<li>**Continua immediatamente** - La pipeline procede automaticamente ogni volta che una metrica importante non riesce. In sostanza, quest’opzione simula l’approvazione manuale di ogni errore da parte dell’utente.</li></ul> |
 |  | **Approva dopo la distribuzione nell&#39;ambiente di staging**, casella di controllo | Visibile solo quando si modifica una pipeline non di produzione.<br>Selezionare questa opzione per richiedere l&#39;approvazione dopo la distribuzione nell&#39;ambiente di staging prima che la pipeline possa continuare. Se questa opzione non è selezionata, la pipeline continua in base al comportamento configurato. |
 |  | **Ignora modifiche del load balancer**, casella di controllo | Seleziona questa opzione per impedire che la pipeline apporti modifiche al load balancer durante la distribuzione. |
-|  | **Configurazione Dispatcher** | Il ruolo **Responsabile della distribuzione** può configurare un set di percorsi di contenuto invalidati o svuotati dalla cache di AEM Dispatcher quando viene eseguita una pipeline. Queste azioni della cache verranno eseguite come parte del passaggio di implementazione della pipeline, subito dopo la distribuzione di eventuali pacchetti di contenuti. Queste impostazioni utilizzano il comportamento standard del Dispatcher AEM. Per configurare `Dispatcher`, eseguire le operazioni seguenti:<ul><li>In **PATH**, fornisci un percorso di contenuto di cui vuoi eseguire lo scaricamento o l&#39;annullamento della validità della pipeline.<li>In **TIPO**, seleziona l’azione da intraprendere su quel percorso.<ul><li>**Svuotamento** - Eseguire un&#39;eliminazione della cache nel percorso specificato.</li><li>**Invalida**: esegui un’invalidazione della cache, simile a quando il contenuto viene attivato da un’istanza di authoring a un’istanza di pubblicazione.</li><li>Fai clic su **Aggiungi percorso** per aggiungere il percorso specificato. Puoi aggiungere fino a 100 percorsi per ambiente.</li></ul> |
+|  | **Configurazione Dispatcher** | Il ruolo **Responsabile della distribuzione** può configurare un set di percorsi di contenuto invalidati o svuotati dalla cache di AEM Dispatcher quando viene eseguita una pipeline. Cloud Manager esegue queste azioni cache come parte del passaggio della pipeline di distribuzione, subito dopo la distribuzione di eventuali pacchetti di contenuto. Queste impostazioni utilizzano il comportamento standard del Dispatcher AEM. Per configurare `Dispatcher`, eseguire le operazioni seguenti:<ul><li>In **PATH**, fornisci un percorso di contenuto di cui vuoi eseguire lo scaricamento o l&#39;annullamento della validità della pipeline.<li>In **TIPO**, seleziona l’azione da intraprendere su quel percorso.<ul><li>**Svuotamento** - Eseguire un&#39;eliminazione della cache nel percorso specificato.</li><li>**Invalida**: esegui un’invalidazione della cache, simile a quando il contenuto viene attivato da un’istanza di authoring a un’istanza di pubblicazione.</li><li>Fai clic su **Aggiungi percorso** per aggiungere il percorso specificato. Puoi aggiungere fino a 100 percorsi per ambiente.</li></ul> |
 | **Pipeline** | Casella di controllo **Audit dell&#39;esperienza** | Seleziona questa opzione per includere un passaggio di audit dell’esperienza nella pipeline. Quando è abilitata, la pipeline include il passaggio Audit dell’esperienza dopo la scheda Codice Source. |
 
 >[!ENDTABS]
@@ -187,10 +187,10 @@ Consulta [Aggiungere una pipeline non di produzione](#add-non-production-pipelin
 <!-- 
 1. If you chose to add a **Deployment Pipeline**, select the target deployment environment from the **Eligible Deployment Environments** dropdown.
 
-1. Provide the repository where the pipeline should retrieve the code.
+1. Enter the repository where the pipeline should retrieve the code.
 
-   * **Repository** - Defines from which Git repo that the pipeline should retrieve the code.
-   * **Git Branch** - Defines from which branch in Git that the selected pipeline should retrieve the code.
+   * **Repository** - Select the Git repository that the pipeline retrieves code from.
+   * **Git Branch** - Select the branch in the Git repository that the selected pipeline retrieves code from.
 
 1. Define your deployment options.
 
@@ -202,10 +202,10 @@ Consulta [Aggiungere una pipeline non di produzione](#add-non-production-pipelin
    1. For deployment pipelines, under **Important Metric Failures Behavior**, define the behavior of the pipeline when an important failure is encountered in any of the quality gates.
 
        * **Ask every time** - The default setting and requires manual intervention on any important failure.
-       * **Fail Immediately** - The pipeline is canceled whenever an important failure occurs. It is essentially emulating a user manually rejecting each failure.
+       * **Fail Immediately** - Cloud Manager cancels the pipeline whenever an important failure occurs. It is essentially emulating a user manually rejecting each failure.
        * **Continue Immediately** - The pipeline proceeds automatically whenever an important failure occurs. It is essentially emulating a user manually approving each failure.
 
-   1. **Dispatcher Configuration** - The **Deployment Manager** role can configure a set of content paths that are either invalidated or flushed from the AEM Dispatcher cache when a pipeline is run. These cache actions are performed as part of the deployment pipeline step, just after any content packages are deployed. These settings use standard AEM Dispatcher behavior. To configure:
+   1. **Dispatcher Configuration** - The **Deployment Manager** role can configure a set of content paths that Cloud Manager invalidates or flushes from the AEM Dispatcher cache when a pipeline is run. These cache actions are performed as part of the deployment pipeline step, just after any content packages are deployed. These settings use standard AEM Dispatcher behavior. To configure:
 
       1. Under **PATH** provide a content path.
       1. Under **TYPE**, select the action to be taken on that path.
@@ -226,4 +226,4 @@ Dopo aver configurato la pipeline, puoi distribuire il codice. Per ulteriori det
 
 Questo video fornisce una panoramica del processo di creazione della pipeline, descritto in questo documento.
 
->[!VIDEO](https://video.tv.adobe.com/v/328577?captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/26316/)
