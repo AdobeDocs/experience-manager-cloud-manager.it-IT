@@ -1,10 +1,16 @@
 ---
-source-git-commit: e8ef2dd8222d72be43e08e647c390b6ecacb385b
+source-git-commit: cebd01cdf3a73986342602c6128dd2121eae2bbe
 workflow-type: tm+mt
-source-wordcount: '6'
-ht-degree: 0%
+source-wordcount: '75'
+ht-degree: 5%
 
 ---
-# ARCHIVIATO
+# Documentazione di Adobe Experience Manager Cloud Manager
 
-Questo archivio è stato migrato a <https://github.com/Adobe-Enterprise-Docs/experience-manager-cloud-manager.it-IT>
+Questo archivio è per la documentazione di Adobe Experience Manager Cloud Manager.
+
+I tuoi contributi alla documentazione di sono i benvenuti. Consulta le risorse seguenti:
+
+* [contributing.md](contributing.md): panoramica su come contribuire alla documentazione.
+* [guidelines.md](guidelines.md): panoramica su cosa includere nei contributi e come comporre i contributi alla documentazione.
+* [code-of-conduct.md](code-of-conduct.md) Per una panoramica degli standard di comportamento a cui Adobe si aspetta di contribuire a questo progetto di documentazione.
