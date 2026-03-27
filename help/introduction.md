@@ -4,8 +4,8 @@ description: Inizia qui per scoprire Cloud Manager per Adobe Managed Services (A
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
 source-git-commit: 8f29a06f63b8dc10cb3d28e2f38da1ead84f32f5
 workflow-type: tm+mt
-source-wordcount: '1250'
-ht-degree: 95%
+source-wordcount: '1299'
+ht-degree: 96%
 
 ---
 
@@ -88,7 +88,7 @@ La funzione di scalabilità automatica si applica al livello Dispatcher/pubblica
 
 ### Distribuzioni blu/verdi {#blue-green}
 
-La distribuzione blu/verde è una tecnica che riduce i tempi di inattività e i rischi eseguendo due ambienti di produzione identici chiamati blu e verde.
+L’implementazione blu/verde è una tecnica che riduce i tempi di inattività e i rischi eseguendo due ambienti di produzione identici chiamati blu e verde.
 
 In qualsiasi momento, solo uno degli ambienti è live, con l’ambiente live che serve tutto il traffico di produzione. In generale, il blu è l’ambiente attualmente live e il verde è quello inattivo.
 
