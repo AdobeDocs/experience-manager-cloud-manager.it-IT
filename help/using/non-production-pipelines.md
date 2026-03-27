@@ -2,10 +2,10 @@
 title: Aggiungere una pipeline non di produzione
 description: Scopri come utilizzare Cloud Manager per creare e configurare pipeline non di produzione per distribuire il codice.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
-source-git-commit: ddbffd1310e0af646c071c81d560fb50abeb01c1
+source-git-commit: 261c4334a514ee2101444e83a559d300bba3d507
 workflow-type: tm+mt
 source-wordcount: '1994'
-ht-degree: 23%
+ht-degree: 22%
 
 ---
 
