@@ -3,12 +3,15 @@ title: Note sulla versione per Cloud Manager 2026.4.0
 description: Scopri la versione 2026.4.0 di Cloud Manager in Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: 0ad5d533e6f8749a9c141d5a095f0a2fed37efcf
+source-git-commit: 147695c1dc61b1836a09129f81b072c3a4299e93
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 14%
 
 ---
+
+
+<!-- add "hold: true" to metadata above to be able to commit/merge to Main WITHOUT Publishig -->
 
 # Note sulla versione 2026.4.0 di Cloud Manager in Adobe Managed Services {#release-notes}
 
@@ -31,7 +34,7 @@ La prossima versione pianificata è giovedì 7 maggio 2026.
 
 * **Supporto per l&#39;estensibilità dell&#39;interfaccia utente in AEM Experience Hub.**
 
-  Il supporto per le estensioni dell&#39;interfaccia utente in [AEM Experience Hub](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/experience-hub/experience-hub) è ora abilitato, consentendo agli sviluppatori di estendere l&#39;interfaccia con funzionalità personalizzate e widget generati con Adobe App Builder.
+  Il supporto per le estensioni dell&#39;interfaccia utente in [AEM Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/experience-hub/experience-hub) è ora abilitato, consentendo agli sviluppatori di estendere l&#39;interfaccia con funzionalità personalizzate e widget generati con Adobe App Builder.
 
   Per ulteriori informazioni, consulta [AEM Experience Hub](https://developer.adobe.com/uix/docs/services/aem-experience-hub/).
 
@@ -42,7 +45,7 @@ La prossima versione pianificata è giovedì 7 maggio 2026.
   ![Opzione Visualizza/Modifica variabili nel menu a discesa per una pipeline selezionata](/help/release-notes/assets/view-edit-variables-option.png)
   *Opzione Visualizza/Modifica variabili nel menu a discesa per una pipeline selezionata.*
 
-  ![Finestra di dialogo Configurazione variabili &#x200B;](/help/release-notes/assets/view-edit-variables-variablesconfig-dialogbox.png)*Finestra di dialogo Configurazione variabili.*
+  ![Finestra di dialogo Configurazione variabili ](/help/release-notes/assets/view-edit-variables-variablesconfig-dialogbox.png)*Finestra di dialogo Configurazione variabili.*
 
 * **Stabilità, prestazioni e affidabilità migliorate.**
 
@@ -58,7 +61,7 @@ Sono attualmente disponibili le seguenti opportunità:
 <!--
 ### Experience Hub Extensibility and Customization {#exp-hub-extensibility}
 
-[Experience Hub](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/experience-hub/experience-hub) serves as your entry point to AEM, customized for your organization's needs. Tell Adobe about your existing AEM UI extensions so they can help you enable them in Experience Hub with minimal effort.
+[Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/experience-hub/experience-hub) serves as your entry point to AEM, customized for your organization's needs. Tell Adobe about your existing AEM UI extensions so they can help you enable them in Experience Hub with minimal effort.
 
 ![Diagram of Experience Hub extensibility and customization workflow](/help/release-notes/assets/experience-hub-extensibility-customization.png)
 
