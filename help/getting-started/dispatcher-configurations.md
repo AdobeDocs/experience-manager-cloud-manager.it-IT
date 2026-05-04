@@ -37,7 +37,7 @@ Segui i passaggi seguenti per completare la configurazione iniziale del Dispatch
 
 1. Ottieni i file di configurazione di produzione correnti dal tuo CSE.
 1. Rimuovi i dati specifici dell’ambiente codificati, ad esempio l’IP del modulo di rendering di pubblicazione, e sostituiscili con delle variabili.
-1. Definisci le variabili richieste in coppie chiave-valore per ogni Dispatcher di destinazione e aggiungili alla cartella [variabili](https://experienceleague.adobe.com/docs/experience-manager-learn/ams/dispatcher/variables.html?lang=en#variables-files-(.vars)) in ogni istanza.
+1. Definisci le variabili richieste in coppie chiave-valore per ogni Dispatcher di destinazione e aggiungili alla cartella [variabili](https://experienceleague.adobe.com/docs/experience-manager-learn/ams/dispatcher/variables.html?lang=it#variables-files-(.vars)) in ogni istanza.
 1. Verifica le configurazioni aggiornate nell’ambiente di staging.
 1. Una volta testate, richiedi al tuo CSE di implementarle in produzione.
 1. Invia i file al tuo archivio Git.
