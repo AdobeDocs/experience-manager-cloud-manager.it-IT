@@ -2,9 +2,13 @@
 title: Pipeline suddivise solo per staging e solo produzione
 description: Scopri come suddividere le distribuzioni di staging e di produzione utilizzando pipeline dedicate.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
-source-git-commit: 92237ea156e3921b5dc55cea3abdecee9d26b14b
+TQID: https://experienceleague.adobe.com/whq-Hkwp3mjTr0iftoKZHKdsi0xaKtVXazXjUENoaLk
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754b
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '917'
+source-wordcount: 980
 ht-degree: 94%
 
 ---
@@ -15,7 +19,7 @@ Puoi suddividere le distribuzioni di staging e produzione utilizzando pipeline d
 
 ## Panoramica {#overview}
 
-Gli ambienti di staging e produzione sono strettamente associati. Per impostazione predefinita, le distribuzioni ad essi sono collegate a una singola pipeline. Si tratta di una pipeline di distribuzione che distribuisce sia negli ambienti di staging che in quelli di produzione in tale programma. Sebbene questo tipo di associazione sia di norma adeguato, alcuni casi d’uso presentano degli svantaggi:
+Gli ambienti di staging e di produzione sono strettamente associati. Per impostazione predefinita, le distribuzioni ad essi sono collegate a una singola pipeline. Si tratta di una pipeline per l’implementazione sia negli ambienti di staging che in quelli di produzione in tale programma. Sebbene questo tipo di associazione sia di norma adeguato, alcuni casi d’uso presentano degli svantaggi:
 
 * Se desideri eseguire una distribuzione solo di staging, rifiuta il passaggio nella pipeline **Promuovi per produrre**. Tuttavia, l’esecuzione verrà contrassegnata come annullata.
 * Se desideri distribuire il codice più recente in un ambiente di staging nella produzione, devi ridistribuire l’intera pipeline, inclusa la distribuzione di staging, anche se non è stato modificato alcun codice.
@@ -30,7 +34,7 @@ Le pipeline solo di staging e solo di produzione non vengono eseguite mentre è 
 
 Le pipeline solo di produzione vengono attivate manualmente, in quanto non sono collegate direttamente a un archivio per **Cambiamenti su Git**.
 
-Queste pipeline dedicate offrono maggiore flessibilità, ma tieni presente i dettagli dell’operazione e le raccomandazioni seguenti.
+Queste pipeline dedicate offrono maggiore flessibilità, ma tieni presente i dettagli dell’operazione e i consigli seguenti.
 
 >[!NOTE]
 >

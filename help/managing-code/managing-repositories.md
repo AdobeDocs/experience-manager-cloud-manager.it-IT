@@ -2,13 +2,15 @@
 title: Gestione degli archivi in Cloud Manager
 description: Scopri come visualizzare, aggiungere ed eliminare gli archivi Git in Cloud Manager.
 exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
-source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
+TQID: https://experienceleague.adobe.com/rAFg0r8OX5drJ9fN5DyjoO3Hl6U-J4kkwTDVWtCOJ-8
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '730'
-ht-degree: 97%
+source-wordcount: 764
+ht-degree: 95%
 
 ---
-
 
 # Gestione degli archivi in Cloud Manager {#cloud-manager-repos}
 

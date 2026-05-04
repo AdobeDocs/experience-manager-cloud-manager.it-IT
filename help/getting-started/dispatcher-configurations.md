@@ -2,13 +2,16 @@
 title: Configurazioni di Dispatcher
 description: Scopri come distribuire i file di configurazione di Dispatcher utilizzando Cloud Manager
 exl-id: ffc2b60e-bde7-48ca-b268-dea0f8fd4e30
-source-git-commit: 037a296c21adde6f7fa731c71ee4a75cea042780
+TQID: https://experienceleague.adobe.com/KpGTN-444bigrhLddGnZvxkZsThcVc1B--oEoAKTdos
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 89%
+source-wordcount: 595
+ht-degree: 92%
 
 ---
-
 
 # Configurazioni di Dispatcher {#manage-your-dispatcher-configurations}
 
@@ -30,7 +33,7 @@ Segui i passaggi seguenti per completare la configurazione iniziale del Dispatch
 
 1. Ottieni i file di configurazione di produzione correnti dal tuo CSE.
 1. Rimuovi i dati specifici dell’ambiente codificati, ad esempio l’IP del modulo di rendering di pubblicazione, e sostituiscili con delle variabili.
-1. Definisci le variabili richieste in coppie chiave-valore per ogni Dispatcher di destinazione e aggiungili alla cartella [variabili](https://experienceleague.adobe.com/docs/experience-manager-learn/ams/dispatcher/variables.html?lang=it#variables-files-(.vars)) in ogni istanza.
+1. Definisci le variabili richieste in coppie chiave-valore per ogni Dispatcher di destinazione e aggiungili alla cartella [variabili](https://experienceleague.adobe.com/docs/experience-manager-learn/ams/dispatcher/variables.html?lang=en#variables-files-(.vars)) in ogni istanza.
 1. Verifica le configurazioni aggiornate nell’ambiente di staging.
 1. Una volta testate, richiedi al tuo CSE di implementarle in produzione.
 1. Invia i file al tuo archivio Git.

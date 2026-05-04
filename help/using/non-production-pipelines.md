@@ -2,9 +2,12 @@
 title: Aggiungere una pipeline non di produzione
 description: Scopri come utilizzare Cloud Manager per creare e configurare pipeline non di produzione per distribuire il codice.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
-source-git-commit: 261c4334a514ee2101444e83a559d300bba3d507
+TQID: https://experienceleague.adobe.com/Dj7SjKdao6RU-cIS7D1AQxg5qpKrJMTcYQJBfiqc-Gg
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '1994'
+source-wordcount: 1999
 ht-degree: 22%
 
 ---
@@ -89,7 +92,7 @@ Distribuisce l’applicazione AEM completa, compreso il codice dell’applicazio
 | --- | --- | --- |
 | **Codice Source** | **Archivio** | Dall’elenco a discesa, scegli l’archivio Git utilizzato dalla pipeline come origine. Cloud Manager crea il codice dall’archivio scelto qui. |
 |   | **Ramo Git** | Dall’elenco a discesa, scegli il ramo nell’archivio selezionato da cui generare la pipeline. Il valore predefinito è `main`. La pipeline utilizza il ramo scelto come origine per la generazione e la distribuzione. Se necessario, fare clic su **Aggiorna** per aggiornare l&#39;elenco dei rami disponibili per l&#39;archivio selezionato. Utilizza questa opzione se un ramo creato di recente non viene visualizzato nell’elenco. |
-|   | **Strategia di compilazione** | <ul><li>**Build completa** - Genera tutti i moduli nell&#39;archivio ogni volta<li>BETA **Smart Build** - Genera solo moduli che sono stati modificati dall&#39;ultimo commit.<br>Ulteriori informazioni sull&#39;utilizzo di [Smart Build in una pipeline non di produzione](#about-smart-build).</li></ol>**Importante**: Smart Build è disponibile solo per le pipeline di qualità del codice e per le pipeline di distribuzione del codice full stack di sviluppo. |
+|   | **Strategia di compilazione** | <ul><li>**Build completa** - Genera tutti i moduli nell&#39;archivio ogni volta<li>BETA **Smart Build** - Genera solo moduli che sono stati modificati dopo l&#39;ultimo commit.<br>Ulteriori informazioni sull&#39;utilizzo di [Smart Build in una pipeline non di produzione](#about-smart-build).</li></ol>**Importante**: Smart Build è disponibile solo per le pipeline di qualità del codice e per le pipeline di distribuzione del codice full stack di sviluppo. |
 |   | **Casella di controllo Ignora configurazione livello Web** | Seleziona questa opzione per saltare la distribuzione della configurazione a livello web in una pipeline di codice full stack. Lascia deselezionata l’opzione per distribuire la configurazione a livello web insieme al codice della pipeline. |
 | **Pipeline** | Casella di controllo **Audit dell&#39;esperienza** | Seleziona questa opzione per includere un passaggio di audit dell’esperienza nella pipeline. Quando è abilitata, la pipeline include il passaggio Audit dell’esperienza dopo la scheda Codice Source. |
 
@@ -226,4 +229,4 @@ Dopo aver configurato la pipeline, puoi distribuire il codice. Per ulteriori det
 
 Questo video fornisce una panoramica del processo di creazione della pipeline, descritto in questo documento.
 
->[!VIDEO](https://video.tv.adobe.com/v/328577?captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/26316/)

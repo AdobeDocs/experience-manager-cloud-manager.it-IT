@@ -2,13 +2,16 @@
 title: Primo accesso
 description: Se hai impostato le configurazioni generali e sei pronto a utilizzare Cloud Manager per la prima volta, segui questa pagina.
 exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
-source-git-commit: ee49b0732fdb870c4f768764aa75b240fd101b59
+TQID: https://experienceleague.adobe.com/2fA-qKPKPhxCCRzxWC5pujXWQCa9vcP8tJtnSXSdipU
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754b
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: 305
 ht-degree: 89%
 
 ---
-
 
 # Primo accesso {#first-time-login}
 
@@ -20,7 +23,7 @@ Una volta impostata la configurazione generale per [!UICONTROL Cloud Manager], p
 
 ## Accedere per la prima volta {#logging-in-for-the-first-time}
 
-1. Accedi a Cloud Manager dall’indirizzo [experience.adobe.com](https://experience.adobe.com/experiencemanager). Per ulteriori informazioni, consulta [Informazioni su Adobe Experience Hub](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/experience-hub/experience-hub)
+1. Accedi a Cloud Manager dall’indirizzo [experience.adobe.com](https://experience.adobe.com/experiencemanager). Per ulteriori informazioni, consulta [Informazioni su Adobe Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/experience-hub/experience-hub)
 1. Nel pannello laterale a sinistra, fai clic su **Cloud Manager**.
 
    ![Cloud Manager nel pannello a sinistra in Experience Manager](/help/getting-started/assets/cloud-manager-experiencemanager.png)

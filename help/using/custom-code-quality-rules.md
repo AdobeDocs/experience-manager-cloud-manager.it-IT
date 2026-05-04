@@ -2,13 +2,17 @@
 title: Regole per la qualità del codice personalizzato
 description: Scopri le specifiche delle regole di qualità del codice personalizzato eseguite da Cloud Manager durante il test di qualità del codice. Queste regole si basano sulle best practice dei tecnici di AEM.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
+TQID: https://experienceleague.adobe.com/Iee3iEbblEV7TDJxtYpBH8F6oomtD9EJMPX1SSRGIGA
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: a01bfd36-4ab8-4bf8-9dc0-5b45b890552eid: ff09c71c-26a9-449a-85f8-2aeb8ce96100
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '3636'
-ht-degree: 95%
+source-wordcount: 4156
+ht-degree: 91%
 
 ---
-
 
 # Regole per la qualità del codice personalizzato {#custom-code-quality-rules}
 
@@ -523,7 +527,7 @@ Nella sezione seguente sono descritti i controlli OakPAL eseguiti da Cloud Manag
 
 >[!NOTE]
 >
->OakPAL è un framework che convalida i pacchetti di contenuti con un archivio Oak autonomo. È stato sviluppato da un partner AEM e vincitore del premio AEM Rock Star North America 2019.
+>OakPAL è un’infrastruttura che convalida i pacchetti di contenuti utilizzando un archivio Oak autonomo. È stato sviluppato da un partner AEM e vincitore del premio AEM Rock Star North America 2019.
 
 ### La clientela non deve implementare o estendere le API di prodotto annotate con @ProviderType {#product-apis-annotated-with-providertype-should-not-be-implemented-or-extended-by-customers}
 
@@ -624,7 +628,7 @@ Un problema comune è l’utilizzo di nodi denominati `config` nelle finestre di
 * **Gravità**: importante
 * **Da**: versione 2019.6.0
 
-Simile alla [regola I pacchetti non devono contenere configurazioni OSGi duplicate](#oakpal-package-osgi), questo è un problema comune nei progetti complessi in cui diversi pacchetti di contenuto scrivono nello stesso percorso di nodo. Benché sia possibile utilizzare le dipendenze tra pacchetti di contenuti per garantire risultati coerenti, è meglio evitare del tutto le sovrapposizioni.
+Simile alla [regola I pacchetti non devono contenere configurazioni OSGi duplicate](#oakpal-package-osgi), questo è un problema comune nei progetti complessi in cui diversi pacchetti di contenuti scrivono nello stesso percorso di nodo. Con i pacchetti di contenuti è possibile utilizzare le dipendenze per garantire un risultato coerente. È invece preferibile evitare del tutto le sovrapposizioni.
 
 ### La modalità di authoring predefinita non deve corrispondere all’interfaccia classica {#oakpal-default-authoring}
 
@@ -773,7 +777,7 @@ AEM Cloud Service richiede che le definizioni dell’indice di ricerca personali
 ### I nodi di definizione dell’indice di ricerca personalizzato devono utilizzare il tipo di indice Lucene {#oakpal-index-type-lucene}
 
 * **Chiave**: IndexType
-* **Tipo:**: `Code Smell`
+* **Tipo**: `Code Smell`
 * **Gravità**: minore
 * **Da**: versione 2021.2.0
 
@@ -920,17 +924,17 @@ Nella sezione seguente sono elencati i controlli DOT (Dispatcher Optimization To
 
 * [Parentesi mancante nella configurazione del Dispatcher](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-missing-brace)
 
-* [Parentesi aggiuntiva nella configurazione del Dispatcher](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-extra-brace)
+* [parentesi graffa aggiuntiva per configurazione Dispatcher](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-extra-brace)
 
-* [Proprietà obbligatoria mancante nella configurazione del Dispatcher](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-missing-mandatory-property)
+* [Nella configurazione del Dispatcher manca la proprietà obbligatoria](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-missing-mandatory-property)
 
 * [Proprietà obsoleta nella configurazione del Dispatcher](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-deprecated-property)
 
-* [Configurazione del Dispatcher non trovata](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-not-found)
+* [Configurazione Dispatcher non trovata](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-not-found)
 
-* [La configurazione Httpd include un file non trovato](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---httpd-configuration-include-file-not-found)
+* [File non trovato nella configurazione Httpd](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---httpd-configuration-include-file-not-found)
 
-* [Configurazione generale del Dispatcher](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-general)
+* [Configurazione Dispatcher generale](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-general)
 
 * [La cache farm di pubblicazione del Dispatcher deve avere `serveStaleOnError` abilitato](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-servestaleonerror-enabled)
 
@@ -938,14 +942,14 @@ Nella sezione seguente sono elencati i controlli DOT (Dispatcher Optimization To
 
 * [La proprietà `statfileslevel` della cache farm di pubblicazione del Dispatcher deve essere >= 2](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-statfileslevel-property-should-be--2)
 
-* [La proprietà `gracePeriod` della farm di pubblicazione del Dispatcher deve essere >= 2](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-graceperiod-property-should-be--2)
+* [La proprietà della farm di pubblicazione del Dispatcher `gracePeriod` deve essere >= 2](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-graceperiod-property-should-be--2)
 
-* [Ogni farm del Dispatcher deve avere un nome univoco](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---each-dispatcher-farm-should-have-a-unique-name)
+* [Ogni farm di Dispatcher deve avere un nome univoco](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---each-dispatcher-farm-should-have-a-unique-name)
 
-* [La cache farm di pubblicazione del Dispatcher deve avere le proprie regole `ignoreUrlParams` configurate in modalità elenco Consentiti](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-its-ignoreurlparams-rules-configured-in-an-allow-list-manner)
+* [La cache farm di pubblicazione del Dispatcher deve avere le regole `ignoreUrlParams` configurate in modo da inserire nell&#39;elenco Consentiti il numero di pagine di un&#39;istanza del sistema.](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-its-ignoreurlparams-rules-configured-in-an-allow-list-manner)
 
-* [I filtri farm di pubblicazione del Dispatcher devono specificare i selettori Sling consentiti per creare un elenco Consentiti](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-selectors-in-an-allow-list-manner)
+* [I filtri farm di pubblicazione del Dispatcher devono specificare i selettori Sling consentiti in modo da inserire nell&#39;elenco Consentiti il rischio di errori](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-selectors-in-an-allow-list-manner)
 
-* [I filtri farm di pubblicazione del Dispatcher devono specificare i pattern di suffisso Sling consentiti per creare un elenco Consentiti](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-suffix-patterns-in-an-allow-list-manner)
+* [I filtri farm di pubblicazione del Dispatcher devono specificare i pattern di suffisso Sling consentiti in modo da inserire nell&#39;elenco Consentiti il numero di copie](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-suffix-patterns-in-an-allow-list-manner)
 
-* [La direttiva “Richiedi tutto concesso” non deve essere utilizzata in una sezione di directory VirtualHost con un percorso di directory radice](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-require-all-granted-directive-should-not-be-used-in-a-virtualhost-directory-section-with-a-root-directory-path)
+* [Non utilizzare la direttiva &quot;Richiedi tutto concesso&quot; in una sezione di directory VirtualHost con un percorso di directory radice](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-require-all-granted-directive-should-not-be-used-in-a-virtualhost-directory-section-with-a-root-directory-path)

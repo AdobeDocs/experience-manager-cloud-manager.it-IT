@@ -2,13 +2,16 @@
 title: Aggiungere una pipeline di produzione
 description: Scopri come utilizzare Cloud Manager per creare e configurare pipeline di produzione per distribuire il codice.
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 1209faf71edbd74cd87acfe24ec438b98ddd4a3a
-workflow-type: ht
-source-wordcount: '1249'
+TQID: https://experienceleague.adobe.com/WH6W8bZNCWo0BAGLwnMOPpB3bk5P6Fd7c5b-dRT5Vc0
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+workflow-type: tm+mt
+source-wordcount: 1256
 ht-degree: 100%
 
 ---
-
 
 # Aggiungere una pipeline di produzione {#configuring-production-pipelines}
 
@@ -87,7 +90,7 @@ Una volta utilizzata l’interfaccia utente di [!UICONTROL Cloud Manager] per co
 
          ![Opzioni di implementazione per staging](/help/assets/configure-pipelines/add-prod4.png)
 
-         * **Configurazione del Dispatcher**: il ruolo di **Responsabile della distribuzione** può configurare un set di percorsi di contenuto che verranno invalidati o svuotati dalla cache del Dispatcher AEM quando viene eseguita una pipeline. Queste azioni della cache vengono eseguite come parte del passaggio di implementazione della pipeline, subito dopo la distribuzione di eventuali pacchetti di contenuto. Queste impostazioni utilizzano il comportamento standard del Dispatcher AEM. Per configurare, effettua le seguenti operazioni:
+         * **Configurazione del Dispatcher**: il ruolo di **Responsabile della distribuzione** può configurare un set di percorsi di contenuto che verranno invalidati o svuotati dalla cache del Dispatcher AEM quando viene eseguita una pipeline. Queste azioni della cache verranno eseguite come parte del passaggio di implementazione della pipeline, subito dopo la distribuzione di eventuali pacchetti di contenuti. Queste impostazioni utilizzano il comportamento standard del Dispatcher AEM. Per configurare, effettua le seguenti operazioni:
 
             1. Nel **PERCORSO** fornisci un percorso di contenuto.
             1. In **TIPO**, seleziona l’azione da intraprendere su quel percorso.
@@ -163,4 +166,4 @@ Dopo aver configurato la pipeline, puoi distribuire il codice. Per ulteriori det
 
 Questo video fornisce una panoramica del processo di creazione della pipeline, descritto in questo documento.
 
->[!VIDEO](https://video.tv.adobe.com/v/328575?captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/26314/)

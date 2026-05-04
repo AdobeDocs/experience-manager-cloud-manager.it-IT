@@ -2,19 +2,21 @@
 title: Gestire le pipeline
 description: Scopri come gestire, modificare, eseguire ed eliminare le pipeline esistenti.
 exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
-source-git-commit: 91eda02d55134fba167f30830a142a80717e9083
+TQID: https://experienceleague.adobe.com/5SdiydpBmjwCLtzujtle4gW1JyRRvR2qNFN3fdN5A0w
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: 1244
 ht-degree: 55%
 
 ---
-
 
 # Gestire le pipeline {#managing-pipelines}
 
 Scopri come gestire, modificare, eseguire ed eliminare le pipeline esistenti.
 
-## Scheda pipeline {#pipeline-card}
+## Scheda Pipeline {#pipeline-card}
 
 La scheda **Pipeline** della pagina **Panoramica del programma** in Cloud Manager offre una panoramica di tutte le pipeline e del relativo stato corrente.
 
@@ -97,9 +99,9 @@ Con Cloud Manager è possibile eseguire più pipeline contemporaneamente, miglio
 **Per eseguire più pipeline:**
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione e il programma appropriati.
-1. Dal menu a sinistra, fare clic sull&#39;icona ![Flusso di lavoro &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Workflow_18_N.svg) **Pipeline**.
+1. Dal menu a sinistra, fare clic sull&#39;icona ![Flusso di lavoro ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Workflow_18_N.svg) **Pipeline**.
 1. Nella tabella della pagina **Pipeline**, seleziona le caselle di controllo accanto alle pipeline da eseguire.
-Se necessario, fai clic su ![Icona filtro, funnel](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Filter_18_N.svg) **Filtri** per ordinare le pipeline in base al nome, all&#39;ambiente, al tipo di codice distribuito o a una combinazione di tutte e tre.
+Se necessario, fai clic sull&#39;icona ![Filtro, su funnel](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Filter_18_N.svg) **Filtri** per ordinare le pipeline in base al nome, all&#39;ambiente, al tipo di codice distribuito o a una combinazione di tutte e tre.
 1. Nell&#39;angolo superiore destro della pagina fare clic su **Esegui selezionato (x)**.
 1. Nella finestra di dialogo **Esegui pipeline selezionate (x)**, fai clic su **Esegui (x)**.
 

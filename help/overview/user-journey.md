@@ -2,13 +2,16 @@
 title: Percorso dell’utente
 description: Scopri i diversi scenari di onboarding e come iniziare a utilizzare Cloud Manager.
 exl-id: deb3429c-dfcf-4e52-9aba-d9368aa240e6
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
-source-wordcount: '532'
+TQID: https://experienceleague.adobe.com/EnNaMZzu5bLUD3Jjsp6ovqFvoFM30ju4FOQJfmySLEk
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754b
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+workflow-type: tm+mt
+source-wordcount: 560
 ht-degree: 100%
 
 ---
-
 
 # Percorso dell’utente {#user-journey}
 
@@ -52,7 +55,7 @@ Per ulteriori informazioni sui vantaggi dell’aggiornamento ad AEM 6.5, consult
 
 Accedi alla pagina di destinazione [!UICONTROL Experience Cloud] utilizzando le credenziali di Adobe Identity Management. Da qui, seleziona AEM dal selettore della soluzione per accedere a [!UICONTROL Cloud Manager] e agli ambienti AEM.
 
-Dopo aver effettuato la registrazione a [!UICONTROL Cloud Manager] per la prima volta, potrai accedere agli ambienti di AEM direttamente dall’interfaccia utente di [!UICONTROL Cloud Manager]. A questo punto, è tutto pronto per esplorare tutte le opportunità di [!UICONTROL Cloud Manager] e preparare il tuo primo ramo di codice da distribuire negli ambienti di staging e produzione.
+Dopo aver effettuato la registrazione a [!UICONTROL Cloud Manager] per la prima volta, potrai accedere agli ambienti di AEM direttamente dall’interfaccia utente di [!UICONTROL Cloud Manager]. A questo punto, è tutto pronto per esplorare tutte le opportunità di [!UICONTROL Cloud Manager] e preparare il tuo primo ramo di codice da implementare negli ambienti di staging e di produzione.
 
 Per iniziare a utilizzare [!UICONTROL Cloud Manager], consulta [Primo accesso](/help/getting-started/first-time-login.md).
 
@@ -63,13 +66,13 @@ Per ulteriori informazioni su AEM, consulta [Distribuzione e manutenzione](https
 Dopo aver effettuato l’accesso a [!UICONTROL Cloud Manager], puoi iniziare con il progetto AEM effettuando le operazioni seguenti:
 
 1. Configurazione dell’ambiente dell’archivio del codice.
-1. Configurazione del team e dei ruoli. Le appartenenze al ruolo vengono assegnate aggiungendo l’utente a un profilo di [!UICONTROL Cloud Manager] utilizzando Admin Console.
+1. Configurazione del team e dei ruoli. L’iscrizione a un ruolo viene assegnata aggiungendo l’utente a un profilo di [!UICONTROL Cloud Manager] utilizzando Admin Console.
 1. Configurazione dei rami del codice sorgente nell’archivio Git.
 1. Definizione degli obiettivi in termini di carico e di prestazioni dei KPI (Indicatori di prestazioni chiave).
-1. Definizione degli scenari di test per la corretta distribuzione del codice negli ambienti di staging e produzione dopo che tutti i controlli di qualità sono stati superati.
+1. Definizione degli scenari di test per la corretta implementazione del codice negli ambienti di staging e di produzione una volta superati tutti i controlli di qualità.
 
 ## Percorso end-to-end {#end-to-end-journey}
 
-Questo diagramma illustra il percorso cliente ad alto livello durante l’utilizzo di una pipeline CI/CD di [!UICONTROL Cloud Manager] per la distribuzione delle modifiche al codice negli ambienti di staging e produzione.
+Questo diagramma illustra il percorso cliente ad alto livello durante l’utilizzo di una pipeline CI/CD di [!UICONTROL Cloud Manager] per l’implementazione delle modifiche al codice negli ambienti di staging e di produzione.
 
 ![Percorso end-to-end](/help/assets/screen_shot_2018-05-15at124004pm.png)

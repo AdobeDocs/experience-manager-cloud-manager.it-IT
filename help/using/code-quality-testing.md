@@ -1,14 +1,18 @@
 ---
-title: Test della qualità del codice
+title: Test di qualità del codice
 description: Scopri come funziona il test della qualità del codice delle pipeline e come può migliorare la qualità delle distribuzioni.
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
+TQID: https://experienceleague.adobe.com/gAO8BdTx9-Sq8evIuI3hIaHIUixk-IulQagCI-Jssrc
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754bid: ff09c71c-26a9-449a-85f8-2aeb8ce96100
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '2783'
-ht-degree: 98%
+source-wordcount: 2911
+ht-degree: 97%
 
 ---
-
 
 # Test della qualità del codice {#code-quality-testing}
 
@@ -31,7 +35,7 @@ La pipeline è composta da tre gate:
 Per ciascuno di questi gate, esiste una struttura a tre livelli per i problemi identificati dal gate.
 
 * **Critico**: si tratta di problemi che causano un errore immediato della pipeline.
-* **Importante**: si tratta di problemi che causano la sospensione dell’esecuzione della pipeline. Un Responsabile della distribuzione, un Project Manager o un proprietario dell’azienda possono ignorare questi problemi. In caso affermativo, la pipeline procede come previsto. In alternativa, possono accettare i problemi, causando l’arresto della pipeline con un errore. Se si ignorano errori importanti si innesca un [timeout](/help/using/code-deployment.md#timeouts).
+* **Importante**: si tratta di problemi che causano la sospensione dell’esecuzione della pipeline. Un Responsabile della distribuzione, un Project Manager o un proprietario dell’azienda possono ignorare questi problemi. In caso affermativo, la pipeline procede come previsto. In alternativa, possono accettare i problemi, causando l’interruzione della pipeline con un errore. Se si ignorano errori importanti si innesca un [timeout](/help/using/code-deployment.md#timeouts).
 * **Info**: si tratta di problemi forniti a scopo puramente informativo e che non hanno alcun impatto sull’esecuzione della pipeline.
 
 >[!NOTE]
@@ -60,12 +64,12 @@ I risultati dei test di qualità del codice sono forniti come valutazione, come 
 | --- | --- | --- | --- |
 | Valutazione della sicurezza | A = Nessuna vulnerabilità<br/>B = Almeno 1 vulnerabilità minore<br/>C = Almeno 1 vulnerabilità grave<br/>D = Almeno 1 vulnerabilità critica<br/>E = Almeno 1 vulnerabilità bloccante | Critico | &lt; B |
 | Valutazione dell’affidabilità | A = Nessun bug<br/>B = Almeno 1 bug minore <br/>C = Almeno 1 bug grave<br/>D = Almeno 1 bug critico<br/>E = Almeno 1 bug bloccante | Importante | &lt; C |
-| Valutazione della manutenzione | Definito dal costo residuo della correzione dei code smell come percentuale del tempo già trascorso nell’applicazione<br/><ul><li>A = &lt;= 5%</li><li>B = 6-10%</li><li>C = 11-20%</li><li>D = 21-50%</li><li>E = > 50%</li></ul> | Importante | &lt; A |
+| Valutazione della manutenibilità | Definito dal costo residuo della correzione dei code smell come percentuale del tempo già trascorso nell’applicazione<br/><ul><li>A = &lt;= 5%</li><li>B = 6-10%</li><li>C = 11-20%</li><li>D = 21-50%</li><li>E = > 50%</li></ul> | Importante | &lt; A |
 | Copertura | Definito da una combinazione di copertura di righe e copertura di condizioni dello unit test utilizzando la formula: <br/>`Coverage = (CT + CF + LC) / (2 * B + EL)`  <ul><li>`CT` = condizioni già valutate come `true` almeno una volta durante l’esecuzione degli unit test</li><li>`CF` = condizioni già valutate come `false` almeno una volta durante l’esecuzione degli unit test</li><li>`LC` = righe coperte = lines_to_cover - uncovered_lines</li><li>`B` = numero totale di condizioni</li><li>`EL` = numero totale di righe eseguibili (lines_to_cover)</li></ul> | Importante | &lt; 50% |
 | Unit test ignorati | Numero di unit test ignorati | Info | > 1 |
 | Problemi aperti | Tipi di problemi generali: vulnerabilità, bug e code smell | Info | > 0 |
-| Righe duplicate | Definito come il numero di righe presenti in blocchi duplicati. Un blocco di codice si considera duplicato nelle seguenti condizioni.<br>Progetti non Java:<ul><li>Devono esserci almeno 100 token successivi e duplicati.</li><li>Tali token devono essere distribuiti, per lo meno, come segue: </li><li>30 righe di codice per COBOL </li><li>20 righe di codice per ABAP </li><li>10 righe di codice per altri linguaggi</li></ul>Progetti Java:<ul></li><li> Devono essere presenti almeno 10 istruzioni successive e duplicate indipendentemente dal numero di token e righe.</li></ul>Le differenze nel rientro e nelle stringhe letterali vengono ignorate quando si rilevano duplicati. | Info | > 1% |
-| Compatibilità Cloud Service | Numero di problemi di compatibilità Cloud Service identificati | Info | > 0 |
+| Righe duplicate | Definito come il numero di righe presenti in blocchi duplicati. Un blocco di codice viene considerato duplicato nelle seguenti condizioni.<br>Progetti non Java:<ul><li>Devono esserci almeno 100 token successivi e duplicati.</li><li>Tali token devono essere distribuiti, per lo meno, come segue: </li><li>30 righe di codice per COBOL </li><li>20 righe di codice per ABAP </li><li>10 righe di codice per altri linguaggi</li></ul>Progetti Java:<ul></li><li> Devono essere presenti almeno 10 istruzioni successive e duplicate indipendentemente dal numero di token e righe.</li></ul>Le differenze nel rientro e nelle stringhe letterali vengono ignorate quando si rilevano duplicati. | Info | > 1% |
+| Compatibilità con Cloud Service | Numero di problemi di compatibilità Cloud Service identificati | Info | > 0 |
 
 >[!NOTE]
 >
@@ -135,7 +139,7 @@ Nella tabella seguente sono elencati i controlli di integrità.
 | Il manager libreria HTML Adobe Granite è configurato in modo appropriato. | Configurazione manager libreria CQ HTML | Importante |
 | Il bundle di supporto CRXDE è disabilitato. | Supporto CRXDE | Importante |
 | Il bundle e il servlet DavEx `Sling` sono disabilitati. | Verifica stato DavEx | Importante |
-| Il contenuto di esempio non è installato. | Pacchetti contenuti di esempio | Importante |
+| Il contenuto di esempio non è installato. | Pacchetti di contenuti di esempio | Importante |
 | Il filtro di richiesta WCM e il filtro di debug WCM sono disabilitati. | [Configurazione filtri WCM](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/implementing/deploying/configuring/osgi-configuration-settings#configuring) | Importante |
 | Il bundle e il servlet WebDAV `Sling` sono configurati in modo appropriato. | Verifica stato WebDAV | Importante |
 | Il server Web è configurato per impedire il clickjacking. | Configurazione server Web | Importante |
@@ -288,15 +292,15 @@ Questa funzionalità è disponibile per le metriche seguenti.
 
 ## Ottimizzazione dell’analisi del pacchetto di contenuti {#content-package-scanning-optimization}
 
-Come parte del processo di analisi della qualità, Cloud Manager esegue l’analisi dei pacchetti di contenuti prodotti dalla versione Maven. Per accelerare questo processo, Cloud Manager offre delle ottimizzazioni che risultano efficaci quando si osservano determinati vincoli per la creazione dei pacchetti.
+Come parte del processo di analisi della qualità, Cloud Manager esegue l’analisi dei pacchetti di contenuti prodotti dalla build Maven. Per accelerare questo processo, Cloud Manager offre delle ottimizzazioni che risultano efficaci quando si osservano determinati vincoli per la creazione dei pacchetti.
 
-La chiave per l’ottimizzazione è per i progetti che producono un singolo pacchetto “all”, contenente altri pacchetti di contenuti prodotti dalla build e contrassegnati come ignorati. Quando Cloud Manager rileva questo scenario, anziché decomprimere il pacchetto “all”, scansiona i singoli pacchetti di contenuti e li ordina in base alle dipendenze. Consideriamo ad esempio il seguente output di build.
+La chiave per l’ottimizzazione è per i progetti che producono un singolo pacchetto “all”, contenente altri pacchetti di contenuti prodotti dalla build e contrassegnati come ignorati. Quando Cloud Manager rileva questo scenario, anziché decomprimere il pacchetto “all”, i singoli pacchetti di contenuti vengono analizzati direttamente e ordinati in base alle dipendenze. Consideriamo ad esempio il seguente output di build.
 
 * `all/myco-all-1.0.0-SNAPSHOT.zip` (pacchetto di contenuti)
 * `ui.apps/myco-ui.apps-1.0.0-SNAPSHOT.zip` (pacchetto di contenuti ignorato)
 * `ui.content/myco-ui.content-1.0.0-SNAPSHOT.zip` (pacchetto di contenuti ignorato)
 
-Se gli unici elementi all’interno di `myco-all-1.0.0-SNAPSHOT.zip` sono i due pacchetti di contenuto ignorato, allora i due pacchetti incorporati sono analizzati al posto del pacchetto di contenuto “all”.
+Se gli unici elementi all’interno di `myco-all-1.0.0-SNAPSHOT.zip` sono i due pacchetti di contenuti ignorati, allora i due pacchetti incorporati sono analizzati al posto del pacchetto di contenuti “all”.
 
 Per i progetti che producono decine di pacchetti incorporati, è comprovato che questa ottimizzazione consente di risparmiare fino a 10 minuti per ogni esecuzione della pipeline.
 
