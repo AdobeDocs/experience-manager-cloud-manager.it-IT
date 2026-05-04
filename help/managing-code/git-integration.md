@@ -2,13 +2,18 @@
 title: Integrazione Git con Adobe Cloud Manager
 description: Questa serie di video illustra la configurazione e l’integrazione di un archivio Git gestito dal cliente (on-premise) con Adobe Cloud Manager.
 exl-id: e517f8a4-23f0-4486-8278-91396dba76ec
-source-git-commit: 75baacd1fd6f36ca1d6ea5c1993516569ab6ef47
+TQID: https://experienceleague.adobe.com/fyGrLuc1bIBY9ZAgYiULxxJQy-ZZBLYtAAdYgqzSLAM
+product_v2:
+  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '331'
-ht-degree: 99%
+source-wordcount: 367
+ht-degree: 95%
 
 ---
-
 
 # Integrazione Git con Adobe Cloud Manager
 
@@ -66,5 +71,5 @@ Puoi sincronizzare i tag della versione da un archivio Git di Cloud Manager a un
 
 * [Introduzione a Cloud Manager](/help/introduction.md)
 * [Risorse GitHub](https://docs.github.com/en/get-started/git-basics/set-up-git)
-* [Tutorial Atlassian Git](https://www.atlassian.com/git/tutorials/what-is-version-control)
-* [Scheda di riferimento rapido di Git](https://education.github.com/git-cheat-sheet-education.pdf)
+* [Tutorial su Git Atlassian](https://www.atlassian.com/git/tutorials/what-is-version-control)
+* [Scheda di riferimento Git](https://education.github.com/git-cheat-sheet-education.pdf)

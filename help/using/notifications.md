@@ -2,13 +2,18 @@
 title: Notifiche
 description: Scopri in che modo Cloud Manager notifica gli eventi importanti.
 exl-id: cfd5655f-2d2c-4304-b25c-6cdffe7ff64c
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
-source-wordcount: '561'
+TQID: https://experienceleague.adobe.com/WBAHeIAH1XL6oVy342wLaUAoAHkUoN1AbcAl2Erkte4
+product_v2:
+  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+workflow-type: tm+mt
+source-wordcount: 564
 ht-degree: 100%
 
 ---
-
 
 # Notifiche {#notifications}
 
@@ -16,13 +21,13 @@ Scopri in che modo Cloud Manager notifica gli eventi importanti.
 
 ## Notifiche in Cloud Manager {#cloud-manager-notifications}
 
-[!UICONTROL Cloud Manager] invia notifiche quando una pipeline di produzione viene avviata e completata (con o senza successo) all’inizio di una distribuzione di produzione. Nonché al raggiungimento dei passaggi **Approvazione diretta** e **Pianificato**. Queste notifiche vengono inviate tramite il sistema di notifica di [!UICONTROL Experience Cloud].
+[!UICONTROL Cloud Manager] invia notifiche quando una pipeline di produzione viene avviata e completata (con successo o senza successo) all’inizio di una distribuzione di produzione. Nonché al raggiungimento dei passaggi **Approvazione diretta** e **Pianificato**. Queste notifiche vengono inviate tramite il sistema di notifica di [!UICONTROL Experience Cloud].
 
 >[!NOTE]
 >
 >Le notifiche di approvazione e pianificate vengono inviate solo agli utenti nei ruoli **Proprietario business**, **Responsabile del programma** e **Responsabile della distribuzione**.
 
-Le notifiche vengono visualizzate in una barra laterale all’interno di [!UICONTROL Cloud Manager] e in Adobe [!UICONTROL Experience Cloud].
+Le notifiche vengono visualizzate in una barra laterale in [!UICONTROL Cloud Manager] e in tutto Adobe [!UICONTROL Experience Cloud].
 
 Quando ricevi nuove notifiche, l’icona a forma di campana nell’intestazione viene contrassegnata.
 

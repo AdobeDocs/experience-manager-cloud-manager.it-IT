@@ -2,9 +2,15 @@
 title: Utilizzo di più archivi Git
 description: Invece di utilizzare direttamente l’archivio Git di Cloud Manager, scopri come utilizzare il tuo archivio Git o più archivi Git.
 exl-id: 53bf78bb-489a-4a83-8459-c361f532d54a
-source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
-workflow-type: ht
-source-wordcount: '738'
+TQID: https://experienceleague.adobe.com/xKzqOfbi12A0POy-C7Gm7-n649DEBX9JP3LfXA5UC3Y
+product_v2:
+  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+workflow-type: tm+mt
+source-wordcount: 743
 ht-degree: 100%
 
 ---
@@ -48,7 +54,7 @@ Ad esempio, un invio a un ramo nel progetto A può attivare un’azione GitHub. 
 
 Ad esempio, una modifica nel ramo `main` nel progetto A viene inviata automaticamente al ramo `main` nell’archivio Git di Cloud Manager. Naturalmente potrebbe esserci una mappatura tra rami così come un invio in un ramo denominato `dev` nel progetto A viene inviato a un ramo denominato `development` nell’archivio Git di Cloud Manager. Passaggi simili sono necessari per il progetto B.
 
-A seconda della strategia e dei flussi di lavoro e di ramificazione, la sincronizzazione può essere configurata per rami diversi. Se l’archivio Git utilizzato non fornisce un concetto simile alle azioni GitHub, è possibile anche un’integrazione tramite Jenkins (o simile). In questo caso, un webhook attiva un processo Jenkins che esegue l’operazione.
+In base alla strategia e ai flussi di lavoro impiegati per i rami, è possibile configurare la sincronizzazione per diversi rami. Se l’archivio Git utilizzato non fornisce un concetto simile alle azioni GitHub, è possibile anche un’integrazione tramite Jenkins (o simile). In questo caso, un webhook attiva un processo Jenkins che esegue l’operazione.
 
 Per aggiungere una nuova (di terze parti) origine o un nuovo archivio:
 

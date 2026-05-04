@@ -2,13 +2,22 @@
 title: Copia dei contenuti per coerenza in ambienti diversi
 description: La copia dei contenuti in Cloud Manager consente agli utenti di copiare contenuti mutabili su richiesta dagli ambienti di produzione Adobe Experience Manager 6.x in hosting da Adobe Managed Services ad ambienti inferiori a scopo di testing.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 84b3366481c2efd497583627eac67046452f6c38
-workflow-type: ht
-source-wordcount: '1321'
-ht-degree: 100%
+TQID: https://experienceleague.adobe.com/ffcf9UNSOp7oIpDZdtLcoFWp-Ww-A1XV3kCDmKqJLSw
+product_v2:
+  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: cd2426f1-5719-4006-b8c2-738e5969754b
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+workflow-type: tm+mt
+source-wordcount: 1452
+ht-degree: 99%
 
 ---
-
 
 # Copia dei contenuti per coerenza in ambienti diversi {#content-copy}
 
@@ -75,7 +84,7 @@ Prima di poter copiare qualsiasi contenuto, è necessario definire un set di con
    1. A destra di un percorso di contenuti incluso che desideri limitare, fai clic su ![icona di eliminazione cartella](https://spectrum.adobe.com/static/icons/workflow_18/Smock_FolderDelete_18_N.svg).
    1. Nel campo di testo, digita un percorso relativo al percorso principale visualizzato nella finestra di dialogo.
    1. Fai clic su ![icona di eliminazione cartella](https://spectrum.adobe.com/static/icons/workflow_18/Smock_FolderDelete_18_N.svg) **Escludi percorso**.
-   1. Se necessario, ripeti i precedenti 3 passaggi (a. - c.) di cui sopra per aggiungere altri percorsi di esclusione; non ci sono limitazioni. In caso contrario, procedi al passaggio successivo.
+   1. Se necessario, ripetere i passaggi i. da iii. di cui sopra per aggiungere altri percorsi di esclusione; non ci sono limitazioni. In caso contrario, procedi al passaggio successivo.
 
    ![Esclusione dei percorsi](/help/assets/add-content-set-paths-excluded.png)
 
@@ -98,7 +107,7 @@ Quando modifichi un set di contenuti, potrebbe essere necessario espandere i per
 
 1. Nell’angolo in alto a sinistra della pagina, fai clic su ![icona Mostra menu](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) per aprire il menu a sinistra.
 
-1. Dal menu a sinistra, in **Servizi**, fai clic su ![icona di una scatola](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Box_18_N.svg) **Set di contenuti**.
+1. Dal menu a sinistra, in **Servizi**, fai clic su ![icona di una scatola](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Box_18_N.svg) **Set di contenuti**.
 
 1. Nella tabella della pagina **Set di contenuti**, fai clic su ![icona Altro](https://spectrum.adobe.com/static/icons/ui_18/More.svg) a destra di un percorso di contenuti incluso, quindi fai clic su **Modifica** o **Elimina**.
 
@@ -148,7 +157,7 @@ Puoi monitorare lo stato dei processi di copia nella pagina **Attività copia co
 
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione e il programma appropriati.
 
-1. Nell’angolo in alto a sinistra della pagina, fai clic su ![icona Mostra menu](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) per aprire il menu a sinistra.
+1. Nell’angolo in alto a sinistra della pagina, fai clic su ![icona Mostra menu](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) per aprire il menu a sinistra.
 
 1. Dal menu a sinistra, in **Servizi**, fai clic su ![icona Cronologia](https://spectrum.adobe.com/static/icons/workflow_18/Smock_History_18_N.svg) **Attività copia contenuto**.
 

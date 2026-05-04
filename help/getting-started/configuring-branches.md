@@ -2,13 +2,20 @@
 title: Configurazione dei rami
 description: Scopri come configurare il primo ramo in Git e come viene utilizzato dalla pipeline CI/CD per distribuire il codice dell’applicazione.
 exl-id: ff2ae28f-902e-4fb2-aeb1-3636cb5cd9bb
-source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
+TQID: https://experienceleague.adobe.com/Mxmx725a6m7J9UtwkI5o3tJGzZ7O3c3Bgv-fF393sZg
+product_v2:
+  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '323'
+source-wordcount: 332
 ht-degree: 95%
 
 ---
-
 
 # Configurare i rami {#configuring-branches}
 
@@ -78,4 +85,4 @@ Un singolo ramo `main` può essere sufficiente per progetti molto semplici, ma n
 
 >[!TIP]
 >
->Per visualizzare i comandi Git comuni, consulta la sezione [Scheda di riferimento Git](https://training.github.com/downloads/github-git-cheat-sheet).
+>Per visualizzare i comandi Git comuni, consulta la sezione [Foglio di riferimento Git](https://training.github.com/downloads/github-git-cheat-sheet).
