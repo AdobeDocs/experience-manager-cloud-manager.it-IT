@@ -8,9 +8,9 @@ product_v2:
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: badb64b816e83ca08a39b2b39eda13335f6a3c1d
 workflow-type: tm+mt
-source-wordcount: 1999
+source-wordcount: 2096
 ht-degree: 22%
 
 ---
@@ -91,6 +91,10 @@ Dopo aver configurato un programma e almeno un ambiente nell’interfaccia utent
 
 Distribuisce l’applicazione AEM completa, compreso il codice dell’applicazione e, per impostazione predefinita, la configurazione a livello web.
 
+>[!NOTE]
+>
+>Se per l’ambiente selezionato esiste già una pipeline del codice full stack, la selezione viene disabilitata.
+
 | Sezione | Opzione | Descrizione |
 | --- | --- | --- |
 | **Codice Source** | **Archivio** | Dall’elenco a discesa, scegli l’archivio Git utilizzato dalla pipeline come origine. Cloud Manager crea il codice dall’archivio scelto qui. |
@@ -105,11 +109,19 @@ Distribuisce solo la configurazione a livello web, ad esempio le proprietà di D
 
 Se esiste già una pipeline full stack, Cloud Manager visualizza un avviso che la creazione di una pipeline di configurazione a livello web fa sì che la pipeline full stack esistente ignori la configurazione a livello web. Dopo aver creato la pipeline di configurazione a livello web, Cloud Manager gestisce le distribuzioni di configurazione a livello web tramite tale pipeline anziché tramite la pipeline full stack.
 
+>[!NOTE]
+>
+>Se per l’ambiente selezionato esiste già una pipeline di configurazione a livello web, questa selezione viene disabilitata. In qualsiasi momento può essere presente una sola pipeline di configurazione a livello web per ogni ambiente.
+
 | Sezione | Opzione | Descrizione |
 | --- | --- | --- |
 | **Codice Source** | **Archivio** | Dall’elenco a discesa, seleziona l’archivio Git contenente la configurazione a livello web. |
 |   | **Ramo Git** | Seleziona il ramo nell’archivio scelto utilizzato da Cloud Manager per la distribuzione. Se necessario, fare clic su **Aggiorna** per aggiornare l&#39;elenco dei rami disponibili per l&#39;archivio selezionato. Utilizza questa opzione se un ramo creato di recente non viene visualizzato nell’elenco. |
 |   | **Posizione codice** | Immetti il percorso nell’archivio selezionato contenente la configurazione a livello web da distribuire. Il percorso predefinito è la directory principale dell&#39;archivio (`/`). |
+
+>[!NOTE]
+>
+>Se Posizione codice non fa riferimento al percorso del codice del dispatcher, è possibile inserire codice aggiuntivo dell’applicazione nel pacchetto dell’artefatto e distribuirlo al dispatcher, causando un errore di Apache al riavvio e un errore della pipeline. Assicurati di impostare il percorso corretto per i file dispatcher nell’archivio.
 
 >[!ENDTABS]
 

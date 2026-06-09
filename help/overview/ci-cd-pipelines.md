@@ -16,10 +16,10 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: badb64b816e83ca08a39b2b39eda13335f6a3c1d
 workflow-type: tm+mt
-source-wordcount: 639
-ht-degree: 81%
+source-wordcount: 1091
+ht-degree: 51%
 
 ---
 
@@ -51,6 +51,63 @@ Il seguente diagramma illustra cosa accade quando una versione viene attivata in
 | &#x200B;8. Distribuzione del trigger di produzione | Una volta completati i test automatizzati, [!UICONTROL Cloud Manager] avvia la distribuzione in produzione. |
 | &#x200B;9. [!UICONTROL Cloud Manager] ottiene gli artefatti da distribuire | [!UICONTROL Cloud Manager] richiama gli artefatti di rilascio archiviati. |
 | &#x200B;10. Distribuire gli artefatti in produzione | Gli artefatti della versione vengono implementati nell’ambiente di produzione. |
+
+### Origini del codice {#code-sources}
+
+Le pipeline possono anche differire per il tipo di codice che distribuiscono, oltre che per la produzione e la non produzione.
+
+* **[Pipeline full stack](#full-stack-pipeline)** - Distribuisci il codice completo dell&#39;applicazione AEM con le configurazioni HTTPD/Dispatcher.
+* **[Pipeline di configurazione a livello web](#web-tier-config-pipelines)** - Distribuisci solo configurazioni HTTPD/Dispatcher.
+
+### Pipeline full stack {#full-stack-pipeline}
+
+Le pipeline full stack distribuiscono il codice completo dell’applicazione AEM nel runtime di AEM e, per impostazione predefinita, anche le configurazioni a livello web.
+
+Si applicano le seguenti restrizioni.
+
+* Per configurare o eseguire le pipeline è necessario che un utente con il ruolo **Responsabile dell&#39;implementazione** abbia eseguito l&#39;accesso.
+* In qualsiasi momento può essere presente una sola pipeline full stack per ogni ambiente.
+
+Di seguito viene descritto il modo in cui la pipeline full stack interagisce con una [pipeline di configurazione a livello web](#web-tier-config-pipelines).
+
+* La pipeline full stack per un ambiente ignora la configurazione Dispatcher se esiste la pipeline di configurazione a livello web corrispondente.
+* Se la pipeline di configurazione a livello web corrispondente per l’ambiente non esiste, l’utente può configurare la pipeline full stack per includere o ignorare la configurazione Dispatcher.
+
+Le pipeline full stack possono essere di qualità del codice o di distribuzione.
+
+#### Configurare le pipeline full stack {#configure-full-stack}
+
+Consulta [Aggiungere una pipeline di produzione](/help/using/production-pipelines.md#full-stack-code).
+Consulta [Aggiungere una pipeline non di produzione](/help/using/non-production-pipelines.md#add-non-production-pipeline).
+
+### Pipeline di configurazione a livello web {#web-tier-config-pipelines}
+
+Le pipeline di configurazione a livello web consentono la distribuzione esclusiva della configurazione HTTPD/Dispatcher nel runtime di AEM, separandola dalle altre modifiche al codice. Si tratta di una pipeline semplificata che offre agli utenti che desiderano implementare solo le modifiche alla configurazione di Dispatcher un metodo accelerato per farlo in pochi minuti.
+
+>[!TIP]
+>
+>Le pipeline di configurazione a livello web consentono di memorizzare la configurazione web nella stessa posizione di origine o in una posizione diversa della pipeline full stack, a seconda di ciò che si adatta meglio alla struttura del progetto.
+
+Si applicano le seguenti restrizioni.
+
+* Per configurare o eseguire le pipeline è necessario che un utente con il ruolo **Responsabile dell&#39;implementazione** abbia eseguito l&#39;accesso.
+* In qualsiasi momento può essere presente una sola pipeline di configurazione a livello web per ogni ambiente.
+* L’utente non può configurare una pipeline di configurazione a livello web quando è in esecuzione la pipeline full stack corrispondente.
+
+Di seguito viene descritto il modo in cui la pipeline di configurazione a livello web interagisce con la [pipeline full stack](#full-stack-pipeline).
+
+* Se per un ambiente non è impostata una pipeline di configurazione a livello web, l’utente può scegliere di includere o ignorare la configurazione di Dispatcher durante la configurazione della pipeline full stack.
+* Una volta configurata una pipeline di configurazione a livello web per un ambiente, la corrispondente pipeline full stack (se presente) ignora la configurazione Dispatcher durante l’esecuzione e la distribuzione.
+* Dopo l’eliminazione di una pipeline di configurazione a livello web, la corrispondente pipeline full stack (se presente) viene reimpostata per distribuire le configurazioni di Dispatcher durante l’esecuzione.
+
+>[!NOTE]
+>
+>Per i programmi AMS con distribuzione blu-verde abilitata, gli aggiornamenti a livello web utilizzano la distribuzione continua per impostazione predefinita. Utilizza una pipeline full stack se hai bisogno di una distribuzione blu-verde per le modifiche a livello web.
+
+#### Configurare le pipeline a livello web {#configure-web-tier}
+
+Consulta [Aggiungere una pipeline di produzione](/help/using/production-pipelines.md#web-tier-config).
+Consulta [Aggiungere una pipeline non di produzione](/help/using/non-production-pipelines.md#add-non-production-pipeline).
 
 ### Build più veloci con Smart Build {#use=smart-build}
 
