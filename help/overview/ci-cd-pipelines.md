@@ -3,23 +3,15 @@ title: Pipeline CI/CD
 description: Scopri le pipeline CI/CD e come gestiscono le implementazioni negli ambienti di staging e di produzione in Cloud Manager.
 exl-id: 7130e5b7-6986-48c8-900c-90f3e4187f91
 TQID: https://experienceleague.adobe.com/BwkZH2MIbXrzSxf0yk9yeDZZIpw7-Ldue-OPQPkWrdg
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2:
-  - id: cd2426f1-5719-4006-b8c2-738e5969754b
-  - id: ff09c71c-26a9-449a-85f8-2aeb8ce96100
-subfeature_v2:
-  - id: c14b2f98-ee16-4c49-b87b-919c91b01d9d
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: badb64b816e83ca08a39b2b39eda13335f6a3c1d
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754bid: ff09c71c-26a9-449a-85f8-2aeb8ce96100
+subfeature_v2: id: c14b2f98-ee16-4c49-b87b-919c91b01d9d
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 694d3e8dad6e2ba86186a4bf6fdda3739e1041da
 workflow-type: tm+mt
-source-wordcount: 1091
-ht-degree: 51%
+source-wordcount: 1122
+ht-degree: 50%
 
 ---
 
@@ -77,8 +69,7 @@ Le pipeline full stack possono essere di qualità del codice o di distribuzione.
 
 #### Configurare le pipeline full stack {#configure-full-stack}
 
-Consulta [Aggiungere una pipeline di produzione](/help/using/production-pipelines.md#full-stack-code).
-Consulta [Aggiungere una pipeline non di produzione](/help/using/non-production-pipelines.md#add-non-production-pipeline).
+Consulta [Aggiungere una pipeline di produzione](/help/using/production-pipelines.md#full-stack-code).Consulta [Aggiungere una pipeline non di produzione](/help/using/non-production-pipelines.md#add-non-production-pipeline).
 
 ### Pipeline di configurazione a livello web {#web-tier-config-pipelines}
 
@@ -106,14 +97,13 @@ Di seguito viene descritto il modo in cui la pipeline di configurazione a livell
 
 #### Configurare le pipeline a livello web {#configure-web-tier}
 
-Consulta [Aggiungere una pipeline di produzione](/help/using/production-pipelines.md#web-tier-config).
-Consulta [Aggiungere una pipeline non di produzione](/help/using/non-production-pipelines.md#add-non-production-pipeline).
+Consulta [Aggiungere una pipeline di produzione](/help/using/production-pipelines.md#web-tier-config).Consulta [Aggiungere una pipeline non di produzione](/help/using/non-production-pipelines.md#add-non-production-pipeline).
 
 ### Build più veloci con Smart Build {#use=smart-build}
 
 Cloud Manager utilizza ora una strategia di compilazione ottimizzata denominata **Smart Build**, che utilizza la memorizzazione nella cache a livello di modulo per velocizzare il processo di compilazione. Durante ogni build, vengono rigenerati solo i moduli che sono stati modificati, mentre i moduli non modificati vengono riutilizzati dalla cache.
 
-Smart Build è disponibile solo per le pipeline di distribuzione di Code Quality e Dev Full Stack.
+Smart Build è disponibile per le pipeline di distribuzione di qualità del codice e full stack (sviluppo, staging, produzione).
 
 Consulta [Aggiungere una pipeline non di produzione](/help/using/non-production-pipelines.md#add-non-production-pipeline) e [Informazioni sull&#39;utilizzo di Smart Build in una pipeline non di produzione](/help/using/non-production-pipelines.md#about-smart-build).
 
