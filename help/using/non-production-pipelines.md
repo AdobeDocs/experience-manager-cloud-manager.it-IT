@@ -8,9 +8,9 @@ product_v2:
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: badb64b816e83ca08a39b2b39eda13335f6a3c1d
+source-git-commit: 4c73ab16ff7eab406c31a6d26cdd09360a94b3ea
 workflow-type: tm+mt
-source-wordcount: 2096
+source-wordcount: 2080
 ht-degree: 22%
 
 ---
@@ -37,7 +37,7 @@ Esistono due tipi di pipeline non di produzione:
 >
 >Non puoi impostare una pipeline finché il relativo archivio Git associato non dispone di almeno un ramo e la [configurazione del programma](/help/getting-started/program-setup.md) non è stata completata. Consulta il documento [Archivi di Cloud Manager](/help/managing-code/managing-repositories.md) per scoprire come aggiungere e gestire gli archivi in Cloud Manager.
 
-## Aggiungere una nuova pipeline non di produzione {#add-non-production-pipeline}
+## Aggiungere una pipeline non di produzione {#add-non-production-pipeline}
 
 Dopo aver configurato un programma e almeno un ambiente nell’interfaccia utente di Cloud Manager, puoi aggiungere pipeline non di produzione. Utilizza queste pipeline per testare la qualità del codice prima di implementarle negli ambienti di produzione.
 
@@ -99,7 +99,7 @@ Distribuisce l’applicazione AEM completa, compreso il codice dell’applicazio
 | --- | --- | --- |
 | **Codice Source** | **Archivio** | Dall’elenco a discesa, scegli l’archivio Git utilizzato dalla pipeline come origine. Cloud Manager crea il codice dall’archivio scelto qui. |
 |   | **Ramo Git** | Dall’elenco a discesa, scegli il ramo nell’archivio selezionato da cui generare la pipeline. Il valore predefinito è `main`. La pipeline utilizza il ramo scelto come origine per la generazione e la distribuzione. Se necessario, fare clic su **Aggiorna** per aggiornare l&#39;elenco dei rami disponibili per l&#39;archivio selezionato. Utilizza questa opzione se un ramo creato di recente non viene visualizzato nell’elenco. |
-|   | **Strategia di compilazione** | <ul><li>**Build completa** - Genera tutti i moduli nell&#39;archivio ogni volta<li>BETA **Smart Build** - Genera solo moduli che sono stati modificati dopo l&#39;ultimo commit.<br>Ulteriori informazioni sull&#39;utilizzo di [Smart Build in una pipeline non di produzione](#about-smart-build).</li></ol>**Importante**: Smart Build è disponibile solo per le pipeline di qualità del codice e per le pipeline di distribuzione del codice full stack di sviluppo. |
+|   | **Strategia di compilazione** | <ul><li>**Build completa** - Genera tutti i moduli nell&#39;archivio ogni volta<li>**Smart Build** - Genera solo i moduli modificati dall&#39;ultimo commit.<br>Ulteriori informazioni sull&#39;utilizzo di [Smart Build in una pipeline non di produzione](#about-smart-build).</li></ol> |
 |   | **Casella di controllo Ignora configurazione livello Web** | Seleziona questa opzione per saltare la distribuzione della configurazione a livello web in una pipeline di codice full stack. Lascia deselezionata l’opzione per distribuire la configurazione a livello web insieme al codice della pipeline. |
 | **Pipeline** | Casella di controllo **Audit dell&#39;esperienza** | Seleziona questa opzione per includere un passaggio di audit dell’esperienza nella pipeline. Quando è abilitata, la pipeline include il passaggio Audit dell’esperienza dopo la scheda Codice Source. |
 
@@ -127,25 +127,28 @@ Se esiste già una pipeline full stack, Cloud Manager visualizza un avviso che l
 
 1. Fai clic su **Salva**.
 
-## Informazioni sull’utilizzo di Smart Build in una pipeline non di produzione{#about-smart-build}
+## Informazioni sull’utilizzo di Smart Build nella pipeline non di produzione{#about-smart-build}
 
 **Smart Build** in Cloud Manager è una strategia di compilazione ottimizzata per le pipeline non di produzione. Smart Build riduce i tempi di generazione memorizzando nella cache i moduli e ricostruendo solo quelli che sono stati modificati dopo l’ultima esecuzione riuscita. I moduli invariati vengono riutilizzati dalla cache, mentre vengono ricostruiti solo i moduli modificati e le relative dipendenze, migliorando l’efficienza dei flussi di lavoro di sviluppo iterativi.
 
-Smart Build è attualmente disponibile solo per:
+Smart Build è attualmente disponibile per:
 
 * pipeline di qualità del codice.
-* Sviluppare pipeline di distribuzione full stack.
+* Pipeline di implementazione full stack per sviluppo, staging e non di produzione.
+
 
 >[!NOTE]
 >
 >La prima esecuzione dopo l’abilitazione di Smart Build si comporta come una Build completa perché la cache è vuota.
 
 Si consiglia di utilizzare Smart Build nei seguenti casi:
+
 * Stai sviluppando attivamente e apportando frequenti modifiche incrementali.
 * Il progetto contiene più moduli Maven.
 * Le build complete richiedono molto tempo.
 
 Smart Build non è sempre ideale quando si dispone dei seguenti elementi:
+
 * La build si basa principalmente su plug-in che eseguono operazioni al di fuori del grafico delle dipendenze di Maven.
 * È necessaria la convalida completa della ricompilazione a ogni esecuzione.
 

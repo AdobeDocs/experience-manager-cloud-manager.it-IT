@@ -10,10 +10,10 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: badb64b816e83ca08a39b2b39eda13335f6a3c1d
+source-git-commit: 4c73ab16ff7eab406c31a6d26cdd09360a94b3ea
 workflow-type: tm+mt
-source-wordcount: 1665
-ht-degree: 73%
+source-wordcount: 2101
+ht-degree: 58%
 
 ---
 
@@ -40,7 +40,7 @@ Il ruolo di **Responsabile della distribuzione** è responsabile della configura
 >
 >Non è possibile configurare una pipeline finché il relativo archivio Git associato non dispone di almeno un ramo e la [Configurazione del programma](/help/getting-started/program-setup.md) non è stata completata.
 
-## Aggiungere una nuova pipeline di produzione {#adding-production-pipeline}
+## Aggiungere una pipeline di produzione {#adding-production-pipeline}
 
 Una volta utilizzata l’interfaccia utente di [!UICONTROL Cloud Manager] per configurare il programma e disporre di almeno un ambiente, è possibile aggiungere una pipeline di produzione.
 
@@ -208,6 +208,83 @@ Se crei una pipeline di configurazione a livello web per un ambiente con una pip
    ![Origine configurazione livello Web](/help/assets/configure-pipelines/add-prod-webtier-source.png)
 
 1. Fai clic su **Continua** per passare alla scheda **Test dello staging**. Per ulteriori dettagli, consulta [Test dello staging](#stage-testing).
+
+
+## Informazioni sull’utilizzo di Smart Build in una pipeline di produzione{#about-smart-build}
+
+**Smart Build** in Cloud Manager è una strategia di compilazione ottimizzata per le pipeline di produzione. Smart Build riduce i tempi di generazione memorizzando nella cache i moduli e ricostruendo solo quelli che sono stati modificati dopo l’ultima esecuzione riuscita. I moduli invariati vengono riutilizzati dalla cache, mentre vengono ricostruiti solo i moduli modificati e le relative dipendenze, migliorando l’efficienza dei flussi di lavoro di sviluppo iterativi.
+
+Smart Build è attualmente disponibile per:
+
+* pipeline di qualità del codice.
+* Pipeline di implementazione full stack per sviluppo, staging e produzione.
+
+>[!NOTE]
+>
+>La prima esecuzione dopo l’abilitazione di Smart Build si comporta come una Build completa perché la cache è vuota.
+
+Si consiglia di utilizzare Smart Build nei seguenti casi:
+
+* Stai sviluppando attivamente e apportando frequenti modifiche incrementali.
+* Il progetto contiene più moduli Maven.
+* Le build complete richiedono molto tempo.
+
+Smart Build non è sempre ideale quando si dispone dei seguenti elementi:
+
+* La build si basa principalmente su plug-in che eseguono operazioni al di fuori del grafico delle dipendenze di Maven.
+* È necessaria la convalida completa della ricompilazione a ogni esecuzione.
+
+### Comprendere le prestazioni della build{#smart-build-performance}
+
+Il miglioramento delle prestazioni derivante dall’utilizzo di Smart Build dipende da diversi fattori, tra cui i seguenti:
+
+* Il numero di moduli nel progetto.
+* Frequenza e ambito delle modifiche al codice.
+* La distribuzione delle dipendenze tra i moduli.
+
+In generale, i progetti con molti moduli indipendenti possono vedere il miglioramento maggiore.
+
+### Rinuncia alla cache per modulo{#smart-build-cache-optout}
+
+Smart Build fornisce un controllo dettagliato che consente di disabilitare la memorizzazione nella cache per moduli specifici. Questa funzionalità è utile quando alcuni moduli:
+
+* Utilizzare i plug-in, ad esempio `exec-maven-plugin` o `maven-antrun-plugin`.
+* Eseguire operazioni sui file non tracciate dalle dipendenze Maven.
+* Produrre risultati incoerenti quando memorizzato nella cache.
+
+### Disattiva la memorizzazione in cache per un modulo{#smart-build-disable-caching}
+
+È possibile aggiungere la seguente proprietà al `pom.xml` del modulo interessato:
+
+```xml
+<properties>
+  <maven.build.cache.enabled>false</maven.build.cache.enabled>
+</properties>
+```
+
+Questa sintassi forza la ricostruzione del modulo su ogni esecuzione della pipeline, mentre altri moduli continuano a beneficiare della memorizzazione in cache.
+
+### Limitazioni e considerazioni sull’utilizzo di Smart Build{#smart-build-limitations}
+
+Quando usi Smart Build, tieni presente quanto segue:
+
+* Smart Build si basa sull’analisi delle dipendenze Maven.
+* Le modifiche che non rientrano nel grafico delle dipendenze potrebbero non attivare le ricompilazioni.
+* Alcuni plug-in potrebbero non essere completamente compatibili con il caching.
+* Puoi tornare a **Build completa** in qualsiasi momento modificando la pipeline non di produzione.
+
+Se si verifica un comportamento di compilazione imprevisto, è consigliabile disabilitare la memorizzazione nella cache per moduli specifici o cambiare temporaneamente la strategia di compilazione in **Build completa**.
+
+### Risoluzione dei problemi di Smart Build{#smart-build-troubleshoot}
+
+| Problema | Soluzioni consigliate |
+| --- | --- |
+| I risultati della build non sono coerenti | · Disattivare la memorizzazione nella cache per i moduli interessati.<br>· Verificare il comportamento del plug-in (in particolare `exec`/`antrun` plug-in). |
+| Nessun miglioramento delle prestazioni | · Verificare che siano state eseguite più esecuzioni (riscaldamento della cache).<br>· Verificare se la maggior parte dei moduli cambia frequentemente. |
+| Artefatti imprevisti o modifiche mancanti | · Verificare se le modifiche non rientrano nel tracciamento delle dipendenze Maven.<br>· Utilizzare **Build completa** per la verifica. |
+
+Consulta [Aggiungere una pipeline di produzione](#adding-production-pipeline) per abilitare Smart Build.
+
 
 ## Passaggi successivi {#the-next-steps}
 
