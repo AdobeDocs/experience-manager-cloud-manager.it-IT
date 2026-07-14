@@ -3,17 +3,13 @@ title: Configurazioni di Dispatcher
 description: Scopri come distribuire i file di configurazione di Dispatcher utilizzando Cloud Manager
 exl-id: ffc2b60e-bde7-48ca-b268-dea0f8fd4e30
 TQID: https://experienceleague.adobe.com/KpGTN-444bigrhLddGnZvxkZsThcVc1B--oEoAKTdos
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 1692390e24f8fa7d719bd8293a99586ec4ec36d4
 workflow-type: tm+mt
-source-wordcount: 595
-ht-degree: 92%
+source-wordcount: 557
+ht-degree: 44%
 
 ---
 
@@ -23,39 +19,39 @@ Scopri come distribuire i file di configurazione di Dispatcher utilizzando Cloud
 
 ## Distribuire le configurazioni di Dispatcher con Cloud Manager {#deploying-dispatcher-configurations}
 
-Cloud Manager è in grado di implementare i file di configurazione del server web e di Dispatcher presupponendo che siano archiviati nell’archivio Git insieme ai normali pacchetti di contenuti AEM.
+Cloud Manager può distribuire i file di configurazione del server web e del Dispatcher se sono memorizzati nell’archivio Git con pacchetti di contenuti AEM standard.
 
-Per sfruttare questa funzionalità, la build Maven deve generare un file .zip contenente almeno due directory: `conf` e `conf.d`. Questo file .zip può essere prodotto utilizzando `maven-assembly-plugin`.
+Per utilizzare questa funzionalità, la build Maven produce un file .zip contenente almeno due directory: `conf` e `conf.d`. Questo file .zip può essere prodotto utilizzando `maven-assembly-plugin`.
 
-Nei progetti generati da Cloud Manager utilizzando la [procedura guidata per la creazione di progetti](/help/getting-started/using-the-wizard.md) incorporata viene creata automaticamente la struttura di progetto Maven corretta. Questo percorso è consigliato ai nuovi utenti di Adobe Managed Services (AMS).
+Nei progetti generati da Cloud Manager utilizzando la [procedura guidata per la creazione di progetti](/help/getting-started/using-the-wizard.md) incorporata viene creata automaticamente la struttura di progetto Maven corretta. Questo approccio è consigliato se hai poca esperienza con Adobe Managed Services (AMS).
 
-Quando esegui l’implementazione in un’istanza di Dispatcher, le directory sull’istanza vengono sostituite da quelle presenti nell’archivio Git. Poiché i file di configurazione del server Web e di Dispatcher richiedono spesso dettagli specifici dell’ambiente, è necessario collaborare con il Customer Success Engineer (CSE) per impostare le variabili di ambiente appropriate in `/etc/sysconfig/httpd` prima di utilizzare correttamente questa funzione.
+Quando esegui l’implementazione in un’istanza di Dispatcher, le directory sull’istanza vengono sostituite da quelle presenti nell’archivio Git. Per impostare correttamente le variabili di ambiente appropriate in `/etc/sysconfig/httpd`, collaborare con il team Customer Success in quanto i file di configurazione del server Web e del Dispatcher richiedono spesso dettagli specifici dell&#39;ambiente.
 
 ## Configurazione del Dispatcher per la clientela di Managed Service esistente {#steps-for-configuring-dispatcher}
 
-Segui i passaggi seguenti per completare la configurazione iniziale del Dispatcher.
+Per completare la configurazione iniziale di Dispatcher, effettuare le seguenti operazioni:
 
-1. Ottieni i file di configurazione di produzione correnti dal tuo CSE.
-1. Rimuovi i dati specifici dell’ambiente codificati, ad esempio l’IP del modulo di rendering di pubblicazione, e sostituiscili con delle variabili.
-1. Definisci le variabili richieste in coppie chiave-valore per ogni Dispatcher di destinazione e aggiungili alla cartella [variabili](https://experienceleague.adobe.com/docs/experience-manager-learn/ams/dispatcher/variables.html?lang=it#variables-files-(.vars)) in ogni istanza.
+1. Ottieni i file di configurazione di produzione correnti dal team Customer Success.
+1. Rimuovi i dati specifici dell’ambiente, ad esempio gli IP del renderer di pubblicazione, e sostituiscili con delle variabili.
+1. Definisci le variabili richieste in coppie chiave-valore per ogni Dispatcher di destinazione e aggiungili alla cartella [variabili](https://experienceleague.adobe.com/en/docs/experience-manager-learn/ams/dispatcher/variables) in ogni istanza.
 1. Verifica le configurazioni aggiornate nell’ambiente di staging.
-1. Una volta testate, richiedi al tuo CSE di implementarle in produzione.
+1. Una volta testato, richiedi al team Customer Success di implementarlo nell’ambiente di produzione.
 1. Invia i file al tuo archivio Git.
 1. Distribuisci tramite Cloud Manager.
 
 >[!NOTE]
 >
->La migrazione dalle configurazioni di Dispatcher e del server web all’archivio Git può essere eseguita durante l’onboarding di Cloud Manager, o anche in un secondo momento.
+>La migrazione delle configurazioni di Dispatcher e server web all’archivio Git viene eseguita durante l’onboarding di Cloud Manager, ma può essere eseguita anche in un secondo momento.
 
 ### Esempio {#example}
 
-La struttura specifica del file e della directory può variare in base alle specifiche del progetto, ma questo esempio dovrebbe fornire una guida concreta alla strutturazione del progetto affinché includa le configurazioni di Apache e Dispatcher.
+La struttura specifica del file e della directory varia in base alle specifiche del progetto, ma questo esempio fornisce una chiara spiegazione di come strutturare il progetto in modo da includere le configurazioni di Apache e Dispatcher.
 
 1. Creare una sottodirectory denominata `dispatcher`.
 
-   È possibile utilizzare un nome qualsiasi, ma il nome della directory creato in questo passaggio deve essere lo stesso del nome utilizzato nel passaggio 6.
+   Utilizzare un nome qualsiasi, ma il nome della directory creato in questo passaggio deve essere uguale al nome utilizzato nel passaggio 1.
 
-1. Questa sottodirectory contiene un modulo Maven che crea il file .zip di Dispatcher utilizzando il plug-in Maven Assembly. Nella directory `dispatcher`, crea un file `pom.xml` con questo contenuto, modificando il riferimento `parent`, `artifactId` e `name` in base alle esigenze.
+1. Questa sottodirectory contiene un modulo Maven che crea il file .zip di Dispatcher utilizzando `maven-assembly-plugin`. Nella directory `dispatcher`, crea un file `pom.xml` con questo contenuto, modificando il riferimento `parent`, `artifactId` e `name` in base alle esigenze.
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -95,9 +91,9 @@ La struttura specifica del file e della directory può variare in base alle spec
    </project>
    ```
 
-   * Come nel Passaggio 1, se lo desideri, l’artifactId e il nome possono qui assumere altri valori. `dispatcher` viene utilizzato qui solo come esempio.
+   * Come nel Passaggio 1, artifactId e name possono essere altri valori. `dispatcher` viene utilizzato qui come esempio.
 
-1. Il plug-in Maven Assembly richiede un `descriptor` per definire la modalità di creazione del file .zip. Per creare questo descrittore, crea un file nella sottodirectory `dispatcher` denominata `assembly.xml` con il contenuto seguente. Tieni presente che a questo nome di file viene fatto riferimento nella riga 26 nel file `pom.xml` precedente.
+1. `maven-assembly-plugin` richiede `descriptor` per definire la modalità di creazione del file .zip. Per creare questo descrittore, crea un file nella sottodirectory `dispatcher` denominata `assembly.xml` con il contenuto seguente. Tieni presente che a questo nome di file viene fatto riferimento nella riga 26 nel file `pom.xml` precedente.
 
    ```xml
    <assembly xmlns="http://maven.apache.org/ASSEMBLY/2.0.0"
@@ -222,7 +218,7 @@ La struttura specifica del file e della directory può variare in base alle spec
 
    * Come indicato nel passaggio 1, il valore dell’elemento `<module>` deve corrispondere al nome della directory creata.
 
-1. Per effettuare una prova, esegui `mvn clean package` nella directory principale del progetto. Dovresti vedere linee come questa nell’output.
+1. Per effettuare una prova, esegui `mvn clean package` nella directory principale del progetto. Vedrai righe come questa nell&#39;output.
 
    ```
    [INFO] --- maven-assembly-plugin:3.1.0:single (default) @ dispatcher ---
