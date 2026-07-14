@@ -10,24 +10,24 @@ feature_v2:
   - id: cd2426f1-5719-4006-b8c2-738e5969754b
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: 1692390e24f8fa7d719bd8293a99586ec4ec36d4
 workflow-type: tm+mt
-source-wordcount: 305
-ht-degree: 89%
+source-wordcount: 294
+ht-degree: 30%
 
 ---
 
 # Primo accesso {#first-time-login}
 
-Una volta impostata la configurazione generale per [!UICONTROL Cloud Manager], puoi iniziare a utilizzarlo.
+Dopo aver completato la configurazione generale per [!UICONTROL Cloud Manager], puoi utilizzarla.
 
 >[!NOTE]
 >
->A seconda dei ruoli assegnati in [!UICONTROL Cloud Manager] e allo stato dell’applicazione, le schermate visualizzate possono essere diverse dalle illustrazioni.
+>A seconda dei ruoli assegnati in [!UICONTROL Cloud Manager] e allo stato dell&#39;applicazione, le schermate visualizzate variano da quelle nelle illustrazioni.
 
 ## Accedere per la prima volta {#logging-in-for-the-first-time}
 
-1. Accedi a Cloud Manager dall’indirizzo [experience.adobe.com](https://experience.adobe.com/experiencemanager). Per ulteriori informazioni, consulta [Informazioni su Adobe Experience Hub](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/experience-hub/experience-hub)
+1. Accedi a Cloud Manager all&#39;indirizzo [experience.adobe.com](https://experience.adobe.com/experiencemanager). Per ulteriori informazioni, consulta [Informazioni su Adobe Experience Hub](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/experience-hub/experience-hub)
 1. Nel pannello laterale a sinistra, fai clic su **Cloud Manager**.
 
    ![Cloud Manager nel pannello a sinistra in Experience Manager](/help/getting-started/assets/cloud-manager-experiencemanager.png)
@@ -45,13 +45,13 @@ Una volta impostata la configurazione generale per [!UICONTROL Cloud Manager], p
 -->
 
 
-1. Se il programma non è ancora configurato, fai clic su **Configura programma** nell’[invito all’azione](/help/getting-started/navigation.md#cta) per impostare la descrizione del programma e definire gli indicatori prestazioni chiave (KPI, Key Performance Indicators). Se il programma è già configurato, il CTA potrebbe offrire ulteriori passaggi successivi.
+1. Se il programma non è ancora configurato, fare clic su **Programma di installazione** in [call-to-action](/help/getting-started/navigation.md#cta) per configurare la descrizione del programma e definire gli indicatori prestazioni chiave (KPI). Se il programma è già configurato, CTA offre ulteriori passaggi successivi.
 
-Passa al documento [Configurazione del programma](/help/getting-started/program-setup.md) per i passaggi successivi nella configurazione del programma.
+Puoi passare al documento [Configurazione del programma](/help/getting-started/program-setup.md) per i passaggi successivi della configurazione del programma.
 
 ## Attività di Cloud Manager {#activity}
 
-Cloud Manager fornisce una visualizzazione consolidata dell’attività di un programma. Elenca tutte le esecuzioni della pipeline CI/CD, sia di produzione che non di produzione. Tale funzionalità offre visibilità sulle attività passate e presenti.
+Cloud Manager fornisce una visualizzazione consolidata dell&#39;attività di un programma. Elenca tutte le esecuzioni della pipeline CI/CD, sia di produzione che non di produzione. Questa funzionalità fornisce informazioni sull’attività storica e corrente.
 
 >[!TIP]
 >
@@ -59,4 +59,4 @@ Cloud Manager fornisce una visualizzazione consolidata dell’attività di un pr
 
 >[!NOTE]
 >
->Per impostazione predefinita, un utente con accesso a un ambiente AEM dispone anche del ruolo Utente di Cloud Manager. Questo ruolo non è sufficiente per consentire all’utente di accedere alla visualizzazione dei dettagli del programma. Tale utente che dispone solo il ruolo Utente di Cloud Manager può spostarsi tramite le opzioni di menu del programma fino all’URL di authoring dell’ambiente AEM (se esistono ambienti). Gli utenti devono contattare il proprio amministratore se desiderano ottenere l’accesso a livello di programma.
+>Per impostazione predefinita, un utente con accesso a un ambiente AEM dispone anche del ruolo Utente di Cloud Manager. Questo ruolo non concede all’utente l’accesso alla visualizzazione dei dettagli del programma. Un utente con il solo ruolo Utente di Cloud Manager può navigare utilizzando le opzioni del menu del programma fino all’URL dell’autore dell’ambiente AEM (se esistono ambienti). Questi utenti devono contattare i propri amministratori se desiderano ottenere l’accesso a livello di programma.
