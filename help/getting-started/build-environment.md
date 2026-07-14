@@ -3,19 +3,12 @@ title: Ambiente di build
 description: Scopri l’ambiente di build specializzato che Cloud Manager usa per creare e testare il codice.
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
 TQID: https://experienceleague.adobe.com/AdGVWjyF0DXEX7jH5S39JQ506oVnNYGtYqAWNHcQeP8
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2:
-  - id: a01bfd36-4ab8-4bf8-9dc0-5b45b890552e
-  - id: cd2426f1-5719-4006-b8c2-738e5969754b
-subfeature_v2:
-  - id: d9eb3b3e-9447-4ed4-bf4a-96c7b245cb27
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 1692390e24f8fa7d719bd8293a99586ec4ec36d4
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: a01bfd36-4ab8-4bf8-9dc0-5b45b890552eid: cd2426f1-5719-4006-b8c2-738e5969754b
+subfeature_v2: id: d9eb3b3e-9447-4ed4-bf4a-96c7b245cb27
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fa6be369b979682cebf68852603725d8754605ab
 workflow-type: tm+mt
 source-wordcount: 1205
 ht-degree: 50%
@@ -44,7 +37,7 @@ Gli ambienti di build di Cloud Manager dispongono degli attributi seguenti.
    * `imagemagick`
    * `graphicsmagick`
 * Altri pacchetti vengono installati in fase di compilazione come descritto nella sezione [Installazione di pacchetti di sistema aggiuntivi](#installing-additional-system-packages).
-* Ogni build viene eseguita in un nuovo ambiente. Il contenitore di build non conserva i dati tra le esecuzioni.
+* Ogni build viene eseguita in un nuovo ambiente. Il contenitore di build non mantiene i dati tra le esecuzioni.
 * Maven viene eseguito con questi tre comandi:
    * `mvn --batch-mode org.apache.maven.plugins:maven-dependency-plugin:3.1.2:resolve-plugins`
    * `mvn --batch-mode org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean -Dmaven.clean.failOnError=false`
