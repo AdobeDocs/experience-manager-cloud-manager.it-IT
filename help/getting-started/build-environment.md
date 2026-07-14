@@ -15,7 +15,7 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 1692390e24f8fa7d719bd8293a99586ec4ec36d4
+source-git-commit: fa6be369b979682cebf68852603725d8754605ab
 workflow-type: tm+mt
 source-wordcount: 1205
 ht-degree: 50%
@@ -44,7 +44,7 @@ Gli ambienti di build di Cloud Manager dispongono degli attributi seguenti.
    * `imagemagick`
    * `graphicsmagick`
 * Altri pacchetti vengono installati in fase di compilazione come descritto nella sezione [Installazione di pacchetti di sistema aggiuntivi](#installing-additional-system-packages).
-* Ogni build viene eseguita in un nuovo ambiente. Il contenitore di build non conserva i dati tra le esecuzioni.
+* Ogni build viene eseguita in un nuovo ambiente. Il contenitore di build non mantiene i dati tra le esecuzioni.
 * Maven viene eseguito con questi tre comandi:
    * `mvn --batch-mode org.apache.maven.plugins:maven-dependency-plugin:3.1.2:resolve-plugins`
    * `mvn --batch-mode org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean -Dmaven.clean.failOnError=false`

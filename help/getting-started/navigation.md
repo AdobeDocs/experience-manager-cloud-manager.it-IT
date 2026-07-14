@@ -10,10 +10,10 @@ feature_v2:
   - id: cd2426f1-5719-4006-b8c2-738e5969754b
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: fa6be369b979682cebf68852603725d8754605ab
 workflow-type: tm+mt
-source-wordcount: 1660
-ht-degree: 52%
+source-wordcount: 1641
+ht-degree: 36%
 
 ---
 
@@ -24,7 +24,7 @@ Scopri come è organizzata l’interfaccia utente di Cloud Manager e come sposta
 L’interfaccia utente di Cloud Manager è composta principalmente da due interfacce grafiche:
 
 * [La console Programmi personali](#my-programs-console) è la posizione da cui visualizzare e gestire tutti i programmi.
-* [La finestra Panoramica del programma](#program-overview) è dove puoi visualizzare i dettagli e gestire un singolo programma.
+* [Nella finestra Panoramica programma](#program-overview) è possibile visualizzare i dettagli e gestire un singolo programma.
 
 ## Console Programmi personali {#my-programs-console}
 
@@ -32,7 +32,7 @@ Quando si accede a Cloud Manager all&#39;indirizzo [experience.adobe.com](https:
 
 ![Console Programmi personali](/help/getting-started/assets/cloud-manager-my-programs-console.png)
 
-La console **Programmi personali** fornisce una panoramica di tutti i programmi a cui si ha accesso nell&#39;organizzazione selezionata. È costituita da diverse elementi.
+La console **Programmi personali** fornisce una panoramica di tutti i programmi a cui si ha accesso nell&#39;organizzazione selezionata. È costituito da diverse parti.
 
 |   | Area | Descrizione |
 | --- | --- | --- |
@@ -45,11 +45,11 @@ La console **Programmi personali** fornisce una panoramica di tutti i programmi 
 
 ### Barre degli strumenti {#my-programs-toolbars}
 
-Sono disponibili due barre degli strumenti una sopra l’altra.
+Sono disponibili due barre degli strumenti.
 
 #### Intestazione di Cloud Manager {#cloud-manager-header}
 
-La prima è l’intestazione Cloud Manager. L’intestazione diventa persistente durante la navigazione in Cloud Manager. Si tratta di un ancoraggio che consente di accedere alle impostazioni e alle informazioni applicabili ai diversi programmi di Cloud Manager.
+La prima è l’intestazione Cloud Manager. L’intestazione è sempre visibile quando utilizzi Cloud Manager. Si tratta di una posizione centrale che consente di accedere alle impostazioni e alle informazioni applicabili a tutti i programmi Cloud Manager.
 
 ![Intestazione di Experience Cloud](/help/getting-started/assets/cloud-manager-header-toolbar.png)
 
@@ -80,7 +80,7 @@ La prima è l’intestazione Cloud Manager. L’intestazione diventa persistente
 
 #### Barra degli strumenti del programma {#program-toolbar}
 
-La barra degli strumenti del programma fornisce collegamenti per passare da programmi ad azioni di Cloud Manager e viceversa appropriati al contesto.
+La barra degli strumenti del programma fornisce collegamenti per passare da un programma Cloud Manager all’altro e viceversa.
 
 ![barra degli strumenti del programma Cloud Manager](/help/getting-started/assets/cloud-manager-programs-toolbar.png)
 
@@ -92,19 +92,19 @@ La barra degli strumenti del programma fornisce collegamenti per passare da prog
 
 ### Invito all’azione e statistiche {#cta-statistics}
 
-La sezione Invito all’azione e statistiche fornisce dati aggregati per l’organizzazione. Ad esempio, se i programmi sono stati configurati correttamente, è possibile che vengano visualizzate le statistiche delle attività degli ultimi 90 giorni, tra cui:
+La sezione call-to-action and statistics fornisce dati aggregati per la tua organizzazione. Ad esempio, se hai configurato correttamente i programmi, vengono visualizzate le statistiche delle attività degli ultimi 90 giorni, inclusi i seguenti:
 
 * Numero di [implementazioni](/help/using/code-deployment.md)
 * Numero di [problemi di qualità del codice](/help/using/code-quality-testing.md) identificati
 * Numero di build
 
-Oppure, se stai iniziando la configurazione dell’organizzazione, potrebbero essere disponibili suggerimenti sui passaggi successivi o sulle risorse della documentazione.
+Se stai iniziando la configurazione dell’organizzazione, puoi seguire i passaggi successivi o consultare le risorse della documentazione.
 
 ### Programmi personali {#my-programs-section}
 
 Il contenuto principale della console Programmi personali è la sezione **Programmi personali** in cui i programmi sono elencati come singole schede. Fai clic su una scheda per accedere alla pagina **Panoramica del programma** per informazioni dettagliate sul programma.
 
-A seconda dei privilegi di cui disponi, potrebbe non essere possibile selezionare alcuni programmi.
+A seconda dei privilegi, potrebbe non essere possibile selezionare alcuni programmi.
 
 Per trovare rapidamente il programma desiderato, è possibile utilizzare le seguenti opzioni di ordinamento:
 
@@ -114,7 +114,7 @@ Per trovare rapidamente il programma desiderato, è possibile utilizzare le segu
    * Data di creazione
    * Nome del programma
    * Stato
-* ![Icona Ordinamento decrescente](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SortOrderDown_18_N.svg) / ![Icona Ordinamento decrescente](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SortOrderUp_18_N.svg) Ordinamento dei programmi rispettivamente decrescente o decrescente.
+* ![Icona Ordinamento decrescente](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SortOrderDown_18_N.svg) / ![Icona Ordinamento decrescente](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SortOrderUp_18_N.svg) Ordina rispettivamente i programmi.
 * ![Icona visualizzazione griglia classica](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ClassicGridView_18_N.svg) / ![Icona testo puntato o elenco](https://spectrum.adobe.com/static/icons/workflow_18/Smock_TextBulleted_18_N.svg) Visualizza programmi rispettivamente in forma griglia o elenco.
 
 #### Schede del programma {#program-cards}
@@ -136,7 +136,7 @@ Fai clic sull&#39;![icona Info](/help/getting-started/assets/Info.svg) per acced
 
 ![Informazioni a comparsa in Cloud Manager AMS](/help/getting-started/assets/cloud-manager-information-view.png)
 
-Fai clic sull&#39;icona ![Altro, i puntini di sospensione](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) ti consentono di accedere alle azioni aggiuntive che puoi eseguire sul programma.
+Facendo clic sull&#39;icona ![Altro, i puntini di sospensione](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) consentono di accedere alle azioni aggiuntive che è possibile eseguire sul programma.
 
 ![Pulsante con i puntini di sospensione per i programmi](/help/getting-started/assets/cloud-manager-program-ellipsis.png)
 
@@ -148,7 +148,7 @@ Fai clic sull&#39;icona ![Altro, i puntini di sospensione](https://spectrum.adob
 
 ### Collegamenti rapidi {#quick-links}
 
-La sezione dei collegamenti rapidi consente di accedere alle risorse correlate di uso comune.
+La sezione dei collegamenti rapidi consente di accedere a risorse utili e correlate.
 
 ## Finestra Panoramica del programma {#program-overview}
 
@@ -158,7 +158,7 @@ Se si seleziona un programma nella console [**Programmi personali**](#my-program
 
 **Panoramica del programma** consente di accedere a tutti i dettagli di un programma Cloud Manager. Come **I miei programmi**, è costituito da diverse parti.
 
-1. [Barre degli strumenti](#program-overview-toolbar) per tornare rapidamente alla console **Programmi personali** e passare al programma.
+1. [Barre degli strumenti](#program-overview-toolbar) per tornare rapidamente alla console **Programmi** e spostarsi nel programma.
 1. [Area schede](#program-tabs) per passare da un aspetto all&#39;altro del programma.
 1. [Invito all’azione](#cta) basato sulle ultime azioni del programma.
 1. [Ambienti](#environments) associati del programma.
@@ -170,21 +170,21 @@ Le barre degli strumenti per la panoramica del programma sono molto simili a que
 
 #### Intestazione di Cloud Manager {#cloud-manager-header-2}
 
-L&#39;intestazione di Cloud Manager contiene l&#39;icona del menu ![Mostra, hamburger](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg), che si apre automaticamente per mostrare le schede navigabili della Panoramica del programma.
+L&#39;intestazione di Cloud Manager include un menu a discesa ![Mostra icona menu](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) che si apre automaticamente per visualizzare le schede navigabili della Panoramica del programma.
 
-Fai clic su ![Mostra icona menu, hamburger](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) per nascondere le schede.
+Fare clic su ![Mostra icona menu](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) per nascondere le schede.
 
 #### Barra degli strumenti del programma {#program-toolbar-2}
 
-La barra degli strumenti del programma consente di passare rapidamente ad altri programmi, ma anche di accedere ad azioni appropriate al contesto, come l’aggiunta e la modifica del programma.
+La barra degli strumenti del programma consente comunque di passare rapidamente ad altri programmi, ma consente anche di accedere ad azioni appropriate al contesto, come l’aggiunta e la modifica del programma.
 
 ![Barra degli strumenti del programma](assets/cloud-manager-program-toolbar.png)
 
-Inoltre, se si nascondono le schede utilizzando l&#39;icona di menu ![Mostra, hamburger](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg), la barra degli strumenti può ancora mostrare la scheda in uso.
+Inoltre, se si nascondono le schede utilizzando l&#39;icona ![Mostra menu](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg), la barra degli strumenti può comunque mostrare la scheda in uso.
 
 ### Schede Programma {#program-tabs}
 
-A ogni programma sono associate molte opzioni e molti dati. Questi dati vengono raccolti in schede per semplificare la navigazione nel programma. Le schede consentono di accedere a:
+A ogni programma sono associate molte opzioni e molti dati. Questi dati sono organizzati in schede per semplificare la navigazione dei programmi. Le schede consentono di accedere ai seguenti elementi:
 
 * Panoramica: la panoramica del programma come descritto nel documento corrente
 * [Attività](/help/using/managing-pipelines.md#activity): la cronologia delle esecuzioni delle pipeline del programma
@@ -198,13 +198,13 @@ A ogni programma sono associate molte opzioni e molti dati. Questi dati vengono 
 
 Per impostazione predefinita, quando si apre un programma si accede alla scheda **Panoramica**. Viene evidenziata la scheda corrente. Seleziona un’altra scheda per visualizzarne i dettagli.
 
-Utilizza ![l&#39;icona del menu Mostra, hamburger](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) nell&#39;intestazione [Cloud Manager](#cloud-manager-header-2) per nascondere le schede.
+Per nascondere le schede, utilizzare ![Mostra icona menu](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) nell&#39;intestazione [Cloud Manager](#cloud-manager-header-2).
 
 ### Invito all’azione {#cta}
 
-La sezione relativa agli inviti all’azione fornisce informazioni utili in base allo stato del programma. Per un nuovo programma puoi vedere i passaggi successivi offerti e un promemoria della data di pubblicazione, [impostato durante la creazione del programma](/help/getting-started/program-setup.md).
+La sezione relativa agli inviti all’azione fornisce informazioni utili in base allo stato del programma. Per un nuovo programma, sono disponibili i passaggi successivi e un promemoria della data di pubblicazione [impostata durante la creazione del programma](/help/getting-started/program-setup.md).
 
-Per un programma live, lo stato dell’ultima implementazione con collegamenti per i dettagli e l’avvio di una nuova implementazione.
+Per un programma live, viene visualizzato lo stato dell’ultima implementazione, con collegamenti per i dettagli e l’avvio di una nuova implementazione.
 
 ![Invito all’azione](assets/info-banner.png)
 

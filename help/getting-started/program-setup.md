@@ -10,20 +10,18 @@ feature_v2:
   - id: cd2426f1-5719-4006-b8c2-738e5969754b
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: fa6be369b979682cebf68852603725d8754605ab
 workflow-type: tm+mt
-source-wordcount: 570
-ht-degree: 93%
+source-wordcount: 549
+ht-degree: 65%
 
 ---
 
 # Configurazione del programma {#program-setup}
 
-Dopo l’onboarding, il proprietario business imposta il programma aggiungendo una descrizione e definendo gli indicatori di prestazioni chiave (KPI). Questi KPI vengono quindi utilizzati per il test delle prestazioni.
+Dopo l’onboarding, il responsabile business imposta il programma aggiungendo una descrizione e definendo gli indicatori prestazioni chiave (KPI, Key Performance Indicator). Questi KPI vengono quindi utilizzati per il test delle prestazioni.
 
 ## Configurazione del programma con [!UICONTROL Cloud Manager] {#program-setup-cloud-manager}
-
-Segui questi passaggi per configurare il programma e definire i KPI.
 
 1. Accedi a Cloud Manager all’indirizzo [`https://my.cloudmanager.adobe.com`](https://my.cloudmanager.adobe.com) e seleziona l’organizzazione appropriata.
 
@@ -49,17 +47,19 @@ Segui questi passaggi per configurare il programma e definire i KPI.
 
 1. Nella scheda **Provisioning**, se per il programma è abilitata la scalabilità automatica, è possibile definire le opzioni di ridimensionamento on-demand per i tuoi ambienti.
 
-   La scalabilità automatica è applicabile solo all’ambiente di produzione e potrebbe non essere disponibile per tutti i programmi della clientela.
+   La scalabilità automatica è applicabile solo all’ambiente di produzione e non è disponibile per alcuni programmi dei clienti.
 
    ![Opzioni di provisioning](/help/assets/Setup_Program-Provisioning.png)
 
 1. Fai clic su **Salva**.
 
-Il programma è stato creato. Potrebbero essere necessari diversi minuti per il provisioning delle risorse prima che il programma sia pronto per l’uso.
+Il programma è stato creato. Il provisioning delle risorse richiede diversi minuti prima che il programma sia pronto per l’uso.
 
 ## Modificare un programma {#editing-program}
 
-È possibile modificare i programmi dopo averli impostati. Per modificare un programma, effettua le seguenti operazioni.
+È possibile modificare i programmi dopo averli impostati.
+
+**Per modificare un programma:**
 
 1. Accedi a Cloud Manager all’indirizzo [`https://my.cloudmanager.adobe.com`](https://my.cloudmanager.adobe.com) e seleziona l’organizzazione appropriata.
 
@@ -89,13 +89,13 @@ Utilizza la barra delle azioni per passare a un altro programma, modificare il p
 
 ## KPI {#kpis}
 
-I KPI dei siti vengono misurati nei test eseguiti nell’ambiente di staging. In genere, questi KPI vengono ridimensionati per adattarsi alle funzionalità dell’ambiente di pre-produzione.
+I KPI dei siti vengono misurati nei test eseguiti nell’ambiente di staging. In genere, questi KPI vengono regolati in modo da corrispondere alle funzionalità dell’ambiente di staging.
 
-Ad esempio, un utente che si aspetta una media di 1000 visualizzazioni di pagina al minuto nel proprio ambiente di produzione e dispone di quattro server di pubblicazione/dispatcher in produzione, dovrebbe ridimensionare questo scenario a 250 visualizzazioni di pagina al minuto. Questo scenario presuppone che il loro ambiente di staging sia costituito da una sola coppia di server Dispatcher/pubblicazione.
+Ad esempio, un utente che si aspetta una media di 1000 visualizzazioni di pagina al minuto nel proprio ambiente di produzione e che dispone di quattro server di pubblicazione/Dispatcher in produzione, riduce questo scenario a 250 visualizzazioni di pagina al minuto. Questo scenario presuppone che il loro ambiente di staging sia costituito da una sola coppia di server Dispatcher/pubblicazione.
 
 Il test delle prestazioni delle risorse prevede il caricamento ripetuto delle stesse in un periodo di 30 minuti. Il tempo di elaborazione di ciascuna risorsa e di varie metriche a livello di sistema viene misurato durante il test.
 
-È possibile che davanti all’ambiente di produzione sia presente una rete per la consegna dei contenuti (CDN) come Akamai o CloudFront. Poiché [!UICONTROL Cloud Manager] esegue direttamente i test nell’ambiente di staging, l’indicatore KPI deve riflettere solo il traffico che si prevede passi attraverso la rete CDN. Ovvero, i riscontri mancanti nella cache. In genere, questa esperienza è un sottoinsieme relativamente piccolo del traffico di produzione totale.
+Per l’ambiente di produzione è configurata una rete per la distribuzione di contenuti (CDN) come Akamai o CloudFront. Poiché [!UICONTROL Cloud Manager] esegue direttamente i test nell&#39;ambiente di gestione temporanea, l&#39;indicatore KPI riflette solo il traffico che si prevede passi attraverso la rete CDN. Ovvero, i riscontri mancanti nella cache. In genere, questo traffico è un sottoinsieme relativamente piccolo del traffico di produzione totale.
 
 ## Panoramica video {#video}
 
