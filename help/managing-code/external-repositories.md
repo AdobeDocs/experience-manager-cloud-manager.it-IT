@@ -3,16 +3,12 @@ title: Aggiungere archivi esterni in Cloud Manager
 description: Scopri come aggiungere un archivio esterno in Cloud Manager. Cloud Manager supporta l’integrazione con gli archivi GitHub Enterprise, GitLab, Bitbucket e Azure DevOps.
 exl-id: 4500cacc-5e27-4bbb-b8f6-5144dac7e6da
 TQID: https://experienceleague.adobe.com/uLIqzfR3sTBSMHCewIQPPADP9opdLQoT2PNQy5YZTKo
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: a7e83374a2282e4d63efb409d40722ebe9b4697e
 workflow-type: tm+mt
-source-wordcount: 2568
+source-wordcount: 2528
 ht-degree: 27%
 
 ---
@@ -80,11 +76,11 @@ THIS BULLET REMOVED AS PER https://wiki.corp.adobe.com/display/DMSArchitecture/C
 
 1. Seleziona **Salva** per aggiungere l’archivio.
 
-   Ora, fornisci un token di accesso per convalidare la proprietà dell’archivio esterno.
+   Per convalidare la proprietà dell’archivio esterno, fornisci un token di accesso.
 
-1. Nella finestra di dialogo **Convalida proprietà archivio privato**, fornisci un token di accesso per convalidare la proprietà dell&#39;archivio esterno in modo da potervi accedere, quindi fai clic su **Convalida**.
+1. Per convalidare la proprietà dell&#39;archivio esterno in modo da potervi accedere, fornisci un token di accesso nella finestra di dialogo **Convalida proprietà archivio privato**, quindi fai clic su **Convalida**.
 
-   ![Selezione di un token di accesso esistente per un repository](/help/managing-code/assets/repositories-exisiting-access-token.png)
+   ![Selezione di un token di accesso esistente per un archivio](/help/managing-code/assets/repositories-exisiting-access-token.png)
    *Selezione di un token di accesso esistente per un archivio Bitbucket (solo a scopo illustrativo).*
 
 >[!BEGINTABS]
@@ -195,7 +191,7 @@ Per tutti gli altri archivi esterni per i quali è stato effettuato l’onboardi
 
 1. Nella console **[Programmi personali](/help/getting-started/navigation.md#my-programs-console)** selezionare il programma in cui si desidera configurare un webhook per un archivio Git esterno.
 
-1. Nell’angolo in alto a sinistra della pagina, fai clic sull’![icona Mostra menu](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) per visualizzare il menu a sinistra.
+1. Nell&#39;angolo superiore sinistro della pagina fare clic su ![Mostra icona menu](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) per visualizzare il menu sul lato sinistro.
 
 1. Nel menu a sinistra, sotto l&#39;intestazione **Programma**, fare clic su ![Icona struttura cartella](https://spectrum.adobe.com/static/icons/workflow_18/Smock_FolderOutline_18_N.svg) **Archivi**.
 
@@ -210,9 +206,9 @@ Per tutti gli altri archivi esterni per i quali è stato effettuato l’onboardi
 1. Nella finestra di dialogo **Webhook di configurazione** eseguire le operazioni seguenti:
 
    1. Accanto al campo **URL webhook**, fare clic sull&#39;icona ![Copia](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg).
-Incolla l’URL in un file di testo normale. L’URL copiato è necessario per le impostazioni del webhook del fornitore Git.
+      Incolla l’URL in un file di testo normale. L’URL copiato è necessario per le impostazioni del webhook del fornitore Git.
    1. Accanto al campo token/chiave **Segreto webhook**, fai clic su **Genera**, quindi fai clic sull&#39;icona ![Copia](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg).
-Incolla il segreto in un file di testo normale. Il segreto copiato è necessario per le impostazioni del webhook del fornitore Git.
+      Incolla il segreto in un file di testo normale. Il segreto copiato è necessario per le impostazioni del webhook del fornitore Git.
 1. Fai clic su **Chiudi**.
 1. Passa alla soluzione del fornitore Git (GitHub Enterprise, GitLab, Bitbucket o Azure DevOps).
 
@@ -222,10 +218,10 @@ Incolla il segreto in un file di testo normale. Il segreto copiato è necessario
 1. Incolla l’URL del webhook copiato in precedenza nel campo di testo dell’URL.
    1. Sostituisci il parametro di query `api_key` nell&#39;URL del webhook con la tua vera chiave API.
 
-      Per generare una chiave API, devi creare un progetto di integrazione in Adobe Developer Console. Per informazioni dettagliate, consulta [Creazione di un progetto di integrazione API](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/).
+      Per generare una chiave API, devi creare un progetto di integrazione in Adobe Developer Console. Per informazioni dettagliate, consulta [Creazione di un progetto di integrazione API](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration).
 
 1. Incolla il segreto del webhook copiato in precedenza nel campo di testo **Segreto** (o **Chiave segreta**, o **Token segreto**).
-1. Configura il webhook per inviare gli eventi richiesti da Cloud Manager. Utilizza la tabella seguente per determinare gli eventi corretti per il provider Git.
+1. Per inviare gli eventi richiesti da Cloud Manager, configura il webhook. Utilizza la tabella seguente per determinare gli eventi corretti per il provider Git.
 
 >[!BEGINTABS]
 
@@ -285,15 +281,15 @@ Una volta creato, il controllo viene visualizzato come nella schermata seguente.
 
 <!-- https://git.corp.adobe.com/pages/experience-platform/cloud-manager-repository-service/#/./git-vendors/gitlab -->
 
-Le interazioni GitLab si basano esclusivamente sui commenti. Quando inizia la convalida, viene aggiunto un commento. Al termine della convalida (riuscita o non riuscita), il commento iniziale viene rimosso e sostituito con un nuovo commento contenente i risultati della convalida o i dettagli dell’errore.
+Le interazioni GitLab si basano solo sui commenti. Quando inizia la convalida, viene aggiunto un commento. Al termine della convalida (riuscita o non riuscita), il commento iniziale viene rimosso e sostituito con un nuovo commento contenente i risultati della convalida o i dettagli dell’errore.
 
 Quando la convalida della qualità del codice è in esecuzione:
 
 ![Quando è in esecuzione la convalida della qualità del codice](/help/managing-code/assets/repository-webhook-gitlab1.png)
 
-Al termine della convalida della qualità a freddo:
+Al termine della convalida della qualità del codice:
 
-![Al termine della convalida della qualità a freddo](/help/managing-code/assets/repository-webhook-gitlab2.png)
+![Al termine della convalida della qualità del codice](/help/managing-code/assets/repository-webhook-gitlab2.png)
 
 Quando la convalida della qualità del codice non riesce e viene restituito un errore:
 
