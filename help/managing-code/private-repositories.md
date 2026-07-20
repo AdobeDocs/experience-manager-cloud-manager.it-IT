@@ -4,17 +4,13 @@ description: Scopri come configurare Cloud Manager per l’utilizzo di archivi G
 feature: Release Information
 exl-id: e0d103c9-c147-4040-bf53-835e93d78a0b
 TQID: https://experienceleague.adobe.com/YQUazTRNh7C31piqZwe-1zAkRWIqt9fVY6jTD5T3ZpI
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 32dc7aaf4c228d9aee1adedab3f52375f1807bb5
 workflow-type: tm+mt
-source-wordcount: 835
-ht-degree: 90%
+source-wordcount: 837
+ht-degree: 76%
 
 ---
 
@@ -45,11 +41,11 @@ La configurazione consiste di due passaggi principali:
 
 1. Nella finestra di dialogo **Aggiungi archivio**, seleziona **Archivio privato** come tipo di archivio.
 
-1. Specifica i dettagli dell’archivio
+1. Fornisci i seguenti dettagli dell’archivio:
 
-   * **Nome archivio**: un nome espressivo
-   * **URL archivio**: l’URL dell’archivio, che deve terminare con `.git`
-   * **Descrizione** (facoltativa): una descrizione più lunga dell’archivio in base alle esigenze
+   * **Nome archivio** - Nome descrittivo.
+   * **URL archivio** - URL del repository, che deve terminare in `.git`.
+   * **Descrizione** (facoltativo): descrizione più lunga dell&#39;archivio in base alle esigenze.
 
    ![Aggiungi un archivio personale](/help/assets/repositories/add-own-github.png)
 
@@ -63,7 +59,7 @@ La configurazione consiste di due passaggi principali:
 
 ### Convalidare la proprietà di un archivio privato {#validate-ownership}
 
-Cloud Manager ora è a conoscenza del tuo archivio GitHub, ma deve ancora accedervi. Per concedere l’accesso, devi installare l’app Adobe GitHub e verificare di essere il proprietario dell’archivio specificato.
+Cloud Manager è ora configurato con l’archivio GitHub, ma richiede ancora l’autorizzazione per accedervi. Per concedere l’accesso, devi installare l’app Adobe GitHub e verificare di essere il proprietario dell’archivio specificato.
 
 1. Dopo aver aggiunto l’archivio personale, viene visualizzata la finestra di dialogo **Convalida della proprietà dell’archivio privato**.
 
@@ -71,7 +67,7 @@ Cloud Manager ora è a conoscenza del tuo archivio GitHub, ma deve ancora accede
 
 1. Cloud Manager utilizza un’app GitHub per interagire in modo sicuro con l’archivio.
 
-   Un proprietario dell’organizzazione GitHub deve installare l’app che si trova in `https://github.com/apps/cloud-manager-for-aem` e concedere l’accesso all’archivio. Per ulteriori informazioni, consulta la documentazione GitHub.
+   Un proprietario dell&#39;organizzazione GitHub deve installare l&#39;app in `https://github.com/apps/cloud-manager-for-aem` e fornire l&#39;accesso all&#39;archivio. Per ulteriori informazioni, consulta la documentazione GitHub.
 
 1. Per una maggiore sicurezza, crea un file segreto nel ramo predefinito dell’archivio. Fai clic su **Genera**.
 
@@ -81,11 +77,11 @@ Cloud Manager ora è a conoscenza del tuo archivio GitHub, ma deve ancora accede
 
 1. Nella finestra di dialogo **Convalida della proprietà dell’archivio privato**, Cloud Manager ha generato il contenuto nel campo **Contenuto del file segreto**. Copia il contenuto da quel campo.
 
-   Il contenuto del file segreto verrà visualizzato una sola volta. Se non copi il contenuto prima di chiudere questa finestra, dovrai rigenerare il file segreto.
+   Il contenuto del file segreto viene visualizzato una sola volta. Se non copi il contenuto prima di chiudere questa finestra, dovrai rigenerare il file segreto.
 
    ![Copia il contenuto del file segreto](/help/assets/repositories/new-secret.png)
 
-1. Crea un nuovo file nel ramo predefinito dell’archivio GitHub denominato `.well-known/adobe/cloud-manager-challenge` e incolla il contenuto del file segreto in tale file e salvalo.
+1. Crea un nuovo file nel ramo predefinito dell&#39;archivio GitHub denominato `.well-known/adobe/cloud-manager-challenge`, incolla il contenuto del file segreto in tale file e salva.
 
 1. Una volta installata l’app e il file segreto è presente nell’archivio, puoi fare clic su **Convalida** nella finestra di dialogo **Convalida della proprietà dell’archivio privato**.
 
@@ -139,7 +135,7 @@ Gli archivi privati convalidati possono essere associati a [pipeline full-stack 
 Quando si utilizzano archivi privati con Cloud Manager si applicano determinate limitazioni.
 
 * Quando si utilizzano archivi privati su pipeline di produzione full stack, non viene creato e né inviato alcun tag Git.
-* Se l’app GitHub di Adobe viene rimossa dall’organizzazione GitHub, la funzione di convalida delle richieste pull verrà rimossa per tutti gli archivi.
+* Se l’app GitHub Adobe viene rimossa dall’organizzazione GitHub, questa azione rimuove la funzione di convalida della richiesta di pull per tutti gli archivi.
 * Le pipeline che utilizzano archivi privati e il trigger di build on-commit non vengono avviati automaticamente quando un nuovo commit viene inviato al ramo selezionato.
 * La [funzionalità di riutilizzo degli artefatti](/help/getting-started/project-setup.md#build-artifact-reuse) non si applica agli archivi privati.
 * Non puoi mettere in pausa la convalida della richiesta pull tramite la verifica GitHub di Cloud Manager. Se l’archivio GitHub viene convalidato in Cloud Manager, Cloud Manager tenta di convalidare le richieste pull create per quell’archivio.
