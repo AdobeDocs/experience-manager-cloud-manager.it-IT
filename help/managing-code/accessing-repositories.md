@@ -3,15 +3,12 @@ title: Informazioni di accesso all’archivio
 description: Scopri come accedere e gestire gli archivi Git gestiti da Adobe utilizzando la gestione account Git self-service da Cloud Manager.
 exl-id: 1cc88c82-67c7-4553-a1b8-d2ab22be466c
 TQID: https://experienceleague.adobe.com/S3oIN4DvfYCvKQLGQmFtWlqHcN5Mv9xvoNKjaMnNlm0
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: c1c7a8a36bd770401393fe7e2c62b306c1a2573d
 workflow-type: tm+mt
-source-wordcount: 403
-ht-degree: 100%
+source-wordcount: 400
+ht-degree: 72%
 
 ---
 
@@ -21,14 +18,14 @@ Scopri come accedere e gestire gli archivi Git gestiti da Adobe utilizzando la g
 
 ## Accesso ai dati dell’archivio dalla pagina Panoramica {#overview-page}
 
-Cloud Manager consente di recuperare facilmente le informazioni di accesso agli archivi gestiti da Adobe mediante **Accedi a dati archivio** dalla scheda **Pipeline**.
+Con Cloud Manager, puoi recuperare le informazioni di accesso all&#39;archivio per gli archivi gestiti da Adobe utilizzando **Accedi a dati archivio** dalla scheda **Pipeline**.
 
 La finestra di dialogo **Informazioni archivio** consente di visualizzare le seguenti informazioni di accesso per gli archivi gestiti da Adobe:
 
 * Il nome utente di Git.
 * La password di Git.
 * L’URL dell’archivio Git di Cloud Manager.
-* Comandi Git predefiniti per aggiungere rapidamente un remoto all’archivio Git e inviare il codice.
+* Comandi Git pregenerati per aggiungere un remoto all’archivio Git e inviare il codice.
 
   ![Finestra dati archivio](assets/repository-info.png)
 
@@ -44,7 +41,7 @@ La funzione **Accedi a dati archivio** è visibile agli utenti con i ruoli **Svi
 
    ![Accedi a dati archivio nella scheda Pipeline](/help/managing-code/assets/pipelines-card2.png)
 
-1. Per accedere alla password, è necessario generare una nuova password. Nella finestra di dialogo **Informazioni archivio**, seleziona **Genera password**.
+1. Per accedere alla password, devi generare una nuova password. Nella finestra di dialogo **Informazioni archivio**, seleziona **Genera password**.
 
 1. Nella finestra di dialogo di conferma, seleziona **Genera password**.
 
@@ -52,11 +49,11 @@ La funzione **Accedi a dati archivio** è visibile agli utenti con i ruoli **Svi
 
    * La generazione di una password invalida la password precedente.
    * Cloud Manager non salverà la password. È tua responsabilità salvare la password in modo sicuro.
-   * Se la password viene persa, è necessario rigenerarne una nuova, poiché Cloud Manager non la salva.
+   * Poiché Cloud Manager non salva la password, se la si perde è necessario generarne una nuova.
 
    ![Copia password nella finestra di dialogo Informazioni archivio](/help/managing-code/assets/repository-copy-password.png)
 
-Con queste credenziali puoi clonare una copia locale dell’archivio, apportare qui le modifiche e, una volta terminato, riconfermarle nell’archivio del codice remoto in Cloud Manager.
+Utilizzando queste credenziali, puoi clonare una copia locale dell’archivio, apportare modifiche all’archivio locale e, una volta pronto, inviare nuovamente eventuali modifiche al codice nell’archivio del codice remoto in Cloud Manager.
 
 ## Accesso alle informazioni dell’archivio dalla finestra Archivi {#repositories-window}
 
@@ -66,4 +63,4 @@ La funzione **Accedi a dati archivio** è disponibile anche nella pagina [**Arch
 
 Puoi revocare una password di accesso in qualsiasi momento.
 
-Per farlo, [crea un ticket di supporto per questa richiesta](https://experienceleague.adobe.com/it?support-solution=Experience+Manager&support-tab=home?lang=it#support). Il ticket sarà trattato con priorità alta e solitamente revocato nell’arco di una giornata.
+Per farlo, [crea un ticket di supporto per questa richiesta](https://experienceleague.adobe.com/?support-solution=Experience+Manager&support-tab=home?lang=it#support). Al ticket viene assegnata un’alta priorità e di solito viene risolto entro un giorno.
