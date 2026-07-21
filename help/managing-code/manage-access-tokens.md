@@ -8,10 +8,10 @@ product_v2:
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: b52942282fe5f825181123b3839ef155753c5e23
 workflow-type: tm+mt
-source-wordcount: 387
-ht-degree: 6%
+source-wordcount: 382
+ht-degree: 3%
 
 ---
 
@@ -19,13 +19,13 @@ ht-degree: 6%
 
 Cloud Manager utilizza i token di accesso per gestire archivi ospitati su piattaforme Git esterne. In precedenza, se un token scadeva, era necessario ripetere l’onboarding dell’archivio associato per rimanere operativo.
 
-Ora **Gestisci token di accesso** consente di gestire i token in modo più efficiente. Puoi visualizzare, rinominare o rimuovere i token collegati ai provider Git esterni supportati, inclusi GitHub Enterprise, GitLab, Bitbucket e Azure DevOps.
+Ora **Gestisci token di accesso** consente di gestire i token in modo più efficiente. Puoi gestire i token per i provider Git supportati: GitHub Enterprise, GitLab, Bitbucket e Azure DevOps.
 
 Vedi anche [Aggiungere archivi esterni in Cloud Manager](/help/managing-code/external-repositories.md).
 
 ## Visualizza token di accesso {#view-access-tokens}
 
-1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l’organizzazione appropriata.
+1. Accedi a Cloud Manager all&#39;indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) e seleziona l&#39;organizzazione appropriata.
 1. Nella console **[I miei programmi](/help/getting-started/navigation.md#my-programs-console)**, seleziona il programma di cui desideri gestire il token di accesso Git personalizzato.
 1. Nel menu laterale, in **Programma**, fare clic su ![Icona struttura cartella](https://spectrum.adobe.com/static/icons/workflow_18/Smock_FolderOutline_18_N.svg) **Archivi**.
 1. Fai clic su **Gestisci token di accesso** nell&#39;angolo superiore destro della pagina.

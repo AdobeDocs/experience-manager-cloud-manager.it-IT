@@ -10,10 +10,10 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: c2a6d2f87cf9f9c98f2af818f73b1fb2793c2e46
 workflow-type: tm+mt
-source-wordcount: 421
-ht-degree: 100%
+source-wordcount: 420
+ht-degree: 82%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 100%
 
 I moduli Git secondari possono essere utilizzati per unire il contenuto di più rami tra archivi Git al momento della creazione.
 
-Quando viene eseguito il processo di creazione di Cloud Manager, per prima cosa viene clonato l’archivio della pipeline ed estratto il ramo configurato. Se il ramo contiene un file `.gitmodules` nella directory principale, allora viene eseguito il comando.
+Quando viene eseguito il processo di creazione di Cloud Manager, per prima cosa viene clonato l’archivio della pipeline ed estratto il ramo configurato. Se il ramo contiene un file `.gitmodules` nella directory radice, il comando viene eseguito.
 
 ```
 $ git submodule update --init
@@ -77,9 +77,9 @@ Per ulteriori informazioni sui moduli Git secondari, consulta il [Manuale di rif
 Quando utilizzi dei moduli Git secondari, tieni presente che:
 
 * L’URL Git deve avere esattamente la sintassi descritta sopra.
-* Per motivi di sicurezza, non incorporare le credenziali in questi URL.
+* Per motivi di sicurezza, non includere le credenziali in questi URL.
 * Sono supportati solo i sottomoduli nella directory principale del ramo.
-* I riferimenti ai moduli secondari vengono memorizzati in commit Git specifici. Di conseguenza, quando si apportano modifiche all’archivio dei moduli secondari, il commit a cui si fa riferimento deve essere aggiornato. Ad esempio, utilizzando `git submodule update --remote`.
+* I riferimenti ai moduli secondari vengono memorizzati in commit Git specifici. Di conseguenza, quando vengono apportate modifiche all’archivio dei sottomoduli, è necessario aggiornare il commit di riferimento. Ad esempio, utilizzando `git submodule update --remote`.
 * Se non diversamente necessario, Adobe consiglia di utilizzare moduli secondari “base” eseguendo una `git config -f .gitmodules submodule.<submodule path>.shallow true` per ogni modulo secondario.
 
 
@@ -87,7 +87,7 @@ Quando utilizzi dei moduli Git secondari, tieni presente che:
 
 Il supporto dei moduli Git secondari quando si utilizzano [archivi privati](private-repositories.md) è in gran parte lo stesso di quando si utilizzano archivi Adobe.
 
-Tuttavia, dopo aver configurato il file `pom.xml` e aver eseguito i comandi `git submodule`, affinché Cloud Manager possa rilevare la configurazione del sottomodulo è necessario aggiungere un file `.gitmodules` nella directory principale dell’archivio dell’aggregatore.
+Tuttavia, affinché Cloud Manager possa rilevare la configurazione del modulo secondario, è necessario aggiungere un file `.gitmodules` alla directory principale dell&#39;archivio di aggregazione dopo aver configurato il file `pom.xml` ed eseguito i comandi `git submodule`.
 
 ![File .gitmodules](assets/gitmodules.png)
 
