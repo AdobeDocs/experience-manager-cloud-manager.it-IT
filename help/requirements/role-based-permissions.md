@@ -29,7 +29,7 @@ ht-degree: 85%
 
 ## Ruoli utente {#user-roles}
 
-La gestione dei ruoli per [!UICONTROL Cloud Manager] viene eseguita utilizzando [Admin Console](https://helpx.adobe.com/business/enterprise/plan-your-deployment/basic-concepts/admin-console.html). Qualsiasi utente di [!UICONTROL Cloud Manager] deve essere un membro dell’organizzazione IMS del cliente e disporre del contesto di prodotto di Adobe Managed Services. È possibile fornire appartenenze a ruoli specifici aggiungendo l&#39;utente a un profilo di prodotto [!UICONTROL Cloud Manager] in Admin Console.
+La gestione dei ruoli per [!UICONTROL Cloud Manager] viene eseguita utilizzando [Admin Console](https://helpx.adobe.com/it/business/enterprise/plan-your-deployment/basic-concepts/admin-console.html). Qualsiasi utente di [!UICONTROL Cloud Manager] deve essere un membro dell’organizzazione IMS del cliente e disporre del contesto di prodotto di Adobe Managed Services. È possibile fornire appartenenze a ruoli specifici aggiungendo l&#39;utente a un profilo di prodotto [!UICONTROL Cloud Manager] in Admin Console.
 
 Per ulteriori informazioni su come configurare gli utenti, consulta [Configurazione di utenti e ruoli](/help/requirements/users-and-roles.md).
 
