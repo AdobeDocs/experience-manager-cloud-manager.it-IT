@@ -3,42 +3,32 @@ title: Introduzione a Cloud Manager per AMS
 description: Inizia qui per scoprire Cloud Manager per Adobe Managed Services (AMS) e come consente alle organizzazioni di gestire autonomamente Adobe Experience Manager nel cloud.
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
 TQID: https://experienceleague.adobe.com/VR-H6ubMFgVrkfzDvY4JWYlUtM-Dkztdewr5LiSZK1w
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2:
-  - id: cd2426f1-5719-4006-b8c2-738e5969754b
-  - id: ff09c71c-26a9-449a-85f8-2aeb8ce96100
-subfeature_v2:
-  - id: a4d14782-c381-4db2-89e3-8cf3f31b103c
-  - id: c14b2f98-ee16-4c49-b87b-919c91b01d9d
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754bid: ff09c71c-26a9-449a-85f8-2aeb8ce96100
+subfeature_v2: id: a4d14782-c381-4db2-89e3-8cf3f31b103cid: c14b2f98-ee16-4c49-b87b-919c91b01d9d
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: ee4f497a8bb5fb2d37fd8283721ebc9891f9053a
 workflow-type: tm+mt
-source-wordcount: 1299
-ht-degree: 96%
+source-wordcount: 1266
+ht-degree: 69%
 
 ---
 
 # Introduzione a [!UICONTROL Cloud Manager] per AMS {#introduction-to-cloud-manager}
 
-Inizia qui per scoprire Cloud Manager per Adobe Managed Services (AMS) e come consente alle organizzazioni di gestire autonomamente Adobe Experience Manager nel cloud.
+Per scoprire Cloud Manager for AMS (Adobe Managed Services) e come consente alle organizzazioni di gestire autonomamente Adobe Experience Manager nel cloud, inizia qui.
 
 >[!CONTEXTUALHELP]
 >id="aemcloud_cloudmanager_introduction"
 >title="Introduzione a Cloud Manager per AMS"
->abstract="Consente alle organizzazioni di gestire autonomamente Adobe Experience Manager nel cloud. Include un framework di integrazione continua e distribuzione continua (CI/CD) che consente ai team IT e ai partner dell’implementazione di accelerare la distribuzione di personalizzazioni o aggiornamenti senza compromettere le prestazioni o la sicurezza."
+>abstract="Consente alle organizzazioni di gestire autonomamente Adobe Experience Manager nel cloud utilizzando un framework CI/CD. Questo framework aiuta i team a velocizzare le personalizzazioni o gli aggiornamenti senza compromettere le prestazioni o la sicurezza."
 >additional-url="https://experienceleague.adobe.com/it/docs/experience-manager-learn/cloud-service/cloud-manager/programs#cloud-manager" text="Creare programmi"
 >additional-url="https://experienceleague.adobe.com/it/docs/experience-manager-learn/cloud-service/cloud-manager/environments#cloud-manager" text="Creare ambienti"
 
 ## Introduzione {#introduction}
 
-[!UICONTROL Cloud Manager] per Adobe Experience Manager offre agli sviluppatori la possibilità di creare esperienze cliente significative attraverso flussi di lavoro semplificati, basati sulle best practice di Adobe Experience Manager. Le pipeline CI/CD ottimizzate per Adobe Experience Manager ti consentono di unire facilmente i flussi di lavoro di sviluppo semplicemente archiviando il codice, che può poi essere spostato per essere pronto alla produzione. Durante la fase di creazione, gli aggiornamenti del codice personalizzato vengono accuratamente testati in base alle best practice per fornire ai clienti applicazioni affidabili. Cloud Manager utilizza un approccio API aperto e consente di integrarsi con i sistemi senza interrompere i processi e gli strumenti esistenti.
+[!UICONTROL Cloud Manager] per Adobe Experience Manager offre agli sviluppatori la possibilità di creare esperienze cliente significative attraverso flussi di lavoro semplificati, basati sulle best practice di Adobe Experience Manager. Le pipeline CI/CD ottimizzate per Adobe Experience Manager consentono di unire i flussi di lavoro di sviluppo archiviando il codice, che quindi diventa pronto per la produzione. Durante la fase di creazione, gli aggiornamenti del codice personalizzato vengono accuratamente testati in base alle best practice per fornire ai clienti applicazioni affidabili. Cloud Manager utilizza un approccio API aperto e consente di integrarsi con i sistemi senza interrompere i processi e gli strumenti esistenti.
 
 >[!NOTE]
 >
@@ -48,10 +38,10 @@ Inizia qui per scoprire Cloud Manager per Adobe Managed Services (AMS) e come co
 
 Con Cloud Manager, il team di sviluppo potrà usufruire delle seguenti funzionalità:
 
-* CI/CD (Continuous integration/continuous delivery) del codice per ridurre i tempi di realizzazione da mesi/settimane a giorni/ore.
+* Integrazione continua/distribuzione continua (CI/CD) del codice per ridurre i cicli di sviluppo da mesi/settimane a giorni/ore.
 * Ispezione del codice, test delle prestazioni e convalida di sicurezza basati sulle best practice ed effettuati prima del passaggio alla fase produttiva, al fine di ridurre al minimo le interruzioni di produzione.
 * Connettività API per integrare i processi DevOps esistenti.
-* Funzione di scalabilità automatica che rileva in modo intelligente la necessità di capacità aggiuntive e porta automaticamente online altri segmenti Dispatcher/pubblicazione.
+* Funzione di scalabilità automatica che rileva la necessità di capacità aggiuntive ed esegue automaticamente il provisioning di altri segmenti Dispatcher/publishing.
 
 ![Flusso CI/CD](/help/assets/screen_shot_2018-05-12at73843pm.png)Il flusso di processo CI/CD utilizzato in [!UICONTROL Cloud Manager].
 
@@ -69,11 +59,11 @@ Puoi definire indicatori di prestazioni chiave (KPI, Key Performance Indicators)
 
 ### Pipeline CI/CD {#ci-cd-pipeline}
 
-Una delle funzionalità principali di [!UICONTROL Cloud Manager] è la capacità di sfruttare una pipeline CI/CD ottimizzata per velocizzare la distribuzione di codici personalizzati o aggiornamenti, come l’aggiunta di nuovi componenti sul sito Web.
+Una delle funzionalità principali di [!UICONTROL Cloud Manager] è la possibilità di utilizzare una pipeline CI/CD ottimizzata per velocizzare la distribuzione di codice personalizzato o aggiornamenti, ad esempio l&#39;aggiunta di nuovi componenti sul sito Web.
 
-Puoi configurare e avviare la pipeline CI/CD attraverso l’interfaccia utente di [!UICONTROL Cloud Manager]. Durante l’esecuzione della pipeline viene eseguita un’analisi approfondita del codice per garantire che solo le applicazioni di qualità elevata passino all’ambiente di produzione.
+Puoi configurare e avviare la pipeline CI/CD tramite l&#39;interfaccia utente di [!UICONTROL Cloud Manager]. Durante l’esecuzione della pipeline viene eseguita un’analisi approfondita del codice per garantire che solo le applicazioni di qualità elevata passino all’ambiente di produzione.
 
-Per ulteriori informazioni sulla configurazione della pipeline dall’interfaccia utente di [!UICONTROL Cloud Manager], consulta i documenti [Configurazione delle pipeline di produzione](/help/using/production-pipelines.md) e [Configurazione delle pipeline non di produzione](/help/using/non-production-pipelines.md).
+Per ulteriori informazioni sulla configurazione delle pipeline dall&#39;interfaccia utente di [!UICONTROL Cloud Manager], vedere [Configurazione delle pipeline di produzione](/help/using/production-pipelines.md) e [Configurazione delle pipeline non di produzione](/help/using/non-production-pipelines.md).
 
 ### Modalità di distribuzione flessibili {#flexible-deployment-modes}
 
@@ -81,19 +71,19 @@ Per ulteriori informazioni sulla configurazione della pipeline dall’interfacci
 
 Grazie alla modalità di attivazione automatica, il codice viene distribuito automaticamente in un ambiente in base a eventi specifici, come ad esempio il commit del codice. È inoltre possibile programmare le distribuzioni del codice durante archi temporali specifici, anche al di fuori dell’orario di lavoro.
 
-Indipendentemente dalla modalità di trigger della distribuzione, ogni volta che ne viene attivata una vengono sempre eseguiti controlli di qualità come parte dell’esecuzione della pipeline CI/CD. I controlli di qualità, che comprendono l’ispezione del codice, i test di sicurezza e i test delle prestazioni, sono integrati nella soluzione e possono essere usati subito, senza alcuno sforzo, da te o dai tuoi partner.
+Indipendentemente dalla modalità di trigger della distribuzione, ogni volta che ne viene attivata una vengono sempre eseguiti controlli di qualità come parte dell’esecuzione della pipeline CI/CD. I controlli di qualità includono l’ispezione del codice, i test di sicurezza e i test delle prestazioni, tutti forniti come funzioni standard senza richiedere alcun impegno da parte tua o dei tuoi partner.
 
 Per ulteriori informazioni sulla distribuzione del codice e sui controlli di qualità, consulta il documento [Distribuzione del codice](/help/using/code-deployment.md).
 
 ## Funzioni facoltative in Cloud Manager {#optional-features-in-cloud-manager}
 
-Cloud Manager offre funzioni avanzate aggiuntive che possono essere utili per il progetto a seconda della configurazione dell’ambiente e delle esigenze specifiche. Se queste funzionalità sono di tuo interesse, contatta il tuo Customer Success Engineer (CSE) o il rappresentante Adobe per discuterne ulteriormente.
+Cloud Manager offre funzioni avanzate aggiuntive che consentono di trarre vantaggio dal progetto in base alla configurazione dell’ambiente e alle esigenze specifiche. Per ulteriori informazioni, contatta il tuo Customer Success Engineer (CSE) o rappresentante di Adobe se queste funzioni sono di tuo interesse.
 
 ### Scalabilità automatica {#autoscaling}
 
-Quando l’ambiente di produzione è soggetto a un carico insolitamente elevato, [!UICONTROL Cloud Manager] rileva la necessità di una capacità aggiuntiva e la rende automaticamente disponibile online utilizzando la funzione di scalabilità automatica.
+Quando l&#39;ambiente di produzione è soggetto a un carico insolitamente elevato, [!UICONTROL Cloud Manager] rileva la necessità di una capacità aggiuntiva ed esegue automaticamente il provisioning di tale capacità utilizzando la funzione di scalabilità automatica.
 
-Durante un evento di scalabilità automatica, [!UICONTROL Cloud Manager] attiva automaticamente il processo di provisioning, invia una notifica dell’evento in corso e in pochi minuti rende disponibile la capacità necessaria. La capacità aggiuntiva viene eseguita nell’ambiente di produzione, nelle stesse aree e in conformità alle stesse specifiche di sistema dei nodi Dispatcher/pubblicazione in esecuzione.
+Durante un evento di scalabilità automatica, [!UICONTROL Cloud Manager] attiva automaticamente il processo di provisioning, invia una notifica dell&#39;evento in corso e in pochi minuti esegue il provisioning della capacità aggiuntiva. La capacità aggiuntiva viene fornita nell’ambiente di produzione e nelle stesse aree, in conformità alle specifiche di sistema dei nodi Dispatcher/pubblicazione in esecuzione.
 
 La funzione di scalabilità automatica si applica al livello Dispatcher/pubblicazione, utilizzando la scalabilità orizzontale per aggiungere da uno a dieci segmenti di coppie Dispatcher/pubblicazione. Qualsiasi capacità aggiuntiva applicata verrà scalata manualmente entro un periodo di dieci giorni lavorativi, come determinato dal CSE (Customer Success Engineer).
 
@@ -109,7 +99,7 @@ In qualsiasi momento, solo uno degli ambienti è live, con l’ambiente live che
 
 * La distribuzione blu/verde è un componente aggiuntivo per le pipeline CI/CD di Cloud Manager in cui per le distribuzioni viene creato e utilizzato un secondo set di istanze di pubblicazione e Dispatcher (verde). Le istanze verdi vengono collegate quindi al load balancer di produzione e le istanze precedenti (blu) vengono rimosse e terminate.
 * Questa implementazione blu/verde considera le istanze come transitorie e ogni iterazione di una pipeline blu/verde crea un nuovo set di server di pubblicazione e Dispatcher.
-* Viene creato un load balancer verde come parte della configurazione. Questo load balancer non cambierà mai ed è ciò a cui indirizzare il tuo URL verde o di “test”.
+* Viene creato un load balancer verde come parte della configurazione. Questo load balancer non cambia mai ed è la destinazione dell’URL verde o di &quot;test&quot;.
 * Durante una distribuzione blu/verde, viene creata una replica esatta dei livelli di pubblicazione/Dispatcher esistenti.
 
 #### Flusso di distribuzione blu/verde {#flow}
