@@ -4,17 +4,13 @@ seo-title: Evaluation Phase
 description: Scopri in che modo la fase di valutazione della procedura guidata di aggiornamento del prodotto valuta la complessità dell’aggiornamento con il rilevatore pattern.
 exl-id: 1ffcbc21-dc36-435d-b83b-0209f81a15e7
 TQID: https://experienceleague.adobe.com/dj-Wnq9FagNI3mzzVHcUH-sOufzb02D0juHqhtgpon0
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2:
-  - id: a01bfd36-4ab8-4bf8-9dc0-5b45b890552e
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: a01bfd36-4ab8-4bf8-9dc0-5b45b890552e
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 1b146c2a01d3371ed2fe014a15a84ddee2cd9b6c
 workflow-type: tm+mt
 source-wordcount: 270
-ht-degree: 59%
+ht-degree: 40%
 
 ---
 
@@ -25,7 +21,7 @@ La prima fase della procedura guidata di aggiornamento del prodotto è la fase *
 Il rapporto controlla l’istanza di authoring per verificare la fattibilità dell’aggiornamento rilevando i pattern per i seguenti elementi:
 
 * Violazioni delle regole nelle aree interessate o sovrascritte dall’aggiornamento.
-* Utilizza funzioni o API di AEM 6.x che non sono compatibili con le versioni precedenti e potrebbero interrompersi dopo l’aggiornamento.
+* Rileva funzioni o API di AEM 6.x che non sono compatibili con le versioni precedenti e che potrebbero non riuscire dopo l’aggiornamento.
 
 Questo rapporto consente di stimare lo sforzo di sviluppo necessario per effettuare l’aggiornamento a Adobe Experience Manager (AEM) 6.5.
 
@@ -35,7 +31,7 @@ Questo rapporto consente di stimare lo sforzo di sviluppo necessario per effettu
 
 ## Eseguire il rapporto di valutazione {#running}
 
-Il rilevatore pattern può essere eseguito in qualsiasi ambiente. Tuttavia, per aumentare il tasso di rilevamento ed evitare rallentamenti nelle istanze aziendali critiche, Cloud Manager lo esegue nell’ambiente di staging dell’istanza di authoring.
+Il rilevatore pattern può essere eseguito in qualsiasi ambiente. Tuttavia, per aumentare il tasso di rilevamento ed evitare qualsiasi impatto sulle prestazioni delle istanze critiche, Cloud Manager lo esegue nell’ambiente di staging dell’istanza di authoring.
 
 **Per eseguire il rapporto di valutazione:**
 
@@ -45,10 +41,10 @@ Il rilevatore pattern può essere eseguito in qualsiasi ambiente. Tuttavia, per 
 
    ![Esegui valutazione](/help/assets/Run-Evaluation.png)
 
-1. La procedura guidata ti informa sullo stato dell’azione. Al momento della generazione del rapporto di valutazione, noterai la dicitura **in corso** o **completato**, a seconda dei casi.
+1. La procedura guidata ti informa sullo stato dell’azione. Nota **In corso** o **Completata**, a seconda dei casi, durante la generazione del report di valutazione.
 
 1. Una volta generato il rapporto, puoi fare clic su **[!UICONTROL Scarica rapporto]** per salvarne una copia.
 
    ![Rapporto creato](/help/assets/Evaluation-1.png)
 
-L&#39;attuale procedura guidata di aggiornamento del prodotto in Cloud Manager supporta solo la fase **Valutazione**. Le altre quattro fasi **Rimedio**, **Esecuzione**, **Convalida** e **Completamento** saranno presto disponibili.
+L&#39;attuale procedura guidata di aggiornamento del prodotto in Cloud Manager supporta solo la fase **Valutazione**. Le altre quattro fasi, ovvero **Rimedio**, **Esecuzione**, **Convalida** e **Completamento**, saranno presto disponibili.
