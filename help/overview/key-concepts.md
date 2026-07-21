@@ -3,27 +3,23 @@ title: Concetti fondamentali
 description: Come tutti gli strumenti potenti, Cloud Manager include molti concetti e termini. Questo documento riepiloga alcuni dei più importanti per iniziare a utilizzare Cloud Manager.
 exl-id: 86dfc976-f3da-479a-9faa-08f40ca909e0
 TQID: https://experienceleague.adobe.com/usnXqDujeZ04U5hOtiI76aemlj-ceToAOtAYS9U0UuM
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2:
-  - id: cd2426f1-5719-4006-b8c2-738e5969754b
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754b
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 628eceafe63153d64151937df85937135bdc8e7b
 workflow-type: tm+mt
-source-wordcount: 431
-ht-degree: 95%
+source-wordcount: 421
+ht-degree: 60%
 
 ---
 
 # Concetti fondamentali {#key-concepts}
 
-Come tutti gli strumenti potenti, Cloud Manager include molti concetti e termini. Questo documento riepiloga alcuni dei più importanti per iniziare a utilizzare Cloud Manager.
+Cloud Manager include molti concetti e termini. Questo articolo riassume alcuni dei concetti più importanti per iniziare a utilizzare Cloud Manager.
 
 ## Applicazione {#application}
 
-Un’applicazione è il set di personalizzazioni e configurazioni create da un cliente per adattare la [soluzione](#solution) sottostante (ad esempio AEM Sites o AEM Assets) ai casi d’uso e alle esigenze specifiche. Un’applicazione è un’unità logica che può essere composta da più [artefatti](#artifact).
+Un’applicazione è il set di personalizzazioni e configurazioni create da un cliente per adattare la [soluzione](#solution) sottostante (ad esempio AEM Sites o AEM Assets) ai casi d’uso e alle esigenze specifiche. Un&#39;applicazione è un&#39;unità logica composta da più [artefatti](#artifact).
 
 Un’applicazione di esempio è l’[Applicazione WKND lifestyle](https://experienceleague.adobe.com/it/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview) fittizia.
 
@@ -53,15 +49,15 @@ Un’organizzazione è un costrutto di Adobe che rappresenta un cliente aziendal
 
 ## Pipeline {#pipeline}
 
-Una pipeline è un insieme di passaggi di distribuzione eseguiti in sequenza.
+Una pipeline è un set di passaggi di distribuzione eseguiti in sequenza.
 
 ## Prodotto {#product}
 
-Un prodotto è un set specifico di funzionalità all’interno di una [soluzione](#solution) concessa in licenza da un&#39;organizzazione. Diversi [programmi](#program) all’interno di un’organizzazione possono essere autorizzati all’utilizzo di diversi set di prodotti, ad esempio AEM Sites, AEM Assets o AEM Forms.
+Un prodotto è un set specifico di funzionalità all’interno di una [soluzione](#solution) concessa in licenza da un&#39;organizzazione. Diversi [programmi](#program) all&#39;interno di un&#39;organizzazione hanno diritto a diversi set di prodotti, ad esempio AEM Sites, AEM Assets o AEM Forms.
 
 ## Programma {#program}
 
-Un programma è un set di ambienti che supporta un raggruppamento logico di iniziative dei clienti, di solito corrispondente agli accordi sul livello del servizio acquistato (SLA). Ogni programma dispone esattamente un ambiente di produzione e può avere molti ambienti non di produzione.
+Un programma è un insieme di ambienti che supportano un raggruppamento logico di iniziative dei clienti, di solito corrispondente a un service level agreement (SLA) acquistato. Ogni programma dispone esattamente di un ambiente di produzione e molti ambienti non di produzione.
 
 ## Soluzione {#solution}
 
@@ -69,4 +65,4 @@ Una soluzione è una delle soluzioni di Adobe [!UICONTROL Experience Cloud]. Ad 
 
 ## Passaggio {#step}
 
-Un passaggio è un set di istruzioni configurato che esegue alcune unità di lavoro come blocco predefinito di una [pipeline](#pipeline).
+Un passaggio è un set di istruzioni configurato che esegue alcune unità di lavoro come componente di una [pipeline](#pipeline).
