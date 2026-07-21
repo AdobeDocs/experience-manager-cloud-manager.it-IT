@@ -3,11 +3,8 @@ title: Informazioni di accesso all’archivio
 description: Scopri come accedere e gestire gli archivi Git gestiti da Adobe utilizzando la gestione account Git self-service da Cloud Manager.
 exl-id: 1cc88c82-67c7-4553-a1b8-d2ab22be466c
 TQID: https://experienceleague.adobe.com/S3oIN4DvfYCvKQLGQmFtWlqHcN5Mv9xvoNKjaMnNlm0
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 source-git-commit: c1c7a8a36bd770401393fe7e2c62b306c1a2573d
 workflow-type: tm+mt
 source-wordcount: 400
@@ -66,4 +63,4 @@ La funzione **Accedi a dati archivio** è disponibile anche nella pagina [**Arch
 
 Puoi revocare una password di accesso in qualsiasi momento.
 
-Per farlo, [crea un ticket di supporto per questa richiesta](https://experienceleague.adobe.com/it?support-solution=Experience+Manager&support-tab=home?lang=it#support). Al ticket viene assegnata un’alta priorità e di solito viene risolto entro un giorno.
+Per farlo, [crea un ticket di supporto per questa richiesta](https://experienceleague.adobe.com/?support-solution=Experience+Manager&support-tab=home?lang=it#support). Al ticket viene assegnata un’alta priorità e di solito viene risolto entro un giorno.
