@@ -135,4 +135,4 @@ La sezione **Analisi degli eventi** sotto questo grafico mostra l’insieme di i
 
 Questo video offre una panoramica dell’utilizzo dei grafici prodotti dai rapporti di Cloud Manager per monitorare gli ambienti dei programmi.
 
->[!VIDEO](https://video.tv.adobe.com/v/26315/)
+>[!VIDEO](https://video.tv.adobe.com/v/328128?captions=ita)
