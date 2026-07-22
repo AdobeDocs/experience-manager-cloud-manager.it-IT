@@ -3,39 +3,36 @@ title: Aggiungere una pipeline non di produzione
 description: Scopri come utilizzare Cloud Manager per creare e configurare pipeline non di produzione per distribuire il codice.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
 TQID: https://experienceleague.adobe.com/Dj7SjKdao6RU-cIS7D1AQxg5qpKrJMTcYQJBfiqc-Gg
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 4c73ab16ff7eab406c31a6d26cdd09360a94b3ea
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 38a0aa1ab543c976c8e7526ac2ba78d06c9b06d6
 workflow-type: tm+mt
-source-wordcount: 2080
-ht-degree: 22%
+source-wordcount: 2070
+ht-degree: 20%
 
 ---
 
 # Aggiungere una pipeline non di produzione {#configuring-non-production-pipelines}
 
-Scopri come utilizzare Cloud Manager per creare e configurare pipeline non di produzione per distribuire il codice. Per una panoramica delle nozioni di base sul funzionamento delle pipeline in Cloud Manager, consulta [Pipeline CI/CD](/help/overview/ci-cd-pipelines.md).
+Scopri come utilizzare Cloud Manager per creare e configurare pipeline non di produzione per distribuire il codice. Per una panoramica delle nozioni di base sul funzionamento delle pipeline in Cloud Manager, vedi [Pipeline CI/CD](/help/overview/ci-cd-pipelines.md).
 
 ## Panoramica {#overview}
 
 Utilizzando il riquadro **Pipeline** in [!UICONTROL Cloud Manager], il **Responsabile della distribuzione** può creare due diversi tipi di pipeline.
 
-* **Pipeline di produzione**: una pipeline di produzione è una pipeline appositamente creata composta da una serie di passaggi orchestrati per portare il codice sorgente fino alla produzione.
+* **Pipeline di produzione**: una pipeline di produzione è una pipeline appositamente creata composta da una serie di passaggi orchestrati per distribuire il codice sorgente in produzione.
 * **Pipeline non di produzione**: una pipeline non di produzione serve principalmente per eseguire scansioni di qualità del codice o per distribuire il codice sorgente in un ambiente di sviluppo.
 
 Questo documento si concentra sulle pipeline non di produzione. Per informazioni dettagliate su come configurare le pipeline di produzione, consulta il documento [Configurazione delle pipeline di produzione](/help/using/production-pipelines.md).
 
 Esistono due tipi di pipeline non di produzione:
 
-* **Pipeline di qualità del codice**: eseguono controlli di qualità del codice in un ramo Git e i passaggi di generazione e qualità del codice.
+* **Pipeline di qualità del codice**: eseguono controlli di qualità del codice in un ramo Git ed eseguono i passaggi di generazione e qualità del codice.
 * **Pipeline di implementazione**: oltre a eseguire i passaggi di generazione e qualità del codice come le pipeline di qualità del codice, queste pipeline implementano il codice in un ambiente non di produzione.
 
 >[!NOTE]
 >
->Non puoi impostare una pipeline finché il relativo archivio Git associato non dispone di almeno un ramo e la [configurazione del programma](/help/getting-started/program-setup.md) non è stata completata. Consulta il documento [Archivi di Cloud Manager](/help/managing-code/managing-repositories.md) per scoprire come aggiungere e gestire gli archivi in Cloud Manager.
+>Non puoi impostare una pipeline finché il relativo archivio Git associato non dispone di almeno un ramo e la [configurazione del programma](/help/getting-started/program-setup.md) non è stata completata. Per informazioni su come aggiungere e gestire archivi in Cloud Manager, vedere [Archivi Cloud Manager](/help/managing-code/managing-repositories.md).
 
 ## Aggiungere una pipeline non di produzione {#add-non-production-pipeline}
 
@@ -127,7 +124,7 @@ Se esiste già una pipeline full stack, Cloud Manager visualizza un avviso che l
 
 1. Fai clic su **Salva**.
 
-## Informazioni sull’utilizzo di Smart Build nella pipeline non di produzione{#about-smart-build}
+## Utilizzare Smart Build nella pipeline non di produzione{#about-smart-build}
 
 **Smart Build** in Cloud Manager è una strategia di compilazione ottimizzata per le pipeline non di produzione. Smart Build riduce i tempi di generazione memorizzando nella cache i moduli e ricostruendo solo quelli che sono stati modificati dopo l’ultima esecuzione riuscita. I moduli invariati vengono riutilizzati dalla cache, mentre vengono ricostruiti solo i moduli modificati e le relative dipendenze, migliorando l’efficienza dei flussi di lavoro di sviluppo iterativi.
 
@@ -160,7 +157,7 @@ Il miglioramento delle prestazioni derivante dall’utilizzo di Smart Build dipe
 * Frequenza e ambito delle modifiche al codice.
 * La distribuzione delle dipendenze tra i moduli.
 
-In generale, i progetti con molti moduli indipendenti possono vedere il miglioramento maggiore.
+I progetti con molti moduli indipendenti possono vedere il miglioramento maggiore.
 
 ### Rinuncia alla cache per modulo{#smart-build-cache-optout}
 
@@ -187,13 +184,13 @@ Questa sintassi forza la ricostruzione del modulo su ogni esecuzione della pipel
 Quando usi Smart Build, tieni presente quanto segue:
 
 * Smart Build si basa sull’analisi delle dipendenze Maven.
-* Le modifiche che non rientrano nel grafico delle dipendenze potrebbero non attivare le ricompilazioni.
-* Alcuni plug-in potrebbero non essere completamente compatibili con il caching.
+* Le modifiche che non rientrano nel grafico delle dipendenze non attivano le ricompilazioni.
+* Alcuni plug-in non sono completamente compatibili con il caching.
 * Puoi tornare a **Build completa** in qualsiasi momento modificando la pipeline non di produzione.
 
 Se si verifica un comportamento di compilazione imprevisto, è consigliabile disabilitare la memorizzazione nella cache per moduli specifici o cambiare temporaneamente la strategia di compilazione in **Build completa**.
 
-### Risoluzione dei problemi di Smart Build{#smart-build-troubleshoot}
+### Risolvere i problemi di Smart Build{#smart-build-troubleshoot}
 
 | Problema | Soluzioni consigliate |
 | --- | --- |
@@ -247,4 +244,4 @@ Dopo aver configurato la pipeline, puoi distribuire il codice. Per ulteriori det
 
 Questo video fornisce una panoramica del processo di creazione della pipeline, descritto in questo documento.
 
->[!VIDEO](https://video.tv.adobe.com/v/328577?captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/26316/)
