@@ -73,6 +73,6 @@ Nella schermata **Ambienti** vengono visualizzati tutti gli ambienti di produzio
 
 Questo video fornisce un’introduzione agli ambienti Cloud Manager composti da istanze di authoring, pubblicazione e Dispatcher di AEM.
 
->[!VIDEO](https://video.tv.adobe.com/v/26318/)
+>[!VIDEO](https://video.tv.adobe.com/v/328127?captions=ita)
 
 *(3 minuti, 1 secondo)*
