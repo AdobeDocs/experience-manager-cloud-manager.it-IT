@@ -118,7 +118,7 @@ Ora puoi assegnare gli utenti al nuovo profilo di prodotto creato con le autoriz
 
 1. Fai clic sul pulsante **Aggiungi utenti** e assegna gli utenti al tuo nuovo profilo di prodotto con autorizzazioni personalizzate.
 
-Consulta **Aggiungere utenti e gruppi di utenti a un profilo di prodotto** nel documento [Gestire i profili di prodotto per gli utenti Enterprise](https://helpx.adobe.com/business/enterprise/manage-products-and-entitlements/manage-products-and-product-profiles/manage-product-profiles.html) per ulteriori dettagli su come utilizzare Admin Console.
+Consulta **Aggiungere utenti e gruppi di utenti a un profilo di prodotto** nel documento [Gestire i profili di prodotto per gli utenti Enterprise](https://helpx.adobe.com/it/business/enterprise/manage-products-and-entitlements/manage-products-and-product-profiles/manage-product-profiles.html) per ulteriori dettagli su come utilizzare Admin Console.
 
 ## Autorizzazioni configurabili {#configurable-permissions}
 
