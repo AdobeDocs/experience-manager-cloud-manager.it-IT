@@ -16,9 +16,9 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 694d3e8dad6e2ba86186a4bf6fdda3739e1041da
+source-git-commit: f83ddaa74a656abd2328cd3969ff0cc10b79d729
 workflow-type: tm+mt
-source-wordcount: 1122
+source-wordcount: 1085
 ht-degree: 50%
 
 ---
@@ -71,17 +71,18 @@ Si applicano le seguenti restrizioni.
 Di seguito viene descritto il modo in cui la pipeline full stack interagisce con una [pipeline di configurazione a livello web](#web-tier-config-pipelines).
 
 * La pipeline full stack per un ambiente ignora la configurazione Dispatcher se esiste la pipeline di configurazione a livello web corrispondente.
-* Se la pipeline di configurazione a livello web corrispondente per l’ambiente non esiste, l’utente può configurare la pipeline full stack per includere o ignorare la configurazione Dispatcher.
+* Se la pipeline di configurazione a livello web corrispondente per l’ambiente non esiste, l’utente può includere o ignorare la configurazione Dispatcher durante la configurazione della pipeline full stack.
 
 Le pipeline full stack possono essere di qualità del codice o di distribuzione.
 
 #### Configurare le pipeline full stack {#configure-full-stack}
 
-Consulta [Aggiungere una pipeline di produzione](/help/using/production-pipelines.md#full-stack-code).Consulta [Aggiungere una pipeline non di produzione](/help/using/non-production-pipelines.md#add-non-production-pipeline).
+Consulta [Aggiungere una pipeline di produzione](/help/using/production-pipelines.md#full-stack-code).
+Consulta [Aggiungere una pipeline non di produzione](/help/using/non-production-pipelines.md#add-non-production-pipeline).
 
 ### Pipeline di configurazione a livello web {#web-tier-config-pipelines}
 
-Le pipeline di configurazione a livello web consentono la distribuzione esclusiva della configurazione HTTPD/Dispatcher nel runtime di AEM, separandola dalle altre modifiche al codice. Si tratta di una pipeline semplificata che offre agli utenti che desiderano implementare solo le modifiche alla configurazione di Dispatcher un metodo accelerato per farlo in pochi minuti.
+Le pipeline di configurazione a livello web consentono la distribuzione esclusiva della configurazione HTTPD/Dispatcher nel runtime di AEM, separandola dalle altre modifiche al codice. Si tratta di una pipeline semplificata che offre agli utenti che desiderano implementare solo le modifiche di configurazione Dispatcher un mezzo efficiente per farlo rapidamente.
 
 >[!TIP]
 >
@@ -105,11 +106,12 @@ Di seguito viene descritto il modo in cui la pipeline di configurazione a livell
 
 #### Configurare le pipeline a livello web {#configure-web-tier}
 
-Consulta [Aggiungere una pipeline di produzione](/help/using/production-pipelines.md#web-tier-config).Consulta [Aggiungere una pipeline non di produzione](/help/using/non-production-pipelines.md#add-non-production-pipeline).
+Consulta [Aggiungere una pipeline di produzione](/help/using/production-pipelines.md#web-tier-config).
+Consulta [Aggiungere una pipeline non di produzione](/help/using/non-production-pipelines.md#add-non-production-pipeline).
 
 ### Build più veloci con Smart Build {#use=smart-build}
 
-Cloud Manager utilizza ora una strategia di compilazione ottimizzata denominata **Smart Build**, che utilizza la memorizzazione nella cache a livello di modulo per velocizzare il processo di compilazione. Durante ogni build, vengono rigenerati solo i moduli che sono stati modificati, mentre i moduli non modificati vengono riutilizzati dalla cache.
+Cloud Manager utilizza ora una strategia di compilazione ottimizzata denominata **Smart Build**, che utilizza la memorizzazione nella cache a livello di modulo per accelerare il processo di compilazione. Durante ogni build, vengono rigenerati solo i moduli che sono stati modificati, mentre i moduli non modificati vengono riutilizzati dalla cache.
 
 Smart Build è disponibile per le pipeline di distribuzione di qualità del codice e full stack (sviluppo, staging, produzione).
 
@@ -131,7 +133,7 @@ La pipeline CI/CD fornisce gate di qualità, o criteri di accettazione, che devo
 Per ciascuno di questi gate, è possibile identificare tre livelli di problemi:
 
 * **Critico**: i problemi critici individuati dal gate causano un errore immediato della pipeline.
-* **Importante**: i problemi importanti identificati dal gate fanno sì che la pipeline entri in uno stato di pausa. Un Responsabile della distribuzione, un Project manager o un Proprietario business può ignorare i problemi, consentendo alla pipeline di procedere. In alternativa, possono accettare i problemi, causando l’interruzione della pipeline con un errore.
+* **Importante**: i problemi importanti identificati dal gate fanno sì che la pipeline entri in uno stato di pausa. Un Responsabile dell’implementazione, un Project Manager o un lead di business può ignorare i problemi, consentendo alla pipeline di procedere. In alternativa, possono accettare i problemi, causando l’interruzione della pipeline con un errore.
 * **Informazioni**: le problematiche di tipo informazione individuate dal gate sono fornite a scopo puramente informativo e non hanno alcun impatto sull’esecuzione della pipeline.
 
 L’esempio seguente è un’analisi del codice con problemi identificati.

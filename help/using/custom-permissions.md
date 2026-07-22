@@ -10,16 +10,16 @@ feature_v2:
   - id: cd2426f1-5719-4006-b8c2-738e5969754b
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: f6d27e47bd3d0c468b2382901e47094cce51390d
 workflow-type: tm+mt
-source-wordcount: 1391
-ht-degree: 97%
+source-wordcount: 1407
+ht-degree: 78%
 
 ---
 
 # Autorizzazioni personalizzate {#custom-permissions}
 
-Scopri come utilizzare le autorizzazioni personalizzate per creare nuovi profili con autorizzazioni personalizzate e configurabili per limitare l’accesso a programmi, pipeline e ambienti per gli utenti di Cloud Manager.
+Scopri come utilizzare le autorizzazioni personalizzate per creare nuovi profili di autorizzazioni personalizzati con autorizzazioni configurabili per limitare l’accesso a programmi, pipeline e ambienti per gli utenti di Cloud Manager.
 
 ## Introduzione {#introduction}
 
@@ -30,7 +30,7 @@ Cloud Manager dispone di un set di ruoli predefiniti che determinano l’accesso
 * Responsabile della distribuzione
 * Sviluppatore
 
-Le autorizzazioni personalizzate consentono agli utenti di creare nuovi profili di autorizzazioni personalizzati con autorizzazioni configurabili per limitare l’accesso a programmi, pipeline e ambienti per gli utenti di Cloud Manager.
+Le autorizzazioni personalizzate consentono agli utenti di creare nuovi profili di autorizzazione personalizzati con autorizzazioni configurabili per limitare l’accesso degli utenti di Cloud Manager a programmi, pipeline e ambienti.
 
 >[!TIP]
 >
@@ -44,21 +44,23 @@ La creazione e l’utilizzo di autorizzazioni personalizzate richiede i tre pass
 1. [Assegnare autorizzazioni personalizzate al nuovo profilo di prodotto](#assign-permissions).
 1. [Assegnare gli utenti al nuovo profilo di prodotto](#assign-users).
 
-Questa sezione descrive questi passaggi. Durante la creazione delle autorizzazioni personalizzate, potrebbe essere utile consultare le sezioni [Termini](#terms) e [Autorizzazioni configurabili](#configurable-permissions).
+Questa sezione descrive questi passaggi. Durante la creazione di autorizzazioni personalizzate, consulta le sezioni [Termini](#terms) e [Autorizzazioni configurabili](#configurable-permissions).
 
 >[!NOTE]
 >
->Per creare nuovi profili e gestire le autorizzazioni per Cloud Manager, è necessario disporre dei diritti di amministratore del prodotto in Admin Console.
+>Per creare nuovi profili e gestire le autorizzazioni per Cloud Manager, devi disporre dei diritti di amministratore del prodotto in Admin Console.
 
 ### Creare un nuovo profilo di prodotto {#create}
 
 Per prima cosa è necessario creare un nuovo profilo di prodotto a cui assegnare le autorizzazioni personalizzate.
 
+**Per creare un nuovo profilo di prodotto:**
+
 1. Accedi a Cloud Manager all’indirizzo [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/)
 
 1. Seleziona il prodotto **AEM Managed Services**.
 
-1. Cerca un’istanza con un nome corrispondente al pattern `*-cloud-manager` e fai clic per gestire gli utenti e le autorizzazioni.
+1. Cercare un&#39;istanza il cui nome corrisponde al pattern `*-cloud-manager` e selezionarla per gestire utenti e autorizzazioni.
 
 1. Viene aperta la scheda **Prodotti** di Admin Console, in cui puoi gestire gli utenti e le autorizzazioni per Cloud Manager. In Admin Console fai clic su **Nuovo profilo**.
 
@@ -79,7 +81,9 @@ Il nuovo profilo di prodotto viene salvato ed è visibile nell’elenco dei prof
 
 Ora che disponi di un nuovo profilo di prodotto, puoi assegnargli le autorizzazioni personalizzate.
 
-1. In Admin Console, fai clic sul nome del [nuovo profilo di prodotto appena creato](#create).
+**Per assegnare le autorizzazioni personalizzate al nuovo profilo di prodotto:**
+
+1. In Admin Console, fai clic sul nome del [nuovo profilo di prodotto](#create).
 
 1. Nella finestra visualizzata, seleziona la scheda **Autorizzazioni** per visualizzare un elenco di autorizzazioni modificabili.
 
@@ -106,13 +110,15 @@ Il nuovo profilo di prodotto viene ora salvato con le relative autorizzazioni pe
 
 Ora puoi assegnare gli utenti al nuovo profilo di prodotto creato con le autorizzazioni personalizzate.
 
-1. In Admin Console, fai clic sul nome del [nuovo profilo di prodotto a cui hai appena assegnato le autorizzazioni personalizzate.](#assign-permissions)
+**Per assegnare gli utenti al nuovo profilo di prodotto:**
+
+1. In Admin Console, fai clic sul nome del [nuovo profilo di prodotto a cui hai assegnato le autorizzazioni personalizzate](#assign-permissions).
 
 1. Nella finestra visualizzata, seleziona la scheda **Utenti**.
 
 1. Fai clic sul pulsante **Aggiungi utenti** e assegna gli utenti al tuo nuovo profilo di prodotto con autorizzazioni personalizzate.
 
-Consulta **Aggiungere utenti e gruppi di utenti a un profilo di prodotto** nel documento [Gestire i profili di prodotto per gli utenti Enterprise](https://helpx.adobe.com/it/enterprise/using/manage-product-profiles.html) per ulteriori dettagli su come utilizzare Admin Console.
+Consulta **Aggiungere utenti e gruppi di utenti a un profilo di prodotto** nel documento [Gestire i profili di prodotto per gli utenti Enterprise](https://helpx.adobe.com/it/business/enterprise/manage-products-and-entitlements/manage-products-and-product-profiles/manage-product-profiles.html) per ulteriori dettagli su come utilizzare Admin Console.
 
 ## Autorizzazioni configurabili {#configurable-permissions}
 
@@ -141,7 +147,7 @@ Per creare profili personalizzati sono disponibili le seguenti autorizzazioni.
 
 Le autorizzazioni a livello di organizzazione vengono sempre applicate a tutti i programmi all’interno di un’organizzazione.
 
-Un esempio di autorizzazione a livello di organizzazione in Cloud Manager è **Accesso alle informazioni dell’archivio**. Questa autorizzazione consente agli utenti di generare un nome utente, una password e un URL dell’archivio per accedere e contribuire ai progetti della clientela. Anche se il nome utente e la password rimangono coerenti in tutti gli archivi dell’organizzazione, ogni programma ha un URL di archivio univoco.
+Un esempio di autorizzazione a livello di organizzazione in Cloud Manager è **Accesso alle informazioni dell’archivio**. Questa autorizzazione consente agli utenti di generare un nome utente, una password e un URL dell’archivio per accedere e contribuire ai progetti della clientela. Anche se il nome utente e la password sono gli stessi in tutti gli archivi dell’organizzazione, ogni programma ha un URL di archivio univoco.
 
 Per ulteriori informazioni, consulta [Archivio del codice sorgente](/help/requirements/source-code-repository.md).
 
@@ -168,15 +174,15 @@ Gli elementi di autorizzazione si riferiscono all’ambito in cui verranno appli
 
 ## Limitazioni {#limitations}
 
-Quando utilizzi autorizzazioni personalizzate, tieni presente le seguenti limitazioni:
+Quando utilizzi le autorizzazioni personalizzate, considera le seguenti limitazioni:
 
 * [È disponibile un set limitato di autorizzazioni](#configurable-permissions) per creare profili personalizzati.
-* Le risorse come programma, ambiente, pipeline, ecc. create in Cloud Manager potrebbero richiedere due minuti per essere visualizzate in Admin Console per la configurazione delle autorizzazioni.
-* In rari scenari in cui il servizio di autorizzazioni personalizzate non risponde, i profili predefiniti restano ancora disponibili e gli utenti nei profili predefiniti dispongono ancora dell’accesso appropriato.
+* Risorse come programmi, ambienti e pipeline create in Cloud Manager richiedono due minuti per essere visualizzate in Admin Console per la configurazione delle autorizzazioni.
+* Se un servizio di autorizzazioni personalizzate non risponde, i profili predefiniti sono ancora disponibili e gli utenti in profili predefiniti dispongono ancora dell’accesso appropriato.
 
 ## Domande frequenti {#faq}
 
-### Quali profili di autorizzazione sono profili di autorizzazione predefiniti?
+### Quali profili di autorizzazione sono predefiniti?
 
 * Proprietario business
 * Responsabile del programma
@@ -185,13 +191,13 @@ Quando utilizzi autorizzazioni personalizzate, tieni presente le seguenti limita
 
 Per informazioni dettagliate sui ruoli predefiniti, consulta [Autorizzazioni basate sul ruolo](/help/requirements/role-based-permissions.md).
 
-### Cosa succederà ai profili di autorizzazione predefiniti con l’introduzione dei profili personalizzati?
+### Cosa succede ai profili di autorizzazione predefiniti quando vengono introdotti i profili personalizzati?
 
 I profili di prodotto predefiniti e i ruoli di Cloud Manager continuano a funzionare come prima.
 
 ### È possibile modificare i profili di autorizzazione predefiniti?
 
-No, i profili predefiniti non sono modificabili. Non è possibile aggiungere o rimuovere autorizzazioni al profilo di autorizzazione predefinito. È possibile aggiungere o rimuovere utenti solo dai profili predefiniti.
+No, i profili predefiniti non sono modificabili. Impossibile aggiungere o rimuovere autorizzazioni dal profilo di autorizzazione predefinito. È possibile aggiungere o rimuovere utenti solo dai profili predefiniti.
 
 ### È necessario eliminare i profili di autorizzazione predefiniti poiché ora sono disponibili i profili personalizzati?
 
@@ -199,7 +205,7 @@ I profili di autorizzazione predefiniti non devono essere eliminati da Admin Con
 
 ### È possibile aggiungere utenti a più profili di autorizzazione?
 
-Sì, un utente può far parte di più profili, inclusi profili di autorizzazione predefiniti e personalizzati. Un utente assegnato a più profili ha a disposizione le autorizzazioni combinate di tutti i profili di autorizzazione assegnati.
+Sì. Gli utenti possono far parte di più profili, compresi profili di autorizzazione predefiniti e personalizzati. Un utente assegnato a più profili ha a disposizione le autorizzazioni combinate di tutti i profili di autorizzazione assegnati.
 
 ### Cosa succede se un utente dispone dell’autorizzazione per modificare un ambiente o una pipeline ma non ha accesso a un programma che contiene l’ambiente o la pipeline?
 

@@ -10,18 +10,18 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: 130406286e65ad0e0651451766ca740f3458a9c1
 workflow-type: tm+mt
-source-wordcount: 796
-ht-degree: 85%
+source-wordcount: 797
+ht-degree: 75%
 
 ---
 
 # Aggiungere utenti e ruoli {#add-users-and-roles}
 
-Molte funzioni in [!UICONTROL Cloud Manager] richiedono autorizzazioni specifiche da utilizzare. Per esempio, solo alcuni utenti possono impostare gli indicatori prestazioni chiave (KPI, Key Performance Indicator) per un programma. Queste autorizzazioni sono raggruppate in modo logico in ruoli.
+Molte funzioni in [!UICONTROL Cloud Manager] richiedono autorizzazioni specifiche da utilizzare. Ad esempio, solo gli utenti autorizzati possono impostare gli indicatori prestazioni chiave (KPI, Key Performance Indicator) per un programma. Queste autorizzazioni sono raggruppate in modo logico in ruoli.
 
-[!UICONTROL Cloud Manager] attualmente definisce per gli utenti quattro ruoli che determinano la disponibilità di funzioni specifiche:
+[!UICONTROL Cloud Manager] definisce quattro ruoli per gli utenti, che determinano la disponibilità di funzionalità specifiche:
 
 * Proprietario business
 * Responsabile del programma
@@ -51,9 +51,9 @@ Nella tabella seguente sono riepilogati i ruoli in Cloud Manager.
 
 ## Creare un profilo di prodotto utilizzando Admin Console {#using-admin-console-to-create-a-profile}
 
-[!UICONTROL I ruoli di Cloud Manager] vengono gestiti dall’Admin Console. L’iscrizione a ruoli specifici viene fornita aggiungendo l’utente a un profilo di prodotto [!UICONTROL Cloud Manager].
+[!UICONTROL I ruoli di Cloud Manager] vengono gestiti dall’Admin Console. L&#39;aggiunta dell&#39;utente a un profilo di prodotto [!UICONTROL Cloud Manager] fornisce appartenenze a ruoli specifici.
 
-Admin Console è una posizione centrale per la gestione delle assegnazioni Adobe in tutta l’organizzazione. Per ulteriori informazioni su Adobe Admin Console, consulta [Admin Console](https://helpx.adobe.com/it/enterprise/using/admin-console.html).
+Admin Console è una posizione centrale per la gestione delle assegnazioni Adobe in tutta l’organizzazione. Per ulteriori informazioni su Adobe Admin Console, consulta [Admin Console](https://helpx.adobe.com/it/business/enterprise/plan-your-deployment/basic-concepts/admin-console.html).
 
 Un amministratore deve creare nuovi profili di prodotto nel contesto di prodotto [!UICONTROL AEM Managed Services] per assegnare autorizzazioni basate sul ruolo a utenti [!UICONTROL Cloud Manager], corrispondenti a ciascuno dei quattro ruoli [!UICONTROL Cloud Manager].
 
@@ -87,11 +87,11 @@ CQDOC-22790
 
    ![Nuovo profilo](/help/assets/admin-console-product-profiles.png)
 
-1. Fornisci le informazioni per configurare un nuovo ruolo per [!UICONTROL Cloud Manager].
+1. Per impostare un nuovo ruolo per [!UICONTROL Cloud Manager], fornire le informazioni.
 
    * **Nome profilo**: il **Nome profilo** può essere qualsiasi cosa, anche se per evitare confusione si consiglia di utilizzare i valori nella colonna **Nome profilo consigliato**.
    * **Nome visualizzato**: il **Nome visualizzato** deve essere il valore tecnico definito da [!UICONTROL Cloud Manager] (vedi la tabella seguente).
-   * **Gruppo di autorizzazione**: puoi scegliere un gruppo di autorizzazione per il profilo (non sempre disponibile).
+   * **Gruppo di autorizzazioni** - Scegliere un gruppo di autorizzazioni per il profilo (non sempre disponibile).
 
 <!-- 
 CQDOC-22790
@@ -137,6 +137,6 @@ Dopo aver creato i profili di prodotto, puoi assegnare loro utenti o gruppi di u
 
 1. Fai clic su **Salva** per salvare i profili dell’utente.
 
-Ripeti gli stessi passaggi per assegnare profili a gruppi di utenti, ma seleziona **Gruppi di utenti** dal pannello di navigazione a sinistra nella scheda **Utenti**. Fai clic su un gruppo di utenti e seleziona i **Profili di prodotto assegnati** fai clic su **Assegna profilo di prodotto** per assegnare i profili.
+Ripeti gli stessi passaggi per assegnare profili a gruppi di utenti, ma seleziona **Gruppi di utenti** dal pannello di navigazione a sinistra nella scheda **Utenti**. Fai clic su un gruppo di utenti e seleziona i **Profili di prodotto assegnati**, quindi fai clic su **Assegna profilo di prodotto** per assegnare i profili.
 
 ![Assegna profili al gruppo](/help/assets/admin-console-edit-user-groups.png)

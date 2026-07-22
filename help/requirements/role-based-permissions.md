@@ -10,16 +10,16 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: e94834c5e13825a468ef5344e77024c4fe4a29e6
 workflow-type: tm+mt
-source-wordcount: 592
-ht-degree: 99%
+source-wordcount: 596
+ht-degree: 85%
 
 ---
 
 # Autorizzazioni basate sul ruolo {#role-based-permissions}
 
-[!UICONTROL Cloud Manager] dispone di ruoli preconfigurati con le autorizzazioni appropriate. Ad esempio, uno sviluppatore sviluppa il codice e dispone dell’autorizzazione per inviare il codice all’archivio Git. Un proprietario business dispone di autorizzazioni diverse che gli consentono di definire gli indicatori prestazioni chiave (KPI, Key Performance Indicator) e di approvare le distribuzioni.
+[!UICONTROL Cloud Manager] include ruoli preconfigurati con le autorizzazioni appropriate. Ad esempio, gli sviluppatori di software scrivono il codice e dispongono dell’autorizzazione per inviarlo all’archivio Git. I lead aziendali dispongono di autorizzazioni diverse che consentono loro di definire gli indicatori prestazioni chiave (KPI, Key Performance Indicator) e di approvare le distribuzioni.
 
 >[!NOTE]
 >
@@ -29,7 +29,7 @@ ht-degree: 99%
 
 ## Ruoli utente {#user-roles}
 
-La gestione dei ruoli per [!UICONTROL Cloud Manager] viene eseguita utilizzando [Admin Console](https://helpx.adobe.com/it/enterprise/using/admin-console.html). Qualsiasi utente di [!UICONTROL Cloud Manager] deve essere un membro dell’organizzazione IMS del cliente e disporre del contesto di prodotto di Adobe Managed Services. L’iscrizione a ruoli specifici viene fornita aggiungendo l’utente a un profilo di prodotto [!UICONTROL Cloud Manager] in Admin Console.
+La gestione dei ruoli per [!UICONTROL Cloud Manager] viene eseguita utilizzando [Admin Console](https://helpx.adobe.com/it/business/enterprise/plan-your-deployment/basic-concepts/admin-console.html). Qualsiasi utente di [!UICONTROL Cloud Manager] deve essere un membro dell’organizzazione IMS del cliente e disporre del contesto di prodotto di Adobe Managed Services. È possibile fornire appartenenze a ruoli specifici aggiungendo l&#39;utente a un profilo di prodotto [!UICONTROL Cloud Manager] in Admin Console.
 
 Per ulteriori informazioni su come configurare gli utenti, consulta [Configurazione di utenti e ruoli](/help/requirements/users-and-roles.md).
 
@@ -46,7 +46,7 @@ In questa tabella sono elencati i ruoli che è possibile assegnare in Admin Cons
 
 ## Autorizzazioni utente {#user-permissions}
 
-A ogni ruolo sono associate specifiche autorizzazioni preconfigurate. In questa tabella sono elencate le autorizzazioni disponibili e i ruoli che possono eseguirle.
+A ogni ruolo sono associate specifiche autorizzazioni preconfigurate. Nella tabella seguente sono elencate le autorizzazioni disponibili e i ruoli che possono eseguirle.
 
 | Autorizzazione | Descrizione | Proprietario business | Responsabile della distribuzione | Responsabile del programma | Sviluppatore | CSE |
 | --- | --- | --- | --- | --- | --- | --- |

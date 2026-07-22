@@ -1,6 +1,6 @@
 ---
 title: Sicurezza e privacy
-description: Scopri la sicurezza e la privacy del codice e delle risorse degli artefatti in Cloud Manager.
+description: Scopri la sicurezza e la privacy del codice e delle risorse degli artefatti in Adobe Cloud Manager.
 exl-id: 67df1987-8db7-40bd-9717-1bf194e957f7
 TQID: https://experienceleague.adobe.com/mtWOzJnzV8k403LlyD9Fn9WSE5XTgjHzyVuA4j62MMg
 product_v2:
@@ -11,35 +11,35 @@ role_v2:
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: d5a34a9f6d050eaff241c0f42c9cf023cbc8036a
 workflow-type: tm+mt
-source-wordcount: 202
-ht-degree: 100%
+source-wordcount: 201
+ht-degree: 26%
 
 ---
 
 # Sicurezza e privacy {#security-and-privacy}
 
-Scopri la sicurezza e la privacy del codice e delle risorse degli artefatti in Cloud Manager.
+Scopri la sicurezza e la privacy del codice e delle risorse degli artefatti in Adobe Cloud Manager.
 
 ## Ruoli e autorizzazioni {#roles}
 
-[!UICONTROL Cloud Manager] dispone di ruoli preconfigurati con autorizzazioni appropriate.
+Cloud Manager dispone di ruoli preconfigurati con le autorizzazioni appropriate.
 
 Per informazioni sui possibili ruoli che è possibile assegnare in Admin Console e sulle autorizzazioni per i ruoli utente, consulta [Autorizzazioni basate sul ruolo](/help/requirements/role-based-permissions.md).
 
 ## Isolamento risorse {#resource-isolation}
 
-I clienti di [!UICONTROL Cloud Manager] hanno bisogno delle credenziali IMS per autenticarsi in quanto tutte le autorizzazioni associate a [!UICONTROL Cloud Manager] sono collegate alle loro organizzazioni IMS. Durante il processo di onboarding, il team di provisioning assicura che l’isolamento delle risorse sia applicato in [!UICONTROL Cloud Manager].
+I clienti Cloud Manager hanno bisogno delle credenziali IMS per autenticarsi perché tutte le autorizzazioni associate a Cloud Manager sono collegate alle loro organizzazioni IMS. Durante il processo di onboarding, il team di provisioning assicura che l’isolamento delle risorse sia applicato in Cloud Manager.
 
 ## Sicurezza dei dati {#data-security}
 
-Il codice in [!UICONTROL Cloud Manager] è crittografato in transito. Anche i file binari generati da Cloud Manager vengono crittografati in transito e al momento dell’archiviazione.
+Il codice Cloud Manager è crittografato in transito. Cloud Manager crea file binari crittografati anche durante la trasmissione e memorizzati in un formato crittografato.
 
-Ogni cliente ottiene il proprio archivio Git: il codice è sicuro e non condiviso con altre organizzazioni.
+Ogni cliente ottiene il proprio archivio Git e il codice è protetto e non condiviso con altre organizzazioni.
 
 ## Privacy dei dati {#data-privacy}
 
-[!UICONTROL Cloud Manager] rispetta i principi sulla privacy definiti da Adobe. Gli sviluppatori inviano il codice negli archivi Git in modo sicuro tramite HTTPS.
+Cloud Manager rispetta i principi sulla privacy definiti da Adobe. Gli sviluppatori inviano il codice negli archivi Git in modo sicuro tramite HTTPS.
 
-L’interfaccia utente di [!UICONTROL Cloud Manager] è basata su servizi conformi a un’infrastruttura di controllo comune di Adobe. L’interfaccia utente di [!UICONTROL Cloud Manager] utilizza servizi sicuri di diversi provider cloud.
+L’interfaccia utente di Cloud Manager utilizza servizi conformi al framework di controllo comune di Adobe. L’interfaccia utente di Cloud Manager utilizza servizi sicuri di diversi provider cloud.
