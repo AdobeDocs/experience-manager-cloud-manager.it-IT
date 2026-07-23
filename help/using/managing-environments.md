@@ -12,10 +12,10 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: 0dde660205ad28bc5924a5cc14404c48a0533ceb
 workflow-type: tm+mt
-source-wordcount: 275
-ht-degree: 100%
+source-wordcount: 261
+ht-degree: 57%
 
 ---
 
@@ -35,12 +35,12 @@ Ciascuno degli ambienti elencati visualizza il proprio stato associato.
 
 Il riquadro **Ambienti** visualizza gli ambienti di produzione e staging per i quali è stato eseguito il provisioning nel programma insieme allo stato.
 
-Lo stato è lo stato di alimentazione ricalcolato tra i nodi dell’ambiente nell’ordine di priorità seguente.
+Lo stato è lo stato di alimentazione aggregato tra i nodi dell’ambiente elencati in ordine.
 
 * Verde: tutti i nodi sono in esecuzione
-* Rosso: uno o più nodi sono interrotti.
-* Blu: uno o più nodi è in arrivo.
-* Giallo: uno o più nodi prestano uno stato di alimentazione non disponibile.
+* Rosso: uno o più nodi vengono arrestati.
+* Blu: avvio di uno o più nodi.
+* Giallo: uno o più nodi hanno uno stato di alimentazione non disponibile.
 
 ![Riquadro Ambienti](/help/assets/Environments-card-new.png)
 
@@ -48,7 +48,7 @@ Lo stato è lo stato di alimentazione ricalcolato tra i nodi dell’ambiente nel
 
 Nel riquadro **Ambienti**, fai clic sulla riga di qualsiasi ambiente per visualizzare la schermata **Ambienti**.
 
-La schermata **Ambienti** visualizza ogni ambiente di produzione e di staging nel programma. Il nome dell&#39;ambiente viene visualizzato sopra ogni scheda. La scheda include una tabella di nodi nell’ambiente insieme alla dimensione della CPU, all’archiviazione, all’area e allo stato.
+Nella schermata **Ambienti** vengono visualizzati tutti gli ambienti di produzione e di gestione temporanea del programma. Il nome dell’ambiente viene visualizzato sopra ogni scheda. La scheda include una tabella di nodi nell’ambiente insieme alle dimensioni di CPU, archiviazione, area geografica e stato.
 
 >[!NOTE]
 >
@@ -56,7 +56,7 @@ La schermata **Ambienti** visualizza ogni ambiente di produzione e di staging ne
 
 * Verde: in esecuzione
 * Rosso: interrotto
-* Blu: in arrivo
+* Blu - Avvio
 * Giallo: non disponibile
 
 ![Scheda Ambienti](/help/assets/Environments-tab.png)
@@ -67,11 +67,11 @@ La schermata **Ambienti** visualizza ogni ambiente di produzione e di staging ne
 
 >[!NOTE]
 >
->Richiedi i registri dell’ambiente tramite il Customer Success Engineer.
+>Richiedi i registri dell’ambiente tramite il rappresentante del successo dei clienti.
 
 ## Tutorial video {#video-tutorial}
 
-Questo video fornisce una panoramica degli ambienti di Cloud Manager composti da istanze di authoring, pubblicazione e Dispatcher AEM.
+Questo video fornisce un’introduzione agli ambienti Cloud Manager composti da istanze di authoring, pubblicazione e Dispatcher di AEM.
 
 >[!VIDEO](https://video.tv.adobe.com/v/328127?captions=ita)
 

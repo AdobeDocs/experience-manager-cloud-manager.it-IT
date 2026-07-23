@@ -15,9 +15,9 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 8964aad406d3e7fc5b911b98f928ad0427511230
+source-git-commit: b4846046c6c410642d3e23f2cc2c002a6d53b3b7
 workflow-type: tm+mt
-source-wordcount: 468
+source-wordcount: 455
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ Scopri come avviare gli aggiornamenti del service pack per gli ambienti di svilu
 
 >[!NOTE]
 >
->Questa funzionalità è disponibile solo per [il programma beta privato](/help/release-notes/current.md#beta-program).
+>Questa funzionalità è disponibile solo nel [programma beta privato](/help/release-notes/current.md#beta-program).
 
 ## Panoramica {#service-pack-updates-overview}
 
@@ -71,7 +71,7 @@ Dopo aver avviato l’aggiornamento, puoi monitorare lo stato di avanzamento nel
 **Per tenere traccia dell&#39;aggiornamento del service pack:**
 
 1. Dal dashboard di Cloud Manager, accedi alla pagina Attività.
-1. Cercare la voce Service Pack Installation (Installazione Service Pack).
+1. Individuare la voce Service Pack Installation.
 
    ![Installazioni Service Pack](/help/using/assets/service-pack-installation.png)
 
@@ -95,13 +95,13 @@ Al termine dell&#39;installazione, per completare l&#39;aggiornamento è necessa
 
    ![Rifiuta o approva l&#39;aggiornamento del service pack](/help/using/assets/service-pack-reject-approve.png)
 
-1. Effettua una delle operazioni seguenti:
+1. Effettua una delle seguenti operazioni:
 
    * Per completare l&#39;aggiornamento, fare clic su **Approva**.
 
    ![Approvazione del service pack](/help/using/assets/service-pack-approve.png)
 
    * Per annullare l&#39;aggiornamento, fare clic su **Rifiuta**.
-L&#39;installazione del service pack è stata annullata e non sono state applicate modifiche.
+     L&#39;installazione del service pack è stata annullata e non sono state applicate modifiche.
 
    ![Rifiuto del service pack](/help/using/assets/service-pack-reject.png)

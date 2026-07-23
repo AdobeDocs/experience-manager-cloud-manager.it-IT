@@ -10,10 +10,10 @@ feature_v2:
   - id: cd2426f1-5719-4006-b8c2-738e5969754b
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: 6b0075d2405e89dce1c883a2b5fc0bd952a3fddd
 workflow-type: tm+mt
-source-wordcount: 980
-ht-degree: 94%
+source-wordcount: 975
+ht-degree: 53%
 
 ---
 
@@ -23,49 +23,49 @@ Puoi suddividere le distribuzioni di staging e produzione utilizzando pipeline d
 
 ## Panoramica {#overview}
 
-Gli ambienti di staging e di produzione sono strettamente associati. Per impostazione predefinita, le distribuzioni ad essi sono collegate a una singola pipeline. Si tratta di una pipeline per l’implementazione sia negli ambienti di staging che in quelli di produzione in tale programma. Sebbene questo tipo di associazione sia di norma adeguato, alcuni casi d’uso presentano degli svantaggi:
+Gli ambienti di staging e di produzione sono strettamente associati. Per impostazione predefinita, le distribuzioni ad essi sono collegate a una singola pipeline. Una pipeline di distribuzione viene distribuita sia negli ambienti di staging che in quelli di produzione all’interno di tale programma. Sebbene questo tipo di accoppiamento sia di norma adatto, in alcuni casi si verificano svantaggi:
 
-* Se desideri eseguire una distribuzione solo di staging, rifiuta il passaggio nella pipeline **Promuovi per produrre**. Tuttavia, l’esecuzione verrà contrassegnata come annullata.
-* Se desideri distribuire il codice più recente in un ambiente di staging nella produzione, devi ridistribuire l’intera pipeline, inclusa la distribuzione di staging, anche se non è stato modificato alcun codice.
-* Gli ambienti non possono essere aggiornati durante le distribuzioni. Se sospendi il test nell’ambiente di staging per diversi giorni prima di passare alla produzione, l’ambiente di produzione rimane bloccato e non può essere aggiornato. Questo scenario rende impossibili le attività non dipendenti come ad esempio l’aggiornamento delle [variabili di ambiente](/help/getting-started/build-environment.md#environment-variables).
+* Se desideri eseguire la distribuzione nell&#39;area di gestione temporanea, salta il passaggio **Promuovi a Prod** nella pipeline. Tuttavia, l’esecuzione è contrassegnata come annullata.
+* Se desideri distribuire il codice più recente da un ambiente di staging alla produzione, devi ridistribuire l’intera pipeline, inclusa la distribuzione di staging, anche se non è stato modificato alcun codice.
+* Gli ambienti non possono essere aggiornati durante le distribuzioni. Se ritardi il test nell’ambiente di staging per diversi giorni prima di passare alla produzione, l’ambiente di produzione rimane bloccato e non può essere aggiornato. Questo scenario rende impossibili le attività non dipendenti come ad esempio l’aggiornamento delle [variabili di ambiente](/help/getting-started/build-environment.md#environment-variables).
 
-Le pipeline solo di staging e solo di produzione offrono soluzioni a questi casi d’uso fornendo opzioni di distribuzione dedicate.
+Le pipeline solo stage e solo produzione offrono soluzioni a questi casi d’uso fornendo opzioni di distribuzione dedicate.
 
-* **Pipeline di distribuzione solo di staging:** vengono distribuite solo in un ambiente di staging con l’esecuzione che termina una volta completati la distribuzione e i test. Una pipeline solo di staging si comporta in modo identico alla pipeline di produzione full stack standard associata, ma senza i passaggi di distribuzione di produzione (approvazione, pianificazione, distribuzione).
-* **Pipeline di distribuzione per solo produzione:** vengono distribuite solo in produzione selezionando l’esecuzione della fase più recente completata correttamente. Quindi implementando i relativi artefatti in produzione. Le pipeline di sola produzione riutilizzano gli artefatti iper l’implementazione nell’ambiente di staging, ignorando la fase di build.
+* **Pipeline di distribuzione solo staging:** eseguire la distribuzione solo in un ambiente di staging con l&#39;esecuzione completata al termine della distribuzione e dei test. Una pipeline solo di staging si comporta in modo identico alla pipeline di produzione full stack standard associata, ma senza i passaggi di distribuzione di produzione (approvazione, pianificazione, distribuzione).
+* **Pipeline di distribuzione solo produzione:** Distribuire solo in produzione selezionando l&#39;esecuzione della fase più recente completata. Quindi, distribuisci gli artefatti in produzione. Le pipeline di sola produzione riutilizzano gli artefatti di distribuzione dello stadio, saltando la fase di build.
 
-Le pipeline solo di staging e solo di produzione non vengono eseguite mentre è in corso una pipeline di produzione full stack e viceversa. Se sia la pipeline di produzione solo di staging che quella full stack dispongono del trigger **Cambiamenti su Git** configurato e indicano lo stesso ramo e archivio, viene avviata automaticamente la pipeline solo di staging. Le pipeline solo di produzione non avviano i **`On Git Changes`** perché non sono collegate direttamente a un archivio.
+Le pipeline solo di staging e solo di produzione non vengono eseguite mentre è in corso una pipeline di produzione full stack e viceversa. Se sia la pipeline di produzione solo di staging che quella full stack dispongono del trigger **Cambiamenti su Git** configurato e indicano lo stesso ramo e archivio, viene avviata automaticamente la pipeline solo di staging. Le pipeline di sola produzione non attivano **`On Git Changes`** perché non sono collegate direttamente a un archivio.
 
 Le pipeline solo di produzione vengono attivate manualmente, in quanto non sono collegate direttamente a un archivio per **Cambiamenti su Git**.
 
-Queste pipeline dedicate offrono maggiore flessibilità, ma tieni presente i dettagli dell’operazione e i consigli seguenti.
+Queste pipeline dedicate offrono maggiore flessibilità, ma tieni presente i dettagli di funzionamento e le raccomandazioni seguenti:
 
 >[!NOTE]
 >
->Le pipeline solo per produzione utilizzano sempre gli artefatti della pipeline solo per staging. Questo processo rimane valido anche se nel frattempo la pipeline di produzione standard associata ha implementato qualcos’altro per lo staging.
+>Le pipeline solo per produzione utilizzano sempre gli artefatti della pipeline solo per staging. Questo processo rimane valido anche se nel frattempo la pipeline di produzione accoppiata standard ha implementato qualcos’altro per lo staging.
 >
->* Tale scenario potrebbe causare rollback del codice indesiderati.
->* Adobe consiglia di interrompere l’utilizzo della pipeline di produzione standard associate dopo aver iniziato a utilizzare le pipeline solo di produzione e solo di staging.
+>* Tale scenario comporta rollback di codice indesiderati.
+>* Adobe consiglia di interrompere l’utilizzo della pipeline di produzione accoppiata standard dopo aver iniziato a utilizzare le pipeline di sola produzione e di sola staging.
 >* Se decidi comunque di eseguire sia le pipeline standard associate che le pipeline solo per staging o produzione, considera di riutilizzare gli artefatti per evitare rollback del codice.
 
 ## Creazione di pipeline {#pipeline-creation}
 
-Le pipeline solo di produzione e solo di staging vengono create in modo simile alle [pipeline di produzione](/help/using/production-pipelines.md) standard associate e alle [pipeline non di produzione](/help/using/non-production-pipelines.md). Per informazioni dettagliate, consulta questi documenti.
+Le pipeline di sola produzione e di sola staging vengono create in modo simile alle [pipeline di produzione](/help/using/production-pipelines.md) e alle [pipeline non di produzione](/help/using/non-production-pipelines.md) accoppiate standard. Per informazioni dettagliate, consulta questi documenti.
 
 1. Nella finestra delle **Pipeline**, fai clic su **Aggiungi pipeline**.
 
    * Seleziona **Aggiungi pipeline non di produzione** per creare una pipeline solo di staging.
-   * Seleziona **Aggiungi pipeline solo di produzione** per creare una pipeline solo di produzione.
+   * Seleziona **Aggiungi pipeline di sola produzione** per creare una pipeline di sola produzione.
 
    ![Creazione di una pipeline solo di produzione/staging](/help/assets/configure-pipelines/prod-stage-pipelines.png)
 
 >[!NOTE]
 >
->Alcune opzioni potrebbero essere disattivate se le pipeline corrispondenti esistono già.
+>Alcune opzioni sono disattivate se le pipeline corrispondenti esistono già.
 >
->* **Aggiungi pipeline solo di produzione** non sarà disponibile se non esiste ancora una pipeline solo di staging.
+>* **Aggiungi pipeline di sola produzione** non disponibile se non esiste ancora una pipeline di sola fase.
 >* **Aggiungi pipeline di produzione** non sarà disponibile se esiste già una pipeline standard associata.
->* Sono consentite pipeline solo di produzione e solo di staging per programma.
+>* È consentita una sola pipeline di sola produzione e una sola pipeline di sola fase per programma.
 
 ### Pipeline solo di staging {#stage-only}
 
@@ -94,11 +94,11 @@ Le pipeline solo di produzione e solo di staging vengono create in modo simile a
 Le pipeline solo di produzione e solo di staging vengono eseguite in gran parte con le stesse modalità [di tutte le altre pipeline](/help/using/managing-pipelines.md#running-pipelines). Per ulteriori dettagli, consulta la documentazione. Tuttavia, sono disponibili due nuove funzioni di queste pipeline.
 
 * Le pipeline solo di staging e solo di produzione offrono una nuova [modalità di emergenza](#emergency-mode) per passare il test.
-* Un’esecuzione della pipeline solo di produzione può essere attivata direttamente dai dettagli di esecuzione di una [pipeline solo di staging](#stage-only-run).
+* È possibile attivare un&#39;esecuzione di pipeline di sola produzione direttamente dai dettagli di esecuzione di una [pipeline di sola fase](#stage-only-run).
 
 ### Modalità di emergenza {#emergency-mode}
 
-All’avvio delle pipeline online solo di produzione e solo di staging, viene richiesto di confermare l’avvio e la relativa modalità di avvio.
+Quando si avviano le pipeline di sola produzione e di sola gestione temporanea, viene richiesto di confermare l’avvio e il modo in cui procede.
 
 * **La modalità normale** è un’esecuzione standard e include i passaggi del test di staging.
 * **Modalità di emergenza** ignora i passaggi del test di staging.
@@ -107,7 +107,7 @@ All’avvio delle pipeline online solo di produzione e solo di staging, viene ri
 
 ### Pipeline solo di staging {#stage-only-run}
 
-Una pipeline esclusivamente solo di staging viene eseguita quasi allo stesso modo delle pipeline standard associate. Tuttavia, al termine dell’esecuzione, dopo i passaggi di test, viene visualizzato un pulsante **Promuovi versione**. Questo pulsante consente di avviare un’esecuzione della pipeline solo per produzione utilizzando gli artefatti implementati nell’ambiente di staging durante l’esecuzione, e implementarli nell’ambiente di produzione.
+Una pipeline esclusivamente solo di staging viene eseguita quasi allo stesso modo delle pipeline standard associate. Tuttavia, al termine dell’esecuzione, dopo i passaggi di test, viene visualizzato un pulsante **Promuovi versione**. Questo pulsante ti consente di avviare un’esecuzione della pipeline di sola produzione. Utilizza gli artefatti distribuiti per l’esecuzione nell’ambiente di staging. Quindi li distribuisce in produzione.
 
 ![Esecuzione pipeline solo di staging](/help/assets/configure-pipelines/stage-only-pipeline-run.png)
 

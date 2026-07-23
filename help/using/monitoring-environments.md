@@ -13,10 +13,10 @@ role_v2:
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: 59ab2b4824e516576d0905376b80c37edc49e53d
 workflow-type: tm+mt
-source-wordcount: 873
-ht-degree: 74%
+source-wordcount: 843
+ht-degree: 57%
 
 ---
 
@@ -32,7 +32,7 @@ Se una metrica supera la soglia di avvertenza (ma non la soglia critica), viene 
 
 Se una metrica supera la soglia critica, viene considerata in uno stato critico.
 
-Adobe Managed Services imposta le soglie, che è possibile visualizzare in [!UICONTROL Cloud Manager]. Nella maggior parte dei casi, le soglie sono uguali per tutti, ma in alcuni casi Adobe Managed Services può modificarle in base a esigenze specifiche. Per eventuali domande relative alle soglie, rivolgiti al tuo Customer Success Engineer (CSE).
+Adobe Managed Services imposta le soglie, che è possibile visualizzare in [!UICONTROL Cloud Manager]. In genere, le soglie sono coerenti tra i clienti, ma in alcuni casi Adobe Managed Services le modifica per soddisfare requisiti specifici. Per eventuali domande relative alle soglie, rivolgiti al tuo Customer Success Engineer (CSE).
 
 ## Accedere al monitoraggio del sistema {#accessing-system-monitoring}
 
@@ -54,7 +54,7 @@ Nella sezione **Monitoraggio del sistema** della pagina **Rapporti** sono elenca
 * Rete
 * Applicazione
 
-Lo stato di ciascuna categoria è un riepilogo delle singole metriche. Se una metrica in una categoria si trova nello stato critico, l’intera categoria si trova in uno stato critico ai fini della pagina di panoramica. Lo stesso riepilogo può essere visualizzato a livello di ambiente e di istanza.
+Lo stato di ciascuna categoria è un riepilogo delle singole metriche. Se una metrica in una categoria raggiunge uno stato critico, nella pagina della panoramica l’intera categoria è critica. Lo stesso riepilogo può essere visualizzato a livello di ambiente o di istanza.
 
 ![Panoramica di Monitoraggio del sistema](/help/assets/System-Monitoring-Reports.png)
 
@@ -70,12 +70,12 @@ Per visualizzare i dettagli di metriche specifiche, fai clic su una delle colonn
 
 Nella barra di navigazione a sinistra vengono visualizzate le metriche disponibili nella categoria attualmente selezionata per la quale sono presenti dati relativi all’ambiente e alle istanze attualmente selezionati.
 
-Un singolo grafico mostra lo stato e un grafico dei dati nel tempo con le relative soglie. Se vengono visualizzate più istanze, i dati di ciascuna istanza sono in una serie separata.
+Un singolo grafico mostra lo stato e un grafico dei dati nel tempo con le relative soglie. Se vengono visualizzate più istanze, i dati di ciascuna istanza vengono visualizzati in una serie separata.
 
 ![Grafico delle metriche](/help/assets/Monitoring_Graphs1.png)
 
-Per nascondere una singola serie sul grafico, fai clic sulla serie nella legenda.
-Ad esempio, se fai clic sulla serie delle soglie di avvertenza, verrà visualizzata solo la soglia critica.
+È possibile rimuovere una singola serie dalla vista di un grafico facendo clic sulla serie nella legenda.
+Se ad esempio si fa clic sulla serie di soglie di avvertenza, verrà visualizzata solo la soglia critica.
 
 ![Modificare il grafico](/help/assets/Monitoring_Graphs2.png)
 
@@ -84,7 +84,7 @@ Ad esempio, se fai clic sulla serie delle soglie di avvertenza, verrà visualizz
 #### Host {#host}
 
 * **`Load Per Core`**: numero di processi in esecuzione in CPU. In alternativa, il numero di processi messi in coda che si trovano in uno stato di attesa medio su un periodo di uno (load1), cinque (load5) e quindici (load15) minuti.
-* **P`rocess Count`**: numero di processi attualmente aperti.
+* **`Process Count`**: numero di processi attualmente aperti.
 * **`User Count`**: numero di utenti con una sessione shell attiva.
 * **`Memory Usage`**: percentuale di memoria di sistema attualmente allocata.
 * **`JVM Memory`**: dimensione (in megabyte) dell&#39;heap Java allocato.
@@ -96,14 +96,14 @@ Ad esempio, se fai clic sulla serie delle soglie di avvertenza, verrà visualizz
 
 #### Archiviazione {#storage}
 
-* **`Disk Space`**: spazio su disco utilizzato (in megabyte) per ogni punto di montaggio sull&#39;host. Esistono metriche diverse per ogni punto di montaggio. Vi sono metriche almeno per `/` e `/mnt`, ma potrebbero essere disponibili metriche di montaggio aggiuntive relative ai punti di montaggio a seconda della configurazione specifica dell’istanza.
+* **`Disk Space`**: spazio su disco utilizzato (in megabyte) per ogni punto di montaggio sull&#39;host. Esistono metriche diverse per ogni punto di montaggio. Sono presenti metriche almeno per `/` e `/mnt`, ma sono disponibili metriche di montaggio aggiuntive relative ai punti di montaggio a seconda della configurazione specifica dell&#39;istanza.
 * **`Folder Size`**
 * **`AEM Segment Store`**: spazio su disco (in gigabyte) utilizzato per l&#39;archivio segmenti di AEM.
 
 #### Applicazione {#application}
 
 * **`Replication Agent`**: tempo (in secondi) per un evento di replica di prova
-   * Esistono metriche separate per ogni agente di replica.
+  * Esistono metriche separate per ogni agente di replica.
 * **`Dispatcher Flush`**: numero di elementi attualmente nella coda di svuotamento del Dispatcher
 
 ## Generazione rapporti SLA {#sla-reporting}
@@ -114,7 +114,7 @@ Il grafico seguente mostra il traguardo mensile dello SLA per il 2019.
 
 ![Grafico SLA 2018](/help/assets/SLA-Reports-one.png)
 
-Come per i grafici di monitoraggio del sistema, quando si passa il pultatore su un punto dati vengono visualizzati i valori specifici per quel mese.
+Come per i grafici di monitoraggio del sistema, il passaggio del mouse su un punto dati mostra i valori specifici per quel mese.
 
 ![Passaggio del puntatore su un punto dati](/help/assets/SLA-Reports-two.png)
 
@@ -125,14 +125,14 @@ La sezione **Analisi degli eventi** sotto questo grafico mostra l’insieme di i
 ## Metriche SLA {#sla-metrics}
 
 * **`Author Contract`**: SLA definito nel contratto con Adobe Managed Services per il livello di authoring.
-* **`AMS Author SLA`**: tempo di attività misurato per il livello di authoring di produzione, factoring di incidenti causati da fornitori o da Adobe.
+* **`AMS Author SLA`**: tempo di attività misurato per il livello di authoring di produzione, factoring di incidenti causati da fornitori o Adobe.
 * **`Author SLA`**: tempo di attività misurato per il livello di authoring, esclusi i periodi di inattività pianificati, ad esempio le finestre di manutenzione.
 * **`End User Contract`**: SLA definito nel contratto con Adobe Managed Services per il livello di pubblicazione.
-* **`AMS End User SLA`**: i tempi di attività misurati del livello di pubblicazione di produzione, tenendo conto degli incidenti causati da fornitori o da Adobe.
+* **`AMS End User SLA`**: tempo di attività misurato per il livello di pubblicazione di produzione, factoring di incidenti causati da fornitori o Adobe.
 * **`End User SLA`**: tempo di attività misurato per il livello di pubblicazione, esclusi i periodi di inattività pianificati, ad esempio le finestre di manutenzione.
 
 ## Tutorial video {#video-tutorial}
 
-Questo video descrive a grandi linee come utilizzare i grafici prodotti dai rapporti di Cloud Manager per ottenere informazioni sugli ambienti dei programmi.
+Questo video offre una panoramica dell’utilizzo dei grafici prodotti dai rapporti di Cloud Manager per monitorare gli ambienti dei programmi.
 
 >[!VIDEO](https://video.tv.adobe.com/v/328128?captions=ita)
