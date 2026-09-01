@@ -99,4 +99,4 @@ Per l’ambiente di produzione è configurata una rete per la distribuzione di c
 
 ## Panoramica video {#video}
 
->[!VIDEO](https://video.tv.adobe.com/v/26313/)
+>[!VIDEO](https://video.tv.adobe.com/v/328126?captions=ita)
