@@ -3,16 +3,12 @@ title: Navigazione nell’interfaccia utente di Cloud Manager
 description: Scopri come è organizzata l’interfaccia utente di Cloud Manager e come spostarsi per gestire i programmi e gli ambienti.
 exl-id: 9c1545ce-1c6d-417f-a6f4-fe53caef3433
 TQID: https://experienceleague.adobe.com/qTv4G7eSJahDusX68iNXzcw64Aq8xxP6SRAtn-SB0t4
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2:
-  - id: cd2426f1-5719-4006-b8c2-738e5969754b
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: fa6be369b979682cebf68852603725d8754605ab
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754b
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: dac18093bc590afbd33e358582b3f1c703ce23e1
 workflow-type: tm+mt
-source-wordcount: 1641
+source-wordcount: 1640
 ht-degree: 36%
 
 ---
@@ -59,7 +55,7 @@ La prima è l’intestazione Cloud Manager. L’intestazione è sempre visibile 
 | ![Icona rosso e bianco di Adobe](/help/getting-started/assets/AdobeLogoWhiteOnRed.svg) Cloud Manager | Fare clic per aprire la console **I miei programmi** di Cloud Manager, indipendentemente dalla posizione in cui ci si trova in Cloud Manager. |
 | *`Name of selected organization`* | Il selettore organizzazione visualizza l&#39;organizzazione a cui si è attualmente connessi (in questo esempio, *Foundation Internal*). Fai clic su per passare a un’altra organizzazione se l’Adobe ID è associata a più organizzazioni. |
 | ![Icona Feedback](/help/getting-started/assets/AppComment.svg) Feedback | Fai clic su per fornire ad Adobe un feedback su Cloud Manager. |
-| ![Icona Assistente IA](/help/getting-started/assets/AIChat.svg) | L’Assistente per l’intelligenza artificiale offre un’interfaccia di conversazione progettata per semplificare la ricerca delle risposte alle query relative ad AEM. Vedi [Assistente IA](https://experienceleague.adobe.com/it/docs/experience-manager-65/content/ai-in-aem/ai-assistant/ai-assistant-in-aem#) |
+| ![Icona Assistente IA](/help/getting-started/assets/AIChat.svg) | L’Assistente per l’intelligenza artificiale offre un’interfaccia di conversazione progettata per semplificare la ricerca delle risposte alle query relative ad AEM. Vedi [Assistente IA](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/ai-in-aem/ai-assistant/ai-assistant-in-aem#) |
 | ![Icona Aiuto](https://spectrum.adobe.com/static/icons/workflow_18/Smock_HelpOutline_18_N.svg) | Fai clic su per fornire un accesso rapido alle risorse di apprendimento e supporto. |
 | ![Icona campana bianca](/help/getting-started/assets/Bell.svg) | Fai clic per visualizzare il numero di [notifiche](/help/using/notifications.md) incomplete attualmente assegnate |
 | ![Icona app](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Apps_18_N.svg) | Fai clic per passare rapidamente dalla pagina Home di AEM alle soluzioni AEM |
@@ -104,16 +100,16 @@ Se stai iniziando la configurazione dell’organizzazione, puoi seguire i passag
 
 Il contenuto principale della console Programmi personali è la sezione **Programmi personali** in cui i programmi sono elencati come singole schede. Fai clic su una scheda per accedere alla pagina **Panoramica del programma** per informazioni dettagliate sul programma.
 
-A seconda dei privilegi, potrebbe non essere possibile selezionare alcuni programmi.
+A seconda dei privilegi, non è possibile selezionare alcuni programmi.
 
 Per trovare rapidamente il programma desiderato, è possibile utilizzare le seguenti opzioni di ordinamento:
 
 ![Opzioni di ordinamento](/help/getting-started/assets/cloud-manager-my-programs-sorting.png)
 
 * Ordina per:
-   * Data di creazione
-   * Nome del programma
-   * Stato
+  * Data di creazione
+  * Nome del programma
+  * Stato
 * ![Icona Ordinamento decrescente](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SortOrderDown_18_N.svg) / ![Icona Ordinamento decrescente](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SortOrderUp_18_N.svg) Ordina rispettivamente i programmi.
 * ![Icona visualizzazione griglia classica](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ClassicGridView_18_N.svg) / ![Icona testo puntato o elenco](https://spectrum.adobe.com/static/icons/workflow_18/Smock_TextBulleted_18_N.svg) Visualizza programmi rispettivamente in forma griglia o elenco.
 
@@ -126,8 +122,8 @@ Una scheda o riga in una tabella rappresenta ogni programma, fornendo una panora
 * Immagine del programma (se configurata)
 * Nome del programma (nell&#39;esempio precedente, *WKND Magazine*)
 * Tipo di servizio:
-   * **Experience Manager** per i programmi AMS
-   * **Experience Manager Cloud** per [programmi AEM as a Cloud Service](https://experienceleague.adobe.com/it/docs/experience-manager-cloud-service/content/implementing/home)
+  * **Experience Manager** per i programmi AMS
+  * **Experience Manager Cloud** per [programmi AEM as a Cloud Service](https://experienceleague.adobe.com/it/docs/experience-manager-cloud-service/content/implementing/home)
 * Stato (nell&#39;esempio precedente, *Pronto*)
 * Soluzioni configurate
 * Data di creazione
