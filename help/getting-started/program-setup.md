@@ -3,17 +3,13 @@ title: Configurazione del programma
 description: Dopo l’onboarding, il proprietario business dovrà effettuare una configurazione iniziale del programma.
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
 TQID: https://experienceleague.adobe.com/AqaA4GSOptV11h2y4V1Mt15KmEhEYBaiM-RvBFjtfWY
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2:
-  - id: cd2426f1-5719-4006-b8c2-738e5969754b
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: fa6be369b979682cebf68852603725d8754605ab
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754b
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 4381c51e54aaf1286b69c149dbf57c77bcd9a8bd
 workflow-type: tm+mt
-source-wordcount: 549
-ht-degree: 65%
+source-wordcount: 548
+ht-degree: 60%
 
 ---
 
@@ -81,7 +77,7 @@ Se non hai ancora creato una pipeline, consulta [Configurazione delle pipeline d
 
 ## Passaggio tra programmi {#swithing-programs}
 
-Quando lavori a un programma, puoi passare rapidamente a un altro senza tornare alla pagina della panoramica di Cloud Manager.
+Quando si lavora su un programma, è possibile passare a un altro senza tornare alla pagina di panoramica di Cloud Manager.
 
 Utilizza la barra delle azioni per passare a un altro programma, modificare il programma in uso o aggiungerne uno nuovo.
 
@@ -91,12 +87,12 @@ Utilizza la barra delle azioni per passare a un altro programma, modificare il p
 
 I KPI dei siti vengono misurati nei test eseguiti nell’ambiente di staging. In genere, questi KPI vengono regolati in modo da corrispondere alle funzionalità dell’ambiente di staging.
 
-Ad esempio, un utente che si aspetta una media di 1000 visualizzazioni di pagina al minuto nel proprio ambiente di produzione e che dispone di quattro server di pubblicazione/Dispatcher in produzione, riduce questo scenario a 250 visualizzazioni di pagina al minuto. Questo scenario presuppone che il loro ambiente di staging sia costituito da una sola coppia di server Dispatcher/pubblicazione.
+Ad esempio, un team che si aspetta una media di 1000 visualizzazioni di pagina al minuto nel proprio ambiente di produzione e che dispone di quattro server Dispatcher/di pubblicazione in produzione scala questo scenario a 250 visualizzazioni di pagina al minuto. Questo scenario presuppone che il relativo ambiente di staging sia costituito da una sola coppia di server Dispatcher/pubblicazione.
 
 Il test delle prestazioni delle risorse prevede il caricamento ripetuto delle stesse in un periodo di 30 minuti. Il tempo di elaborazione di ciascuna risorsa e di varie metriche a livello di sistema viene misurato durante il test.
 
-Per l’ambiente di produzione è configurata una rete per la distribuzione di contenuti (CDN) come Akamai o CloudFront. Poiché [!UICONTROL Cloud Manager] esegue direttamente i test nell&#39;ambiente di gestione temporanea, l&#39;indicatore KPI riflette solo il traffico che si prevede passi attraverso la rete CDN. Ovvero, i riscontri mancanti nella cache. In genere, questo traffico è un sottoinsieme relativamente piccolo del traffico di produzione totale.
+Per l’ambiente di produzione è configurata una rete per la distribuzione di contenuti (CDN) come Akamai o CloudFront. Poiché [!UICONTROL Cloud Manager] esegue direttamente i test nell&#39;ambiente di gestione temporanea, l&#39;indicatore KPI riflette solo il traffico che si prevede passi attraverso la rete CDN. Questo si riferisce a mancati riscontri nella cache. In genere, questo traffico è un sottoinsieme relativamente piccolo del traffico di produzione totale.
 
 ## Panoramica video {#video}
 
->[!VIDEO](https://video.tv.adobe.com/v/328126?captions=ita)
+>[!VIDEO](https://video.tv.adobe.com/v/26313/)
