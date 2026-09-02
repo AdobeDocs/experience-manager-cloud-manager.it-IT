@@ -10,9 +10,9 @@ feature_v2:
   - id: cd2426f1-5719-4006-b8c2-738e5969754b
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: fa6be369b979682cebf68852603725d8754605ab
+source-git-commit: dac18093bc590afbd33e358582b3f1c703ce23e1
 workflow-type: tm+mt
-source-wordcount: 1641
+source-wordcount: 1640
 ht-degree: 36%
 
 ---
@@ -104,16 +104,16 @@ Se stai iniziando la configurazione dell’organizzazione, puoi seguire i passag
 
 Il contenuto principale della console Programmi personali è la sezione **Programmi personali** in cui i programmi sono elencati come singole schede. Fai clic su una scheda per accedere alla pagina **Panoramica del programma** per informazioni dettagliate sul programma.
 
-A seconda dei privilegi, potrebbe non essere possibile selezionare alcuni programmi.
+A seconda dei privilegi, non è possibile selezionare alcuni programmi.
 
 Per trovare rapidamente il programma desiderato, è possibile utilizzare le seguenti opzioni di ordinamento:
 
 ![Opzioni di ordinamento](/help/getting-started/assets/cloud-manager-my-programs-sorting.png)
 
 * Ordina per:
-   * Data di creazione
-   * Nome del programma
-   * Stato
+  * Data di creazione
+  * Nome del programma
+  * Stato
 * ![Icona Ordinamento decrescente](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SortOrderDown_18_N.svg) / ![Icona Ordinamento decrescente](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SortOrderUp_18_N.svg) Ordina rispettivamente i programmi.
 * ![Icona visualizzazione griglia classica](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ClassicGridView_18_N.svg) / ![Icona testo puntato o elenco](https://spectrum.adobe.com/static/icons/workflow_18/Smock_TextBulleted_18_N.svg) Visualizza programmi rispettivamente in forma griglia o elenco.
 
@@ -126,8 +126,8 @@ Una scheda o riga in una tabella rappresenta ogni programma, fornendo una panora
 * Immagine del programma (se configurata)
 * Nome del programma (nell&#39;esempio precedente, *WKND Magazine*)
 * Tipo di servizio:
-   * **Experience Manager** per i programmi AMS
-   * **Experience Manager Cloud** per [programmi AEM as a Cloud Service](https://experienceleague.adobe.com/it/docs/experience-manager-cloud-service/content/implementing/home)
+  * **Experience Manager** per i programmi AMS
+  * **Experience Manager Cloud** per [programmi AEM as a Cloud Service](https://experienceleague.adobe.com/it/docs/experience-manager-cloud-service/content/implementing/home)
 * Stato (nell&#39;esempio precedente, *Pronto*)
 * Soluzioni configurate
 * Data di creazione

@@ -8,7 +8,7 @@ product_v2:
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: fa6be369b979682cebf68852603725d8754605ab
+source-git-commit: 4381c51e54aaf1286b69c149dbf57c77bcd9a8bd
 workflow-type: tm+mt
 source-wordcount: 1411
 ht-degree: 65%
@@ -25,14 +25,14 @@ Per poter essere generati e distribuiti correttamente con Cloud Manager, i proge
 
 * I progetti devono essere generati utilizzando Apache Maven.
 * Nella directory principale dell’archivio Git deve essere presente un file `pom.xml`.
-   * Il file `pom.xml` può fare riferimento a tutti i sottomoduli (che a loro volta hanno altri sottomoduli), a seconda delle necessità.
-   * Puoi aggiungere riferimenti ad altri archivi di artefatti Maven nei tuoi file `pom.xml`.
-   * Quando configurato, l’accesso agli [archivi di artefatti protetti da password](#password-protected-maven-repositories) è supportato. Tuttavia, l’accesso agli archivi di artefatti protetti dalla rete non è supportato.
+  * Il file `pom.xml` può fare riferimento a tutti i sottomoduli (che a loro volta hanno altri sottomoduli), a seconda delle necessità.
+  * Puoi aggiungere riferimenti ad altri archivi di artefatti Maven nei tuoi file `pom.xml`.
+  * Quando configurato, l’accesso agli [archivi di artefatti protetti da password](#password-protected-maven-repositories) è supportato. Tuttavia, l’accesso agli archivi di artefatti protetti dalla rete non è supportato.
 * Cloud Manager rileva i pacchetti di contenuto distribuibili eseguendo la scansione dei file .zip dei pacchetti di contenuto contenuti in una directory denominata `target`.
-   * Un numero qualsiasi di sottomoduli produce pacchetti di contenuti.
+  * Un numero qualsiasi di sottomoduli produce pacchetti di contenuti.
 * Cloud Manager rileva gli artefatti di Dispatcher distribuibili eseguendo l&#39;analisi di `zip` file contenuti nelle sottodirectory di `target` denominate `conf` e `conf.d`.
 * Se sono presenti più pacchetti di contenuti, l’ordinamento delle implementazioni dei pacchetti non è garantito.
-   * Se è necessario un ordine specifico, puoi definirlo con le dipendenze dei pacchetti di contenuti.
+  * Se è necessario un ordine specifico, puoi definirlo con le dipendenze dei pacchetti di contenuti.
 * I pacchetti possono essere [ignorati](#skipping-content-packages) dalla distribuzione.
 
 ## Attivazione dei profili Maven in Cloud Manager {#activating-maven-profiles-in-cloud-manager}

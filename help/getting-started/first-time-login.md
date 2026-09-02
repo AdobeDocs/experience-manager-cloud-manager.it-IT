@@ -10,7 +10,7 @@ feature_v2:
   - id: cd2426f1-5719-4006-b8c2-738e5969754b
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 1692390e24f8fa7d719bd8293a99586ec4ec36d4
+source-git-commit: dac18093bc590afbd33e358582b3f1c703ce23e1
 workflow-type: tm+mt
 source-wordcount: 294
 ht-degree: 30%
@@ -59,4 +59,4 @@ Cloud Manager fornisce una visualizzazione consolidata dell&#39;attività di un 
 
 >[!NOTE]
 >
->Per impostazione predefinita, un utente con accesso a un ambiente AEM dispone anche del ruolo Utente di Cloud Manager. Questo ruolo non concede all’utente l’accesso alla visualizzazione dei dettagli del programma. Un utente con il solo ruolo Utente di Cloud Manager può navigare utilizzando le opzioni del menu del programma fino all’URL dell’autore dell’ambiente AEM (se esistono ambienti). Questi utenti devono contattare i propri amministratori se desiderano ottenere l’accesso a livello di programma.
+>Per impostazione predefinita, un utente con accesso a un ambiente AEM dispone anche del ruolo Utente di Cloud Manager. Questo ruolo non fornisce all’utente l’accesso alla visualizzazione dei dettagli del programma. Un utente con il solo ruolo Utente di Cloud Manager può navigare utilizzando le opzioni del menu del programma fino all’URL dell’autore dell’ambiente AEM (se esistono ambienti). Questi utenti devono contattare i propri amministratori se desiderano ottenere l’accesso a livello di programma.
